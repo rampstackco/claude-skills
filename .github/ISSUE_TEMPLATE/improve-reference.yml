@@ -1,0 +1,104 @@
+name: Improve a reference file
+description: Suggest an improvement to a reference file (template, checklist, decision matrix, worked example).
+title: "[Improve]: <skill-name> / <reference-file-name>"
+labels: ["improvement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement. Reference files are the deep-dive material that go beyond what fits in a SKILL.md. They get better with every well-shaped contribution.
+
+        Before filling this out, please confirm:
+        - You have read the existing reference file end to end
+        - You have read [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md)
+        - The improvement does not belong in the SKILL.md instead
+
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      description: Which skill folder does the reference file belong to?
+      placeholder: seo-keyword-gap-audit
+    validations:
+      required: true
+
+  - type: input
+    id: reference-file
+    attributes:
+      label: Reference file
+      description: Which file in the references/ folder are you improving?
+      placeholder: references/opportunity-scoring-rubric.md
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Type of improvement
+      options:
+        - "Add a worked example"
+        - "Add a missing edge case"
+        - "Update outdated guidance"
+        - "Improve a template or checklist"
+        - "Add a missing reference (table, formula, decision tree)"
+        - "Fix factual error"
+        - "Improve clarity or structure"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: What is missing or wrong?
+      description: Describe the gap specifically. Quote the existing text if you can.
+      placeholder: |
+        The opportunity-scoring-rubric.md does not cover [specific scenario]. The current scoring formula assumes [assumption], but this breaks down when [edge case].
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: |
+        Sketch the addition or change. Doesn't have to be final wording, but should be specific enough to evaluate.
+      placeholder: |
+        Add a section "Adjusting weights for goal" with three preset weight configurations:
+        - Quick wins focus
+        - Strategic territory focus
+        - Defensive (protect rankings)
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Why does this earn its place?
+      description: |
+        Reference files should go deeper than the SKILL.md, not duplicate it, and should be useful in real work.
+      placeholder: |
+        Without this, users running an audit on a low-DR site cannot calibrate the rubric correctly and the priority list mis-ranks. I have hit this in two real audits.
+
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Are you willing to draft the change?
+      options:
+        - "Yes, I will draft a PR"
+        - "I can collaborate on a PR"
+        - "I am only suggesting, not authoring"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have read the existing reference file end to end
+          required: true
+        - label: I confirmed this content does not belong in the SKILL.md instead
+          required: true
+        - label: I have read [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md)
+          required: true

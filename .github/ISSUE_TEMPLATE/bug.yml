@@ -1,0 +1,95 @@
+name: Bug report
+description: Report a bug, broken link, broken trigger, or content error in a skill or reference file.
+title: "[Bug]: <short description>"
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill in as much detail as you can.
+
+        **Not a bug?** Use these instead:
+        - General questions or proposals: [Discussions](https://github.com/rampstackco/claude-skills/discussions)
+        - Security issues: see [SECURITY.md](../blob/main/SECURITY.md)
+        - Improvement to a reference file: use the "Improve a reference file" template
+
+  - type: input
+    id: skill
+    attributes:
+      label: Skill affected
+      description: Which skill is the bug in? Use the skill folder name. If the bug is in the README, CONTRIBUTING.md, or another root doc, name that file instead.
+      placeholder: seo-traffic-diagnosis
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: Specific file (if applicable)
+      description: If the bug is in a specific reference file, name it.
+      placeholder: references/diagnosis-checklist.md
+
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Type of bug
+      options:
+        - "Broken link (internal cross-reference or external URL)"
+        - "Trigger doesn't fire when it should"
+        - "Trigger fires when it shouldn't (false positive)"
+        - "Factual error in content"
+        - "Em dash or formatting violation"
+        - "Em dash in catalog count or stats"
+        - "Skill output doesn't match documented format"
+        - "Cross-skill reference points to non-existent skill"
+        - "YAML frontmatter parse error"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the bug? Be specific.
+      placeholder: |
+        The skill `seo-traffic-diagnosis` references `references/diagnoses-checklist.md` (typo) but the actual file is `references/diagnosis-checklist.md`.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen instead?
+      placeholder: |
+        The Reference files section in SKILL.md should match the actual filename in the references/ folder.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: How did you find this? If applicable, include the exact prompt that triggered the wrong behavior.
+      placeholder: |
+        1. Opened `skills/seo-traffic-diagnosis/SKILL.md`
+        2. Searched for "diagnoses" (typo) and "diagnosis"
+        3. Found mismatch between the SKILL.md text and the actual file in references/
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else worth knowing? Screenshots welcome.
+
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Are you willing to submit a fix?
+      options:
+        - "Yes, I will draft a PR"
+        - "Maybe, depending on complexity"
+        - "No, just reporting"
+    validations:
+      required: true

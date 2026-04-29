@@ -1,0 +1,113 @@
+name: Propose a new skill
+description: Suggest a new skill for the library. Read CONTRIBUTING.md first.
+title: "[New skill]: <proposed-skill-name>"
+labels: ["new-skill", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new skill. Before filling this out, please confirm:
+        - You have read [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) and [SKILL_AUTHORING.md](../blob/main/SKILL_AUTHORING.md)
+        - You have searched the [existing 59 skills](../blob/main/README.md#the-59-skill-catalog) and confirmed this gap is real
+        - The proposed skill is stack-agnostic (or has a strong reason to be tool-bound)
+
+  - type: input
+    id: proposed-name
+    attributes:
+      label: Proposed skill name
+      description: Use lowercase-hyphenated format. Example: `seo-rank-tracking`
+      placeholder: my-new-skill
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Draft description (frontmatter)
+      description: |
+        2-4 sentences. Should include:
+        - One sentence: what the skill does
+        - One sentence: situations where it should fire
+        - Trigger words and phrases
+        - An "Also triggers when..." edge case line
+      placeholder: |
+        Audits X for Y using Z. Use this skill when [specific situation], scoping a [related task], or [another situation]. Triggers on [phrase 1], [phrase 2], [phrase 3]. Also triggers when [edge case].
+    validations:
+      required: true
+
+  - type: textarea
+    id: gap
+    attributes:
+      label: Why existing skills don't cover this
+      description: Name the closest existing skills and explain why they fall short for this use case.
+      placeholder: |
+        - `existing-skill-a` covers part of this but stops at...
+        - `existing-skill-b` is adjacent but focuses on...
+        - There is no skill that handles [specific need].
+    validations:
+      required: true
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Example user prompts that should trigger this skill
+      description: List 3-5 realistic prompts a user would type that should fire this skill.
+      placeholder: |
+        - "Help me audit X for Y"
+        - "Why is Z happening to my A"
+        - "Compare B options across C"
+    validations:
+      required: true
+
+  - type: textarea
+    id: framework
+    attributes:
+      label: The framework
+      description: |
+        What is the durable insight the skill teaches? 1-3 sentences. If you cannot articulate this, the skill is not yet ready.
+      placeholder: |
+        There are N categories of X, and they each need different treatment. Phase 1 is..., phase 2 is..., phase 3 is...
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Reference files
+      description: What templates, checklists, or worked examples will live in `references/`?
+      placeholder: |
+        - `template.md` - Blank template for the deliverable
+        - `checklist.md` - Pre-flight checklist
+        - `example.md` - Worked example for [scenario]
+
+  - type: textarea
+    id: pairs-with
+    attributes:
+      label: Pairs with which existing skills?
+      description: Which sibling skills will this cross-reference in "When NOT to use" or workflow sections?
+      placeholder: |
+        - `skill-a` - for adjacent task X
+        - `skill-b` - for downstream task Y
+
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Are you willing to author the skill?
+      options:
+        - "Yes, I will draft a PR"
+        - "I can collaborate on a PR"
+        - "I am only proposing, not authoring"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have read [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) and [SKILL_AUTHORING.md](../blob/main/SKILL_AUTHORING.md)
+          required: true
+        - label: I confirmed this skill is not duplicating an existing one
+          required: true
+        - label: I understand the proposal may be declined if the gap is not real or the framework is not durable
+          required: true
