@@ -274,4 +274,4 @@ A vendor evaluation document includes:
 
 ## Reference files
 
-- `references/scorecard-template.md`: Filled-out scorecard template with example scoring criteria, rubrics, and a sample comparison.
+- `references/evaluation-rubric.md` - Scoring template with weighted dimensions, 1-5 scale criteria for each dimension, and a worked vendor-comparison example.

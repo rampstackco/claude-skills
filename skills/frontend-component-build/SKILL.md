@@ -176,5 +176,6 @@ A complete component delivery includes:
 
 ## Reference files
 
-- `references/component-spec-template.md` - Template for documenting a component before building.
+- `references/component-spec-template.md` - Template for documenting a component (props, states, accessibility, edge cases) before building.
+- `references/component-api-patterns.md` - Common patterns for designing flexible component APIs (compound components, controlled vs uncontrolled, polymorphic `as` prop, render props, slots).
 - `references/accessibility-patterns.md` - ARIA patterns for common interactive components.

@@ -268,3 +268,4 @@ For complex audits, include:
 
 - `references/audit-template.md` - Full performance audit report template.
 - `references/optimization-checklist.md` - Quick-reference checklist of common optimizations by priority.
+- `references/optimization-playbook.md` - Symptom-to-fix playbook for the common Core Web Vitals problems (LCP, INP, CLS).

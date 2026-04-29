@@ -189,5 +189,6 @@ Plus a separate moodboard or visual reference doc with images.
 
 ## Reference files
 
+- `references/creative-brief-template.md` - Generic art direction brief template covering any production type (photo, illustration, video, animation, mixed).
 - `references/photo-shoot-brief.md` - Detailed brief template for photography commissions.
 - `references/illustration-brief.md` - Brief template for illustration commissions.

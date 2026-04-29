@@ -27,6 +27,10 @@ Skill folder names are lowercase, hyphenated, verb-noun or category-noun. `seo-o
 
 Every SKILL.md follows this exact section order. If a section does not apply, omit it cleanly. Do not invent new top-level sections.
 
+The eight required headers are: `## When to use`, `## When NOT to use`, `## Required inputs`, `## The framework`, `## Workflow`, `## Failure patterns`, `## Output format`, `## Reference files`. Each header MUST start with the canonical text and MAY append a colon-suffix descriptive label (e.g., `## The framework: 5 phases`, `## The framework: brief structure`, `## Workflow for an active incident`). Do not rename the canonical word itself (no `## The brief structure` in place of `## The framework`).
+
+**Optional `## Deep dive: [topic]` sections.** Teaching skills (skills whose primary job is to instruct the reader on a craft, not to produce a deliverable) MAY add `## Deep dive: [topic]` sections after `## Workflow` and before `## Failure patterns` for pedagogical depth that does not fit inside the canonical sections. The `Deep dive:` prefix is the only sanctioned non-canonical section pattern. Use it sparingly: most skills should not need any deep dives, and a skill with more than two is a signal the content should split into reference files. This is not a license for arbitrary section drift; the canonical eight still carry the load.
+
 ```markdown
 ---
 name: skill-name

@@ -275,4 +275,4 @@ For a single broadcast, just one email block.
 ## Reference files
 
 - `references/subject-line-patterns.md` - Subject line patterns with examples for each sequence type.
-- `references/email-templates.md` - Skeleton templates for the 6 sequence types.
+- `references/sequence-templates.md` - Skeleton templates for the 6 sequence types.

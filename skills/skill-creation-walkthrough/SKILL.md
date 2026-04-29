@@ -27,7 +27,7 @@ A walkthrough for designing, writing, and maintaining your own Claude Skills. Co
 - The audience: who will trigger this skill, in what kind of conversation.
 - Existing artifacts: prompts you have used, docs you have written, examples of good output.
 
-## What a skill actually is
+## The framework: how skills work
 
 A Skill is a folder with a `SKILL.md` file. The SKILL.md has YAML frontmatter (name and description) and a body with instructions. It can also include reference files, scripts, or templates that get loaded when needed.
 
@@ -39,7 +39,7 @@ What this means for you:
 - The **SKILL.md body** is for the workflow itself.
 - The **references** are for content that does not need to be in every invocation: long checklists, templates, examples, deep reference material.
 
-## The 6-phase walkthrough
+## Workflow
 
 ### Phase 1: Decide if a skill is the right shape
 
@@ -173,7 +173,7 @@ After testing, common fixes:
 - Output is generic → add a clearer framework or workflow with more specifics.
 - Reference is overwhelming → split into multiple references, keep each focused.
 
-## Anatomy of the description: a deeper look
+## Deep dive: description anatomy
 
 The description is hard to get right. Here is the formula in detail.
 
@@ -207,7 +207,7 @@ Explain audience or scope to help with disambiguation.
 
 If your skill description is one sentence, it is probably not specific enough.
 
-## Worked example: building a skill from scratch
+## Deep dive: worked example
 
 Imagine you keep writing technical post-mortem documents and want to skill-ify it.
 

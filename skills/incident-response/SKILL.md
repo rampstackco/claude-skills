@@ -190,7 +190,7 @@ Patterns to avoid:
 
 ---
 
-## Workflow for an active incident
+## Workflow
 
 1. **Acknowledge.** First responder acknowledges within target time.
 2. **Assess severity.** Use the rubric. Open the appropriate response channel.

@@ -45,7 +45,7 @@ If you have fewer than five of these, run a quick intake first. See "Eliciting m
 
 ---
 
-## The brief structure
+## The framework: brief structure
 
 Output a markdown brief with these ten sections. Keep each section tight. A good brief is two pages, not ten.
 
@@ -124,7 +124,7 @@ Do not ask all of these. Pick the ones that fill the actual gaps.
 
 ---
 
-## What kills a brief
+## Failure patterns
 
 When the user's input matches one of these patterns, push back before writing.
 

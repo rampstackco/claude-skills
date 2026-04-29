@@ -196,7 +196,7 @@ Easy wins typically include:
 ### Step 7: Plan the larger work
 
 For higher-effort opportunities:
-- Spec the change (use `pm-framework` for the plan)
+- Spec the change (use `pm-spec-writing` for the plan)
 - Test in staging
 - Roll out incrementally
 - Validate cost impact
