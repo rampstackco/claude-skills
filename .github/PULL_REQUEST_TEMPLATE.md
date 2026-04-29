@@ -30,7 +30,7 @@ Closes #
 ### For all changes
 
 - [ ] I have read [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md)
-- [ ] No em dashes anywhere in the changed files (search for `—`)
+- [ ] No em dashes anywhere in the changed files (search for U+2014)
 - [ ] No private brand, personal handle, or proprietary domain references
 - [ ] Internal links resolve to real files
 - [ ] Cross-references to sibling skills name skills that actually exist

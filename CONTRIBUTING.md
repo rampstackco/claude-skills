@@ -86,7 +86,7 @@ Before opening a PR, verify all of the following:
 - [ ] All 10 sections are present in the documented order
 - [ ] At least one reference file exists in `references/`
 - [ ] Reference files in the SKILL.md "Reference files" section match the actual files
-- [ ] No em dashes anywhere (search the file for `—`)
+- [ ] No em dashes anywhere (search files for U+2014)
 - [ ] No vendor-specific framework references in the SKILL.md body
 - [ ] No version-specific references (e.g., "Tailwind 4", "Next.js 15") in the SKILL.md body
 - [ ] No private brand, personal handle, or proprietary domain references
