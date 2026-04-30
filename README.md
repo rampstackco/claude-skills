@@ -20,6 +20,8 @@
 
 > 59 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 
+*Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
+
 ---
 
 ## Table of contents
@@ -437,7 +439,7 @@ The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-w
 ### Other skill libraries worth knowing
 
 - [Anthropic's official skills repository](https://github.com/anthropics/skills) - Examples and primitives published by Anthropic
-- [Awesome Claude Skills (Composio)](https://github.com/ComposioHQ/awesome-claude-skills) - A curated index of community skills
+- [Awesome Claude Skills (Composio)](https://github.com/ComposioHQ/awesome-claude-skills) - A curated index of community skills, where this library is featured under Business & Marketing
 
 ### Companion concepts
 
