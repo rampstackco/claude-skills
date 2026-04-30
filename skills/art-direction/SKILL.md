@@ -1,6 +1,6 @@
 ---
 name: art-direction
-description: "Direct visual and creative work for campaigns, photography, illustration, video, and branded experiences. Use this skill whenever the user wants to brief a photographer, direct illustrators, plan a creative campaign, develop visual concepts, write a creative direction document, or evaluate creative work for fit. Triggers on art direction, creative direction, photo brief, photography brief, illustration brief, campaign concept, creative concept, visual direction, mood board, look and feel, visual treatment, video direction. Also triggers when the user has approved brand identity but needs to extend it into specific creative deliverables."
+description: "Direct visual and creative work for campaigns, photography, illustration, video, and branded experiences. Use this skill whenever the user wants to brief a photographer, direct illustrators, plan a creative campaign, develop visual concepts, write a creative direction document, or evaluate creative work for fit. Triggers on art direction, photo brief, photography brief, illustration brief, campaign concept, creative concept, visual direction, mood board, look and feel, visual treatment, video direction. Also triggers when the user has approved brand identity but needs to extend it into specific creative deliverables."
 ---
 
 # Art Direction
@@ -22,6 +22,7 @@ This skill assumes brand identity is approved (`brand-identity` complete). Art d
 
 ## When NOT to use
 
+- Setting project-wide aesthetic direction across multiple downstream skills (use `creative-direction` instead). This skill briefs specific creative deliverables; `creative-direction` produces the structured aesthetic brief that this skill consumes.
 - Defining brand visual identity from scratch (use `brand-identity`)
 - Day-to-day component design (use `design-standards`)
 - Writing copy for creative work (use `content-and-copy` or `landing-page-copy`)

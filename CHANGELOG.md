@@ -6,7 +6,24 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
-Nothing yet.
+### Added
+
+- `creative-direction` skill (Strategy and discovery category). Structured aesthetic brief using four directional axes (tone register, aesthetic philosophy, audience relationship, sensory ambition) for cross-skill coherence.
+- Reference files for `creative-direction`: `axes-explained.md`, `brief-template.md`, `example-aesthetic-brief.md`.
+
+### Changed
+
+- Added bidirectional cross-references between `creative-brief` and `creative-direction` to clarify scope (operational kickoff vs aesthetic depth).
+- Added bidirectional cross-references between `art-direction` and `creative-direction`. Removed overlapping trigger phrases (`creative direction` from `art-direction`, `art direction` from `creative-direction`) to resolve trigger collision.
+- README catalog renumbered (1-60) with `creative-direction` inserted at position 3 in Strategy and discovery.
+- README updated: 60 skills, 14 categories, 98 reference files. Catalog count badge, headings, and TOC anchor all updated to match.
+- Replaced README banner with an evergreen version (no skill count, "COMPLETE" as the orange anchor word). New file at `docs/rampstack-complete-banner.jpg`.
+
+### Fixed
+
+- Stale skill range references in README "Recommended MCPs" section. SEO audit suite range corrected from 22-28 to 23-29; SEO foundation range corrected from 15-21 to 16-22.
+- Pre-existing miscount of categories (was 13, actual 14) and reference files (was 75 / shifted to 78, actual 98).
+- Issue template `.github/ISSUE_TEMPLATE/new-skill.yml` updated to reference 60 skills and the renamed `#the-60-skill-catalog` anchor.
 
 ## [1.0.0] - 2026-04-28
 
