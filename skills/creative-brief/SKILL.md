@@ -23,6 +23,7 @@ Bridges discovery and execution. Translates "we want a website" into a brief a d
 - The user wants a PRD or dev ticket (use `pm-spec-writing`)
 - The user is doing initial research and has not decided what they are building (use `brand-discovery` first)
 - The user just wants you to write copy (use `content-and-copy`)
+- The user already has scope and constraints settled and needs deeper aesthetic direction specifically (use `creative-direction` for the structured aesthetic axes)
 
 ---
 
@@ -121,6 +122,7 @@ Do not ask all of these. Pick the ones that fill the actual gaps.
 4. **Draft the brief.** Use `references/creative-brief-template.md` as the structure. Keep it under 1500 words.
 5. **Stress-test.** Before delivering, check the brief against the failure patterns below. If any apply, revise before showing the user.
 6. **Deliver.** Save as `creative-brief.md` in the project root. Offer to make it a Word doc or PDF if the user wants something to share with stakeholders.
+7. **Hand off for aesthetic depth (optional).** For projects where sections 5 (voice and tone) and 6 (visual direction) need more rigor than this brief surfaces, run `creative-direction` next. It produces a structured aesthetic brief using four directional axes (tone register, aesthetic philosophy, audience relationship, sensory ambition) that content, copy, and art-direction skills consume directly.
 
 ---
 

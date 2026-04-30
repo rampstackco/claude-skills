@@ -8,7 +8,7 @@ body:
       value: |
         Thanks for proposing a new skill. Before filling this out, please confirm:
         - You have read [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) and [SKILL_AUTHORING.md](../blob/main/SKILL_AUTHORING.md)
-        - You have searched the [existing 59 skills](../blob/main/README.md#the-59-skill-catalog) and confirmed this gap is real
+        - You have searched the [existing 60 skills](../blob/main/README.md#the-60-skill-catalog) and confirmed this gap is real
         - The proposed skill is stack-agnostic (or has a strong reason to be tool-bound)
 
   - type: input
