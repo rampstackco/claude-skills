@@ -28,6 +28,7 @@
 
 - [What are Claude Skills?](#what-are-claude-skills)
 - [What is in this library](#what-is-in-this-library)
+- [See it in action](#see-it-in-action)
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
@@ -65,6 +66,61 @@ What you get:
 - **Composable.** Skills reference each other. `creative-brief` points to `brand-voice`. `incident-response` points to `monitoring-and-alerting`. Each skill's "When NOT to use" tells you which sibling fits your adjacent work.
 
 Highlight categories: brand strategy, design systems, content production, full SEO suite, frontend dev, accessibility, performance, QA, launch and incident ops, growth and CRO, UX research, plus a meta-skill that teaches you to write your own.
+
+---
+
+## See it in action
+
+**[The creative-direction skill rendered as a live showcase →](https://rampstack.co/showcase/creative-direction)**
+
+Thirty fictional brands generated from briefs that all use the same skill. Each is a fully styled brand site, not a mockup. The showcase demonstrates what the four-axis framework produces in practice and lets you filter by axis position to see how each combination renders.
+
+<p align="center">
+  <img src="assets/showcase/showcase-grid-hero.png" alt="Showcase grid of brand archetypes including Pulse, Volt, Anode, Drift, and others, with type and motion intensity filter pills above the cards." />
+</p>
+
+### Filter by any axis position
+
+The skill defines four axes: tone, aesthetic, relationship, sensory. The showcase lets you filter by any combination and see which examples match. Pre-filtered URLs deep-link from the [SKILL.md](skills/creative-direction/SKILL.md) and [axes-explained reference](skills/creative-direction/references/axes-explained.md), so you can read about a position and click straight through to the rendered examples.
+
+<p align="center">
+  <img src="assets/showcase/showcase-filter-active.png" alt="Showcase grid filtered by Tone equals Provocative and Sensory equals Resonant, showing eight matching brand cards with the axis disclosure auto-expanded." />
+</p>
+
+### The empty state is the lesson
+
+The framework is generative. The showcase is illustrative. Most rare-but-powerful combinations are valid creative choices that simply have not been built yet. Set Provocative + Editorial Restrained + Coach + Resonant and the grid is empty.
+
+<p align="center">
+  <img src="assets/showcase/showcase-empty-state.png" alt="Showcase grid with all four axis filters set to Provocative, Editorial Restrained, Coach, and Resonant, showing zero matching examples and the empty state copy: No example yet. The framework allows this combination, it just hasn't been built as one of the thirty worked examples." />
+</p>
+
+### The framework's range
+
+Same skill, same brief format. Four completely different visual systems. Notice that Pulse and Bloom share identical axis positions yet read as opposite visual languages. The reference brands and aesthetic interpretation do the rest.
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/showcase/archetype-pulse.png" alt="Pulse music streaming brand. Saturated gradient hero with the headline 'Sound that moves with you' and pink-to-cyan equalizer bars below." /></td>
+    <td width="50%"><img src="assets/showcase/archetype-forge-fitness.png" alt="Forge boutique fitness studio. Dark industrial hero with intense typography and motivational copy." /></td>
+  </tr>
+  <tr>
+    <td><strong>Pulse</strong> · music streaming<br/><em>Sound that moves with you.</em><br/>Playful / Expressive Maximalist / Companion / Resonant</td>
+    <td><strong>Forge</strong> · boutique fitness<br/><em>Show up. Get hammered.</em><br/>Provocative / Expressive Maximalist / Coach / Resonant</td>
+  </tr>
+  <tr>
+    <td><img src="assets/showcase/archetype-bloom-soda.png" alt="Bloom adaptogenic soda brand. Peachy gradient hero with tri-color headline 'Soda that loves you back' and a strawberries-around-soda-can product photo." /></td>
+    <td><img src="assets/showcase/archetype-observatory-editorial.png" alt="Observatory Editorial. Cream paper hero with restrained serif headline 'An observability tool for the engineers who already know what they are doing'." /></td>
+  </tr>
+  <tr>
+    <td><strong>Bloom</strong> · adaptogenic soda<br/><em>Soda that loves you back.</em><br/>Playful / Expressive Maximalist / Companion / Resonant</td>
+    <td><strong>Observatory Editorial</strong> · observability tool<br/><em>An open-source tool that respects engineer time.</em><br/>Conversational / Editorial Restrained / Peer / Considered</td>
+  </tr>
+</table>
+
+### Run this on your own brand
+
+The creative-direction skill lives at [`skills/creative-direction/`](skills/creative-direction/). Install it (see below), give Claude a project name and a few inspiration references, and the skill walks you through producing a brief that downstream skills can consume. The brand sites in the showcase were built from briefs of exactly that shape.
 
 ---
 
