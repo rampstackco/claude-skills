@@ -11,6 +11,10 @@ This skill turns vague creative intent into a structured brief that downstream s
 
 ---
 
+> **See it in action.** The [creative-direction showcase](https://rampstack.co/showcase/creative-direction#examples) demonstrates this framework applied across thirty fictional brands. Each axis position below links to the showcase pre-filtered to examples matching that position, so you can see what the abstract axis labels look like as real brand executions.
+
+---
+
 ## When to use
 
 - The start of a multi-touchpoint project (website, brand, campaign, product launch) where aesthetic coherence matters
@@ -52,10 +56,10 @@ How formal is the work? How much heat does the language carry?
 
 **Positions:**
 
-- **Professional.** Measured, precise, low-register. Trusts the reader to do work. Restraint is the signal.
-- **Conversational.** Warmer, more personal, comfortable with first-person and contractions. Reads like a thoughtful person talking.
-- **Playful.** Wit, surprise, willingness to break form for effect. Risks the reader missing the point if not earned.
-- **Provocative.** Pointed, opinionated, willing to take a position other brands will not. Risks alienating people who do not share the position.
+- **[Professional](https://rampstack.co/showcase/creative-direction?tone=professional#examples).** Measured, precise, low-register. Trusts the reader to do work. Restraint is the signal.
+- **[Conversational](https://rampstack.co/showcase/creative-direction?tone=conversational#examples).** Warmer, more personal, comfortable with first-person and contractions. Reads like a thoughtful person talking.
+- **[Playful](https://rampstack.co/showcase/creative-direction?tone=playful#examples).** Wit, surprise, willingness to break form for effect. Risks the reader missing the point if not earned.
+- **[Provocative](https://rampstack.co/showcase/creative-direction?tone=provocative#examples).** Pointed, opinionated, willing to take a position other brands will not. Risks alienating people who do not share the position.
 
 **How to choose:** What does the audience already get too much of, and what too little? If the category is dry, conversational or playful is differentiation. If the category is loud, professional restraint is differentiation.
 
@@ -65,10 +69,10 @@ How much visual density does the work carry? How much does each element earn its
 
 **Positions:**
 
-- **Editorial Restrained.** Generous white space, single definitive image instead of grids, considered typography, low color count. Signals confidence and patience.
-- **Polished Standard.** Modern SaaS aesthetic. Clean grids, balanced contrast, expected proportions. Signals competence and professionalism.
-- **Controlled Maximalist.** High visual density where every element is intentional. Loud but engineered. Signals craft and conviction.
-- **Expressive Maximalist.** Visual abundance, willingness to be loud, willing to clash. Signals energy and ambition. Hardest to execute well.
+- **[Editorial Restrained](https://rampstack.co/showcase/creative-direction?aesthetic=editorial-restrained#examples).** Generous white space, single definitive image instead of grids, considered typography, low color count. Signals confidence and patience.
+- **[Polished Standard](https://rampstack.co/showcase/creative-direction?aesthetic=polished-standard#examples).** Modern SaaS aesthetic. Clean grids, balanced contrast, expected proportions. Signals competence and professionalism.
+- **[Controlled Maximalist](https://rampstack.co/showcase/creative-direction?aesthetic=controlled-maximalist#examples).** High visual density where every element is intentional. Loud but engineered. Signals craft and conviction.
+- **[Expressive Maximalist](https://rampstack.co/showcase/creative-direction?aesthetic=expressive-maximalist#examples).** Visual abundance, willingness to be loud, willing to clash. Signals energy and ambition. Hardest to execute well.
 
 **How to choose:** What is the project saying about the brand's relationship to attention? Restrained earns attention by deserving it. Maximalist captures attention by not letting it leave.
 
@@ -78,10 +82,10 @@ How does the brand position itself relative to the reader?
 
 **Positions:**
 
-- **Authority.** We tell you what is true. Implicit hierarchy, expertise on display, reader is the learner.
-- **Peer.** We are figuring this out together. Equal footing, shared vocabulary, reader is the co-thinker.
-- **Companion.** We walk with you. Lower hierarchy than authority, more presence than peer, reader is the protagonist of their own work.
-- **Coach.** We challenge you. The brand pushes the reader toward something they would not push themselves toward alone, reader is the trainee.
+- **[Authority](https://rampstack.co/showcase/creative-direction?relationship=authority#examples).** We tell you what is true. Implicit hierarchy, expertise on display, reader is the learner.
+- **[Peer](https://rampstack.co/showcase/creative-direction?relationship=peer#examples).** We are figuring this out together. Equal footing, shared vocabulary, reader is the co-thinker.
+- **[Companion](https://rampstack.co/showcase/creative-direction?relationship=companion#examples).** We walk with you. Lower hierarchy than authority, more presence than peer, reader is the protagonist of their own work.
+- **[Coach](https://rampstack.co/showcase/creative-direction?relationship=coach#examples).** We challenge you. The brand pushes the reader toward something they would not push themselves toward alone, reader is the trainee.
 
 **How to choose:** What does the audience need most? Audiences who feel lost want authority or coach. Audiences who feel patronized want peer or companion. The wrong choice patronizes or abandons the reader.
 
@@ -91,9 +95,9 @@ How much is the work asking of the reader emotionally?
 
 **Positions:**
 
-- **Functional.** Get a job done. Reader gets in, gets the answer, gets out. Aesthetics serve clarity. Most utility tools live here.
-- **Considered.** Reader notices the craft. Aesthetic choices are visible without being the point. Most premium brands live here.
-- **Resonant.** Reader feels something specific the brand architected. Aesthetics carry meaning. Hardest to produce. Most editorial and narrative brands aspire here.
+- **[Functional](https://rampstack.co/showcase/creative-direction?sensory=functional#examples).** Get a job done. Reader gets in, gets the answer, gets out. Aesthetics serve clarity. Most utility tools live here.
+- **[Considered](https://rampstack.co/showcase/creative-direction?sensory=considered#examples).** Reader notices the craft. Aesthetic choices are visible without being the point. Most premium brands live here.
+- **[Resonant](https://rampstack.co/showcase/creative-direction?sensory=resonant#examples).** Reader feels something specific the brand architected. Aesthetics carry meaning. Hardest to produce. Most editorial and narrative brands aspire here.
 
 **How to choose:** What does the audience deserve from this experience? Functional respects time. Resonant respects feeling. The wrong choice either wastes attention or fails to deliver utility.
 

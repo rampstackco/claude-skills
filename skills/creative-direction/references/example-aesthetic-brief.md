@@ -2,6 +2,8 @@
 
 A representative completed brief, modeled on a realistic project. Showing how the abstract axes translate into concrete creative direction.
 
+> **See this brief rendered.** This brief produced [Observatory Editorial](https://rampstack.co/showcase/creative-direction/observatory-editorial), one of twelve Observatory archetypes in the live showcase. The site at that link is what "Conversational + Editorial Restrained + Peer + Considered" looks like as a real implementation. Compare the brief below to the rendered output to see how the abstract axes translate.
+
 ---
 
 # Observatory Marketing Site Brief
@@ -20,19 +22,19 @@ A representative completed brief, modeled on a realistic project. Showing how th
 
 ## The four axes
 
-### Tone Register: Conversational
+### Tone Register: [Conversational](https://rampstack.co/showcase/creative-direction?tone=conversational#examples)
 
 The audience is fatigued by both stiff vendor copy ("enterprise-grade reliability") and aggressive performance copy ("10x your observability"). Conversational treats the reader as a peer engineer who can read between the lines.
 
-### Aesthetic Philosophy: Editorial Restrained
+### Aesthetic Philosophy: [Editorial Restrained](https://rampstack.co/showcase/creative-direction?aesthetic=editorial-restrained#examples)
 
 The category is visually loud. Dashboards, gradient heroes, neon accents, animated charts. The differentiation is opposite: low color count, generous white space, considered typography, single definitive image instead of dashboard screenshots above the fold. The site reads like documentation that decided to be a marketing site, not the other way around.
 
-### Audience Relationship: Peer
+### Audience Relationship: [Peer](https://rampstack.co/showcase/creative-direction?relationship=peer#examples)
 
 These engineers do not need to be educated on observability. They need to be respected as practitioners. Authority voice would be condescending. Companion voice would be saccharine. Peer voice acknowledges that we and they are figuring out the same hard problems.
 
-### Sensory Ambition: Considered
+### Sensory Ambition: [Considered](https://rampstack.co/showcase/creative-direction?sensory=considered#examples)
 
 Functional would underdeliver; the audience expects a marketing site to be more than a feature list. Resonant is too much; this is not a brand campaign, it is a tool evaluation. Considered means the craft is visible (typography, restraint, the right photograph in the right place) without the site asking for an emotional response.
 
