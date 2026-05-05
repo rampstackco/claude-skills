@@ -74,6 +74,13 @@ CATEGORIES: list[tuple[str, str, str | None]] = [
     ("qa", "Quality assurance", None),
     ("operations", "Operations", None),
     ("growth", "Growth", None),
+    (
+        "marketing",
+        "Marketing",
+        "Paid media discipline: strategy, creative, and performance "
+        "analytics. Pairs with the paid media platforms in the "
+        "/integrations catalog at rampstack.co.",
+    ),
     ("research", "Research", None),
     ("cross-cutting", "Cross-cutting workflows", None),
     ("process-and-team", "Process and team", None),
