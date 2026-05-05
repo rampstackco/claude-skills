@@ -1,6 +1,9 @@
 ---
 name: brand-voice
 description: "Develop or document a complete brand voice and tone system covering voice attributes, tone shifts by context, vocabulary preferences, grammar rules, and copy examples. Use this skill whenever the user wants to define how a brand sounds, write a voice and tone document, audit existing copy for voice consistency, train a team or AI assistant on brand voice, or refine the personality of brand writing. Triggers on brand voice, voice and tone, tone of voice, writing voice, brand personality, copy voice, voice document, voice guidelines, how should we write, voice training, voice audit. Also triggers when the user has copy that 'feels off' and the underlying issue is voice, even if not stated explicitly."
+category: brand
+catalog_summary: "Voice attributes, tone shifts, vocabulary, paired-example library"
+display_order: 4
 ---
 
 # Brand Voice

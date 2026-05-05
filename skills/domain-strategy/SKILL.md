@@ -1,6 +1,9 @@
 ---
 name: domain-strategy
 description: "Plan, manage, and optimize a domain portfolio. Use this skill for DNS architecture decisions, redirect strategies, registrar choice, parking unused domains, multi-site setups, and domain consolidation or split planning. Triggers on DNS, domain, registrar, redirect, parking, subdomain, apex, www vs non-www, multi-site, portfolio, hreflang setup, domain migration. Also triggers when planning a new site that needs domain decisions made before launch."
+category: operations
+catalog_summary: "DNS architecture, redirects, registrars, multi-domain portfolios"
+display_order: 4
 ---
 
 # Domain Strategy

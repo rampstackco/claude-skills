@@ -1,6 +1,9 @@
 ---
 name: stakeholder-communication
 description: "Communicate effectively with stakeholders across functions and seniority levels. Use this skill when writing status updates, preparing executive reviews, sharing technical decisions with non-technical audiences, managing up, communicating bad news, or designing the communication cadence for a project. Triggers on stakeholder update, status report, executive summary, exec review, manage up, communicate bad news, project comms, status meeting, weekly update. Also triggers when a project is going off track and the team needs to communicate it."
+category: process-and-team
+catalog_summary: "Status updates, exec readouts, project communications"
+display_order: 1
 ---
 
 # Stakeholder Communication

@@ -1,6 +1,9 @@
 ---
 name: vendor-evaluation
 description: "Evaluate, select, and contract with vendors and SaaS tools. Use this skill when comparing alternatives, running an RFP, scoring vendors against criteria, negotiating contracts, planning a switch, or assessing a vendor's risk. Triggers on vendor evaluation, RFP, vendor selection, build vs buy, SaaS evaluation, vendor scorecard, vendor comparison, contract negotiation, vendor switch, procurement. Also triggers when a renewal is coming up or when a tool isn't meeting expectations."
+category: process-and-team
+catalog_summary: "Tool and vendor selection using a structured rubric"
+display_order: 3
 ---
 
 # Vendor Evaluation

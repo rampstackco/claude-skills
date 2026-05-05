@@ -1,6 +1,9 @@
 ---
 name: seo-audit-orchestration
 description: "Master orchestrator for a full SEO audit suite powered by the Ahrefs MCP. Use this skill when running a comprehensive SEO audit, scoping a quarterly health check, doing pre-acquisition SEO due diligence, or post-migration verification. Triggers on full SEO audit, comprehensive SEO review, SEO health check, audit my site, SEO due diligence, audit suite, comprehensive audit, end-to-end SEO. Also triggers when a stakeholder wants the complete picture rather than a single-dimension audit."
+category: seo-audit-suite
+catalog_summary: "Master orchestrator: sequences the suite, produces a rollup report"
+display_order: 1
 ---
 
 # SEO Audit Orchestration

@@ -1,6 +1,9 @@
 ---
 name: incident-response
 description: "Manage active production incidents through detection, triage, mitigation, communication, and resolution with structured roles and decision-making. Use this skill whenever the user has an active incident, a production issue, a service outage, a security incident, or needs to plan incident response procedures. Triggers on incident response, production incident, outage, service down, site down, P0, P1, severity, downtime, on-call, incident commander, status page, postmortem prep. Also triggers when something is actively broken in production and the user is figuring out what to do."
+category: operations
+catalog_summary: "Incident triage, comms, mitigation, escalation"
+display_order: 2
 ---
 
 # Incident Response

@@ -1,6 +1,9 @@
 ---
 name: cost-optimization
 description: "Audit and reduce infrastructure and tooling costs without sacrificing reliability or velocity. Use this skill when reviewing monthly cloud or SaaS spend, finding unused resources, rightsizing infrastructure, negotiating vendor contracts, deciding what to consolidate, or planning for budget cuts. Triggers on cost optimization, cloud spend, SaaS spend, rightsizing, unused resources, FinOps, infrastructure audit, vendor consolidation, budget cut, cost review. Also triggers when finance flags rising costs or when a contract renewal is up."
+category: cross-cutting
+catalog_summary: "Infrastructure spend audits, rightsizing, contract negotiation"
+display_order: 5
 ---
 
 # Cost Optimization

@@ -1,6 +1,9 @@
 ---
 name: design-system
 description: "Build or audit a design system including component library, design tokens, naming conventions, contribution model, and documentation. Use this skill whenever the user wants to build a design system, audit an existing system, define design tokens at the system level, structure a component library, or set up design system governance. Triggers on design system, component library, design tokens, atomic design, atoms, molecules, organisms, design system documentation, Storybook, Figma library, system governance, design contribution model. Also triggers when teams are inconsistent across products and a system is the answer."
+category: design
+catalog_summary: "Component library, design tokens, design system documentation"
+display_order: 1
 ---
 
 # Design System

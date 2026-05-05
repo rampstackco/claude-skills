@@ -1,6 +1,9 @@
 ---
 name: seo-onpage
 description: "Run a comprehensive on-page SEO audit or optimization pass covering title tags, meta descriptions, header structure, content quality, internal links, image optimization, URL hygiene, and on-page schema. Use this skill whenever the user asks to optimize a page, audit on-page SEO, fix titles or meta tags, review header structure, check internal linking, improve a single URL's search performance, or write SEO-friendly copy. Triggers on on-page SEO, page audit, title tag, meta description, H1, header structure, internal links, image alt, URL slug, page optimization, optimize this page, SEO this page. Also triggers for any single-page review where ranking, click-through, or relevance signal quality is the goal, even if the user does not say 'SEO' explicitly."
+category: seo-foundation
+catalog_summary: "Single-page audits and optimization across 8 dimensions"
+display_order: 1
 ---
 
 # On-Page SEO

@@ -1,6 +1,9 @@
 ---
 name: feature-flagging
 description: Operational discipline for feature flags as production infrastructure. Flag types, naming, targeting rules, rollout strategy, lifecycle, governance, stale flag management, and the technical debt patterns that bite teams who weren't deliberate about it.
+category: product
+catalog_summary: "Flags as production infrastructure: types, naming, lifecycle, targeting, rollout, stale flag cleanup, governance"
+display_order: 5
 ---
 
 # Feature Flagging

@@ -1,6 +1,9 @@
 ---
 name: seo-site-health-audit
 description: "Triage technical SEO findings from Ahrefs Site Audit (and similar crawlers) by SEO impact, not just severity. Use this skill when reviewing crawl results, prioritizing technical fixes, scoping a technical SEO sprint, or after running any site-wide crawl. Triggers on site audit results, technical fix list, crawl errors, technical SEO triage, prioritize technical issues, what should we fix first, broken links, redirect chains. Also triggers when a long list of crawler issues is creating decision paralysis."
+category: seo-audit-suite
+catalog_summary: "Triage Ahrefs Site Audit findings by SEO impact, not severity"
+display_order: 6
 ---
 
 # SEO Site Health Audit

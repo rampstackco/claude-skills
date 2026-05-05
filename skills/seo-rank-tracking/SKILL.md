@@ -1,6 +1,9 @@
 ---
 name: seo-rank-tracking
 description: "Set up and run rank tracking using Ahrefs MCP: pick the right keywords to track, segment them by purpose, set baselines, and define alert thresholds. Use this skill when starting a new tracking project, baselining for a campaign, choosing what to monitor, or building a rank reporting cadence. Triggers on rank tracking, keyword tracking, monitor rankings, track positions, what should we track, ranking dashboard, baseline rankings, alert thresholds. Also triggers when a stakeholder wants weekly or monthly ranking visibility."
+category: seo-audit-suite
+catalog_summary: "Setup, baseline, segmentation, alerting, dashboarding"
+display_order: 7
 ---
 
 # SEO Rank Tracking

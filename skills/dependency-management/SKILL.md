@@ -1,6 +1,9 @@
 ---
 name: dependency-management
 description: "Manage third-party libraries, runtimes, and SaaS dependencies. Use this skill when setting an update cadence, responding to security advisories, dealing with deprecated dependencies, evaluating new dependencies, auditing what's installed, or unblocking a dependency upgrade. Triggers on dependency, package update, security patch, lockfile, deprecated, breaking change, supply chain, dependency audit, npm audit, dependabot, renovate. Also triggers when a build breaks after an update or when an advisory is published for a used package."
+category: cross-cutting
+catalog_summary: "Package updates, security patches, lockfile hygiene"
+display_order: 4
 ---
 
 # Dependency Management

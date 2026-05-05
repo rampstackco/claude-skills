@@ -1,6 +1,9 @@
 ---
 name: accessibility-audit
 description: "Run a comprehensive WCAG accessibility audit covering perceivable, operable, understandable, and robust principles. Use this skill whenever the user wants to audit accessibility, review WCAG compliance, fix accessibility issues, prepare for accessibility certification, address an accessibility lawsuit risk, or systematically improve a site's accessibility. Triggers on accessibility audit, WCAG audit, a11y audit, accessibility compliance, ADA compliance, screen reader test, keyboard navigation, accessibility report, fix accessibility, axe scan. Also triggers when accessibility issues have been reported and need systematic remediation."
+category: development
+catalog_summary: "WCAG compliance audit with remediation plan"
+display_order: 3
 ---
 
 # Accessibility Audit

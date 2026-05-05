@@ -353,6 +353,37 @@ def check_line_lengths(result: LintResult) -> None:
                     result.warn(f"{rel}: {n} lines (target is under {REFERENCE_LINE_LIMIT})")
 
 
+def check_readme_catalog_generated(result: LintResult) -> None:
+    """README catalog content must match the output of the generator script.
+
+    Runs `scripts/generate_readme_catalog.py --check` and surfaces its diff
+    on failure. This is the strict version of `check_readme_catalog_count`,
+    which is kept as a sanity check for badge and header counts.
+    """
+    import subprocess
+
+    generator = REPO_ROOT / "scripts" / "generate_readme_catalog.py"
+    if not generator.exists():
+        result.fail(
+            f"generator script not found at {generator.relative_to(REPO_ROOT)}"
+        )
+        return
+    proc = subprocess.run(
+        [sys.executable, str(generator), "--check"],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+    )
+    if proc.returncode == 0:
+        return
+    detail = (proc.stdout or proc.stderr or "").strip()
+    result.fail(
+        "README catalog out of sync with skill metadata. "
+        "Run: python scripts/generate_readme_catalog.py --write"
+        + (f"\n{detail}" if detail else "")
+    )
+
+
 def check_readme_catalog_count(result: LintResult) -> None:
     """README badge and catalog claims must match the actual SKILL.md count."""
     if not README.exists():
@@ -404,6 +435,7 @@ CHECKS: list[Callable[[LintResult], None]] = [
     check_cross_skill_references,
     check_line_lengths,
     check_readme_catalog_count,
+    check_readme_catalog_generated,
 ]
 
 

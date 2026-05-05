@@ -1,6 +1,9 @@
 ---
 name: backup-and-disaster-recovery
 description: "Plan and run backups, set recovery objectives, and run disaster recovery drills. Use this skill when defining RPO/RTO targets, designing backup architecture, deciding what to back up and how often, planning for full-region or platform outages, or running a restoration drill. Triggers on backup, restore, RPO, RTO, disaster recovery, DR, business continuity, what if the database is gone, what if our hosting goes down, recovery drill, ransomware planning. Also triggers when an incident reveals a gap in restoration capability."
+category: operations
+catalog_summary: "RPO/RTO targets, backup strategy, restoration drills"
+display_order: 6
 ---
 
 # Backup and Disaster Recovery

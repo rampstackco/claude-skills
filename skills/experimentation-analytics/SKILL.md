@@ -1,6 +1,9 @@
 ---
 name: experimentation-analytics
 description: How to read experiment results without fooling yourself. Confidence intervals, p-values, multiple testing, sequential testing, CUPED, heterogeneous treatment effects, ratio metrics, network effects, dashboard reconciliation, and the interpretation failures that produce confidently wrong shipping decisions.
+category: product
+catalog_summary: "Read result panels without fooling yourself: confidence intervals, p-values, multiple testing, sequential testing, CUPED, ratio metrics, network effects, dashboard reconciliation"
+display_order: 6
 ---
 
 # Experimentation Analytics

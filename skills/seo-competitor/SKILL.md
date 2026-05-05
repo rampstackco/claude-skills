@@ -1,6 +1,9 @@
 ---
 name: seo-competitor
 description: "Run a competitive SEO analysis comparing the user's site to chosen competitors across SERP overlap, content depth, backlink profiles, technical posture, and brand presence. Use this skill whenever the user wants to analyze competitors, find content gaps, identify backlink opportunities, understand why competitors outrank them, or benchmark against the rest of their category. Triggers on competitor analysis, competitive analysis, SERP analysis, content gap, backlink gap, why is X ranking, who is winning the SERP, beat my competitor, benchmark, market positioning. Also triggers when planning a content strategy and the question 'what are competitors doing' is implicit."
+category: seo-foundation
+catalog_summary: "SERP overlap, content gaps, backlink gaps, technical comparison"
+display_order: 4
 ---
 
 # SEO Competitor Analysis

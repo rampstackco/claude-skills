@@ -1,6 +1,9 @@
 ---
 name: information-architecture
 description: "Design the structure of a website or product including sitemap, navigation, URL structure, content types, taxonomy, and labeling. Use this skill whenever the user asks to plan a sitemap, design navigation, structure URLs, define content types, build taxonomies, design site search, or organize content at the system level. Triggers on sitemap, site structure, navigation, IA, information architecture, URL structure, content types, taxonomy, categorization, breadcrumbs, hub pages, faceted navigation, site search, labeling. Also triggers when content is being created without a structural plan, or when an existing site's structure is being audited or restructured."
+category: strategy-and-discovery
+catalog_summary: "Sitemap, navigation, URL structure, content types, taxonomy"
+display_order: 4
 ---
 
 # Information Architecture

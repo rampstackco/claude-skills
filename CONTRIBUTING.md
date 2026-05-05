@@ -33,6 +33,26 @@ If you have not read [SKILL_AUTHORING.md](SKILL_AUTHORING.md), start there. It i
 
 ---
 
+## Adding a new skill
+
+The README catalog section is generated from skill folder metadata. Do not hand-edit it.
+
+1. Create the skill folder at `skills/your-skill-name/`.
+2. Author `SKILL.md` with these YAML frontmatter fields:
+   - `name` (string, must match folder name)
+   - `description` (string, 2 to 4 sentences with triggers)
+   - `category` (one of: `strategy-and-discovery`, `brand`, `design`, `content`, `seo-foundation`, `seo-audit-suite`, `product`, `development`, `qa`, `operations`, `growth`, `research`, `cross-cutting`, `process-and-team`)
+   - `catalog_summary` (string, one-line description for the catalog table)
+   - `display_order` (integer, controls position within the category; omit for alphabetical-by-slug)
+3. Add at least one reference file under `skills/your-skill-name/references/`.
+4. Run `python scripts/generate_readme_catalog.py --write`. The generator updates the badge, subtitle, "What you get" counts, table-of-contents anchor, catalog header, and the catalog table.
+5. Verify with `python .github/scripts/lint_skills.py`.
+6. Open the PR.
+
+The catalog content between `<!-- CATALOG:START -->` and `<!-- CATALOG:END -->` (and the six smaller marker pairs) is owned by the generator. Hand edits inside markers are overwritten on the next run. The generator is the source of truth.
+
+---
+
 ## Skill structure (the short version)
 
 ```
@@ -94,7 +114,7 @@ Before opening a PR, verify all of the following:
 - [ ] `SKILL.md` is under 250 lines (hard cap 500)
 - [ ] Each reference file is under 400 lines
 - [ ] You have read at least one existing skill in a similar category and matched its style
-- [ ] You added an entry to the catalog in `README.md` if your contribution is a new skill
+- [ ] If you added a new skill, the new SKILL.md frontmatter has `category`, `catalog_summary`, and `display_order` fields, and `python scripts/generate_readme_catalog.py --write` was run to update the README catalog
 - [ ] If you added a new skill, you ran a quick local search for trigger collisions with existing skills
 
 ---
@@ -118,7 +138,7 @@ Before opening a PR, verify all of the following:
 1. A maintainer reviews the PR for structural compliance, voice match, and substance.
 2. Comments may be left for clarification or required changes.
 3. Once approved, the PR is merged.
-4. The catalog count in README.md and the skill folder structure are kept consistent.
+4. CI runs the lint suite on every PR, including the generator-sync check. Stale README catalog blocks the merge.
 
 ---
 

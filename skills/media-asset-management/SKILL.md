@@ -1,6 +1,9 @@
 ---
 name: media-asset-management
 description: "Plan and run a media pipeline for images, video, and downloadable assets. Use this skill when designing image storage and delivery, choosing formats (WebP, AVIF), setting up responsive images, picking a video host, organizing a brand asset library, or auditing a slow image pipeline. Triggers on image pipeline, asset library, DAM, image optimization, WebP, AVIF, responsive images, video hosting, image CDN, asset workflow, media management. Also triggers when images are slow, broken, or scattered across systems."
+category: operations
+catalog_summary: "Image pipelines, video hosting, asset libraries, format selection"
+display_order: 9
 ---
 
 # Media Asset Management

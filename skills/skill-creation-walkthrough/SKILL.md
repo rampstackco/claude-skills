@@ -1,6 +1,9 @@
 ---
 name: skill-creation-walkthrough
 description: Step-by-step guide for creating your own Claude Skills, from deciding whether a skill is the right tool to writing the SKILL.md file, structuring reference material, and making it trigger reliably. Use when you want to package a workflow, framework, or repeated task into a reusable Skill, when an existing skill is not triggering or not loading the right context, when you are auditing a skill that is underperforming, or when you want to publish a skill for others. Also triggers when someone asks "how do I make a skill" or "what makes a good skill". Useful for individuals, teams, and anyone publishing skills publicly.
+category: process-and-team
+catalog_summary: "The meta-skill: how to write your own custom skills"
+display_order: 5
 ---
 
 A walkthrough for designing, writing, and maintaining your own Claude Skills. Covers when a skill is the right shape for your problem, how to write a description that actually triggers, how to structure SKILL.md and references, and how to test and iterate.

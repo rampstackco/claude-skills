@@ -1,6 +1,9 @@
 ---
 name: internationalization
 description: "Plan and run a multi-language or multi-region site. Use this skill when adding new locales, choosing URL structure for languages (subfolders vs subdomains vs ccTLDs), implementing hreflang, planning translation workflow, handling currency and date formats, designing for RTL languages, or auditing a stalled internationalization rollout. Triggers on internationalization, i18n, localization, l10n, hreflang, multi-language, translation workflow, RTL, locale, ccTLD, subfolder vs subdomain, language switcher. Also triggers when international audiences underperform or translations are stale."
+category: cross-cutting
+catalog_summary: "Locale strategy, hreflang, translation workflow, RTL design"
+display_order: 3
 ---
 
 # Internationalization

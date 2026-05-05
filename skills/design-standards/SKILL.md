@@ -1,6 +1,9 @@
 ---
 name: design-standards
 description: "Apply production-grade design standards when building or reviewing pages, components, or UI. Use this skill whenever the user asks to build a page, design a component, lay out a section, review the UI, fix the layout, or check design quality. Triggers on build a page, create a component, design a section, hero, card, CTA, layout, review the UI, fix the design, design system, design tokens, spacing, typography scale, button standards, mobile design. Also triggers for any production design decision where contrast, accessibility, spacing, or visual hierarchy matters."
+category: design
+catalog_summary: "Production-grade page and component design standards"
+display_order: 2
 ---
 
 # Design Standards

@@ -1,6 +1,9 @@
 ---
 name: usability-testing
 description: "Plan and run usability tests on existing or prototype designs including test design, task scripts, moderation, observation, and findings synthesis. Use this skill whenever the user wants to test usability, run a moderated test, run an unmoderated test, validate a design, find usability issues, or improve task completion. Triggers on usability test, usability testing, moderated test, unmoderated test, task script, think aloud, prototype testing, user testing, design validation, task completion. Also triggers when the user has built something and wants to know if real users can use it before shipping."
+category: research
+catalog_summary: "Test design, moderation, findings reports"
+display_order: 2
 ---
 
 # Usability Testing

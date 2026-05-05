@@ -1,6 +1,9 @@
 ---
 name: seo-content-gap-audit
 description: "Audit content gaps and decay using Ahrefs MCP data: missing topics, thin coverage, outdated content, and decaying pages. Use this skill when planning a content roadmap, refreshing a stale catalog, building topical authority, or identifying which existing pages need update versus replacement. Triggers on content gap, content audit, content refresh, content roadmap, decaying content, content decay, topical authority, what topics should we cover, where is competitor content stronger. Also triggers when organic traffic is flat despite consistent publishing."
+category: seo-audit-suite
+catalog_summary: "Missing topics, thin coverage, outdated content, decay diagnosis"
+display_order: 4
 ---
 
 # SEO Content Gap Audit

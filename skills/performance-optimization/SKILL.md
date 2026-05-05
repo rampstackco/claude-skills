@@ -1,6 +1,9 @@
 ---
 name: performance-optimization
 description: "Diagnose and fix web performance issues including Core Web Vitals (LCP, INP, CLS), bundle size, asset optimization, render performance, and runtime efficiency. Use this skill whenever the user wants to improve page speed, fix Core Web Vitals, optimize assets, reduce bundle size, debug slow renders, or systematically improve a site's performance. Triggers on performance, page speed, Core Web Vitals, LCP, INP, CLS, FID, TTFB, bundle size, code splitting, image optimization, lazy loading, render blocking, slow page, performance audit, Lighthouse score. Also triggers when traffic or conversion is dropping due to perceived slowness."
+category: development
+catalog_summary: "Core Web Vitals, asset optimization, render performance"
+display_order: 4
 ---
 
 # Performance Optimization

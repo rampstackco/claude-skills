@@ -1,6 +1,9 @@
 ---
 name: experiment-design
 description: A discipline for designing experiments (A/B tests, multivariate, holdouts) so the results actually answer the question you asked. Hypothesis writing, sample size, duration, segment analysis, interpretation, decision-making, and the common failure modes that produce confidently wrong shipping decisions.
+category: product
+catalog_summary: "Hypothesis to decision: sample size, duration, segment analysis, interpretation, and the failure modes that produce wrong shipping calls"
+display_order: 4
 ---
 
 # Experiment Design

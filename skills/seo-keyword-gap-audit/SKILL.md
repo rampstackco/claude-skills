@@ -1,6 +1,9 @@
 ---
 name: seo-keyword-gap-audit
 description: "Find keywords competitors rank for that the target property does not, and prioritize them by opportunity. Uses Ahrefs MCP for keyword and competitor data. Use this skill when planning content investment, identifying quick wins, building a content calendar against a competitor set, or scoping a market entry. Triggers on keyword gap, content gap, competitor keywords, opportunity keywords, what should we target, where are competitors winning, keyword opportunity. Also triggers when planning content for a new market or after losing organic share to a specific competitor."
+category: seo-audit-suite
+catalog_summary: "Competitor keyword gaps with opportunity scoring and clustering"
+display_order: 3
 ---
 
 # SEO Keyword Gap Audit

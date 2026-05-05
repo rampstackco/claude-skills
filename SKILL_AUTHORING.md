@@ -35,6 +35,9 @@ The eight required headers are: `## When to use`, `## When NOT to use`, `## Requ
 ---
 name: skill-name
 description: "A pushy, trigger-rich description. Two to four sentences. See description rules below."
+category: category-id
+catalog_summary: "One-line description for the README catalog table"
+display_order: 1
 ---
 
 # Skill Name
@@ -94,6 +97,22 @@ description: "A pushy, trigger-rich description. Two to four sentences. See desc
 - `references/file.md` - [What it is and when to read it]
 - `references/file.md` - [What it is and when to read it]
 ```
+
+---
+
+## Frontmatter fields
+
+Every SKILL.md frontmatter has five required fields. The first two are the trigger surface; the last three drive the README catalog generator.
+
+| Field | Type | Notes |
+|---|---|---|
+| `name` | string | Must match the folder name. Used by Claude when loading the skill. |
+| `description` | string | 2 to 4 sentences. See description rules below. |
+| `category` | string | One of: `strategy-and-discovery`, `brand`, `design`, `content`, `seo-foundation`, `seo-audit-suite`, `product`, `development`, `qa`, `operations`, `growth`, `research`, `cross-cutting`, `process-and-team`. Determines the catalog section the skill renders into. |
+| `catalog_summary` | string | One-line description used as the third column of the catalog table. Aim for under 140 characters. No trailing punctuation. |
+| `display_order` | integer | Position within the category. Smallest first. Skills with no `display_order` render after the ordered ones, alphabetically by slug. |
+
+After editing any of these fields, run `python scripts/generate_readme_catalog.py --write` to regenerate the README catalog content. CI runs `--check` and fails the build if the README is out of sync.
 
 ---
 

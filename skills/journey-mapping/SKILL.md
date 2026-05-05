@@ -1,6 +1,9 @@
 ---
 name: journey-mapping
 description: "Build customer journey maps and service blueprints that visualize the end-to-end user experience including touchpoints, emotions, friction, and underlying systems. Use this skill whenever the user wants to map a customer journey, build a service blueprint, identify friction across an experience, align teams on the user experience, or visualize touchpoints and pain points. Triggers on customer journey, journey map, service blueprint, user journey, experience map, touchpoint analysis, friction map, journey audit, end-to-end experience, customer experience map. Also triggers when the team has departmental views of users but no shared map of what the experience actually feels like."
+category: research
+catalog_summary: "Customer journey maps, service blueprints, friction analysis"
+display_order: 3
 ---
 
 # Journey Mapping

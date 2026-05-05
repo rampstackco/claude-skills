@@ -1,6 +1,9 @@
 ---
 name: creative-brief
 description: "Create or refine a creative brief that bridges discovery and execution. Use this skill whenever the user is starting a new project, kicking off a website, beginning a brand build or redesign, briefing a designer or developer or AI agent, or trying to align a team before building. Triggers on creative brief, design brief, brand brief, project kickoff, kicking off, briefing the team, project intake, design direction, brief the designer, brief the dev, where do we start, how do we start, write a brief, project overview, scope this project, align on direction. Also triggers when the user has a vague idea and needs to make it concrete enough to hand off, even if they do not say 'brief' explicitly."
+category: strategy-and-discovery
+catalog_summary: "Project briefs that align stakeholders before work starts"
+display_order: 2
 ---
 
 # Creative Brief

@@ -1,6 +1,9 @@
 ---
 name: pm-spec-writing
 description: "Translate ideas, feature requests, or vague concepts into specific, actionable dev briefs. Use this skill whenever the user has an idea they want to build, a feature to spec out, a bug to file, a project to scope, or needs to convert a half-formed idea into a clear implementation brief. Triggers on I want to add, we should build, can we make, what is the plan for, how do we implement, dev brief, feature spec, PRD, user story, acceptance criteria, scope this, prioritize. Also triggers when the user has a list of things they want to build and needs help converting them into well-formed tasks."
+category: product
+catalog_summary: "PRDs, user stories, acceptance criteria, dev briefs"
+display_order: 1
 ---
 
 # PM Spec Writing

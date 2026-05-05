@@ -1,6 +1,9 @@
 ---
 name: content-migration
 description: "Move content between platforms, domains, or URL structures while preserving SEO equity, user bookmarks, and integrations. Use this skill when planning a CMS migration, replatforming, consolidating sites, changing URL structures, or merging content from multiple sources. Triggers on content migration, replatform, CMS migration, domain migration, URL restructure, redirect map, site merge, content consolidation, migration plan, post-migration drop. Also triggers when planning a launch that involves moving existing content."
+category: cross-cutting
+catalog_summary: "Platform migrations with SEO equity preservation"
+display_order: 2
 ---
 
 # Content Migration

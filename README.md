@@ -8,7 +8,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+<!-- COUNT_BADGE:START -->
 [![Skills](https://img.shields.io/badge/Skills-65-blue.svg)](#the-65-skill-catalog)
+<!-- COUNT_BADGE:END -->
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -18,7 +20,9 @@
 
 </div>
 
+<!-- COUNT_INTRO:START -->
 > 65 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+<!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
 
@@ -32,7 +36,9 @@
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
+<!-- COUNT_TOC:START -->
 - [The 65-skill catalog](#the-65-skill-catalog)
+<!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
 - [Repository structure](#repository-structure)
@@ -58,8 +64,10 @@ This is not a curated list of other people's skills. It is a single, opinionated
 
 What you get:
 
+<!-- COUNT_WHATYOUGET:START -->
 - **65 skills** across 14 categories, every one with a complete `SKILL.md` and at least one reference file
-- **119 reference files** (templates, checklists, decision matrices, worked examples)
+- **132 reference files** (templates, checklists, decision matrices, worked examples)
+<!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
 - **Uniform structure.** Every skill uses the same section order, the same tone, and the same authoring conventions. Predictable in, predictable out.
@@ -246,10 +254,16 @@ You can also pull individual skills for one-off work. Need just a backlink audit
 
 ---
 
+<!-- COUNT_CATALOG_HEADER:START -->
 ## The 65-skill catalog
+<!-- COUNT_CATALOG_HEADER:END -->
 
+<!-- COUNT_CATALOG_INTRO:START -->
 All 65 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+<!-- COUNT_CATALOG_INTRO:END -->
 
+<!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
+<!-- CATALOG:START -->
 ### Strategy and discovery (5)
 
 | # | Skill | What it does |
@@ -388,6 +402,7 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | 63 | [`vendor-evaluation`](skills/vendor-evaluation/SKILL.md) | Tool and vendor selection using a structured rubric |
 | 64 | [`team-onboarding-playbook`](skills/team-onboarding-playbook/SKILL.md) | 30-60-90 onboarding plans for new hires and contractors |
 | 65 | [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) | The meta-skill: how to write your own custom skills |
+<!-- CATALOG:END -->
 
 ---
 

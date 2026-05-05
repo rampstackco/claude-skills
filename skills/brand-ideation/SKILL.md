@@ -1,6 +1,9 @@
 ---
 name: brand-ideation
 description: "Generate, evaluate, and narrow brand concepts during early ideation including positioning territories, naming candidates, mood directions, and narrative angles. Use this skill whenever the user is in the early phase of brand creation, exploring brand directions, brainstorming names, building moodboards, generating positioning options, or trying to choose between multiple brand directions. Triggers on brand ideation, brand concept, naming, brand name, name candidates, positioning, brand positioning, mood board, brand directions, exploring brands, early brand work, brand exploration, brand brainstorm, brand options. Also triggers when the user has multiple half-formed brand ideas and needs help converging on one, even if they do not say 'ideation' explicitly."
+category: brand
+catalog_summary: "Naming, positioning territories, mood directions, narrative angles"
+display_order: 1
 ---
 
 # Brand Ideation

@@ -1,6 +1,9 @@
 ---
 name: documentation-strategy
 description: "Design and run a documentation system for a team or product. Use this skill when planning what to document, choosing a documentation tool, organizing existing docs, fixing stale documentation, designing a maintenance cadence, or scoping technical writing work. Triggers on documentation, docs, tech writing, knowledge base, wiki, runbook, README, internal docs, doc audit, doc maintenance, stale docs, where do we document. Also triggers when the team is repeatedly answering the same questions or when onboarding takes too long."
+category: process-and-team
+catalog_summary: "Documentation systems, what to document, maintenance cadence"
+display_order: 2
 ---
 
 # Documentation Strategy

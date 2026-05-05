@@ -1,6 +1,9 @@
 ---
 name: form-strategy
 description: "Design forms that convert, validate well, resist spam, and integrate cleanly with downstream systems. Use this skill when designing or auditing any form (contact, signup, checkout, multi-step, embedded), planning validation logic, fighting spam, choosing form tooling, or improving form conversion. Triggers on form design, form validation, form conversion, multi-step form, form spam, captcha, honeypot, form abandonment, signup form, contact form. Also triggers when form completion rates are low or spam is overwhelming."
+category: cross-cutting
+catalog_summary: "Form design, validation patterns, spam prevention, conversion tuning"
+display_order: 1
 ---
 
 # Form Strategy
