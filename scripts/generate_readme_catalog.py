@@ -91,6 +91,12 @@ MARKERS = [
     "CATALOG",
 ]
 
+# Markers whose content must render inline (no surrounding newlines) to
+# preserve markdown rendering. The badge sits in a <div align="center">
+# block where consecutive image-link lines render as a single horizontal
+# row; newlines around the marker comments would break that joining.
+INLINE_MARKERS: set[str] = {"COUNT_BADGE"}
+
 
 @dataclass(frozen=True)
 class Skill:
@@ -271,11 +277,20 @@ def generate_catalog_intro(total: int) -> str:
 def replace_block(text: str, marker: str, new_content: str) -> str:
     """Replace the body between a START/END marker pair.
 
-    The replacement body is sandwiched by single newlines, producing:
+    For block-level markers (default), the replacement body is sandwiched
+    by single newlines, producing::
 
         <!-- MARKER:START -->
         {new_content}
         <!-- MARKER:END -->
+
+    For markers in INLINE_MARKERS, the replacement body has NO surrounding
+    newlines, producing::
+
+        <!-- MARKER:START -->{new_content}<!-- MARKER:END -->
+
+    This preserves markdown line continuity for content that must render
+    inline (such as a badge inside a centered div).
     """
     pattern = re.compile(
         rf"(<!-- {re.escape(marker)}:START -->)(.*?)(<!-- {re.escape(marker)}:END -->)",
@@ -286,7 +301,10 @@ def replace_block(text: str, marker: str, new_content: str) -> str:
         raise ValueError(f"Marker pair '{marker}' not found in README.md")
     if len(matches) > 1:
         raise ValueError(f"Marker pair '{marker}' appears more than once in README.md")
-    replacement = f"\\1\n{new_content}\n\\3"
+    if marker in INLINE_MARKERS:
+        replacement = rf"\1{new_content}\3"
+    else:
+        replacement = f"\\1\n{new_content}\n\\3"
     return pattern.sub(replacement, text, count=1)
 
 
