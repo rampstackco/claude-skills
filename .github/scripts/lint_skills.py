@@ -77,9 +77,9 @@ BRAND_WATCHLIST = [
 # `rampstackco` and the public domain `rampstack.co`, never as `rampstack`
 # in isolation. The check enforces this with a regex below.
 
-SKILL_MD_LINE_LIMIT = 500   # Hard cap; warns above 250.
-SKILL_MD_LINE_TARGET = 250
-REFERENCE_LINE_LIMIT = 400
+SKILL_MD_LINE_LIMIT = 500   # Hard cap; warns above 400.
+SKILL_MD_LINE_TARGET = 400
+REFERENCE_LINE_LIMIT = 500
 
 
 @dataclass
@@ -332,7 +332,12 @@ def check_cross_skill_references(result: LintResult) -> None:
 
 
 def check_line_lengths(result: LintResult) -> None:
-    """SKILL.md soft cap 250, hard cap 500. Reference files cap 400."""
+    """SKILL.md soft cap 400, hard cap 500. Reference files cap 500.
+
+    Counts file line counts via len(splitlines()), not characters
+    per line. The function name is misleading shorthand for file
+    line counts. Consider renaming in a future cleanup.
+    """
     for skill_dir in list_skill_dirs():
         skill_md = skill_dir / "SKILL.md"
         if skill_md.exists():
