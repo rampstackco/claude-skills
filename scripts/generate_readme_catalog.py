@@ -89,7 +89,6 @@ CATEGORY_IDS = {cid for cid, _, _ in CATEGORIES}
 
 
 MARKERS = [
-    "COUNT_BADGE",
     "COUNT_INTRO",
     "COUNT_WHATYOUGET",
     "COUNT_TOC",
@@ -97,12 +96,6 @@ MARKERS = [
     "COUNT_CATALOG_INTRO",
     "CATALOG",
 ]
-
-# Markers whose content must render inline (no surrounding newlines) to
-# preserve markdown rendering. The badge sits in a <div align="center">
-# block where consecutive image-link lines render as a single horizontal
-# row; newlines around the marker comments would break that joining.
-INLINE_MARKERS: set[str] = {"COUNT_BADGE"}
 
 
 @dataclass(frozen=True)
@@ -284,20 +277,11 @@ def generate_catalog_intro(total: int) -> str:
 def replace_block(text: str, marker: str, new_content: str) -> str:
     """Replace the body between a START/END marker pair.
 
-    For block-level markers (default), the replacement body is sandwiched
-    by single newlines, producing::
+    The replacement body is sandwiched by single newlines, producing::
 
         <!-- MARKER:START -->
         {new_content}
         <!-- MARKER:END -->
-
-    For markers in INLINE_MARKERS, the replacement body has NO surrounding
-    newlines, producing::
-
-        <!-- MARKER:START -->{new_content}<!-- MARKER:END -->
-
-    This preserves markdown line continuity for content that must render
-    inline (such as a badge inside a centered div).
     """
     pattern = re.compile(
         rf"(<!-- {re.escape(marker)}:START -->)(.*?)(<!-- {re.escape(marker)}:END -->)",
@@ -308,11 +292,36 @@ def replace_block(text: str, marker: str, new_content: str) -> str:
         raise ValueError(f"Marker pair '{marker}' not found in README.md")
     if len(matches) > 1:
         raise ValueError(f"Marker pair '{marker}' appears more than once in README.md")
-    if marker in INLINE_MARKERS:
-        replacement = rf"\1{new_content}\3"
-    else:
-        replacement = f"\\1\n{new_content}\n\\3"
+    replacement = f"\\1\n{new_content}\n\\3"
     return pattern.sub(replacement, text, count=1)
+
+
+def replace_badge_count(text: str, total: int) -> str:
+    """Substitute the skill count in the Skills badge markdown.
+
+    The badge sits inline inside a centered div alongside other badges.
+    A line that begins with an HTML comment triggers CommonMark's HTML
+    block (type 2) parsing, which prevents inline markdown from being
+    parsed on that line. Wrapping the badge with marker comments breaks
+    the badge rendering. Anchor on the unique full-badge markdown
+    pattern instead, so the substitution touches only the badge in the
+    centered div and leaves the TOC link and catalog header (which
+    have their own marker-based substitution) alone.
+    """
+    badge_pattern = re.compile(
+        r"\[!\[Skills\]\(https://img\.shields\.io/badge/Skills-(\d+)-blue\.svg\)\]"
+        r"\(#the-(\d+)-skill-catalog\)"
+    )
+    matches = list(badge_pattern.finditer(text))
+    if not matches:
+        raise ValueError("Skills badge markdown pattern not found in README.md")
+    if len(matches) > 1:
+        raise ValueError("Skills badge markdown pattern appears more than once in README.md")
+    replacement = (
+        f"[![Skills](https://img.shields.io/badge/Skills-{total}-blue.svg)]"
+        f"(#the-{total}-skill-catalog)"
+    )
+    return badge_pattern.sub(replacement, text, count=1)
 
 
 def render_readme(text: str, skills: list[Skill]) -> str:
@@ -321,7 +330,7 @@ def render_readme(text: str, skills: list[Skill]) -> str:
     total = len(skills)
     ref_total = count_reference_files()
     cat_total = len(CATEGORIES)
-    text = replace_block(text, "COUNT_BADGE", generate_badge(total))
+    text = replace_badge_count(text, total)
     text = replace_block(text, "COUNT_INTRO", generate_intro_blockquote(total))
     text = replace_block(
         text, "COUNT_WHATYOUGET", generate_whatyouget(total, ref_total, cat_total)

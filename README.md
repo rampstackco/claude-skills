@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-<!-- COUNT_BADGE:START -->[![Skills](https://img.shields.io/badge/Skills-67-blue.svg)](#the-67-skill-catalog)<!-- COUNT_BADGE:END -->
+[![Skills](https://img.shields.io/badge/Skills-67-blue.svg)](#the-67-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
