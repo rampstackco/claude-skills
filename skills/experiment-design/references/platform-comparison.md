@@ -2,7 +2,7 @@
 
 A practical guide to choosing an experimentation platform. Each platform has a distinct profile (statistical defaults, primary audience, integration model, pricing shape). Picking well saves quarters of friction; picking badly creates ongoing pain.
 
-This reference assumes the team is in the position of choosing or reconsidering. For platform-specific MCP commands, auth models, and example prompts, pair this reference with the matching `/integrations/{platform}` page on rampstack.co.
+This reference assumes the team is in the position of choosing or reconsidering. For platform-specific MCP commands, auth models, and example prompts, consult the chosen platform's official documentation.
 
 ---
 
@@ -16,7 +16,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** Pricing scales with events, which can compound for high-traffic products. The breadth of the MCP can crowd context windows on smaller models; scoping helps. Best-in-class statistical defaults are nice but require the team to actually understand them.
 
-**Pair with.** `/integrations/statsig` on rampstack.co for MCP setup and example prompts.
+**MCP setup.** Statsig publishes setup guides for ChatGPT, Cursor, Claude Code, and Codex; consult the Statsig docs for the current MCP server URL and auth model.
 
 ---
 
@@ -30,7 +30,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** The breadth of the MCP requires scoping with `?features=` query parameters; without scoping, the agent gets 200+ tools and tool selection accuracy degrades on smaller models. Self-host adds operational complexity. Some experiment features lag behind specialized platforms.
 
-**Pair with.** `/integrations/posthog` on rampstack.co for scoping notes and example prompts.
+**MCP setup.** PostHog's MCP scopes via `?features=` query parameters; without scoping, the agent gets 200+ tools and tool-selection accuracy degrades on smaller models. Consult the PostHog docs for current scoping syntax.
 
 ---
 
@@ -44,7 +44,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** More setup overhead than hosted platforms. Requires SQL fluency for advanced analyses. Smaller community than the bigger commercial vendors.
 
-**Pair with.** `/integrations/growthbook` on rampstack.co for self-host MCP setup.
+**MCP setup.** GrowthBook ships an open-source MCP for self-host or cloud; consult the GrowthBook docs for the current binary and auth model.
 
 ---
 
@@ -58,7 +58,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** Expensive at the enterprise tier. Visual editor produces JS that ships at runtime, which can affect page performance. Less ergonomic for engineering-led teams that prefer code-first configuration.
 
-**Pair with.** `/integrations/optimizely` on rampstack.co for the hosted MCP setup.
+**MCP setup.** Optimizely's hosted Remote MCP works in browser-based ChatGPT and Claude.ai with OAuth; consult Optimizely docs for the current server URL.
 
 ---
 
@@ -72,7 +72,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** Experiments are a secondary feature, not the platform's center of gravity. Variance reduction options are more limited than dedicated experimentation platforms. Beta status of the MCP means the API surface may evolve.
 
-**Pair with.** `/integrations/amplitude` on rampstack.co for MCP setup and example prompts.
+**MCP setup.** Amplitude's hosted MCP is available to all customers including the free tier and ships a native ChatGPT connector; consult the Amplitude docs for the current setup steps.
 
 ---
 
@@ -86,7 +86,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** No first-party MCP server as of May 2026. Programmatic access is REST API only; teams that want agentic workflows today need to build a custom MCP adapter or wait. Pricing reflects the data-science-focused product positioning.
 
-**Pair with.** `/integrations/eppo` on rampstack.co for the REST API patterns and the wait-for-MCP framing.
+**MCP setup.** No first-party MCP server as of mid-2026; teams that want agentic workflows today either build a custom MCP adapter on top of Eppo's REST API or wait for the official server. Consult Eppo's docs and roadmap for current status.
 
 ---
 
@@ -100,7 +100,7 @@ This reference assumes the team is in the position of choosing or reconsidering.
 
 **Gotchas.** The narrow MCP scope is intentional but limits broader CRUD work. For everyday flag management, teams use the Kameleoon dashboard or REST API rather than the MCP.
 
-**Pair with.** `/integrations/kameleoon` on rampstack.co for the convert-and-promote workflow.
+**MCP setup.** Kameleoon's hosted MCP via OAuth ships a narrow seven-tool surface focused on the convert-and-promote workflow; consult Kameleoon's docs for the current server URL.
 
 ---
 

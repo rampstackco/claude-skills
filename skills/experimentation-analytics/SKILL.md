@@ -22,7 +22,7 @@ When to use this skill: any time you are reading an experiment result panel and 
 
 This skill covers result interpretation, the statistical concepts that make the numbers trustworthy, and the dashboard reconciliation work that prevents executive-level confusion when the experiment number does not match the BI number. The audience is product managers and data analysts who read experiment results together and need a shared vocabulary that does not paper over the dangerous parts of statistics.
 
-Companion skills cover the adjacent territory. The `experiment-design` skill covers pre-experiment thinking: hypothesis, sample size, MDE, segments, what NOT to test. Read it before designing the test; read this skill when reading the result. The `feature-flagging` skill covers the operational mechanics of flag management, environment promotion, and stale-flag cleanup. Together the three skills span the experimentation lifecycle from intent through interpretation. Pair this skill with the relevant `/integrations/{platform}` microsite for platform-specific MCP commands; Statsig, PostHog, Optimizely, GrowthBook, Eppo, Amplitude, and Kameleoon all expose rich analytics surfaces that this skill informs how to read.
+Companion skills cover the adjacent territory. The `experiment-design` skill covers pre-experiment thinking: hypothesis, sample size, MDE, segments, what NOT to test. Read it before designing the test; read this skill when reading the result. The `feature-flagging` skill covers the operational mechanics of flag management, environment promotion, and stale-flag cleanup. Together the three skills span the experimentation lifecycle from intent through interpretation. For platform-specific MCP commands, consult the chosen platform's docs; Statsig, PostHog, Optimizely, GrowthBook, Eppo, Amplitude, and Kameleoon all expose rich analytics surfaces that this skill informs how to read.
 
 ---
 
@@ -330,4 +330,4 @@ The same discipline applies to analysts. The temptation to slice the data one mo
 
 Inconclusive is a valid outcome. The lesson, if there is one, is for the next hypothesis: the effect is smaller than expected, the segment matters, the test was underpowered, the metric was the wrong one. Use the inconclusive result to design a better next test. Do not retrofit a story onto the current one.
 
-For pre-experiment design discipline, see the `experiment-design` skill. For the operational mechanics of feature flags that deliver the variants, see the `feature-flagging` skill. For platform-specific MCP commands and example prompts, pair this skill with the matching `/integrations/{platform}` microsite for your stack.
+For pre-experiment design discipline, see the `experiment-design` skill. For the operational mechanics of feature flags that deliver the variants, see the `feature-flagging` skill. For platform-specific MCP commands and example prompts, consult the chosen platform's documentation.

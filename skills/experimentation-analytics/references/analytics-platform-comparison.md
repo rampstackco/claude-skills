@@ -1,6 +1,6 @@
 # Analytics platform comparison
 
-Profiles of seven major experimentation platforms covering what each exposes, what each hides, and the gotchas in each. Pair with the matching `/integrations/{platform}` microsite on rampstack.co for MCP setup, auth, and example prompts.
+Profiles of seven major experimentation platforms covering what each exposes, what each hides, and the gotchas in each. For MCP setup, auth, and example prompts, consult each platform's official documentation.
 
 The categorization below is for analytics surface area specifically. All seven platforms are competent at running experiments; the difference is what they expose on the result panel and how the math under the hood handles edge cases.
 

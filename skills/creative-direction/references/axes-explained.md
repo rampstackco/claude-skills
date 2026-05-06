@@ -2,7 +2,7 @@
 
 Each axis is a spectrum. Pick a position knowing it excludes adjacent positions for this project. Reference brands are illustrative, not prescriptive.
 
-> **See the framework rendered as real brands.** The [creative-direction showcase](https://rampstack.co/showcase/creative-direction#examples) demonstrates this framework applied across thirty fictional brands. Each axis position below links to the showcase pre-filtered to examples matching that position. Most rare-but-powerful combinations have no example yet, which is the point: the framework is generative, the showcase is illustrative.
+> Worked examples for each axis position can be assembled from any reference brand library that documents tone, aesthetic, audience relationship, and sensory ambition consistently. The framework below describes the four axes; the user's own reference set positions each example along the axes during the brief workflow.
 
 ---
 
@@ -11,8 +11,6 @@ Each axis is a spectrum. Pick a position knowing it excludes adjacent positions 
 How formal is the language? How much heat does it carry?
 
 ### Professional
-
-*[See examples](https://rampstack.co/showcase/creative-direction?tone=professional#examples)*
 
 Measured, precise, low-register. Trusts the reader to do the work of meaning. Restraint is the signal.
 
@@ -26,8 +24,6 @@ Measured, precise, low-register. Trusts the reader to do the work of meaning. Re
 
 ### Conversational
 
-*[See examples](https://rampstack.co/showcase/creative-direction?tone=conversational#examples)*
-
 Warmer, more personal, comfortable with first-person and contractions. Reads like a thoughtful person talking, not an institution speaking.
 
 **What this signals:** Approachability without sacrificing competence. A brand that respects the reader as a person, not a target.
@@ -40,8 +36,6 @@ Warmer, more personal, comfortable with first-person and contractions. Reads lik
 
 ### Playful
 
-*[See examples](https://rampstack.co/showcase/creative-direction?tone=playful#examples)*
-
 Wit, surprise, willingness to break form for effect. Visible craft in the language itself.
 
 **What this signals:** Confidence, creative ambition, willingness to risk being misread. The brand is having fun and inviting the reader to as well.
@@ -53,8 +47,6 @@ Wit, surprise, willingness to break form for effect. Visible craft in the langua
 **Common failure:** Forcing humor that does not earn its place. Playful only works when it is actually funny. Otherwise it reads as desperate.
 
 ### Provocative
-
-*[See examples](https://rampstack.co/showcase/creative-direction?tone=provocative#examples)*
 
 Pointed, opinionated, willing to take a position other brands will not. Says what others soften.
 
@@ -74,8 +66,6 @@ How much visual density does the work carry? How much does each element earn its
 
 ### Editorial Restrained
 
-*[See examples](https://rampstack.co/showcase/creative-direction?aesthetic=editorial-restrained#examples)*
-
 Generous white space, single definitive image instead of grids, considered typography, low color count, deliberate slowness.
 
 **What this signals:** Confidence and patience. The brand is willing to under-fill space because it trusts the reader to fill it with attention.
@@ -87,8 +77,6 @@ Generous white space, single definitive image instead of grids, considered typog
 **Common failure:** Restraint that reads as absence. Restraint earns its place when every remaining element is exquisite. Strip too much and the page reads as unfinished.
 
 ### Polished Standard
-
-*[See examples](https://rampstack.co/showcase/creative-direction?aesthetic=polished-standard#examples)*
 
 Modern SaaS aesthetic. Clean grids, balanced contrast, expected proportions, conventional component patterns.
 
@@ -102,8 +90,6 @@ Modern SaaS aesthetic. Clean grids, balanced contrast, expected proportions, con
 
 ### Controlled Maximalist
 
-*[See examples](https://rampstack.co/showcase/creative-direction?aesthetic=controlled-maximalist#examples)*
-
 High visual density where every element is intentional. Loud, but engineered. The page is full because each thing earns its place.
 
 **What this signals:** Craft and conviction. The brand has thought about every pixel and chose density on purpose.
@@ -115,8 +101,6 @@ High visual density where every element is intentional. Loud, but engineered. Th
 **Common failure:** Density without intent. Controlled Maximalist requires every element to defend its existence. Lazy density reads as cluttered, not crafted.
 
 ### Expressive Maximalist
-
-*[See examples](https://rampstack.co/showcase/creative-direction?aesthetic=expressive-maximalist#examples)*
 
 Visual abundance, willingness to be loud, willing to clash. Energy over restraint.
 
@@ -136,8 +120,6 @@ How does the brand position itself relative to the reader?
 
 ### Authority
 
-*[See examples](https://rampstack.co/showcase/creative-direction?relationship=authority#examples)*
-
 We tell you what is true. Expertise on display. Hierarchy implicit and accepted.
 
 **What this signals:** Earned expertise. The reader came here to learn from someone who knows more than they do.
@@ -149,8 +131,6 @@ We tell you what is true. Expertise on display. Hierarchy implicit and accepted.
 **Common failure:** Authority without earned credibility reads as arrogance. The brand needs to actually know more than the reader.
 
 ### Peer
-
-*[See examples](https://rampstack.co/showcase/creative-direction?relationship=peer#examples)*
 
 We are figuring this out together. Equal footing, shared vocabulary.
 
@@ -164,8 +144,6 @@ We are figuring this out together. Equal footing, shared vocabulary.
 
 ### Companion
 
-*[See examples](https://rampstack.co/showcase/creative-direction?relationship=companion#examples)*
-
 We walk with you. Lower hierarchy than authority, more presence than peer.
 
 **What this signals:** Sustained accompaniment. The brand is here for the long arc, not just the transaction.
@@ -177,8 +155,6 @@ We walk with you. Lower hierarchy than authority, more presence than peer.
 **Common failure:** Companion without substance reads as performative warmth. The brand needs to actually do something useful to earn the relationship.
 
 ### Coach
-
-*[See examples](https://rampstack.co/showcase/creative-direction?relationship=coach#examples)*
 
 We challenge you. The brand pushes the reader toward something they would not push themselves toward alone.
 
@@ -198,8 +174,6 @@ How much is the work asking of the reader emotionally?
 
 ### Functional
 
-*[See examples](https://rampstack.co/showcase/creative-direction?sensory=functional#examples)*
-
 Get a job done. Reader gets in, gets the answer, gets out. Aesthetics serve clarity, not feeling.
 
 **What this signals:** Respect for time. The brand assumes the reader has somewhere else to be.
@@ -212,8 +186,6 @@ Get a job done. Reader gets in, gets the answer, gets out. Aesthetics serve clar
 
 ### Considered
 
-*[See examples](https://rampstack.co/showcase/creative-direction?sensory=considered#examples)*
-
 Reader notices the craft. Aesthetic choices are visible without being the point.
 
 **What this signals:** Attention to detail without flexing it. The brand cares, and the reader can tell.
@@ -225,8 +197,6 @@ Reader notices the craft. Aesthetic choices are visible without being the point.
 **Common failure:** Considered work that drifts toward decorative. If the craft is visible without earning its place, it reads as fussy.
 
 ### Resonant
-
-*[See examples](https://rampstack.co/showcase/creative-direction?sensory=resonant#examples)*
 
 Reader feels something specific the brand architected. Aesthetics carry meaning. The work is asking the reader to feel.
 
@@ -246,15 +216,15 @@ Some combinations are common, some are rare-but-doable, some are contradictory.
 
 **Common combinations:**
 
-- [Conversational / Polished Standard / Peer / Considered](https://rampstack.co/showcase/creative-direction?tone=conversational&aesthetic=polished-standard&relationship=peer&sensory=considered#examples) = the modern B2B SaaS default
-- [Professional / Editorial Restrained / Authority / Considered](https://rampstack.co/showcase/creative-direction?tone=professional&aesthetic=editorial-restrained&relationship=authority&sensory=considered#examples) = premium consultancy default
-- [Conversational / Polished Standard / Companion / Considered](https://rampstack.co/showcase/creative-direction?tone=conversational&aesthetic=polished-standard&relationship=companion&sensory=considered#examples) = wellness or healthcare default
+- Conversational / Polished Standard / Peer / Considered = the modern B2B SaaS default
+- Professional / Editorial Restrained / Authority / Considered = premium consultancy default
+- Conversational / Polished Standard / Companion / Considered = wellness or healthcare default
 
 **Rare but powerful:**
 
-- [Provocative / Editorial Restrained / Coach / Resonant](https://rampstack.co/showcase/creative-direction?tone=provocative&aesthetic=editorial-restrained&relationship=coach&sensory=resonant#examples) = the "Patagonia at full conviction" register
-- [Conversational / Controlled Maximalist / Peer / Resonant](https://rampstack.co/showcase/creative-direction?tone=conversational&aesthetic=controlled-maximalist&relationship=peer&sensory=resonant#examples) = the "BUCK or top creative agency" register
-- [Provocative / Controlled Maximalist / Coach / Resonant](https://rampstack.co/showcase/creative-direction?tone=provocative&aesthetic=controlled-maximalist&relationship=coach&sensory=resonant#examples) = the "high-stakes brand revival" register
+- Provocative / Editorial Restrained / Coach / Resonant = the "Patagonia at full conviction" register
+- Conversational / Controlled Maximalist / Peer / Resonant = the "top creative agency" register
+- Provocative / Controlled Maximalist / Coach / Resonant = the "high-stakes brand revival" register
 
 **Difficult combinations to flag:**
 

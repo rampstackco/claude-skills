@@ -2,7 +2,7 @@
 
 How the orchestration plan implements in each platform. Per platform: workflow representation (how phases, gates, lock points, and handoffs map), MCP integration notes (what AI agents can do via the platform's MCP), and CLI alternatives (where the CLI is the better tool than MCP).
 
-This file pairs with the rampstack.co integrations content (`/integrations/jira`, `/integrations/linear`, `/integrations/notion`, `/integrations/figma`, `/integrations/github`, `/integrations/agile-creative-direction`). Cross-reference those pages for setup screenshots and additional team patterns.
+For setup screenshots and additional team patterns, consult each platform's official documentation alongside this file.
 
 ---
 

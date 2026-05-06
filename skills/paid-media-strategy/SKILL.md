@@ -20,7 +20,7 @@ When to use this skill: any time you are designing a paid media plan, evaluating
 
 ## What this skill is for
 
-This skill spans paid media strategy and operations. It does not cover ad creative production (use `ads-creative-development` once it ships), result interpretation in depth (use `ads-performance-analytics` once it ships), or platform-specific MCP tooling (covered in the `/integrations` microsites at rampstack.co).
+This skill spans paid media strategy and operations. It does not cover ad creative production (use `ads-creative-development`), result interpretation in depth (use `ads-performance-analytics`), or platform-specific MCP tooling (consult each ad platform's official documentation for current MCP setup, auth, and example prompts).
 
 The audience is a performance marketer (in-house or agency), a growth lead allocating spend across channels, or a founder making early paid budget decisions. The voice is tactical. There is no "evaluate every option yourself with no opinion." Paid media decisions have shape, and a senior practitioner can map a situation to a defensible plan in an afternoon.
 
