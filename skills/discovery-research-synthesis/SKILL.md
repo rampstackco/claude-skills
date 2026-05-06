@@ -1,9 +1,9 @@
 ---
 name: discovery-research-synthesis
 description: "Turning research artifacts into actionable PM insight. Customer interviews, user research notes, support ticket reviews, sales call transcripts, survey data, in-app feedback, all synthesized into the decisions they are meant to inform. The discipline of moving from raw discovery data to clear product direction without losing signal in the synthesis or fabricating insight that was not actually there. Triggers on research synthesis, customer interview synthesis, user research analysis, discovery readout, research insights, sales call analysis, support ticket analysis, qualitative data analysis. Also triggers when a team has done research but cannot turn it into decisions, when synthesis is producing pretty decks but no roadmap movement, or when an upcoming PM decision needs to be grounded in research already conducted."
-category: project-management
+category: research
 catalog_summary: "Synthesizing customer interviews, research notes, and support tickets into actionable PM decisions. Distinguishes data-dump (no synthesis) from insight-theater (overpolished narrative) from actionable synthesis (decision-grade clarity)"
-display_order: 11
+display_order: 4
 ---
 
 # Discovery Research Synthesis

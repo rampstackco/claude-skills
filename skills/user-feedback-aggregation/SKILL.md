@@ -1,9 +1,9 @@
 ---
 name: user-feedback-aggregation
 description: "Collecting and synthesizing user feedback across channels (support tickets, NPS, in-app feedback, sales calls, social mentions, customer councils) into a continuous signal that informs product decisions. The triage discipline that distinguishes loudest-voice (whoever complains most wins) from averaged-noise (every signal weighted equally) from triaged-synthesis (signal weighted by source quality, frequency, and decision relevance). Triggers on user feedback, customer feedback aggregation, NPS, support ticket analysis, customer councils, feedback synthesis, voice of customer, feedback triage, in-app feedback. Also triggers when feedback channels overflow with volume that does not produce decisions, when the loudest-voice problem is steering roadmap, or when continuous feedback streams need synthesis discipline."
-category: project-management
+category: research
 catalog_summary: "Collecting and synthesizing user feedback across channels into continuous decision signal. Triage discipline that distinguishes loudest-voice (whoever complains most) from averaged-noise (every signal weighted equally) from triaged-synthesis (weighted by source quality and decision relevance)"
-display_order: 15
+display_order: 5
 ---
 
 # User Feedback Aggregation

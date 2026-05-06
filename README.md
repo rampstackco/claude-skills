@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-81-blue.svg)](#the-81-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-86-blue.svg)](#the-86-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 81 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 86 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -35,7 +35,7 @@
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
 <!-- COUNT_TOC:START -->
-- [The 81-skill catalog](#the-81-skill-catalog)
+- [The 86-skill catalog](#the-86-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -63,8 +63,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **81 skills** across 15 categories, every one with a complete `SKILL.md` and at least one reference file
-- **271 reference files** (templates, checklists, decision matrices, worked examples)
+- **86 skills** across 15 categories, every one with a complete `SKILL.md` and at least one reference file
+- **315 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -253,11 +253,11 @@ You can also pull individual skills for one-off work. Need just a backlink audit
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 81-skill catalog
+## The 86-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 81 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 86 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -335,7 +335,7 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | 38 | [`seo-site-health-audit`](skills/seo-site-health-audit/SKILL.md) | Triage Ahrefs Site Audit findings by SEO impact, not severity |
 | 39 | [`seo-rank-tracking`](skills/seo-rank-tracking/SKILL.md) | Setup, baseline, segmentation, alerting, dashboarding |
 
-### Product (10)
+### Product (13)
 
 | # | Skill | What it does |
 |---|---|---|
@@ -349,42 +349,45 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | 47 | [`product-analytics-setup`](skills/product-analytics-setup/SKILL.md) | Instrument product analytics correctly: event taxonomy, properties, naming conventions, schema versioning, funnels, retention cohorts, North Star selection, and the instrumentation debt that compounds without discipline |
 | 48 | [`data-warehouse-experimentation`](skills/data-warehouse-experimentation/SKILL.md) | Run experiments out of the warehouse: SQL assignment, exposure logs, dbt metric definitions, statistical analysis, variance reduction with CUPED, sequential testing, and the operational tradeoffs vs platforms |
 | 49 | [`feature-launch-playbook`](skills/feature-launch-playbook/SKILL.md) | The operational discipline of launching a feature well: positioning, internal alignment, customer comms, sales enablement, support readiness, rollout strategy, monitoring, and post-launch measurement |
+| 50 | [`jtbd-framing`](skills/jtbd-framing/SKILL.md) | Jobs-to-be-Done framework. Job statements, struggling moments, hire/fire criteria, the difference between feature-thinking and job-thinking. Honest about where JTBD earns its keep and where it becomes performative |
+| 51 | [`okr-design`](skills/okr-design/SKILL.md) | OKR design discipline. Outcome statements, key results, scoring, mid-quarter recalibration. Distinguishes sandbagged OKRs (always hit, useless) from aspirational fantasy (impossible, demoralizing) from stretch OKRs (genuine ambition with quarterly accountability) |
+| 52 | [`beta-program-management`](skills/beta-program-management/SKILL.md) | Running betas that produce real signal. Participant selection, structured feedback, beta-to-GA decisions. Distinguishes soft-launch (no structure) from kitchen-sink (everyone in) from structured-beta (calibrated cohort with intentional feedback loops) |
 
 ### Development (4)
 
 | # | Skill | What it does |
 |---|---|---|
-| 50 | [`code-review-web`](skills/code-review-web/SKILL.md) | PR review, build error diagnosis, security and quality checks |
-| 51 | [`frontend-component-build`](skills/frontend-component-build/SKILL.md) | Component architecture, props design, accessibility from the start |
-| 52 | [`accessibility-audit`](skills/accessibility-audit/SKILL.md) | WCAG compliance audit with remediation plan |
-| 53 | [`performance-optimization`](skills/performance-optimization/SKILL.md) | Core Web Vitals, asset optimization, render performance |
+| 53 | [`code-review-web`](skills/code-review-web/SKILL.md) | PR review, build error diagnosis, security and quality checks |
+| 54 | [`frontend-component-build`](skills/frontend-component-build/SKILL.md) | Component architecture, props design, accessibility from the start |
+| 55 | [`accessibility-audit`](skills/accessibility-audit/SKILL.md) | WCAG compliance audit with remediation plan |
+| 56 | [`performance-optimization`](skills/performance-optimization/SKILL.md) | Core Web Vitals, asset optimization, render performance |
 
 ### Quality assurance (1)
 
 | # | Skill | What it does |
 |---|---|---|
-| 54 | [`qa-testing`](skills/qa-testing/SKILL.md) | Pre-launch QA, regression testing, cross-browser checks |
+| 57 | [`qa-testing`](skills/qa-testing/SKILL.md) | Pre-launch QA, regression testing, cross-browser checks |
 
 ### Operations (9)
 
 | # | Skill | What it does |
 |---|---|---|
-| 55 | [`launch-runbook`](skills/launch-runbook/SKILL.md) | Go-live runbook, DNS cutover, deploy day procedures |
-| 56 | [`incident-response`](skills/incident-response/SKILL.md) | Incident triage, comms, mitigation, escalation |
-| 57 | [`after-action-report`](skills/after-action-report/SKILL.md) | Post-mortems, retros, learnings documentation |
-| 58 | [`domain-strategy`](skills/domain-strategy/SKILL.md) | DNS architecture, redirects, registrars, multi-domain portfolios |
-| 59 | [`monitoring-and-alerting`](skills/monitoring-and-alerting/SKILL.md) | SLO design, uptime checks, alert routing, on-call rotations |
-| 60 | [`backup-and-disaster-recovery`](skills/backup-and-disaster-recovery/SKILL.md) | RPO/RTO targets, backup strategy, restoration drills |
-| 61 | [`security-baseline`](skills/security-baseline/SKILL.md) | HTTPS, security headers, CSP, secrets management, vulnerability scans |
-| 62 | [`email-deliverability`](skills/email-deliverability/SKILL.md) | DMARC, SPF, DKIM, sender reputation, deliverability monitoring |
-| 63 | [`media-asset-management`](skills/media-asset-management/SKILL.md) | Image pipelines, video hosting, asset libraries, format selection |
+| 58 | [`launch-runbook`](skills/launch-runbook/SKILL.md) | Go-live runbook, DNS cutover, deploy day procedures |
+| 59 | [`incident-response`](skills/incident-response/SKILL.md) | Incident triage, comms, mitigation, escalation |
+| 60 | [`after-action-report`](skills/after-action-report/SKILL.md) | Post-mortems, retros, learnings documentation |
+| 61 | [`domain-strategy`](skills/domain-strategy/SKILL.md) | DNS architecture, redirects, registrars, multi-domain portfolios |
+| 62 | [`monitoring-and-alerting`](skills/monitoring-and-alerting/SKILL.md) | SLO design, uptime checks, alert routing, on-call rotations |
+| 63 | [`backup-and-disaster-recovery`](skills/backup-and-disaster-recovery/SKILL.md) | RPO/RTO targets, backup strategy, restoration drills |
+| 64 | [`security-baseline`](skills/security-baseline/SKILL.md) | HTTPS, security headers, CSP, secrets management, vulnerability scans |
+| 65 | [`email-deliverability`](skills/email-deliverability/SKILL.md) | DMARC, SPF, DKIM, sender reputation, deliverability monitoring |
+| 66 | [`media-asset-management`](skills/media-asset-management/SKILL.md) | Image pipelines, video hosting, asset libraries, format selection |
 
 ### Growth (2)
 
 | # | Skill | What it does |
 |---|---|---|
-| 64 | [`analytics-strategy`](skills/analytics-strategy/SKILL.md) | Measurement frameworks, dashboard design, event taxonomy |
-| 65 | [`cro-optimization`](skills/cro-optimization/SKILL.md) | Hypothesis-driven testing, conversion optimization |
+| 67 | [`analytics-strategy`](skills/analytics-strategy/SKILL.md) | Measurement frameworks, dashboard design, event taxonomy |
+| 68 | [`cro-optimization`](skills/cro-optimization/SKILL.md) | Hypothesis-driven testing, conversion optimization |
 
 ### Marketing (3)
 
@@ -392,37 +395,39 @@ Paid media discipline: strategy, creative, and performance analytics. Pairs with
 
 | # | Skill | What it does |
 |---|---|---|
-| 66 | [`paid-media-strategy`](skills/paid-media-strategy/SKILL.md) | Hypothesis to spend: channel selection, budget allocation, audience targeting, bid strategy, attribution reality, and the failure modes that burn agency-scale budgets |
-| 67 | [`ads-creative-development`](skills/ads-creative-development/SKILL.md) | Hook patterns, format selection, video pacing, variation systems, testing methodology, fatigue detection, and the platform-specific creative norms that separate ads from clutter |
-| 68 | [`ads-performance-analytics`](skills/ads-performance-analytics/SKILL.md) | Read paid media dashboards without fooling yourself: attribution models, platform reporting quirks, ROAS vs LTV, multi-platform reconciliation, incrementality testing, and the interpretation failures that compound into wasted budget |
+| 69 | [`paid-media-strategy`](skills/paid-media-strategy/SKILL.md) | Hypothesis to spend: channel selection, budget allocation, audience targeting, bid strategy, attribution reality, and the failure modes that burn agency-scale budgets |
+| 70 | [`ads-creative-development`](skills/ads-creative-development/SKILL.md) | Hook patterns, format selection, video pacing, variation systems, testing methodology, fatigue detection, and the platform-specific creative norms that separate ads from clutter |
+| 71 | [`ads-performance-analytics`](skills/ads-performance-analytics/SKILL.md) | Read paid media dashboards without fooling yourself: attribution models, platform reporting quirks, ROAS vs LTV, multi-platform reconciliation, incrementality testing, and the interpretation failures that compound into wasted budget |
 
-### Research (3)
+### Research (5)
 
 | # | Skill | What it does |
 |---|---|---|
-| 69 | [`ux-research`](skills/ux-research/SKILL.md) | Research planning, user interviews, qualitative synthesis |
-| 70 | [`usability-testing`](skills/usability-testing/SKILL.md) | Test design, moderation, findings reports |
-| 71 | [`journey-mapping`](skills/journey-mapping/SKILL.md) | Customer journey maps, service blueprints, friction analysis |
+| 72 | [`ux-research`](skills/ux-research/SKILL.md) | Research planning, user interviews, qualitative synthesis |
+| 73 | [`usability-testing`](skills/usability-testing/SKILL.md) | Test design, moderation, findings reports |
+| 74 | [`journey-mapping`](skills/journey-mapping/SKILL.md) | Customer journey maps, service blueprints, friction analysis |
+| 75 | [`discovery-research-synthesis`](skills/discovery-research-synthesis/SKILL.md) | Synthesizing customer interviews, research notes, and support tickets into actionable PM decisions. Distinguishes data-dump (no synthesis) from insight-theater (overpolished narrative) from actionable synthesis (decision-grade clarity) |
+| 76 | [`user-feedback-aggregation`](skills/user-feedback-aggregation/SKILL.md) | Collecting and synthesizing user feedback across channels into continuous decision signal. Triage discipline that distinguishes loudest-voice (whoever complains most) from averaged-noise (every signal weighted equally) from triaged-synthesis (weighted by source quality and decision relevance) |
 
 ### Cross-cutting workflows (5)
 
 | # | Skill | What it does |
 |---|---|---|
-| 72 | [`form-strategy`](skills/form-strategy/SKILL.md) | Form design, validation patterns, spam prevention, conversion tuning |
-| 73 | [`content-migration`](skills/content-migration/SKILL.md) | Platform migrations with SEO equity preservation |
-| 74 | [`internationalization`](skills/internationalization/SKILL.md) | Locale strategy, hreflang, translation workflow, RTL design |
-| 75 | [`dependency-management`](skills/dependency-management/SKILL.md) | Package updates, security patches, lockfile hygiene |
-| 76 | [`cost-optimization`](skills/cost-optimization/SKILL.md) | Infrastructure spend audits, rightsizing, contract negotiation |
+| 77 | [`form-strategy`](skills/form-strategy/SKILL.md) | Form design, validation patterns, spam prevention, conversion tuning |
+| 78 | [`content-migration`](skills/content-migration/SKILL.md) | Platform migrations with SEO equity preservation |
+| 79 | [`internationalization`](skills/internationalization/SKILL.md) | Locale strategy, hreflang, translation workflow, RTL design |
+| 80 | [`dependency-management`](skills/dependency-management/SKILL.md) | Package updates, security patches, lockfile hygiene |
+| 81 | [`cost-optimization`](skills/cost-optimization/SKILL.md) | Infrastructure spend audits, rightsizing, contract negotiation |
 
 ### Process and team (5)
 
 | # | Skill | What it does |
 |---|---|---|
-| 77 | [`stakeholder-communication`](skills/stakeholder-communication/SKILL.md) | Status updates, exec readouts, project communications |
-| 78 | [`documentation-strategy`](skills/documentation-strategy/SKILL.md) | Documentation systems, what to document, maintenance cadence |
-| 79 | [`vendor-evaluation`](skills/vendor-evaluation/SKILL.md) | Tool and vendor selection using a structured rubric |
-| 80 | [`team-onboarding-playbook`](skills/team-onboarding-playbook/SKILL.md) | 30-60-90 onboarding plans for new hires and contractors |
-| 81 | [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) | The meta-skill: how to write your own custom skills |
+| 82 | [`stakeholder-communication`](skills/stakeholder-communication/SKILL.md) | Status updates, exec readouts, project communications |
+| 83 | [`documentation-strategy`](skills/documentation-strategy/SKILL.md) | Documentation systems, what to document, maintenance cadence |
+| 84 | [`vendor-evaluation`](skills/vendor-evaluation/SKILL.md) | Tool and vendor selection using a structured rubric |
+| 85 | [`team-onboarding-playbook`](skills/team-onboarding-playbook/SKILL.md) | 30-60-90 onboarding plans for new hires and contractors |
+| 86 | [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) | The meta-skill: how to write your own custom skills |
 <!-- CATALOG:END -->
 
 ---

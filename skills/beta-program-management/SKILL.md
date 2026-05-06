@@ -1,9 +1,9 @@
 ---
 name: beta-program-management
 description: "Running closed and open betas that produce real signal. Beta participant selection, structured feedback collection, beta-to-GA decision criteria, and the difference between soft-launch (no structure, no signal), kitchen-sink (everyone in, no actionable feedback), and structured beta (calibrated cohort, intentional feedback loops, clear graduation criteria). Triggers on beta program, alpha test, beta cohort, beta participant, beta feedback, beta to GA decision, design partner, early access program, closed beta, open beta, RC release. Also triggers when a feature is approaching launch and the team needs structured pre-GA validation, when prior betas produced noise rather than signal, or when the team has soft-launched before but wants more structured feedback this time."
-category: project-management
+category: product
 catalog_summary: "Running betas that produce real signal. Participant selection, structured feedback, beta-to-GA decisions. Distinguishes soft-launch (no structure) from kitchen-sink (everyone in) from structured-beta (calibrated cohort with intentional feedback loops)"
-display_order: 14
+display_order: 13
 ---
 
 # Beta Program Management
