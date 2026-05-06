@@ -64,7 +64,7 @@ What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
 - **74 skills** across 15 categories, every one with a complete `SKILL.md` and at least one reference file
-- **205 reference files** (templates, checklists, decision matrices, worked examples)
+- **206 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
