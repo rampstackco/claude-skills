@@ -3,7 +3,7 @@ name: landing-page-copy
 description: "Write landing page copy with attention to the hero, value proposition, social proof, objection handling, and conversion-focused CTAs. Use this skill whenever the user wants to write a landing page, sales page, hero section, or any conversion-focused web copy. Triggers on landing page, sales page, hero copy, value proposition, headline, subheadline, hero section, CTA copy, conversion copy, opt-in page, squeeze page. Also triggers when the user has a marketing campaign or product launch needing dedicated conversion copy."
 category: content
 catalog_summary: "Landing pages, sales pages, hero-to-CTA flow"
-display_order: 2
+display_order: 4
 ---
 
 # Landing Page Copy

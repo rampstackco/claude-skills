@@ -3,7 +3,7 @@ name: content-and-copy
 description: "Write or edit website copy, blog content, and editorial pieces with attention to voice, structure, and goal. Use this skill whenever the user wants to write an article, draft website copy, edit existing content for clarity or voice, write a blog post, or produce general editorial content. Triggers on write a blog post, draft an article, write copy for, edit this, rewrite this, write content, write a guide, draft a how-to, write web copy. Also triggers when content has been outlined and now needs to be written, or when existing content needs voice or clarity edits."
 category: content
 catalog_summary: "Website copy, blog content, content production frameworks"
-display_order: 1
+display_order: 3
 ---
 
 # Content and Copy
