@@ -129,7 +129,7 @@ WIDE_SPEC = LayoutSpec(
     chrome_header_size=18,
     chrome_footer_size=20,
     card_padding_x=22,
-    card_padding_y=14,
+    card_padding_y=10,
     card_radius=14,
 )
 
@@ -347,9 +347,9 @@ def render_node(
     Card sits text_offset px outward from the node along the radial,
     so the gold dot at the original node position floats between the
     connection line endpoint and the card edge nearest the hub. Within
-    the card, rows stack so that the label is always closest to the
-    node (top of card when text below the node, bottom of card when
-    above), with counts in the middle and sample names farthest.
+    the card, rows always stack title -> count -> samples top-to-bottom
+    so the eye lands on the title first regardless of whether the node
+    sits above or below the hub.
     """
     cx, cy = spec.width // 2, spec.height // 2
     angle_rad = math.radians(angle_deg)
@@ -409,7 +409,7 @@ def render_node(
         line_end_x, line_end_y = float(cx), float(cy)
     draw.line(
         [(cx, cy), (line_end_x, line_end_y)],
-        fill=(CYAN[0], CYAN[1], CYAN[2], 90),
+        fill=(CYAN[0], CYAN[1], CYAN[2], 140),
         width=2,
     )
 
@@ -430,24 +430,18 @@ def render_node(
         fill=ACCENT_GOLD,
     )
 
-    # Stack rows top-to-bottom inside the card. When text sits above
-    # the node the label is closest to the node, which means it ends
-    # up at the bottom of the card; reverse the stack accordingly.
+    # Stack rows top-to-bottom inside every card: title, count, samples.
+    # Same order regardless of whether the node sits above or below the
+    # hub; the card edge nearest the hub varies (bottom for top-half
+    # nodes, top for bottom-half nodes), but the in-card reading order
+    # stays consistent so the eye lands on the title first.
     rows: list[tuple[str, ImageFont.ImageFont, int, tuple, int]] = []
-    if text_above:
-        if spec.show_samples and sample_font is not None:
-            rows.append(
-                (sample_text, sample_font, sample_w, SLATE_MUTED, spec.node_sample_size)
-            )
-        rows.append((count, count_font, count_w, SLATE_LIGHT, spec.node_count_size))
-        rows.append((label, label_font, label_w, INK, spec.node_label_size))
-    else:
-        rows.append((label, label_font, label_w, INK, spec.node_label_size))
-        rows.append((count, count_font, count_w, SLATE_LIGHT, spec.node_count_size))
-        if spec.show_samples and sample_font is not None:
-            rows.append(
-                (sample_text, sample_font, sample_w, SLATE_MUTED, spec.node_sample_size)
-            )
+    rows.append((label, label_font, label_w, INK, spec.node_label_size))
+    rows.append((count, count_font, count_w, SLATE_LIGHT, spec.node_count_size))
+    if spec.show_samples and sample_font is not None:
+        rows.append(
+            (sample_text, sample_font, sample_w, SLATE_MUTED, spec.node_sample_size)
+        )
 
     text_x = (card_left + card_right) // 2
     y_cursor = card_top + spec.card_padding_y

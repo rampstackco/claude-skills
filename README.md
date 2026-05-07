@@ -44,6 +44,7 @@
 - [Authoring conventions](#authoring-conventions)
 - [Repository structure](#repository-structure)
 - [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
 - [Resources](#resources)
 - [License](#license)
 
@@ -667,6 +668,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the full process.
 
 <!-- TODO: refresh hardcoded count below when catalog crosses next round number -->
 The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 98 skills, with worked examples and a blank template.
+
+---
+
+## Acknowledgments
+
+Thanks to [@IgnacioChiaravalle](https://github.com/IgnacioChiaravalle) for the community feedback that shaped [PR #36](https://github.com/rampstackco/claude-skills/pull/36): a CONTRIBUTING.md typo fix, a cross-linking pass between SKILL.md files and their reference files, and the new [ARIA patterns reference](skills/accessibility-audit/references/aria-patterns.md) for the accessibility-audit skill.
 
 ---
 
