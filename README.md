@@ -100,7 +100,7 @@ Six entry-point skills, one per audience track. Run any of these standalone, or 
 
 **[The creative-direction skill rendered as a live showcase →](https://rampstack.co/showcase/creative-direction)**
 
-Thirty fictional brands generated from briefs that all use the same skill. Each is a fully styled brand site, not a mockup. The showcase demonstrates what the four-axis framework produces in practice and lets you filter by axis position to see how each combination renders.
+Forty-two fictional brands generated from briefs that all use the same skill. Each is a fully styled brand site, not a mockup. The showcase demonstrates what the four-axis framework produces in practice and lets you filter by axis position to see how each combination renders.
 
 <p align="center">
   <img src="assets/showcase/showcase-grid-hero.png" alt="Showcase grid of brand archetypes including Pulse, Volt, Anode, Drift, and others, with type and motion intensity filter pills above the cards." />
