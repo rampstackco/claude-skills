@@ -61,6 +61,12 @@ INK = (248, 250, 252)            # near-white
 SLATE_LIGHT = (203, 213, 225)    # slate-300 for sub-headings
 SLATE_MUTED = (148, 163, 184)    # slate-400 for sample names
 
+# Card container per category. Subtle navy fill at ~70% opacity over the
+# gradient base, plus a thin cyan border at ~24% opacity. Strong enough
+# to read as visual containment without overpowering the brand register.
+CARD_FILL = (26, 40, 88, 178)
+CARD_BORDER = (59, 180, 224, 60)
+
 # Hub geometry. Tuned per variant in render_layout().
 HUB_RING_WIDTH = 2
 
@@ -93,6 +99,10 @@ class LayoutSpec:
     chrome_footer_size: int
     show_samples: bool = True   # mobile variant drops sample names for legibility
     show_chrome: bool = True    # mobile variant drops chrome to save vertical space
+    card_padding_x: int = 24    # horizontal padding inside category card
+    card_padding_y: int = 18    # vertical padding inside category card
+    card_radius: int = 14       # corner radius of category card
+    card_border_width: int = 1  # subtle 1px border on category card
 
 
 # Typography target: legibility at scaled-down README body width
@@ -108,16 +118,19 @@ WIDE_SPEC = LayoutSpec(
     hub_title_size=48,
     hub_sub_size=24,
     hub_label_size=24,
-    node_label_size=36,
-    node_count_size=20,
-    node_sample_size=18,
-    node_dot_radius=10,
-    text_offset=20,
-    line_gap=6,
+    node_label_size=28,
+    node_count_size=16,
+    node_sample_size=14,
+    node_dot_radius=8,
+    text_offset=16,
+    line_gap=5,
     header_y=28,
     footer_y=590,
     chrome_header_size=18,
     chrome_footer_size=20,
+    card_padding_x=22,
+    card_padding_y=14,
+    card_radius=14,
 )
 
 
@@ -125,21 +138,24 @@ SQUARE_SPEC = LayoutSpec(
     width=1080,
     height=1080,
     radius_x=355,
-    radius_y=325,
+    radius_y=305,
     hub_radius=130,
     hub_title_size=56,
     hub_sub_size=28,
     hub_label_size=28,
-    node_label_size=42,
-    node_count_size=24,
-    node_sample_size=20,
-    node_dot_radius=12,
-    text_offset=30,
-    line_gap=8,
+    node_label_size=36,
+    node_count_size=20,
+    node_sample_size=18,
+    node_dot_radius=11,
+    text_offset=26,
+    line_gap=7,
     header_y=44,
     footer_y=1014,
     chrome_header_size=22,
     chrome_footer_size=24,
+    card_padding_x=28,
+    card_padding_y=20,
+    card_radius=18,
 )
 
 
@@ -169,6 +185,9 @@ MOBILE_SPEC = LayoutSpec(
     chrome_footer_size=0,   # unused when show_chrome=False
     show_samples=False,
     show_chrome=False,
+    card_padding_x=24,
+    card_padding_y=20,
+    card_radius=14,
 )
 
 
@@ -323,12 +342,14 @@ def render_node(
     angle_deg: float,
     category: dict,
 ) -> None:
-    """One category node: gold dot, label, count, sample integrations.
+    """One category node: rounded card containing label, count, samples.
 
-    Text stacks above or below the node based on the node's vertical
-    position relative to the hub. Top half gets text above (samples
-    furthest from node); bottom half gets text below (samples furthest
-    from node, label nearest).
+    Card sits text_offset px outward from the node along the radial,
+    so the gold dot at the original node position floats between the
+    connection line endpoint and the card edge nearest the hub. Within
+    the card, rows stack so that the label is always closest to the
+    node (top of card when text below the node, bottom of card when
+    above), with counts in the middle and sample names farthest.
     """
     cx, cy = spec.width // 2, spec.height // 2
     angle_rad = math.radians(angle_deg)
@@ -336,75 +357,105 @@ def render_node(
     ny = cy + spec.radius_y * math.sin(angle_rad)
     nx_i, ny_i = int(round(nx)), int(round(ny))
 
-    # Connection line back to the hub. Drawn first so the dot covers
-    # the line endpoint cleanly.
+    label_font = font_bold(spec.node_label_size)
+    count_font = font_bold(spec.node_count_size)
+    label = category["label"]
+    count = f"{len(category['integrations'])} integrations"
+    label_w = text_width(draw, label, label_font)
+    count_w = text_width(draw, count, count_font)
+
+    sample_font: ImageFont.ImageFont | None = None
+    sample_text = ""
+    sample_w = 0
+    if spec.show_samples:
+        sample_font = font_bold(spec.node_sample_size)
+        samples = category["integrations"][:3]
+        extra = len(category["integrations"]) - 3
+        sample_text = ", ".join(samples) + (
+            f", +{extra} more" if extra > 0 else ""
+        )
+        sample_w = text_width(draw, sample_text, sample_font)
+
+    # Card geometry: width fits the widest row plus horizontal padding;
+    # height is the row stack plus vertical padding.
+    inner_w = max(label_w, count_w, sample_w)
+    rows_h = spec.node_label_size + spec.line_gap + spec.node_count_size
+    if spec.show_samples:
+        rows_h += spec.line_gap + spec.node_sample_size
+    card_w = inner_w + 2 * spec.card_padding_x
+    card_h = rows_h + 2 * spec.card_padding_y
+
+    text_above = math.sin(angle_rad) < 0
+    if text_above:
+        card_bottom = ny_i - spec.text_offset
+        card_top = card_bottom - card_h
+    else:
+        card_top = ny_i + spec.text_offset
+        card_bottom = card_top + card_h
+    card_left = nx_i - card_w // 2
+    card_right = card_left + card_w
+
+    # Connection line ends just shy of the gold node dot; the dot then
+    # sits between the line endpoint and the card edge nearest the hub.
+    dx = nx_i - cx
+    dy = ny_i - cy
+    distance = math.sqrt(dx * dx + dy * dy)
+    if distance > 0:
+        line_back = spec.node_dot_radius + 2
+        ratio = max(0.0, (distance - line_back) / distance)
+        line_end_x = cx + dx * ratio
+        line_end_y = cy + dy * ratio
+    else:
+        line_end_x, line_end_y = float(cx), float(cy)
     draw.line(
-        (cx, cy, nx_i, ny_i),
+        [(cx, cy), (line_end_x, line_end_y)],
         fill=(CYAN[0], CYAN[1], CYAN[2], 90),
         width=2,
     )
 
+    # Card backing: filled rounded rectangle with thin cyan outline.
+    draw.rounded_rectangle(
+        [(card_left, card_top), (card_right, card_bottom)],
+        radius=spec.card_radius,
+        fill=CARD_FILL,
+        outline=CARD_BORDER,
+        width=spec.card_border_width,
+    )
+
+    # Gold node dot at the original node position. Sits between the
+    # line endpoint and the card edge.
     r = spec.node_dot_radius
     draw.ellipse(
         (nx_i - r, ny_i - r, nx_i + r, ny_i + r),
         fill=ACCENT_GOLD,
     )
 
-    label_font = font_bold(spec.node_label_size)
-    count_font = font_bold(spec.node_count_size)
-
-    label = category["label"]
-    count = f"{len(category['integrations'])} integrations"
-
-    label_w = text_width(draw, label, label_font)
-    count_w = text_width(draw, count, count_font)
-
-    text_above = math.sin(angle_rad) < 0
-
+    # Stack rows top-to-bottom inside the card. When text sits above
+    # the node the label is closest to the node, which means it ends
+    # up at the bottom of the card; reverse the stack accordingly.
+    rows: list[tuple[str, ImageFont.ImageFont, int, tuple, int]] = []
     if text_above:
-        # Text stacks upward from the node: label closest, then count,
-        # then (optionally) sample names. Walk the stack y-offsets.
-        label_y = ny_i - spec.text_offset - spec.node_label_size
-        count_y = label_y - spec.line_gap - spec.node_count_size
+        if spec.show_samples and sample_font is not None:
+            rows.append(
+                (sample_text, sample_font, sample_w, SLATE_MUTED, spec.node_sample_size)
+            )
+        rows.append((count, count_font, count_w, SLATE_LIGHT, spec.node_count_size))
+        rows.append((label, label_font, label_w, INK, spec.node_label_size))
     else:
-        label_y = ny_i + spec.text_offset
-        count_y = label_y + spec.node_label_size + spec.line_gap
+        rows.append((label, label_font, label_w, INK, spec.node_label_size))
+        rows.append((count, count_font, count_w, SLATE_LIGHT, spec.node_count_size))
+        if spec.show_samples and sample_font is not None:
+            rows.append(
+                (sample_text, sample_font, sample_w, SLATE_MUTED, spec.node_sample_size)
+            )
 
-    # Center each line on the node x-position.
-    draw.text(
-        (nx_i - label_w // 2, label_y),
-        label,
-        fill=INK,
-        font=label_font,
-    )
-    draw.text(
-        (nx_i - count_w // 2, count_y),
-        count,
-        fill=SLATE_LIGHT,
-        font=count_font,
-    )
-
-    if not spec.show_samples:
-        return
-
-    sample_font = font_bold(spec.node_sample_size)
-    samples = category["integrations"][:3]
-    extra = len(category["integrations"]) - 3
-    if extra > 0:
-        sample_text = ", ".join(samples) + f", +{extra} more"
-    else:
-        sample_text = ", ".join(samples)
-    sample_w = text_width(draw, sample_text, sample_font)
-    if text_above:
-        sample_y = count_y - spec.line_gap - spec.node_sample_size
-    else:
-        sample_y = count_y + spec.node_count_size + spec.line_gap
-    draw.text(
-        (nx_i - sample_w // 2, sample_y),
-        sample_text,
-        fill=SLATE_MUTED,
-        font=sample_font,
-    )
+    text_x = (card_left + card_right) // 2
+    y_cursor = card_top + spec.card_padding_y
+    for i, (txt, fnt, w, fill_color, sz) in enumerate(rows):
+        draw.text((text_x - w // 2, y_cursor), txt, fill=fill_color, font=fnt)
+        y_cursor += sz
+        if i < len(rows) - 1:
+            y_cursor += spec.line_gap
 
 
 def render_chrome(
