@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/rampstack-complete-banner.jpg" alt="Complete Claude Skills for the full web lifecycle. Build, ship, audit, optimize." />
+<img src="docs/architecture-wide.png" alt="RampStack architecture: 98 skills at the center with 35 integrations across 6 categories radiating out (workflow, experimentation, paid media, data and analytics, content and SEO, SEO and competitive intelligence)." />
 
 # Brand Build Skills for Claude
 
