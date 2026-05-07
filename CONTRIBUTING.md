@@ -64,7 +64,7 @@ your-skill-name/
     example.md
 ```
 
-Your `SKILL.md` must include this section order, in this exact order:
+Your `SKILL.md` must include these sections, in this exact order:
 
 1. YAML frontmatter (`name`, `description`)
 2. One-paragraph purpose statement
