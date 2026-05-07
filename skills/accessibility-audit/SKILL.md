@@ -236,3 +236,4 @@ Plus a remediation tracking spreadsheet with one row per finding.
 
 - [`references/audit-report-template.md`](references/audit-report-template.md) - Full audit report template.
 - [`references/wcag-quick-reference.md`](references/wcag-quick-reference.md) - Condensed WCAG 2.1 AA criteria with audit checks.
+- [`references/aria-patterns.md`](references/aria-patterns.md) - Decision-grade ARIA patterns. Semantic-HTML-first principle, common interactive widgets (accordion, tabs, modal, toggle, disclosure, navigation), live regions, hiding patterns, labeling, state indicators, anti-patterns.
