@@ -22,6 +22,8 @@ Markers in README.md:
     <!-- COUNT_INTRO:START -->          ... <!-- COUNT_INTRO:END -->
     <!-- COUNT_WHATYOUGET:START -->     ... <!-- COUNT_WHATYOUGET:END -->
     <!-- COUNT_TOC:START -->            ... <!-- COUNT_TOC:END -->
+    <!-- FEATURED_SKILLS:START -->      ... <!-- FEATURED_SKILLS:END -->
+    <!-- SURFACES:START -->             ... <!-- SURFACES:END -->
     <!-- COUNT_CATALOG_HEADER:START --> ... <!-- COUNT_CATALOG_HEADER:END -->
     <!-- COUNT_CATALOG_INTRO:START -->  ... <!-- COUNT_CATALOG_INTRO:END -->
     <!-- CATALOG:START -->              ... <!-- CATALOG:END -->
@@ -99,10 +101,64 @@ MARKERS = [
     "COUNT_INTRO",
     "COUNT_WHATYOUGET",
     "COUNT_TOC",
+    "FEATURED_SKILLS",
+    "SURFACES",
     "COUNT_CATALOG_HEADER",
     "COUNT_CATALOG_INTRO",
     "CATALOG",
 ]
+
+
+# Featured skills section: one entry-point skill per audience track.
+# These six map to the audience tracks that the rampstack.co landing
+# surfaces are organized around. Order matches the homepage suite tiles.
+# Tuple shape: (track_label, slug, one-line blurb).
+FEATURED_SKILLS_DATA: list[tuple[str, str, str]] = [
+    (
+        "Brand and creative",
+        "creative-direction",
+        "Four-axis brief (tone, aesthetic, audience, sensory ambition) that gives every downstream skill a coherent direction",
+    ),
+    (
+        "PM, experimentation",
+        "experiment-design",
+        "From hypothesis to decision: sample size, duration, segment analysis, and the failure modes that produce wrong shipping calls",
+    ),
+    (
+        "PM, gap-closing",
+        "feature-launch-playbook",
+        "The discipline of launching a feature well: positioning, internal alignment, customer comms, enablement, rollout, monitoring",
+    ),
+    (
+        "Content",
+        "pillar-content-architecture",
+        "Hub-and-cluster topical authority: pillar selection, cluster planning, internal linking, refresh discipline",
+    ),
+    (
+        "Marketing",
+        "landing-page-copy",
+        "Landing pages, sales pages, hero-to-CTA flow with copy that converts",
+    ),
+    (
+        "Growth tooling",
+        "funnel-flow-architecture",
+        "Cross-tool conversion flows architected to match the audience and the funnel stage",
+    ),
+]
+
+
+# Surfaces section: explains the layered offering (open-source methodology +
+# commercial flagship surfaces at rampstack.co). Static content; the URLs
+# do not change with each catalog update.
+SURFACES_CONTENT = """\
+This catalog is the open-source methodology layer. Commercial surfaces at [rampstack.co](https://rampstack.co) extend it:
+
+- **[Skills directory](https://rampstack.co/skills)**. Every skill on a curated landing surface with audience tracks, search, and category navigation.
+- **[Walkthroughs](https://rampstack.co/walkthroughs)**. Multi-skill recipes that orchestrate skill clusters end-to-end. Use these when one skill is not enough and a packaged sequence is.
+- **[Integrations directory](https://rampstack.co/integrations)**. Curated MCPs, APIs, and tooling that the skills hook into.
+- **[Showcase](https://rampstack.co/showcase)**. Real brand sites built from these skills, with the brief that produced each one.
+
+The skills in this repository remain free, open-source, and stack-agnostic. The surfaces above are how the same methodology is delivered as a product."""
 
 
 @dataclass(frozen=True)
@@ -281,6 +337,29 @@ def generate_catalog_intro(total: int) -> str:
     )
 
 
+def generate_featured_skills(skills_by_slug: dict[str, Skill]) -> str:
+    """Build the Featured skills section as an intro line + markdown table."""
+    missing = [slug for _, slug, _ in FEATURED_SKILLS_DATA if slug not in skills_by_slug]
+    if missing:
+        raise ValueError(
+            "Featured skills not found in catalog: " + ", ".join(missing)
+        )
+    lines = [
+        "Six entry-point skills, one per audience track. Run any of these standalone, or compose them with the rest of the catalog.",
+        "",
+        "| Track | Skill | What it does |",
+        "|---|---|---|",
+    ]
+    for track, slug, blurb in FEATURED_SKILLS_DATA:
+        lines.append(f"| {track} | [`{slug}`](skills/{slug}/SKILL.md) | {blurb} |")
+    return "\n".join(lines)
+
+
+def generate_surfaces() -> str:
+    """Return the static Surfaces section body."""
+    return SURFACES_CONTENT
+
+
 def replace_block(text: str, marker: str, new_content: str) -> str:
     """Replace the body between a START/END marker pair.
 
@@ -334,6 +413,7 @@ def replace_badge_count(text: str, total: int) -> str:
 def render_readme(text: str, skills: list[Skill]) -> str:
     """Apply all marker replacements and return the updated README content."""
     grouped = group_by_category(skills)
+    skills_by_slug = {s.slug: s for s in skills}
     total = len(skills)
     ref_total = count_reference_files()
     cat_total = len(CATEGORIES)
@@ -343,6 +423,8 @@ def render_readme(text: str, skills: list[Skill]) -> str:
         text, "COUNT_WHATYOUGET", generate_whatyouget(total, ref_total, cat_total)
     )
     text = replace_block(text, "COUNT_TOC", generate_toc_link(total))
+    text = replace_block(text, "FEATURED_SKILLS", generate_featured_skills(skills_by_slug))
+    text = replace_block(text, "SURFACES", generate_surfaces())
     text = replace_block(text, "COUNT_CATALOG_HEADER", generate_catalog_header(total))
     text = replace_block(text, "COUNT_CATALOG_INTRO", generate_catalog_intro(total))
     text = replace_block(text, "CATALOG", generate_catalog(grouped))

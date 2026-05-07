@@ -30,10 +30,12 @@
 
 - [What are Claude Skills?](#what-are-claude-skills)
 - [What is in this library](#what-is-in-this-library)
+- [Featured skills](#featured-skills)
 - [See it in action](#see-it-in-action)
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
+- [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
 - [The 98-skill catalog](#the-98-skill-catalog)
 <!-- COUNT_TOC:END -->
@@ -72,6 +74,23 @@ What you get:
 - **Composable.** Skills reference each other. `creative-brief` points to `brand-voice`. `incident-response` points to `monitoring-and-alerting`. Each skill's "When NOT to use" tells you which sibling fits your adjacent work.
 
 Highlight categories: brand strategy, design systems, content production, full SEO suite, frontend dev, accessibility, performance, QA, launch and incident ops, growth and CRO, UX research, plus a meta-skill that teaches you to write your own.
+
+---
+
+## Featured skills
+
+<!-- FEATURED_SKILLS:START -->
+Six entry-point skills, one per audience track. Run any of these standalone, or compose them with the rest of the catalog.
+
+| Track | Skill | What it does |
+|---|---|---|
+| Brand and creative | [`creative-direction`](skills/creative-direction/SKILL.md) | Four-axis brief (tone, aesthetic, audience, sensory ambition) that gives every downstream skill a coherent direction |
+| PM, experimentation | [`experiment-design`](skills/experiment-design/SKILL.md) | From hypothesis to decision: sample size, duration, segment analysis, and the failure modes that produce wrong shipping calls |
+| PM, gap-closing | [`feature-launch-playbook`](skills/feature-launch-playbook/SKILL.md) | The discipline of launching a feature well: positioning, internal alignment, customer comms, enablement, rollout, monitoring |
+| Content | [`pillar-content-architecture`](skills/pillar-content-architecture/SKILL.md) | Hub-and-cluster topical authority: pillar selection, cluster planning, internal linking, refresh discipline |
+| Marketing | [`landing-page-copy`](skills/landing-page-copy/SKILL.md) | Landing pages, sales pages, hero-to-CTA flow with copy that converts |
+| Growth tooling | [`funnel-flow-architecture`](skills/funnel-flow-architecture/SKILL.md) | Cross-tool conversion flows architected to match the audience and the funnel stage |
+<!-- FEATURED_SKILLS:END -->
 
 ---
 
@@ -249,6 +268,21 @@ seo-audit-orchestration
 Operations, cross-cutting, and team skills (`stakeholder-communication`, `documentation-strategy`, `vendor-evaluation`, `team-onboarding-playbook`, `dependency-management`, `cost-optimization`, etc.) cut across the lifecycle.
 
 You can also pull individual skills for one-off work. Need just a backlink audit? Use `seo-backlink-audit`. Need to write a creative brief? Use `creative-brief`. Each skill stands on its own.
+
+---
+
+## Surfaces
+
+<!-- SURFACES:START -->
+This catalog is the open-source methodology layer. Commercial surfaces at [rampstack.co](https://rampstack.co) extend it:
+
+- **[Skills directory](https://rampstack.co/skills)**. Every skill on a curated landing surface with audience tracks, search, and category navigation.
+- **[Walkthroughs](https://rampstack.co/walkthroughs)**. Multi-skill recipes that orchestrate skill clusters end-to-end. Use these when one skill is not enough and a packaged sequence is.
+- **[Integrations directory](https://rampstack.co/integrations)**. Curated MCPs, APIs, and tooling that the skills hook into.
+- **[Showcase](https://rampstack.co/showcase)**. Real brand sites built from these skills, with the brief that produced each one.
+
+The skills in this repository remain free, open-source, and stack-agnostic. The surfaces above are how the same methodology is delivered as a product.
+<!-- SURFACES:END -->
 
 ---
 
