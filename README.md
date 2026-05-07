@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/architecture-wide.png" alt="RampStack architecture: 98 skills at the center with 35 integrations across 6 categories radiating out (workflow, experimentation, paid media, data and analytics, content and SEO, SEO and competitive intelligence)." />
+<img src="docs/rampstack-complete-banner.jpg" alt="Complete Claude Skills for the full web lifecycle. Build, ship, audit, optimize." />
 
 # Brand Build Skills for Claude
 
@@ -35,6 +35,7 @@
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
+- [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
 - [The 98-skill catalog](#the-98-skill-catalog)
@@ -328,6 +329,16 @@ The experimentation track ships changes with statistical discipline; the gap-clo
 Operations, cross-cutting, and team skills (`stakeholder-communication`, `documentation-strategy`, `vendor-evaluation`, `team-onboarding-playbook`, `dependency-management`, `cost-optimization`, etc.) cut across every track.
 
 You can also pull individual skills for one-off work. Need just a backlink audit? Use `seo-backlink-audit`. Need to write a creative brief? Use `creative-brief`. Each skill stands on its own.
+
+---
+
+## How the catalog connects
+
+The skills compose with the tools your team already uses. 98 skills at the center; 35 integrations across 6 categories radiating out via MCPs.
+
+<p align="center">
+  <img src="docs/architecture-wide.png" alt="RampStack architecture: 98 skills at the center with 35 integrations across 6 categories radiating out (workflow, experimentation, paid media, data and analytics, content and SEO, SEO and competitive intelligence)." />
+</p>
 
 ---
 

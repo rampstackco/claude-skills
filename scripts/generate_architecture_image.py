@@ -83,45 +83,55 @@ class LayoutSpec:
     line_gap: int      # gap between stacked text lines
     header_y: int
     footer_y: int
+    chrome_header_size: int
+    chrome_footer_size: int
 
 
+# Typography target: legibility at scaled-down README body width
+# (around 800px effective). Fonts are deliberately oversized at native
+# resolution so the labels remain readable when GitHub or a browser
+# scales the embed down to body width.
 WIDE_SPEC = LayoutSpec(
     width=1200,
     height=630,
     radius_x=380,
-    radius_y=175,
-    hub_radius=72,
-    hub_title_size=34,
-    hub_sub_size=16,
-    hub_label_size=15,
-    node_label_size=20,
-    node_count_size=13,
-    node_sample_size=12,
-    node_dot_radius=7,
-    text_offset=18,
-    line_gap=4,
+    radius_y=155,
+    hub_radius=100,
+    hub_title_size=48,
+    hub_sub_size=24,
+    hub_label_size=24,
+    node_label_size=36,
+    node_count_size=20,
+    node_sample_size=18,
+    node_dot_radius=10,
+    text_offset=20,
+    line_gap=6,
     header_y=28,
     footer_y=590,
+    chrome_header_size=18,
+    chrome_footer_size=20,
 )
 
 
 SQUARE_SPEC = LayoutSpec(
     width=1080,
     height=1080,
-    radius_x=370,
-    radius_y=345,
-    hub_radius=110,
-    hub_title_size=46,
-    hub_sub_size=22,
-    hub_label_size=18,
-    node_label_size=26,
-    node_count_size=16,
-    node_sample_size=15,
-    node_dot_radius=9,
-    text_offset=26,
-    line_gap=6,
+    radius_x=355,
+    radius_y=325,
+    hub_radius=130,
+    hub_title_size=56,
+    hub_sub_size=28,
+    hub_label_size=28,
+    node_label_size=42,
+    node_count_size=24,
+    node_sample_size=20,
+    node_dot_radius=12,
+    text_offset=30,
+    line_gap=8,
     header_y=44,
-    footer_y=1018,
+    footer_y=1014,
+    chrome_header_size=22,
+    chrome_footer_size=24,
 )
 
 
@@ -226,7 +236,7 @@ def render_hub(
     )
 
     title_font = font_bold(spec.hub_title_size)
-    sub_font = font_regular(spec.hub_sub_size)
+    sub_font = font_bold(spec.hub_sub_size)
     label_font = font_bold(spec.hub_label_size)
 
     title = f"{skill_count}"
@@ -304,8 +314,8 @@ def render_node(
     )
 
     label_font = font_bold(spec.node_label_size)
-    count_font = font_regular(spec.node_count_size)
-    sample_font = font_regular(spec.node_sample_size)
+    count_font = font_bold(spec.node_count_size)
+    sample_font = font_bold(spec.node_sample_size)
 
     label = category["label"]
     count = f"{len(category['integrations'])} integrations"
@@ -359,8 +369,8 @@ def render_chrome(
     draw: ImageDraw.ImageDraw, spec: LayoutSpec
 ) -> None:
     """Top-left URL strip and bottom centered caption."""
-    eyebrow_font = font_bold(spec.hub_sub_size - 1)
-    caption_font = font_regular(spec.hub_sub_size - 1)
+    eyebrow_font = font_bold(spec.chrome_header_size)
+    caption_font = font_regular(spec.chrome_footer_size)
 
     draw.text(
         (40, spec.header_y),
