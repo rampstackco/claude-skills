@@ -2,12 +2,17 @@
 """Generate architecture images showing the catalog ecosystem.
 
 Hub-and-spoke composition: skills count at the center, six category
-nodes radiating out, integration names previewed at each node. Two
+nodes radiating out, integration names previewed at each node. Three
 output variants:
 
     docs/architecture-wide.png   1200x630, README hero, OG sharing,
                                  rampstack-app /integrations hero.
     docs/architecture-square.png 1080x1080, social posts (LinkedIn, X).
+    docs/architecture-mobile.png 800x800, swapped in below 640px
+                                 viewport via <picture> element. Bigger
+                                 fonts, no sample integration names,
+                                 no chrome strip, so labels stay legible
+                                 at typical mobile widths.
 
 Counts pull live from skills/ (skill folders containing SKILL.md) and
 from scripts/integrations-mirror.json (a mirrored snapshot of the
@@ -42,6 +47,7 @@ DOCS_DIR = REPO_ROOT / "docs"
 
 WIDE = (1200, 630)
 SQUARE = (1080, 1080)
+MOBILE = (800, 800)
 
 # Brand palette. Bg gradient picks up where rampstack.co's homepage hero
 # leaves off (brand-navy fading toward brand-blue). Gold accent and cyan
@@ -85,6 +91,8 @@ class LayoutSpec:
     footer_y: int
     chrome_header_size: int
     chrome_footer_size: int
+    show_samples: bool = True   # mobile variant drops sample names for legibility
+    show_chrome: bool = True    # mobile variant drops chrome to save vertical space
 
 
 # Typography target: legibility at scaled-down README body width
@@ -132,6 +140,35 @@ SQUARE_SPEC = LayoutSpec(
     footer_y=1014,
     chrome_header_size=22,
     chrome_footer_size=24,
+)
+
+
+# Mobile variant: 800x800 swapped in below 640px viewport. Bigger
+# typography, no sample integration names per node, no chrome strip.
+# Radius is held back from the canvas edge so the wide category labels
+# ("SEO Intelligence", "Data & Analytics") fit centered under their
+# nodes without clipping at the canvas edges.
+MOBILE_SPEC = LayoutSpec(
+    width=800,
+    height=800,
+    radius_x=255,
+    radius_y=270,
+    hub_radius=140,
+    hub_title_size=56,
+    hub_sub_size=30,
+    hub_label_size=30,
+    node_label_size=32,
+    node_count_size=22,
+    node_sample_size=20,    # unused when show_samples=False
+    node_dot_radius=12,
+    text_offset=22,
+    line_gap=6,
+    header_y=0,             # unused when show_chrome=False
+    footer_y=0,             # unused when show_chrome=False
+    chrome_header_size=0,   # unused when show_chrome=False
+    chrome_footer_size=0,   # unused when show_chrome=False
+    show_samples=False,
+    show_chrome=False,
 )
 
 
@@ -315,34 +352,23 @@ def render_node(
 
     label_font = font_bold(spec.node_label_size)
     count_font = font_bold(spec.node_count_size)
-    sample_font = font_bold(spec.node_sample_size)
 
     label = category["label"]
     count = f"{len(category['integrations'])} integrations"
 
-    samples = category["integrations"][:3]
-    extra = len(category["integrations"]) - 3
-    if extra > 0:
-        sample_text = ", ".join(samples) + f", +{extra} more"
-    else:
-        sample_text = ", ".join(samples)
-
     label_w = text_width(draw, label, label_font)
     count_w = text_width(draw, count, count_font)
-    sample_w = text_width(draw, sample_text, sample_font)
 
     text_above = math.sin(angle_rad) < 0
 
     if text_above:
         # Text stacks upward from the node: label closest, then count,
-        # then sample names. Walk the stack y-offsets accordingly.
+        # then (optionally) sample names. Walk the stack y-offsets.
         label_y = ny_i - spec.text_offset - spec.node_label_size
         count_y = label_y - spec.line_gap - spec.node_count_size
-        sample_y = count_y - spec.line_gap - spec.node_sample_size
     else:
         label_y = ny_i + spec.text_offset
         count_y = label_y + spec.node_label_size + spec.line_gap
-        sample_y = count_y + spec.node_count_size + spec.line_gap
 
     # Center each line on the node x-position.
     draw.text(
@@ -357,6 +383,22 @@ def render_node(
         fill=SLATE_LIGHT,
         font=count_font,
     )
+
+    if not spec.show_samples:
+        return
+
+    sample_font = font_bold(spec.node_sample_size)
+    samples = category["integrations"][:3]
+    extra = len(category["integrations"]) - 3
+    if extra > 0:
+        sample_text = ", ".join(samples) + f", +{extra} more"
+    else:
+        sample_text = ", ".join(samples)
+    sample_w = text_width(draw, sample_text, sample_font)
+    if text_above:
+        sample_y = count_y - spec.line_gap - spec.node_sample_size
+    else:
+        sample_y = count_y + spec.node_count_size + spec.line_gap
     draw.text(
         (nx_i - sample_w // 2, sample_y),
         sample_text,
@@ -409,7 +451,8 @@ def render_layout(spec: LayoutSpec, skill_count: int, mirror: dict) -> Image.Ima
     # Hub renders last so it sits on top of any line endpoints that
     # cross under the hub circle.
     render_hub(draw, spec, skill_count, integration_count)
-    render_chrome(draw, spec)
+    if spec.show_chrome:
+        render_chrome(draw, spec)
 
     return canvas
 
@@ -434,6 +477,11 @@ def main() -> int:
     square_path = DOCS_DIR / "architecture-square.png"
     square.convert("RGB").save(square_path, "PNG", optimize=True)
     print(f"Wrote {square_path.relative_to(REPO_ROOT)} ({SQUARE[0]}x{SQUARE[1]})")
+
+    mobile = render_layout(MOBILE_SPEC, skill_count, mirror)
+    mobile_path = DOCS_DIR / "architecture-mobile.png"
+    mobile.convert("RGB").save(mobile_path, "PNG", optimize=True)
+    print(f"Wrote {mobile_path.relative_to(REPO_ROOT)} ({MOBILE[0]}x{MOBILE[1]})")
 
     print(
         f"Catalog state: {skill_count} skills, {integration_count} integrations "

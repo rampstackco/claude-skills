@@ -279,7 +279,6 @@ def count_reference_files() -> int:
 def generate_catalog(grouped: dict[str, list[Skill]]) -> str:
     """Build the full catalog markdown block: section headers and tables."""
     lines: list[str] = []
-    counter = 0
     for index, (cid, title, intro) in enumerate(CATEGORIES):
         items = grouped.get(cid, [])
         lines.append(f"### {title} ({len(items)})")
@@ -287,12 +286,11 @@ def generate_catalog(grouped: dict[str, list[Skill]]) -> str:
         if intro:
             lines.append(intro)
             lines.append("")
-        lines.append("| # | Skill | What it does |")
-        lines.append("|---|---|---|")
+        lines.append("| Skill | What it does |")
+        lines.append("|---|---|")
         for skill in items:
-            counter += 1
             lines.append(
-                f"| {counter} | [`{skill.slug}`](skills/{skill.slug}/SKILL.md) | "
+                f"| [`{skill.slug}`](skills/{skill.slug}/SKILL.md) | "
                 f"{skill.catalog_summary} |"
             )
         if index < len(CATEGORIES) - 1:
@@ -347,11 +345,11 @@ def generate_featured_skills(skills_by_slug: dict[str, Skill]) -> str:
     lines = [
         "Six entry-point skills, one per audience track. Run any of these standalone, or compose them with the rest of the catalog.",
         "",
-        "| Track | Skill | What it does |",
-        "|---|---|---|",
+        "| Skill | What it does |",
+        "|---|---|",
     ]
     for track, slug, blurb in FEATURED_SKILLS_DATA:
-        lines.append(f"| {track} | [`{slug}`](skills/{slug}/SKILL.md) | {blurb} |")
+        lines.append(f"| [`{slug}`](skills/{slug}/SKILL.md) ({track}) | {blurb} |")
     return "\n".join(lines)
 
 
