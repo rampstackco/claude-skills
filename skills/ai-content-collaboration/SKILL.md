@@ -73,7 +73,7 @@ A non-exhaustive list of stages where AI in the loop is fine and often improves 
 
 In each case, AI accelerates work the human still owns. The acceleration is real; the ownership stays unchanged.
 
-Detail in `references/ai-participation-boundaries.md`.
+Detail in [`references/ai-participation-boundaries.md`](references/ai-participation-boundaries.md).
 
 ---
 
@@ -111,7 +111,7 @@ Five patterns that work, with tradeoffs.
 
 The pattern that fits depends on volume, voice sensitivity, team skill, and time budget. No pattern is "the right one"; pattern selection is a real decision that should match the production context.
 
-Detail in `references/hybrid-workflow-patterns.md`.
+Detail in [`references/hybrid-workflow-patterns.md`](references/hybrid-workflow-patterns.md).
 
 ---
 
@@ -127,7 +127,7 @@ Voice is the dominant casualty of careless AI workflows. The patterns that prese
 
 The honest framing. Voice is the hardest thing to preserve in AI-assisted work and the easiest thing to lose. Programs that do not actively preserve voice end up with content that is technically correct, semantically generic, and indistinguishable from competitors using the same tools.
 
-Detail in `references/voice-ownership-preservation.md`.
+Detail in [`references/voice-ownership-preservation.md`](references/voice-ownership-preservation.md).
 
 ---
 
@@ -153,7 +153,7 @@ AI slop is the term of art for AI-generated content that is technically function
 
 The reader-detection problem. Readers can often sense AI-flavored content even when they cannot articulate why. Generic openings, predictable structures, "perfect" grammar that is emotionally flat. Slop loses reader trust over time even when individual pieces are not penalized.
 
-Detail in `references/ai-slop-detection-and-avoidance.md` and cross-reference editorial-qa's audit patterns.
+Detail in [`references/ai-slop-detection-and-avoidance.md`](references/ai-slop-detection-and-avoidance.md) and cross-reference editorial-qa's audit patterns.
 
 ---
 
@@ -178,7 +178,7 @@ The principle. Disclose when the reader's understanding of the content's origin 
 
 Industry-specific norms vary. Major journalism organizations have published explicit AI usage standards. Content marketing has weaker norms but is moving toward disclosure for high-trust pieces.
 
-Detail in `references/disclosure-and-transparency-patterns.md`.
+Detail in [`references/disclosure-and-transparency-patterns.md`](references/disclosure-and-transparency-patterns.md).
 
 ---
 
@@ -196,7 +196,7 @@ Inconsistent AI usage across a team produces inconsistent output. The discipline
 
 The pathology. AI usage emerges informally, every writer develops their own patterns, output drifts, editors cannot pinpoint why pieces feel off. The discipline is making AI usage explicit, calibrated, and documented.
 
-Detail in `references/team-training-and-calibration.md`.
+Detail in [`references/team-training-and-calibration.md`](references/team-training-and-calibration.md).
 
 ---
 
@@ -215,13 +215,13 @@ The principles.
 
 The intellectual-honesty frame supersedes any specific policy debate. Teams that treat AI usage with intellectual honesty produce content readers can trust over time. Teams that hide, deny, or rationalize lose trust eventually.
 
-Detail in `references/ethics-and-intellectual-honesty.md`.
+Detail in [`references/ethics-and-intellectual-honesty.md`](references/ethics-and-intellectual-honesty.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-collaboration-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-collaboration-failures.md`](references/common-collaboration-failures.md).
 
 - "We used AI and the content feels generic." Voice not preserved; not enough human rewriting.
 - "Hallucinated facts made it to publish." Fact-verification gate skipped or rushed.

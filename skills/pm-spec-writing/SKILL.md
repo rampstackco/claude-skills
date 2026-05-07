@@ -221,6 +221,6 @@ specs/
 
 ## Reference files
 
-- `references/feature-spec-template.md` - Full feature spec template.
-- `references/dev-brief-template.md` - Compact dev brief template for tactical work.
-- `references/prioritization-frameworks.md` - Beyond impact/effort: RICE, weighted scoring, MoSCoW.
+- [`references/feature-spec-template.md`](references/feature-spec-template.md) - Full feature spec template.
+- [`references/dev-brief-template.md`](references/dev-brief-template.md) - Compact dev brief template for tactical work.
+- [`references/prioritization-frameworks.md`](references/prioritization-frameworks.md) - Beyond impact/effort: RICE, weighted scoring, MoSCoW.

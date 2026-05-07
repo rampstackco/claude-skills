@@ -56,7 +56,7 @@ Before designing the wizard, decide whether a wizard is the right tool.
 
 The decision is not "should we have an onboarding wizard"; it is "is the wizard the right tool for this specific product and audience."
 
-Detail in `references/wizard-decision-criteria.md`.
+Detail in [`references/wizard-decision-criteria.md`](references/wizard-decision-criteria.md).
 
 ---
 
@@ -91,7 +91,7 @@ The structure that makes wizards actually work.
 
 **Step coherence test.** Each step should answer: did this step move the user closer to value? Steps that exist for completeness or feature-pride should be cut.
 
-Detail in `references/step-architecture-patterns.md`.
+Detail in [`references/step-architecture-patterns.md`](references/step-architecture-patterns.md).
 
 ---
 
@@ -121,7 +121,7 @@ What the wizard is actually trying to engineer.
 - **First saved configuration.** The user set up something they will return to.
 - **First value-demonstrating insight.** The user saw a metric, recommendation, or pattern that surprised them.
 
-Detail in `references/ah-ha-moment-engineering.md`.
+Detail in [`references/ah-ha-moment-engineering.md`](references/ah-ha-moment-engineering.md).
 
 ---
 
@@ -141,7 +141,7 @@ How to surface only what is needed at each step.
 
 The discipline. Each piece of information shown in the wizard must justify its inclusion. Decorative information adds friction; surface it later.
 
-Detail in `references/progressive-disclosure-patterns.md`.
+Detail in [`references/progressive-disclosure-patterns.md`](references/progressive-disclosure-patterns.md).
 
 ---
 
@@ -168,7 +168,7 @@ When users skip, where they land. When they resume, what they see.
 
 **The cure.** Skip is honest about consequences and offers a path back. The user who skips knows what they skipped.
 
-Detail in `references/skip-and-resume-mechanics.md`.
+Detail in [`references/skip-and-resume-mechanics.md`](references/skip-and-resume-mechanics.md).
 
 ---
 
@@ -192,7 +192,7 @@ Where users abandon the wizard, and how to fix it.
 
 **The instrumentation requirement.** Without per-step tracking, drop-off remediation is guesswork. Set up tracking before launch.
 
-Detail in `references/drop-off-measurement-templates.md`.
+Detail in [`references/drop-off-measurement-templates.md`](references/drop-off-measurement-templates.md).
 
 ---
 
@@ -214,13 +214,13 @@ Different users may need different wizards.
 
 **The over-differentiated trap.** Too many variants produce unmaintainable wizards. Most wizards work with 2-3 variants at most.
 
-Detail in `references/user-type-variation-patterns.md`.
+Detail in [`references/user-type-variation-patterns.md`](references/user-type-variation-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-onboarding-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-onboarding-failures.md`](references/common-onboarding-failures.md).
 
 - "Activation rate is low; completion rate is high." Wizard completed but did not engineer the ah-ha moment. Audit what users did after completing.
 - "Skip rate is over 50 percent." Either the wizard is not earning its time or skip is too prominent. Audit both.

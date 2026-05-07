@@ -189,5 +189,5 @@ Default output: a spreadsheet with one row per URL, plus a summary markdown repo
 
 ## Reference files
 
-- `references/audit-template.md` - Spreadsheet column definitions and report template.
-- `references/cannibalization-resolution.md` - Detailed methodology for resolving cannibalization clusters.
+- [`references/audit-template.md`](references/audit-template.md) - Spreadsheet column definitions and report template.
+- [`references/cannibalization-resolution.md`](references/cannibalization-resolution.md) - Detailed methodology for resolving cannibalization clusters.

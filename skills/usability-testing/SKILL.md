@@ -235,4 +235,4 @@ Default outputs:
 
 ## Reference files
 
-- `references/task-script-patterns.md` - Task framing patterns by common product type, with good and bad examples.
+- [`references/task-script-patterns.md`](references/task-script-patterns.md) - Task framing patterns by common product type, with good and bad examples.

@@ -71,7 +71,7 @@ When it works: enterprise products, high-touch sales, products where free would 
 
 The decision is upstream of upgrade flow design. Different free-tier structures warrant different upgrade flows.
 
-Detail in `references/free-tier-decision-criteria.md`.
+Detail in [`references/free-tier-decision-criteria.md`](references/free-tier-decision-criteria.md).
 
 ---
 
@@ -112,7 +112,7 @@ The single most consequential decision in upgrade flow design.
 
 **The discipline.** Each paywall should answer: what value did the user just demonstrate, and how does the paid plan extend that value?
 
-Detail in `references/trigger-moment-design.md`.
+Detail in [`references/trigger-moment-design.md`](references/trigger-moment-design.md).
 
 ---
 
@@ -148,7 +148,7 @@ When to use. Soft prompts; low-priority upgrade asks.
 - "You have used [feature] 50 times. Upgrade to remove the limit and unlock [related capabilities]." matches the trigger.
 - "Upgrade for more features" is generic and weak.
 
-Detail in `references/paywall-presentation-patterns.md`.
+Detail in [`references/paywall-presentation-patterns.md`](references/paywall-presentation-patterns.md).
 
 ---
 
@@ -172,7 +172,7 @@ When the user does not accept the primary upgrade.
 
 **Anti-pattern.** Aggressive downsell that makes the user feel manipulated. Honest framing: "If Pro is more than you need, here is something that fits."
 
-Detail in `references/upsell-vs-downsell-logic.md`.
+Detail in [`references/upsell-vs-downsell-logic.md`](references/upsell-vs-downsell-logic.md).
 
 ---
 
@@ -198,7 +198,7 @@ Lapsed users, downgrades, partial-churn.
 - Discounts to win back can create reverse-incentive (user churns to get discount).
 - Discount sparingly; emphasize new value first.
 
-Detail in `references/win-back-flow-patterns.md`.
+Detail in [`references/win-back-flow-patterns.md`](references/win-back-flow-patterns.md).
 
 ---
 
@@ -221,7 +221,7 @@ The best upgrade flow is the one the user does not need because they did not chu
 
 **The prevention-vs-recovery economics.** Preventing churn is much cheaper than winning back churned users. Invest upstream.
 
-Detail in `references/churn-prevention-upstream.md`.
+Detail in [`references/churn-prevention-upstream.md`](references/churn-prevention-upstream.md).
 
 ---
 
@@ -245,13 +245,13 @@ The plans that the upgrade flow leads to.
 
 **Pricing-page design.** The pricing page is downstream of plan structure but lives close to upgrade flow. Detail in `landing-page-copy` for pricing-page copy specifically.
 
-Detail in `references/plan-structure-patterns.md`.
+Detail in [`references/plan-structure-patterns.md`](references/plan-structure-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-upgrade-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-upgrade-failures.md`](references/common-upgrade-failures.md).
 
 - "Conversion rate is low; users churn before reaching upgrade." Paywall-everywhere; gates blocking value demonstration.
 - "Conversion rate is single-digit; free users use the product for years." Free-forever-trap; no upgrade path surfaces.

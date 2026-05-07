@@ -241,4 +241,4 @@ Markdown narrative version of journey map:
 
 ## Reference files
 
-- `references/journey-map-template.md` - Fillable journey map and service blueprint template.
+- [`references/journey-map-template.md`](references/journey-map-template.md) - Fillable journey map and service blueprint template.

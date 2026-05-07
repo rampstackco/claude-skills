@@ -2,7 +2,7 @@
 
 Stack-specific patterns for WordPress as a headless CMS, integrated with a separate frontend (Next.js, Astro, Eleventy, custom, etc.).
 
-The principles in SKILL.md apply universally. This file covers the WordPress-specific patterns that recur in headless setups.
+The principles in [SKILL.md](../SKILL.md) apply universally. This file covers the WordPress-specific patterns that recur in headless setups.
 
 ---
 

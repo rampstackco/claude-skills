@@ -275,4 +275,4 @@ An internationalization plan includes:
 
 ## Reference files
 
-- `references/locale-checklist.md`: Per-locale checklist of everything that needs to adapt beyond translation, organized by category (URL, content, UX, format, legal).
+- [`references/locale-checklist.md`](references/locale-checklist.md): Per-locale checklist of everything that needs to adapt beyond translation, organized by category (URL, content, UX, format, legal).

@@ -1,6 +1,6 @@
 # Symbol approaches
 
-A symbol is the part of the logo that does the most work outside of literacy. It travels where wordmarks cannot fit (favicon, embroidery, app icon, signet) and where wordmarks would not register (signage at distance, motion lockups, square contexts). The symbol approach is the question of WHAT KIND of symbol the brand needs. This file expands the five approaches in SKILL.md with reference brands, pattern vocabulary, decision criteria, and the cliches each approach has to escape.
+A symbol is the part of the logo that does the most work outside of literacy. It travels where wordmarks cannot fit (favicon, embroidery, app icon, signet) and where wordmarks would not register (signage at distance, motion lockups, square contexts). The symbol approach is the question of WHAT KIND of symbol the brand needs. This file expands the five approaches in [SKILL.md](../SKILL.md) with reference brands, pattern vocabulary, decision criteria, and the cliches each approach has to escape.
 
 ---
 

@@ -112,4 +112,4 @@ Bureaucracy substitutes for trust. Trust is built via the audit log and the appr
 
 When a flag's surface overlaps with another team's work, coordinate before the change. The experiment registry pattern from the `experiment-design` skill applies here too: maintain a shared list (in the platform, in a wiki, in a shared doc) of flags currently being modified or rolled out per surface. Before launching a flag rollout, check the registry for conflicts.
 
-Cross-team coordination does not have to be heavy. A 5-minute Slack check ("we're rolling out flag X on the checkout flow tomorrow at 1 PM, anyone working on adjacent flags?") is enough for most cases. The cost of skipping the check is the cross-team conflict scenario from the SKILL.md, where two flags interact and produce broken UI.
+Cross-team coordination does not have to be heavy. A 5-minute Slack check ("we're rolling out flag X on the checkout flow tomorrow at 1 PM, anyone working on adjacent flags?") is enough for most cases. The cost of skipping the check is the cross-team conflict scenario from the [SKILL.md](../SKILL.md), where two flags interact and produce broken UI.

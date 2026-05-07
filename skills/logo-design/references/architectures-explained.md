@@ -1,6 +1,6 @@
 # Mark architectures explained
 
-The architectural decision is the foundational one. Every other choice (typographic register, symbol approach, application context discipline) flows from it. This file expands the five architectures listed in SKILL.md with reference brands, fit and failure modes, and a working pattern for combining them in a primary-plus-fallback hierarchy.
+The architectural decision is the foundational one. Every other choice (typographic register, symbol approach, application context discipline) flows from it. This file expands the five architectures listed in [SKILL.md](../SKILL.md) with reference brands, fit and failure modes, and a working pattern for combining them in a primary-plus-fallback hierarchy.
 
 ---
 

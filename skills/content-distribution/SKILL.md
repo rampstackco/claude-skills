@@ -80,7 +80,7 @@ Three categories with sub-types within each.
 - **Search advertising for content.** Paying for clicks on content pieces (less common; usually content is the organic side and paid is the conversion side).
 - **Sponsored podcast or content placements.** Pre-rolls, mid-rolls, sponsored segments in industry podcasts or newsletters.
 
-Detail in `references/channel-taxonomy.md`.
+Detail in [`references/channel-taxonomy.md`](references/channel-taxonomy.md).
 
 ---
 
@@ -105,7 +105,7 @@ Where the target audience actually consumes content. The distribution decision s
 
 **The mismatch failure.** Distributing on channels where the audience is present but not engaged produces low reach and low engagement. A B2B technical program publishing TikToks may technically reach audiences on TikTok but engage few of them; the audience is on TikTok for entertainment, not for technical learning.
 
-Detail in `references/audience-channel-matching.md`.
+Detail in [`references/audience-channel-matching.md`](references/audience-channel-matching.md).
 
 ---
 
@@ -124,7 +124,7 @@ Which formats fit which channels. Beyond audience match, the format must fit the
 
 **The compose-with-repurposing pattern.** When the audience is on a channel but the format does not fit, the right answer is often to repurpose into a format that does fit (see `content-repurposing`), then distribute. The composition is "repurpose for fit, distribute on channel."
 
-Detail in `references/content-channel-matching.md`.
+Detail in [`references/content-channel-matching.md`](references/content-channel-matching.md).
 
 ---
 
@@ -151,7 +151,7 @@ How often, what mix, sustaining vs campaign rhythm.
 
 **The cadence audit.** Programs that publish in fits and starts (3 posts in one week, then nothing for 3 weeks) underperform programs with steady cadence. Audience attention rewards predictability.
 
-Detail in `references/distribution-cadence-patterns.md`.
+Detail in [`references/distribution-cadence-patterns.md`](references/distribution-cadence-patterns.md).
 
 ---
 
@@ -171,7 +171,7 @@ Owned channels are the program's most reliable distribution. The discipline keep
 
 **The owned-channel anti-pattern: starvation.** Programs that under-invest in owned channels become dependent on third-party distribution. When platforms change algorithms, when paid costs rise, when earned channels go quiet, the program's reach collapses. Owned-channel investment is the durable foundation.
 
-Detail in `references/owned-channel-discipline.md`.
+Detail in [`references/owned-channel-discipline.md`](references/owned-channel-discipline.md).
 
 ---
 
@@ -191,7 +191,7 @@ Earned channels reach audiences the program cannot reach directly. The work to e
 
 **The earned-channel investment.** Earned channels require relationship-building, pitch quality, and content quality. Programs that try to "do PR" with mass-blast pitches earn nothing; programs that invest in genuine relationships earn ongoing channel access.
 
-Detail in `references/earned-channel-work.md`.
+Detail in [`references/earned-channel-work.md`](references/earned-channel-work.md).
 
 ---
 
@@ -215,7 +215,7 @@ When boosting organic content earns its keep.
 
 **The mix.** Most strong programs allocate 0-20% of distribution capacity to paid content amplification. Programs heavily dependent on paid promotion are usually programs that have not yet built owned and earned distribution.
 
-Detail in `references/paid-promotion-patterns.md`.
+Detail in [`references/paid-promotion-patterns.md`](references/paid-promotion-patterns.md).
 
 ---
 
@@ -240,13 +240,13 @@ Which channels actually drive value. The discipline that prevents distribution-t
 
 **The measurement-honest program.** Cuts channels that consistently underperform. Increases investment in channels that consistently produce. Adjusts cadence based on engagement patterns, not on arbitrary publishing schedules.
 
-Detail in `references/distribution-measurement.md`.
+Detail in [`references/distribution-measurement.md`](references/distribution-measurement.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-distribution-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-distribution-failures.md`](references/common-distribution-failures.md).
 
 - "We publish but reach is low." Hope-and-pray pattern; no deliberate distribution work happening.
 - "We post on every channel and engagement is flat." Spam-everywhere pattern; distribution capacity diluted across channels where the audience is not engaged.

@@ -56,7 +56,7 @@ The verbs vs states trap.
 
 How many events to design. Thirty to fifty events is the sweet spot for a typical SaaS product. Below twenty means under-instrumented; above one hundred almost always means tracking UI noise or duplicating events in different formats.
 
-Detail and a canonical event spec in `references/event-taxonomy-template.md`.
+Detail and a canonical event spec in [`references/event-taxonomy-template.md`](references/event-taxonomy-template.md).
 
 ---
 
@@ -78,7 +78,7 @@ Data type discipline.
 - **Timestamps** in ISO 8601, always. Always. The number of bugs caused by inconsistent date formats is uncountable.
 - **Arrays** rarely. An array property is usually a sign you should split into multiple events with one item per event.
 
-Worked example in `references/property-design-patterns.md` showing right and wrong design for a `product_viewed` event.
+Worked example in [`references/property-design-patterns.md`](references/property-design-patterns.md) showing right and wrong design for a `product_viewed` event.
 
 ---
 
@@ -99,7 +99,7 @@ What NOT to do.
 
 The naming convention reference file provides a complete style guide. Cite it in your team's data contract.
 
-Detail in `references/naming-convention-reference.md`.
+Detail in [`references/naming-convention-reference.md`](references/naming-convention-reference.md).
 
 ---
 
@@ -123,7 +123,7 @@ The data contract idea.
 - Code review every schema change. Schema is product, not afterthought.
 - CI lint rejects schema violations before they hit production. The deploy that adds an event with the wrong type fails the build.
 
-Detail in `references/schema-versioning-patterns.md`.
+Detail in [`references/schema-versioning-patterns.md`](references/schema-versioning-patterns.md).
 
 ---
 
@@ -143,7 +143,7 @@ Common funnel mistakes.
 - Funnels with the same event in multiple positions. The platform handles this poorly; the analyst handles it worse.
 - Mixing different time windows in one funnel. "Users who signed up within 7 days AND converted within 30 days" is two different cohort definitions glued together.
 
-Common funnel shapes and time-window guidance in `references/funnel-design-templates.md`.
+Common funnel shapes and time-window guidance in [`references/funnel-design-templates.md`](references/funnel-design-templates.md).
 
 ---
 
@@ -162,7 +162,7 @@ Cohort discipline.
 - Version them when criteria change. Compare apples-to-apples.
 - Do not compare a 30-day-old cohort to a 365-day-old cohort on retention; the older cohort has had more time to retain by definition.
 
-Detail in `references/cohort-definition-patterns.md`.
+Detail in [`references/cohort-definition-patterns.md`](references/cohort-definition-patterns.md).
 
 ---
 
@@ -182,7 +182,7 @@ Retention curve interpretation.
 - Gradual decay across weeks with no plateau. No one is sticking. Usually a value-prop or onboarding problem; the product is not delivering recurring value.
 - Flat line at low percentage. A power-user product with a small but engaged base. Not a problem; just a different shape.
 
-Detail in `references/retention-measurement-patterns.md`.
+Detail in [`references/retention-measurement-patterns.md`](references/retention-measurement-patterns.md).
 
 ---
 
@@ -205,7 +205,7 @@ Supporting metrics framework.
 - Three to five input metrics that drive the NSM. For "weekly active editors" these might be: signups per week, signup-to-active conversion rate, week-over-week active retention.
 - Five to ten health metrics that warn of problems. Monthly churn rate, account-level concentration, support ticket volume.
 
-Detail and product-type-specific examples in `references/north-star-metric-selection.md`.
+Detail and product-type-specific examples in [`references/north-star-metric-selection.md`](references/north-star-metric-selection.md).
 
 ---
 
@@ -239,7 +239,7 @@ Instrumentation debt is real and compounds like technical debt. The discipline.
 - Quarterly schema audits. Identify orphan events (firing but not used in any dashboard or query) and deprecate them. Identify gaps (features without events) and fill them.
 - "If we cannot measure it, we do not ship it" with explicit exceptions for genuinely experimental features where the cost of instrumentation exceeds the value of the data.
 
-Detail in `references/instrumentation-audit-checklist.md`.
+Detail in [`references/instrumentation-audit-checklist.md`](references/instrumentation-audit-checklist.md).
 
 ---
 
@@ -260,7 +260,7 @@ Twelve patterns recur across product analytics setups. The short version.
 - "Two analysts compute different MAU." Different identity stitching. Pick one canonical identity layer and make everyone query from it.
 - "Numbers are different than last quarter for no reason." Underlying schema changed without versioning. The dashboard quietly broke; nobody noticed until the gap got large.
 
-Detail in `references/common-failures.md`.
+Detail in [`references/common-failures.md`](references/common-failures.md).
 
 ---
 

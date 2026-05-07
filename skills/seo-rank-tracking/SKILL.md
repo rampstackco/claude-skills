@@ -208,7 +208,7 @@ Adjust thresholds based on volatility of the niche. High-competition spaces need
 5. **Configure tracking.** Set up Ahrefs Rank Tracker projects with tags and locations.
 6. **Capture baseline.** Day-one positions and SERP composition.
 7. **Define alert thresholds.** By bucket. Wire to notification system.
-8. **Build the dashboard.** See `references/dashboard-template.md`.
+8. **Build the dashboard.** See [`references/dashboard-template.md`](references/dashboard-template.md).
 9. **Set the cadence.** Weekly review of money + brand. Monthly review of all. Quarterly rebuild of opportunity bucket.
 10. **Iterate.** Drop dead keywords. Add new ones. Recalibrate thresholds based on noise.
 
@@ -247,4 +247,4 @@ Plus a recurring rank report at the chosen cadence (typically weekly or monthly)
 
 ## Reference files
 
-- `references/dashboard-template.md` - Template for the rank tracking dashboard layout, including the recurring report structure for weekly and monthly cadences.
+- [`references/dashboard-template.md`](references/dashboard-template.md) - Template for the rank tracking dashboard layout, including the recurring report structure for weekly and monthly cadences.

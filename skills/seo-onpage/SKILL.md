@@ -111,7 +111,7 @@ A complete on-page audit covers eight dimensions. Score each as Pass, Needs work
 3. **View the rendered HTML.** Inspect the actual served markup, not just the visual page. Check `<title>`, `<meta>`, headers, and schema in the source.
 4. **Run the 8-dimension framework.** Score each, note specific fixes.
 5. **Prioritize.** Group fixes into Critical (broken or missing), Important (suboptimal), and Nice-to-have (polish).
-6. **Write the report.** Use the template in `references/audit-template.md`.
+6. **Write the report.** Use the template in [`references/audit-template.md`](references/audit-template.md).
 7. **Offer to draft fixes.** If the user wants, draft the new title, meta, headers, or copy directly.
 
 ---
@@ -145,6 +145,6 @@ Keep audits under 1500 words. If a page needs more detail, link to deeper append
 
 ## Reference files
 
-- `references/audit-template.md` - Fillable audit template, copy and use.
-- `references/onpage-checklist.md` - Quick-reference checklist for the 8 dimensions.
-- `references/title-and-meta-patterns.md` - Patterns for writing strong titles and meta descriptions.
+- [`references/audit-template.md`](references/audit-template.md) - Fillable audit template, copy and use.
+- [`references/onpage-checklist.md`](references/onpage-checklist.md) - Quick-reference checklist for the 8 dimensions.
+- [`references/title-and-meta-patterns.md`](references/title-and-meta-patterns.md) - Patterns for writing strong titles and meta descriptions.

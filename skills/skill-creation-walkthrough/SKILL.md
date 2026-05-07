@@ -241,7 +241,7 @@ You iterate until the triggers fire correctly, then ship.
 - **No examples.** A framework without a worked example is hard to apply. Include at least one in the reference material.
 - **Optimizing for one example.** A skill written around your single use case fails at adjacent ones. Generalize.
 - **No iteration.** Shipping a skill once and never revisiting it. Skills decay. Audit yearly.
-- **Branding or product-specific assumptions in a public skill.** Skills meant to be general should not hardcode your stack. Public skills teach methodology (frameworks, decision criteria, taxonomies, anti-patterns); implementation specifics (specific page architectures, type definitions, component code, framework-specific patterns) belong in internal playbooks. See `references/methodology-vs-implementation.md` for the full discipline and the user-outcome reasons it matters.
+- **Branding or product-specific assumptions in a public skill.** Skills meant to be general should not hardcode your stack. Public skills teach methodology (frameworks, decision criteria, taxonomies, anti-patterns); implementation specifics (specific page architectures, type definitions, component code, framework-specific patterns) belong in internal playbooks. See [`references/methodology-vs-implementation.md`](references/methodology-vs-implementation.md) for the full discipline and the user-outcome reasons it matters.
 
 ## Output format
 
@@ -256,6 +256,6 @@ When using this skill to create another skill, deliver:
 
 ## Reference files
 
-- `references/skill-template.md`: A blank SKILL.md template with annotated section guidance, ready to copy and fill in.
-- `references/description-cookbook.md`: A library of description patterns with worked examples for common skill types (audits, templates, frameworks, walkthroughs).
-- `references/methodology-vs-implementation.md`: What belongs in a public skill, what stays internal, and the user-outcome reasons the discipline matters. The audit pattern and the authoring checklist for keeping skills methodology-pure.
+- [`references/skill-template.md`](references/skill-template.md): A blank SKILL.md template with annotated section guidance, ready to copy and fill in.
+- [`references/description-cookbook.md`](references/description-cookbook.md): A library of description patterns with worked examples for common skill types (audits, templates, frameworks, walkthroughs).
+- [`references/methodology-vs-implementation.md`](references/methodology-vs-implementation.md): What belongs in a public skill, what stays internal, and the user-outcome reasons the discipline matters. The audit pattern and the authoring checklist for keeping skills methodology-pure.

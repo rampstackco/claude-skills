@@ -132,7 +132,7 @@ Specialty platform focused on the winning-experiment-to-production-code workflow
 
 ## Decision matrix: which platform for which context
 
-The matrix lives in `references/platform-decision-matrix.md` with worked examples. The summary:
+The matrix lives in [`references/platform-decision-matrix.md`](references/platform-decision-matrix.md) with worked examples. The summary:
 
 - Pure SaaS, fast-growing, want one platform for flags and experiments. Choose Statsig. Choose PostHog if you also want analytics.
 - Open-source preference, want data sovereignty, warehouse-native. Choose GrowthBook or Eppo.
@@ -155,7 +155,7 @@ Multi-platform is a mess when the surfaces overlap. Running both Statsig and Opt
 
 The 80/20 rule. Eighty percent of teams should pick one platform and consolidate. The 20% with genuine multi-surface needs (marketing site plus product app plus content site) can justify multi-platform with clear ownership boundaries.
 
-When multi-platform is genuine, three coordination patterns are non-negotiable. An ownership matrix names which platform owns which surface. Shared metric definitions ensure that "activation rate" computes the same way in both platforms (this is hard, and it is the reason most multi-platform setups quietly drift). Reconcilable dashboards let you see the same metric across both platforms with the same definitions. Detail in `references/multi-platform-orchestration.md`.
+When multi-platform is genuine, three coordination patterns are non-negotiable. An ownership matrix names which platform owns which surface. Shared metric definitions ensure that "activation rate" computes the same way in both platforms (this is hard, and it is the reason most multi-platform setups quietly drift). Reconcilable dashboards let you see the same metric across both platforms with the same definitions. Detail in [`references/multi-platform-orchestration.md`](references/multi-platform-orchestration.md).
 
 ---
 
@@ -173,7 +173,7 @@ Migration is the unglamorous engineering work that makes the platform decision r
 
 **Any to Statsig.** Typical consolidation move from multi-platform mess. Effort scales with the number of platforms and in-flight experiments; a clean consolidation can run 6 to 12 engineer-weeks.
 
-The migration discipline is in `references/migration-playbook.md`. Three rules apply to every migration: do not parallel-run forever, do not big-bang switch, and do not retire the old platform before all in-flight experiments complete.
+The migration discipline is in [`references/migration-playbook.md`](references/migration-playbook.md). Three rules apply to every migration: do not parallel-run forever, do not big-bang switch, and do not retire the old platform before all in-flight experiments complete.
 
 ---
 
@@ -183,7 +183,7 @@ Plain talk. Vendor-native (Statsig, Optimizely) bills on events, typically $0.10
 
 Free tiers. PostHog gives 1M events per month free. Statsig gives 1M events free. Amplitude gives 10M events per month free with basic features. GrowthBook is free open-source. Optimizely and Eppo do not have meaningful free tiers.
 
-The trap. Optimizing for sticker price ignores total cost. Total cost includes engineer time, statistical correctness (a wrong-result experiment can cost more than a year of platform fees), governance overhead, and migration risk. Sticker price matters for finance; total cost matters for product velocity. Detail and finance conversation patterns in `references/cost-and-pricing-models.md`.
+The trap. Optimizing for sticker price ignores total cost. Total cost includes engineer time, statistical correctness (a wrong-result experiment can cost more than a year of platform fees), governance overhead, and migration risk. Sticker price matters for finance; total cost matters for product velocity. Detail and finance conversation patterns in [`references/cost-and-pricing-models.md`](references/cost-and-pricing-models.md).
 
 ---
 
@@ -193,7 +193,7 @@ Permission tiers, approval workflows, audit trails, and environment promotion ar
 
 Team fit shapes the decision more than most evaluations admit. PostHog and GrowthBook suit engineer-led and PLG teams. Optimizely suits marketing-led teams. Eppo and GrowthBook suit data-team-led teams. Statsig suits PM-led teams. The platform's defaults will pull your team's experimentation culture in the direction of its primary user; pick the alignment that matches who you actually want running experiments.
 
-Onboarding cost. How long until a new PM can ship their first experiment? Statsig and PostHog: hours to days. Optimizely: days to weeks. Eppo and GrowthBook: depends on whether the warehouse and metrics are already wired in (days if yes, weeks if no). Detail in `references/governance-and-team-setup.md`.
+Onboarding cost. How long until a new PM can ship their first experiment? Statsig and PostHog: hours to days. Optimizely: days to weeks. Eppo and GrowthBook: depends on whether the warehouse and metrics are already wired in (days if yes, weeks if no). Detail in [`references/governance-and-team-setup.md`](references/governance-and-team-setup.md).
 
 ---
 
@@ -206,7 +206,7 @@ For AI-forward teams, the MCP capability layer is becoming the deciding factor. 
 - For agentic workflows where AI agents run experiments end to end, prefer platforms with full CRUD via MCP: Statsig, PostHog, GrowthBook, Optimizely.
 - For human-driven workflows where MCP supplements human action, any of the seven works (Eppo via the REST path).
 
-MCP availability is evolving fast. Check the current state of any platform before committing. Eppo is worth tracking for a future MCP release that would close its current gap. Side-by-side capability matrix in `references/mcp-capability-comparison.md`.
+MCP availability is evolving fast. Check the current state of any platform before committing. Eppo is worth tracking for a future MCP release that would close its current gap. Side-by-side capability matrix in [`references/mcp-capability-comparison.md`](references/mcp-capability-comparison.md).
 
 ---
 
@@ -241,7 +241,7 @@ Twelve patterns recur across platform decisions. The short version:
 - Locked the brief on the demo, not the trial. Brief assumptions did not survive contact with real usage.
 - Renewed without re-evaluating. The market changed; the brief did not.
 
-Detail in `references/common-mistakes.md` with symptoms, root causes, fixes, and prevention.
+Detail in [`references/common-mistakes.md`](references/common-mistakes.md) with symptoms, root causes, fixes, and prevention.
 
 ---
 

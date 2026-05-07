@@ -266,7 +266,7 @@ if (issues.length) {
 3. **Note failures.** Each failure either gets fixed before ship or filed as a known issue.
 4. **For Standard tier**, add: visual review at 375px, 768px, 1440px. Test the primary user flow.
 5. **For Full tier**, add: cross-browser testing, Lighthouse audit, schema validation, security headers, 404 handling.
-6. **Document.** Use the template in `references/qa-report-template.md` for full audits.
+6. **Document.** Use the template in [`references/qa-report-template.md`](references/qa-report-template.md) for full audits.
 
 ---
 
@@ -285,10 +285,10 @@ if (issues.length) {
 
 For smoke tests: console output is the report.
 
-For standard and full audits: a markdown report at `qa-report-[date].md`. Use the template in `references/qa-report-template.md`.
+For standard and full audits: a markdown report at `qa-report-[date].md`. Use the template in [`references/qa-report-template.md`](references/qa-report-template.md).
 
 ---
 
 ## Reference files
 
-- `references/qa-report-template.md` - Markdown report template for standard and full audits.
+- [`references/qa-report-template.md`](references/qa-report-template.md) - Markdown report template for standard and full audits.

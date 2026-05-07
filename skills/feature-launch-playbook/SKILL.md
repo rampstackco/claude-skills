@@ -71,7 +71,7 @@ The trap on either side.
 
 Match the tier to the feature. This skill primarily covers Tier 1 and Tier 2. Tier 3 is mostly the changelog discipline; the launch playbook applies but compressed to the changelog entry plus light monitoring.
 
-Detail in `references/launch-tier-decision.md`.
+Detail in [`references/launch-tier-decision.md`](references/launch-tier-decision.md).
 
 ---
 
@@ -90,7 +90,7 @@ The positioning canvas. One page, filled out before any comms drafting.
 
 The most common positioning failure is a vague target user. "It is for PMs" is not a target. "It is for B2B SaaS PMs at companies with 50 to 500 customers who need to coordinate roadmap discussions across engineering and customer success" is a target. The specificity is what lets sales, marketing, and support speak the same language about who this is for.
 
-Detail in `references/positioning-canvas.md`.
+Detail in [`references/positioning-canvas.md`](references/positioning-canvas.md).
 
 ---
 
@@ -109,7 +109,7 @@ The discipline. A single internal launch brief, distributed two to four weeks be
 
 The most common internal alignment failure: launching without sales knowing. Sales finds out from a customer asking about it. Trust erodes for the next launch. The fix is the launch brief plus a sales-specific briefing one to two weeks before customer-facing launch.
 
-Detail in `references/internal-alignment-checklist.md`.
+Detail in [`references/internal-alignment-checklist.md`](references/internal-alignment-checklist.md).
 
 ---
 
@@ -129,7 +129,7 @@ For each channel: who drafts, who approves, what is the timing, what is the call
 
 The comms calendar pattern. A single document with all channels and dates, distributed in the internal launch brief. Prevents the "blog post went out before sales got the briefing" failure. Ordering typically goes: sales briefing first, support training second, customer success outreach to top accounts third, public comms fourth.
 
-Detail in `references/customer-comms-playbook.md`.
+Detail in [`references/customer-comms-playbook.md`](references/customer-comms-playbook.md).
 
 ---
 
@@ -147,7 +147,7 @@ The "shadow launch" failure. Feature ships, sales hears about it from product te
 
 For B2C and PLG products, this section is mostly skipped. The user is the buyer; there is no sales motion. Note this explicitly so PMs in those contexts do not feel they are missing the discipline.
 
-Detail in `references/sales-enablement-template.md`.
+Detail in [`references/sales-enablement-template.md`](references/sales-enablement-template.md).
 
 ---
 
@@ -162,7 +162,7 @@ Support is often the first to encounter the failure modes of a new feature. They
 
 The discipline. The support team's confusion is the test customer's confusion. If support does not understand the feature, neither will customers. Train support before customer-facing launch comms go out.
 
-Detail in `references/support-readiness-checklist.md`.
+Detail in [`references/support-readiness-checklist.md`](references/support-readiness-checklist.md).
 
 ---
 
@@ -184,7 +184,7 @@ The decision framework. Feature blast radius times confidence in correctness tim
 - Low blast radius plus high confidence plus external launch date: all-at-once.
 - The middle (most launches): gradual percentage rollout.
 
-Detail in `references/rollout-strategy-patterns.md`.
+Detail in [`references/rollout-strategy-patterns.md`](references/rollout-strategy-patterns.md).
 
 ---
 
@@ -207,7 +207,7 @@ Define the rollback trigger explicitly before launch. Examples.
 
 The "no rollback trigger" failure. Launch goes sideways. The team debates whether to roll back for an hour while the issue compounds. Pre-defined triggers remove the debate; the rule fires automatically and the team executes the rollback.
 
-Detail in `references/monitoring-readiness-checklist.md`.
+Detail in [`references/monitoring-readiness-checklist.md`](references/monitoring-readiness-checklist.md).
 
 ---
 
@@ -242,7 +242,7 @@ Time horizons. Most launches need two to four weeks of post-launch data for enga
 
 The "no measurement plan" failure. Feature ships; the team moves on; six months later nobody knows if it worked. The feature becomes maintenance debt; the team cannot decide whether to invest in it further.
 
-Detail in `references/post-launch-measurement-framework.md`.
+Detail in [`references/post-launch-measurement-framework.md`](references/post-launch-measurement-framework.md).
 
 ---
 
@@ -274,7 +274,7 @@ The fix. Declare success or failure based on a stable post-launch trend, not the
 
 ## Common failure modes
 
-Twelve patterns recur across feature launches. Detail in `references/common-launch-failures.md`.
+Twelve patterns recur across feature launches. Detail in [`references/common-launch-failures.md`](references/common-launch-failures.md).
 
 - "We shipped it but nothing happened." Unlaunched. No comms plan, no internal alignment, no measurement.
 - "Sales is confused and selling it wrong." No enablement. Battlecard, demo, training were skipped or rushed.

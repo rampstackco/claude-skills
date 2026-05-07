@@ -141,7 +141,7 @@ Inside each theme, rank the initiatives. Use one prioritization framework consis
 
 The framework matters less than the consistency. Pick one. Use it the same way for every initiative. Document the math.
 
-See `references/prioritization-frameworks.md` for the full breakdown.
+See [`references/prioritization-frameworks.md`](references/prioritization-frameworks.md) for the full breakdown.
 
 ### Step 4: Build the dependency map
 
@@ -225,4 +225,4 @@ The roadmap is a living document. Plan to revisit it monthly. Replan it formally
 
 ## Reference files
 
-- `references/prioritization-frameworks.md` - Detailed breakdown of RICE, MoSCoW, Kano, Cost of Delay, and Strategic Alignment frameworks. When to use each, how to apply them, common mistakes.
+- [`references/prioritization-frameworks.md`](references/prioritization-frameworks.md) - Detailed breakdown of RICE, MoSCoW, Kano, Cost of Delay, and Strategic Alignment frameworks. When to use each, how to apply them, common mistakes.

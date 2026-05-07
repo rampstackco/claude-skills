@@ -302,4 +302,4 @@ A media pipeline document includes:
 
 ## Reference files
 
-- `references/responsive-image-patterns.md`: Copy-paste HTML patterns for common responsive image scenarios (hero, content, art-directed, format negotiation), with explanations.
+- [`references/responsive-image-patterns.md`](references/responsive-image-patterns.md): Copy-paste HTML patterns for common responsive image scenarios (hero, content, art-directed, format negotiation), with explanations.

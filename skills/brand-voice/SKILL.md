@@ -154,7 +154,7 @@ Aim for 15 to 25 paired examples. This is the most-used part of the voice doc in
 4. **Layer 3: Vocabulary and grammar.** Define preferences. Skip default rules unless they actually distinguish the brand.
 5. **Layer 4: Examples.** Build the paired-example library. 15 to 25 minimum.
 6. **Stress-test.** Pick a fresh writing brief and apply the voice doc. Does it produce on-voice copy? If not, the doc is incomplete.
-7. **Document.** Use the template in `references/voice-document-template.md`.
+7. **Document.** Use the template in [`references/voice-document-template.md`](references/voice-document-template.md).
 8. **Distribute.** Voice docs only work if they get used. Make the doc easy to reference inline (link to it from CMS templates, brief templates, AI assistant prompts).
 
 ---
@@ -189,5 +189,5 @@ This doc can stand alone or feed into `brand-style-guide`.
 
 ## Reference files
 
-- `references/voice-document-template.md` - Fillable template.
-- `references/voice-frameworks.md` - Detailed walkthrough of the Nielsen Norman 4 dimensions, Jung archetypes, and the "we are X not Y" approach.
+- [`references/voice-document-template.md`](references/voice-document-template.md) - Fillable template.
+- [`references/voice-frameworks.md`](references/voice-frameworks.md) - Detailed walkthrough of the Nielsen Norman 4 dimensions, Jung archetypes, and the "we are X not Y" approach.

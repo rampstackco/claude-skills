@@ -256,5 +256,5 @@ Structure:
 
 ## Reference files
 
-- `references/hero-formulas.md` - Patterns and formulas for hero headlines.
-- `references/objection-library.md` - Common objections by category, with handling strategies.
+- [`references/hero-formulas.md`](references/hero-formulas.md) - Patterns and formulas for hero headlines.
+- [`references/objection-library.md`](references/objection-library.md) - Common objections by category, with handling strategies.

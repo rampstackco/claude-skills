@@ -257,4 +257,4 @@ After incident close: a brief incident summary feeding into the AAR.
 
 ## Reference files
 
-- `references/incident-playbook.md` - Severity definitions, roles, status page templates, decision rubrics.
+- [`references/incident-playbook.md`](references/incident-playbook.md) - Severity definitions, roles, status page templates, decision rubrics.

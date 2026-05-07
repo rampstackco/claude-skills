@@ -43,7 +43,7 @@ A defensible experiment design sits at the intersection of twelve considerations
 9. **Sequential testing and the peeking problem.** Daily peeking inflates false positive rates. Use sequential testing methods when available; pre-commit otherwise.
 10. **Pre-commitment vs p-hacking.** Write down the primary metric, MDE, duration, segments, and decision rule before launch. Apply mechanically when results come in.
 11. **Reading results and making the call.** Three buckets: clear win, clear loss, inconclusive. The inconclusive bucket exists for a reason; resist the pull to ship anyway.
-12. **Common failures and fixes.** A short rapid-fire pattern catalog, expanded in `references/common-failures.md`.
+12. **Common failures and fixes.** A short rapid-fire pattern catalog, expanded in [`references/common-failures.md`](references/common-failures.md).
 
 The sections below cover each consideration in turn. Read the relevant section before running the experiment, not after.
 
@@ -65,7 +65,7 @@ Falsifiability test. Before launching the experiment, write down what would make
 
 Directional vs magnitude distinction. Knowing the change moves the needle is different from knowing it moves the needle enough to matter. A 0.3 percent absolute lift on signup conversion may be statistically significant with enough traffic and still not justify the engineering cost of maintaining the change. Magnitude matters as much as direction; the hypothesis names the magnitude that would justify shipping.
 
-For templates and worked examples across common metric types, see `references/hypothesis-templates.md`.
+For templates and worked examples across common metric types, see [`references/hypothesis-templates.md`](references/hypothesis-templates.md).
 
 ---
 
@@ -81,7 +81,7 @@ Power. The test's ability to detect an effect that is actually present. The conv
 
 One-sided vs two-sided. Most PM tests are two-sided despite the temptation to claim otherwise. A one-sided test says "I only care about the positive direction; if the change makes things worse, I do not need to detect it." That is rarely true. If the new pricing page tanks conversion, you want to know. Default to two-sided. If you genuinely want one-sided, document the asymmetry before running.
 
-For pre-calculated sample size tables across common conversion rate baselines and MDEs, see `references/sample-size-tables.md`. The tables are starting points, not substitutes for running the math against your specific traffic and metric.
+For pre-calculated sample size tables across common conversion rate baselines and MDEs, see [`references/sample-size-tables.md`](references/sample-size-tables.md). The tables are starting points, not substitutes for running the math against your specific traffic and metric.
 
 ---
 
@@ -215,13 +215,13 @@ Bayesian thinking layer. If your prior was strong (this should obviously work, g
 
 The hardest version. Positive primary metric, ambiguous guardrail. Revenue went up but support tickets ticked up. Conversion went up but session length went down. Use the pre-committed decision rule. If you did not pre-commit on the guardrail trade-off, default to "do not ship." The guardrails exist because you cared about them before you saw the result. Do not lower the bar after the fact.
 
-For a step-by-step results-reading checklist, see `references/results-interpretation-checklist.md`.
+For a step-by-step results-reading checklist, see [`references/results-interpretation-checklist.md`](references/results-interpretation-checklist.md).
 
 ---
 
 ## Common failures and fixes
 
-Rapid-fire reference. Each pattern is described in more detail in `references/common-failures.md`.
+Rapid-fire reference. Each pattern is described in more detail in [`references/common-failures.md`](references/common-failures.md).
 
 - "We did not have enough traffic" means the MDE was too small. Pick bigger changes worth detecting.
 - "The lift disappeared after launch" means the test ran for 5 days and caught a novelty effect. Run longer next time; minimum two weeks for UI changes.
@@ -236,13 +236,13 @@ Rapid-fire reference. Each pattern is described in more detail in `references/co
 
 ## Reference files
 
-- `references/hypothesis-templates.md`. Concrete formats for writing hypotheses that pass the cause-effect-magnitude-mechanism test, with worked examples across conversion, engagement, revenue, retention, and funnel-step metric types.
-- `references/sample-size-tables.md`. Pre-calculated sample size tables for the most common conversion-rate experiments, with how-to-use guidance and the common pitfalls in sample-size planning.
-- `references/common-failures.md`. Fifteen anti-patterns that produce wrong shipping decisions, each with symptom, root cause, fix, and prevention.
-- `references/results-interpretation-checklist.md`. Step-by-step checklist for reading results, the three-bucket decision matrix (win, loss, inconclusive), and the post-launch monitoring discipline.
-- `references/platform-comparison.md`. Profiles of the major experimentation platforms (Statsig, PostHog, GrowthBook, Optimizely, Amplitude, Eppo, Kameleoon) with strengths, gotchas, and a decision matrix for choosing.
-- `references/pre-experiment-readiness-checklist.md`. Ten-item go/no-go checklist run through before launch.
-- `references/post-experiment-decision-framework.md`. The moment-of-decision framework: confirm pre-commitment, apply rule mechanically, route to ship/kill/inconclusive paths, write the post-mortem within a week.
+- [`references/hypothesis-templates.md`](references/hypothesis-templates.md). Concrete formats for writing hypotheses that pass the cause-effect-magnitude-mechanism test, with worked examples across conversion, engagement, revenue, retention, and funnel-step metric types.
+- [`references/sample-size-tables.md`](references/sample-size-tables.md). Pre-calculated sample size tables for the most common conversion-rate experiments, with how-to-use guidance and the common pitfalls in sample-size planning.
+- [`references/common-failures.md`](references/common-failures.md). Fifteen anti-patterns that produce wrong shipping decisions, each with symptom, root cause, fix, and prevention.
+- [`references/results-interpretation-checklist.md`](references/results-interpretation-checklist.md). Step-by-step checklist for reading results, the three-bucket decision matrix (win, loss, inconclusive), and the post-launch monitoring discipline.
+- [`references/platform-comparison.md`](references/platform-comparison.md). Profiles of the major experimentation platforms (Statsig, PostHog, GrowthBook, Optimizely, Amplitude, Eppo, Kameleoon) with strengths, gotchas, and a decision matrix for choosing.
+- [`references/pre-experiment-readiness-checklist.md`](references/pre-experiment-readiness-checklist.md). Ten-item go/no-go checklist run through before launch.
+- [`references/post-experiment-decision-framework.md`](references/post-experiment-decision-framework.md). The moment-of-decision framework: confirm pre-commitment, apply rule mechanically, route to ship/kill/inconclusive paths, write the post-mortem within a week.
 
 ---
 

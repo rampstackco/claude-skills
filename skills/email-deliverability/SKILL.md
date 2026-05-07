@@ -280,4 +280,4 @@ A deliverability audit document includes:
 
 ## Reference files
 
-- `references/dmarc-rollout-playbook.md`: Step-by-step for moving from no DMARC to `p=reject`, with timing, monitoring, and how to handle problems found along the way.
+- [`references/dmarc-rollout-playbook.md`](references/dmarc-rollout-playbook.md): Step-by-step for moving from no DMARC to `p=reject`, with timing, monitoring, and how to handle problems found along the way.

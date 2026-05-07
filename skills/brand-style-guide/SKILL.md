@@ -142,7 +142,7 @@ The dos and don'ts section is what people actually reference in practice. Make i
 
 1. **Inventory the inputs.** What identity work is finished? What voice work is finished? What is missing?
 2. **Confirm the format.** Is this a PDF, a web page, a Notion doc, a printed book, or all of the above? Different formats have different production requirements.
-3. **Section by section, draft.** Use the template in `references/style-guide-template.md`.
+3. **Section by section, draft.** Use the template in [`references/style-guide-template.md`](references/style-guide-template.md).
 4. **Stress-test with real examples.** For every rule, find a real application example. Rules without examples get ignored.
 5. **Get review from the people who will use it.** Designers, developers, marketers. They will surface gaps.
 6. **Version control.** Style guides evolve. Date the doc. Note what changed in each version.
@@ -198,5 +198,5 @@ For consumer-facing presentation, build a web page version that imports from the
 
 ## Reference files
 
-- `references/style-guide-template.md` - Fillable section-by-section template.
-- `references/maintenance-playbook.md` - How to keep the guide current after launch.
+- [`references/style-guide-template.md`](references/style-guide-template.md) - Fillable section-by-section template.
+- [`references/maintenance-playbook.md`](references/maintenance-playbook.md) - How to keep the guide current after launch.

@@ -69,7 +69,7 @@ Five common research types, each with different artifacts and synthesis needs.
 
 Different research types compose. A discovery cycle often pairs interviews (depth) with support ticket review (volume) with survey data (validation at scale). The synthesis combines them.
 
-Detail in `references/research-types-and-when-each-fits.md`.
+Detail in [`references/research-types-and-when-each-fits.md`](references/research-types-and-when-each-fits.md).
 
 ---
 
@@ -91,7 +91,7 @@ Six stages from raw artifacts to decisions. Skipping stages is where synthesis f
 
 The sequence is non-negotiable. Teams that skip tagging and jump to pattern naming hallucinate patterns; teams that skip implications produce findings without product direction; teams that skip so-what produce documentation, not synthesis.
 
-Detail in `references/synthesis-sequence-walkthrough.md`.
+Detail in [`references/synthesis-sequence-walkthrough.md`](references/synthesis-sequence-walkthrough.md).
 
 ---
 
@@ -109,7 +109,7 @@ The middle stages of the synthesis sequence have specific failure modes.
 
 **Tag dissent and contradictions explicitly.** Some users will contradict the dominant pattern. Those contradictions are signal: either there is a sub-segment with different needs, or the pattern is weaker than the volume suggests. Tag the dissent so the synthesis can address it.
 
-Detail in `references/tagging-and-clustering-discipline.md`.
+Detail in [`references/tagging-and-clustering-discipline.md`](references/tagging-and-clustering-discipline.md).
 
 ---
 
@@ -127,7 +127,7 @@ The work that distinguishes synthesis from documentation.
 
 **Name with conviction.** Hedged pattern names ("users sometimes seem to maybe struggle with...") signal a researcher who did not commit to what the data showed. Patterns named with conviction are more useful even if they overstate slightly; they invite challenge and produce decisions.
 
-Detail in `references/pattern-naming-patterns.md`.
+Detail in [`references/pattern-naming-patterns.md`](references/pattern-naming-patterns.md).
 
 ---
 
@@ -145,7 +145,7 @@ The bridge from observation to decision.
 
 **Some patterns imply not-acting.** Sometimes the pattern reveals friction the team should not address: it affects too few users, it represents segment misfit, addressing it would compromise other priorities. Naming the not-act implication is honest synthesis.
 
-Detail in `references/from-pattern-to-product-implication.md`.
+Detail in [`references/from-pattern-to-product-implication.md`](references/from-pattern-to-product-implication.md).
 
 ---
 
@@ -163,7 +163,7 @@ Synthesis output should be optimized for decision use, not for presentation.
 
 **Include a decision-input section.** What does this synthesis recommend the team do? Where should priorities shift? Which roadmap items does this validate, which does it challenge? The decision-input section is the synthesis's reason for existing.
 
-Detail in `references/writing-for-decisions-not-decks.md`.
+Detail in [`references/writing-for-decisions-not-decks.md`](references/writing-for-decisions-not-decks.md).
 
 ---
 
@@ -181,7 +181,7 @@ How the synthesis gets pressure-tested before it drives decisions.
 
 **Iterate before publishing.** Synthesis goes through revision based on the review loop. Synthesis that ships in the first draft state usually carries unacknowledged blind spots.
 
-Detail in `references/synthesis-review-and-validation.md`.
+Detail in [`references/synthesis-review-and-validation.md`](references/synthesis-review-and-validation.md).
 
 ---
 
@@ -199,13 +199,13 @@ Synthesis sometimes reveals that the research did not collect enough.
 
 **The "we have enough" trap.** Teams that have invested in research often want to declare the data sufficient even when the synthesis reveals gaps. The discipline is naming gaps even when uncomfortable.
 
-Detail in `references/when-to-gather-more-data.md`.
+Detail in [`references/when-to-gather-more-data.md`](references/when-to-gather-more-data.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-discovery-synthesis-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-discovery-synthesis-failures.md`](references/common-discovery-synthesis-failures.md).
 
 - "We did the research but never made decisions from it." Data-dump or insight-theater; synthesis sequence skipped or stopped at findings.
 - "Our synthesis deck got a polite review and was never referenced again." Insight-theater; output was performative rather than load-bearing.

@@ -1,6 +1,6 @@
 # Typographic registers
 
-Type carries the wordmark. Type carries half the lockup. Type drives more of a logo's read than any other single decision because type is the voice of the brand, frozen. This file expands the seven registers listed in SKILL.md with named typefaces, category-fit notes, example brands, pairing guidance, and the failure mode each register tends toward.
+Type carries the wordmark. Type carries half the lockup. Type drives more of a logo's read than any other single decision because type is the voice of the brand, frozen. This file expands the seven registers listed in [SKILL.md](../SKILL.md) with named typefaces, category-fit notes, example brands, pairing guidance, and the failure mode each register tends toward.
 
 ---
 

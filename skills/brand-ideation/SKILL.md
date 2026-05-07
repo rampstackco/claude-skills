@@ -139,7 +139,7 @@ For each candidate narrative:
 5. **Stage 3: Generate 2 to 4 mood directions.** Each must be distinguishable enough to brief a designer.
 6. **Stage 4: Generate 2 to 3 narrative shapes.** Pick the one that fits the founders, the audience, and the proof points.
 7. **Converge.** Present the user with: 1 positioning, 8 to 12 naming finalists, 2 to 4 mood directions, 2 to 3 narrative shapes. Help them pick.
-8. **Output.** Use the template in `references/ideation-output-template.md`.
+8. **Output.** Use the template in [`references/ideation-output-template.md`](references/ideation-output-template.md).
 
 ---
 
@@ -171,5 +171,5 @@ Optional: a separate `naming-explorations.md` with the full list of 30 to 50 can
 
 ## Reference files
 
-- `references/ideation-output-template.md` - Fillable template for the ideation deliverable.
-- `references/naming-evaluation-rubric.md` - The 6-criteria filter applied with examples.
+- [`references/ideation-output-template.md`](references/ideation-output-template.md) - Fillable template for the ideation deliverable.
+- [`references/naming-evaluation-rubric.md`](references/naming-evaluation-rubric.md) - The 6-criteria filter applied with examples.

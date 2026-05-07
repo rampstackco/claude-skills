@@ -84,7 +84,7 @@ Schema is how you speak machine-readable language. AI assistants parse it heavil
 
 Beyond traditional SEO, AI tools need access patterns of their own.
 
-- **llms.txt at the site root.** A markdown file at `/llms.txt` describing the site's content, key URLs, and what topics the site covers. See `references/llms-txt-guide.md`.
+- **llms.txt at the site root.** A markdown file at `/llms.txt` describing the site's content, key URLs, and what topics the site covers. See [`references/llms-txt-guide.md`](references/llms-txt-guide.md).
 - **llms-full.txt** (optional) - a complete content dump for AI training and context, if the site permits it.
 - **robots.txt allowing AI crawlers.** Decide explicitly which AI crawlers to allow (GPTBot, ClaudeBot, Google-Extended, PerplexityBot, etc.) or disallow. Do not block by default if visibility matters.
 - **Clean HTML semantics.** Semantic tags (`article`, `section`, `nav`, `main`) help AI parse structure.
@@ -146,5 +146,5 @@ Default output is a markdown plan at `aeo-geo-strategy.md`. Structure:
 
 ## Reference files
 
-- `references/llms-txt-guide.md` - How to write a useful llms.txt, with examples.
-- `references/extraction-friendly-patterns.md` - Content patterns that AI extracts cleanly, with before/after examples.
+- [`references/llms-txt-guide.md`](references/llms-txt-guide.md) - How to write a useful llms.txt, with examples.
+- [`references/extraction-friendly-patterns.md`](references/extraction-friendly-patterns.md) - Content patterns that AI extracts cleanly, with before/after examples.

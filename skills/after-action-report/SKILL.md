@@ -279,4 +279,4 @@ Structure:
 
 ## Reference files
 
-- `references/aar-template.md` - Fillable AAR template covering incidents, launches, and projects.
+- [`references/aar-template.md`](references/aar-template.md) - Fillable AAR template covering incidents, launches, and projects.

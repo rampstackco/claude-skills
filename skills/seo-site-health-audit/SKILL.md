@@ -181,4 +181,4 @@ Length: 5-12 pages plus a backlog spreadsheet.
 
 ## Reference files
 
-- `references/issue-impact-table.md` - Mapping table of common crawler issues to mechanism impact and typical fix effort, plus the triage matrix in detailed form.
+- [`references/issue-impact-table.md`](references/issue-impact-table.md) - Mapping table of common crawler issues to mechanism impact and typical fix effort, plus the triage matrix in detailed form.

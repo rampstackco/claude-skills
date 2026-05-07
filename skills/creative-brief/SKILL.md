@@ -69,7 +69,7 @@ What success looks like. Pair every objective with a measurable signal.
 The one thing you want a visitor to walk away knowing. If they see only the homepage hero and bounce, what should they remember? One sentence.
 
 ### 5. Voice and tone
-Pick three to five adjectives. Pair each with what you are NOT (e.g. "confident, not arrogant"). See `references/voice-and-tone-guide.md` for frameworks and worked examples.
+Pick three to five adjectives. Pair each with what you are NOT (e.g. "confident, not arrogant"). See [`references/voice-and-tone-guide.md`](references/voice-and-tone-guide.md) for frameworks and worked examples.
 
 ### 6. Visual direction
 Mood, palette, type, and imagery direction. Three to five reference URLs are worth more than 500 words. Note what you like AND what you would reject.
@@ -122,7 +122,7 @@ Do not ask all of these. Pick the ones that fill the actual gaps.
 1. **Read the conversation.** Pull every fact already given. Do not ask questions you can answer from context.
 2. **Identify gaps.** Which of the ten required inputs are missing or thin?
 3. **Run intake.** Ask three to five targeted questions to fill the gaps. Group related questions to keep the conversation tight.
-4. **Draft the brief.** Use `references/creative-brief-template.md` as the structure. Keep it under 1500 words.
+4. **Draft the brief.** Use [`references/creative-brief-template.md`](references/creative-brief-template.md) as the structure. Keep it under 1500 words.
 5. **Stress-test.** Before delivering, check the brief against the failure patterns below. If any apply, revise before showing the user.
 6. **Deliver.** Save as `creative-brief.md` in the project root. Offer to make it a Word doc or PDF if the user wants something to share with stakeholders.
 7. **Hand off for aesthetic depth (optional).** For projects where sections 5 (voice and tone) and 6 (visual direction) need more rigor than this brief surfaces, run `creative-direction` next. It produces a structured aesthetic brief using four directional axes (tone register, aesthetic philosophy, audience relationship, sensory ambition) that content, copy, and art-direction skills consume directly.
@@ -151,8 +151,8 @@ If the project is large, split: keep the main brief under 1500 words and put det
 
 ## Reference files
 
-- `references/creative-brief-template.md` - Fillable template. Copy and use as the starting point.
-- `references/voice-and-tone-guide.md` - Voice frameworks, brand archetypes, and worked patterns.
-- `references/example-brief.md` - A worked example for a fictional B2B SaaS, showing what a "good" filled brief looks like.
+- [`references/creative-brief-template.md`](references/creative-brief-template.md) - Fillable template. Copy and use as the starting point.
+- [`references/voice-and-tone-guide.md`](references/voice-and-tone-guide.md) - Voice frameworks, brand archetypes, and worked patterns.
+- [`references/example-brief.md`](references/example-brief.md) - A worked example for a fictional B2B SaaS, showing what a "good" filled brief looks like.
 
 Read the template before drafting. Read the voice guide if the user has not already specified a voice. Read the example if you are unsure how filled-out a section should be.

@@ -58,7 +58,7 @@ pSEO does NOT work when:
 
 The honest framing. Most teams that ask "should we do pSEO?" should hear "probably not, unless the underlying data is unique or first-party expertise makes the pages actually useful." The reputation problem is not the technique; it is the technique applied without underlying value.
 
-Detail in `references/when-pseo-works-decision.md`.
+Detail in [`references/when-pseo-works-decision.md`](references/when-pseo-works-decision.md).
 
 ---
 
@@ -78,7 +78,7 @@ The data source is the pSEO program. Common sources with different defensibility
 
 The "moat" question. Would a competitor be able to replicate the data source? If yes, the pSEO program has no defensibility; anyone can copy. If no, the data source becomes a moat that compounds. Zillow's MLS partnerships, Glassdoor's employee reviews, Crunchbase's funding data, are moats. "Scraped Wikipedia plus AI rewrite" is not.
 
-Detail in `references/data-source-identification-patterns.md`.
+Detail in [`references/data-source-identification-patterns.md`](references/data-source-identification-patterns.md).
 
 ---
 
@@ -100,7 +100,7 @@ The template is the structure that data fills. Design principles.
 
 The template's quality bar. A randomly sampled page from the set, viewed in isolation, should answer the user's likely query competently. If a randomly sampled page is thin, the entire set is thin.
 
-Detail in `references/template-design-patterns.md`.
+Detail in [`references/template-design-patterns.md`](references/template-design-patterns.md).
 
 ---
 
@@ -120,7 +120,7 @@ The data shape that drives the template. Design principles.
 
 The "schema-as-product" principle. The schema that drives pSEO IS the product surface. Treat it with the same rigor as a database schema for a customer-facing application. Versioned, reviewed, documented, breaking-change-aware.
 
-Detail in `references/schema-design-patterns.md`.
+Detail in [`references/schema-design-patterns.md`](references/schema-design-patterns.md).
 
 ---
 
@@ -140,7 +140,7 @@ Auditing all 100,000 pages individually is infeasible. The discipline.
 
 The team budget question. A 10,000-page pSEO set requires roughly 0.5 to 1.0 FTE of ongoing quality control discipline. If that is not budgeted, the program will decay. The set will look fine on launch and degrade over 6 to 12 months as data drifts, templates ship without QC, and the gap between the QC plan and the actual cadence widens.
 
-Detail in `references/quality-control-at-scale.md`.
+Detail in [`references/quality-control-at-scale.md`](references/quality-control-at-scale.md).
 
 ---
 
@@ -160,7 +160,7 @@ pSEO sets need intentional internal linking architecture to compound.
 
 The PageRank flow principle. Internal linking is what makes pSEO sets compound. A well-linked set distributes ranking signal across all pages; a poorly-linked set has hub pages ranking and child pages orphaned. The link architecture is half the program; the data is the other half.
 
-Detail in `references/internal-linking-at-scale.md`.
+Detail in [`references/internal-linking-at-scale.md`](references/internal-linking-at-scale.md).
 
 ---
 
@@ -178,7 +178,7 @@ Search engines have crawl budgets. Large pSEO sets can exhaust them.
 
 **Pruning criteria.** Pages that fail to attract clicks or impressions for 6+ months should noindex or 410. Pruning is hygiene, not failure. A 100,000-page set with 60% earning traffic is healthier than the same set with 40% earning traffic plus 60% dead weight crawlers waste budget on.
 
-Detail in `references/crawl-budget-management.md`.
+Detail in [`references/crawl-budget-management.md`](references/crawl-budget-management.md).
 
 ---
 
@@ -196,7 +196,7 @@ Answer engines treat programmatic pages differently from editorial pages.
 
 The "two-engine optimization" framing applies. pSEO pages should serve both search engines and answer engines. Most pSEO programs were designed pre-AEO and need template updates for the new surface: stronger top-200-word answers, deeper schema markup, FAQPage schema where the page contains FAQ structure.
 
-Detail in `references/aeo-geo-for-programmatic-pages.md`.
+Detail in [`references/aeo-geo-for-programmatic-pages.md`](references/aeo-geo-for-programmatic-pages.md).
 
 ---
 
@@ -212,13 +212,13 @@ pSEO sets decay if not maintained.
 
 **Set-level refresh.** Occasionally the entire set's template needs a refresh as user expectations evolve, AI engine signals shift, or category conventions change. Set-level refreshes are 6-month projects, not weekend cleanups.
 
-Detail in `references/refresh-at-scale.md`.
+Detail in [`references/refresh-at-scale.md`](references/refresh-at-scale.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-pseo-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-pseo-failures.md`](references/common-pseo-failures.md).
 
 - "We generated 50,000 pages and got penalized." Thin content, scaled too fast, no QC discipline.
 - "We have 10,000 pages but only 200 rank." Internal linking architecture missing; child pages are orphans.

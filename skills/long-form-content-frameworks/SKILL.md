@@ -72,7 +72,7 @@ Seven formats, each with a different structural shape and a different reader con
 
 **Long-form tutorial.** Instructional content where the reader is following along. Reader contract: "Take me from where I am to where I want to be, step by step." Length: 3,000 to 8,000 words. Structural archetype: problem-solution with sequential steps. The long-form-tutorial tax: every step actually works; gaps in the sequence break the reader.
 
-Detail in `references/format-decision-framework.md`.
+Detail in [`references/format-decision-framework.md`](references/format-decision-framework.md).
 
 ---
 
@@ -92,7 +92,7 @@ Five archetypes that fit different long-form problems.
 
 Most strong long-form pieces use one archetype as the spine and borrow from another for variation. A whitepaper might be a layered argument with comparative-analysis sections. A definitive guide might be a taxonomic survey with problem-solution chapters. The archetype is the spine; variation prevents the piece feeling formulaic.
 
-Detail in `references/structural-archetype-patterns.md`.
+Detail in [`references/structural-archetype-patterns.md`](references/structural-archetype-patterns.md).
 
 ---
 
@@ -114,7 +114,7 @@ The general principle: section weights match how much load the section is bearin
 
 The audit. If one section is more than 3x the length of another bearing similar argumentative load, the piece is structurally unbalanced. Either the long section needs to be split, or the short section needs to be deepened, or the imbalance reflects an actual content problem the writer has not surfaced.
 
-Detail in `references/section-weight-calibration.md`.
+Detail in [`references/section-weight-calibration.md`](references/section-weight-calibration.md).
 
 ---
 
@@ -141,7 +141,7 @@ A blog-post lede answers the user's likely query in the first 200 words. A long-
 
 The first paragraph of a long-form piece is the writer's only sales pitch for the next 30+ minutes of the reader's attention. Spending it on filler is the most common long-form failure.
 
-Detail in `references/lede-patterns-for-long-form.md`.
+Detail in [`references/lede-patterns-for-long-form.md`](references/lede-patterns-for-long-form.md).
 
 ---
 
@@ -159,7 +159,7 @@ Long pieces that hold readers vary their density, register, and rhythm. Pieces t
 
 **Mid-piece micro-thesis.** Around the 40-60% mark, restate the central claim with new framing. Long-form readers' attention naturally dips mid-piece; the mid-piece restatement reorients them and refreshes engagement.
 
-Detail in `references/attention-sustaining-techniques.md`.
+Detail in [`references/attention-sustaining-techniques.md`](references/attention-sustaining-techniques.md).
 
 ---
 
@@ -181,7 +181,7 @@ Long-form pieces cite more, and cite more authoritatively, than blog posts. The 
 
 **Inline vs endnote citations.** Long-form on the web typically uses inline links to authoritative sources. For research-heavy pieces, endnote-style citations (numbered footnotes) signal academic rigor; for editorial whitepapers, inline links keep momentum. Either works; pick one and stay consistent within the piece.
 
-Detail in `references/citation-and-source-authority.md`.
+Detail in [`references/citation-and-source-authority.md`](references/citation-and-source-authority.md).
 
 ---
 
@@ -204,7 +204,7 @@ Long-form earns visual breakouts; blog posts often do not. The discipline is whi
 
 **Anti-pattern: the stock-image header.** Generic stock imagery at the top of a long-form piece signals the writer did not commission visual work for the piece. Either commission specific visual work (custom illustrations, branded data visualizations, scene photography) or skip the hero image.
 
-Detail in `references/breakouts-and-visualization.md`.
+Detail in [`references/breakouts-and-visualization.md`](references/breakouts-and-visualization.md).
 
 ---
 
@@ -229,7 +229,7 @@ Long-form pieces with strong closings get shared, get linked, and get remembered
 
 The audit. Ask of any long-form closing: does this leave the reader with something specific to do, decide, or think about, or does it just signal the piece is ending? If the latter, rewrite.
 
-Detail in `references/closing-patterns.md`.
+Detail in [`references/closing-patterns.md`](references/closing-patterns.md).
 
 ---
 
@@ -251,7 +251,7 @@ The decision sequence: format first, distribution shape second. A research repor
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-long-form-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-long-form-failures.md`](references/common-long-form-failures.md).
 
 - "We wrote 5,000 words and traffic is flat." Bloggy-long: stretched to length, no structural depth. Cut to 1,800 words or rewrite as publication-quality.
 - "Our whitepaper looked authoritative but nobody finished it." Academic-bloat: comprehensive but not load-bearing. Cut sections that did not move the argument.

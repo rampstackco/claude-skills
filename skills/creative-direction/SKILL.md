@@ -113,7 +113,7 @@ How much is the work asking of the reader emotionally?
 3. **Capture inspiration references.** For each provided reference URL, ask what specifically resonates. The answer often clarifies which axis position fits better than abstract description does.
 4. **Surface tensions.** Some combinations are difficult to execute well. Functional + Provocative is rare since provocation usually requires emotional engagement that pure functional work resists. Authority + Functional often slides into preachy without warming up at least slightly. Flag tensions and ask the user to confirm or reconsider.
 5. **Synthesize.** Write a one-paragraph synthesis describing what this combination produces in practice.
-6. **Output the brief.** Markdown format using the structure in `references/brief-template.md`. The brief becomes a project artifact (typically saved as `BRIEF.md` at the project root).
+6. **Output the brief.** Markdown format using the structure in [`references/brief-template.md`](references/brief-template.md). The brief becomes a project artifact (typically saved as `BRIEF.md` at the project root).
 7. **Hand off.** Reference the brief in any downstream skill that produces aesthetic output. Required reading before `landing-page-copy`, `art-direction`, `content-and-copy`, `brand-style-guide`, or any other skill where coherence matters.
 
 ---
@@ -148,6 +148,6 @@ The brief is reference material for the project's life, not a one-time deliverab
 
 ## Reference files
 
-- `references/axes-explained.md` - The four axes in depth, with positions, signals, and short brand examples per position to calibrate the user's eye.
-- `references/brief-template.md` - Blank template for the brief output.
-- `references/example-aesthetic-brief.md` - A fully completed brief from a representative project, showing how the abstract axes translate into concrete creative direction.
+- [`references/axes-explained.md`](references/axes-explained.md) - The four axes in depth, with positions, signals, and short brand examples per position to calibrate the user's eye.
+- [`references/brief-template.md`](references/brief-template.md) - Blank template for the brief output.
+- [`references/example-aesthetic-brief.md`](references/example-aesthetic-brief.md) - A fully completed brief from a representative project, showing how the abstract axes translate into concrete creative direction.

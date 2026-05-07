@@ -42,7 +42,7 @@ A worked example. A premium coffee brand running a 60-second YouTube awareness a
 
 The biggest lever in performance creative. If the hook fails, no amount of body copy or CTA can recover the impression. A user who scrolled past the first second has already decided. The hook is the whole game until the body justifies why the user kept watching.
 
-Twelve hook patterns work consistently. Detail in `references/hook-pattern-library.md`.
+Twelve hook patterns work consistently. Detail in [`references/hook-pattern-library.md`](references/hook-pattern-library.md).
 
 1. **Problem-agitate-solve.** Open with the problem the audience feels. Agitate by naming the consequence. Solve with the offer. Works when the audience recognizes the pain.
 2. **Direct callout to audience.** "If you are a B2B founder running paid ads..." Triggers self-identification. Works when the audience is narrow and self-aware.
@@ -72,7 +72,7 @@ Different formats fit different combinations of audience, platform, and offer.
 - **Stories or Reels (vertical 9:16).** Best for TikTok, Instagram, and Snap. Native to the platform's primary surface. Skipping anything not vertical here is leaving performance on the table.
 - **Spark Ads (boosted organic).** Best for TikTok. Promotes an existing organic post as an ad. Retains organic engagement signals; consistently outperforms pure paid creative on TikTok.
 
-The decision rule. Match format to platform native style and to audience consumption pattern. Detail in `references/format-decision-matrix.md`.
+The decision rule. Match format to platform native style and to audience consumption pattern. Detail in [`references/format-decision-matrix.md`](references/format-decision-matrix.md).
 
 ---
 
@@ -106,7 +106,7 @@ The decomposition. A creative is a hook plus a body plus a CTA in a format. Trea
 
 Naming convention. Use a structured naming system so the analyst can join performance data back to creative components. Example: `launch2026_meta-reel_hookA_bodyB_ctaC_v1`. The analyst pulls the report, joins on the naming components, and identifies which hook is winning across body and CTA combinations.
 
-Worked example in `references/creative-variation-templates.md`. A half-day production session produces 40 variations from one core concept by using the matrix. Without the matrix, the same 40 variations require five days of authoring overhead.
+Worked example in [`references/creative-variation-templates.md`](references/creative-variation-templates.md). A half-day production session produces 40 variations from one core concept by using the matrix. Without the matrix, the same 40 variations require five days of authoring overhead.
 
 ---
 
@@ -122,7 +122,7 @@ The waterfall. Most teams test everything at once and lose the signal. Sequentia
 
 The common mistake. Testing all variables at once. Variance compounds; the team cannot tell whether the hook, the body, the CTA, or the format made the difference. Sequential is slower but produces real learnings the team can apply to the next campaign.
 
-Detail in `references/testing-cadence-playbook.md`.
+Detail in [`references/testing-cadence-playbook.md`](references/testing-cadence-playbook.md).
 
 ---
 
@@ -138,7 +138,7 @@ Fatigue is real. The same audience seeing the same creative six times a week tun
 
 Refresh cadence. Weekly for high-spend campaigns ($50K+/month). Biweekly for medium spend. Monthly for low spend. The economics: producing a fresh variant is cheaper than running tired creative for one extra week.
 
-The decision tree. If a top performer's metrics are still strong but frequency is climbing, ship variants of the same concept (same hook structure, different copy and visuals). If the metrics are dropping, retire the concept and ship a new one. Detail in `references/fatigue-detection-checklist.md`.
+The decision tree. If a top performer's metrics are still strong but frequency is climbing, ship variants of the same concept (same hook structure, different copy and visuals). If the metrics are dropping, retire the concept and ship a new one. Detail in [`references/fatigue-detection-checklist.md`](references/fatigue-detection-checklist.md).
 
 ---
 
@@ -154,7 +154,7 @@ The hierarchy. Brand voice in every frame; performance discipline in the structu
 
 A worked example. A brand whose voice is "warm and direct, slightly contrarian, plain-language" runs three creatives. The 60-second YouTube awareness piece has the founder talking to camera, plain language, contrarian framing of the category. The 15-second Meta performance ad has fast cuts, plain language captions on screen, contrarian hook ("Stop overpaying for project management software"), specific value prop, CTA. The static carousel has 6 cards, plain language, contrarian opening card, value prop progression, CTA on the last card. Same voice. Different structure. None feels off-brand to a customer who has seen all three.
 
-Detail in `references/brand-voice-performance-balance.md`.
+Detail in [`references/brand-voice-performance-balance.md`](references/brand-voice-performance-balance.md).
 
 ---
 
@@ -172,7 +172,7 @@ Each platform has native norms. Violating them tanks performance. The fix is pro
 
 **Google Display and YouTube.** Depends on placement. YouTube allows longer narrative (15s to 6m); Display is fast banner-style. Skippable YouTube ads need to earn the next second of attention; non-skippable annoys.
 
-Detail in `references/platform-creative-norms.md`.
+Detail in [`references/platform-creative-norms.md`](references/platform-creative-norms.md).
 
 ---
 

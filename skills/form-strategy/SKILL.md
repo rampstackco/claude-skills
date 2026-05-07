@@ -254,4 +254,4 @@ A form audit document includes:
 
 ## Reference files
 
-- `references/form-anatomy-checklist.md`: A field-by-field, behavior-by-behavior checklist for auditing or designing a form, covering structure, accessibility, validation, and spam defense.
+- [`references/form-anatomy-checklist.md`](references/form-anatomy-checklist.md): A field-by-field, behavior-by-behavior checklist for auditing or designing a form, covering structure, accessibility, validation, and spam defense.

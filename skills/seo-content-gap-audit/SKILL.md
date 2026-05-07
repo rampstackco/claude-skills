@@ -95,7 +95,7 @@ Pulled from:
 3. **Pull competitor coverage.** Top pages and content clusters from each competitor.
 4. **Classify each existing page.** Healthy / thin / outdated / decaying / off-topic.
 5. **Identify missing topics.** Cross-reference competitor top pages and keyword gap output.
-6. **Score each opportunity.** See `references/content-decision-matrix.md`.
+6. **Score each opportunity.** See [`references/content-decision-matrix.md`](references/content-decision-matrix.md).
 7. **Cluster.** Group related missing topics into pillar concepts.
 8. **Decide actions.** Create / update / merge / redirect / prune for each opportunity.
 9. **Sequence the roadmap.** Quarter by quarter, with effort estimates and traffic forecasts.
@@ -154,4 +154,4 @@ Length: 8-15 pages plus an attached inventory spreadsheet.
 
 ## Reference files
 
-- `references/content-decision-matrix.md` - Detailed decision tree for classifying pages and choosing the create/update/merge/prune action, with worked examples.
+- [`references/content-decision-matrix.md`](references/content-decision-matrix.md) - Detailed decision tree for classifying pages and choosing the create/update/merge/prune action, with worked examples.

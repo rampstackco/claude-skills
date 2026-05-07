@@ -159,7 +159,7 @@ Patterns that recur across stacks and are worth checking on every review.
 3. **Run through the 5 dimensions.** Note issues by severity (blocker, important, minor).
 4. **Check stack-specific patterns.** Reference the appropriate stack guide.
 5. **For incidents:** identify the smallest hypothesis-driven fix. Reproduce locally if possible.
-6. **Write the review.** Use the template in `references/review-template.md` for formal reviews.
+6. **Write the review.** Use the template in [`references/review-template.md`](references/review-template.md) for formal reviews.
 
 ---
 
@@ -208,6 +208,6 @@ For incidents: a postmortem document. See `after-action-report` for that format.
 
 ## Reference files
 
-- `references/review-template.md` - Markdown template for formal code reviews.
-- `references/nextjs-patterns.md` - Stack-specific patterns for Next.js (App Router, ISR, Server Components, common bugs).
-- `references/wordpress-headless-patterns.md` - Stack-specific patterns for headless WordPress integrations.
+- [`references/review-template.md`](references/review-template.md) - Markdown template for formal code reviews.
+- [`references/nextjs-patterns.md`](references/nextjs-patterns.md) - Stack-specific patterns for Next.js (App Router, ISR, Server Components, common bugs).
+- [`references/wordpress-headless-patterns.md`](references/wordpress-headless-patterns.md) - Stack-specific patterns for headless WordPress integrations.

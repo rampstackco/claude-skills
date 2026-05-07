@@ -77,7 +77,7 @@ Not every piece is worth repurposing. Selection is the first discipline.
 
 **The selection audit.** Run candidate pieces through these questions before committing to repurposing. Pieces that fail the audit may still be valuable but as one-and-done; programs that try to repurpose unsuitable pieces produce derivatives that feel forced.
 
-Detail in `references/source-piece-selection-criteria.md`.
+Detail in [`references/source-piece-selection-criteria.md`](references/source-piece-selection-criteria.md).
 
 ---
 
@@ -101,7 +101,7 @@ Eight common source-to-derivative adaptations with worked examples.
 
 **Multi-piece source to ebook.** Several related pieces (blog posts, articles, even social threads) consolidated into an ebook, with new connective tissue, an introduction that frames the body, and a conclusion that synthesizes.
 
-Detail in `references/format-adaptation-patterns.md`.
+Detail in [`references/format-adaptation-patterns.md`](references/format-adaptation-patterns.md).
 
 ---
 
@@ -148,7 +148,7 @@ Each medium demands and forbids specific things. Repurposing that ignores the co
 - Slide design matters; text-heavy slides fail.
 - Length: 30-60 minutes typical; longer requires high engagement design.
 
-Detail in `references/per-format-constraints.md`.
+Detail in [`references/per-format-constraints.md`](references/per-format-constraints.md).
 
 ---
 
@@ -174,7 +174,7 @@ The source piece's voice anchors the derivatives. The discipline is staying reco
 
 **The AI-repurposing voice problem.** AI-assisted repurposing is particularly prone to voice drift. The source piece may have specific voice characteristics; AI generation of derivatives without strong voice prompts produces derivatives that sound more generic than the source. See `ai-content-collaboration` for the voice-preservation discipline that applies to repurposing workflows.
 
-Detail in `references/voice-consistency-across-formats.md`.
+Detail in [`references/voice-consistency-across-formats.md`](references/voice-consistency-across-formats.md).
 
 ---
 
@@ -196,7 +196,7 @@ When to release derivatives relative to the source, and at what pace.
 
 **The pacing audit.** Match cadence to the source's traffic curve. Pieces with sharp early traffic (trending topics) benefit from concentrated rollout; pieces with sustained evergreen traffic can support distributed rollout over many months.
 
-Detail in `references/sequencing-and-cadence-patterns.md`.
+Detail in [`references/sequencing-and-cadence-patterns.md`](references/sequencing-and-cadence-patterns.md).
 
 ---
 
@@ -214,7 +214,7 @@ Derivatives that link to each other and to the source compound. Derivatives that
 
 **Co-promotion across channels.** A blog post derivative can be re-shared on social where the original blog post was; a social post derivative can be promoted in the email newsletter. Cross-channel flow extends each derivative's reach.
 
-Detail in `references/cross-promotion-patterns.md`.
+Detail in [`references/cross-promotion-patterns.md`](references/cross-promotion-patterns.md).
 
 ---
 
@@ -232,13 +232,13 @@ A specific repurposing pattern worth its own treatment.
 
 **The AI-search-derivative discipline.** Treat AI-search optimization as a derivative format with its own conventions: specific question framings, named-source citations, standalone-paragraph design. Pieces that do this well earn AI citations; pieces that do not still get cited but at lower rates and with less control over framing.
 
-Detail in `references/aeo-extraction-patterns.md`.
+Detail in [`references/aeo-extraction-patterns.md`](references/aeo-extraction-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-repurposing-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-repurposing-failures.md`](references/common-repurposing-failures.md).
 
 - "Our derivatives feel like AI slop." Mass-blast pattern; AI-assisted repurposing without per-format adaptation. Cure: add adaptation discipline, voice prompts, per-format review.
 - "We repurposed but engagement is low." Format constraints ignored. Cure: audit each derivative against per-format conventions.

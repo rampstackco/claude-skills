@@ -49,7 +49,7 @@ The pathology. Most content programs are 80% orphans, 15% accidental clusters, 5
 
 The reading model. Search engines and AI engines both read internal-link graphs to infer topical authority. A pillar with 12 well-linked cluster pieces signals depth on a topic. 12 orphans on the same topic signal scattered, less-authoritative coverage. The architecture is the signal.
 
-Detail and decision tree in `references/pillar-cluster-decision.md`.
+Detail and decision tree in [`references/pillar-cluster-decision.md`](references/pillar-cluster-decision.md).
 
 ---
 
@@ -65,7 +65,7 @@ Not every topic deserves a pillar. The five-criterion selection framework:
 
 The "everything is a pillar" anti-pattern. Teams call any 3,000-word piece a pillar. Length does not make a pillar. The architecture does. Pillar is the role a piece plays in the hub structure, not the word count.
 
-Detail in `references/topic-selection-criteria.md`.
+Detail in [`references/topic-selection-criteria.md`](references/topic-selection-criteria.md).
 
 ---
 
@@ -79,7 +79,7 @@ Once a pillar is selected, plan its cluster:
 4. **Cluster heterogeneity.** Clusters should cover the topic from multiple angles (definition, how-to, comparison, examples, common mistakes, costs, alternatives, case studies) rather than 12 variations of "what is X."
 5. **Sequence.** Ship pillar first (or alongside the first 3 to 5 clusters). The link graph will not form without the pillar in place; clusters that link to a non-existent pillar are orphans-in-waiting.
 
-Detail in `references/cluster-planning-patterns.md`.
+Detail in [`references/cluster-planning-patterns.md`](references/cluster-planning-patterns.md).
 
 ---
 
@@ -97,7 +97,7 @@ The hub's internal-link graph is what actually produces topical authority signal
 
 The "linking inventory" pattern. Maintain a sheet (or database row, or dbt model) tracking every link in the hub, who links to whom, and the anchor text used. Audit quarterly to catch broken links, anchor-text drift, and missing connections that should exist.
 
-Detail in `references/internal-linking-architecture.md`.
+Detail in [`references/internal-linking-architecture.md`](references/internal-linking-architecture.md).
 
 ---
 
@@ -115,7 +115,7 @@ URL patterns matter for both crawl clarity and reader navigation. Decision facto
 
 The "/blog/ trap." Teams put pillar and clusters under `/blog/` because that is where the CMS folder is. This works structurally but loses the URL signal that says "these pieces belong together as a topical hub."
 
-Detail in `references/url-structure-patterns.md`.
+Detail in [`references/url-structure-patterns.md`](references/url-structure-patterns.md).
 
 ---
 
@@ -133,7 +133,7 @@ A pillar page does specific work. The standard sections:
 
 Pillar length. 3,000 to 5,000 words is the typical range. Pillar quality is comprehensiveness AND depth, not just word count. A 6,000-word pillar that covers 3 facets is worse than a 4,000-word pillar that covers 12 facets.
 
-Detail in `references/pillar-page-anatomy.md`.
+Detail in [`references/pillar-page-anatomy.md`](references/pillar-page-anatomy.md).
 
 ---
 
@@ -149,7 +149,7 @@ Cluster pieces have a different shape:
 
 Cluster length. 800 to 2,000 words typical. A cluster piece longer than 2,500 words is probably a mini-pillar that should either get promoted to its own pillar or be split into two cluster pieces.
 
-Detail in `references/cluster-piece-anatomy.md`.
+Detail in [`references/cluster-piece-anatomy.md`](references/cluster-piece-anatomy.md).
 
 ---
 
@@ -177,7 +177,7 @@ Signals that make hub architecture compound into authority. The two-engine view:
 
 The two-engine optimization is complementary, not competing. Both reward depth, structure, and entity coverage. The hub architecture creates more surface area for both signal types than scattered orphan content can.
 
-Detail in `references/topical-authority-signals.md` and the `seo-aeo-geo` skill for AEO/GEO strategy at the program level.
+Detail in [`references/topical-authority-signals.md`](references/topical-authority-signals.md) and the `seo-aeo-geo` skill for AEO/GEO strategy at the program level.
 
 ---
 
@@ -193,13 +193,13 @@ Hubs decay if not maintained. The discipline:
 
 The "set and forget" failure. Hub launches, ranks, drives traffic for 2 years, then decays without anyone noticing because nobody owns the hub long-term. Hub ownership is durable: single owner across 3 to 5 year horizons, not "the team that launched it."
 
-Detail in `references/content-refresh-patterns.md`.
+Detail in [`references/content-refresh-patterns.md`](references/content-refresh-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-pillar-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-pillar-failures.md`](references/common-pillar-failures.md).
 
 - "We have 80 blog posts but no rankings." Orphan content; no hub architecture.
 - "Our 8,000-word pillar does not rank." Comprehensive but no cluster support; pillar without a hub is just a long article.

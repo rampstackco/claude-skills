@@ -81,7 +81,7 @@ Several axes of beta-type choice. The right combination depends on the launch co
 
 The combination decision. A typical structured beta might be closed + beta + external + 6-week time-bounded. A design partner program might be closed + alpha + external + open-ended. An open early access might be open + beta + external + time-bounded. The combination should match the kind of signal the team needs.
 
-Detail in `references/beta-type-decisions.md`.
+Detail in [`references/beta-type-decisions.md`](references/beta-type-decisions.md).
 
 ---
 
@@ -104,7 +104,7 @@ The discipline that makes calibrated cohorts possible.
 
 **The cohort size question.** Calibrated cohorts are usually 20-200 participants for closed external betas. Smaller (5-20) for design partner programs. Larger (200-2,000) for open early access. Beyond 2,000 the program is a soft-launch with beta branding.
 
-Detail in `references/participant-selection-criteria.md`.
+Detail in [`references/participant-selection-criteria.md`](references/participant-selection-criteria.md).
 
 ---
 
@@ -127,7 +127,7 @@ How big is enough; when does signal saturate.
 
 **The "beta size matches signal need" principle.** Cohort size follows from what the team needs to learn. Larger is not always better; calibrated is.
 
-Detail in `references/cohort-sizing-patterns.md`.
+Detail in [`references/cohort-sizing-patterns.md`](references/cohort-sizing-patterns.md).
 
 ---
 
@@ -155,7 +155,7 @@ How participants enter the beta and what they know going in.
 - Missing support path. Participants hit issues, do not know who to contact, churn out of the beta.
 - No incentive clarity. Participants feel underrecognized; engagement decays.
 
-Detail in `references/beta-onboarding-templates.md`.
+Detail in [`references/beta-onboarding-templates.md`](references/beta-onboarding-templates.md).
 
 ---
 
@@ -179,7 +179,7 @@ Structured channels that produce signal rather than noise.
 
 **Channel mix discipline.** Most structured betas use 3-5 channels. Each channel surfaces different kinds of signal. The team synthesizes across channels.
 
-Detail in `references/feedback-collection-patterns.md`.
+Detail in [`references/feedback-collection-patterns.md`](references/feedback-collection-patterns.md).
 
 ---
 
@@ -204,7 +204,7 @@ How the team responds to feedback during the beta.
 
 **The communication discipline.** Participants are kept informed: "We received your feedback on X; we are addressing it in next week's beta update." Silence makes participants feel ignored; over-communication signals overhead. Calibrate.
 
-Detail in `references/mid-beta-triage-and-iteration.md`.
+Detail in [`references/mid-beta-triage-and-iteration.md`](references/mid-beta-triage-and-iteration.md).
 
 ---
 
@@ -225,7 +225,7 @@ Graduation gates that distinguish "ready" from "tired of running the beta."
 
 **The "perpetual beta" anti-pattern.** Beta runs indefinitely because no firm graduation criteria were set. The team avoids the GA commitment by keeping the feature in beta. Force the graduation decision; if the feature is not ready for GA, identify what would make it ready or reconsider whether to ship at all.
 
-Detail in `references/beta-to-ga-graduation-criteria.md`.
+Detail in [`references/beta-to-ga-graduation-criteria.md`](references/beta-to-ga-graduation-criteria.md).
 
 ---
 
@@ -245,13 +245,13 @@ How the beta ends.
 
 **The postmortem.** Internal review of what the beta produced. What was learned, what changed in the GA launch, what would be done differently in future betas. This feeds the team's beta program practice.
 
-Detail in `references/beta-wind-down-communication.md`.
+Detail in [`references/beta-wind-down-communication.md`](references/beta-wind-down-communication.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-beta-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-beta-failures.md`](references/common-beta-failures.md).
 
 - "Our beta produced no signal." Soft-launch pattern; no structured selection or feedback collection.
 - "Our beta has 5,000 users and we cannot synthesize feedback." Kitchen-sink; cohort too large for the structured signal the team needs.

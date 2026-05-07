@@ -425,4 +425,4 @@ A documentation strategy document includes:
 
 ## Reference files
 
-- `references/doc-types-guide.md`: Detailed guide to the four doc types (reference, how-to, explanation, tutorial) with examples and templates for each.
+- [`references/doc-types-guide.md`](references/doc-types-guide.md): Detailed guide to the four doc types (reference, how-to, explanation, tutorial) with examples and templates for each.

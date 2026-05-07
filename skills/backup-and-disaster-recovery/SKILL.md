@@ -265,4 +265,4 @@ A DR plan document includes:
 
 ## Reference files
 
-- `references/restore-runbook-template.md`: Fillable template for a restore runbook, covering detection, authorization, steps, verification, and rollback.
+- [`references/restore-runbook-template.md`](references/restore-runbook-template.md): Fillable template for a restore runbook, covering detection, authorization, steps, verification, and rollback.

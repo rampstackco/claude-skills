@@ -197,6 +197,6 @@ For a design system audit, output is a markdown report at `design-system-audit.m
 
 ## Reference files
 
-- `references/system-architecture.md` - The four-layer model (tokens, primitives, patterns, templates) and how to decide where new work belongs.
-- `references/system-audit-template.md` - Template for auditing an existing design system.
-- `references/governance-playbook.md` - Contribution model, ownership, and decision process for an active system.
+- [`references/system-architecture.md`](references/system-architecture.md) - The four-layer model (tokens, primitives, patterns, templates) and how to decide where new work belongs.
+- [`references/system-audit-template.md`](references/system-audit-template.md) - Template for auditing an existing design system.
+- [`references/governance-playbook.md`](references/governance-playbook.md) - Contribution model, ownership, and decision process for an active system.

@@ -58,7 +58,7 @@ Before designing the quiz, decide whether a quiz is the right tool for the audie
 
 The decision is not "should we have a quiz"; it is "is the quiz the right next investment for this specific audience and decision."
 
-Detail in `references/quiz-investment-criteria.md`.
+Detail in [`references/quiz-investment-criteria.md`](references/quiz-investment-criteria.md).
 
 ---
 
@@ -101,7 +101,7 @@ The questions are the mechanism that produces the segmentation. Bad questions pr
 
 **Question-segment mapping.** Each question should contribute to the segmentation in a defined way. Questions that do not affect the result are filler; remove them.
 
-Detail in `references/question-architecture-patterns.md`.
+Detail in [`references/question-architecture-patterns.md`](references/question-architecture-patterns.md).
 
 ---
 
@@ -126,7 +126,7 @@ The math that turns answers into a segment.
 
 **Scoring transparency.** Some quizzes show the score during or after the quiz; others present only the segment. The choice depends on whether the score is meaningful to the user. Personality assessments benefit from showing dimensions; recommendation quizzes often do not.
 
-Detail in `references/scoring-algorithm-patterns.md`.
+Detail in [`references/scoring-algorithm-patterns.md`](references/scoring-algorithm-patterns.md).
 
 ---
 
@@ -147,7 +147,7 @@ How many segments, named how, distinguishable from each other.
 
 **Segment balance.** The quiz should not always route 80 percent of takers to one segment. Balanced segmentation (each segment receives a meaningful share of takers) signals that the questions actually distinguish.
 
-Detail in `references/result-categorization-patterns.md`.
+Detail in [`references/result-categorization-patterns.md`](references/result-categorization-patterns.md).
 
 ---
 
@@ -176,7 +176,7 @@ The action attached to each category. This is where the quiz earns its conversio
 
 **The actionable-segmentation win.** Result describes the segment, then says: "Strategic Planners benefit most from [specific resource or product or path]. Here is the next step." The taker has a specific action.
 
-Detail in `references/result-to-recommendation-mapping.md`.
+Detail in [`references/result-to-recommendation-mapping.md`](references/result-to-recommendation-mapping.md).
 
 ---
 
@@ -196,7 +196,7 @@ When and where to ask for the email, with what value-add.
 
 **Conversion vs lead quality.** Pattern A converts higher; Pattern B and C produce higher lead quality. Pattern choice depends on what the program optimizes for.
 
-Detail in `references/lead-capture-integration-patterns.md`.
+Detail in [`references/lead-capture-integration-patterns.md`](references/lead-capture-integration-patterns.md).
 
 ---
 
@@ -220,13 +220,13 @@ Patterns that look like quizzes but degrade trust.
 
 **The mismatched-recommendation quiz.** Recommendation does not match the segment. Audience that catches the mismatch loses trust.
 
-Detail in `references/quiz-anti-patterns.md`.
+Detail in [`references/quiz-anti-patterns.md`](references/quiz-anti-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-quiz-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-quiz-failures.md`](references/common-quiz-failures.md).
 
 - "Quiz gets shared widely; lead quality is poor." Clickbait pattern; the audience taking and sharing is not the audience the brand serves.
 - "Engagement is high; downstream conversion is near zero." Vanity-result pattern; takers enjoyed the segment but had no next step.

@@ -268,4 +268,4 @@ Because [observation], we believe that [change] will produce [outcome] for [segm
 
 ## Reference files
 
-- `references/hypothesis-library.md` - Common high-impact hypothesis patterns by funnel stage.
+- [`references/hypothesis-library.md`](references/hypothesis-library.md) - Common high-impact hypothesis patterns by funnel stage.

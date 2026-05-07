@@ -39,7 +39,7 @@ This skill complements `brand-identity` (which defines the visual system) and `b
 - The brand's design tokens (colors, type, spacing) - or willingness to define them
 - The target devices and viewports
 
-If brand tokens are undefined, define a working set first using the template in `references/design-tokens-template.md`.
+If brand tokens are undefined, define a working set first using the template in [`references/design-tokens-template.md`](references/design-tokens-template.md).
 
 ---
 
@@ -178,7 +178,7 @@ The same thing should look the same everywhere. Variations should be intentional
 4. **Apply tokens.** All values come from the token set. No hardcoded colors, sizes, or spacing.
 5. **Run contrast checks.** Every text-on-background combination passes AA. Every UI element passes 3:1.
 6. **Test at viewport breakpoints.** 375, 768, 1024, 1440 minimum. Confirm nothing breaks.
-7. **Run the pre-ship checklist** in `references/preship-checklist.md`.
+7. **Run the pre-ship checklist** in [`references/preship-checklist.md`](references/preship-checklist.md).
 
 ---
 
@@ -208,6 +208,6 @@ When generating component code (HTML, CSS, framework-specific markup), the SKILL
 
 ## Reference files
 
-- `references/design-tokens-template.md` - Template for setting up tokens for any project.
-- `references/preship-checklist.md` - Final design review checklist before shipping.
-- `references/tailwind-patterns.md` - Optional. Tailwind-specific component patterns (hero, cards, buttons, data rows) for projects on that stack.
+- [`references/design-tokens-template.md`](references/design-tokens-template.md) - Template for setting up tokens for any project.
+- [`references/preship-checklist.md`](references/preship-checklist.md) - Final design review checklist before shipping.
+- [`references/tailwind-patterns.md`](references/tailwind-patterns.md) - Optional. Tailwind-specific component patterns (hero, cards, buttons, data rows) for projects on that stack.

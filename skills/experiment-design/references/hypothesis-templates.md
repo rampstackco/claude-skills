@@ -1,6 +1,6 @@
 # Hypothesis templates
 
-Concrete formats for writing hypotheses that pass the cause-effect-magnitude-mechanism test from SKILL.md. Each template names the right shape, shows two or three worked examples in different domains, and calls out the most common mistakes specific to that template type.
+Concrete formats for writing hypotheses that pass the cause-effect-magnitude-mechanism test from [SKILL.md](../SKILL.md). Each template names the right shape, shows two or three worked examples in different domains, and calls out the most common mistakes specific to that template type.
 
 The unifying format across all templates: replace [bracketed slots] with concrete project-specific values. If a slot reads as a vague phrase after replacement, the hypothesis is not specific enough.
 

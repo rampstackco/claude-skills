@@ -162,10 +162,10 @@ The document is the orchestration plan. The next step after delivery is for the 
 
 ## Reference files
 
-- `references/cadence-patterns.md`. The 7 project-type cadences in detail with phase decomposition, timelines, gate definitions, and tool-stack implementation skeletons.
-- `references/gate-definitions.md`. Each standard gate with trigger, approver, pass criteria, what's blocked, what's already locked, and change-request protocols.
-- `references/handoff-protocols.md`. The standard handoffs between phases and skills, plus the adjacent observation handoff for filing things noticed while working nearby.
-- `references/platform-implementation.md`. How the orchestration maps to Jira, Linear, Notion, Figma, and GitHub, including MCP integration notes per platform and CLI alternatives where MCP is the wrong tool.
-- `references/team-size-modulation.md`. How cadences scale across solo, small, medium, and large teams.
-- `references/automation-and-qa-tooling.md`. The QA verification gate pattern, MCP vs CLI tradeoffs, session memory and momentum patterns, code-to-ticket linkage, and evidence trails.
-- `references/example-orchestration.md`. A complete worked example showing all sections populated for a representative scenario.
+- [`references/cadence-patterns.md`](references/cadence-patterns.md). The 7 project-type cadences in detail with phase decomposition, timelines, gate definitions, and tool-stack implementation skeletons.
+- [`references/gate-definitions.md`](references/gate-definitions.md). Each standard gate with trigger, approver, pass criteria, what's blocked, what's already locked, and change-request protocols.
+- [`references/handoff-protocols.md`](references/handoff-protocols.md). The standard handoffs between phases and skills, plus the adjacent observation handoff for filing things noticed while working nearby.
+- [`references/platform-implementation.md`](references/platform-implementation.md). How the orchestration maps to Jira, Linear, Notion, Figma, and GitHub, including MCP integration notes per platform and CLI alternatives where MCP is the wrong tool.
+- [`references/team-size-modulation.md`](references/team-size-modulation.md). How cadences scale across solo, small, medium, and large teams.
+- [`references/automation-and-qa-tooling.md`](references/automation-and-qa-tooling.md). The QA verification gate pattern, MCP vs CLI tradeoffs, session memory and momentum patterns, code-to-ticket linkage, and evidence trails.
+- [`references/example-orchestration.md`](references/example-orchestration.md). A complete worked example showing all sections populated for a representative scenario.

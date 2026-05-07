@@ -73,7 +73,7 @@ The fields that do not earn their keep, and should be omitted from briefs unless
 - Comprehensive competitive landscape (link to research; do not dump)
 - Brief history of the publication, company, or brand (irrelevant to this piece)
 
-Detail and templates per content type in `references/brief-templates.md`.
+Detail and templates per content type in [`references/brief-templates.md`](references/brief-templates.md).
 
 ---
 
@@ -92,7 +92,7 @@ The override pattern. When the intent feels informational but the SERP shows mos
 
 The AEO/GEO consideration. AI engines tend to favor pieces that match SERP intent format because the intent classification was trained on the SERP corpus. Mismatched format is a citation risk in addition to a ranking risk.
 
-Detail in `references/search-intent-classification.md`.
+Detail in [`references/search-intent-classification.md`](references/search-intent-classification.md).
 
 ---
 
@@ -111,7 +111,7 @@ Anti-patterns the brief should explicitly forbid:
 - Buried lede: H2 #4 has the actual answer. The reader bounced at H2 #2.
 - Section length wildly uneven: H2 #1 is 1,500 words, H2 #2 is 80 words. The 80-word section reads as a placeholder.
 
-Detail in `references/heading-structure-patterns.md`.
+Detail in [`references/heading-structure-patterns.md`](references/heading-structure-patterns.md).
 
 ---
 
@@ -130,7 +130,7 @@ The brief lists the entities the writer must mention, with light context on why 
 
 Tools that automate this: Frase has entity-gap analysis built in; AirOps composes the same analysis through its workflow builder; Surfer SEO ships entity coverage scoring. The skill is tool-agnostic; the workflow is what matters.
 
-Detail in `references/entity-coverage-checklist.md`.
+Detail in [`references/entity-coverage-checklist.md`](references/entity-coverage-checklist.md).
 
 ---
 
@@ -145,7 +145,7 @@ The orphan-content failure mode: piece publishes, no other piece links to it, se
 
 The self-cannibalization check: if this piece would compete with an existing piece for the same keyword cluster, the brief flags it explicitly. The options are consolidate (merge into the existing piece), differentiate (the brief sharpens the angle so the two do not compete), or kill one. Flagging late, after the piece is written, costs more than flagging in the brief.
 
-Detail in `references/internal-linking-strategy.md`.
+Detail in [`references/internal-linking-strategy.md`](references/internal-linking-strategy.md).
 
 ---
 
@@ -160,7 +160,7 @@ Different content types call for different brief shapes. The 12 fields are const
 - **How-to guide.** Informational, step-by-step, screenshots. Brief emphasizes step granularity, prerequisites, troubleshooting section.
 - **Thought leadership / opinion.** Commercial or branding, distinctive POV, signal of expertise. Brief emphasizes thesis, supporting arguments, anticipated counter-arguments.
 
-Each template gets a worked example in `references/brief-templates.md`.
+Each template gets a worked example in [`references/brief-templates.md`](references/brief-templates.md).
 
 ---
 
@@ -176,7 +176,7 @@ Whether the writer is human or AI, the handoff has the same shape.
 
 For AI handoff specifically, the brief becomes a structured prompt or a tool input. Frase, AirOps, and similar tools structure briefs as YAML or JSON for machine consumption; the same 12 fields apply. The structured format is the only difference; the contract is the same.
 
-Detail in `references/writer-handoff-protocols.md`.
+Detail in [`references/writer-handoff-protocols.md`](references/writer-handoff-protocols.md).
 
 ---
 
@@ -188,13 +188,13 @@ Approval. The brief approver is the editorial owner of the content program. Sing
 
 Archival. After publish, the brief is archived alongside the content piece (Notion database row, dbt model, content management system metadata, whatever the team's source of truth is). Future content audits reference both brief and published piece to assess gap between intent and execution. Without the brief in the archive, a content audit cannot tell whether the piece succeeded against the original goal or drifted from it.
 
-Detail in `references/brief-governance-patterns.md`.
+Detail in [`references/brief-governance-patterns.md`](references/brief-governance-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses and fixes in `references/common-brief-failures.md`.
+Rapid-fire. Diagnoses and fixes in [`references/common-brief-failures.md`](references/common-brief-failures.md).
 
 - "The brief was too thin." Fill all 12 fields or accept generic output.
 - "The brief was too thick." Every field needs a job; remove the rest.

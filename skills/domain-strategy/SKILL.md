@@ -215,4 +215,4 @@ A domain strategy document includes:
 
 ## Reference files
 
-- `references/dns-record-reference.md`: Common DNS records explained, with the syntax for the most useful ones (A, AAAA, CNAME, MX, TXT, CAA, SRV, etc.) and when each is needed.
+- [`references/dns-record-reference.md`](references/dns-record-reference.md): Common DNS records explained, with the syntax for the most useful ones (A, AAAA, CNAME, MX, TXT, CAA, SRV, etc.) and when each is needed.

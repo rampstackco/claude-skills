@@ -59,7 +59,7 @@ Before designing the magnet, decide whether a magnet is the right investment.
 
 The decision is not "should we have a magnet"; it is "is the magnet the right next investment for this specific audience and goal."
 
-Detail in `references/lead-magnet-decision-criteria.md`.
+Detail in [`references/lead-magnet-decision-criteria.md`](references/lead-magnet-decision-criteria.md).
 
 ---
 
@@ -97,7 +97,7 @@ Magnets come in formats. Each format has strengths, weaknesses, audience-fit sig
 
 The choice depends on the audience's preferred consumption mode, the topic's natural shape, and the production overhead the team can sustain. A great template often outperforms a mediocre ebook on the same topic.
 
-Detail in `references/format-selection-patterns.md`.
+Detail in [`references/format-selection-patterns.md`](references/format-selection-patterns.md).
 
 ---
 
@@ -125,7 +125,7 @@ The test the magnet should pass.
 
 If the magnet passes the test, it earns the email. If it fails, redesign before launching.
 
-Detail in `references/would-they-pay-for-this-test.md`.
+Detail in [`references/would-they-pay-for-this-test.md`](references/would-they-pay-for-this-test.md).
 
 ---
 
@@ -145,7 +145,7 @@ A great magnet does two things at once. It delivers value (which earns the email
 
 The filtering principle. A magnet that converts 50 percent of visitors but produces 5 percent qualified leads is worse than a magnet that converts 15 percent of visitors and produces 40 percent qualified leads. Optimize for the qualified lead, not for the surface conversion rate.
 
-Detail in `references/audience-fit-qualification.md`.
+Detail in [`references/audience-fit-qualification.md`](references/audience-fit-qualification.md).
 
 ---
 
@@ -173,7 +173,7 @@ The magnet's title is the conversion lever and the qualification filter at the s
 - The landing page (handled by `landing-page-copy`) should preview the magnet, not just describe it.
 - The first page of the magnet should deliver value within the first read, not warm up with author bio and brand-positioning.
 
-Detail in `references/title-and-presentation-discipline.md`.
+Detail in [`references/title-and-presentation-discipline.md`](references/title-and-presentation-discipline.md).
 
 ---
 
@@ -191,7 +191,7 @@ The sequence is the magnet's second act. Without it, the magnet is one transacti
 
 **The opt-out.** A reader who unsubscribes from the magnet sequence is not a failure; they are a clean filter. The list quality stays higher when the unfit subscribers leave on their own.
 
-Detail in `references/delivery-and-follow-up-sequences.md`.
+Detail in [`references/delivery-and-follow-up-sequences.md`](references/delivery-and-follow-up-sequences.md).
 
 ---
 
@@ -215,13 +215,13 @@ Each format has quality gates specific to that format. A great template fails di
 
 Each format's gates exist because thin-bait can hide in any format. The quality gates make hiding harder.
 
-Detail in `references/format-specific-quality-gates.md`.
+Detail in [`references/format-specific-quality-gates.md`](references/format-specific-quality-gates.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-lead-magnet-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-lead-magnet-failures.md`](references/common-lead-magnet-failures.md).
 
 - "Conversion rate is great, list quality is terrible." Thin-bait pattern; magnet attracts the wrong audience or fails to deliver the promised value.
 - "We ship a magnet; nothing happens after." No follow-up sequence; the magnet is one transaction rather than the start of a relationship.

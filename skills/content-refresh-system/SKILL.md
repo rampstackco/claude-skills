@@ -67,7 +67,7 @@ Five categories of signal that trigger refresh consideration. Pieces that show n
 
 The audit. Every piece in the library can be characterized by which signals it shows. Pieces with zero signals are stable; pieces with one or two signals warrant attention; pieces with three or more signals are typically in active decay.
 
-Detail in `references/refresh-signals-checklist.md`.
+Detail in [`references/refresh-signals-checklist.md`](references/refresh-signals-checklist.md).
 
 ---
 
@@ -87,7 +87,7 @@ How often to look. Two cadences with different tradeoffs.
 
 **The hybrid pattern.** Most strong refresh programs run both. Quarterly audits catch slow decay, content drift, and pieces that are stable but no longer match the brand's current positioning. Continuous monitoring catches sharp decay and algorithm-update fallout. The two cadences cover different failure modes.
 
-Detail in `references/audit-cadence-patterns.md`.
+Detail in [`references/audit-cadence-patterns.md`](references/audit-cadence-patterns.md).
 
 ---
 
@@ -105,7 +105,7 @@ The 2x2 matrix: piece value (high vs low) crossed with traffic state (decaying v
 
 **Low-value, stable.** Leave alone. Low traffic is the floor; the piece is not costing anything to keep. Touching these pieces in a refresh program burns capacity for no return.
 
-The matrix shifts the program from refresh-everything to refresh-the-quadrant-that-warrants-it. Detail in `references/refresh-prioritization-matrix.md`.
+The matrix shifts the program from refresh-everything to refresh-the-quadrant-that-warrants-it. Detail in [`references/refresh-prioritization-matrix.md`](references/refresh-prioritization-matrix.md).
 
 ---
 
@@ -123,7 +123,7 @@ Not every refresh is the same kind of work. Four depth levels.
 
 The depth-decision discipline. Match depth to signal strength. Sharp decay or major SERP intent shift may warrant full rewrite; slow decay with stale stats may warrant only a light edit. Treating every refresh as a full rewrite is refresh-everything energy in a different shape.
 
-Detail in `references/refresh-depth-decision.md`.
+Detail in [`references/refresh-depth-decision.md`](references/refresh-depth-decision.md).
 
 ---
 
@@ -141,7 +141,7 @@ The decision criteria. Refresh when the piece has demand and a path back. Merge 
 
 The under-recognized failure mode: refreshing pieces that should have been merged or deleted. The team spends hours improving a low-value piece that even at its best will not recover meaningful traffic, while a merge candidate that would have produced a stronger consolidated piece sits unaddressed.
 
-Detail in `references/refresh-vs-merge-vs-delete.md`.
+Detail in [`references/refresh-vs-merge-vs-delete.md`](references/refresh-vs-merge-vs-delete.md).
 
 ---
 
@@ -157,7 +157,7 @@ Who does the work, how it ships.
 
 **Refresh batching.** Some teams batch refresh work into dedicated weeks or sprints; others integrate one refresh per week into the steady-state production cadence. Batching produces focus but interrupts new production; integration sustains new production but slows refresh velocity. Either works; the failure mode is no allocation discipline at all, which produces refresh work happening in the cracks at unpredictable cadence.
 
-Detail in `references/refresh-execution-patterns.md`.
+Detail in [`references/refresh-execution-patterns.md`](references/refresh-execution-patterns.md).
 
 ---
 
@@ -173,7 +173,7 @@ Refreshed pieces need to signal to search engines and audiences that they have b
 
 **The refresh that nobody tells anyone about.** A refreshed piece that is not re-promoted often performs only marginally better than the original. The refresh's signal to search engines is the modified date; the refresh's value to the program is partly the audience re-engagement.
 
-Detail in `references/re-promotion-after-refresh.md`.
+Detail in [`references/re-promotion-after-refresh.md`](references/re-promotion-after-refresh.md).
 
 ---
 
@@ -189,13 +189,13 @@ The discipline that prevents refresh-theater: tracking which refreshes worked, w
 
 **The refresh-that-did-not-work review.** Refreshes that did not produce the expected recovery should get a structured review. Was the depth wrong? Was the merge or delete decision the right disposition that we did not take? Did the underlying problem turn out to be something refresh cannot fix?
 
-Detail in `references/effectiveness-measurement.md`.
+Detail in [`references/effectiveness-measurement.md`](references/effectiveness-measurement.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-refresh-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-refresh-failures.md`](references/common-refresh-failures.md).
 
 - "We refresh every piece annually and traffic is still declining." Refresh-everything pattern; the calendar-based work is not catching the actual decay signals.
 - "We have not touched the library in 18 months and traffic has eroded 30%." Refresh-nothing pattern; the decay went uncaught.

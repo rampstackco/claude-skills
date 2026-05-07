@@ -56,7 +56,7 @@ Before designing the tool, decide whether a comparison tool is the right answer.
 
 The decision is not "should we have a comparison tool"; it is "is the comparison tool the right tool for this decision."
 
-Detail in `references/comparison-tool-decision-criteria.md`.
+Detail in [`references/comparison-tool-decision-criteria.md`](references/comparison-tool-decision-criteria.md).
 
 ---
 
@@ -97,7 +97,7 @@ The single most consequential decision in comparison tool design.
 
 **The 8-12 axis rule.** Most production comparison tools work well with 8-12 axes. Beyond that, decision paralysis sets in.
 
-Detail in `references/axis-selection-patterns.md`.
+Detail in [`references/axis-selection-patterns.md`](references/axis-selection-patterns.md).
 
 ---
 
@@ -126,7 +126,7 @@ Which options compare by default, and why.
 
 The discipline. Defaults serve the audience, not the brand. When defaults must reflect brand strength, do so honestly with disclosure.
 
-Detail in `references/default-comparison-logic.md`.
+Detail in [`references/default-comparison-logic.md`](references/default-comparison-logic.md).
 
 ---
 
@@ -150,7 +150,7 @@ When to recommend, how to defend the recommendation.
 
 **Anti-pattern: hidden recommendation.** Tool that defaults to one option's victory through axis selection and framing, without explicit recommendation. Users feel manipulated when they catch the pattern.
 
-Detail in `references/recommendation-engine-design.md` and `references/honest-recommendation-discipline.md`.
+Detail in [`references/recommendation-engine-design.md`](references/recommendation-engine-design.md) and [`references/honest-recommendation-discipline.md`](references/honest-recommendation-discipline.md).
 
 ---
 
@@ -176,7 +176,7 @@ What users can adjust, what should stay fixed.
 
 The discipline. Filters that materially help; not filters for the sake of customization.
 
-Detail in `references/filter-and-toggle-patterns.md`.
+Detail in [`references/filter-and-toggle-patterns.md`](references/filter-and-toggle-patterns.md).
 
 ---
 
@@ -198,13 +198,13 @@ Why most comparisons fail to produce decisions.
 
 The cumulative effect. The tool produces no decision; users default to the brand they already heard of.
 
-Detail in `references/comparison-fatigue-patterns.md`.
+Detail in [`references/comparison-fatigue-patterns.md`](references/comparison-fatigue-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-comparison-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-comparison-failures.md`](references/common-comparison-failures.md).
 
 - "Tool gets traffic; conversion is unchanged." Likely feature-list-dump; no decision support.
 - "Sales says competitor leads cite our tool as biased." Hidden-recommendation pattern; trust damage.

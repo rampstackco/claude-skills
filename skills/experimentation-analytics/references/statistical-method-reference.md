@@ -1,6 +1,6 @@
 # Statistical method reference
 
-The technical reference for analysts. Covers the methods named in the SKILL.md with enough depth to verify a platform's implementation, recognize when a method is needed, and explain the choice to a skeptical reviewer.
+The technical reference for analysts. Covers the methods named in the [SKILL.md](../SKILL.md) with enough depth to verify a platform's implementation, recognize when a method is needed, and explain the choice to a skeptical reviewer.
 
 ---
 

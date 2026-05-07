@@ -323,4 +323,4 @@ A dependency policy document includes:
 
 ## Reference files
 
-- `references/upgrade-checklist.md`: Step-by-step checklist for performing a major version upgrade of a critical dependency, from changelog reading to staged rollout.
+- [`references/upgrade-checklist.md`](references/upgrade-checklist.md): Step-by-step checklist for performing a major version upgrade of a critical dependency, from changelog reading to staged rollout.

@@ -164,5 +164,5 @@ Structure:
 
 ## Reference files
 
-- `references/outreach-templates.md` - Templates for guest posting, expert quotes, broken-link outreach, podcast pitches.
-- `references/linkable-assets-guide.md` - Categories of linkable assets with examples and effort estimates.
+- [`references/outreach-templates.md`](references/outreach-templates.md) - Templates for guest posting, expert quotes, broken-link outreach, podcast pitches.
+- [`references/linkable-assets-guide.md`](references/linkable-assets-guide.md) - Categories of linkable assets with examples and effort estimates.

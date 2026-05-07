@@ -1,6 +1,6 @@
 # Next.js Patterns
 
-Stack-specific patterns and anti-patterns for Next.js projects. Covers App Router and Pages Router. Stack-agnostic principles live in SKILL.md.
+Stack-specific patterns and anti-patterns for Next.js projects. Covers App Router and Pages Router. Stack-agnostic principles live in [SKILL.md](../SKILL.md).
 
 ---
 

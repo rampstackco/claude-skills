@@ -336,4 +336,4 @@ A cost optimization document includes:
 
 ## Reference files
 
-- `references/cloud-audit-checklist.md`: A practical walkthrough for auditing a cloud account (compute, storage, database, network, monitoring) for waste and rightsizing opportunities.
+- [`references/cloud-audit-checklist.md`](references/cloud-audit-checklist.md): A practical walkthrough for auditing a cloud account (compute, storage, database, network, monitoring) for waste and rightsizing opportunities.

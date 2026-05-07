@@ -186,4 +186,4 @@ Deliverables:
 
 ## Reference files
 
-- `references/onboarding-checklist.md`: A day-by-day, week-by-week checklist for the first 30 days, with role-specific variants and a 30/60/90 review template.
+- [`references/onboarding-checklist.md`](references/onboarding-checklist.md): A day-by-day, week-by-week checklist for the first 30 days, with role-specific variants and a 30/60/90 review template.

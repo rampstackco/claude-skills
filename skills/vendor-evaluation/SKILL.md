@@ -277,4 +277,4 @@ A vendor evaluation document includes:
 
 ## Reference files
 
-- `references/evaluation-rubric.md` - Scoring template with weighted dimensions, 1-5 scale criteria for each dimension, and a worked vendor-comparison example.
+- [`references/evaluation-rubric.md`](references/evaluation-rubric.md) - Scoring template with weighted dimensions, 1-5 scale criteria for each dimension, and a worked vendor-comparison example.

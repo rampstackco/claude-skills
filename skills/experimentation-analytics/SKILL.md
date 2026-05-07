@@ -64,7 +64,7 @@ Practical decision rules, in order of importance:
 4. If the CI straddles zero but is narrow (e.g., [-0.5%, +0.5%]), this is a real null result. The effect is small enough to call essentially zero. Useful information; do not ship the change for "lift" reasons (you found none) but do not panic about harm either.
 5. If the CI straddles zero and is wide (e.g., [-5%, +8%]), the test is inconclusive. The data is consistent with a moderate win, no effect, or a moderate loss. Run longer, run bigger, or accept that the question cannot be answered at the available traffic.
 
-For a worked-example cheatsheet, see `references/confidence-interval-cheatsheet.md`.
+For a worked-example cheatsheet, see [`references/confidence-interval-cheatsheet.md`](references/confidence-interval-cheatsheet.md).
 
 ---
 
@@ -82,7 +82,7 @@ The 0.05 cutoff is convention, not law. If you pre-committed to alpha equals 0.0
 
 Always read the CI alongside the p-value. The p-value tells you about the null hypothesis; the CI tells you about the magnitude. Both matter; neither is sufficient alone. A p-value of 0.001 with a CI of [+0.1%, +0.3%] is a real but practically tiny effect; a p-value of 0.08 with a CI of [-1%, +12%] is a noisy estimate that could be huge or zero. The former is technically significant and not worth shipping; the latter is technically not significant and you might still want to dig deeper.
 
-The peeking problem applies to p-values directly. Standard p-values assume one analysis at the end of the test. Multiple analyses inflate the false positive rate. Modern platforms with sequential testing report "always-valid" or "anytime-valid" p-values that survive peeking; older platforms do not. Know which you are looking at. See `references/p-value-interpretation-guide.md` for deeper coverage.
+The peeking problem applies to p-values directly. Standard p-values assume one analysis at the end of the test. Multiple analyses inflate the false positive rate. Modern platforms with sequential testing report "always-valid" or "anytime-valid" p-values that survive peeking; older platforms do not. Know which you are looking at. See [`references/p-value-interpretation-guide.md`](references/p-value-interpretation-guide.md) for deeper coverage.
 
 ---
 
@@ -148,7 +148,7 @@ A common confusion: "CUPED made our lift smaller, so we should ship the unadjust
 
 Platform support: Statsig, Eppo, GrowthBook, parts of PostHog, Amplitude (Experiment product). Optimizely has equivalent variance reduction. If your platform offers CUPED, turn it on for any metric where pre-experiment data exists.
 
-For deeper coverage of CUPED, the delta method, and other statistical methods, see `references/statistical-method-reference.md`.
+For deeper coverage of CUPED, the delta method, and other statistical methods, see [`references/statistical-method-reference.md`](references/statistical-method-reference.md).
 
 ---
 
@@ -252,7 +252,7 @@ Reconciliation discipline: never report experiment results as "the feature drove
 
 The "blended attribution" trap is the most common reconciliation failure. PM takes the experiment lift (say +2% revenue per user) and multiplies by the total user base for a company-wide impact estimate ("$10M in incremental revenue"). This is wrong twice over. The lift only applies to enrolled users (typically 10% to 50% of the base). Even within the enrolled group, the lift was measured during the test conditions; long-term and at full scale, the effect can be different. The right phrasing is "during the four-week test, enrolled users (about 30% of the active base) showed a 2% revenue-per-user lift relative to control." Then leadership can do the careful arithmetic of how that translates at full launch.
 
-For deeper reconciliation patterns and stakeholder-facing language, see `references/dashboard-vs-experiment-reconciliation.md`.
+For deeper reconciliation patterns and stakeholder-facing language, see [`references/dashboard-vs-experiment-reconciliation.md`](references/dashboard-vs-experiment-reconciliation.md).
 
 ---
 
@@ -272,7 +272,7 @@ Practical heuristic: any feature with novelty risk (new UI, new mechanic, new pr
 
 ## Common interpretation failures
 
-Rapid-fire reference. Each pattern is described in more detail in `references/common-interpretation-failures.md`.
+Rapid-fire reference. Each pattern is described in more detail in [`references/common-interpretation-failures.md`](references/common-interpretation-failures.md).
 
 - "P equals 0.04, ship it." No consideration of CI width, magnitude, or guardrails. Significance is a necessary condition, not a sufficient one.
 - "We saw +5% on day 3, ending early." Peeking, novelty effect, or both. Day-3 lifts are routinely larger than day-14 lifts; ending early ships noise.

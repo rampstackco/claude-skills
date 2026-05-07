@@ -75,7 +75,7 @@ Objectives are outcome statements. They name what the team is trying to achieve 
 - Too tactical. "Refactor the auth service" is a tactical decision, not a quarterly objective.
 - Too many. 8 objectives produces no focus; the team works on too many things and excels at none.
 
-Detail in `references/objective-design-patterns.md`.
+Detail in [`references/objective-design-patterns.md`](references/objective-design-patterns.md).
 
 ---
 
@@ -109,7 +109,7 @@ Each key result is measurable, ties to activation, the team can influence it thr
 
 **The 3-5 key results rule.** Most objectives benefit from 3-5 key results. One key result is fragile (single measurement may not capture the outcome); 6+ key results dilute focus.
 
-Detail in `references/key-result-design-patterns.md`.
+Detail in [`references/key-result-design-patterns.md`](references/key-result-design-patterns.md).
 
 ---
 
@@ -135,7 +135,7 @@ When and how to cascade OKRs from leadership to teams.
 
 **The honest disclosure.** Cascading is harder than conference talks suggest. Most orgs over-cascade in the first few cycles and learn to relax it; some never learn and produce OKRs that are increasingly performative as they propagate down.
 
-Detail in `references/cascading-okrs-decisions.md`.
+Detail in [`references/cascading-okrs-decisions.md`](references/cascading-okrs-decisions.md).
 
 ---
 
@@ -159,7 +159,7 @@ End-of-quarter scoring is where OKR practice succeeds or decays.
 
 **The compensation question.** OKRs work best when not directly tied to compensation. When OKRs determine bonuses, sandbagging incentives become severe; teams set OKRs they know they can hit. Most healthy OKR cultures separate goal-setting from compensation.
 
-Detail in `references/scoring-discipline.md`.
+Detail in [`references/scoring-discipline.md`](references/scoring-discipline.md).
 
 ---
 
@@ -183,7 +183,7 @@ When OKRs should change vs when teams should adapt.
 
 **The recalibration discipline.** Recalibration should be rare (1-2 quarters out of 8). Frequent recalibration signals OKR design failure: either too aggressive or not strategically aligned. The recalibration itself should be transparent: surface what changed, why, and what the new targets are.
 
-Detail in `references/mid-quarter-recalibration.md`.
+Detail in [`references/mid-quarter-recalibration.md`](references/mid-quarter-recalibration.md).
 
 ---
 
@@ -215,7 +215,7 @@ OKRs benefit from a structured review rhythm.
 - Distinct from the scoring review. The retrospective examines the OKR practice itself: were the OKRs the right ones, did the cadence work, what should change.
 - Often combined with the next-quarter OKR setting session.
 
-Detail in `references/review-cadence-templates.md`.
+Detail in [`references/review-cadence-templates.md`](references/review-cadence-templates.md).
 
 ---
 
@@ -242,13 +242,13 @@ Three concepts often conflated. Each serves a different purpose.
 - Treating every metric as needing an OKR. Some metrics matter for the team to track without setting quarterly targets on them.
 - Treating OKRs as roadmap commitments. OKRs name outcomes; the team is committed to pursuing them but may shift tactics; treating OKRs as roadmap commitments locks in tactics that may need to change.
 
-Detail in `references/okrs-vs-roadmap-vs-metrics.md`.
+Detail in [`references/okrs-vs-roadmap-vs-metrics.md`](references/okrs-vs-roadmap-vs-metrics.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-okr-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-okr-failures.md`](references/common-okr-failures.md).
 
 - "Our OKRs are always 100% and produce no signal." Sandbagged. Set with stretch ambition; expect 60-70% scores.
 - "Our OKRs are always 30% and demoralizing." Fantasy. Recalibrate to genuine stretch; investigate whether the targets are achievable in any realistic effort path.

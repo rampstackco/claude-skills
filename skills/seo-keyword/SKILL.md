@@ -120,7 +120,7 @@ Rank the clusters. Top 20 percent get produced first.
 5. **Cluster.** Group into topical clusters. Aim for 20 to 50 clusters.
 6. **Score each cluster** on opportunity, difficulty, and strategic fit.
 7. **Prioritize.** Rank by composite score. Identify the top 10 to 20 clusters to produce first.
-8. **Output.** Use the template in `references/keyword-research-template.md`.
+8. **Output.** Use the template in [`references/keyword-research-template.md`](references/keyword-research-template.md).
 
 ---
 
@@ -159,5 +159,5 @@ Recommended columns for the keyword sheet:
 
 ## Reference files
 
-- `references/keyword-research-template.md` - Spreadsheet column definitions and a markdown summary template.
-- `references/intent-classification-guide.md` - Detailed examples of each of the four intent categories.
+- [`references/keyword-research-template.md`](references/keyword-research-template.md) - Spreadsheet column definitions and a markdown summary template.
+- [`references/intent-classification-guide.md`](references/intent-classification-guide.md) - Detailed examples of each of the four intent categories.

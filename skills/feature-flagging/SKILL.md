@@ -46,7 +46,7 @@ Each type has different lifecycle, governance, and removal expectations. Mixing 
 
 ## Flag naming conventions
 
-A flag name encodes type, owner, and purpose. Without that encoding, a flag list at month nine is unreadable and the cleanup playbook from `references/stale-flag-cleanup-playbook.md` cannot tell what is safe to remove.
+A flag name encodes type, owner, and purpose. Without that encoding, a flag list at month nine is unreadable and the cleanup playbook from [`references/stale-flag-cleanup-playbook.md`](references/stale-flag-cleanup-playbook.md) cannot tell what is safe to remove.
 
 The convention this skill recommends is `<type>_<owner>_<semantic_name>_<version_or_date>`:
 
@@ -58,7 +58,7 @@ The convention this skill recommends is `<type>_<owner>_<semantic_name>_<version
 
 Pick snake_case or kebab-case once, organization-wide, and stick with it. Mixing both in the same platform produces typo-driven bugs that bite at 3 AM. Vague names die a slow death: `new_feature`, `temp_toggle`, `test_flag`, `pricing_update_v3`. Within months, no one knows which `pricing_update` shipped and which is dead.
 
-For deeper coverage including the table of typed prefixes, owner conventions, and the migration plan for existing badly-named flags, see `references/flag-naming-conventions.md`.
+For deeper coverage including the table of typed prefixes, owner conventions, and the migration plan for existing badly-named flags, see [`references/flag-naming-conventions.md`](references/flag-naming-conventions.md).
 
 ---
 
@@ -70,7 +70,7 @@ Every flag has five life phases. Each phase has explicit entry and exit criteria
 
 **Adolescence.** The feature behind the flag is being built. Code paths exist for both the disabled (current production) branch and the enabled (new) branch. Both are tested. The flag remains off in production.
 
-**Launch.** Production rollout begins. Percentage starts low (1 or 5 percent), monitored at each step, ramps if metrics hold. Ramp gates documented in `references/flag-rollout-strategies.md`.
+**Launch.** Production rollout begins. Percentage starts low (1 or 5 percent), monitored at each step, ramps if metrics hold. Ramp gates documented in [`references/flag-rollout-strategies.md`](references/flag-rollout-strategies.md).
 
 **Maturity.** The flag is at 100 percent rollout. The new code path is the production path. Monitoring continues for at least 30 days to catch issues that did not show up during the ramp.
 
@@ -78,7 +78,7 @@ Every flag has five life phases. Each phase has explicit entry and exit criteria
 
 The asymmetry: birth is fast (one PR creates the flag and gates the new code), death requires intentional cleanup. Most flag mess is unfinished death. Birth-and-death have to be planned together; the death plan is part of the birth metadata.
 
-For the per-phase checklist, see `references/flag-lifecycle-checklist.md`.
+For the per-phase checklist, see [`references/flag-lifecycle-checklist.md`](references/flag-lifecycle-checklist.md).
 
 ---
 
@@ -95,7 +95,7 @@ Compose with AND, OR, and NOT. Keep the expressions simple. If your rule needs t
 
 The most common pitfall: targeting on attributes that change frequently. If the rule is `user.last_login_date > "2026-04-01"`, a user who logs in on May 1 sees the treatment, then their value changes the next day, and they see the control again. The user experience whiplashes. Volatile attributes belong in segments computed off snapshots, not in live targeting rules.
 
-For pattern catalog and anti-patterns, see `references/targeting-rule-patterns.md`.
+For pattern catalog and anti-patterns, see [`references/targeting-rule-patterns.md`](references/targeting-rule-patterns.md).
 
 ---
 
@@ -113,7 +113,7 @@ Different launches deserve different rollout strategies. Match the strategy to t
 
 The "ramp and watch" rule: at each percentage step, monitor the system for at least one peak hour before advancing. The peak hour is when the rate of any new failure mode is highest; if the system holds at peak for an hour, the next step is safe. If you ramp during off-peak and immediately advance, you have not actually tested the change.
 
-For full strategy detail and a worked example for a checkout redesign, see `references/flag-rollout-strategies.md`.
+For full strategy detail and a worked example for a checkout redesign, see [`references/flag-rollout-strategies.md`](references/flag-rollout-strategies.md).
 
 ---
 
@@ -133,7 +133,7 @@ The cleanup playbook is mechanical:
 
 The reason cleanup does not happen by default: removing a flag is a code change PR with review, testing, and deploy overhead. PMs do not reward it (the feature already shipped). SREs eventually get fed up with the noise. The fix is to make removal part of the launch checklist, not a separate effort. When a flag is created, the removal date is in the metadata. The launch ticket has a follow-up sub-ticket scheduled 30 days out that says "remove flag X." If the launch goes well, the sub-ticket gets done.
 
-For the full quarterly cadence including ownership rotation for orphan flags, see `references/stale-flag-cleanup-playbook.md`.
+For the full quarterly cadence including ownership rotation for orphan flags, see [`references/stale-flag-cleanup-playbook.md`](references/stale-flag-cleanup-playbook.md).
 
 ---
 

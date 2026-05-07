@@ -256,4 +256,4 @@ A migration plan document includes:
 
 ## Reference files
 
-- `references/migration-runbook.md`: Step-by-step runbook for cutover day, including pre-flight checks, the actual switch, immediate verification, and the first 24 hours of monitoring.
+- [`references/migration-runbook.md`](references/migration-runbook.md): Step-by-step runbook for cutover day, including pre-flight checks, the actual switch, immediate verification, and the first 24 hours of monitoring.

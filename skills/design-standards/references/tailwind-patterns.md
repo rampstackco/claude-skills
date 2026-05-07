@@ -1,6 +1,6 @@
 # Tailwind Component Patterns
 
-Optional reference. Tailwind-specific component patterns for projects on that stack. The principles in `SKILL.md` are stack-agnostic; this file translates them into Tailwind utilities.
+Optional reference. Tailwind-specific component patterns for projects on that stack. The principles in [`SKILL.md`](../SKILL.md) are stack-agnostic; this file translates them into Tailwind utilities.
 
 If you are not using Tailwind, skip this file. The patterns translate to any utility framework or CSS approach with minor changes.
 

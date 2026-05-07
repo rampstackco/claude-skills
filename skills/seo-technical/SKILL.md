@@ -117,7 +117,7 @@ Does the site meet the page experience baseline?
 4. **Run the 6-layer framework.** Score each, note specific issues with example URLs.
 5. **Cross-reference.** Search console for what's actually indexed. Compare to sitemap and crawl output.
 6. **Prioritize.** Critical (blocks indexing or causes traffic loss), Important (suboptimal), Nice-to-have (polish).
-7. **Write the report.** Use the template in `references/audit-template.md`.
+7. **Write the report.** Use the template in [`references/audit-template.md`](references/audit-template.md).
 
 ---
 
@@ -150,5 +150,5 @@ For migrations, include a redirect map as a CSV alongside the report.
 
 ## Reference files
 
-- `references/audit-template.md` - Fillable technical SEO audit template.
-- `references/migration-checklist.md` - Pre and post-migration checklist (covers the highest-risk scenario).
+- [`references/audit-template.md`](references/audit-template.md) - Fillable technical SEO audit template.
+- [`references/migration-checklist.md`](references/migration-checklist.md) - Pre and post-migration checklist (covers the highest-risk scenario).

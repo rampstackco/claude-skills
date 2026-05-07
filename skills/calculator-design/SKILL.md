@@ -58,7 +58,7 @@ Before designing the calculator, decide whether a calculator is the right tool f
 
 The decision is not "should we have a calculator"; it is "is the calculator the right next investment for this specific audience and goal."
 
-Detail in `references/calculator-investment-criteria.md`.
+Detail in [`references/calculator-investment-criteria.md`](references/calculator-investment-criteria.md).
 
 ---
 
@@ -96,7 +96,7 @@ The calculator's inputs are the audience's first interaction. Bad input design l
 - Toggle (feature on/off, scenario A vs B). Good for binary choices.
 - Free text (only when the value is genuinely user-specific and cannot be calculated). Use sparingly; free text is friction.
 
-Detail in `references/input-design-patterns.md`.
+Detail in [`references/input-design-patterns.md`](references/input-design-patterns.md).
 
 ---
 
@@ -117,7 +117,7 @@ The defensibility of the result is the calculator's credibility currency.
 
 **The transparent-tool win.** Assumptions visible, sources cited, formulas inspectable. The audience uses the tool, gets a number, and can defend it. The brand is in the conversation because the audience cites the calculator as their source.
 
-Detail in `references/calculation-logic-transparency.md`.
+Detail in [`references/calculation-logic-transparency.md`](references/calculation-logic-transparency.md).
 
 ---
 
@@ -146,7 +146,7 @@ The result is the calculator's product. Bad result presentation wastes the calcu
 - Result followed by 5 paragraphs of marketing. The result is what the user came for; marketing belongs after, not before.
 - Result that requires re-entering all inputs to view. Persist inputs and results within the session.
 
-Detail in `references/result-presentation-patterns.md`.
+Detail in [`references/result-presentation-patterns.md`](references/result-presentation-patterns.md).
 
 ---
 
@@ -174,7 +174,7 @@ What to gate, what to give freely.
 
 **The transparent-tool win.** The result is free; the additional value is gated. Conversion is honest; lead quality is high because the lead opted in for the additional value, which signals real interest.
 
-Detail in `references/email-capture-decision-tree.md`.
+Detail in [`references/email-capture-decision-tree.md`](references/email-capture-decision-tree.md).
 
 ---
 
@@ -206,7 +206,7 @@ A B2B SaaS pricing calculator.
 
 Each tier earns its gate.
 
-Detail in `references/tiered-value-structures.md`.
+Detail in [`references/tiered-value-structures.md`](references/tiered-value-structures.md).
 
 ---
 
@@ -230,13 +230,13 @@ Patterns that look like calculators but degrade trust.
 
 **The mobile-broken calculator.** Calculator works fine on desktop, breaks on mobile. The mobile audience either bounces or gets a worse experience that misrepresents the brand.
 
-Detail in `references/calculator-anti-patterns.md`.
+Detail in [`references/calculator-anti-patterns.md`](references/calculator-anti-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-calculator-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-calculator-failures.md`](references/common-calculator-failures.md).
 
 - "Conversion rate is high; downstream conversion is near zero." Lead-trap or vanity-output pattern; the audience captured did not get value, did not engage with the follow-up, did not convert.
 - "Audience visits the calculator, runs it once, never returns." Calculator does not produce a save-worthy or share-worthy result; no reason to come back.

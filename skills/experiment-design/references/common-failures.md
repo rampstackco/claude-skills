@@ -10,7 +10,7 @@ Anti-patterns that produce confidently wrong shipping decisions, with the sympto
 
 **Root cause.** The hypothesis lacks magnitude and mechanism. When the result comes in, there is no pre-committed bar to compare against, so the decision becomes political.
 
-**Fix.** Rewrite the hypothesis with the cause-effect-magnitude-mechanism format from SKILL.md. Save it before launching.
+**Fix.** Rewrite the hypothesis with the cause-effect-magnitude-mechanism format from [SKILL.md](../SKILL.md). Save it before launching.
 
 **Prevention.** Make hypothesis review part of the experiment kickoff. A peer reads the hypothesis and confirms all four parts are present before the test launches.
 

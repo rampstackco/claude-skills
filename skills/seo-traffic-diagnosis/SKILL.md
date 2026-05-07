@@ -137,7 +137,7 @@ If layers 1-4 do not explain the change, look outward.
 5. **Technical check.** Layer 4. Recent deploys, robots, canonicals, redirects.
 6. **External check.** Layer 5. Algorithm updates, competitors, industry.
 7. **Build the hypothesis.** State the cause as a single sentence.
-8. **Validate the hypothesis.** Find the evidence that confirms or refutes it. See `references/diagnosis-checklist.md`.
+8. **Validate the hypothesis.** Find the evidence that confirms or refutes it. See [`references/diagnosis-checklist.md`](references/diagnosis-checklist.md).
 9. **Action plan.** Specific fixes mapped to specific evidence.
 10. **Communicate.** Write up the diagnosis. Stakeholders want clarity, not exhaustive analysis.
 
@@ -175,4 +175,4 @@ Length: 4-10 pages. Stakeholders read this fast.
 
 ## Reference files
 
-- `references/diagnosis-checklist.md` - Layer-by-layer diagnostic checklist with the specific data to pull at each layer and how to interpret each signal.
+- [`references/diagnosis-checklist.md`](references/diagnosis-checklist.md) - Layer-by-layer diagnostic checklist with the specific data to pull at each layer and how to interpret each signal.

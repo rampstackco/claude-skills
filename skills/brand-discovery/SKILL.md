@@ -152,7 +152,7 @@ This is not yet "the positioning." Discovery surfaces possible territories. `bra
 4. **Competitor mapping.** 3 to 8 competitors deep, including indirect and status-quo competitors.
 5. **Category mapping.** Conventions, shifts, vocabulary, moats.
 6. **Territory generation.** 3 to 5 plausible positioning territories.
-7. **Write the discovery report.** Use the template in `references/discovery-report-template.md`.
+7. **Write the discovery report.** Use the template in [`references/discovery-report-template.md`](references/discovery-report-template.md).
 8. **Hand off to next phase.** Discovery feeds into `creative-brief`, `brand-ideation`, or `content-strategy` depending on where the project goes next.
 
 ---
@@ -191,5 +191,5 @@ Appendices:
 
 ## Reference files
 
-- `references/discovery-report-template.md` - Full discovery report template.
-- `references/interview-guide.md` - Audience interview guide with question prompts.
+- [`references/discovery-report-template.md`](references/discovery-report-template.md) - Full discovery report template.
+- [`references/interview-guide.md`](references/interview-guide.md) - Audience interview guide with question prompts.

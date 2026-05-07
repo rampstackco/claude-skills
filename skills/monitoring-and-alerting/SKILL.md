@@ -253,4 +253,4 @@ A monitoring plan includes:
 
 ## Reference files
 
-- `references/slo-design-guide.md`: Detailed walkthrough of writing SLOs, error budget policies, and common SLO mistakes for web services.
+- [`references/slo-design-guide.md`](references/slo-design-guide.md): Detailed walkthrough of writing SLOs, error budget policies, and common SLO mistakes for web services.

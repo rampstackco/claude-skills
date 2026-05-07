@@ -99,7 +99,7 @@ How well-known are they outside organic search?
 4. **Score each angle.** Where does the user lead? Where do they trail?
 5. **Identify gaps.** Specific content gaps, specific backlink gaps, specific technical gaps.
 6. **Prioritize.** Which gaps are highest leverage to close? (Big traffic potential, achievable effort, strategic fit.)
-7. **Write the report.** Use the template in `references/competitive-audit-template.md`.
+7. **Write the report.** Use the template in [`references/competitive-audit-template.md`](references/competitive-audit-template.md).
 
 ---
 
@@ -131,5 +131,5 @@ Structure:
 
 ## Reference files
 
-- `references/competitive-audit-template.md` - Fillable competitive audit template.
-- `references/content-gap-method.md` - Detailed methodology for finding content gaps with example.
+- [`references/competitive-audit-template.md`](references/competitive-audit-template.md) - Fillable competitive audit template.
+- [`references/content-gap-method.md`](references/content-gap-method.md) - Detailed methodology for finding content gaps with example.

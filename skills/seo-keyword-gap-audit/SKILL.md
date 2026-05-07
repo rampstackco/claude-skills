@@ -116,7 +116,7 @@ Where each input is normalized to 0-100. The result is a 0-100 score.
 3. **Build the gap matrix.** Label each keyword with which property ranks where.
 4. **Filter to the pure gap cell.** Strip out the other cells for now.
 5. **Validate intent.** For each keyword, confirm the SERP intent matches what the target can produce.
-6. **Score by opportunity.** Use the formula. See `references/opportunity-scoring-rubric.md`.
+6. **Score by opportunity.** Use the formula. See [`references/opportunity-scoring-rubric.md`](references/opportunity-scoring-rubric.md).
 7. **Cluster.** Group related keywords into topics. One topic, one piece of content.
 8. **Map to existing content.** Some gap keywords are addressable by updating an existing page rather than creating new.
 9. **Sequence.** Build the prioritized list with action (create / update / merge / new pillar).
@@ -158,4 +158,4 @@ Length: 6-15 pages plus an attached opportunity spreadsheet.
 
 ## Reference files
 
-- `references/opportunity-scoring-rubric.md` - Scoring rubric with normalization rules, formula, and worked examples.
+- [`references/opportunity-scoring-rubric.md`](references/opportunity-scoring-rubric.md) - Scoring rubric with normalization rules, formula, and worked examples.

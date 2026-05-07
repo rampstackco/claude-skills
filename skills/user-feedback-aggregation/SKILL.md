@@ -71,7 +71,7 @@ Six common channels. Each surfaces different signal at different reliability.
 
 Each channel has strengths and weaknesses. Strong feedback aggregation triangulates across channels rather than relying on one.
 
-Detail in `references/channel-types-and-what-each-surfaces.md`.
+Detail in [`references/channel-types-and-what-each-surfaces.md`](references/channel-types-and-what-each-surfaces.md).
 
 ---
 
@@ -92,7 +92,7 @@ The discipline that distinguishes triaged-synthesis from averaged-noise.
 
 **The averaged-noise failure.** Decisions made on aggregate volume regardless of source. The enterprise admin feature gets deprioritized because more total feedback came from small-team customers who do not need it; enterprise customers churn because their needs went unaddressed.
 
-Detail in `references/channel-source-weighting.md`.
+Detail in [`references/channel-source-weighting.md`](references/channel-source-weighting.md).
 
 ---
 
@@ -117,7 +117,7 @@ How feedback gets organized when it arrives at high volume.
 
 **The volume challenge.** A program receiving 500-2000 feedback items per week needs aggregation tooling that supports tagging at scale. Manual tagging at scale burns out the team; AI-assisted tagging with human review on patterns is often the practical middle path.
 
-Detail in `references/categorization-and-tagging-at-scale.md`.
+Detail in [`references/categorization-and-tagging-at-scale.md`](references/categorization-and-tagging-at-scale.md).
 
 ---
 
@@ -144,7 +144,7 @@ Two dimensions of feedback signal.
 
 **The discipline.** Triage assigns each piece of feedback a frequency-intensity assessment. The combination informs prioritization weight.
 
-Detail in `references/frequency-vs-intensity.md`.
+Detail in [`references/frequency-vs-intensity.md`](references/frequency-vs-intensity.md).
 
 ---
 
@@ -169,7 +169,7 @@ The synthesis loop that turns aggregated feedback into roadmap input.
 
 **The discipline.** Feedback aggregation has cadence. Without cadence, feedback accumulates without producing decisions.
 
-Detail in `references/from-feedback-to-product-decision.md`.
+Detail in [`references/from-feedback-to-product-decision.md`](references/from-feedback-to-product-decision.md).
 
 ---
 
@@ -191,7 +191,7 @@ When feedback shapes product, telling users matters.
 
 **The risk of over-promising.** Promising changes that do not ship erodes trust faster than not promising. Communicate what shipped, not what might ship.
 
-Detail in `references/closing-the-loop-with-users.md`.
+Detail in [`references/closing-the-loop-with-users.md`](references/closing-the-loop-with-users.md).
 
 ---
 
@@ -208,7 +208,7 @@ What changes in feedback signal over time can reveal.
 
 **The investigation discipline.** Drift signals warrant investigation. Why did the volume increase? Why did this pattern emerge? The root cause often informs product decisions more than the surface signal.
 
-Detail in `references/detecting-drift-in-feedback.md`.
+Detail in [`references/detecting-drift-in-feedback.md`](references/detecting-drift-in-feedback.md).
 
 ---
 
@@ -234,13 +234,13 @@ Tooling choices without endorsing specific products.
 
 **The build-vs-buy tension.** Many programs end up with a mix: dedicated tooling for some channels, custom dashboards for cross-channel synthesis. Pure single-tool solutions often miss the multi-channel pattern detection.
 
-Detail in `references/tooling-considerations.md`.
+Detail in [`references/tooling-considerations.md`](references/tooling-considerations.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-feedback-aggregation-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-feedback-aggregation-failures.md`](references/common-feedback-aggregation-failures.md).
 
 - "Loudest customers steer the roadmap." Loudest-voice pattern; vocal minorities dominate; silent majority underaddressed.
 - "We have lots of feedback but no decisions." Aggregation without synthesis; no triage cadence.

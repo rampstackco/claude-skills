@@ -172,7 +172,7 @@ Often overlooked. Critical for inclusive products.
 6. **Cognitive checks.** Reading level, error handling, time limits.
 7. **Score against WCAG.** Per success criterion (level A, AA, AAA).
 8. **Prioritize findings.** Critical (blocks users), Important (degrades experience), Minor (polish).
-9. **Write the report.** Use the template in `references/audit-report-template.md`.
+9. **Write the report.** Use the template in [`references/audit-report-template.md`](references/audit-report-template.md).
 10. **Build a remediation plan.** Sequenced fixes with effort and impact estimates.
 
 ---
@@ -234,5 +234,5 @@ Plus a remediation tracking spreadsheet with one row per finding.
 
 ## Reference files
 
-- `references/audit-report-template.md` - Full audit report template.
-- `references/wcag-quick-reference.md` - Condensed WCAG 2.1 AA criteria with audit checks.
+- [`references/audit-report-template.md`](references/audit-report-template.md) - Full audit report template.
+- [`references/wcag-quick-reference.md`](references/wcag-quick-reference.md) - Condensed WCAG 2.1 AA criteria with audit checks.

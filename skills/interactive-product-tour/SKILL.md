@@ -56,7 +56,7 @@ Before designing the tour system, decide whether tours are the right tool.
 
 The decision is not "should we have a tour system"; it is "is in-product tour the right tool for this product and audience."
 
-Detail in `references/tour-decision-criteria.md`.
+Detail in [`references/tour-decision-criteria.md`](references/tour-decision-criteria.md).
 
 ---
 
@@ -94,7 +94,7 @@ When to use. When the help differs by user segment. State-based triggers persona
 
 The discipline. The trigger answers "when does this help surface and why." Decorative triggers (showing help when it is not needed) become tooltip-spam.
 
-Detail in `references/trigger-logic-patterns.md`.
+Detail in [`references/trigger-logic-patterns.md`](references/trigger-logic-patterns.md).
 
 ---
 
@@ -110,7 +110,7 @@ How help is organized.
 
 **The choice.** Most modern systems use the micro-tour library approach. Single tours feel canned; branched tours are hard to maintain at scale; a library of contextual micro-tours matches how users actually explore.
 
-Detail in `references/tour-architecture-patterns.md`.
+Detail in [`references/tour-architecture-patterns.md`](references/tour-architecture-patterns.md).
 
 ---
 
@@ -134,7 +134,7 @@ The visual design of help.
 
 **Non-intrusion principle.** Help should be findable when wanted, ignorable when not. Modal help that blocks the screen is intrusive; help that disappears too easily fails to teach.
 
-Detail in `references/contextual-placement-patterns.md` and `references/dismissal-and-non-intrusion-patterns.md`.
+Detail in [`references/contextual-placement-patterns.md`](references/contextual-placement-patterns.md) and [`references/dismissal-and-non-intrusion-patterns.md`](references/dismissal-and-non-intrusion-patterns.md).
 
 ---
 
@@ -160,7 +160,7 @@ Knowing what each user has seen, deciding when to show again.
 
 **The under-trigger trap.** Tours never re-surfacing when the user hits the same friction again. Help fails at the moment of need.
 
-Detail in `references/completion-tracking-and-re-trigger.md`.
+Detail in [`references/completion-tracking-and-re-trigger.md`](references/completion-tracking-and-re-trigger.md).
 
 ---
 
@@ -187,13 +187,13 @@ Different users need different help.
 
 **The under-helping trap.** Treating all users as power users. New users miss critical help.
 
-Detail in `references/power-user-vs-new-user-patterns.md`.
+Detail in [`references/power-user-vs-new-user-patterns.md`](references/power-user-vs-new-user-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-tour-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-tour-failures.md`](references/common-tour-failures.md).
 
 - "Tours show but feature adoption does not improve." Help may be visually present but not contextually relevant. Audit trigger logic.
 - "Users disable tours globally." The system is annoying users. Audit frequency, dismissal, and over-triggering.

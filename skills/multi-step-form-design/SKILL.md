@@ -56,7 +56,7 @@ Before designing the steps, decide whether the form should be multi-step at all.
 
 The decision is not "should the form be multi-step"; it is "is multi-step the right structure for this specific data collection and audience."
 
-Detail in `references/multi-step-decision-criteria.md`.
+Detail in [`references/multi-step-decision-criteria.md`](references/multi-step-decision-criteria.md).
 
 ---
 
@@ -92,7 +92,7 @@ The structure that makes steps coherent.
 
 **Step coherence test.** Can each step be described in one sentence as a unit of work? "Step 2: tell us about your company's situation" beats "Step 2: company name, size, industry, and revenue range."
 
-Detail in `references/step-architecture-patterns.md`.
+Detail in [`references/step-architecture-patterns.md`](references/step-architecture-patterns.md).
 
 ---
 
@@ -117,7 +117,7 @@ When to show progress, what to show, how it builds momentum.
 
 **Progress indicator discipline.** The indicator must reflect the actual remaining work, not flatter the user.
 
-Detail in `references/progress-indicator-patterns.md`.
+Detail in [`references/progress-indicator-patterns.md`](references/progress-indicator-patterns.md).
 
 ---
 
@@ -148,7 +148,7 @@ Branching that responds to earlier answers.
 
 **The simplicity preference.** Add conditional logic only when it produces real value. Conditional logic for decoration adds maintenance without lift.
 
-Detail in `references/conditional-logic-patterns.md`.
+Detail in [`references/conditional-logic-patterns.md`](references/conditional-logic-patterns.md).
 
 ---
 
@@ -177,7 +177,7 @@ When to offer save-and-resume, how to communicate trust.
 
 **Trust communication.** Users hesitate to save partial sensitive information. The form should communicate clearly: what is saved, how long it persists, who can access it, how to resume.
 
-Detail in `references/save-and-resume-mechanics.md`.
+Detail in [`references/save-and-resume-mechanics.md`](references/save-and-resume-mechanics.md).
 
 ---
 
@@ -218,7 +218,7 @@ Per-step vs end-only.
 - Inline placement: errors appear next to the field, not in a banner.
 - Specific guidance: "Try a value between 1 and 1000" beats "Out of range."
 
-Detail in `references/validation-strategy-patterns.md`.
+Detail in [`references/validation-strategy-patterns.md`](references/validation-strategy-patterns.md).
 
 ---
 
@@ -242,7 +242,7 @@ Where users abandon, and how to fix it.
 
 **The instrumentation requirement.** Without per-step tracking, drop-off remediation is guesswork. Set up tracking before the form launches.
 
-Detail in `references/drop-off-measurement-and-remediation.md`.
+Detail in [`references/drop-off-measurement-and-remediation.md`](references/drop-off-measurement-and-remediation.md).
 
 ---
 
@@ -268,13 +268,13 @@ Patterns that look like multi-step forms but degrade conversion.
 
 **The variable-step form.** Conditional logic that changes the step count visibly; user feels misled about remaining work.
 
-Detail in `references/form-anti-patterns.md`.
+Detail in [`references/form-anti-patterns.md`](references/form-anti-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-multi-step-form-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-multi-step-form-failures.md`](references/common-multi-step-form-failures.md).
 
 - "Form converts at 4 percent; we expected 12 percent." Likely too long, or the value of completing is not clear, or the form is mobile-broken.
 - "Drop-off concentrates at step 3." Specific-step issue; audit step 3's field count, sensitivity, and clarity.

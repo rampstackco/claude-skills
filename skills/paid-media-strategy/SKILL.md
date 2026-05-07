@@ -60,7 +60,7 @@ Pick the channel where intent matches your offer. Run the wrong channel and your
 
 **YouTube (Google).** Video at scale. Best for awareness or for B2C consideration. Underrated for B2B SaaS in some categories where the buyer-research path includes long-form video.
 
-The decision rule. Start with the channel where intent matches your offer. Search for high-intent demand capture. Meta or TikTok for demand creation. LinkedIn for B2B precision. Do not run all of them at once until you have proven any of them. Detail in `references/channel-decision-matrix.md`.
+The decision rule. Start with the channel where intent matches your offer. Search for high-intent demand capture. Meta or TikTok for demand creation. LinkedIn for B2B precision. Do not run all of them at once until you have proven any of them. Detail in [`references/channel-decision-matrix.md`](references/channel-decision-matrix.md).
 
 ---
 
@@ -78,7 +78,7 @@ Four splits operate at the same time. Get them all right and the budget compound
 
 Budget pacing matters too. Front-load some weeks to test creative aggressively. Back-load others to capture seasonality (holiday, end-of-quarter, category-specific moments). Do not run flat; flat budgets miss the demand peaks.
 
-Detail and templates in `references/budget-allocation-templates.md`.
+Detail and templates in [`references/budget-allocation-templates.md`](references/budget-allocation-templates.md).
 
 ---
 
@@ -94,7 +94,7 @@ Three audience types. Treat them as separate strategies.
 
 Common mistakes. Prospecting too narrow (not enough audience for the platform to optimize). Retargeting too aggressive (cannibalizing organic conversions). No exclusions (paying to advertise to your own paying customers). Lookalikes off the wrong source (use top-LTV customers, not all customers).
 
-Detail in `references/audience-segmentation-patterns.md`.
+Detail in [`references/audience-segmentation-patterns.md`](references/audience-segmentation-patterns.md).
 
 ---
 
@@ -116,7 +116,7 @@ Bid strategy depends on data state. New campaigns need a different strategy than
 
 The progression for new campaigns: start manual or maximize conversions to gather data, switch to tCPA or tROAS once you have 30+ conversions, revisit periodically.
 
-Common mistakes. Using tCPA before you have 30+ conversions (no data to optimize against). Setting tROAS too aggressively (platform throttles delivery). Switching strategies too often (each change resets the learning phase). Detail in `references/bid-strategy-reference.md`.
+Common mistakes. Using tCPA before you have 30+ conversions (no data to optimize against). Setting tROAS too aggressively (platform throttles delivery). Switching strategies too often (each change resets the learning phase). Detail in [`references/bid-strategy-reference.md`](references/bid-strategy-reference.md).
 
 ---
 
@@ -132,7 +132,7 @@ For each major platform, the campaign types and when to use them.
 
 **TikTok.** In-Feed, TopView, Spark Ads, Branded Hashtag Challenge. Spark Ads (boost organic posts) outperform pure paid creative because they retain organic-feel signal. Use Spark when you have organic posts performing.
 
-Detail per platform in `references/campaign-type-reference.md`.
+Detail per platform in [`references/campaign-type-reference.md`](references/campaign-type-reference.md).
 
 ---
 
@@ -190,13 +190,13 @@ The trap. Platform-reported conversions are inflated by view-through attribution
 
 The discipline. Single source of truth in your warehouse or analytics platform. Report against that for incrementality decisions. Use platform metrics for in-flight optimization only. The deeper interpretation work belongs in `ads-performance-analytics` (forthcoming); this skill names the trap so you do not optimize against the wrong number.
 
-Per-platform reporting quirks in `references/ads-platform-comparison.md`.
+Per-platform reporting quirks in [`references/ads-platform-comparison.md`](references/ads-platform-comparison.md).
 
 ---
 
 ## Common failures
 
-Twelve patterns recur across paid media work. The short version. Detail in `references/common-failures.md`.
+Twelve patterns recur across paid media work. The short version. Detail in [`references/common-failures.md`](references/common-failures.md).
 
 - "We are scaling but CAC went up." Saturation on the primary audience. Expand the audience or diversify the channel mix.
 - "Conversions look fine in the platform, terrible in revenue." Attribution mismatch plus customer quality, not just count. The platform is selecting low-LTV converters because they are easier to find.

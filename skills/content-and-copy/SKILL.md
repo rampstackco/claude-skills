@@ -214,5 +214,5 @@ category: [category]
 
 ## Reference files
 
-- `references/content-brief-template.md` - The brief that should exist before any content is written.
-- `references/content-edit-checklist.md` - Pre-publish editing checklist.
+- [`references/content-brief-template.md`](references/content-brief-template.md) - The brief that should exist before any content is written.
+- [`references/content-edit-checklist.md`](references/content-edit-checklist.md) - Pre-publish editing checklist.

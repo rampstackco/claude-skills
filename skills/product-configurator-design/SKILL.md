@@ -57,7 +57,7 @@ Before designing the configurator, decide whether a configurator is the right an
 
 The decision is not "should we have a configurator"; it is "is the configurator the right tool for this product and audience."
 
-Detail in `references/configurator-decision-criteria.md`.
+Detail in [`references/configurator-decision-criteria.md`](references/configurator-decision-criteria.md).
 
 ---
 
@@ -97,7 +97,7 @@ The starting point.
 
 **The cure.** Default-heavy. The user adjusts; never builds from zero.
 
-Detail in `references/default-configuration-design.md`.
+Detail in [`references/default-configuration-design.md`](references/default-configuration-design.md).
 
 ---
 
@@ -124,7 +124,7 @@ Preventing invalid combinations; surfacing why.
 
 **The under-constrained trap.** User builds configuration that fails at checkout or fulfillment.
 
-Detail in `references/constraint-logic-patterns.md`.
+Detail in [`references/constraint-logic-patterns.md`](references/constraint-logic-patterns.md).
 
 ---
 
@@ -151,7 +151,7 @@ Pricing that responds to choices.
 
 **The cure.** Price visible throughout. No surprises at checkout.
 
-Detail in `references/real-time-pricing-patterns.md`.
+Detail in [`references/real-time-pricing-patterns.md`](references/real-time-pricing-patterns.md).
 
 ---
 
@@ -177,7 +177,7 @@ When the configurator catches invalid input.
 
 **The validation-loose trap.** Configurator accepts inputs that fail downstream.
 
-Detail in `references/validation-and-error-patterns.md`.
+Detail in [`references/validation-and-error-patterns.md`](references/validation-and-error-patterns.md).
 
 ---
 
@@ -205,7 +205,7 @@ Configurations users return to or send to others.
 - B2B configurations often need stakeholder review.
 - Returning users continue rather than restart.
 
-Detail in `references/save-and-share-mechanics.md`.
+Detail in [`references/save-and-share-mechanics.md`](references/save-and-share-mechanics.md).
 
 ---
 
@@ -225,13 +225,13 @@ When the user commits.
 
 **The cure.** Handoff loop closed. Configuration visible in cart; price matches; edits possible.
 
-Detail in `references/configurator-to-cart-handoff.md`.
+Detail in [`references/configurator-to-cart-handoff.md`](references/configurator-to-cart-handoff.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-configurator-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-configurator-failures.md`](references/common-configurator-failures.md).
 
 - "Users abandon halfway through configuration." Likely infinite-options pattern; too many decisions.
 - "Configurator generates valid-looking configs that fail at fulfillment." Under-constrained; constraint logic missing.

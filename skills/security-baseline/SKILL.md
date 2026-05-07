@@ -293,4 +293,4 @@ A security baseline document includes:
 
 ## Reference files
 
-- `references/headers-checklist.md`: A copy-paste checklist of recommended security headers with example values, organized by tier of importance.
+- [`references/headers-checklist.md`](references/headers-checklist.md): A copy-paste checklist of recommended security headers with example values, organized by tier of importance.

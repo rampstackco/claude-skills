@@ -197,9 +197,9 @@ The spec is decision material. The next step after delivery is selection plus pr
 
 ## Reference files
 
-- `references/architectures-explained.md`. The 5 mark architectures with examples, when each fits, when each fails, and how to combine them in a primary plus fallback hierarchy.
-- `references/typographic-registers.md`. The typographic registers with named typefaces, category-fit notes, and example brands per register.
-- `references/symbol-approaches.md`. The 5 symbol approaches with pattern examples, calibrating the agent's vocabulary for symbol generation.
-- `references/application-contexts.md`. The contexts every logo must pass, with constraint specs (favicon size, embroidery color count, single-color rules, motion entry recommendations).
-- `references/category-conventions.md`. A survey of common conventions across major brand categories, with defaults that work, conventions worth honoring, conventions worth breaking for positioning, and category-specific application contexts.
-- `references/example-variant-spec.md`. A complete example showing all nine per-variant fields filled in for a representative project.
+- [`references/architectures-explained.md`](references/architectures-explained.md). The 5 mark architectures with examples, when each fits, when each fails, and how to combine them in a primary plus fallback hierarchy.
+- [`references/typographic-registers.md`](references/typographic-registers.md). The typographic registers with named typefaces, category-fit notes, and example brands per register.
+- [`references/symbol-approaches.md`](references/symbol-approaches.md). The 5 symbol approaches with pattern examples, calibrating the agent's vocabulary for symbol generation.
+- [`references/application-contexts.md`](references/application-contexts.md). The contexts every logo must pass, with constraint specs (favicon size, embroidery color count, single-color rules, motion entry recommendations).
+- [`references/category-conventions.md`](references/category-conventions.md). A survey of common conventions across major brand categories, with defaults that work, conventions worth honoring, conventions worth breaking for positioning, and category-specific application contexts.
+- [`references/example-variant-spec.md`](references/example-variant-spec.md). A complete example showing all nine per-variant fields filled in for a representative project.

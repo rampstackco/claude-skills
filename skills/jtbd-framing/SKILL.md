@@ -76,7 +76,7 @@ The canonical structure: "When [situation], I want to [motivation], so I can [ou
 
 The structure forces specificity at all three levels. Vague situations, vague motivations, or vague outcomes produce job statements that drive nothing.
 
-Detail in `references/job-statement-structure-patterns.md`.
+Detail in [`references/job-statement-structure-patterns.md`](references/job-statement-structure-patterns.md).
 
 ---
 
@@ -92,7 +92,7 @@ Jobs become visible at struggling moments: when the user's current solution is f
 
 **The pitfall.** Teams that interview without grounding in specific moments produce abstracted job descriptions that cannot drive decisions. "Users want to be more productive" is not a struggling moment; "I lost an hour on Tuesday assembling the board metrics from three different dashboards because none of them had the slice I needed" is.
 
-Detail in `references/identifying-struggling-moments.md`.
+Detail in [`references/identifying-struggling-moments.md`](references/identifying-struggling-moments.md).
 
 ---
 
@@ -122,7 +122,7 @@ Why users adopt a product (hire), why they switch away (fire). The two questions
 
 **The methodology.** Customer interviews surface hire/fire through specific prompts: "What were you doing before you adopted X?" "What made you switch?" "If you switched away from X tomorrow, what would the trigger be?" Recent switch decisions are particularly rich; users remember the specific moment.
 
-Detail in `references/hire-and-fire-criteria.md`.
+Detail in [`references/hire-and-fire-criteria.md`](references/hire-and-fire-criteria.md).
 
 ---
 
@@ -156,7 +156,7 @@ Jobs have three dimensions. Strong JTBD work surfaces all three; weak work treat
 
 **The discipline.** For each job statement, ask the three dimensions explicitly. Most early job statements are functional-only; the addition of emotional and social often reveals what the product actually needs to address.
 
-Detail in `references/functional-emotional-social-dimensions.md`.
+Detail in [`references/functional-emotional-social-dimensions.md`](references/functional-emotional-social-dimensions.md).
 
 ---
 
@@ -187,21 +187,21 @@ The three modes where JTBD genuinely contributes.
 
 **Discovery.** Structure interviews around recent struggling moments, hire decisions, and fire decisions. Gather job statements after the interviews from the data, not before. Cluster jobs across users. Name jobs from the clusters. Pair with `discovery-research-synthesis` for the broader synthesis discipline.
 
-Detail in `references/applying-jtbd-to-discovery.md`.
+Detail in [`references/applying-jtbd-to-discovery.md`](references/applying-jtbd-to-discovery.md).
 
 **Prioritization.** When evaluating roadmap candidates, frame each candidate by the job(s) it addresses. Ask: which jobs is the product currently doing badly? Which candidates address those jobs vs adjacent or unrelated work? Pair with `roadmap-planning` for the broader prioritization discipline.
 
-Detail in `references/applying-jtbd-to-prioritization.md`.
+Detail in [`references/applying-jtbd-to-prioritization.md`](references/applying-jtbd-to-prioritization.md).
 
 **Positioning.** When articulating what the product is for, lead with the job rather than the features. "Help product teams synthesize discovery research into decisions" is a job framing; "AI-powered research synthesis with collaboration tools" is a feature framing. Pair with `creative-direction` and `brand-discovery` for the broader positioning work.
 
-Detail in `references/applying-jtbd-to-positioning.md`.
+Detail in [`references/applying-jtbd-to-positioning.md`](references/applying-jtbd-to-positioning.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-jtbd-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-jtbd-failures.md`](references/common-jtbd-failures.md).
 
 - "We did the JTBD workshop but nothing changed in our roadmap." Job-statement workshop as deliverable; no analytical work after the workshop.
 - "Our job statements all sound the same." Generic job statements; not grounded in specific struggling moments. Re-ground in interview data.

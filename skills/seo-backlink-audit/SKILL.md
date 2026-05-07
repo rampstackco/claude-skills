@@ -122,7 +122,7 @@ Healthy signal: the gap is shrinking over time. A widening gap is a strategic ri
 2. **Pull baseline data.** Referring domains, anchor text, link types, lost links, competitor overlap.
 3. **Map the profile across 5 dimensions.** One section per dimension.
 4. **Identify red flags.** Velocity spikes, anchor concentration, low-DR concentration, suspect TLDs, repeated footprints.
-5. **Build the toxic list (if needed).** Use the criteria in `references/toxic-link-criteria.md`.
+5. **Build the toxic list (if needed).** Use the criteria in [`references/toxic-link-criteria.md`](references/toxic-link-criteria.md).
 6. **Build the reclamation list.** Lost links worth recovering via outreach.
 7. **Build the gap list.** Domains linking to peers, prioritized by relevance.
 8. **Synthesize.** Profile health verdict, top 3 risks, top 3 opportunities.
@@ -163,4 +163,4 @@ Length: 8-15 pages depending on profile complexity.
 
 ## Reference files
 
-- `references/toxic-link-criteria.md` - Decision framework for classifying a link as toxic, including the disavow file format and threshold guidance.
+- [`references/toxic-link-criteria.md`](references/toxic-link-criteria.md) - Decision framework for classifying a link as toxic, including the disavow file format and threshold guidance.

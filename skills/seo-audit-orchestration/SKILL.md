@@ -120,7 +120,7 @@ Tie each theme to a measurable target (organic clicks, ranked keywords in target
 
 ### Phase 6: Deliver
 
-Produce the rollup report. See `references/audit-rollup-template.md`.
+Produce the rollup report. See [`references/audit-rollup-template.md`](references/audit-rollup-template.md).
 
 Structure:
 
@@ -179,4 +179,4 @@ Total length: 15-30 pages including appendices. Executive summary readable in 5 
 
 ## Reference files
 
-- `references/audit-rollup-template.md` - Template for the rollup report including executive summary, theme structure, and roadmap format.
+- [`references/audit-rollup-template.md`](references/audit-rollup-template.md) - Template for the rollup report including executive summary, theme structure, and roadmap format.

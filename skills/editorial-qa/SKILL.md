@@ -70,7 +70,7 @@ The brief-adherence check is the cheapest, fastest, highest-value QA gate. It ru
 
 If briefs are vague, this check is impossible. Fix briefs first; the QA process cannot enforce a contract that does not exist.
 
-Detail in `references/brief-adherence-checklist.md`.
+Detail in [`references/brief-adherence-checklist.md`](references/brief-adherence-checklist.md).
 
 ---
 
@@ -86,7 +86,7 @@ Does the piece sound like the brand?
 
 For AI-co-authored pieces, voice drift is the dominant failure mode. AI assistants regress to a model-default voice unless the writer actively pulls them back. The QA check needs to read for the brand voice as much as for the words.
 
-Detail in `references/voice-consistency-patterns.md`.
+Detail in [`references/voice-consistency-patterns.md`](references/voice-consistency-patterns.md).
 
 ---
 
@@ -109,7 +109,7 @@ Citation discipline:
 - Avoid citing other content marketing pages (citation laundering).
 - Date the source; sources older than 3 years for fast-moving topics need refresh.
 
-Detail in `references/fact-accuracy-and-citation-discipline.md`.
+Detail in [`references/fact-accuracy-and-citation-discipline.md`](references/fact-accuracy-and-citation-discipline.md).
 
 ---
 
@@ -124,7 +124,7 @@ Does the piece work as a piece?
 - **Specificity vs abstraction.** Claims are concrete, not vague.
 - **Endings.** Piece concludes with something specific (action, question, idea), not throat-clearing filler.
 
-Detail in `references/structure-and-clarity-review.md`.
+Detail in [`references/structure-and-clarity-review.md`](references/structure-and-clarity-review.md).
 
 ---
 
@@ -163,7 +163,7 @@ The QA check that did not exist as prominently 2 years ago. AI-co-authored conte
 
 The audit shape. Read with these patterns top-of-mind. Flag any match. The bar is not "AI was used" (it almost always is now); the bar is "would a careful human editor have shipped this." If the patterns above are present, the piece needs another revision pass with the patterns called out.
 
-Detail in `references/ai-content-audit-patterns.md`.
+Detail in [`references/ai-content-audit-patterns.md`](references/ai-content-audit-patterns.md).
 
 ---
 
@@ -190,7 +190,7 @@ Does the piece serve search engines AND answer engines?
 - Named entities (experts, methods, tools) consistently mentioned (entity coverage signals)
 - Distinctive POV that is attributable to the brand
 
-Detail in `references/seo-aeo-compliance-checklist.md`.
+Detail in [`references/seo-aeo-compliance-checklist.md`](references/seo-aeo-compliance-checklist.md).
 
 ---
 
@@ -210,7 +210,7 @@ Detail in `references/seo-aeo-compliance-checklist.md`.
 - Schema validates against schema.org definitions (no missing required fields, no malformed JSON-LD)
 - Schema is consistent with on-page content (do not claim 5-star rating in schema if no rating on page)
 
-Detail in `references/internal-linking-and-schema-validation.md`.
+Detail in [`references/internal-linking-and-schema-validation.md`](references/internal-linking-and-schema-validation.md).
 
 ---
 
@@ -247,7 +247,7 @@ For pieces shipping at programmatic-SEO scale (100s to 100,000s of pages), full-
 - Fix the template OR data quality issue before resuming
 - Document the threshold breach in the QA log so patterns become visible
 
-Detail in `references/qa-at-scale-patterns.md`.
+Detail in [`references/qa-at-scale-patterns.md`](references/qa-at-scale-patterns.md).
 
 ---
 
@@ -267,13 +267,13 @@ Ownership and sequencing.
 
 **Escalation.** When QA finds a pattern (multiple pieces failing the same check), escalate to the brief author, the writer, or the editorial process owner. Pattern signals process problem, not just per-piece problem.
 
-Detail in `references/qa-workflow-templates.md`.
+Detail in [`references/qa-workflow-templates.md`](references/qa-workflow-templates.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-qa-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-qa-failures.md`](references/common-qa-failures.md).
 
 - "Our QA process is a 47-item checklist nobody completes." Checkbox theater; cut to the checks that earned their keep.
 - "We caught zero problems in QA last quarter." Either the process is broken or the writers are extraordinary; investigate.

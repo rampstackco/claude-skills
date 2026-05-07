@@ -50,7 +50,7 @@ Total sample size required (across both groups) for a two-sided test, alpha 0.05
 - Four weeks supports ~2 percent absolute lift
 - Six weeks supports ~1.5 percent absolute lift
 
-Beyond six weeks the test runs into seasonality and product-evolution problems described in SKILL.md. If the change you want to test would only produce a 1 percent absolute lift and your traffic supports 5 percent MDE in a reasonable window, the test is not worth running. Pick a bigger change.
+Beyond six weeks the test runs into seasonality and product-evolution problems described in [SKILL.md](../SKILL.md). If the change you want to test would only produce a 1 percent absolute lift and your traffic supports 5 percent MDE in a reasonable window, the test is not worth running. Pick a bigger change.
 
 ---
 

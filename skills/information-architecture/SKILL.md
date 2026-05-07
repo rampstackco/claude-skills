@@ -210,7 +210,7 @@ What you call things.
 5. **Design navigation.** Primary, secondary, utility, footer, breadcrumbs.
 6. **Build taxonomy.** Categories (controlled, small) and tags (open, large).
 7. **Validate labels.** Tree test or closed card sort with target users.
-8. **Document.** Use the template in `references/ia-document-template.md`.
+8. **Document.** Use the template in [`references/ia-document-template.md`](references/ia-document-template.md).
 9. **Hand off to design and development.** IA decisions inform navigation components, URL routing, and taxonomy implementation.
 
 ---
@@ -250,5 +250,5 @@ Visual deliverables:
 
 ## Reference files
 
-- `references/ia-document-template.md` - Template for the IA deliverable.
-- `references/url-pattern-library.md` - URL pattern conventions for common content types.
+- [`references/ia-document-template.md`](references/ia-document-template.md) - Template for the IA deliverable.
+- [`references/url-pattern-library.md`](references/url-pattern-library.md) - URL pattern conventions for common content types.

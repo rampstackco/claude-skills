@@ -199,5 +199,5 @@ These feed directly into `brand-style-guide`.
 
 ## Reference files
 
-- `references/identity-system-spec.md` - Detailed spec template for documenting each element.
-- `references/contrast-and-accessibility.md` - Accessibility checks for color and type, with the math.
+- [`references/identity-system-spec.md`](references/identity-system-spec.md) - Detailed spec template for documenting each element.
+- [`references/contrast-and-accessibility.md`](references/contrast-and-accessibility.md) - Accessibility checks for color and type, with the math.

@@ -233,4 +233,4 @@ Structure:
 
 ## Reference files
 
-- `references/runbook-template.md` - Fillable runbook template with example cutover sequences.
+- [`references/runbook-template.md`](references/runbook-template.md) - Fillable runbook template with example cutover sequences.

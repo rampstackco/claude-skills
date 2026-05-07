@@ -169,7 +169,7 @@ Idea → Brief → Outline → Draft → Edit → Review → Publish → Measure
 4. **Choose formats.** 3 to 5 formats the program returns to consistently.
 5. **Build the calendar.** Cadence, pillar rotation, format mix, flex slots.
 6. **Set up governance.** Roles, workflow, quality bar, lifecycle rules.
-7. **Document.** Use the template in `references/content-strategy-template.md`.
+7. **Document.** Use the template in [`references/content-strategy-template.md`](references/content-strategy-template.md).
 8. **Operationalize.** Set up the editorial calendar in whatever tool the team uses (CMS, Notion, Airtable, etc.).
 
 ---
@@ -207,5 +207,5 @@ Editorial calendar (separate, ongoing):
 
 ## Reference files
 
-- `references/content-strategy-template.md` - Strategy document template.
-- `references/editorial-calendar-template.md` - Spreadsheet column definitions and calendar structure.
+- [`references/content-strategy-template.md`](references/content-strategy-template.md) - Strategy document template.
+- [`references/editorial-calendar-template.md`](references/editorial-calendar-template.md) - Spreadsheet column definitions and calendar structure.

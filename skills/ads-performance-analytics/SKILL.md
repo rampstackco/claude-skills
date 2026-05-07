@@ -56,7 +56,7 @@ Every platform's dashboard is optimized to make the platform look effective. Thi
 
 **Self-attribution bias.** Every platform's pixel fires on conversion and the platform claims credit. If you ran Meta, Google, and TikTok in the same week, all three platforms report your conversions as theirs. Sum-of-platforms is always greater than 100% of actual conversions.
 
-The discipline. Never report platform-reported numbers as fact in board decks. Always reconcile against the single source of truth (warehouse, GA4, or unified analytics platform). Detail in `references/platform-reporting-quirks.md`.
+The discipline. Never report platform-reported numbers as fact in board decks. Always reconcile against the single source of truth (warehouse, GA4, or unified analytics platform). Detail in [`references/platform-reporting-quirks.md`](references/platform-reporting-quirks.md).
 
 ---
 
@@ -86,7 +86,7 @@ Practical guidance.
 - Mid-stage. Data-driven attribution from Google plus GA4, with explicit awareness vs closing channel labeling.
 - Mature. MMM as the canonical incremental reference. MTA for in-flight optimization. Last-click for channel-level decisions where ambiguity is acceptable.
 
-Detail and a decision matrix in `references/attribution-model-comparison.md`.
+Detail and a decision matrix in [`references/attribution-model-comparison.md`](references/attribution-model-comparison.md).
 
 ---
 
@@ -103,7 +103,7 @@ The reconciliation pattern.
 - Never trust platform sums.
 - Compute blended CAC as (total ad spend across platforms) divided by (total new customers from warehouse). Not from platform reports.
 
-The board-deck pattern. Report warehouse-attributed conversion counts, never platform-summed. Report blended CAC, not channel-by-channel CAC unless explicitly noted as platform-self-attributed. Detail and templates in `references/dashboard-reconciliation-patterns.md`.
+The board-deck pattern. Report warehouse-attributed conversion counts, never platform-summed. Report blended CAC, not channel-by-channel CAC unless explicitly noted as platform-self-attributed. Detail and templates in [`references/dashboard-reconciliation-patterns.md`](references/dashboard-reconciliation-patterns.md).
 
 ---
 
@@ -137,7 +137,7 @@ Three cohort cuts that matter for paid media.
 
 **By acquisition campaign.** Campaign-level cohort signals. Useful for diagnosing why a campaign that "works" in week 1 produces no recurring revenue.
 
-The signal to act on. Declining cohort LTV over two consecutive months is the alarm. Pause the channel or campaign before the daily metrics force you to. Detail in `references/cohort-analysis-templates.md`.
+The signal to act on. Declining cohort LTV over two consecutive months is the alarm. Pause the channel or campaign before the daily metrics force you to. Detail in [`references/cohort-analysis-templates.md`](references/cohort-analysis-templates.md).
 
 ---
 
@@ -174,7 +174,7 @@ Four methods.
 
 **PSA tests.** Serve some users a public service announcement instead of your ad. Compare conversion rates. Useful for legacy brands with deep budget.
 
-Incremental rate ranges by channel type are in `references/incrementality-testing-playbook.md`. The discipline is to run incrementality tests at least quarterly on the highest-spend channels. Without them, you are optimizing against platform-reported attribution that systematically overcounts.
+Incremental rate ranges by channel type are in [`references/incrementality-testing-playbook.md`](references/incrementality-testing-playbook.md). The discipline is to run incrementality tests at least quarterly on the highest-spend channels. Without them, you are optimizing against platform-reported attribution that systematically overcounts.
 
 ---
 
@@ -214,7 +214,7 @@ A worked example. A retargeting campaign in Meta showed 3.5x ROAS for six months
 
 ## Common interpretation failures
 
-Twelve patterns recur in paid media reporting work. Detail in `references/common-interpretation-failures.md`.
+Twelve patterns recur in paid media reporting work. Detail in [`references/common-interpretation-failures.md`](references/common-interpretation-failures.md).
 
 - "ROAS dropped 20% week over week, kill the campaign." Could be noise. Pre-commit a test window before acting on weekly variance.
 - "Meta says 500 conversions, my warehouse says 200, who is right?" Both are wrong; warehouse is closer to truth, Meta self-attributes. Reconcile, do not pick a winner.

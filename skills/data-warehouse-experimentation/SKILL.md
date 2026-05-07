@@ -53,7 +53,7 @@ Five factors push toward platform.
 4. **Mobile experimentation.** SDK-based assignment with offline support is the platform's job, not the warehouse's.
 5. **Out-of-the-box sequential testing with strict guarantees.** Statsig and Eppo ship mSPRT with calibrated alpha-spending. Building this in-house is real work.
 
-Detail and a decision tree in `references/warehouse-vs-platform-decision.md`. Many mature teams use both; warehouse-native for the hard cases, platform for fast iteration on standard experiments.
+Detail and a decision tree in [`references/warehouse-vs-platform-decision.md`](references/warehouse-vs-platform-decision.md). Many mature teams use both; warehouse-native for the hard cases, platform for fast iteration on standard experiments.
 
 ---
 
@@ -108,7 +108,7 @@ WHERE eligible = true;
 
 Less common; useful when the eligibility set is fixed at experiment start and you want assignment to be deterministic and explicit (e.g., for compliance audit). The downside: new users joining mid-experiment are not in the table; either skip them or fall back to hash assignment.
 
-The deterministic hash approach is the default for warehouse-native because it requires no service dependency and produces stable, auditable assignments. Detail in `references/assignment-and-exposure-patterns.md`.
+The deterministic hash approach is the default for warehouse-native because it requires no service dependency and produces stable, auditable assignments. Detail in [`references/assignment-and-exposure-patterns.md`](references/assignment-and-exposure-patterns.md).
 
 ---
 
@@ -134,7 +134,7 @@ Worked example. The treatment shows a new pricing page; the control shows the ol
 
 The "always-fire" trap. Some implementations fire exposure on every variant-specific interaction. The user clicks the button five times; exposure fires five times. The exposure log is now five times larger than it should be, and analysis tools that count distinct user_ids in exposure handle this correctly while tools that count rows do not.
 
-The discipline. Fire exactly one exposure event per user per experiment, at the moment of first variant-specific exposure. Use a deterministic flag in the client (or a server-side cache) to enforce single-fire. Detail in `references/assignment-and-exposure-patterns.md`.
+The discipline. Fire exactly one exposure event per user per experiment, at the moment of first variant-specific exposure. Use a deterministic flag in the client (or a server-side cache) to enforce single-fire. Detail in [`references/assignment-and-exposure-patterns.md`](references/assignment-and-exposure-patterns.md).
 
 ---
 
@@ -164,7 +164,7 @@ The experiment analysis joins this to the exposure log on `user_id` and computes
 
 The variance discipline. The same metric definition is used in board dashboards AND in experiment analysis. No "experiment-specific revenue calculation" that is slightly different. Otherwise you get the "the experiment said the revenue lifted but the board did not move" problem, which is almost always a metric-definition mismatch.
 
-The namespace pattern. Use `exp_metrics_*` for experiment-shaped models that group by `user_id` and produce one row per user. Use `fct_*` for the underlying fact tables that feed both metric models and dashboards. Detail in `references/metric-definitions-in-dbt.md`.
+The namespace pattern. Use `exp_metrics_*` for experiment-shaped models that group by `user_id` and produce one row per user. Use `fct_*` for the underlying fact tables that feed both metric models and dashboards. Detail in [`references/metric-definitions-in-dbt.md`](references/metric-definitions-in-dbt.md).
 
 ---
 
@@ -202,7 +202,7 @@ Convert the t-statistic to a p-value or confidence interval using a SQL function
 
 The SQL pattern is fine for simple t-tests on continuous metrics. For proportions tests, swap variance for `p * (1 - p)`. For non-parametric tests (Mann-Whitney), the SQL gets ugly fast; switch to Python.
 
-Anything more complex than a simple t-test (CUPED, bootstrap, doubly robust estimation, sequential testing) is easier in Python. Use SQL for the SUM-and-AVG aggregations; ship the result to Python for the statistical math. Detail in `references/statistical-analysis-templates.md`.
+Anything more complex than a simple t-test (CUPED, bootstrap, doubly robust estimation, sequential testing) is easier in Python. Use SQL for the SUM-and-AVG aggregations; ship the result to Python for the statistical math. Detail in [`references/statistical-analysis-templates.md`](references/statistical-analysis-templates.md).
 
 ---
 
@@ -241,7 +241,7 @@ Python gives you access to the full statistical ecosystem (`scipy`, `statsmodels
 
 The notebook pattern. One notebook per experiment, parameterized by `experiment_id`. Version-controlled in git or as Hex projects. Each notebook produces a written-up decision document at the end, archived in a queryable repository (Notion, GitHub markdown, or a dedicated experiment-results table in the warehouse).
 
-Detail and bootstrap templates in `references/statistical-analysis-templates.md`.
+Detail and bootstrap templates in [`references/statistical-analysis-templates.md`](references/statistical-analysis-templates.md).
 
 ---
 
@@ -272,7 +272,7 @@ Other variance reduction techniques.
 - **Regression adjustment.** Fit an OLS regression with covariates; the residual analysis has lower variance. Generalizes CUPED to multiple covariates.
 - **Doubly robust estimation.** Combines outcome modeling and propensity-score weighting. Useful in observational and quasi-experimental settings where randomization was imperfect. Outside the scope of typical A/B tests; pointer to academic references in the variance-reduction reference file.
 
-Detail with worked examples in `references/variance-reduction-techniques.md`.
+Detail with worked examples in [`references/variance-reduction-techniques.md`](references/variance-reduction-techniques.md).
 
 ---
 
@@ -304,7 +304,7 @@ The "we need 10x more users than we thought" lesson. Most underpowered experimen
 
 The fix. Use the historical distribution of past experiments' observed effects to set realistic MDE expectations. If the median observed effect across the last 30 experiments is 0.5%, plan for a 0.5% MDE on new experiments. The optimism asymmetry is real; correcting it requires looking at the actual distribution of effects, not the wished-for distribution.
 
-Detail in `references/power-analysis-calculations.md`.
+Detail in [`references/power-analysis-calculations.md`](references/power-analysis-calculations.md).
 
 ---
 
@@ -322,13 +322,13 @@ For warehouse-native, the practical recommendation is mSPRT in Python. Document 
 
 The honest version. If you do not have someone on the team who understands sequential testing math, just do not peek. Pre-register sample size, run to completion, analyze once. Sequential testing is statistically correct only when implemented correctly; an incorrect implementation is worse than no peeking discipline at all.
 
-Detail in `references/sequential-testing-patterns.md`.
+Detail in [`references/sequential-testing-patterns.md`](references/sequential-testing-patterns.md).
 
 ---
 
 ## Common pitfalls
 
-Eleven patterns recur in warehouse-native experimentation. Detail in `references/common-pitfalls.md`.
+Eleven patterns recur in warehouse-native experimentation. Detail in [`references/common-pitfalls.md`](references/common-pitfalls.md).
 
 - "Our exposure log fires at page load." Should fire when the variant-specific behavior is shown, not at page load. The "delayed exposure" trap dilutes the effect.
 - "We see lift in control, not treatment." Assignment-hash collision or salt reuse. Audit the salt; check that different experiments produce different bucket assignments for the same user.

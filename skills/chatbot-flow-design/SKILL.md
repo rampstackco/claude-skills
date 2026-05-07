@@ -57,7 +57,7 @@ Before designing the chatbot, decide whether a chatbot is the right tool.
 
 The decision is not "should we have a chatbot"; it is "is the chatbot the right tool for this specific audience and conversation."
 
-Detail in `references/chatbot-decision-criteria.md`.
+Detail in [`references/chatbot-decision-criteria.md`](references/chatbot-decision-criteria.md).
 
 ---
 
@@ -91,7 +91,7 @@ Defining what the bot can and cannot handle.
 
 **Intent maintenance.** Intents drift as products evolve, audiences shift, and conversations change. Periodic review surfaces which intents are useful and which need refining.
 
-Detail in `references/intent-architecture-patterns.md`.
+Detail in [`references/intent-architecture-patterns.md`](references/intent-architecture-patterns.md).
 
 ---
 
@@ -112,7 +112,7 @@ The bot's responses must come from real knowledge, not made-up confidence.
 
 **The structured-guided win.** Grounded answers. The bot's responses match the source-of-truth. Customer-facing accuracy is maintained.
 
-Detail in `references/knowledge-base-grounding-patterns.md`.
+Detail in [`references/knowledge-base-grounding-patterns.md`](references/knowledge-base-grounding-patterns.md).
 
 ---
 
@@ -133,7 +133,7 @@ How the bot adapts the conversation based on user input.
 
 **Branching limits.** Bots that branch too deeply lose users. 3-5 turns is often the practical limit before the user wants resolution.
 
-Detail in `references/branching-and-conditional-logic.md`.
+Detail in [`references/branching-and-conditional-logic.md`](references/branching-and-conditional-logic.md).
 
 ---
 
@@ -154,7 +154,7 @@ What happens when intent is unclear or out-of-scope.
 
 **The fallback-as-honesty principle.** A bot that admits it does not know earns more trust than a bot that fakes confidence. Audiences forgive limitations they were told about; audiences punish wrong answers they were given confidently.
 
-Detail in `references/fallback-pattern-design.md`.
+Detail in [`references/fallback-pattern-design.md`](references/fallback-pattern-design.md).
 
 ---
 
@@ -176,7 +176,7 @@ When, how, with what context handoff.
 
 **The escalation-quality test.** Does the human pick up the context smoothly, or do they have to ask the user to repeat everything? The latter signals broken handoff.
 
-Detail in `references/escalation-to-human-patterns.md`.
+Detail in [`references/escalation-to-human-patterns.md`](references/escalation-to-human-patterns.md).
 
 ---
 
@@ -201,13 +201,13 @@ Measuring what the bot is and is not doing well.
 - High escalation rate per intent: the intent may not be appropriate for bot handling.
 - High repeat-fallback within conversations: clarifying questions not landing; redesign clarification.
 
-Detail in `references/conversation-analytics-patterns.md`.
+Detail in [`references/conversation-analytics-patterns.md`](references/conversation-analytics-patterns.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-chatbot-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-chatbot-failures.md`](references/common-chatbot-failures.md).
 
 - "Bot makes up answers about pricing." Hallucinating-bot pattern; no grounding to pricing source-of-truth.
 - "Users say the bot is rigid and unhelpful." Scripted-bot pattern; intents do not cover real questions.

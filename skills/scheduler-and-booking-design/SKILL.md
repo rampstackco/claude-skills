@@ -56,7 +56,7 @@ Before designing the scheduler, decide whether a scheduler is the right tool.
 
 The decision is not "should we have a scheduler"; it is "is the scheduler the right next investment for this audience and goal."
 
-Detail in `references/scheduler-decision-criteria.md`.
+Detail in [`references/scheduler-decision-criteria.md`](references/scheduler-decision-criteria.md).
 
 ---
 
@@ -97,7 +97,7 @@ Which fields earn their place; which create friction.
 
 **The five-field rule.** Most production schedulers work well with 3-5 qualification fields. More than 5 starts producing interrogation-gate dynamics. Less than 3 does not give the rep useful prep context.
 
-Detail in `references/qualification-field-design.md`.
+Detail in [`references/qualification-field-design.md`](references/qualification-field-design.md).
 
 ---
 
@@ -127,7 +127,7 @@ When to use. Most production teams.
 
 **The match-to-rep discipline.** The qualification fields feed routing logic. Routing fails if qualification does not capture routing-relevant data.
 
-Detail in `references/availability-logic-patterns.md`.
+Detail in [`references/availability-logic-patterns.md`](references/availability-logic-patterns.md).
 
 ---
 
@@ -147,7 +147,7 @@ Different reps for different lead types.
 
 **The unrouted lead.** Some leads do not fit obvious routing. Default rule needed: round-robin or specific catchall.
 
-Detail in `references/routing-patterns.md`.
+Detail in [`references/routing-patterns.md`](references/routing-patterns.md).
 
 ---
 
@@ -168,7 +168,7 @@ Briefing the rep before the call.
 
 **Weak prep automation.** The rep has the qualification data but it is buried in a CRM field nobody opens. The rep starts the call cold despite the data.
 
-Detail in `references/prep-automation-patterns.md`.
+Detail in [`references/prep-automation-patterns.md`](references/prep-automation-patterns.md).
 
 ---
 
@@ -186,7 +186,7 @@ The communications around the booking.
 
 **The reminder discipline.** Reminders are useful; over-reminding is friction. Two reminders (24-hour and 1-hour) is typical.
 
-Detail in `references/reminder-sequence-patterns.md`.
+Detail in [`references/reminder-sequence-patterns.md`](references/reminder-sequence-patterns.md).
 
 ---
 
@@ -209,13 +209,13 @@ What happens when meetings do not go to plan.
 
 **The respect-the-no principle.** Prospects who no-show twice often do not want the meeting. Multiple aggressive reschedule attempts feel like pressure.
 
-Detail in `references/reschedule-and-no-show-handling.md`.
+Detail in [`references/reschedule-and-no-show-handling.md`](references/reschedule-and-no-show-handling.md).
 
 ---
 
 ## Common failure modes
 
-Rapid-fire. Diagnoses in `references/common-scheduler-failures.md`.
+Rapid-fire. Diagnoses in [`references/common-scheduler-failures.md`](references/common-scheduler-failures.md).
 
 - "Booking conversion is high; demo conversion to sale is low." Qualification too thin; cold demos do not convert.
 - "Booking conversion is low; demo conversion to sale is high." Interrogation-gate; qualification scares off would-be buyers.

@@ -77,7 +77,7 @@ The foundation.
 
 **Segmentation discipline.** Start with 3-5 audiences and 3 stages. 9-15 cells in the matrix. Some cells may share paths; some may have unique paths. The discipline is naming the segments deliberately rather than treating "everyone" as the audience.
 
-Detail in `references/audience-and-stage-segmentation.md`.
+Detail in [`references/audience-and-stage-segmentation.md`](references/audience-and-stage-segmentation.md).
 
 ---
 
@@ -104,7 +104,7 @@ How visitors land vs how they're routed.
 
 **Worked example.** A visitor arriving via a paid ad about "B2B SaaS pricing" is likely in consideration stage looking for pricing information. The landing page should serve that need (clear pricing, comparison, calculator); the next-step offer should match consideration (demo, talk to sales). Same visitor arriving via an organic blog post about "B2B SaaS pricing strategy" is likely in awareness stage; the landing page should serve education (depth on pricing strategy); the next-step offer should match awareness (subscribe to content, get the framework).
 
-Detail in `references/entry-point-architecture-patterns.md`.
+Detail in [`references/entry-point-architecture-patterns.md`](references/entry-point-architecture-patterns.md).
 
 ---
 
@@ -126,7 +126,7 @@ Which tools serve which entry points.
 
 **The portfolio approach.** A team often has multiple tools serving different segments. The architecture maps each tool to its specific segments and stages.
 
-Detail in `references/tool-to-funnel-mapping.md`.
+Detail in [`references/tool-to-funnel-mapping.md`](references/tool-to-funnel-mapping.md).
 
 ---
 
@@ -152,7 +152,7 @@ Per-segment, per-stage.
 
 **The matched sequence win.** Sequence specific to segment-and-stage. The audience perceives the brand as understanding their situation; conversion compounds.
 
-Detail in `references/nurture-sequence-architecture.md`.
+Detail in [`references/nurture-sequence-architecture.md`](references/nurture-sequence-architecture.md).
 
 ---
 
@@ -173,7 +173,7 @@ Capturing context from tool to tool.
 
 **The integrated-funnel win.** Data flows. The audience experiences continuity; the brand can match content and offers to the audience's specific journey.
 
-Detail in `references/cross-tool-data-flow-patterns.md`.
+Detail in [`references/cross-tool-data-flow-patterns.md`](references/cross-tool-data-flow-patterns.md).
 
 ---
 
@@ -196,7 +196,7 @@ What to measure, what is noise.
 
 **Architecture-level vs tool-level.** Tool-level metrics tell you whether each tool is working; architecture-level metrics tell you whether the tools work together. Both matter; architecture is often the missing measurement.
 
-Detail in `references/funnel-measurement-patterns.md`.
+Detail in [`references/funnel-measurement-patterns.md`](references/funnel-measurement-patterns.md).
 
 ---
 
@@ -226,7 +226,7 @@ When to redesign, when to refine.
 
 The middle ground. Refine continuously; redesign infrequently and deliberately.
 
-Detail in `references/funnel-iteration-discipline.md`.
+Detail in [`references/funnel-iteration-discipline.md`](references/funnel-iteration-discipline.md).
 
 ---
 
@@ -250,7 +250,7 @@ Patterns that look like funnel architecture but degrade conversion.
 
 **The hand-off-broken-funnel.** Tools work individually but the transitions between them break.
 
-Detail in `references/architecture-anti-patterns.md`.
+Detail in [`references/architecture-anti-patterns.md`](references/architecture-anti-patterns.md).
 
 ---
 

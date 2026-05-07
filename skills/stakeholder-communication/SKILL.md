@@ -357,4 +357,4 @@ For individual communications:
 
 ## Reference files
 
-- `references/update-templates.md`: Ready-to-use templates for the most common stakeholder communications, with annotated examples.
+- [`references/update-templates.md`](references/update-templates.md): Ready-to-use templates for the most common stakeholder communications, with annotated examples.

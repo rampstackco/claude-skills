@@ -1,6 +1,6 @@
 # Application contexts
 
-A logo is not a single drawing. It is a system of marks that must work in every context the brand touches. Most logo failure happens because a designer optimized for one context (typically the web header at 200px wide) and never tested the others. This file expands the application contexts in SKILL.md with specific constraint specs, common failure modes, and mitigation patterns. Use it as the working checklist for every variant before declaring a candidate ready for review.
+A logo is not a single drawing. It is a system of marks that must work in every context the brand touches. Most logo failure happens because a designer optimized for one context (typically the web header at 200px wide) and never tested the others. This file expands the application contexts in [SKILL.md](../SKILL.md) with specific constraint specs, common failure modes, and mitigation patterns. Use it as the working checklist for every variant before declaring a candidate ready for review.
 
 The discipline is to design for the smallest, harshest application FIRST, then scale up. Most brand systems do the opposite: they design at the marketing scale and discover at production time that the mark cannot survive its smaller, harsher applications.
 

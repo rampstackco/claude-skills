@@ -227,4 +227,4 @@ Tracking plan structure:
 
 ## Reference files
 
-- `references/event-taxonomy-template.md` - Starter event catalog with patterns for common product types.
+- [`references/event-taxonomy-template.md`](references/event-taxonomy-template.md) - Starter event catalog with patterns for common product types.

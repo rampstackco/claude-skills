@@ -249,4 +249,4 @@ Findings document structure:
 
 ## Reference files
 
-- `references/interview-guide-template.md` - Structured interview guide template with example openings, probes, and closes.
+- [`references/interview-guide-template.md`](references/interview-guide-template.md) - Structured interview guide template with example openings, probes, and closes.
