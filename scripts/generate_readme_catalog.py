@@ -75,6 +75,13 @@ CATEGORIES: list[tuple[str, str, str | None]] = [
     ("operations", "Operations", None),
     ("growth", "Growth", None),
     (
+        "growth-tooling",
+        "Growth tooling",
+        "Interactive web tools that turn visitors into leads. Lead "
+        "magnets, calculators, quizzes, multi-step forms, chatbots, "
+        "and the cross-tool funnel architecture that orchestrates them.",
+    ),
+    (
         "marketing",
         "Marketing",
         "Paid media discipline: strategy, creative, and performance "
