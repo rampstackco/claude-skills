@@ -73,7 +73,7 @@ What you get:
 - **Uniform structure.** Every skill uses the same section order, the same tone, and the same authoring conventions. Predictable in, predictable out.
 - **Composable.** Skills reference each other. `creative-brief` points to `brand-voice`. `incident-response` points to `monitoring-and-alerting`. Each skill's "When NOT to use" tells you which sibling fits your adjacent work.
 
-Highlight categories: brand strategy, design systems, content production, full SEO suite, frontend dev, accessibility, performance, QA, launch and incident ops, growth and CRO, UX research, plus a meta-skill that teaches you to write your own.
+Highlight categories: brand strategy and identity, design systems, content production with full Tier 1 and Tier 2 coverage, full SEO suite (foundation plus Ahrefs MCP-powered audit suite), product management with experimentation and gap-closing tracks, growth tooling for interactive web tools, paid media discipline, frontend dev and accessibility, performance and QA, launch and incident ops, UX research, plus a meta-skill that teaches you to write your own.
 
 ---
 
@@ -200,7 +200,8 @@ For the current API surface, request format, and limits, see the [Agent Skills A
 
 ### Want only a few skills?
 
-You do not have to install all 60. Pick the categories that match your work. The library is modular: each skill stands on its own.
+<!-- TODO: refresh hardcoded count below when catalog crosses next round number -->
+You do not have to install all 98. Pick the categories that match your work. The library is modular: each skill stands on its own.
 
 ---
 
@@ -265,7 +266,66 @@ seo-audit-orchestration
   └── seo-rank-tracking      (ongoing, feeds the others)
 ```
 
-Operations, cross-cutting, and team skills (`stakeholder-communication`, `documentation-strategy`, `vendor-evaluation`, `team-onboarding-playbook`, `dependency-management`, `cost-optimization`, etc.) cut across the lifecycle.
+The catalog also includes four audience tracks that compose alongside the foundational lifecycle. Each track has its own internal flow:
+
+**Paid media (Marketing track):**
+
+```
+paid-media-strategy → ads-creative-development → ads-performance-analytics
+```
+
+Pairs with the paid media platforms in the integrations catalog at rampstack.co (Google Ads, Meta, LinkedIn, TikTok, plus Synter as the multi-platform aggregator).
+
+**Growth tooling (interactive web tools):**
+
+```
+funnel-flow-architecture (orchestrator)
+  ├── lead-magnet-design          (capture)
+  ├── calculator-design           (capture / activate)
+  ├── quiz-and-assessment-design  (capture / activate)
+  ├── multi-step-form-design      (activate)
+  ├── chatbot-flow-design         (activate)
+  ├── onboarding-wizard-design    (activate)
+  ├── interactive-product-tour    (activate / convert)
+  ├── upgrade-flow-design         (convert)
+  ├── scheduler-and-booking-design (convert)
+  ├── comparison-tool-design      (convert)
+  └── product-configurator-design (convert)
+```
+
+`funnel-flow-architecture` is the orchestrator: it sequences which interactive tool fits each audience and funnel stage, distinguishing matched-funnels from kitchen-sink-funnels.
+
+**Tier 2 content lifecycle:**
+
+```
+content-strategy → pillar-content-architecture → content-brief-authoring
+                                                ↓
+              content-and-copy / long-form-content-frameworks / email-sequences
+                                                ↓
+                       editorial-qa → content-distribution → programmatic-seo
+                                                ↓
+              content-refresh-system → content-repurposing → content-migration
+```
+
+`ai-content-collaboration` is a workflow layer that runs across every phase rather than a single step. `documentation-strategy` operates continuously alongside the rest.
+
+**Tier 2 product management (two parallel tracks):**
+
+```
+Experimentation track:
+experiment-design → feature-flagging → experimentation-platform-orchestrator
+                                     ↓
+                         experimentation-analytics → data-warehouse-experimentation
+
+Gap-closing track:
+pm-spec-writing → roadmap-planning → feature-launch-playbook
+                                   ↓
+       beta-program-management → product-analytics-setup → integration-orchestrator
+```
+
+The experimentation track ships changes with statistical discipline; the gap-closing track ships features with operational discipline. Both compose with the foundational lifecycle above.
+
+Operations, cross-cutting, and team skills (`stakeholder-communication`, `documentation-strategy`, `vendor-evaluation`, `team-onboarding-playbook`, `dependency-management`, `cost-optimization`, etc.) cut across every track.
 
 You can also pull individual skills for one-off work. Need just a backlink audit? Use `seo-backlink-audit`. Need to write a creative brief? Use `creative-brief`. Each skill stands on its own.
 
@@ -579,7 +639,8 @@ Contributions are welcome. Whether you want to fix a typo, add a reference file,
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full process.
 
-The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 60 skills, with worked examples and a blank template.
+<!-- TODO: refresh hardcoded count below when catalog crosses next round number -->
+The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 98 skills, with worked examples and a blank template.
 
 ---
 
