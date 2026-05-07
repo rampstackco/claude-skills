@@ -551,14 +551,24 @@ Skills compose best when Claude has live access to your data and tools. [Model C
 
 Below is the MCP shortlist by skill area. None of these are required (except the Ahrefs MCP for the SEO audit suite). All are categorical recommendations: where multiple options exist for the same job, pick the one that fits your stack.
 
-### SEO and search data
+### SEO, competitive intelligence, and search data
 
-The SEO audit suite (skills 23-29) is built around the Ahrefs MCP. The foundation SEO skills (16-22) work with any equivalent.
+The SEO audit suite (skills 23-29) is built around Ahrefs as its primary backend; foundation SEO skills (16-22) work with any equivalent. Competitive intelligence MCPs (Ahrefs, Semrush, Similarweb) cover overlapping but distinct data shapes: backlinks and keywords, traffic estimation, audience behavior. Use them in combination for the strongest signal.
 
-- **Ahrefs MCP** - referenced explicitly by `seo-audit-orchestration` and the 6 audit suite skills (backlink, keyword gap, content gap, traffic, site health, rank tracking)
-- **DataForSEO MCP** - alternative for SERP, keyword, and backlink data; useful as a complement to Ahrefs for cross-validation
-- **Google Search Console MCP** - free, official Google data; essential for `seo-traffic-diagnosis` and any audit that needs ground-truth click and impression data
-- **PageSpeed Insights MCP** - free, paired with `performance-optimization` and `seo-site-health-audit` for Core Web Vitals field data
+**Backlink and keyword data**
+
+- **Ahrefs MCP** - primary backend for the audit suite; backlink profiles, keyword data, content explorer, site audit. Referenced explicitly by `seo-audit-orchestration` and the 6 audit suite skills (backlink, keyword gap, content gap, traffic, site health, rank tracking).
+- **Semrush MCP** - alternative or complement to Ahrefs with stronger US keyword data and SEO-PR features (Topic Research, brand monitoring) Ahrefs does not cover. Pairs with `seo-keyword`, `seo-competitor`, `seo-content-gap-audit`. Verify the official MCP endpoint at authoring time; Semrush has shipped first-party MCP tooling.
+- **DataForSEO MCP** - programmatic SEO data (SERP, keywords, backlinks) at developer-friendly pricing; useful as a third source for cross-validation when methodology decisions hinge on data agreement.
+
+**Traffic estimation and competitive intelligence**
+
+- **Similarweb MCP** - competitive traffic estimation, audience demographics, channel mix (organic, paid, direct, referral, social, email), industry benchmarks, audience overlap analysis. Pairs with `seo-competitor`, `seo-traffic-diagnosis` (external-factor layer), `brand-discovery` (competitive scan), `analytics-strategy` (industry benchmarks). Where Ahrefs answers "how do they rank" and Semrush answers "what keywords drive what," Similarweb answers "how much traffic, from where, from whom."
+
+**Search Console and Core Web Vitals**
+
+- **Google Search Console MCP** - free, official Google data; essential for `seo-traffic-diagnosis` and any audit that needs ground-truth click and impression data.
+- **PageSpeed Insights MCP** - free, paired with `performance-optimization` and `seo-site-health-audit` for Core Web Vitals field data.
 
 ### Development and code
 

@@ -36,6 +36,8 @@ Compare a site to its competitors and find the gaps worth closing. Stack-agnosti
 
 If competitors are unknown, start by listing the top 10 ranking domains for the user's top 10 priority keywords. Pick the 3 to 5 that appear most often.
 
+Where competitor traffic estimation is the input you need (relative scale, channel mix, audience overlap), Similarweb MCP is the strongest source. Pair with Ahrefs (for backlink and keyword overlap) and Semrush (for SERP feature presence and SEO-PR overlap). Each platform gives a different cut of the same competitive landscape; using them together produces sharper signal than any one alone.
+
 ---
 
 ## The framework: 5 angles

@@ -46,6 +46,8 @@ Find content gaps and decay using Ahrefs MCP data. Stack-agnostic. Produces a ro
 
 Every content opportunity falls into one of four categories. Different categories need different actions.
 
+Content gap analysis is sharper with multiple data sources. Ahrefs surfaces keyword and topic gaps (the primary backend below). Similarweb surfaces traffic-driving page-level gaps (which of a competitor's pages earn meaningful traffic, not just rankings). Semrush surfaces SERP-feature gaps (where competitors win answer boxes, knowledge panels, People Also Ask placements). The three platforms often disagree on individual data points; that disagreement is itself a useful signal.
+
 ### Category 1: Missing topics
 
 Topics with traffic potential where the property has no relevant page at all. Competitors often rank in the top 10. The fix: create new content.

@@ -126,6 +126,8 @@ If layers 1-4 do not explain the change, look outward.
 - Manual action (Search Console security and manual actions)
 - Negative SEO (sudden link velocity changes)
 
+External-factor diagnosis benefits from competitive context: did your traffic drop while competitors held steady (suggests an algorithm-specific issue), or did the entire vertical lose ground (suggests a user-behavior shift)? Similarweb shows competitor traffic trends; Ahrefs shows competitor SERP movement; pairing both surfaces whether the issue is yours alone or the category's.
+
 ---
 
 ## Workflow

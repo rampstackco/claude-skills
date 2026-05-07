@@ -94,6 +94,8 @@ The third is most often forgotten and most often the actual competitor.
 - Their content and SEO presence (use `seo-competitor` for the search angle)
 - Social proof and customer voices
 
+Competitive scan benefits from quantitative grounding: not just "who are the competitors" but "how much traffic do they earn, where does it come from, who is the audience overlap." Similarweb is the standard for this kind of competitive landscape analysis; pair with Ahrefs for the SEO-specific overlap.
+
 **Output:** Competitor matrix (3 to 8 competitors deep), plus a one-line "what makes them dangerous" for each.
 
 ### 3. Category and problem space
