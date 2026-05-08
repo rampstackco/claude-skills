@@ -386,7 +386,7 @@ You can also pull individual skills for one-off work. Need just a backlink audit
 
 ## How the catalog connects
 
-The skills compose with the tools your team already uses. 98 skills at the center; 35 integrations across 6 categories radiating out via MCPs.
+The skills compose with the tools your team already uses. 98 skills at the center; 35 integrations across 6 integration categories radiating out via MCPs.
 
 <p align="center">
   <picture>
