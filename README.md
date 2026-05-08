@@ -33,6 +33,7 @@
 - [Featured skills](#featured-skills)
 - [See it in action](#see-it-in-action)
 - [Logo design in action](#logo-design-in-action)
+- [Reference build in action](#reference-build-in-action)
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
@@ -199,6 +200,37 @@ Ten fictional marks across eight mark architectures: wordmark, lockup, monogram,
 </p>
 
 Filter by architecture, vertical, or brand voice; click any mark card to read its design rationale.
+
+---
+
+## Reference build in action
+
+The full catalog rendered as a 4-phase reference build: blank brief through deployed audited launch site. Threshold is a fictional PLG onboarding analytics product, but the research, brand foundations, build, and audit findings are all real. The reference build is the catalog's single strongest demonstration of how the skills compose end-to-end.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/showcase/reference-build-highlight-mobile.png">
+    <img src="assets/showcase/reference-build-highlight-desktop.png" alt="Reference build hero card. Navy header card reads 'Reference Build' with subtitle 'A fictional B2B SaaS launch, end-to-end.' Below, four white phase cards arranged in a 2x2 grid: Phase 01 Strategy and Research with caption 'Real Ahrefs research applied to a fictional brief'; Phase 02 Brand and Design with caption 'Working brand system with live tokens and components'; Phase 03 Build and Ship with caption 'Deployed launch microsite at /demo/threshold'; Phase 04 Audit and Optimize with caption 'Real audit findings with applied fixes.' Footer caption reads 'Threshold is fictional. The methodology is not.'">
+  </picture>
+</p>
+
+### The four phases
+
+**[Phase 1: Strategy and research →](https://rampstack.co/walkthroughs/saas-launch-research-and-strategy)**
+Real Ahrefs keyword research, competitor analysis, content gap audit, and backlink opportunity mapping applied to a fictional B2B SaaS brief. Live data tables sourced from the Ahrefs API.
+
+**[Phase 2: Brand and design →](https://rampstack.co/walkthroughs/saas-launch-brand-and-design)**
+Logo system, color and typography tokens, working brand component primitives. The brand system renders live on the walkthrough page in real fonts and tokens, not just described.
+
+**[Phase 3: Build and ship →](https://rampstack.co/walkthroughs/saas-launch-build-and-ship)**
+The actual launch microsite built with Next.js using Phase 2's brand foundations. Live at [rampstack.co/demo/threshold](https://rampstack.co/demo/threshold). Persistent demonstration banner; noindex; local-only waitlist form.
+
+**[Phase 4: Audit and optimize →](https://rampstack.co/walkthroughs/saas-launch-audit-and-optimize)**
+Real audit on the deployed site using the catalog's audit suite (axe-core, Lighthouse, manual checks). Real findings with severity, real fixes applied, real before/after metrics. The closing chapter where the catalog audits its own output.
+
+### Why a fictional product
+
+Real client work cannot be open-sourced; portfolio claims trigger conflict-of-interest concerns in interviews and consulting conversations. A fictional product with a documented brief plus real research, real brand foundations, real working code, and real audit findings produces a teaching artifact that demonstrates methodology without claiming relationships. Threshold is a measurement tool that does not exist; the methodology that built it is the catalog working end-to-end.
 
 ---
 
