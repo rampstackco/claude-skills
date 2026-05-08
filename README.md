@@ -228,6 +228,17 @@ The actual launch microsite built with Next.js using Phase 2's brand foundations
 **[Phase 4: Audit and optimize →](https://rampstack.co/walkthroughs/saas-launch-audit-and-optimize)**
 Real audit on the deployed site using the catalog's audit suite (axe-core, Lighthouse, manual checks). Real findings with severity, real fixes applied, real before/after metrics. The closing chapter where the catalog audits its own output.
 
+### The deployed result
+
+The four phases compose into a working microsite at [rampstack.co/demo/threshold](https://rampstack.co/demo/threshold). Real Next.js code, real brand foundations from Phase 2 referenced via cross-route imports, real working multi-step waitlist form (no data stored), persistent demonstration banner, and the inline data visualizations that came out of the post-audit polish pass.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/showcase/threshold-demo-screenshot-mobile.png">
+    <img src="assets/showcase/threshold-demo-screenshot-desktop.png" alt="Full-page screenshot of the deployed Threshold demo at rampstack.co/demo/threshold. Persistent navy demonstration banner at top reads 'Demonstration · Threshold is a fictional product built to illustrate how the catalog composes from blank brief to deployed launch microsite.' Below, the hero section shows a serif headline 'Know how new users actually get to value' next to a stylized product dashboard mockup with KPI tiles, an activation funnel chart, and recent cohorts comparison. Further down the page: a fictional cohort trust strip, a 'The gap' problem section, a wedge section with inline funnel and time-to-first-value charts, a comparison table against Mixpanel/Amplitude/Heap and Pendo/Userpilot, a 'How it works' section with three connected cards, a multi-step waitlist form, and a FAQ section.">
+  </picture>
+</p>
+
 ### Why a fictional product
 
 Real client work cannot be open-sourced; portfolio claims trigger conflict-of-interest concerns in interviews and consulting conversations. A fictional product with a documented brief plus real research, real brand foundations, real working code, and real audit findings produces a teaching artifact that demonstrates methodology without claiming relationships. Threshold is a measurement tool that does not exist; the methodology that built it is the catalog working end-to-end.
