@@ -104,6 +104,13 @@ Six entry-point skills, one per audience track. Run any of these standalone, or 
 Forty-two fictional brands generated from briefs that all use the same skill. Each is a fully styled brand site, not a mockup. The showcase demonstrates what the four-axis framework produces in practice and lets you filter by axis position to see how each combination renders.
 
 <p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/showcase/creative-direction-highlight-mobile.jpg">
+    <img src="assets/showcase/creative-direction-highlight-desktop.jpg" alt="Creative Direction skill highlight diagram. Navy header card reads 'Impactful Creative Direction' with the subtitle 'Direction for art, taste, and style'. Four quadrants below show: Framework Axes 4 (Tone, Aesthetic, Relationship, Sensory), Framework Positions 16 (each axis combines into 16 distinct positions), Example Treatments 42 (Pulse, Bloom, Forge, Observatory, and 38 others), and Possible Compositions infinity (Motion: Static, Light, Medium, High). Caption reads 'No templates, only guided outputs.'">
+  </picture>
+</p>
+
+<p align="center">
   <img src="assets/showcase/showcase-grid-hero.png" alt="Showcase grid of brand archetypes including Pulse, Volt, Anode, Drift, and others, with type and motion intensity filter pills above the cards." />
 </p>
 
@@ -155,6 +162,13 @@ The creative-direction skill lives at [`skills/creative-direction/`](skills/crea
 ## Logo design in action
 
 The logo-design skill is rendered on rampstack.co as two parallel surfaces. The variant explorer goes deep on one brand at a time: a primary mark, variants across architectures, applied contexts. The taxonomy gallery goes wide across the architecture space: ten fictional marks demonstrating eight mark architectures (wordmark, lockup, monogram, letterform-as-symbol, abstract, pictorial, combination, emblem). Same skill, two different lenses.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/showcase/logo-design-highlight-mobile.jpg">
+    <img src="assets/showcase/logo-design-highlight-desktop.jpg" alt="Logo Design skill highlight diagram. Navy header card reads 'Bespoke Logo Design' with the subtitle 'Bringing brands to life.' Below the header, a simulated construction guide shows a stylised letterform B rendered against gridlines, with a Golden Ratio overlay, Primary Curve and Secondary Shape callouts, a Kerning marker, and a six-swatch color palette. Three columns at the bottom show: Verticals (Tech, Finance, Healthcare, Retail), Brand Voice (Trustworthy, Innovative, Premium, Approachable), and Architectures (Monogram, Wordmark, Emblem, Abstract).">
+  </picture>
+</p>
 
 ### Per-brand depth
 
@@ -377,7 +391,7 @@ The skills compose with the tools your team already uses. 98 skills at the cente
 <p align="center">
   <picture>
     <source media="(max-width: 640px)" srcset="docs/architecture-mobile.jpg">
-    <img src="docs/architecture-wide.jpg" alt="RampStack architecture diagram: a central hub labeled 98 Claude Skills across 16 categories, surrounded by six integration category cards (Project management with 10 integrations, Design with 8, Workflow with 6, Engineering with 7, SEO Intelligence with 3, Data and Analytics with 5). Each card lists three sample tools.">
+    <img src="docs/architecture-wide.jpg" alt="RampStack architecture diagram. A central navy hub card shows the RampStack mark with the subtitle 'Stack-agnostic methodology'. Six category cards radiate out: Workflow with 6 integrations (Jira, Linear, Notion, Figma, GitHub), Experimentation with 11 integrations (Statsig, PostHog, Optimizely, Amplitude), SEO Intelligence with 3 integrations (Ahrefs, Semrush, Similarweb), Paid Media with 5 integrations (Google Ads, Meta Ads, LinkedIn, TikTok, Synter), Content and SEO with 5 integrations (Webflow, Contentful, Frase, Profound, AirOps), and Data and Analytics with 5 integrations (BigQuery, Snowflake, Mixpanel, dbt, Hex).">
   </picture>
 </p>
 
