@@ -32,6 +32,7 @@
 - [What is in this library](#what-is-in-this-library)
 - [Featured skills](#featured-skills)
 - [See it in action](#see-it-in-action)
+- [Logo design in action](#logo-design-in-action)
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
@@ -148,6 +149,42 @@ Same skill, same brief format. Four completely different visual systems. Notice 
 ### Run this on your own brand
 
 The creative-direction skill lives at [`skills/creative-direction/`](skills/creative-direction/). Install it (see below), give Claude a project name and a few inspiration references, and the skill walks you through producing a brief that downstream skills can consume. The brand sites in the showcase were built from briefs of exactly that shape.
+
+---
+
+## Logo design in action
+
+The logo-design skill is rendered on rampstack.co as two parallel surfaces. The variant explorer goes deep on one brand at a time: a primary mark, variants across architectures, applied contexts. The taxonomy gallery goes wide across the architecture space: ten fictional marks demonstrating eight mark architectures (wordmark, lockup, monogram, letterform-as-symbol, abstract, pictorial, combination, emblem). Same skill, two different lenses.
+
+### Per-brand depth
+
+**[The variant explorer →](https://rampstack.co/showcase/logo-design)**
+
+Each brand has a primary mark plus variants across architectures and applied contexts. The logo-design skill walks through the discipline of choosing one architecture and rendering it consistently across the system the brand will actually use.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/showcase/logo-design-showcase-mobile.png">
+    <img src="assets/showcase/logo-design-showcase-desktop.png" alt="Logo design variant explorer showing six fictional brand cards in a three-by-two grid: Whitfield Carter (legal counsel lockup), Wren and Bough (consumer goods lockup), Highline (hospitality wordmark), Sentinel (tech and AI symbol-only), Lacuna (fashion wordmark), and Roost (restaurant lockup). Each card pairs a primary mark with three classification chips for architecture, typographic register, and category, plus a four-variants and five-application-contexts subtext.">
+  </picture>
+</p>
+
+The brands are filterable by architecture, typographic register, and category. The intent is reference work, not consumable templates.
+
+### Architectural taxonomy
+
+**[The marks gallery →](https://rampstack.co/showcase/logos)**
+
+Ten fictional marks across eight mark architectures: wordmark, lockup, monogram, letterform-as-symbol, abstract, pictorial, combination, emblem. The taxonomy makes the architectural distinctions concrete by showing all eight side-by-side, with three wordmarks at three typographic registers so the architectural label does less work than the execution.
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 640px)" srcset="assets/showcase/marks-showcase-mobile.png">
+    <img src="assets/showcase/marks-showcase-desktop.png" alt="Marks gallery showing six fictional brand cards in a three-by-two grid: knurl (lowercase serif wordmark with knurled texture), TARSUS (uppercase sans lockup with stacked-bar mark), PLINTH (classical serif inside a double-lined emblem frame), Caval (italic horse silhouette plus italic wordmark combination), Ostend (flowing OS monogram resolving to a single connected glyph), and GLINT (high-contrast Didone wordmark with hairline I crossbar). Each card carries the brand name, descriptor, and three classification chips for mark architecture, vertical, and brand voice.">
+  </picture>
+</p>
+
+Filter by architecture, vertical, or brand voice; click any mark card to read its design rationale.
 
 ---
 
