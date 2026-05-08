@@ -376,8 +376,8 @@ The skills compose with the tools your team already uses. 98 skills at the cente
 
 <p align="center">
   <picture>
-    <source media="(max-width: 640px)" srcset="docs/architecture-mobile.png">
-    <img src="docs/architecture-wide.png" alt="RampStack architecture: 98 skills at the center with 35 integrations across 6 categories radiating out (workflow, experimentation, paid media, data and analytics, content and SEO, SEO and competitive intelligence).">
+    <source media="(max-width: 640px)" srcset="docs/architecture-mobile.jpg">
+    <img src="docs/architecture-wide.jpg" alt="RampStack architecture diagram: a central hub labeled 98 Claude Skills across 16 categories, surrounded by six integration category cards (Project management with 10 integrations, Design with 8, Workflow with 6, Engineering with 7, SEO Intelligence with 3, Data and Analytics with 5). Each card lists three sample tools.">
   </picture>
 </p>
 
