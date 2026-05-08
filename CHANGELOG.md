@@ -6,24 +6,100 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-05-07
+
 ### Added
 
-- `creative-direction` skill (Strategy and discovery category). Structured aesthetic brief using four directional axes (tone register, aesthetic philosophy, audience relationship, sensory ambition) for cross-skill coherence.
-- Reference files for `creative-direction`: `axes-explained.md`, `brief-template.md`, `example-aesthetic-brief.md`.
+**Skills (38 new + 1 from prior unreleased = 39 net additions, 60 → 98)**
+
+- `logo-design` skill (Brand category). Logo variants across architectures (wordmark, lockup, monogram, letterform-as-symbol, abstract, pictorial, combination, emblem) with rationale and application specs.
+- Tier 2 PM experimentation track (6 skills): `experiment-design`, `feature-flagging`, `experimentation-platform-orchestrator`, `experimentation-analytics`, `product-analytics-setup`, `data-warehouse-experimentation`. Statistical discipline for shipping changes with confidence: hypothesis to decision, sample size, sequential testing, CUPED variance reduction, dashboard reconciliation, the failure modes that produce wrong shipping calls.
+- Tier 2 PM gap-closing track (4 new skills + 2 expanded): `feature-launch-playbook`, `jtbd-framing`, `okr-design`, `beta-program-management`, plus expanded coverage in `roadmap-planning` and `pm-spec-writing`. Operational discipline for shipping features that land: positioning, internal alignment, customer comms, sales enablement, support readiness, rollout strategy, monitoring, post-launch measurement.
+- Tier 2 content lifecycle (9 skills): `pillar-content-architecture`, `content-brief-authoring`, `programmatic-seo`, `editorial-qa`, `ai-content-collaboration`, `long-form-content-frameworks`, `content-refresh-system`, `content-repurposing`, `content-distribution`. Hub-and-cluster topical authority, per-piece editorial brief authoring, pSEO programs, pre-publish QA, AI-content workflows, long-form structural patterns, refresh cadence, cross-format adaptation, distribution discipline.
+- Growth tooling cluster (12 skills): `funnel-flow-architecture` (orchestrator), `lead-magnet-design`, `calculator-design`, `quiz-and-assessment-design`, `multi-step-form-design`, `chatbot-flow-design`, `onboarding-wizard-design`, `interactive-product-tour`, `upgrade-flow-design`, `scheduler-and-booking-design`, `comparison-tool-design`, `product-configurator-design`. Interactive web tools that turn visitors into leads, activate signups, and convert intent to action.
+- Marketing paid media (3 skills): `paid-media-strategy`, `ads-creative-development`, `ads-performance-analytics`. Channel selection, creative variations, performance analytics for budgets at scale.
+- Research expansion (2 skills): `discovery-research-synthesis`, `user-feedback-aggregation`. Synthesizing customer interviews and feedback into actionable PM decisions; weighted feedback triage across channels.
+- `integration-orchestrator` skill (Product category). Sequence creative-direction work across phases, gates, handoffs, and QA verification.
+
+**Reference files**
+
+- ~330 new reference files (95 → ~425), bringing every skill above the floor of one reference file each, with most skills carrying 4-6 references covering templates, checklists, decision matrices, and worked examples.
+- ARIA patterns reference for `accessibility-audit` skill ([PR #36](https://github.com/rampstackco/claude-skills/pull/36) community contribution).
+- "Methodology-level / Implementation choices" closing section added across reference files.
+
+**Categories (14 → 16)**
+
+- Growth tooling category. Interactive web tools that turn visitors into leads (12 skills).
+- Marketing category. Paid media discipline (3 skills).
+
+**README sections**
+
+- "Logo design in action" H2 section showcasing the logo-design skill rendered as two parallel surfaces on rampstack.co (per-brand variant explorer at /showcase/logo-design and architectural taxonomy gallery at /showcase/logos).
+- "Surfaces" section naming the rampstack.co commercial layer (skills directory, walkthroughs, integrations directory, showcase) that extends the open-source methodology.
+- "How the catalog connects" section with hub-and-spoke architecture image (3 responsive variants: wide 1200x630, square 1080x1080, mobile 800x800) showing 98 skills at the center and 35 integrations across 6 categories radiating out.
+- HTML `<picture>` element for mobile architecture variant on README and at rampstack.co/integrations.
+- Acknowledgments section crediting [@IgnacioChiaravalle](https://github.com/IgnacioChiaravalle) for the PR #36 community feedback (CONTRIBUTING typo fix, cross-linking pass, ARIA patterns reference).
+
+**Generator scripts**
+
+- `scripts/generate_readme_catalog.py`. Build-time README generator with `FEATURED_SKILLS`, `SURFACES`, and `COUNT_*` markers driven by skills/ folder contents. Eliminates drift between catalog state and README.
+- `scripts/generate_architecture_image.py`. Pillow-based reproducible architecture image script with 3 variants (wide / square / mobile) via LayoutSpec dataclass. Renders skills hub, integrations spoke arrangement, and category cards.
+- `scripts/generate_og_card.py`. Pillow-based reproducible OG social card.
+- `scripts/integrations-mirror.json`. Mirror of integrations data layer (~35 entries) used by the architecture image script.
+- `scripts/crosslink_pass.py`. Idempotent script from PR #36 that maintains cross-references between SKILL.md files and reference files.
 
 ### Changed
 
-- Added bidirectional cross-references between `creative-brief` and `creative-direction` to clarify scope (operational kickoff vs aesthetic depth).
-- Added bidirectional cross-references between `art-direction` and `creative-direction`. Removed overlapping trigger phrases (`creative direction` from `art-direction`, `art direction` from `creative-direction`) to resolve trigger collision.
-- README catalog renumbered (1-60) with `creative-direction` inserted at position 3 in Strategy and discovery.
-- README updated: 60 skills, 14 categories, 98 reference files. Catalog count badge, headings, and TOC anchor all updated to match.
-- Replaced README banner with an evergreen version (no skill count, "COMPLETE" as the orange anchor word). New file at `docs/rampstack-complete-banner.jpg`.
+- Catalog renumbered to 98 entries across 16 categories. README catalog tables now drop the # column (was creating mobile readability issues).
+- Featured Skills section restructured to 2-column with audience track parenthetical (was 3-column without track).
+- Architecture image polished with rounded category cards, consistent title-first row order, and connection-line opacity tuned for visibility.
+- README "Recommended MCPs" section restructured with explicit cost-model framing (free with rate limits, credits-per-call, etc.) per integration. SEO competitive intelligence section expanded to cover Ahrefs, Semrush, DataForSEO, Similarweb with explicit complementarity framing.
+- Cross-skill cross-references expanded across the catalog: every skill's "When NOT to use" section names sibling skills, and "Pairs with" references made bidirectional.
+- README archetype count updated from "Thirty fictional brands" to "Forty-two fictional brands" reflecting the actual count on rampstack.co/showcase/creative-direction (Wave 1 + Wave 2 expansions).
 
 ### Fixed
 
-- Stale skill range references in README "Recommended MCPs" section. SEO audit suite range corrected from 22-28 to 23-29; SEO foundation range corrected from 15-21 to 16-22.
-- Pre-existing miscount of categories (was 13, actual 14) and reference files (was 75 / shifted to 78, actual 98).
-- Issue template `.github/ISSUE_TEMPLATE/new-skill.yml` updated to reference 60 skills and the renamed `#the-60-skill-catalog` anchor.
+- Stale archetype count reference in README "See it in action" intro.
+- Mobile readability of catalog tables (# column was forcing horizontal scroll on narrow viewports).
+- Architecture image card padding (Workflow card was 2px from chrome eyebrow; tightened to 10px clearance).
+- Architecture image text-above row order so all 6 category cards read title, count, samples top-to-bottom consistently.
+
+## [1.1.0] - 2026-04-30
+
+### Added
+
+**Community standards**
+
+- `CONTRIBUTING.md` with full contribution process and authoring discipline.
+- `CODE_OF_CONDUCT.md` (Contributor Covenant 2.1).
+- `SECURITY.md` with vulnerability reporting process.
+- `CHANGELOG.md` (this file).
+- Issue templates: new skill request, bug report, improve reference file.
+- Pull request template.
+- 100% Community Standards score on GitHub repo health check.
+
+**Reference files**
+
+- 20 new reference files (75 → 95).
+
+**README**
+
+- Recommended MCPs section listing categorical recommendations by skill area.
+- Banner image at `docs/banner.jpg`.
+- Social profile links (LinkedIn, X/Twitter, Facebook).
+- Expanded table of contents.
+
+### Changed
+
+- Audit reports moved from repo root to `docs/audits/`.
+
+### Fixed
+
+- 21 broken SKILL.md to reference file links.
+- 6 orphan reference files (referenced from no SKILL.md).
+- Cross-skill reference (`pm-framework` → `pm-spec-writing`).
+- 3 SKILL.md framework section headers normalized.
+- `SKILL_AUTHORING.md` updated with section-naming clarification.
 
 ## [1.0.0] - 2026-04-28
 
@@ -66,5 +142,7 @@ The initial public release. 59 stack-agnostic Claude Skills covering the full we
 - Companion docs: `README.md`, `SKILL_AUTHORING.md`, `MAPPING.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `CHANGELOG.md`
 - MIT License
 
-[Unreleased]: https://github.com/rampstackco/claude-skills/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/rampstackco/claude-skills/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/rampstackco/claude-skills/releases/tag/v1.2.0
+[1.1.0]: https://github.com/rampstackco/claude-skills/releases/tag/v1.1.0
 [1.0.0]: https://github.com/rampstackco/claude-skills/releases/tag/v1.0.0
