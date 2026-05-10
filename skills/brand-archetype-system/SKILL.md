@@ -45,7 +45,7 @@ Direct verbatim copying of an archetype's default palette into a new brand is a 
 
 ---
 
-## The system structure
+## The framework: 12 core archetypes plus 18 vertical applications
 
 Two layers of content in `references/`:
 
@@ -131,3 +131,13 @@ Each archetype positions on the 4 axes defined in the `creative-direction` skill
 - **Sensory ambition**: Functional, Considered, Immersive, Theatrical
 
 Each core archetype file specifies its position on each axis.
+
+---
+
+## Reference files
+
+- [`references/00-archetype-system-overview.md`](references/00-archetype-system-overview.md) - How the two-layer system fits together, entry patterns, when archetypes compose, and the recurring failure modes.
+- [`references/01-how-to-apply-an-archetype.md`](references/01-how-to-apply-an-archetype.md) - The 5-step adaptation process: locate the design space, map the brief to adjustable dimensions, adapt color, adapt type, write voice samples. Includes the cross-archetype coherence check.
+
+The 12 core archetype files live in the `core-archetypes/` subdirectory under references, numbered 01 (Editorial Restrained) through 12 (Documentary Honest). The 18 vertical application files live in the `by-vertical/` subdirectory under references, numbered 01 (B2B SaaS Developer Tools) through 18 (Real Estate and Proptech). Load the relevant core archetype file plus the relevant vertical file together for any brief that names both an aesthetic family and an industry.
+
