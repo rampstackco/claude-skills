@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-98-blue.svg)](#the-98-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-99-blue.svg)](#the-99-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 98 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 99 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -40,7 +40,7 @@
 - [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
-- [The 98-skill catalog](#the-98-skill-catalog)
+- [The 99-skill catalog](#the-99-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -69,8 +69,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **98 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
-- **425 reference files** (templates, checklists, decision matrices, worked examples)
+- **99 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
+- **427 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -456,11 +456,11 @@ The skills in this repository remain free, open-source, and stack-agnostic. The 
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 98-skill catalog
+## The 99-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 98 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 99 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -475,7 +475,7 @@ All 98 skills are shipped. Each has a complete SKILL.md plus at least one refere
 | [`information-architecture`](skills/information-architecture/SKILL.md) | Sitemap, navigation, URL structure, content types, taxonomy |
 | [`content-strategy`](skills/content-strategy/SKILL.md) | Editorial strategy, content calendar, topical authority planning |
 
-### Brand (5)
+### Brand (6)
 
 | Skill | What it does |
 |---|---|
@@ -483,6 +483,7 @@ All 98 skills are shipped. Each has a complete SKILL.md plus at least one refere
 | [`brand-identity`](skills/brand-identity/SKILL.md) | Logo system, color, typography, imagery, iconography, motion |
 | [`brand-style-guide`](skills/brand-style-guide/SKILL.md) | The canonical reference document for the full brand system |
 | [`brand-voice`](skills/brand-voice/SKILL.md) | Voice attributes, tone shifts, vocabulary, paired-example library |
+| [`brand-archetype-system`](skills/brand-archetype-system/SKILL.md) | 12 archetype defaults across 18 verticals: color, type, voice, imagery starters |
 | [`logo-design`](skills/logo-design/SKILL.md) | Logo variants across architectures (wordmark, lockup, monogram, letterform-as-symbol), with rationale and application specs |
 
 ### Design (3)
