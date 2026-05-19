@@ -457,17 +457,19 @@ The skills in this repository remain free, open-source, and stack-agnostic. The 
 
 ## Design principles
 
-claude-skills follows four principles that the broader AI agent community is formalizing as composable instruction architecture:
+claude-skills follows the [Agent Skills Specification](https://agentskills.io), the open standard for portable AI agent skills originally developed by Anthropic and adopted across the AI tooling ecosystem (Claude Code, OpenAI Codex, Gemini CLI, GitHub Copilot, Cursor, VS Code, Goose, Spring AI, and 30+ other platforms as of early 2026).
 
-**Single responsibility per skill.** Each skill covers one focused capability rather than trying to be a multi-purpose document. A roadmap-planning skill plans roadmaps. A keyword-research skill researches keywords. Composing them together produces complex workflows; mixing them inside one skill produces unreliable ones.
+Beyond the format itself, the catalog is designed around three principles aligned with the guidance Anthropic publishes in [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents):
 
-**Structured frontmatter.** Every skill declares name, description, scope, and metadata in machine-readable YAML. This makes the catalog inspectable by tooling, not just by humans reading prose.
+**Simplicity.** Each skill covers one focused capability rather than trying to be a multi-purpose document. A roadmap-planning skill plans roadmaps. A keyword-research skill researches keywords. Composing them together produces complex workflows; mixing them inside one skill produces unreliable ones.
 
-**Composable patterns.** Skills are designed to be called in sequence, with one skill's output becoming another's input. This "skills calling skills" approach, sometimes called skill chaining, requires that each skill's output match the expected input of whatever comes next. claude-skills is built for this pattern: skills compose cleanly into larger workflows without requiring custom glue code at each junction.
+**Transparency.** Every skill declares its scope, dependencies, and expected behavior in machine-readable YAML frontmatter. The catalog is inspectable by tooling, not just by humans reading prose.
 
-**Quality contracts via linting.** Structural and content quality is enforced through automated checks (run `python .github/scripts/lint_skills.py`) rather than convention alone. Every skill is validated against a schema. Every catalog change is validated in CI.
+**Quality contracts via tooling.** Structural and content quality is enforced through automated checks (run `python .github/scripts/lint_skills.py`) rather than convention alone. Every skill is validated against a schema. Every catalog change is validated in CI.
 
-Together these principles make claude-skills a production-tested catalog for composable AI workflows, suitable for standalone use or integration with agent runtime frameworks.
+Skills in this catalog are designed to compose into the common agentic workflow patterns Anthropic documents: prompt chaining (sequential steps), routing (classify and direct), parallelization (sectioning or voting), orchestrator-workers (dynamic delegation), and evaluator-optimizer (iterative refinement).
+
+Because the catalog conforms to the open Agent Skills standard, skills work across any platform supporting the specification without modification.
 
 ## Family repos
 
@@ -482,7 +484,7 @@ claude-skills is the parent catalog. Curated subsets and companion repos focus o
 | [claude-skills-widgets](https://github.com/rampstackco/claude-skills-widgets) | UI patterns + components | 65 + 32 |
 | [awesome-claude-skills](https://github.com/rampstackco/awesome-claude-skills) | Curated discovery list | n/a |
 
-Each family repo is MIT-licensed and stack-agnostic. Use the full catalog for breadth; use a specialty subset when working in one domain.
+Each family repo is MIT-licensed, conforms to the Agent Skills Specification, and is stack-agnostic. Use the full catalog for breadth; use a specialty subset when working in one domain.
 
 ---
 
