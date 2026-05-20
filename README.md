@@ -297,7 +297,7 @@ For the current API surface, request format, and limits, see the [Agent Skills A
 ### Want only a few skills?
 
 <!-- TODO: refresh hardcoded count below when catalog crosses next round number -->
-You do not have to install all 98. Pick the categories that match your work. The library is modular: each skill stands on its own.
+You do not have to install all 99. Pick the categories that match your work. The library is modular: each skill stands on its own.
 
 ---
 
@@ -429,7 +429,7 @@ You can also pull individual skills for one-off work. Need just a backlink audit
 
 ## How the catalog connects
 
-The skills compose with the tools your team already uses. 98 skills at the center; 35 integrations across 6 integration categories radiating out via MCPs.
+The skills compose with the tools your team already uses. 99 skills at the center; 35 integrations across 6 integration categories radiating out via MCPs.
 
 <p align="center">
   <picture>
@@ -795,7 +795,7 @@ Contributions are welcome. Whether you want to fix a typo, add a reference file,
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full process.
 
 <!-- TODO: refresh hardcoded count below when catalog crosses next round number -->
-The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 98 skills, with worked examples and a blank template.
+The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 99 skills, with worked examples and a blank template.
 
 ---
 
