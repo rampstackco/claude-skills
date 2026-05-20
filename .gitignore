@@ -20,3 +20,6 @@ desktop.ini
 # Temporary files
 *.tmp
 *.bak
+
+# Internal audit documents
+docs/audits/

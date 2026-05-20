@@ -34,11 +34,6 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SKILLS_DIR = REPO_ROOT / "skills"
 README = REPO_ROOT / "README.md"
 
-# Files where audit-related content may legitimately mention sensitive patterns.
-AUDIT_EXEMPT_PATHS = (
-    REPO_ROOT / "docs" / "audits",
-)
-
 # Brand watchlist. Any case-insensitive hit fails the build, except for the
 # explicitly-allowed legitimate public references in ALLOWED_BRAND_CONTEXTS.
 BRAND_WATCHLIST = [
@@ -126,21 +121,15 @@ def parse_frontmatter(skill_md: Path) -> tuple[dict, str]:
     return data, body
 
 
-def is_in_audit_path(path: Path) -> bool:
-    return any(str(path).startswith(str(exempt)) for exempt in AUDIT_EXEMPT_PATHS)
-
-
 # ---------------------------------------------------------------------------
 # Checks
 # ---------------------------------------------------------------------------
 
 
 def check_em_dashes(result: LintResult) -> None:
-    """Em dashes are forbidden anywhere except in audit reports."""
+    """Em dashes are forbidden anywhere in tracked Markdown."""
     for md in REPO_ROOT.rglob("*.md"):
-        if is_in_audit_path(md):
-            continue
-        # Also skip git internal and node_modules if any.
+        # Skip git internal and node_modules if any.
         if any(part in (".git", "node_modules") for part in md.parts):
             continue
         text = read_text(md)
@@ -155,8 +144,6 @@ def check_em_dashes(result: LintResult) -> None:
 def check_brand_leaks(result: LintResult) -> None:
     """Forbidden brand mentions from the watchlist."""
     for md in REPO_ROOT.rglob("*.md"):
-        if is_in_audit_path(md):
-            continue
         if any(part in (".git", "node_modules") for part in md.parts):
             continue
         text = read_text(md)
