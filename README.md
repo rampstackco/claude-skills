@@ -26,6 +26,19 @@
 
 ---
 
+## Install in Claude Code
+
+Add the marketplace, then install the catalog:
+
+```
+/plugin marketplace add rampstackco/claude-skills
+/plugin install rampstack-skills@rampstack
+```
+
+Skills load on demand: each contributes roughly its name and description until Claude needs it.
+
+---
+
 ## Table of contents
 
 - [What are Claude Skills?](#what-are-claude-skills)
@@ -141,16 +154,16 @@ Same skill, same brief format. Four completely different visual systems. Notice 
     <td width="50%"><img src="assets/showcase/archetype-forge-fitness.png" alt="Forge boutique fitness studio. Dark industrial hero with intense typography and motivational copy." /></td>
   </tr>
   <tr>
-    <td><strong>Pulse</strong> · music streaming<br/><em>Sound that moves with you.</em><br/>Playful / Expressive Maximalist / Companion / Resonant</td>
-    <td><strong>Forge</strong> · boutique fitness<br/><em>Show up. Get hammered.</em><br/>Provocative / Expressive Maximalist / Coach / Resonant</td>
+    <td><strong>Pulse</strong> · music streaming<br/><em>Sound that moves with you.</em><br/>Playful / Expressive Maximalist / Companion / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/pulse-music">See Pulse demo example →</a></td>
+    <td><strong>Forge</strong> · boutique fitness<br/><em>Show up. Get hammered.</em><br/>Provocative / Expressive Maximalist / Coach / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/forge-fitness">See Forge demo example →</a></td>
   </tr>
   <tr>
     <td><img src="assets/showcase/archetype-bloom-soda.png" alt="Bloom adaptogenic soda brand. Peachy gradient hero with tri-color headline 'Soda that loves you back' and a strawberries-around-soda-can product photo." /></td>
     <td><img src="assets/showcase/archetype-observatory-editorial.png" alt="Observatory Editorial. Cream paper hero with restrained serif headline 'An observability tool for the engineers who already know what they are doing'." /></td>
   </tr>
   <tr>
-    <td><strong>Bloom</strong> · adaptogenic soda<br/><em>Soda that loves you back.</em><br/>Playful / Expressive Maximalist / Companion / Resonant</td>
-    <td><strong>Observatory Editorial</strong> · observability tool<br/><em>An open-source tool that respects engineer time.</em><br/>Conversational / Editorial Restrained / Peer / Considered</td>
+    <td><strong>Bloom</strong> · adaptogenic soda<br/><em>Soda that loves you back.</em><br/>Playful / Expressive Maximalist / Companion / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/bloom-soda">See Bloom demo example →</a></td>
+    <td><strong>Observatory Editorial</strong> · observability tool<br/><em>An open-source tool that respects engineer time.</em><br/>Conversational / Editorial Restrained / Peer / Considered<br/><a href="https://rampstack.co/showcase/creative-direction/observatory-editorial">See Observatory demo example →</a></td>
   </tr>
 </table>
 

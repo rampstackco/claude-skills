@@ -1,0 +1,14 @@
+{
+  "name": "rampstack",
+  "owner": { "name": "RampStack" },
+  "description": "RampStack Claude Skills: the website lifecycle as installable skills.",
+  "plugins": [
+    {
+      "name": "rampstack-skills",
+      "source": "./",
+      "description": "Full catalog of website-lifecycle skills: research, brand, build, and audit.",
+      "category": "web-development",
+      "keywords": ["agent-skills", "seo", "brand", "web-development"]
+    }
+  ]
+}
