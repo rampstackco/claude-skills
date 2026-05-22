@@ -113,7 +113,7 @@ Six entry-point skills, one per audience track. Run any of these standalone, or 
 
 ## See it in action
 
-**[The creative-direction skill rendered as a live showcase →](https://rampstack.co/showcase/creative-direction)**
+<strong><a href="https://rampstack.co/showcase/creative-direction" target="_blank" rel="noopener">The creative-direction skill rendered as a live showcase →</a></strong>
 
 Forty-two fictional brands generated from briefs that all use the same skill. Each is a fully styled brand site, not a mockup. The showcase demonstrates what the four-axis framework produces in practice and lets you filter by axis position to see how each combination renders.
 
@@ -154,18 +154,22 @@ Same skill, same brief format. Four completely different visual systems. Notice 
     <td width="50%"><img src="assets/showcase/archetype-forge-fitness.png" alt="Forge boutique fitness studio. Dark industrial hero with intense typography and motivational copy." /></td>
   </tr>
   <tr>
-    <td><strong>Pulse</strong> · music streaming<br/><em>Sound that moves with you.</em><br/>Playful / Expressive Maximalist / Companion / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/pulse-music">See Pulse demo example →</a></td>
-    <td><strong>Forge</strong> · boutique fitness<br/><em>Show up. Get hammered.</em><br/>Provocative / Expressive Maximalist / Coach / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/forge-fitness">See Forge demo example →</a></td>
+    <td><strong>Pulse</strong> · music streaming<br/><em>Sound that moves with you.</em><br/>Playful / Expressive Maximalist / Companion / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/pulse-music" target="_blank" rel="noopener">See Pulse demo example →</a></td>
+    <td><strong>Forge</strong> · boutique fitness<br/><em>Show up. Get hammered.</em><br/>Provocative / Expressive Maximalist / Coach / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/forge-fitness" target="_blank" rel="noopener">See Forge demo example →</a></td>
   </tr>
   <tr>
     <td><img src="assets/showcase/archetype-bloom-soda.png" alt="Bloom adaptogenic soda brand. Peachy gradient hero with tri-color headline 'Soda that loves you back' and a strawberries-around-soda-can product photo." /></td>
     <td><img src="assets/showcase/archetype-observatory-editorial.png" alt="Observatory Editorial. Cream paper hero with restrained serif headline 'An observability tool for the engineers who already know what they are doing'." /></td>
   </tr>
   <tr>
-    <td><strong>Bloom</strong> · adaptogenic soda<br/><em>Soda that loves you back.</em><br/>Playful / Expressive Maximalist / Companion / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/bloom-soda">See Bloom demo example →</a></td>
-    <td><strong>Observatory Editorial</strong> · observability tool<br/><em>An open-source tool that respects engineer time.</em><br/>Conversational / Editorial Restrained / Peer / Considered<br/><a href="https://rampstack.co/showcase/creative-direction/observatory-editorial">See Observatory demo example →</a></td>
+    <td><strong>Bloom</strong> · adaptogenic soda<br/><em>Soda that loves you back.</em><br/>Playful / Expressive Maximalist / Companion / Resonant<br/><a href="https://rampstack.co/showcase/creative-direction/bloom-soda" target="_blank" rel="noopener">See Bloom demo example →</a></td>
+    <td><strong>Observatory Editorial</strong> · observability tool<br/><em>An open-source tool that respects engineer time.</em><br/>Conversational / Editorial Restrained / Peer / Considered<br/><a href="https://rampstack.co/showcase/creative-direction/observatory-editorial" target="_blank" rel="noopener">See Observatory demo example →</a></td>
   </tr>
 </table>
+
+<p align="center">
+  <strong><a href="https://rampstack.co/showcase/creative-direction" target="_blank" rel="noopener">See all the brands in the showcase →</a></strong>
+</p>
 
 ### Run this on your own brand
 
@@ -186,7 +190,7 @@ The logo-design skill is rendered on rampstack.co as two parallel surfaces. The 
 
 ### Per-brand depth
 
-**[The variant explorer →](https://rampstack.co/showcase/logo-design)**
+<strong><a href="https://rampstack.co/showcase/logo-design" target="_blank" rel="noopener">The variant explorer →</a></strong>
 
 Each brand has a primary mark plus variants across architectures and applied contexts. The logo-design skill walks through the discipline of choosing one architecture and rendering it consistently across the system the brand will actually use.
 
@@ -201,7 +205,7 @@ The brands are filterable by architecture, typographic register, and category. T
 
 ### Architectural taxonomy
 
-**[The marks gallery →](https://rampstack.co/showcase/logos)**
+<strong><a href="https://rampstack.co/showcase/logos" target="_blank" rel="noopener">The marks gallery →</a></strong>
 
 Ten fictional marks across eight mark architectures: wordmark, lockup, monogram, letterform-as-symbol, abstract, pictorial, combination, emblem. The taxonomy makes the architectural distinctions concrete by showing all eight side-by-side, with three wordmarks at three typographic registers so the architectural label does less work than the execution.
 

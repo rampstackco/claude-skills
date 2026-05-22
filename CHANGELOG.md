@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+**Distribution**
+
+- Claude Code plugin marketplace. `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` publish the full catalog as an installable plugin: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`.
+
+**README sections**
+
+- "Install in Claude Code" section documenting the one-command marketplace install path.
+
+### Changed
+
+- "The framework's range" cards now link to their live showcase demos (Pulse, Forge, Bloom, Observatory), and the section closes with a CTA to the full creative-direction showcase.
+- Hand-authored rampstack.co showcase demo links across the README now open in a new tab (`target="_blank" rel="noopener"`).
+
 ## [1.2.0] - 2026-05-07
 
 ### Added
