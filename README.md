@@ -28,11 +28,18 @@
 
 ## Install in Claude Code
 
-Add the marketplace, then install the catalog:
+Add the marketplace, then install the plugin you want:
 
 ```
 /plugin marketplace add rampstackco/claude-skills
+
+# full catalog (99 skills)
 /plugin install rampstack-skills@rampstack
+
+# focused subsets
+/plugin install rampstack-starter@rampstack
+/plugin install rampstack-seo@rampstack
+/plugin install rampstack-pm@rampstack
 ```
 
 Skills load on demand: each contributes roughly its name and description until Claude needs it.
