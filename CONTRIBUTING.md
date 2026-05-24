@@ -19,6 +19,24 @@ If you have not read [SKILL_AUTHORING.md](SKILL_AUTHORING.md), start there. It i
 - Skills that duplicate an existing skill in scope. Check the catalog first.
 - Skills that depend on a specific commercial tool, with the single exception of the SEO audit suite which depends on the Ahrefs MCP. New tool-bound skills need a strong justification.
 - Marketing or promotional content disguised as a skill.
+- Additions to the README MCP shortlist that a maintainer has not used and vouched for. See **Recommending an MCP server** below.
+
+---
+
+## Recommending an MCP server
+
+The README keeps a short, curated list of MCP servers grouped by lifecycle phase. It points builders at tools the maintainers have used on real site work and will put the catalog's name behind. It is a recommendation, not a directory, and it stays short on purpose.
+
+The bar reflects what this catalog is for. RampStack is a framework for original creation: building the brands, sites, and content that did not exist before you built them. The tools we recommend serve that work, and they have to be safe to hand to a real business, from a one-person shop to an enterprise team. Much of the AI tooling built around scraping, data copying, and platform automation attracts bad actors and carries legal and reputational risk, so we keep it out. That keeps the catalog something a serious business can adopt without a second thought.
+
+What that means in practice:
+
+- **It has to sit inside the website lifecycle this catalog covers** (research, brand, design, content, SEO, dev, ops, growth). Tools whose core job is scraping, bulk data extraction, or off-platform automation are out of scope, even the well engineered ones.
+- **A maintainer has to have used it** on a real build and be willing to vouch for it. We do not list tools we have only read about.
+- **Vendors do not add their own tools.** If you build or work on an MCP server, you are welcome to suggest it, but disclose the affiliation and expect it to clear the same bar as everything else. Self-submitted vendor PRs that add a product to the list will be closed with a link to this section.
+- **The list recommends capabilities, not links.** Anything that reads as placement for traffic, backlinks, or customer acquisition gets declined.
+
+If you think a tool belongs on the list, open a thread in [Discussions](https://github.com/rampstackco/claude-skills/discussions) with the tool and a concrete use case you hit on a real project. Direct PRs that edit the MCP list will generally be closed in favor of that thread.
 
 ---
 
