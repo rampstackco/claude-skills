@@ -765,6 +765,7 @@ The SEO audit suite (skills 23-29) is built around Ahrefs as its primary backend
 
 - **Web search** (built into Claude in most environments) - paired with `brand-discovery`, `seo-keyword`, `seo-competitor`, `ux-research`
 - **Tavily MCP** or **Brave Search MCP** - alternatives for deeper research workflows
+- **Xquik MCP** - API-key-backed public X/Twitter research: tweet search, trends, user lookup, timelines, and monitors. Pairs with `brand-discovery`, `content-distribution`, `user-feedback-aggregation`, and `seo-competitor`
 
 ### Where to find them
 
