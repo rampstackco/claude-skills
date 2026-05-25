@@ -22,18 +22,20 @@ This file is a default set of composition conventions for the shape. When `compe
 
 **Build conventions:**
 - More than four modules above the fold on desktop is normal for this shape. Two-module heros are off-vertical.
-- The first viewport carries: the primary task, a band of category or featured-collection entry points, and at least one trust or merchandising signal.
+- **Above the fold at a 1280x800 desktop viewport** (not "the first or second viewport"; the assertion is hard) the page carries: the primary task, the category surface band, AND at least one merchandising or trust signal. A category band that requires any scroll to reach reads as airy and off-vertical for this shape; a real build verifies this against a rendered capture, not in prose.
 - Whitespace is functional, not generous. The leaders in this shape are dense; an airy build reads as not-a-real-store.
 - Route color, type, and aesthetic to `creative-direction` and `design-standards`. This shape's register can be utilitarian, premium-utilitarian, or technical; not flowery or expressive.
 
 ## 3. Merchandising and category surface
 
 **Conventions:**
-- A category surface band is present in the first or second viewport. Eight to twelve category entry points is typical for a wide catalog; four to six for a focused one.
+- A category surface band sits **above the fold at a 1280x800 desktop viewport.** Eight to twelve category entry points is typical for a wide catalog; four to six for a focused one. ("First or second viewport" is too loose; a real build hit that and still read airy because the band slipped below the fold.)
 - Depth signaling is one of: mega-menu hover (broad catalogs), grid of category cards on the home (narrow catalogs), faceted-search side rail on category pages. Pick one; do not stack.
 - Category cards carry an icon, an image, or a tight text-only treatment. Hybrid icon-plus-text reads as catalog; image-only reads as marketing.
 - Hierarchical surface (parent plus child categories) is conventional for broad catalogs. Flat surface fits focused catalogs.
-- Featured / promoted collections appear below the category surface, not above; categories carry the navigation load.
+- A **promotional or deal surface** lives near the top: a deal-of-the-week strip, a promo band, a featured-offer row. The field carries it to signal "this is an active store with offers." Its absence reads as brochure-like rather than storefront-like. The promo can be a single strip with one or two offers; it does not have to be a full module.
+- An **inventory or catalog-depth signal** appears somewhere a first-time visitor will see it: a part count, "12,000+ parts in stock," a category-count figure, or a near-equivalent that establishes the catalog has real depth. The field carries it as a credibility move; its absence reads as a thin or demo catalog. The figure can be approximate, can be in the hero, the trust band, or the chrome.
+- Featured / promoted collections appear below the category surface, not above; categories carry the navigation load. (The promotional surface above is distinct from featured collections; one is a deal band, the other is a curation grid.)
 
 ## 4. Navigation and search paths
 
@@ -75,18 +77,22 @@ For showcase or demo builds, the functional-vs-demo line: real where touchable (
 
 ## 7. Recurring vertical conventions (the synthesis)
 
-A credible ecommerce-catalog storefront, against the field of leaders, carries:
+A credible ecommerce-catalog storefront, against the field of leaders, carries ten conventions:
 
 1. A primary task that owns the hero (fitment, search, or category-grid; not a brand pitch).
-2. A category surface band in the first or second viewport, not buried in a menu.
+2. **(Density-bearing)** A category surface band **above the fold at a 1280x800 desktop viewport**, not buried in a menu and not requiring scroll to reach.
 3. Working faceted filtering on category pages.
 4. A persistent global context indicator if the vertical is fitment-led (the confirmed vehicle, the selected compatibility, the active filter set).
 5. Visible price on every listing card, with no "click to reveal".
 6. Reviews or an explicit substitute (warranty, return policy) near the buying action.
 7. A working cart with real client-side state across pages.
 8. A clearly labeled checkout flow (real in production; honestly demo in showcase builds).
+9. **(Density-bearing, new)** A promotional or deal surface near the top: a deal-of-the-week strip, a promo band, or a featured-offer row.
+10. **(Density-bearing, new)** An inventory or catalog-depth signal a first-time visitor will see (a part count, an SKU total, a category count, or a near-equivalent).
 
-A build missing three or more of these is off-vertical. A build hitting all eight is at the experience bar for the shape; the wedge is what the build does beyond that.
+**Threshold and density-bearing items.** A build hitting 8 or more of these is at the experience bar for the shape; the wedge is what the build does beyond that. A build missing 3 or more is off-vertical and needs composition work, not a polish pass.
+
+Conventions **2, 9, and 10 are the density-bearing ones**, the items whose absence makes a checklist-passing build still read airy or brochure-like instead of storefront-dense. A build can miss a nice-to-have (a strong substitute for reviews, for example) and still read as the vertical; missing any of conventions 2, 9, or 10 is the failure mode the first real auto-parts build exposed. Treat the density-bearing items as non-skippable: if any one is missing, the build will read off-vertical regardless of how many other conventions it hits.
 
 ---
 
