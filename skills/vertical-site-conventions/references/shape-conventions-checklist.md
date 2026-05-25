@@ -62,9 +62,16 @@ Pull the conventions from the experience bar's dimension 7 (or the per-shape ref
 - [ ] Convention 5:
 - [ ] Convention 6:
 - [ ] Convention 7:
+- [ ] Convention 8:
+- [ ] Convention 9:
+- [ ] Convention 10:
 - [ ] (Add rows as needed for the vertical's full convention list.)
 
-**Synthesis rule:** if three or more conventions are absent and not deliberately positioned-against, the build is off-vertical. Go back to dimensions 1 through 6.
+**Density-bearing items.** Some conventions are density-bearing: their absence makes a checklist-passing build still read airy or brochure-like instead of storefront-dense. For the ecommerce-catalog shape, conventions 2 (category surface band above the fold at 1280x800), 9 (a promotional or deal surface near the top), and 10 (an inventory or catalog-depth signal a first-time visitor sees) are the density-bearing trio. Each shape's per-shape reference names its own density-bearing items.
+
+Mark the density-bearing items explicitly in the list above. Missing any one density-bearing item is sufficient to fail the synthesis on its own, regardless of how many other conventions hit. This rule comes from a real build hitting 6 of 8 conventions in an earlier (pre-density-bearing) form of this reference and still reading off-vertical because the density-bearing items it missed were the load-bearing ones.
+
+**Threshold:** a build hitting 8 of 10 (or the equivalent ratio for shapes with a different convention count) is at the experience bar for the shape; the wedge is what the build does beyond that. A build missing 3 or more conventions, OR any density-bearing item, is off-vertical and needs composition work, not a polish pass. Go back to dimensions 1 through 6.
 
 ---
 
