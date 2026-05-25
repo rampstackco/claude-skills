@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-99-blue.svg)](#the-99-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-100-blue.svg)](#the-100-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 99 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 100 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -60,7 +60,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
-- [The 99-skill catalog](#the-99-skill-catalog)
+- [The 100-skill catalog](#the-100-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -89,8 +89,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **99 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
-- **427 reference files** (templates, checklists, decision matrices, worked examples)
+- **100 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
+- **429 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -513,11 +513,11 @@ Each family repo is MIT-licensed, conforms to the Agent Skills Specification, an
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 99-skill catalog
+## The 100-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 99 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 100 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -679,7 +679,7 @@ Paid media discipline: strategy, creative, and performance analytics. Pairs with
 | [`ads-creative-development`](skills/ads-creative-development/SKILL.md) | Hook patterns, format selection, video pacing, variation systems, testing methodology, fatigue detection, and the platform-specific creative norms that separate ads from clutter |
 | [`ads-performance-analytics`](skills/ads-performance-analytics/SKILL.md) | Read paid media dashboards without fooling yourself: attribution models, platform reporting quirks, ROAS vs LTV, multi-platform reconciliation, incrementality testing, and the interpretation failures that compound into wasted budget |
 
-### Research (5)
+### Research (6)
 
 | Skill | What it does |
 |---|---|
@@ -688,6 +688,7 @@ Paid media discipline: strategy, creative, and performance analytics. Pairs with
 | [`journey-mapping`](skills/journey-mapping/SKILL.md) | Customer journey maps, service blueprints, friction analysis |
 | [`discovery-research-synthesis`](skills/discovery-research-synthesis/SKILL.md) | Synthesizing customer interviews, research notes, and support tickets into actionable PM decisions. Distinguishes data-dump (no synthesis) from insight-theater (overpolished narrative) from actionable synthesis (decision-grade clarity) |
 | [`user-feedback-aggregation`](skills/user-feedback-aggregation/SKILL.md) | Collecting and synthesizing user feedback across channels into continuous decision signal. Triage discipline that distinguishes loudest-voice (whoever complains most) from averaged-noise (every signal weighted equally) from triaged-synthesis (weighted by source quality and decision relevance) |
+| [`competitor-experience-audit`](skills/competitor-experience-audit/SKILL.md) | Cross-site experience patterns and gaps across a vertical |
 
 ### Cross-cutting workflows (5)
 
