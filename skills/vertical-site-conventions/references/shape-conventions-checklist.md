@@ -55,7 +55,7 @@ Three or more absences across the seven dimensions means the build is off-vertic
 
 Pull the conventions from the experience bar's dimension 7 (or the per-shape reference's "recurring conventions" section). For each:
 
-- [ ] Convention 1: __________________ — [present / absent (reason) / routed to ____]
+- [ ] Convention 1: __________________ , [present / absent (reason) / routed to ____]
 - [ ] Convention 2:
 - [ ] Convention 3:
 - [ ] Convention 4:
