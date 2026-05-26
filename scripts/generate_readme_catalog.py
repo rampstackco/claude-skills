@@ -5,7 +5,10 @@ Walks ``skills/`` and parses each ``SKILL.md`` frontmatter for the fields
 ``name``, ``description``, ``category``, ``catalog_summary``, and
 ``display_order``. Produces the README catalog section, the skill count
 badge, the subtitle blockquote, the "What you get" counts, the catalog
-header, the table-of-contents anchor, and the catalog intro line.
+header, the table-of-contents anchor, the catalog intro line, and a
+handful of inline skill counts (install block, install-all paragraph,
+hub paragraph, family-table claude-skills row, contributing paragraph)
+that are substituted via anchored regex rather than marker pairs.
 
 Two operating modes:
 
@@ -408,6 +411,23 @@ def replace_badge_count(text: str, total: int) -> str:
     return badge_pattern.sub(replacement, text, count=1)
 
 
+def replace_inline_count(text: str, pattern: str, total: int, label: str) -> str:
+    """Substitute a skill count embedded in prose or a code fence.
+
+    The pattern must capture the text before the count as group 1 and the
+    text after as group 2, with the digits ungrouped between them. Asserts
+    the pattern matches exactly once so a drifted or duplicated anchor fails
+    loudly rather than silently mis-substituting.
+    """
+    rx = re.compile(pattern)
+    matches = list(rx.finditer(text))
+    if not matches:
+        raise ValueError(f"{label}: count pattern not found in README.md")
+    if len(matches) > 1:
+        raise ValueError(f"{label}: count pattern appears more than once in README.md")
+    return rx.sub(rf"\g<1>{total}\g<2>", text, count=1)
+
+
 def render_readme(text: str, skills: list[Skill]) -> str:
     """Apply all marker replacements and return the updated README content."""
     grouped = group_by_category(skills)
@@ -416,6 +436,11 @@ def render_readme(text: str, skills: list[Skill]) -> str:
     ref_total = count_reference_files()
     cat_total = len(CATEGORIES)
     text = replace_badge_count(text, total)
+    text = replace_inline_count(text, r"(# full catalog \()\d+( skills\))", total, "install-block count")
+    text = replace_inline_count(text, r"(You do not have to install all )\d+(\.)", total, "install-all count")
+    text = replace_inline_count(text, r"(already uses\. )\d+( skills at the center)", total, "hub count")
+    text = replace_inline_count(text, r"(Full catalog \(you are here\) \| )\d+( \|)", total, "family-table count")
+    text = replace_inline_count(text, r"(authoring discipline used across all )\d+( skills)", total, "contributing count")
     text = replace_block(text, "COUNT_INTRO", generate_intro_blockquote(total))
     text = replace_block(
         text, "COUNT_WHATYOUGET", generate_whatyouget(total, ref_total, cat_total)
