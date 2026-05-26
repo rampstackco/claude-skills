@@ -42,6 +42,13 @@ Add the marketplace, then install the plugin you want:
 /plugin install rampstack-pm@rampstack
 ```
 
+Prefer a lighter marketplace that lists only the curated subsets (no full catalog)? Add `rampstackco/plugins` instead and install the same three plugins from there:
+
+```
+/plugin marketplace add rampstackco/plugins
+/plugin install rampstack-starter@rampstack
+```
+
 Skills load on demand: each contributes roughly its name and description until Claude needs it.
 
 ---
