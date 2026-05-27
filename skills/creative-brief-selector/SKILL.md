@@ -49,15 +49,15 @@ Direct verbatim copying of an archetype's default palette into a new brand is th
 
 ---
 
-## The five-step process at a glance
+## The framework: five steps, three rules, one hybrid bank
 
 1. **Locate the design space.** Pick one to two candidate archetypes from `brand-archetype-system` that fit the vertical and shape.
 2. **Run input-side divergence.** Read the shipped-demos signatures. Discard candidates that would land sibling to anything shipped. Record what was rejected and why.
-3. **Pull references.** From `references/reference-bank/`, load the file(s) matching the chosen archetype-and-vertical. Augment with one to two discovered live references if the bank is sparse. Add discovered references back to the bank in the build PR.
+3. **Pull references.** From the curated reference bank under `references/reference-bank/`, load the file(s) matching the chosen archetype-and-vertical. Augment with one to two discovered live references if the bank is sparse. Add discovered references back to the bank in the build PR.
 4. **Adapt.** Shift the chosen archetype's defaults (palette, type, voice, layout, imagery direction) toward the business spec. The brief lands as concrete tokens, not abstract families.
 5. **Render and verify.** Render the brief using the template in [`references/02-brief-template.md`](references/02-brief-template.md). Run output-side divergence. Output the brief plus the references list plus the divergence-check result.
 
-Full step-by-step in [`references/01-process.md`](references/01-process.md).
+Full step-by-step in [`references/01-process.md`](references/01-process.md). The divergence schema and its three overlap rules are in [`references/03-divergence-check.md`](references/03-divergence-check.md).
 
 ---
 
@@ -102,4 +102,5 @@ Archetypes are NAMED for aesthetic families, NOT for brands, following the conve
 - [`references/02-brief-template.md`](references/02-brief-template.md) - The fillable brief template with section-by-section guidance.
 - [`references/03-divergence-check.md`](references/03-divergence-check.md) - The signature schema and the overlap rules.
 - [`references/04-shipped-demos-signatures-example.md`](references/04-shipped-demos-signatures-example.md) - Worked example signatures file with seven demos.
-- [`references/reference-bank/`](references/reference-bank/) - The curated bank, seeded with three archetype-and-vertical files. See [`references/reference-bank/README.md`](references/reference-bank/README.md) for the bank's purpose and extension procedure.
+
+The curated reference bank lives in a `reference-bank/` subdirectory under `references/`. The bank ships with a README plus three seed archetype-and-vertical files: `premium-dtc-maker-western-boots.md`, `heritage-local-service-barbershop.md`, and `hospitality-experience-balloon-ride.md`. The bank's purpose and extension procedure are documented in its README; the seed files each carry three to four positive live references and one to two negative references for the chosen position. Load the bank file matching the build's archetype-and-vertical at step 3 of the process.
