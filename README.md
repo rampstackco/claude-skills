@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-101-blue.svg)](#the-101-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-102-blue.svg)](#the-102-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 101 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 102 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -33,7 +33,7 @@ Add the marketplace, then install the plugin you want:
 ```
 /plugin marketplace add rampstackco/claude-skills
 
-# full catalog (101 skills)
+# full catalog (102 skills)
 /plugin install rampstack-skills@rampstack
 
 # focused subsets
@@ -67,7 +67,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
-- [The 101-skill catalog](#the-101-skill-catalog)
+- [The 102-skill catalog](#the-102-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -96,8 +96,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **101 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
-- **440 reference files** (templates, checklists, decision matrices, worked examples)
+- **102 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
+- **445 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -327,7 +327,7 @@ For the current API surface, request format, and limits, see the [Agent Skills A
 
 ### Want only a few skills?
 
-You do not have to install all 101. Pick the categories that match your work. The library is modular: each skill stands on its own.
+You do not have to install all 102. Pick the categories that match your work. The library is modular: each skill stands on its own.
 
 ---
 
@@ -459,7 +459,7 @@ You can also pull individual skills for one-off work. Need just a backlink audit
 
 ## How the catalog connects
 
-The skills compose with the tools your team already uses. 101 skills at the center; 35 integrations across 6 integration categories radiating out via MCPs.
+The skills compose with the tools your team already uses. 102 skills at the center; 35 integrations across 6 integration categories radiating out via MCPs.
 
 <p align="center">
   <picture>
@@ -507,7 +507,7 @@ claude-skills is the parent catalog. Curated subsets and companion repos focus o
 
 | Repo | Focus | Skills |
 |---|---|---|
-| [claude-skills](https://github.com/rampstackco/claude-skills) | Full catalog (you are here) | 101 |
+| [claude-skills](https://github.com/rampstackco/claude-skills) | Full catalog (you are here) | 102 |
 | [claude-skills-starter](https://github.com/rampstackco/claude-skills-starter) | General-purpose lite | 14 |
 | [claude-skills-seo](https://github.com/rampstackco/claude-skills-seo) | SEO consulting | 12 |
 | [claude-skills-pm](https://github.com/rampstackco/claude-skills-pm) | Product management | 12 |
@@ -519,11 +519,11 @@ Each family repo is MIT-licensed, conforms to the Agent Skills Specification, an
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 101-skill catalog
+## The 102-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 101 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 102 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -538,7 +538,7 @@ All 101 skills are shipped. Each has a complete SKILL.md plus at least one refer
 | [`information-architecture`](skills/information-architecture/SKILL.md) | Sitemap, navigation, URL structure, content types, taxonomy |
 | [`content-strategy`](skills/content-strategy/SKILL.md) | Editorial strategy, content calendar, topical authority planning |
 
-### Brand (6)
+### Brand (7)
 
 | Skill | What it does |
 |---|---|
@@ -548,6 +548,7 @@ All 101 skills are shipped. Each has a complete SKILL.md plus at least one refer
 | [`brand-voice`](skills/brand-voice/SKILL.md) | Voice attributes, tone shifts, vocabulary, paired-example library |
 | [`brand-archetype-system`](skills/brand-archetype-system/SKILL.md) | 12 archetype defaults across 18 verticals: color, type, voice, imagery starters |
 | [`logo-design`](skills/logo-design/SKILL.md) | Logo variants across architectures (wordmark, lockup, monogram, letterform-as-symbol), with rationale and application specs |
+| [`creative-brief-selector`](skills/creative-brief-selector/SKILL.md) | Live-reference-grounded creative briefs with divergence check against prior builds |
 
 ### Design (4)
 
@@ -826,7 +827,7 @@ Contributions are welcome. Whether you want to fix a typo, add a reference file,
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full process.
 
-The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 101 skills, with worked examples and a blank template.
+The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 102 skills, with worked examples and a blank template.
 
 ---
 
