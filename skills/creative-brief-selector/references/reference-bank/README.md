@@ -97,10 +97,12 @@ Retirement is a normal part of bank maintenance. The bank reflects what is curre
 
 ## Seeded combinations
 
-Three combinations ship with the skill:
+Five combinations live in the bank:
 
 - [`premium-dtc-maker-western-boots.md`](premium-dtc-maker-western-boots.md) - Premium DTC maker register applied to a small-collection western-boot maker.
 - [`heritage-local-service-barbershop.md`](heritage-local-service-barbershop.md) - Heritage local-service register applied to a neighborhood barbershop.
 - [`hospitality-experience-balloon-ride.md`](hospitality-experience-balloon-ride.md) - Documentary-honest hospitality-experience register applied to a scenic-flight operator.
+- [`editorial-restrained-documentary-honest-specialty-coffee-subscription.md`](editorial-restrained-documentary-honest-specialty-coffee-subscription.md) - Editorial-restrained subscription-app register applied to a single-origin specialty coffee subscription.
+- [`rugged-utilitarian-documentary-honest-regional-used-vehicle-marketplace.md`](rugged-utilitarian-documentary-honest-regional-used-vehicle-marketplace.md) - Rugged-utilitarian inventory-listing register applied to a regional used-truck-and-SUV marketplace.
 
-Each seed file was built against a real shipped demo and reflects the references that demo's build drew from. As the portfolio grows, the bank grows with it.
+Each seed file was built against a real shipped demo or shipped brief and reflects the references that build drew from. As the portfolio grows, the bank grows with it.
