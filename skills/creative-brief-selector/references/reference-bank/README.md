@@ -97,7 +97,7 @@ Retirement is a normal part of bank maintenance. The bank reflects what is curre
 
 ## Seeded combinations
 
-Eight combinations live in the bank:
+Nine combinations live in the bank:
 
 - [`premium-dtc-maker-western-boots.md`](premium-dtc-maker-western-boots.md) - Premium DTC maker register applied to a small-collection western-boot maker.
 - [`heritage-local-service-barbershop.md`](heritage-local-service-barbershop.md) - Heritage local-service register applied to a neighborhood barbershop.
@@ -107,5 +107,6 @@ Eight combinations live in the bank:
 - [`editorial-restrained-literary-quarterly.md`](editorial-restrained-literary-quarterly.md) - Editorial-restrained editorial-publication register applied to a themed literary and ideas quarterly.
 - [`luxe-considered-editorial-restrained-residential-architectural-brokerage.md`](luxe-considered-editorial-restrained-residential-architectural-brokerage.md) - Luxe-considered-editorial-restrained inventory-listing register applied to a residential brokerage of architecturally significant homes (the first same-shape divergence test against the rugged-utilitarian regional-used-vehicle-marketplace entry).
 - [`bold-confident-editorial-restrained-aaa-game-studio.md`](bold-confident-editorial-restrained-aaa-game-studio.md) - Bold-confident-editorial-restrained corporate-portfolio register applied to a AAA-adjacent action game studio (the first portfolio entry in Bold Confident; the gentler entry into the bold register before a game-title demo).
+- [`bold-confident-vibrant-saturated-single-ip-game-title.md`](bold-confident-vibrant-saturated-single-ip-game-title.md) - Bold-confident-vibrant-saturated single-IP marketing register applied to a post-launch AAA action game title (the first single-IP marketing entry; the title side of the game-studio pair, claiming the saturated leap the studio brief reserved).
 
 Each seed file was built against a real shipped demo or shipped brief and reflects the references that build drew from. As the portfolio grows, the bank grows with it.
