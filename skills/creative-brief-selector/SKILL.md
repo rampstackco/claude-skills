@@ -12,9 +12,9 @@ A starting-point selector for brand and microsite builds. Given a business spec 
 
 1. An archetype position from `brand-archetype-system`, picked or composed to be deliberately distinct from the shipped demos.
 2. A small set of live reference sites for that archetype-and-vertical combination, drawn from a curated bank plus optional per-build discovery.
-3. A divergence check against the shipped demos that flags palette, voice, or structural overlap before the brief is handed off.
+3. A divergence check against the shipped demos that flags palette, voice, structural pattern, and section-shape overlap before the brief is handed off.
 
-The brief output is concrete tokens, not abstract families. It is meant to be loaded by downstream build skills as the single creative artifact for the build.
+The brief output is concrete tokens, not abstract families, including explicit section-shape choices (hero shape and footer shape) as first-class outputs alongside palette and voice. It is meant to be loaded by downstream build skills as the single creative artifact for the build.
 
 ---
 
@@ -71,21 +71,26 @@ When a build draws from a sparse combination, the build is expected to commit th
 
 ## The divergence schema
 
-Each shipped demo carries a signature with four fields:
+Each shipped demo carries a signature with seven fields:
 
 - `slug`
 - `archetype` (the canonical archetype name from `brand-archetype-system`)
 - `dominant_hue_family` (the recognizable colour family, e.g. leather-bone-saddle, dawn-navy-coral, dark-linen-amber)
 - `voice_register` (e.g. story-forward third-person, atmospheric second-person, fitment-first technical)
 - `primary_structural_pattern` (e.g. shoppable-grid-product-forward, arc-timeline-hero, fitment-selector-then-rails)
+- `hero_shape` (e.g. dual-column-image-and-text, wide-photograph-with-band-below, full-bleed-image-with-overlay; canonical vocabulary in `references/05-section-shapes-vocabulary.md`)
+- `footer_shape` (e.g. single-line-strip, multi-column-sitemap, type-only-no-links; same vocabulary file)
 
-Overlap rules:
+Overlap rules (full set in [`references/03-divergence-check.md`](references/03-divergence-check.md)):
 
 - Two demos share archetype AND share dominant_hue_family => **SIBLING (block)**.
 - Two demos share archetype AND share voice_register AND share primary_structural_pattern => **SIBLING (block)**.
-- Two demos share only dominant_hue_family across different archetypes => **WARN** (a recurring palette across the portfolio is the most common drift signal).
+- Two demos share only dominant_hue_family across different archetypes => **WARN**.
+- The candidate's hero_shape matches the hero_shape of two or more shipped demos => **WARN**.
+- The candidate's hero_shape matches three or more shipped demos AND any share an archetype family => **BLOCK**.
+- The candidate's footer_shape matches three or more shipped demos => **WARN**.
 
-Full schema and procedure in [`references/03-divergence-check.md`](references/03-divergence-check.md). A worked example file of seven signatures lives at [`references/04-shipped-demos-signatures-example.md`](references/04-shipped-demos-signatures-example.md) for illustration; the live signatures file for any consuming project lives in that project, not in this skill.
+A worked example file of seven signatures lives at [`references/04-shipped-demos-signatures-example.md`](references/04-shipped-demos-signatures-example.md) for illustration; the live signatures file for any consuming project lives in that project, not in this skill.
 
 ---
 
@@ -102,5 +107,6 @@ Archetypes are NAMED for aesthetic families, NOT for brands, following the conve
 - [`references/02-brief-template.md`](references/02-brief-template.md) - The fillable brief template with section-by-section guidance.
 - [`references/03-divergence-check.md`](references/03-divergence-check.md) - The signature schema and the overlap rules.
 - [`references/04-shipped-demos-signatures-example.md`](references/04-shipped-demos-signatures-example.md) - Worked example signatures file with seven demos.
+- [`references/05-section-shapes-vocabulary.md`](references/05-section-shapes-vocabulary.md) - Canonical open vocabulary of hero and footer section shapes plus archetype affinities.
 
 The curated reference bank lives in a `reference-bank/` subdirectory under `references/`. The bank ships with a README plus three seed archetype-and-vertical files: `premium-dtc-maker-western-boots.md`, `heritage-local-service-barbershop.md`, and `hospitality-experience-balloon-ride.md`. The bank's purpose and extension procedure are documented in its README; the seed files each carry three to four positive live references and one to two negative references for the chosen position. Load the bank file matching the build's archetype-and-vertical at step 3 of the process.

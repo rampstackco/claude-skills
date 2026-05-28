@@ -49,6 +49,27 @@ Negative references (do NOT pull from):
 
 - [<URL>] - <one-line why this register is the wrong one>
 
+## Section shapes (hero and footer; first-class brief outputs)
+
+Pick a `hero_shape` and a `footer_shape` from [`05-section-shapes-vocabulary.md`](05-section-shapes-vocabulary.md). Document the choice with rationale; the choice is not optional and a brief without these fields does not pass the divergence check.
+
+### `hero_shape`: <chosen shape label, e.g. `wide-photograph-with-band-below`>
+
+<One paragraph: why this shape, what the chosen shape signals to the visitor that the alternatives do not, what shapes were rejected and why. Reference the section-shapes vocabulary by label.>
+
+Rejected shapes:
+
+- `<rejected shape 1>` - <one-line why this shape was wrong for this brief>
+- `<rejected shape 2>` - <one-line why this shape was wrong for this brief>
+
+### `footer_shape`: <chosen shape label, e.g. `single-line-strip`>
+
+<One paragraph: why this footer shape, what it does for the page that alternatives do not.>
+
+Rejected shapes:
+
+- `<rejected shape>` - <one-line why>
+
 ## Palette token shape (specific to this brand; do not reuse across brands)
 
 | Token | Hex | Role |
@@ -131,10 +152,12 @@ A build matches this brief if:
 - **Dominant hue family**: <derived from palette, e.g. "leather-bone-saddle">
 - **Voice register**: <e.g. "story-forward third-person">
 - **Primary structural pattern**: <e.g. "shoppable-grid-product-forward">
+- **Hero shape**: <chosen label from 05-section-shapes-vocabulary.md>
+- **Footer shape**: <chosen label from 05-section-shapes-vocabulary.md>
 
 **Input-side divergence**: <passed | warn-with-reasons | block-with-reasons>. <If anything was rejected at step 2, list it here: rejected <archetype> because it collided with <shipped demo slug> on <field>>.
 
-**Output-side divergence**: <passed | warn-with-reasons | block-with-reasons>. <If warn or block, list the matched fields and the colliding demo>.
+**Output-side divergence**: <passed | warn-with-reasons | block-with-reasons>. <If warn or block, list the matched fields and the colliding demo. Rules 4 and 6 surface as warns; Rule 5 surfaces as a block; Rules 1, 2, 3 surface per their definitions in 03-divergence-check.md.>
 
 ---
 ```

@@ -2,7 +2,7 @@
 
 An illustrative signatures file with seven worked entries. This file is example-only; the live signatures file for any consuming project lives in that project (typically at `progress/shipped-demos-signatures.yml`), not in this skill.
 
-The schema is defined in [`03-divergence-check.md`](03-divergence-check.md). Each entry has five fields: `slug`, `archetype`, `dominant_hue_family`, `voice_register`, `primary_structural_pattern`.
+The schema is defined in [`03-divergence-check.md`](03-divergence-check.md). Each entry has seven fields: `slug`, `archetype`, `dominant_hue_family`, `voice_register`, `primary_structural_pattern`, `hero_shape`, `footer_shape`. The last two (`hero_shape`, `footer_shape`) are the latest additions; their canonical vocabulary lives in [`05-section-shapes-vocabulary.md`](05-section-shapes-vocabulary.md).
 
 The seven entries below are illustrative records of seven sibling-shape demos a portfolio might ship. They are written here as a worked example of what the file looks like in practice. The archetype values reference the canonical names from `brand-archetype-system`.
 
@@ -17,42 +17,56 @@ demos:
     dominant_hue_family: slate-and-amber
     voice_register: fitment-first-technical
     primary_structural_pattern: fitment-selector-then-rails
+    hero_shape: dual-column-image-and-text
+    footer_shape: multi-column-sitemap
 
   - slug: iron-and-rye-barbershop
     archetype: warm-conversational-retro-nostalgic
     dominant_hue_family: warm-walnut-brass
     voice_register: warm-everyday-craft
     primary_structural_pattern: barber-roster-then-services-menu
+    hero_shape: dual-column-image-and-text
+    footer_shape: single-line-strip
 
   - slug: pho-heights
     archetype: documentary-honest-luxe-considered
     dominant_hue_family: dark-linen-amber
     voice_register: chef-essay-first-person
     primary_structural_pattern: editorial-hero-then-signatures-menu
+    hero_shape: full-bleed-image-with-overlay
+    footer_shape: single-line-strip
 
   - slug: volta-robotics
     archetype: technical-precise
     dominant_hue_family: graphite-and-signal-orange
     voice_register: spec-forward-technical
     primary_structural_pattern: product-strip-then-spec-table
+    hero_shape: full-bleed-image-with-overlay
+    footer_shape: single-line-strip
 
   - slug: clearflow-initiative
     archetype: editorial-restrained
     dominant_hue_family: forest-green-cream
     voice_register: restrained-citation-bearing
     primary_structural_pattern: theory-of-change-hero-then-evidence-band
+    hero_shape: full-bleed-image-with-overlay
+    footer_shape: single-line-strip
 
   - slug: pinto-mesa-boots
     archetype: luxe-considered-rugged-utilitarian
     dominant_hue_family: leather-bone-saddle
     voice_register: story-forward-third-person
     primary_structural_pattern: shoppable-grid-product-forward
+    hero_shape: dual-column-image-and-text
+    footer_shape: single-line-strip
 
   - slug: drift-and-dawn
     archetype: documentary-honest-luxe-considered
     dominant_hue_family: dawn-navy-coral
     voice_register: atmospheric-second-person
     primary_structural_pattern: arc-timeline-hero-with-packages-strip
+    hero_shape: full-bleed-image-with-overlay
+    footer_shape: single-line-strip
 ```
 
 ---

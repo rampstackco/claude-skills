@@ -91,6 +91,7 @@ Take the chosen archetype's defaults from `brand-archetype-system` (palette, typ
 - **Type system.** Pick the display family (often a serif from the archetype), the body family (often Inter or similar), and the micro-label treatment (tracking, casing, weight). Document the explicit differentiators from shipped demos (e.g. "tight uppercase tracking 0.04em on micro-labels, distinct from the loose 0.18em tracking the hospitality-experience build uses").
 - **Voice.** Pick the voice register (e.g. story-forward third-person; atmospheric second-person; fitment-first technical). Write five to ten voice samples in this voice using the brand name.
 - **Layout.** Pick the structural pattern (e.g. shoppable-grid-product-forward; arc-timeline-hero; fitment-selector-then-rails). Describe the spine moves the homepage will run (four to six numbered moves).
+- **Section shapes.** Pick a `hero_shape` and a `footer_shape` from the vocabulary in [`05-section-shapes-vocabulary.md`](05-section-shapes-vocabulary.md). The hero shape carries the most visual weight on the page; pick it deliberately based on archetype, audience, and the shapes already shipped in the portfolio. Document the rejected shapes in the brief with one-line reasons. Skipping this step means the engine inherits the most recently built hero shape regardless of brief specification, which is the drift signal this skill exists to catch.
 - **CTA grammar.** Pick the verb register (e.g. "Shop the collection," "Book a dawn," "See the morning"). Verb-first, shape-appropriate.
 - **Imagery direction.** Describe the shoot's register (e.g. "warm-bone studio seamless, three-quarter angle, soft overhead, products fill 70 percent of frame"). Specify aspect ratios per page slot.
 
@@ -112,8 +113,10 @@ After rendering, compute the brief's own signature and run output-side divergenc
 - `dominant_hue_family`: derived from the palette tokens
 - `voice_register`: from the voice section
 - `primary_structural_pattern`: from the spine moves
+- `hero_shape`: from the section-shapes choice in step 4
+- `footer_shape`: from the section-shapes choice in step 4
 
-Compare this signature against every shipped demo using the same rules from step 2.
+Compare this signature against every shipped demo using the full rule set in [`03-divergence-check.md`](03-divergence-check.md). The check now runs seven rules: the original three pairwise rules (archetype/hue, archetype/voice/pattern, recurring hue across archetypes) plus the three aggregate shape rules (hero shape collision warn at two matches, hero shape archetype-collision block at three matches with shared family, footer shape warn at three matches).
 
 **Possible outcomes:**
 

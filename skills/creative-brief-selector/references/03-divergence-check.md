@@ -6,7 +6,7 @@ The signature schema, the overlap rules, and the comparison procedure.
 
 ## Signature schema
 
-Each shipped demo carries a signature with five fields. The schema is small on purpose: any field that takes judgment to populate gets argued about; a small mechanical schema gets used.
+Each shipped demo carries a signature with seven fields. The schema is small on purpose: any field that takes judgment to populate gets argued about; a small mechanical schema gets used.
 
 ```yaml
 - slug: <kebab-case slug, e.g. pinto-mesa-boots>
@@ -14,7 +14,11 @@ Each shipped demo carries a signature with five fields. The schema is small on p
   dominant_hue_family: <named hue family, e.g. leather-bone-saddle>
   voice_register: <named register, e.g. story-forward-third-person>
   primary_structural_pattern: <named pattern, e.g. shoppable-grid-product-forward>
+  hero_shape: <named shape from 05-section-shapes-vocabulary.md, e.g. dual-column-image-and-text>
+  footer_shape: <named shape from 05-section-shapes-vocabulary.md, e.g. single-line-strip>
 ```
+
+The last two fields (`hero_shape` and `footer_shape`) are the latest schema additions. The canonical vocabulary for both lives in [`05-section-shapes-vocabulary.md`](05-section-shapes-vocabulary.md).
 
 ### slug
 
@@ -64,6 +68,32 @@ The structural pattern the homepage runs, in three to five words. Examples:
 
 The naming convention: name the homepage's primary spine in a way another build can recognize from the rendered page.
 
+### hero_shape
+
+The shape of the hero section, drawn from the vocabulary in [`05-section-shapes-vocabulary.md`](05-section-shapes-vocabulary.md). Examples:
+
+- `dual-column-image-and-text`
+- `wide-photograph-with-band-below`
+- `full-bleed-image-with-overlay`
+- `type-led-prose`
+- `centered-single-column`
+- `asymmetric-large-image-small-text`
+- `grid-of-elements`
+- `data-table-or-spec-led`
+
+A build that needs a shape not in the vocabulary documents and proposes a new label per the extension procedure in `05-section-shapes-vocabulary.md`.
+
+### footer_shape
+
+The shape of the footer section, drawn from the vocabulary in [`05-section-shapes-vocabulary.md`](05-section-shapes-vocabulary.md). Examples:
+
+- `single-line-strip`
+- `multi-column-sitemap`
+- `type-only-no-links`
+- `editorial-colophon-with-masthead`
+- `newsletter-band-with-credits`
+- `dark-cta-then-credits`
+
 ---
 
 ## Overlap rules
@@ -88,15 +118,46 @@ If two demos share `dominant_hue_family` but their `archetype` differs, the outc
 
 A recurring hue family across different archetypes is the most common drift signal in a portfolio. The warn surfaces the recurrence so the consumer can choose to break the pattern or accept it as the portfolio's signature.
 
-### Rule 4: Anything else
+### Rule 4: Hero shape collision (warn)
+
+If the candidate's proposed `hero_shape` matches the `hero_shape` of two or more shipped demos, the outcome is **WARN**.
+
+The warn surfaces a deliberation note listing every shipped demo using the same shape. The brief author either justifies the repeat (and records that justification in the brief's section-shapes rationale) or picks a different shape from the vocabulary. Two demos sharing a hero shape is acceptable for a portfolio of nine to twelve demos; three or more is the point where the shape starts reading as the engine's house default.
+
+### Rule 5: Hero shape archetype-collision (block)
+
+If the candidate's proposed `hero_shape` matches the `hero_shape` of three or more shipped demos AND any of those matching demos share an archetype family with the proposed brief, the outcome is **BLOCK**.
+
+This catches the case where the brief is heading toward the strongest sibling result possible: the same hero shape AND a related archetype. The block forces the brief to choose differently on at least one dimension (a different hero shape, or a different archetype lead, or a documented justification that escalates to the deliberation notes with explicit reasoning).
+
+Archetype-family overlap is computed by comparing the lead archetype tokens. Composed archetypes share a family if either of their tokens matches. For example, `editorial-restrained` and `editorial-restrained-documentary-honest` share the `editorial-restrained` family; `documentary-honest-luxe-considered` and `rugged-utilitarian-documentary-honest` share the `documentary-honest` family.
+
+### Rule 6: Footer shape collision (warn)
+
+If the candidate's proposed `footer_shape` matches the `footer_shape` of three or more shipped demos, the outcome is **WARN**.
+
+Footers tolerate more repetition than heroes since they carry less visual weight and are more functional than expressive. The threshold (three matching demos for a warn, not two) is correspondingly higher. There is no block-level rule for footer shapes at this scope; if a portfolio-wide footer shape emerges as the house default, it becomes part of the portfolio's signature rather than a per-build distinctness failure.
+
+### Rule 7: Anything else
 
 If no rule above fires, the outcome is **PASSED**.
+
+---
+
+## Why shapes carry weight
+
+Heroes carry the most visual weight on a page and the most signal to the visitor. Hero-shape repetition across a portfolio compresses the perceived distance between builds even when palette, voice, and structural pattern diverge. The early showcase portfolio surfaced this drift signal: most builds shipped a `dual-column-image-and-text` or `full-bleed-image-with-overlay` hero regardless of brief specification, because the engine pattern-matched the most recently built shape.
+
+Footers carry less weight and are typically more functional than expressive. They tolerate more repetition before the repetition becomes a distinctness cost.
+
+Rules 4, 5, and 6 exist to make hero-shape and footer-shape choice an explicit selection at brief time rather than an implicit inheritance from the most recently built demo.
 
 ---
 
 ## Comparison procedure
 
 ```
+# Pairwise rules (run on every candidate-shipped pair):
 for candidate in candidates:
   for shipped in shipped_demos:
     if rule_1(candidate, shipped):
@@ -108,6 +169,18 @@ for candidate in candidates:
     if rule_3(candidate, shipped):
       record_warn(candidate, shipped, fields=['dominant_hue_family'])
       continue
+
+# Aggregate rules (run once per candidate against the full set):
+for candidate in candidates:
+  hero_matches = [s for s in shipped_demos if s.hero_shape == candidate.hero_shape]
+  if len(hero_matches) >= 3 and any(shares_archetype_family(candidate, s) for s in hero_matches):
+    record_block(candidate, hero_matches, fields=['hero_shape', 'archetype'])  # rule 5
+  elif len(hero_matches) >= 2:
+    record_warn(candidate, hero_matches, fields=['hero_shape'])  # rule 4
+
+  footer_matches = [s for s in shipped_demos if s.footer_shape == candidate.footer_shape]
+  if len(footer_matches) >= 3:
+    record_warn(candidate, footer_matches, fields=['footer_shape'])  # rule 6
 ```
 
 The check produces three lists: blocks, warns, and a passed flag (true iff blocks and warns are both empty).
