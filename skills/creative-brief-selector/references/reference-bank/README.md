@@ -97,7 +97,7 @@ Retirement is a normal part of bank maintenance. The bank reflects what is curre
 
 ## Seeded combinations
 
-Ten combinations live in the bank:
+Eleven combinations live in the bank:
 
 - [`premium-dtc-maker-western-boots.md`](premium-dtc-maker-western-boots.md) - Premium DTC maker register applied to a small-collection western-boot maker.
 - [`heritage-local-service-barbershop.md`](heritage-local-service-barbershop.md) - Heritage local-service register applied to a neighborhood barbershop.
@@ -109,5 +109,6 @@ Ten combinations live in the bank:
 - [`bold-confident-editorial-restrained-aaa-game-studio.md`](bold-confident-editorial-restrained-aaa-game-studio.md) - Bold-confident-editorial-restrained corporate-portfolio register applied to a AAA-adjacent action game studio (the first portfolio entry in Bold Confident; the gentler entry into the bold register before a game-title demo).
 - [`bold-confident-vibrant-saturated-single-ip-game-title.md`](bold-confident-vibrant-saturated-single-ip-game-title.md) - Bold-confident-vibrant-saturated single-IP marketing register applied to a post-launch AAA action game title (the first single-IP marketing entry; the title side of the game-studio pair, claiming the saturated leap the studio brief reserved).
 - [`minimal-essentialist-documentary-honest-trades-directory.md`](minimal-essentialist-documentary-honest-trades-directory.md) - Minimal-essentialist-documentary-honest directory-marketplace register applied to a homeowner-facing local-trades directory (the first directory-marketplace shape and the first multi-provider entry; encodes the multi-provider conventions and the no-fabricated-reviews resolution).
+- [`luxe-considered-curated-stays-directory.md`](luxe-considered-curated-stays-directory.md) - Pure-luxe-considered directory-marketplace register applied to an aspirational curated short-term-stays marketplace (the second directory-marketplace entry; the same-shape divergence partner to the trades directory, showing the shape across two opposite registers; reframes the multi-provider conventions for hosts and stays).
 
 Each seed file was built against a real shipped demo or shipped brief and reflects the references that build drew from. As the portfolio grows, the bank grows with it.
