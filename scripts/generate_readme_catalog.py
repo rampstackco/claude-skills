@@ -232,6 +232,14 @@ def load_skills() -> list[Skill]:
                 f"Allowed values: {allowed}"
             )
             continue
+        desc_len = len(str(description))
+        if desc_len > 1024:
+            errors.append(
+                f"{entry.name}: description is {desc_len} characters, "
+                f"exceeds the 1024-character portability cap (Codex CLI, Pi, "
+                f"and Antigravity reject longer descriptions)"
+            )
+            continue
         skills.append(
             Skill(
                 slug=entry.name,
