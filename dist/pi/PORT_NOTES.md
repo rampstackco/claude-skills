@@ -5,15 +5,16 @@ by a repeatable, dependency-free build (`scripts/build-pi.mjs`). Do not merge.
 
 ## Count
 
-- Source skills (`skills/*/SKILL.md`): 99
-- Emitted skills (`dist/pi/.agents/skills/*/SKILL.md`): 99
-- Reference files preserved: 457
+- Source skills (`skills/*/SKILL.md`): 102
+- Emitted skills (`dist/pi/.agents/skills/*/SKILL.md`): 102
+- Reference files preserved: 488
 
-Note on the count: the spike brief expected 102 skills. The actual count on the
-`main` base of this worktree is 99. The difference is that `main` is behind the
-sibling spike branches at the time of this work, not a dropped or filtered
-skill. The build emits exactly what the source contains, and validation asserts
-emitted count equals source count.
+Note on the count: this dist was first built on a stale 99-skill base after a
+disk-full event left a `git reset --hard origin/main` un-applied. It has since
+been rebased onto the corrected `main` (PR #90), which is 102 skills with all
+descriptions shortened under the 1024-char cap. The build now emits exactly 102
+skills, including `creative-brief-selector`, and validation asserts emitted
+count equals source count.
 
 ## Key decision: preserve native frontmatter (no sidecar)
 
@@ -48,16 +49,16 @@ Run `node scripts/build-pi.mjs --validate`:
 - PASS: every emitted SKILL.md has non-empty `name` and `description`
 - PASS: every name conforms to Pi rules (lowercase a-z / 0-9 / hyphen, max 64
   chars, no consecutive hyphens)
-- WARN: 3 descriptions exceed 1024 chars (`creative-direction` 1322,
-  `integration-orchestrator` 1483, `logo-design` 1222)
-- PASS: emitted skill count equals source (99)
-- PASS: every source references file has an emitted counterpart (457)
+- PASS: every description is <= 1024 chars
+- PASS: emitted skill count equals source (102)
+- PASS: every source references file has an emitted counterpart (488)
 
-On the WARN: Pi treats an over-length description as a non-fatal warning and
-still loads the skill (only a missing description prevents loading). Because
-this build is preserve-native and must not trim source content, these three are
-reported, not fixed. If a future dist chooses to address them, the fix belongs
-in the source `skills/` tree, not in this build.
+No warnings. An earlier build on the stale 99-skill base reported three
+descriptions over 1024 chars (`creative-direction`, `integration-orchestrator`,
+`logo-design`). Those were shortened at source in PR #90, so the over-length
+warning is now gone. Pi would have loaded those skills anyway (an over-length
+description is a non-fatal warning; only a missing description prevents
+loading), but the source fix removes the warning entirely.
 
 ## Live discovery check
 
@@ -69,18 +70,17 @@ Pi CLI is installable, so this was exercised for real, not skipped.
 - Called Pi's own loader, `loadSkillsFromDir({ dir, source })`, against
   `dist/pi/.agents/skills/`.
 
-Results:
-- 99 skills discovered (matches emitted count).
-- 3 diagnostics, all `type: "warning"`, all "description exceeds 1024
-  characters" (1322 / 1483 / 1222). These match the validator exactly and did
-  not prevent any skill from loading.
+Results (on the corrected 102-skill base):
+- 102 skills discovered (matches emitted count).
+- 0 diagnostics. The three description-length warnings seen on the earlier
+  99-skill base are gone now that PR #90 shortened those descriptions.
 - `creative-brief` loaded cleanly (description length 701,
   `disableModelInvocation: false`, filePath resolved).
-- `formatSkillsForPrompt(skills)` rendered all 99 skills into a system-prompt
-  block (about 90k chars) with no errors thrown.
+- `formatSkillsForPrompt(skills)` rendered all 102 skills into a system-prompt
+  block (about 92k chars) with no errors thrown.
 
 Conclusion: Pi discovers and parses the entire emitted catalog with zero parse
-errors and only the three expected non-fatal description-length warnings.
+errors and zero warnings.
 
 Manual repro (if installing fresh):
 
