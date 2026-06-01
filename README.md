@@ -72,6 +72,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
 - [Repository structure](#repository-structure)
+- [Trust and security](#trust-and-security)
 - [Contributing](#contributing)
 - [Acknowledgments](#acknowledgments)
 - [Resources](#resources)
@@ -818,6 +819,21 @@ MAPPING.md                  (origin notes for skills ported from existing work)
 README.md                   (this file)
 LICENSE                     (MIT)
 ```
+
+---
+
+## Trust and security
+
+Skills are instructions and code that run with your agent's permissions, so how
+a catalog is maintained matters. Changes reach `main` only through pull requests
+with signed commits and linear history. Each skill is hashed into a checksum
+manifest (`SKILLS.lock`) you can verify against, and reviewed against a
+documented safety checklist before it merges.
+
+This process catches known classes of unsafe content and lets you confirm a
+skill matches the reviewed version. It is not a promise that any skill is
+risk-free. See [SECURITY.md](SECURITY.md) for the full process and how to report
+an issue.
 
 ---
 

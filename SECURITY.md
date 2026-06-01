@@ -1,63 +1,42 @@
 # Security Policy
 
+This describes how skills in this catalog are reviewed, signed, and verified,
+and how to report a security issue.
+
+## How skills are protected
+
+Every skill goes through the same process before it lands on `main`:
+
+- Provenance. Changes merge through required pull requests with signed commits
+  and linear history enforced on `main`, so every skill traces back to a
+  verified identity.
+- Integrity. Each skill and its bundled files are hashed, and the checksums are
+  committed to `SKILLS.lock`. Verify a skill matches the reviewed version by
+  regenerating the manifest with `python tools/gen_skills_lock.py --check`.
+- Review. Before merge, each skill is checked against a documented safety
+  checklist covering bundled script behavior, network calls, environment and
+  secret access, instruction content, trigger scope, and writes to agent memory
+  files. See CONTRIBUTING.md for the checklist.
+
+## What this does and does not cover
+
+This process is designed to catch known classes of unsafe skill content and to
+give you a way to verify what you installed. It is not a guarantee that a skill
+is free of all risk. Skills are instructions and code that run with the
+permissions of your agent, so review any skill against your own environment
+before use, as you would any third-party code.
+
 ## Reporting a vulnerability
 
-If you discover a security vulnerability in this repository, please report it privately. Do **not** open a public GitHub issue.
+Report security issues privately through GitHub's private vulnerability
+reporting on this repository (Security tab, then Report a vulnerability). If you
+cannot use that, email security@rampstack.co.
 
-### Preferred: GitHub Security Advisories
+Include the affected skill, a description of the issue, and reproduction steps
+if you have them. Do not open a public issue or PR for a security report.
 
-The fastest way to report is via GitHub's private vulnerability reporting:
+## Disclosure
 
-1. Go to the [Security tab](https://github.com/rampstackco/claude-skills/security) of this repository
-2. Click **Report a vulnerability**
-3. Fill out the form with as much detail as possible
-
-This keeps the report confidential while we investigate and patch.
-
-### Alternate: email
-
-You can also email the security team directly at **security@rampstack.co**.
-
-When reporting, please include:
-
-- A description of the vulnerability
-- Steps to reproduce
-- The potential impact
-- Any suggested mitigation, if you have one
-- Whether you would like public credit when the fix ships
-
-## What to expect
-
-- **Acknowledgment** within 3 business days
-- **Initial assessment** within 7 business days, including a severity classification
-- **Status updates** every 7 days while the fix is in progress
-- **Public disclosure** coordinated with the reporter once a fix is available
-
-## Scope
-
-This repository is a library of Claude Skills (markdown files and reference documents). It contains no executable code, no servers, and no runtime. The most likely security concerns are:
-
-- **Prompt injection vectors** in skill content that could manipulate an LLM consuming the skills against user intent
-- **Sensitive information leakage** in skill content (private credentials, internal URLs, personal data)
-- **Malicious links** in references or examples
-- **Misleading security guidance** in skills like `security-baseline` or `code-review-web` that could cause downstream harm if followed
-
-If you find any of the above, please report it via the channels above.
-
-## Out of scope
-
-The following are not security vulnerabilities for this repository:
-
-- Issues with third-party tools recommended in skills (Ahrefs MCP, GitHub MCP, etc.). Report those to the respective vendors.
-- Issues with how Claude itself handles skill content. Report those to [Anthropic](https://www.anthropic.com/security).
-- General feedback or suggestions on skill quality. Use [Issues](https://github.com/rampstackco/claude-skills/issues) for those.
-
-## Hall of fame
-
-We thank security researchers who responsibly disclose vulnerabilities. With permission, we will list contributors who help keep this library safe in this section.
-
-_No reports yet._
-
----
-
-Thank you for helping keep this project and its users safe.
+We aim to acknowledge a report within 3 business days and to agree a disclosure
+timeline with the reporter. Security discussion stays in the private advisory
+until a fix ships.

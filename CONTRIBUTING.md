@@ -160,6 +160,48 @@ Before opening a PR, verify all of the following:
 
 ---
 
+## Security and review requirements
+
+Every skill, whether authored in-house or contributed, is held to the same
+review standard before it merges.
+
+### All contributions
+
+- Follow [SKILL_AUTHORING.md](SKILL_AUTHORING.md) for SKILL.md structure and
+  metadata.
+- Commits to `main` are signed and merged through a pull request with linear
+  history.
+- Each skill and its bundled files must pass the safety checklist below.
+- PRs are squash-merged.
+
+### Safety checklist
+
+Unless the behavior is the skill's explicit, documented purpose, a skill must
+not:
+
+- Make network calls or reference external domains from bundled scripts.
+- Read environment variables, credentials, or secret files.
+- Spawn shells or subprocesses.
+- Contain instructions that redirect Claude away from the user's task.
+- Use trigger conditions broader than the skill's actual scope.
+- Write to agent memory or persistence files.
+
+Anything that legitimately needs one of these must declare it in the PR and
+gets extra review. An advisory scan (`tools/scan_skills.py`) flags these
+patterns to focus review; it is a guide, not a gate.
+
+### When external contributions are open (curator mode)
+
+These apply once the catalog accepts outside contributors:
+
+- Sign off each commit under the Developer Certificate of Origin
+  (`git commit -s`).
+- Complete the PR template, declaring what the skill does and what it accesses.
+- The scan is promoted to a required status check.
+- Skills carrying executable code get two-person review.
+
+---
+
 ## Code of conduct
 
 Be respectful. Be constructive. Disagree on substance, not personality. Bad-faith contributions, harassment, or self-promotional spam will be closed without comment.
