@@ -1,19 +1,34 @@
 // build-codex.mjs
 //
-// Spike build step: produce a Codex-compatible distribution of the claude-skills
+// Build step: produce a Codex-compatible distribution of the claude-skills
 // catalog under dist/codex/.
 //
-// What it does:
+// What it does (default run, no flags):
 //   1. Walks every skills/<name>/ directory.
 //   2. Copies each skill into dist/codex/.agents/skills/<name>/, preserving the
 //      references/ subtree byte for byte.
 //   3. Normalizes SKILL.md frontmatter to the portable core (name + description
 //      only). Every other key is moved into a per-skill sidecar at
 //      references/_claude-frontmatter-extras.yaml so the change is reversible.
-//   4. Leaves the SKILL.md body untouched.
-//   5. Detects MCP references and emits dist/codex/agents/openai.yaml as a
+//   4. Enforces Codex's 1024-char description cap: a description over the cap is
+//      truncated at a sentence/word boundary for the emitted SKILL.md, and the
+//      full original is preserved in the sidecar (description_full) so the
+//      change is lossless and reversible.
+//   5. Leaves the SKILL.md body untouched.
+//   6. Detects MCP references and emits dist/codex/agents/openai.yaml as a
 //      commented template (no fabricated server config).
-//   6. Prints a transform log, then runs a validation pass (PASS/FAIL per check).
+//   7. Prints a transform log, then runs the verification suite:
+//        - validation (name/description, count, references, clean frontmatter,
+//          Codex description-length conformance)
+//        - determinism (build twice, assert byte-identical generated output)
+//        - openai.yaml sanity (exists, all servers commented, no live secrets)
+//        - description-discrimination audit (heuristic) -> SKILL_DISCOVERY_AUDIT.md
+//
+// Flags:
+//   --check   Rebuild the generated tree into a temp dir and diff it against the
+//             committed dist/codex/. Exit nonzero listing any differing paths.
+//             This is the staleness guard: the committed dist can never silently
+//             drift from skills/.
 //
 // Dependency free. Node ESM, built-in fs + path only. Frontmatter is parsed by
 // hand (simple key: value YAML between --- delimiters).
@@ -26,11 +41,27 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SRC_SKILLS = path.join(REPO_ROOT, 'skills');
 const OUT_ROOT = path.join(REPO_ROOT, 'dist', 'codex');
-const OUT_SKILLS = path.join(OUT_ROOT, '.agents', 'skills');
-const OUT_AGENTS = path.join(OUT_ROOT, 'agents');
+
+// Generated subtrees within a distribution root. These (and only these) are
+// produced by transformInto() and guarded for determinism / drift. Authored
+// docs (PORT_NOTES.md, README.md, SKILL_DISCOVERY_AUDIT.md) live at the dist
+// root and are intentionally outside the generated set.
+const GENERATED_SUBDIRS = ['.agents', 'agents'];
+
+const skillsDirOf = (root) => path.join(root, '.agents', 'skills');
+const agentsDirOf = (root) => path.join(root, 'agents');
 
 // Portable core: the only frontmatter keys Codex skills keep.
 const CORE_KEYS = new Set(['name', 'description']);
+
+// Codex rejects (fails to load) any skill whose description exceeds 1024
+// characters. Empirically confirmed against codex-cli 0.118.0, which logs
+// "invalid description: exceeds maximum length of 1024 characters" and drops
+// the skill. We emit a conformant description (truncated at a sentence/word
+// boundary, well under the cap) and preserve the full original in the sidecar
+// so nothing is lost and the change is reversible.
+const CODEX_DESC_MAX = 1024;
+const CODEX_DESC_TARGET = 1010; // truncation ceiling, leaves margin under the cap
 
 // Recognized MCP server names to detect in skill bodies. Curated so generic
 // phrases ("the MCP", "hosted MCP") do not produce noise. Match is on
@@ -51,9 +82,9 @@ const SIDECAR_NAME = '_claude-frontmatter-extras.yaml';
 // Frontmatter parsing (by hand)
 // ---------------------------------------------------------------------------
 
-// Returns { front, body, raw } where `front` is the raw text between the two
-// --- delimiters and `body` is everything after the closing delimiter. Returns
-// null if the file does not open with a frontmatter block.
+// Returns { front, body } where `front` is the raw text between the two ---
+// delimiters and `body` is everything after the closing delimiter. Returns null
+// if the file does not open with a frontmatter block.
 function splitFrontmatter(raw) {
   const m = raw.match(/^---[ \t]*\r?\n([\s\S]*?)\r?\n---[ \t]*(?:\r?\n|$)/);
   if (!m) return null;
@@ -86,7 +117,7 @@ function parseEntries(front) {
   return entries;
 }
 
-// Extract the scalar value of a key entry (strips quotes, for validation only).
+// Extract the scalar value of a key entry (strips quotes).
 function entryValue(entry) {
   const first = entry.lines[0];
   const idx = first.indexOf(':');
@@ -102,6 +133,25 @@ function entryValue(entry) {
   return v;
 }
 
+// Serialize a string as a single-line YAML double-quoted scalar.
+function yamlDquote(s) {
+  return '"' + s.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
+}
+
+// Truncate an over-long description at a sentence boundary if possible, else a
+// word boundary, staying under CODEX_DESC_TARGET. Returns the truncated string.
+function truncateForCodex(s) {
+  if (s.length <= CODEX_DESC_TARGET) return s;
+  const cut = s.slice(0, CODEX_DESC_TARGET);
+  const lastSentence = cut.lastIndexOf('. ');
+  if (lastSentence > CODEX_DESC_TARGET * 0.6) {
+    return cut.slice(0, lastSentence + 1).trimEnd();
+  }
+  const lastSpace = cut.lastIndexOf(' ');
+  const base = lastSpace > 0 ? cut.slice(0, lastSpace) : cut;
+  return base.replace(/[\s,;:]+$/, '');
+}
+
 // ---------------------------------------------------------------------------
 // Filesystem helpers
 // ---------------------------------------------------------------------------
@@ -114,11 +164,15 @@ function listSkillDirs() {
     .sort();
 }
 
-// List every file under a directory, returned as paths relative to that dir.
+// List every file under a directory, returned as posix-style paths relative to
+// that directory, sorted for determinism.
 function listFilesRel(dir) {
   const out = [];
   function walk(cur, rel) {
-    for (const ent of fs.readdirSync(cur, { withFileTypes: true })) {
+    const ents = fs
+      .readdirSync(cur, { withFileTypes: true })
+      .sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
+    for (const ent of ents) {
       const abs = path.join(cur, ent.name);
       const r = rel ? path.posix.join(rel, ent.name) : ent.name;
       if (ent.isDirectory()) walk(abs, r);
@@ -140,15 +194,19 @@ function detectMcps(text) {
 }
 
 // ---------------------------------------------------------------------------
-// Build
+// Transform (the deterministic core: produces .agents/ + agents/openai.yaml)
 // ---------------------------------------------------------------------------
 
-function build() {
-  // Clean only our own output subtrees so the build is idempotent. PORT_NOTES.md
-  // and README.md (written separately) are left in place.
-  fs.rmSync(path.join(OUT_ROOT, '.agents'), { recursive: true, force: true });
-  fs.rmSync(OUT_AGENTS, { recursive: true, force: true });
-  fs.mkdirSync(OUT_SKILLS, { recursive: true });
+// Build the generated distribution into `destRoot`. Cleans only the generated
+// subtrees so authored docs at destRoot survive. Returns { skills, log }.
+function transformInto(destRoot) {
+  const outSkills = skillsDirOf(destRoot);
+  const outAgents = agentsDirOf(destRoot);
+
+  for (const sub of GENERATED_SUBDIRS) {
+    fs.rmSync(path.join(destRoot, sub), { recursive: true, force: true });
+  }
+  fs.mkdirSync(outSkills, { recursive: true });
 
   const skills = listSkillDirs();
   const log = {
@@ -156,18 +214,19 @@ function build() {
     refFilesCopied: 0,
     perSkillExtras: {},
     mcpRefs: {},
+    descTruncated: [], // { name, fullLen, newLen }
   };
 
   for (const name of skills) {
     const srcDir = path.join(SRC_SKILLS, name);
-    const destDir = path.join(OUT_SKILLS, name);
+    const destDir = path.join(outSkills, name);
 
-    // 2. Copy the whole skill dir byte for byte (preserves references subtree
-    //    including nested folders).
+    // Copy the whole skill dir byte for byte (preserves references subtree
+    // including nested folders).
     fs.cpSync(srcDir, destDir, { recursive: true });
     log.skillsCopied += 1;
 
-    // 3. Normalize frontmatter on the emitted SKILL.md.
+    // Normalize frontmatter on the emitted SKILL.md.
     const srcSkillMd = path.join(srcDir, 'SKILL.md');
     const raw = fs.readFileSync(srcSkillMd, 'utf8');
     const split = splitFrontmatter(raw);
@@ -178,8 +237,25 @@ function build() {
     const kept = entries.filter((e) => CORE_KEYS.has(e.key));
     const extras = entries.filter((e) => !CORE_KEYS.has(e.key));
 
-    const keptText = kept.map((e) => e.lines.join('\n')).join('\n');
-    const normalized = '---\n' + keptText + '\n---\n' + split.body;
+    // Emit kept keys verbatim, except an over-long description which is
+    // truncated for Codex compatibility (full original goes to the sidecar).
+    let truncatedFull = null;
+    const keptLines = [];
+    for (const e of kept) {
+      if (e.key === 'description') {
+        const full = entryValue(e);
+        if (full.length > CODEX_DESC_MAX) {
+          const truncated = truncateForCodex(full);
+          keptLines.push('description: ' + yamlDquote(truncated));
+          truncatedFull = full;
+          log.descTruncated.push({ name, fullLen: full.length, newLen: truncated.length });
+          continue;
+        }
+      }
+      keptLines.push(e.lines.join('\n'));
+    }
+
+    const normalized = '---\n' + keptLines.join('\n') + '\n---\n' + split.body;
     fs.writeFileSync(path.join(destDir, 'SKILL.md'), normalized);
 
     // Sidecar the extras into references/ so the change is reversible.
@@ -195,29 +271,34 @@ function build() {
       '',
     ];
     for (const e of extras) sidecarLines.push(...e.lines);
+    if (truncatedFull !== null) {
+      sidecarLines.push('');
+      sidecarLines.push('# The description was truncated to <=1024 chars for Codex');
+      sidecarLines.push('# compatibility. The full original Claude description is preserved');
+      sidecarLines.push('# below. To reverse, restore it as the SKILL.md description.');
+      sidecarLines.push('description_full: ' + yamlDquote(truncatedFull));
+    }
     sidecarLines.push('');
     fs.writeFileSync(path.join(refDir, SIDECAR_NAME), sidecarLines.join('\n'));
 
     log.perSkillExtras[name] = extraKeys;
 
-    // 5. Detect MCP references (scan the full source SKILL.md text).
+    // Detect MCP references (scan the full source SKILL.md text).
     const mcp = detectMcps(raw);
     if (mcp.mentionsMcp || mcp.named.length) {
       log.mcpRefs[name] = mcp;
     }
 
-    // Count emitted reference files (source ref files, excludes our sidecar).
     log.refFilesCopied += listFilesRel(path.join(srcDir, 'references')).length;
   }
 
-  emitOpenAiTemplate(log.mcpRefs);
-  printTransformLog(skills, log);
+  emitOpenAiTemplate(outAgents, log.mcpRefs);
   return { skills, log };
 }
 
-// 5. Emit the commented MCP template. No real server config is fabricated.
-function emitOpenAiTemplate(mcpRefs) {
-  fs.mkdirSync(OUT_AGENTS, { recursive: true });
+// Emit the commented MCP template. No real server config is fabricated.
+function emitOpenAiTemplate(outAgents, mcpRefs) {
+  fs.mkdirSync(outAgents, { recursive: true });
 
   // Aggregate: named server -> sorted list of skills referencing it.
   const byServer = {};
@@ -277,17 +358,17 @@ function emitOpenAiTemplate(mcpRefs) {
     lines.push('#     # auth: configure credentials per your environment');
     lines.push('#');
   }
-  fs.writeFileSync(path.join(OUT_AGENTS, 'openai.yaml'), lines.join('\n') + '\n');
+  fs.writeFileSync(path.join(outAgents, 'openai.yaml'), lines.join('\n') + '\n');
 }
 
 function printTransformLog(skills, log) {
   console.log('=== Codex build: transform log ===');
   console.log('Skills copied:        ' + log.skillsCopied);
   console.log('Reference files copied: ' + log.refFilesCopied);
-  console.log('');
-  console.log('Frontmatter keys sidecar\'d per skill:');
-  for (const name of skills) {
-    console.log('  ' + name + ': [' + log.perSkillExtras[name].join(', ') + ']');
+  console.log('Frontmatter keys sidecar\'d: ' + skills.length + ' skills, all [category, catalog_summary, display_order]');
+  console.log('Descriptions truncated for Codex (>1024 chars): ' + log.descTruncated.length);
+  for (const t of log.descTruncated) {
+    console.log('  ' + t.name + ': ' + t.fullLen + ' -> ' + t.newLen + ' chars (full text preserved in sidecar)');
   }
   console.log('');
   console.log('MCP references detected (' + Object.keys(log.mcpRefs).length + ' skills):');
@@ -299,28 +380,89 @@ function printTransformLog(skills, log) {
 }
 
 // ---------------------------------------------------------------------------
-// Validation
+// Generated-tree comparison (determinism + drift guard)
 // ---------------------------------------------------------------------------
 
-function validate(srcSkills) {
-  console.log('=== Codex build: validation ===');
+// List the generated files of a root, relative to the root (posix style).
+function listGenerated(root) {
+  const rels = [];
+  for (const sub of GENERATED_SUBDIRS) {
+    const base = path.join(root, sub);
+    for (const f of listFilesRel(base)) rels.push(sub + '/' + f);
+  }
+  return rels.sort();
+}
+
+// Compare the generated trees of two roots. Returns an array of human-readable
+// difference descriptions (empty array means identical).
+function diffGenerated(rootA, rootB) {
+  const a = listGenerated(rootA);
+  const b = listGenerated(rootB);
+  const setA = new Set(a);
+  const setB = new Set(b);
+  const diffs = [];
+  for (const rel of a) {
+    if (!setB.has(rel)) diffs.push('missing in second: ' + rel);
+  }
+  for (const rel of b) {
+    if (!setA.has(rel)) diffs.push('extra in second: ' + rel);
+  }
+  for (const rel of a) {
+    if (!setB.has(rel)) continue;
+    const bufA = fs.readFileSync(path.join(rootA, rel));
+    const bufB = fs.readFileSync(path.join(rootB, rel));
+    if (!bufA.equals(bufB)) diffs.push('content differs: ' + rel);
+  }
+  return diffs.sort();
+}
+
+// Scratch build roots live inside the lane (dist/codex) under dot-prefixed
+// names that are never committed and are removed after use. They are not part
+// of GENERATED_SUBDIRS, so they are excluded from every comparison.
+function freshTempRoot(label) {
+  const root = path.join(OUT_ROOT, '.build-tmp-' + label);
+  fs.rmSync(root, { recursive: true, force: true });
+  fs.mkdirSync(root, { recursive: true });
+  return root;
+}
+
+function cleanupTempRoots() {
+  if (!fs.existsSync(OUT_ROOT)) return;
+  for (const ent of fs.readdirSync(OUT_ROOT)) {
+    if (ent.startsWith('.build-tmp-')) {
+      fs.rmSync(path.join(OUT_ROOT, ent), { recursive: true, force: true });
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Validation (the original four checks + Codex conformance, by root)
+// ---------------------------------------------------------------------------
+
+function validate(srcSkills, root) {
+  const outSkills = skillsDirOf(root);
   const results = [];
 
-  // Check A: every emitted SKILL.md has non-empty name + description.
-  const emitted = fs.existsSync(OUT_SKILLS)
-    ? fs.readdirSync(OUT_SKILLS, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort()
+  const emitted = fs.existsSync(outSkills)
+    ? fs.readdirSync(outSkills, { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort()
     : [];
+
+  // Cache parsed descriptions for reuse.
+  const descOf = {};
+  for (const name of emitted) {
+    const split = splitFrontmatter(fs.readFileSync(path.join(outSkills, name, 'SKILL.md'), 'utf8'));
+    const map = {};
+    if (split) for (const e of parseEntries(split.front)) map[e.key] = entryValue(e);
+    descOf[name] = map;
+  }
+
   const badMeta = [];
   for (const name of emitted) {
-    const p = path.join(OUT_SKILLS, name, 'SKILL.md');
-    const split = splitFrontmatter(fs.readFileSync(p, 'utf8'));
-    if (!split) {
+    const map = descOf[name];
+    if (!map || Object.keys(map).length === 0) {
       badMeta.push(name + ' (no frontmatter)');
       continue;
     }
-    const entries = parseEntries(split.front);
-    const map = {};
-    for (const e of entries) map[e.key] = entryValue(e);
     if (!map.name || !map.name.trim()) badMeta.push(name + ' (empty name)');
     else if (!map.description || !map.description.trim()) badMeta.push(name + ' (empty description)');
   }
@@ -330,19 +472,17 @@ function validate(srcSkills) {
     detail: badMeta.length ? 'offenders: ' + badMeta.join('; ') : emitted.length + ' skills ok',
   });
 
-  // Check B: emitted skill count equals source skill count.
   results.push({
     name: 'B. emitted skill count equals source skill count',
     ok: emitted.length === srcSkills.length,
     detail: 'source=' + srcSkills.length + ' emitted=' + emitted.length,
   });
 
-  // Check C: every source references file has a counterpart in the emitted skill.
   const missing = [];
   for (const name of srcSkills) {
     const srcRefs = listFilesRel(path.join(SRC_SKILLS, name, 'references'));
     for (const rel of srcRefs) {
-      const dest = path.join(OUT_SKILLS, name, 'references', rel);
+      const dest = path.join(outSkills, name, 'references', rel);
       if (!fs.existsSync(dest)) missing.push(name + '/references/' + rel);
     }
   }
@@ -352,13 +492,9 @@ function validate(srcSkills) {
     detail: missing.length ? missing.length + ' missing: ' + missing.slice(0, 5).join(', ') : 'all reference files present',
   });
 
-  // Check D: no emitted frontmatter contains keys other than name / description.
   const dirty = [];
   for (const name of emitted) {
-    const p = path.join(OUT_SKILLS, name, 'SKILL.md');
-    const split = splitFrontmatter(fs.readFileSync(p, 'utf8'));
-    if (!split) continue;
-    const keys = parseEntries(split.front).map((e) => e.key);
+    const keys = Object.keys(descOf[name] || {});
     const extra = keys.filter((k) => !CORE_KEYS.has(k));
     if (extra.length) dirty.push(name + ': [' + extra.join(', ') + ']');
   }
@@ -368,6 +504,251 @@ function validate(srcSkills) {
     detail: dirty.length ? 'offenders: ' + dirty.join('; ') : 'all frontmatter clean',
   });
 
+  // Codex conformance: every emitted description must be <= 1024 chars or Codex
+  // refuses to load the skill.
+  const tooLong = [];
+  for (const name of emitted) {
+    const d = (descOf[name] && descOf[name].description) || '';
+    if (d.length > CODEX_DESC_MAX) tooLong.push(name + ' (' + d.length + ')');
+  }
+  results.push({
+    name: 'E. every emitted description is within Codex 1024-char cap',
+    ok: tooLong.length === 0,
+    detail: tooLong.length ? 'over cap: ' + tooLong.join(', ') : 'all <=' + CODEX_DESC_MAX + ' chars',
+  });
+
+  return results;
+}
+
+// ---------------------------------------------------------------------------
+// openai.yaml sanity check
+// ---------------------------------------------------------------------------
+
+function checkOpenAiYaml(root) {
+  const p = path.join(agentsDirOf(root), 'openai.yaml');
+  const results = [];
+
+  const exists = fs.existsSync(p);
+  const raw = exists ? fs.readFileSync(p, 'utf8') : '';
+  results.push({
+    name: 'openai.yaml exists and is non-empty',
+    ok: exists && raw.trim().length > 0,
+    detail: exists ? raw.length + ' bytes' : 'file not found',
+  });
+
+  const missingServers = [];
+  for (const server of KNOWN_MCPS) {
+    const re = new RegExp('^#.*\\b' + server + ' MCP\\b', 'm');
+    if (!re.test(raw)) missingServers.push(server);
+  }
+  results.push({
+    name: 'all detected MCP servers appear as commented entries',
+    ok: missingServers.length === 0,
+    detail: missingServers.length
+      ? 'missing commented entry for: ' + missingServers.join(', ')
+      : 'present: ' + KNOWN_MCPS.join(', '),
+  });
+
+  // The template is fully commented, so any non-empty line that is not a comment
+  // would be a live value leak. Also scan for credential-looking tokens.
+  const offenders = [];
+  const secretRe = /(https?:\/\/|api[_-]?key|secret|token|bearer|password|[A-Za-z0-9]{32,})/i;
+  for (const line of raw.split(/\r?\n/)) {
+    const t = line.trim();
+    if (t === '') continue;
+    if (t.startsWith('#')) continue;
+    offenders.push(line);
+  }
+  const uncommentedSecrets = offenders.filter((l) => secretRe.test(l));
+  results.push({
+    name: 'no uncommented values (no live urls / keys / tokens)',
+    ok: offenders.length === 0,
+    detail: offenders.length
+      ? offenders.length + ' uncommented line(s); secret-like: ' + uncommentedSecrets.length
+      : 'every non-empty line is a comment',
+  });
+
+  return results;
+}
+
+// ---------------------------------------------------------------------------
+// Description-discrimination audit (HEURISTIC)
+// ---------------------------------------------------------------------------
+
+const STOPWORDS = new Set([
+  'the', 'a', 'an', 'and', 'or', 'of', 'to', 'for', 'in', 'on', 'with', 'this',
+  'that', 'your', 'our', 'my', 'is', 'it', 'be', 'as', 'at', 'by', 'from', 'into',
+  'when', 'whenever', 'use', 'using', 'used', 'want', 'wants', 'need', 'needs',
+  'has', 'have', 'are', 'you', 'they', 'them', 'their', 'about', 'also', 'even',
+  'not', 'do', 'does', 'how', 'what', 'where', 'who', 'which', 'than', 'then',
+  'so', 'if', 'but', 'can', 'will', 'just', 'up', 'out', 'over', 'each', 'any',
+  'all', 'whether', 'sure', 'isnt', 'arent', 'skill', 'triggers', 'trigger',
+]);
+
+function tokenize(text) {
+  return (text.toLowerCase().match(/[a-z0-9]+/g) || []).filter(
+    (t) => t.length > 1 && !STOPWORDS.has(t)
+  );
+}
+
+function firstSentence(desc) {
+  const m = desc.match(/^.*?[.!?](\s|$)/);
+  return (m ? m[0] : desc).trim().toLowerCase();
+}
+
+// Returns audit findings derived from emitted descriptions.
+function discoveryAudit(root) {
+  const outSkills = skillsDirOf(root);
+  const emitted = fs
+    .readdirSync(outSkills, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name)
+    .sort();
+
+  const descriptions = {};
+  for (const name of emitted) {
+    const split = splitFrontmatter(fs.readFileSync(path.join(outSkills, name, 'SKILL.md'), 'utf8'));
+    const map = {};
+    for (const e of parseEntries(split.front)) map[e.key] = entryValue(e);
+    descriptions[name] = map.description || '';
+  }
+
+  const cueRe = /(use this|use when|use it when|use for|triggers on|also triggers|whenever the user|use to)/i;
+  const thin = [];
+  const noCue = [];
+  for (const name of emitted) {
+    const d = descriptions[name];
+    if (!d || d.trim().length < 40) thin.push({ name, len: d.trim().length });
+    if (!cueRe.test(d)) noCue.push(name);
+  }
+
+  const byFull = {};
+  const byFirst = {};
+  for (const name of emitted) {
+    const d = descriptions[name];
+    (byFull[d.trim().toLowerCase()] ||= []).push(name);
+    (byFirst[firstSentence(d)] ||= []).push(name);
+  }
+  const dupFull = Object.values(byFull).filter((g) => g.length > 1);
+  const dupFirst = Object.values(byFirst).filter((g) => g.length > 1);
+
+  const fixture = [
+    { prompt: 'write a creative brief to kick off a new website project', expect: 'creative-brief' },
+    { prompt: 'audit the on-page SEO of this page: title tags, meta description, header structure', expect: 'seo-onpage' },
+    { prompt: 'choose a brand archetype and personality system for our company', expect: 'brand-archetype-system' },
+    { prompt: 'review my web app code for bugs and security issues before merging a PR', expect: 'code-review-web' },
+    { prompt: 'run a WCAG accessibility audit and fix the accessibility issues', expect: 'accessibility-audit' },
+    { prompt: 'improve Core Web Vitals, LCP and reduce JavaScript bundle size', expect: 'performance-optimization' },
+    { prompt: 'design an A/B test experiment with a clear hypothesis', expect: 'experiment-design' },
+    { prompt: 'write a blog post and edit the copy for voice and clarity', expect: 'content-and-copy' },
+  ];
+
+  const descTokens = {};
+  for (const name of emitted) descTokens[name] = new Set(tokenize(descriptions[name]));
+
+  const fixtureRows = [];
+  for (const f of fixture) {
+    const pTokens = [...new Set(tokenize(f.prompt))];
+    const scored = emitted.map((name) => {
+      let overlap = 0;
+      for (const t of pTokens) if (descTokens[name].has(t)) overlap += 1;
+      return { name, score: overlap };
+    });
+    scored.sort((a, b) => (b.score - a.score) || (a.name < b.name ? -1 : 1));
+    const top3 = scored.slice(0, 3);
+    const rank = scored.findIndex((s) => s.name === f.expect) + 1;
+    fixtureRows.push({
+      prompt: f.prompt,
+      expect: f.expect,
+      expectExists: emitted.includes(f.expect),
+      rank,
+      inTop3: rank >= 1 && rank <= 3,
+      top3: top3.map((t) => t.name + ' (' + t.score + ')'),
+    });
+  }
+
+  return { emitted, thin, noCue, dupFull, dupFirst, fixtureRows };
+}
+
+function writeDiscoveryAudit(root, audit) {
+  const lines = [];
+  lines.push('# Skill Discovery Audit (heuristic)');
+  lines.push('');
+  lines.push('> HEURISTIC, NOT A RUNTIME TEST. This report is a static, token-overlap');
+  lines.push('> proxy for "would the right skill trigger." It does not run a model and');
+  lines.push('> does not prove discovery behavior. Treat every result below as a signal,');
+  lines.push('> not a guarantee. The authoritative check is the owner live smoke test');
+  lines.push('> described in PORT_NOTES.md.');
+  lines.push('');
+  lines.push('Generated by `scripts/build-codex.mjs`. Skills audited: ' + audit.emitted.length + '.');
+  lines.push('');
+
+  lines.push('## Fixture: representative prompt to expected skill');
+  lines.push('');
+  lines.push('For each prompt, every emitted description is scored by token overlap');
+  lines.push('(stopwords removed) and ranked. "In top 3" means the expected skill landed');
+  lines.push('among the three highest-scoring descriptions. This is a discrimination');
+  lines.push('proxy only.');
+  lines.push('');
+  lines.push('| Prompt | Expected skill | Rank | In top 3 | Top 3 candidates (score) |');
+  lines.push('| --- | --- | --- | --- | --- |');
+  for (const r of audit.fixtureRows) {
+    const rank = r.expectExists ? (r.rank > 0 ? String(r.rank) : 'not ranked') : 'MISSING SKILL';
+    lines.push(
+      '| ' + r.prompt + ' | `' + r.expect + '` | ' + rank + ' | ' +
+      (r.inTop3 ? 'yes' : 'NO') + ' | ' + r.top3.join(', ') + ' |'
+    );
+  }
+  lines.push('');
+
+  const lowConf = audit.fixtureRows.filter((r) => !r.inTop3);
+  lines.push('## Low-confidence prompts');
+  lines.push('');
+  if (lowConf.length === 0) {
+    lines.push('None. Every fixture prompt placed its expected skill in the top 3.');
+  } else {
+    lines.push('These prompts did NOT place the expected skill in the top 3. This often');
+    lines.push('means several skills share overlapping vocabulary (a near-synonym');
+    lines.push('cluster), not that discovery is broken. Worth a human look:');
+    lines.push('');
+    for (const r of lowConf) {
+      lines.push('- "' + r.prompt + '" expected `' + r.expect + '` (rank ' + r.rank + '); top 3: ' + r.top3.join(', '));
+    }
+  }
+  lines.push('');
+
+  lines.push('## Flagged descriptions');
+  lines.push('');
+  lines.push('### Thin (empty or under ~40 chars)');
+  if (audit.thin.length === 0) lines.push('None.');
+  else for (const t of audit.thin) lines.push('- `' + t.name + '` (' + t.len + ' chars)');
+  lines.push('');
+  lines.push('### Missing an explicit use cue');
+  lines.push('');
+  lines.push('No "use when / use this / triggers on" style phrasing detected. These');
+  lines.push('descriptions are written as prose summaries; adding an explicit trigger');
+  lines.push('cue in the source skill would sharpen discovery. (Source is read-only here.)');
+  if (audit.noCue.length === 0) lines.push('None.');
+  else for (const n of audit.noCue) lines.push('- `' + n + '`');
+  lines.push('');
+  lines.push('### Duplicate descriptions (identical full text)');
+  if (audit.dupFull.length === 0) lines.push('None.');
+  else for (const g of audit.dupFull) lines.push('- ' + g.map((x) => '`' + x + '`').join(', '));
+  lines.push('');
+  lines.push('### Shared identical first sentence');
+  if (audit.dupFirst.length === 0) lines.push('None.');
+  else for (const g of audit.dupFirst) lines.push('- ' + g.map((x) => '`' + x + '`').join(', '));
+  lines.push('');
+
+  fs.writeFileSync(path.join(root, 'SKILL_DISCOVERY_AUDIT.md'), lines.join('\n') + '\n');
+}
+
+// ---------------------------------------------------------------------------
+// Reporting helpers
+// ---------------------------------------------------------------------------
+
+function printResults(title, results) {
+  console.log('=== ' + title + ' ===');
   let allOk = true;
   for (const r of results) {
     const tag = r.ok ? 'PASS' : 'FAIL';
@@ -375,16 +756,87 @@ function validate(srcSkills) {
     console.log('[' + tag + '] ' + r.name + ' -- ' + r.detail);
   }
   console.log('');
-  console.log(allOk ? 'ALL CHECKS PASSED' : 'ONE OR MORE CHECKS FAILED');
   return allOk;
 }
 
 // ---------------------------------------------------------------------------
+// Modes
+// ---------------------------------------------------------------------------
+
+function runBuild() {
+  let ok = true;
+  try {
+    const { skills, log } = transformInto(OUT_ROOT);
+    printTransformLog(skills, log);
+
+    ok = printResults('Validation', validate(skills, OUT_ROOT)) && ok;
+
+    // Determinism: build a second time into a temp root, compare generated trees.
+    const tmp = freshTempRoot('determinism');
+    transformInto(tmp);
+    const diffs = diffGenerated(OUT_ROOT, tmp);
+    ok = printResults('Determinism (build twice, byte-identical generated output)', [
+      {
+        name: 'second build is byte-identical to the first',
+        ok: diffs.length === 0,
+        detail: diffs.length ? diffs.length + ' differing path(s): ' + diffs.slice(0, 5).join('; ') : 'identical',
+      },
+    ]) && ok;
+
+    ok = printResults('openai.yaml sanity', checkOpenAiYaml(OUT_ROOT)) && ok;
+
+    // Description-discrimination audit (heuristic, does not gate the build).
+    const audit = discoveryAudit(OUT_ROOT);
+    writeDiscoveryAudit(OUT_ROOT, audit);
+    const lowConf = audit.fixtureRows.filter((r) => !r.inTop3).length;
+    printResults('Discovery audit (heuristic, informational)', [
+      {
+        name: 'SKILL_DISCOVERY_AUDIT.md written',
+        ok: true,
+        detail:
+          audit.fixtureRows.filter((r) => r.inTop3).length + '/' + audit.fixtureRows.length +
+          ' fixtures in top 3, ' + lowConf + ' low-confidence; thin=' + audit.thin.length +
+          ', no-cue=' + audit.noCue.length + ', dup-desc=' + audit.dupFull.length +
+          ', dup-first-sentence=' + audit.dupFirst.length,
+      },
+    ]);
+
+    console.log(ok ? 'ALL GATING CHECKS PASSED' : 'ONE OR MORE GATING CHECKS FAILED');
+  } finally {
+    cleanupTempRoots();
+  }
+  if (!ok) process.exitCode = 1;
+}
+
+function runCheck() {
+  let ok = true;
+  try {
+    const tmp = freshTempRoot('check');
+    transformInto(tmp);
+    const diffs = diffGenerated(OUT_ROOT, tmp);
+    ok = printResults('Drift check (committed dist/codex vs fresh rebuild)', [
+      {
+        name: 'committed generated tree matches a fresh rebuild from skills/',
+        ok: diffs.length === 0,
+        detail: diffs.length ? diffs.length + ' differing path(s)' : 'in sync, no drift',
+      },
+    ]);
+    if (diffs.length) {
+      console.log('Differing paths:');
+      for (const d of diffs) console.log('  ' + d);
+      console.log('');
+      console.log('Run `node scripts/build-codex.mjs` and commit dist/codex to resync.');
+    }
+  } finally {
+    cleanupTempRoots();
+  }
+  if (!ok) process.exitCode = 1;
+}
 
 function main() {
-  const { skills } = build();
-  const ok = validate(skills);
-  if (!ok) process.exitCode = 1;
+  const args = process.argv.slice(2);
+  if (args.includes('--check')) runCheck();
+  else runBuild();
 }
 
 main();
