@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: programmatic-seo
+
+category: content
+catalog_summary: "Designing pSEO programs that work: data sources, template design, quality control at scale, internal linking, crawl budget, AEO/GEO patterns, refresh discipline, and when pSEO is and is not the right answer"
+display_order: 6

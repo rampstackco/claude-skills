@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: onboarding-wizard-design
+
+category: growth-tooling
+catalog_summary: "Designing first-run product onboarding wizards. Distinguishes tutorial-overload (dump everything upfront) from skip-friendly-empty (skipped onboarding leads to abandoned product) from earned-progressive-disclosure (right things at the right moments)"
+display_order: 7

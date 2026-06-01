@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: okr-design
+
+category: product
+catalog_summary: "OKR design discipline. Outcome statements, key results, scoring, mid-quarter recalibration. Distinguishes sandbagged OKRs (always hit, useless) from aspirational fantasy (impossible, demoralizing) from stretch OKRs (genuine ambition with quarterly accountability)"
+display_order: 12

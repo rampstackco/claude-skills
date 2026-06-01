@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: discovery-research-synthesis
+
+category: research
+catalog_summary: "Synthesizing customer interviews, research notes, and support tickets into actionable PM decisions. Distinguishes data-dump (no synthesis) from insight-theater (overpolished narrative) from actionable synthesis (decision-grade clarity)"
+display_order: 4

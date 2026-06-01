@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: ads-creative-development
+
+category: marketing
+catalog_summary: "Hook patterns, format selection, video pacing, variation systems, testing methodology, fatigue detection, and the platform-specific creative norms that separate ads from clutter"
+display_order: 2
