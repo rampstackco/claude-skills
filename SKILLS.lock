@@ -267,7 +267,7 @@
     "references/reference-bank/rugged-utilitarian-documentary-honest-regional-used-vehicle-marketplace.md": "3e54545c7bb9fa5f0aec2a0689098b9a08a78cdd5dfa87c93cc8c600e5ca2f27"
   },
   "creative-direction": {
-    "SKILL.md": "998298ac483212fd675a08222e0719365a73542f6c6593b37178327569019fb2",
+    "SKILL.md": "fc11c13225666233b3e544854a7a46a19d3a04ced7faefaa0fc1cfd892fd0eb4",
     "references/axes-explained.md": "26cf20c0146660f1c675fbcabba2f3742f69ebb1543e31c0840deeaff0d77567",
     "references/brief-template.md": "bbcf997ba2049d58858758018bb81412c783f1d9a7d1e07ae0dc2615de9f8ddc",
     "references/example-aesthetic-brief.md": "9b99900f15182d05c705808691a2941aeb3ad48ab18b533fa28e0d3481282f91"
@@ -430,7 +430,7 @@
     "references/url-pattern-library.md": "235a35a3703a3f94a691343cde949bee543550650952ea1a911eb0fa07c61353"
   },
   "integration-orchestrator": {
-    "SKILL.md": "e1d64fa56c10f9b1cea115951741c45f96fbc00aeb10a07868dd744772ef902f",
+    "SKILL.md": "60755b79f1836358b69c5ba29ca289f0175a75bef1255b4d05eb6bb02f00e81b",
     "references/automation-and-qa-tooling.md": "1ba201adc00dabc48ad05d2b59c990641292dba12ed510f3b6ddab7384ad543e",
     "references/cadence-patterns.md": "9d1ea9739301052736193f705adccfeaf412478e3f6babd3d394d9079e54f222",
     "references/example-orchestration.md": "adac8722763e2faa835c20fc4e7f5d5399f3be4cc3c2819746c29f92b99072d6",
@@ -492,7 +492,7 @@
     "references/would-they-pay-for-this-test.md": "258ad4d02453d608e4f8a10f6aeaace320abee8de23465b7b0eacae758f0da7b"
   },
   "logo-design": {
-    "SKILL.md": "200ce6d4489273789afca01a3b543e37c3f4ae99bf736d2ad0037eb5d2865fdf",
+    "SKILL.md": "81f4dce86b45e901a89c93fa1f5f2e82d6ecb1754fe1ac7b6077d78de1db0711",
     "references/application-contexts.md": "5aad2091c8e66c6fc256e75b307544a23095e387d5c8e3f6c493ee0add9fb70e",
     "references/architectures-explained.md": "4e23b69addb6837c148c4fd0a23a3cd4586af83c64fdb65a3abcf20cff7a080b",
     "references/category-conventions.md": "8e90ead85e315275de3afda451b0af21a9707c0252bb2fee1aeaa257ad4d9546",
