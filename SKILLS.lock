@@ -345,6 +345,11 @@
     "references/sequence-templates.md": "01278eb7b4a30fe73bd609d3f11f641860b45b243520efc7da4393cd08a9f002",
     "references/subject-line-patterns.md": "ccb7daafdea47a5dfc632cab458b319a5ded21fc499a74da2aa305ed1a7c01d5"
   },
+  "evidence-based-reviews": {
+    "SKILL.md": "26d1f567153d92601d58749afed86b03905db703f88b393c1c09b03dbae7465e",
+    "references/evidence-tiers.md": "fee3b0f7ec78ad8cf9f0f15325679972db4180eafdd3419b257e92b98bfe4fda",
+    "references/methodology-block-template.md": "74ec061cf5befb94a4db24479df918f1ed8c1dfa35721daaf3476a64e4082ef4"
+  },
   "experiment-design": {
     "SKILL.md": "10e8c08d666170badc5eecc7880be137263a9533620f83ffa6f6f4d430c4ba15",
     "references/common-failures.md": "0c059512ada9af9831dbd6351c752fd77aa91e5e86b814268aa3a18d3d954a5c",
