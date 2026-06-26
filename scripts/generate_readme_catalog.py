@@ -273,7 +273,12 @@ def group_by_category(skills: list[Skill]) -> dict[str, list[Skill]]:
 
 
 def count_reference_files() -> int:
-    """Count files under any skills/*/references/ directory."""
+    """Count files under any skills/*/references/ directory, at any depth.
+
+    Recurses into nested reference subdirectories (for example
+    references/by-vertical/) so every shipped reference file is counted,
+    including the ones below the top level of references/.
+    """
     total = 0
     for entry in sorted(SKILLS_DIR.iterdir()):
         if not entry.is_dir():
@@ -281,7 +286,7 @@ def count_reference_files() -> int:
         ref_dir = entry / "references"
         if not ref_dir.exists():
             continue
-        for ref in ref_dir.iterdir():
+        for ref in ref_dir.rglob("*"):
             if ref.is_file():
                 total += 1
     return total
@@ -512,7 +517,9 @@ def main() -> int:
         )
         return 2
 
-    README.write_text(updated, encoding="utf-8")
+    # Write LF newlines explicitly so --write does not flip the file to
+    # CRLF on Windows, which would churn every line in the diff.
+    README.write_text(updated, encoding="utf-8", newline="\n")
     ref_total = count_reference_files()
     print(
         f"Updated {len(MARKERS)} sections in README.md, "
