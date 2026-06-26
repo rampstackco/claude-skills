@@ -29,6 +29,7 @@ Most review sites fail this rule quietly. "We tested" appears above content asse
 - Defining how the brand sounds (use `brand-voice`)
 - Optimizing the review page itself for search (use `seo-onpage`)
 - Per-piece editorial briefs (use `content-brief-authoring`)
+- Instructional how-to content that teaches a procedure or concept to a first-time reader, such as a tutorial or an explainer: a teaching piece of this kind is owned by its writing, its structure, and its search craft, with the evidence discipline riding alongside as a constraint on its claims, so this skill is one input among several rather than the single choice for it
 
 If genuine hands-on testing at scale exists, with instrumentation and protocols, this skill still applies: the tiers do not change, the methodology block simply states tier 4 and the testing protocol becomes the disclosed basis.
 
