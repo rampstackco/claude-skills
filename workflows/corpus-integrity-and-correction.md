@@ -58,8 +58,9 @@ Run:
     source. Classify each: DERIVED (rendered from a data source), RELAYED
     (typed from a source at authoring time), or DATED (true as of a stated
     date). Include claims living in titles, meta descriptions, and structured
-    data, not just body copy. Emit the claim register: claim, page(s), class,
-    source if stated, last-verified date if known.
+    data; body copy is the smallest part of the register. Emit the claim
+    register: claim, page(s), class, source if stated, last-verified date
+    if known.
 
 Output artifact: the claim register
 Done when: the register covers the corpus including metadata surfaces, and every claim carries a class

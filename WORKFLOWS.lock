@@ -11,7 +11,7 @@
   },
   "corpus-integrity-and-correction": {
     "file": "corpus-integrity-and-correction.md",
-    "sha256": "8073203de6c8e46126ec2c82bcb2d0d734456a5ff5370af34bb35919765ecc9f",
+    "sha256": "f700641957273b279a9656b5bb5b4675bfddc1a6db2759abea8fff4607e15832",
     "status": "template"
   },
   "post-deploy-live-verification": {

@@ -2,6 +2,8 @@
 
 Operating workflows for forward-deployed roles running the engines inside a real company's pipeline and data stack. The skills catalog covers building a site once; this tier covers operating a deployed content and growth pipeline continuously. Same authoring contract, extended with role, status, connectors, and autonomy.
 
+New here? Start with GETTING-STARTED.md.
+
 Install the catalog these workflows invoke:
 
 ```

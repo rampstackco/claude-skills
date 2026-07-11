@@ -44,10 +44,12 @@ Retained from 0007 as-is:
 | Field | Type | Meaning |
 |---|---|---|
 | agreement | enum: true_pass, false_pass, true_fail, false_fail | the four-way agreement value, authored (see below), never derived from the verdict pair |
+| lane | text, not null | the autonomy lane, e.g. content_roadmap. Per-lane agreement rates are the unit the promotion thresholds apply to; without lane, false-pass-among-passes cannot be computed per lane |
 | risk_tier | text | the risk classification; per-tier thresholds govern promotion, and Tier 3 is permanently excluded |
 | guardrail_confidence | numeric, nullable | the graded score; null for purely deterministic checks. The confidence-cutoff promotion for graded lanes is impossible without it |
 | guardrail_checks | jsonb | which checks fired and their results, and the pointer to the proposal |
 | human_verdict | enum: merge, reject, revise (+ waive, added below) | what happened to the work; a separate axis from agreement, and neither maps from the other |
+| human_reason | text | the rationale, filled after human review; required on revise and waive in this tier |
 | proposal_to_merge_diff | jsonb | the proposal-to-merge diff or a pointer to it; the primary correction signal, and the cold-start recovery reads merged-versus-rejected diffs |
 | post_merge_outcome | text | null at merge, filled later by continuous verification; the second ground truth that demotion and the hardened rung read |
 
@@ -59,14 +61,13 @@ Added for this tier:
 | workflow_slug | text | which workflow produced the proposal |
 | phase | text | which phase of that workflow |
 | artifact_ref | text | pointer to the held artifact the row is about |
-| human_note | text, required on waive and revise | the rationale; generalizes 0007's `human_reason`, and carries whether a gate was too strict or a risk was knowingly accepted |
 | waive | value on human_verdict | a fourth human verdict alongside merge, reject, revise |
 
 ## Agreement is authored, never derived
 
 Agreement is AUTHORED by the human who saw the diff, never derived from the verdict pair. A guardrail pass that a human overrides to revise is a false_pass, and no naive rule produces that mapping; the human writes it. The verdict axis (what happened to the work) and the agreement axis (whether the guardrail was right) are independent, and neither is computed from the other.
 
-Waive rows carry an authored agreement value plus a required `human_note`, are excluded from false-pass and false-fail rate computations, and report as their own line in Autonomy Review. Waives stay visible without contaminating the promotion thresholds: a gate waived because it was too strict, and a risk waived because it was knowingly accepted, are both recorded and both kept out of the rates that earn a lane its autonomy.
+Waive rows carry an authored agreement value plus a required `human_reason`, are excluded from false-pass and false-fail rate computations, and report as their own line in Autonomy Review. Waives stay visible without contaminating the promotion thresholds: a gate waived because it was too strict, and a risk waived because it was knowingly accepted, are both recorded and both kept out of the rates that earn a lane its autonomy.
 
 ## The designation guard
 
