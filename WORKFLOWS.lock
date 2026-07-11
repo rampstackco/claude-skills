@@ -1,0 +1,27 @@
+{
+  "content-pipeline-prove-gates": {
+    "file": "content-pipeline-prove-gates.md",
+    "sha256": "e0c6569472fb2dad5a385f4ccf7816d292f204fc787ad0d4c909538dff692557",
+    "status": "template"
+  },
+  "conversion-by-source-diagnosis": {
+    "file": "conversion-by-source-diagnosis.md",
+    "sha256": "56c2965d1612f152365fac22fae68b41d0e8f9a7c2016fbaaaf95d2e1c8e9908",
+    "status": "template"
+  },
+  "corpus-integrity-and-correction": {
+    "file": "corpus-integrity-and-correction.md",
+    "sha256": "8073203de6c8e46126ec2c82bcb2d0d734456a5ff5370af34bb35919765ecc9f",
+    "status": "template"
+  },
+  "post-deploy-live-verification": {
+    "file": "post-deploy-live-verification.md",
+    "sha256": "944d20aa8740eb54f12fba5457b3f897b4f66cbed7a20e09dc89341e11bea90c",
+    "status": "template"
+  },
+  "traffic-drop-triage": {
+    "file": "traffic-drop-triage.md",
+    "sha256": "2f00f2c4f2d08e0df0699d057b5061300254a2adb0b9f7344eee2d9cf5cf8569",
+    "status": "template"
+  }
+}
