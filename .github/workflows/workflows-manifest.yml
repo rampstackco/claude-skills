@@ -1,0 +1,56 @@
+name: Workflows manifest
+
+on:
+  pull_request:
+    paths:
+      - "workflows/**"
+      - "SKILLS.lock"
+      - "tools/gen_workflows_lock.py"
+      - "tools/check_workflow_drift.py"
+      - ".github/workflows/workflows-manifest.yml"
+
+jobs:
+  verify-lock:
+    name: WORKFLOWS.lock is current
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Verify WORKFLOWS.lock
+        run: python tools/gen_workflows_lock.py --check
+
+  drift-check:
+    name: Bound skills exist in SKILLS.lock
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Check workflow-to-catalog drift
+        run: python tools/check_workflow_drift.py
+
+  fence-test:
+    name: SKILLS.lock untouched by the workflows tier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Assert the fence
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          touches_workflows=$(git diff --name-only "$BASE_SHA" HEAD -- \
+            workflows/ tools/gen_workflows_lock.py tools/check_workflow_drift.py)
+          skills_lock_changed=$(git diff --name-only "$BASE_SHA" HEAD -- SKILLS.lock)
+          if [ -n "$touches_workflows" ] && [ -n "$skills_lock_changed" ]; then
+            echo "FENCE BREACH: this PR changes both the workflows tier and SKILLS.lock."
+            echo "The workflows tier lives outside the skills source tree and must not"
+            echo "perturb the skills manifest. Split the skill change into its own PR."
+            git diff --stat "$BASE_SHA" HEAD -- SKILLS.lock
+            exit 1
+          fi
+          echo "Fence holds: SKILLS.lock is byte-identical to base for this workflows-tier PR."
