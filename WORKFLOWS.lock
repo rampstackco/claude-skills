@@ -1,4 +1,9 @@
 {
+  "ci-prove-gate-wiring": {
+    "file": "ci-prove-gate-wiring.md",
+    "sha256": "137d850bef7d84b4c0351e8b85a37c77aea8674dd93c9d2b7d5de9be8e75ac17",
+    "status": "template"
+  },
   "content-pipeline-prove-gates": {
     "file": "content-pipeline-prove-gates.md",
     "sha256": "e0c6569472fb2dad5a385f4ccf7816d292f204fc787ad0d4c909538dff692557",
@@ -14,14 +19,29 @@
     "sha256": "f700641957273b279a9656b5bb5b4675bfddc1a6db2759abea8fff4607e15832",
     "status": "template"
   },
+  "link-graph-and-metadata-parity-audit": {
+    "file": "link-graph-and-metadata-parity-audit.md",
+    "sha256": "b541c4f63c63a29191c913bc8f3620d365c2a4776694a4df1011c8f200ea5fe3",
+    "status": "template"
+  },
   "post-deploy-live-verification": {
     "file": "post-deploy-live-verification.md",
     "sha256": "944d20aa8740eb54f12fba5457b3f897b4f66cbed7a20e09dc89341e11bea90c",
     "status": "template"
   },
+  "revenue-tracking-integrity": {
+    "file": "revenue-tracking-integrity.md",
+    "sha256": "9a94e01de89e4a5e79c276ecee1618ce3a958ef2f40fa3bf6089e37d707f1ddd",
+    "status": "template"
+  },
   "traffic-drop-triage": {
     "file": "traffic-drop-triage.md",
     "sha256": "2f00f2c4f2d08e0df0699d057b5061300254a2adb0b9f7344eee2d9cf5cf8569",
+    "status": "template"
+  },
+  "warehouse-data-plane-standup": {
+    "file": "warehouse-data-plane-standup.md",
+    "sha256": "0d1b753d34023c8344b5f4bb5ecc9a74a644a7a1a8fff1ba80bb11eec413d303",
     "status": "template"
   }
 }
