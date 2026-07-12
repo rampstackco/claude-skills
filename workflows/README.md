@@ -42,16 +42,16 @@ WORKFLOWS.lock is the canonical manifest and the source for any count. The table
 | [Post-Deploy Live Verification](post-deploy-live-verification.md) | FDE | template |
 | Data Surface Integrity | FDE | defined, publishing |
 | Migration with Verification | FDE | defined, publishing |
-| CI Prove-Gate Wiring | FDE | defined, publishing |
-| Warehouse Data Plane Standup | FDE | defined, publishing |
+| [CI Prove-Gate Wiring](ci-prove-gate-wiring.md) | FDE | template |
+| [Warehouse Data Plane Standup](warehouse-data-plane-standup.md) | FDE | template |
 | [Content Pipeline with Prove Gates](content-pipeline-prove-gates.md) | FDM | template |
 | [Corpus Integrity and Correction](corpus-integrity-and-correction.md) | FDM | template |
-| Link Graph and Metadata Parity Audit | FDM | defined, publishing |
+| [Link Graph and Metadata Parity Audit](link-graph-and-metadata-parity-audit.md) | FDM | template |
 | Regulated-Content Compliance Gate | FDM | defined, publishing |
 | Experiment Loop with Pre-Registered Gates | FDM | defined, publishing |
 | [Traffic-Drop Triage](traffic-drop-triage.md) | FDA | template |
 | [Conversion-by-Source Diagnosis](conversion-by-source-diagnosis.md) | FDA | template |
-| Revenue Tracking Integrity | FDA | defined, publishing |
+| [Revenue Tracking Integrity](revenue-tracking-integrity.md) | FDA | template |
 | Incident Response and Lane Demotion | cross | defined, publishing |
 | Autonomy Review | cross | defined, publishing |
 
