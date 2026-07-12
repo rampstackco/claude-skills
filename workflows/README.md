@@ -40,7 +40,7 @@ WORKFLOWS.lock is the canonical manifest and the source for any count. The table
 | Workflow | Track | Status |
 |---|---|---|
 | [Post-Deploy Live Verification](post-deploy-live-verification.md) | FDE | template |
-| Data Surface Integrity | FDE | defined, publishing |
+| [Data Surface Integrity](data-surface-integrity.md) | FDE | template |
 | Migration with Verification | FDE | defined, publishing |
 | [CI Prove-Gate Wiring](ci-prove-gate-wiring.md) | FDE | template |
 | [Warehouse Data Plane Standup](warehouse-data-plane-standup.md) | FDE | template |
@@ -52,8 +52,8 @@ WORKFLOWS.lock is the canonical manifest and the source for any count. The table
 | [Traffic-Drop Triage](traffic-drop-triage.md) | FDA | template |
 | [Conversion-by-Source Diagnosis](conversion-by-source-diagnosis.md) | FDA | template |
 | [Revenue Tracking Integrity](revenue-tracking-integrity.md) | FDA | template |
-| Incident Response and Lane Demotion | cross | defined, publishing |
-| Autonomy Review | cross | defined, publishing |
+| [Incident Response and Lane Demotion](incident-response-and-lane-demotion.md) | cross | template |
+| [Autonomy Review](autonomy-review.md) | cross | template |
 
 ## Roadmap: named, not launched
 
