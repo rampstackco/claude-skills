@@ -35,20 +35,20 @@ Checks report and fail, engines propose and stop, a human merges; autonomy is ea
 
 ## The set
 
-WORKFLOWS.lock is the canonical manifest and the source for any count. The table is the list. Shipped files link; the rest are defined here and publish in later waves.
+WORKFLOWS.lock is the canonical manifest and the source for any count. The table is the list. Shipped files link, and with this wave every file is shipped, so no row remains defined and publishing.
 
 | Workflow | Track | Status |
 |---|---|---|
 | [Post-Deploy Live Verification](post-deploy-live-verification.md) | FDE | template |
 | [Data Surface Integrity](data-surface-integrity.md) | FDE | template |
-| Migration with Verification | FDE | defined, publishing |
+| [Migration with Verification](migration-with-verification.md) | FDE | template |
 | [CI Prove-Gate Wiring](ci-prove-gate-wiring.md) | FDE | template |
 | [Warehouse Data Plane Standup](warehouse-data-plane-standup.md) | FDE | template |
 | [Content Pipeline with Prove Gates](content-pipeline-prove-gates.md) | FDM | validated |
 | [Corpus Integrity and Correction](corpus-integrity-and-correction.md) | FDM | template |
 | [Link Graph and Metadata Parity Audit](link-graph-and-metadata-parity-audit.md) | FDM | template |
-| Regulated-Content Compliance Gate | FDM | defined, publishing |
-| Experiment Loop with Pre-Registered Gates | FDM | defined, publishing |
+| [Regulated-Content Compliance Gate](regulated-content-compliance-gate.md) | FDM | template |
+| [Experiment Loop with Pre-Registered Gates](experiment-loop-with-pre-registered-gates.md) | FDM | template |
 | [Traffic-Drop Triage](traffic-drop-triage.md) | FDA | template |
 | [Conversion-by-Source Diagnosis](conversion-by-source-diagnosis.md) | FDA | template |
 | [Revenue Tracking Integrity](revenue-tracking-integrity.md) | FDA | template |
