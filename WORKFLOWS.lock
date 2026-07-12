@@ -1,4 +1,9 @@
 {
+  "autonomy-review": {
+    "file": "autonomy-review.md",
+    "sha256": "14bf6e2a8188c92c816529b95ebbb3e3e6f4b1a43df67ebbf68024e1ab72ecc3",
+    "status": "template"
+  },
   "ci-prove-gate-wiring": {
     "file": "ci-prove-gate-wiring.md",
     "sha256": "137d850bef7d84b4c0351e8b85a37c77aea8674dd93c9d2b7d5de9be8e75ac17",
@@ -17,6 +22,16 @@
   "corpus-integrity-and-correction": {
     "file": "corpus-integrity-and-correction.md",
     "sha256": "f700641957273b279a9656b5bb5b4675bfddc1a6db2759abea8fff4607e15832",
+    "status": "template"
+  },
+  "data-surface-integrity": {
+    "file": "data-surface-integrity.md",
+    "sha256": "786f573deff77b6182064d98a2ded989e8ab30dad7d5a75269bc29e3bfb27241",
+    "status": "template"
+  },
+  "incident-response-and-lane-demotion": {
+    "file": "incident-response-and-lane-demotion.md",
+    "sha256": "e547a5cff6fcdf990bf630faf4f4846aa3d5bae69d9eb30752bf4861eae2e0bb",
     "status": "template"
   },
   "link-graph-and-metadata-parity-audit": {
