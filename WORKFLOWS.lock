@@ -11,8 +11,8 @@
   },
   "content-pipeline-prove-gates": {
     "file": "content-pipeline-prove-gates.md",
-    "sha256": "e0c6569472fb2dad5a385f4ccf7816d292f204fc787ad0d4c909538dff692557",
-    "status": "template"
+    "sha256": "31948660c4d2c97098edb79c3ca88b123dd0e9f54fd6643c65ddf49ed39c4431",
+    "status": "validated"
   },
   "conversion-by-source-diagnosis": {
     "file": "conversion-by-source-diagnosis.md",

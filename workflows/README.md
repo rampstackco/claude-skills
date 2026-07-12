@@ -27,7 +27,7 @@ The ladder is this tier's spine. A workflow's status says what has actually happ
 - validated: executed as written, by the engines, on a showcase-designated property, with a PUBLIC linked run record; manual runs the workflow merely describes do not count.
 - hardened: validated plus failure modes documented from real incidents; explicitly the home of demotion and post_merge_outcome regression data, so hardened is earned by surviving events, not by prose.
 
-Every shipped file below enters at template. Content Pipeline with Prove Gates has a validation run in flight; its flip to validated lands as its own future commit with the linked run record, not as a claim made ahead of the evidence.
+Every shipped file below enters at template. Content Pipeline with Prove Gates is the first to flip: Run 1 executed it end to end on a designated property, so its status is validated with the run record linked, the evidence landing before the claim.
 
 ## The merge doctrine
 
@@ -44,7 +44,7 @@ WORKFLOWS.lock is the canonical manifest and the source for any count. The table
 | Migration with Verification | FDE | defined, publishing |
 | [CI Prove-Gate Wiring](ci-prove-gate-wiring.md) | FDE | template |
 | [Warehouse Data Plane Standup](warehouse-data-plane-standup.md) | FDE | template |
-| [Content Pipeline with Prove Gates](content-pipeline-prove-gates.md) | FDM | template |
+| [Content Pipeline with Prove Gates](content-pipeline-prove-gates.md) | FDM | validated |
 | [Corpus Integrity and Correction](corpus-integrity-and-correction.md) | FDM | template |
 | [Link Graph and Metadata Parity Audit](link-graph-and-metadata-parity-audit.md) | FDM | template |
 | Regulated-Content Compliance Gate | FDM | defined, publishing |

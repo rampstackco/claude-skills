@@ -5,7 +5,8 @@ name:            Content Pipeline with Prove Gates
 slug:            content-pipeline-prove-gates
 tier:            forward-deployed (operations)
 role:            fdm
-status:          template
+status:          validated
+run record:      run-records/content-pipeline-prove-gates-run-1.md
 score:           49 (demand 5, pain 4, differentiation 5, usability 4, connectors 4)
 intent:          run a content function as a delivery pipeline where every piece ships
                  through verification gates and a human merge
@@ -161,7 +162,7 @@ Fails look like: refresh running as its own separate pipeline. Decay is a demand
 
 ## Worked example
 
-Pending. Populates when this workflow is executed as written on a showcase-designated property; the first scheduled run is a how-to piece on an outdoor-sports content property, entering at Phase 1 as a demand-ranked item and exiting Phase 5 with a live audit. Status flips to validated when that run record links here.
+Run 1 executed this workflow as written on bowhuntamerica.com: a demand-ranked how-to entered at Phase 1 and exited Phase 5 with a passing live audit, six pre-publish gates with no waiver, and a zero-diff human merge. The full run record, including the vantage finding Phase 5 surfaced and resolved, is linked from the front matter.
 
 ## Boundaries
 
