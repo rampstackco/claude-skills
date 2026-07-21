@@ -17,6 +17,7 @@ Designed to be:
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from dataclasses import dataclass, field
@@ -36,37 +37,58 @@ README = REPO_ROOT / "README.md"
 
 # Brand watchlist. Any case-insensitive hit fails the build, except for the
 # explicitly-allowed legitimate public references in ALLOWED_BRAND_CONTEXTS.
-BRAND_WATCHLIST = [
-    "adunn08",
-    "GameDesk",
-    "ANDY.md",
-    "bankranked",
-    "wirly",
-    "vehiclemd",
-    "carcabin",
-    "codeblu",
-    "stayrentals",
-    "insurrates",
-    "mycarneedsthis",
-    "tereks",
-    "checkvin",
-    "credit-factor",
-    "straightstocks",
-    "econgrader",
-    "degreemath",
-    "taxgrader",
-    "retiregrader",
-    "smallbizgrader",
-    "bankscored",
-    "401klens",
-    "diplomavalue",
-    "degreegrade",
-    "studentdebtmath",
-    "nesteggnerd",
-    "bizmoneymath",
-    "retireranked",
-    "taxscoped",
-]
+#
+# The roster itself is NOT stored in this public repo: it lives in the private
+# rampstack/lint-config repo, and CI fetches it into the path named by
+# BRAND_WATCHLIST_FILE. Keeping the list inline here published the very names
+# this check exists to keep out.
+#
+# Fail closed: if the file is not provided, is missing, or is empty, the run
+# FAILS. The one exception is the fork-pull-request path, where repository
+# secrets are unavailable by design; those runs set ALLOW_MISSING_BRAND_WATCHLIST,
+# the check is skipped loudly, and the push-to-main run is the enforcing backstop.
+
+BRAND_WATCHLIST_ENV = "BRAND_WATCHLIST_FILE"
+ALLOW_MISSING_ENV = "ALLOW_MISSING_BRAND_WATCHLIST"
+
+
+def load_brand_watchlist() -> list[str] | None:
+    """Load the watchlist named by BRAND_WATCHLIST_FILE.
+
+    Returns the token list, or None when the check is explicitly skipped on a
+    fork PR. Exits non-zero rather than silently passing.
+    """
+    path = os.environ.get(BRAND_WATCHLIST_ENV, "").strip()
+    if not path:
+        if os.environ.get(ALLOW_MISSING_ENV, "").strip():
+            print(
+                f"WARNING: {BRAND_WATCHLIST_ENV} is not set; brand watchlist check "
+                "SKIPPED. Expected on fork pull requests, where repository secrets "
+                "are unavailable. The push-to-main run enforces this check."
+            )
+            return None
+        print(
+            f"ERROR: {BRAND_WATCHLIST_ENV} is not set. The brand watchlist could not "
+            "be loaded, so the check cannot run. CI fetches it from "
+            "rampstack/lint-config; see .github/workflows/lint.yml.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    watchlist_path = Path(path)
+    if not watchlist_path.is_file():
+        print(f"ERROR: brand watchlist file not found: {watchlist_path}", file=sys.stderr)
+        sys.exit(1)
+
+    tokens = [
+        line.strip()
+        for line in watchlist_path.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.strip().startswith("#")
+    ]
+    if not tokens:
+        print(f"ERROR: brand watchlist at {watchlist_path} is empty.", file=sys.stderr)
+        sys.exit(1)
+    return tokens
 
 # `rampstack` requires special handling: legitimate as the public org name
 # `rampstackco` and the public domain `rampstack.co`, never as `rampstack`
@@ -143,13 +165,16 @@ def check_em_dashes(result: LintResult) -> None:
 
 def check_brand_leaks(result: LintResult) -> None:
     """Forbidden brand mentions from the watchlist."""
+    watchlist = load_brand_watchlist()
+    if watchlist is None:
+        return
     for md in REPO_ROOT.rglob("*.md"):
         if any(part in (".git", "node_modules") for part in md.parts):
             continue
         text = read_text(md)
 
         text_lower = text.lower()
-        for needle in BRAND_WATCHLIST:
+        for needle in watchlist:
             if needle.lower() in text_lower:
                 result.fail(
                     f"Brand watchlist hit '{needle}' in {md.relative_to(REPO_ROOT)}"
