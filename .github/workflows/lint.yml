@@ -23,5 +23,26 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
+      - name: Fetch brand watchlist (private)
+        if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          LINT_CONFIG_TOKEN: ${{ secrets.LINT_CONFIG_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "${LINT_CONFIG_TOKEN:-}"
+          curl -fsSL \
+            -H "Authorization: Bearer $LINT_CONFIG_TOKEN" \
+            -H "Accept: application/vnd.github.raw" \
+            "https://api.github.com/repos/rampstack/lint-config/contents/brand-watchlist.txt?ref=v1" \
+            -o "$RUNNER_TEMP/brand-watchlist.txt"
+          echo "BRAND_WATCHLIST_FILE=$RUNNER_TEMP/brand-watchlist.txt" >> "$GITHUB_ENV"
+
+      - name: Skip brand watchlist on fork PR
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository
+        run: |
+          echo "Fork PR: repository secrets are unavailable, so the brand watchlist"
+          echo "check is skipped here. The push-to-main run is the enforcing backstop."
+          echo "ALLOW_MISSING_BRAND_WATCHLIST=1" >> "$GITHUB_ENV"
+
       - name: Run skill linter
         run: python .github/scripts/lint_skills.py
