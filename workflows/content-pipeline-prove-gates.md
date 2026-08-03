@@ -38,7 +38,7 @@ One of cms.draft or repo.change is required, matching how the property publishes
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - A demand source the ranking can read: a search-performance export, keyword data, or query logs. If using warehouse exports, enable them before anything else; they do not backfill.
 - A publishable target with a draft-and-hold mechanism (CMS drafts or PRs).
 - A claims-and-style standard file (STANDARDS.md or equivalent): voice rules, phrase rules, sourcing requirements.

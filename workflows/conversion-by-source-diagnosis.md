@@ -37,7 +37,7 @@ Fully read-only. This workflow diagnoses and ranks; it changes nothing. Its outp
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - Conversion events landing in the warehouse or analytics store with source attribution (the native analytics export into the warehouse is the reference setup; enable exports before anything else, they do not backfill).
 - A defined conversion event set and, where it exists, a value per event; if value is unknown, the ranking uses volume and says so.
 - Enough history for a stable baseline per segment (thin segments produce loud noise; the workflow flags them rather than ranking them).

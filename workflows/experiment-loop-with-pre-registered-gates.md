@@ -36,7 +36,7 @@ The variant and its config land held; a human allocates traffic and launches. Tr
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - A hypothesis from Conversion-by-Source Diagnosis (mechanism, expected effect, segment), or an equivalent stated the same way.
 - Enough traffic in the target segment to power a test; if the segment cannot reach the sample the math requires, the honest outcome is not to run.
 - The experiment platform (experiment.read) and the analytics that will measure the primary metric.

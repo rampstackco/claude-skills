@@ -36,7 +36,7 @@ The rollback and the fix land held; a human merges them through the now human-ga
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - A running autonomy program with at least one promoted lane and the agreement log behind it (AGREEMENT-LOG.md); with no promoted lane, Phase 2 routes elsewhere and this workflow does not apply.
 - The `post_merge_outcome` signal source: the monitoring and verification outputs that populate it.
 - The lane's `post_merge_outcome` budget, the regression threshold that makes a demotion mandatory.
