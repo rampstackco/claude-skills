@@ -1,0 +1,53 @@
+# Line-ending policy for the catalog.
+#
+# Why this file exists: Git for Windows ships with core.autocrlf=true at the
+# system level. Without a committed policy, a Windows contributor gets a CRLF
+# working tree while the repository content is LF. The generated distributions
+# are then byte-compared against a fresh build by their drift guards, so every
+# file reads as different and the guard is red before it has checked anything.
+# A guard that is always red catches nothing. Committing the policy here makes
+# the LF guarantee travel with the repository instead of depending on a local
+# .git/config that only exists on one machine.
+
+# Default: let Git detect text and store it LF in the repository.
+* text=auto eol=lf
+
+# Authored catalog sources.
+skills/**        text eol=lf
+workflows/**     text eol=lf
+
+# Generated distribution output. These are byte-compared against a fresh build,
+# so their line endings have to be stable in the working tree, not only in the
+# repository.
+dist/**          text eol=lf
+
+# Vendored third-party content, if any is added later.
+vendor/**        text eol=lf
+
+# Generator inputs and outputs.
+scripts/**       text eol=lf
+tools/**         text eol=lf
+.github/**       text eol=lf
+SKILLS.lock      text eol=lf
+WORKFLOWS.lock   text eol=lf
+*.md             text eol=lf
+*.py             text eol=lf
+*.mjs            text eol=lf
+*.js             text eol=lf
+*.json           text eol=lf
+*.yml            text eol=lf
+*.yaml           text eol=lf
+
+# Binary assets. Never touch these.
+*.png            binary
+*.jpg            binary
+*.jpeg           binary
+*.gif            binary
+*.webp           binary
+*.ico            binary
+*.pdf            binary
+*.woff           binary
+*.woff2          binary
+*.ttf            binary
+*.otf            binary
+*.zip            binary
