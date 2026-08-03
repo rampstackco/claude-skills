@@ -32,7 +32,7 @@ This gate is read-only: it reads the content pipeline's held drafts and the buil
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - The property's regulatory context: the disclosure requirements, the list of citable authorities, and the prohibited-claim patterns for its vertical.
 - A register owner: the human accountable for the compliance register and its waivers.
 - The content pipeline's held drafts as input; this gate runs inside Content Pipeline Phase 3 for regulated properties.

@@ -8,6 +8,7 @@ Install the catalog these workflows invoke:
 
 ```
 /plugin marketplace add rampstackco/claude-skills
+/plugin install rampstack-skills@rampstack
 ```
 
 ## Tracks

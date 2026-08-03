@@ -38,7 +38,7 @@ Read-only until Phase 4; corrections land held, a human merges.
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - A crawlable corpus (the live site) and, for git-published properties, the content source tree.
 - The property's canonical data sources for checkable claims (the statistics pages, standards bodies, or datasets its content cites).
 - A decision, made once and recorded, of what counts as a visible correction on this property (the correction-note format and where it renders).
