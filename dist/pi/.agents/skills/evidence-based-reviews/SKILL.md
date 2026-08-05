@@ -159,5 +159,3 @@ For a piece-level engagement: the methodology block for that piece, the criteria
 
 - [`references/evidence-tiers.md`](references/evidence-tiers.md) - The four tiers in depth: verification steps, synthesis honesty, triangulation practice, and the upgrade-and-mark pattern.
 - [`references/methodology-block-template.md`](references/methodology-block-template.md) - The fillable per-piece disclosure block, a worked example, and placement rules.
-
-SEEDED DRIFT: this line exists only in dist, never in source.
