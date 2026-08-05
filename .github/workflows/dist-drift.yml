@@ -1,0 +1,75 @@
+# Distribution drift guard.
+#
+# Why this exists: dist/pi is a generated distribution, byte-compared against a
+# fresh build by `scripts/build-pi.mjs --check`. That guard existed and worked,
+# but nothing ran it automatically, so it had never once run in CI. A guard
+# nobody runs catches nothing: dist/pi shipped 102 of 103 skills for an entire
+# release cycle without a single red build (fixed in #104).
+#
+# DELIBERATE CONSEQUENCE, read before "fixing" a red run here:
+#
+#   A PR that edits skills/** WITHOUT rebuilding dist/pi WILL GO RED.
+#
+# That is the invariant working, not noise. A shipped distribution must move
+# with its source in the same PR, otherwise the catalog on disk and the catalog
+# users actually install drift apart silently, which is precisely the failure
+# #104 had to clean up. The fix for a red run is to rebuild and commit:
+#
+#   node scripts/build-pi.mjs
+#   git add dist/pi && git commit
+#
+# Do NOT relax the path filters or add a skip to make this green. If a change
+# genuinely must not touch the dist, say so explicitly in the PR.
+#
+# SCOPE: dist/pi only, because dist/pi is the only distribution target that
+# exists on main today. `dist/` has one subdirectory, and build-pi.mjs is the
+# only builder emitting into it.
+#
+# TODO(dist-targets): extend this workflow to the Codex and Antigravity
+# builders when PR #87 (feat/port-antigravity) and PR #88 (feat/port-codex)
+# land on main. Those add dist/antigravity and dist/codex along with their own
+# builders. Until they merge there is nothing to check, and pre-wiring a step
+# for a builder that does not exist yet would fail on a missing file and teach
+# people to ignore this workflow. Add a matrix entry per target at that point,
+# not before.
+
+name: Distribution drift
+
+on:
+  pull_request:
+    paths:
+      # Source: a skills change must be accompanied by a dist rebuild.
+      - "skills/**"
+      # The generated output itself.
+      - "dist/**"
+      # The builder, whose behaviour defines what a correct dist looks like.
+      - "scripts/build-pi.mjs"
+      # Line-ending policy: the guard byte-compares, so this is load-bearing.
+      - ".gitattributes"
+      # This workflow.
+      - ".github/workflows/dist-drift.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  pi-dist:
+    name: dist/pi matches a fresh build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      # build-pi.mjs is dependency-free (Node ESM, fs and path only), so there
+      # is nothing to install and no lockfile to cache.
+      - name: Drift check, committed dist/pi vs a fresh build
+        run: node scripts/build-pi.mjs --check
+
+      # Cheap (same traversal, no second build), so it runs unconditionally
+      # rather than hiding behind a flag.
+      - name: Validate emitted output against the Pi skill rules
+        if: always()
+        run: node scripts/build-pi.mjs --validate
