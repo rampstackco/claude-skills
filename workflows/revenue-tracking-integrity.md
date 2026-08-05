@@ -38,7 +38,7 @@ Fully read-only until Phase 5, and Phase 5 only ever produces held changes and a
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - The list of monetized link and event classes the property runs (affiliate links, checkout events, lead events).
 - Read access to the platform that reports revenue or clicks, and to the analytics and warehouse stores the events land in.
 - Enough accrued revenue or click data for a reconciliation window to be meaningful.

@@ -39,7 +39,7 @@ This workflow stands up read-only access and wires no write path. Enabling the e
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - A warehouse you can create datasets in, with a billing project.
 - Admin access to the search-console and analytics properties whose exports you will enable.
 - An operational store separate from the warehouse, or the ability to provision one.

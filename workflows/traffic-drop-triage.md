@@ -39,7 +39,7 @@ This workflow is read-only until Phase 4, and Phase 4 only ever produces held ch
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - At least one demand-side data source (search-performance export) AND one behavior-side source (analytics events), because the single most valuable discriminator in the tree is whether they disagree.
 - Enough history to compute a baseline: the same period last year if seasonality is plausible, or at minimum several stable weeks pre-drop.
 - The deploy log or release history for the drop window.

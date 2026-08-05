@@ -29,7 +29,7 @@ Read-only until Phase 4; fixes land held, a human merges. Nothing in the audit a
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - The production site, crawlable, and the route registry or sitemap to reconcile the crawl against.
 - The templates behind the routes, for fixes that belong at the template rather than the page.
 - The list of money or conversion surfaces the graph is expected to feed.

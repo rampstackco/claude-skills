@@ -34,7 +34,7 @@ Read-only until the held redirect map and fixes. The cutover itself, the DNS and
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - Crawl access to both the old property and the new one.
 - The complete list of old URLs, from the old sitemap, the crawl, and the search-performance export together, because any one alone misses pages.
 - Search-performance history for the old property, to pre-register baselines before cutover.

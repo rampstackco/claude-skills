@@ -35,7 +35,7 @@ The agreement log has no connector class, deliberately. It is operated substrate
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - An agreement log implementing the AGREEMENT-LOG.md schema, with enough rows per lane to evaluate; the minimum sample below is a real gate, not a formality.
 - The tier's per-lane thresholds and, for graded lanes, the `guardrail_confidence` cutoff, recorded and version-controlled.
 - The published merge-authority doctrine (the three layers: access mode, gate auto-pass, merge authority), so a promotion proposal is measured against a written rule.
