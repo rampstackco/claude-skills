@@ -33,7 +33,7 @@ Everything this workflow changes lands held: the gate wiring and any fix a gate 
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - A repo with CI you can add status checks to, and the permission to make a check required.
 - The prove checks you intend to gate on, already runnable against the repo by hand.
 - A build command that produces the artifact production serves; a dev-flag build is a different artifact.

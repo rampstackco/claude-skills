@@ -39,7 +39,7 @@ Read-only until Phase 5; retirement changes land held, a human merges. Nothing i
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - The property's machine-rendered data series and the source each renders from (the warehouse tables or feeds behind them).
 - The live surfaces that render each series (crawl.read), including metadata and any narration that cites the series.
 - The per-series cadence each source actually updates on.

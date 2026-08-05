@@ -35,7 +35,7 @@ Verification is read-only. Fixes it surfaces land held; deploy-platform actions 
 
 ## Prerequisites
 
-- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills`
+- Claude with the catalog installed: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`
 - The production domain, and the list of routes the change touched plus the routes that share templates or data with them.
 - A way to read which build produced a served page (a deployment id, build hash, or asset fingerprint in the rendered HTML; every modern host embeds one).
 - The approved state: the merged content, metadata, and values the pages are supposed to show.
