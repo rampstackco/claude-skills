@@ -517,6 +517,24 @@ claude-skills is the parent catalog. Curated subsets and companion repos focus o
 
 Each family repo is MIT-licensed, conforms to the Agent Skills Specification, and is stack-agnostic. Use the full catalog for breadth; use a specialty subset when working in one domain.
 
+## How this org fits together
+
+The table above covers the skill catalogs. They are one part of a larger set, and the rest of it is below. All of it is public.
+
+**Skills.** This repo is the canonical home for all skill content. Alongside it sits the [workflows tier](workflows/): fifteen multi-skill runbooks with their connectors, a getting-started guide, and published run records for the ones that have been executed as written.
+
+**Subsets.** The five curated repos in the table above copy from this catalog with attribution and track it upstream.
+
+**Design direction themes.** Eight register repos, each shipping annotated design tokens with their measured contrast ratios, a component layer, two Tailwind adapters, and a demo that opens from a file with nothing installed: [neobrutalism](https://github.com/rampstackco/neobrutalism-theme), [glassmorphism](https://github.com/rampstackco/glassmorphism-theme), [Swiss style](https://github.com/rampstackco/swiss-style-theme), [bento grid](https://github.com/rampstackco/bento-grid-theme), [brutalist web](https://github.com/rampstackco/brutalist-web-theme), [corporate memphis](https://github.com/rampstackco/corporate-memphis-theme), [SaaS landing](https://github.com/rampstackco/saas-landing-theme), and [terminal UI](https://github.com/rampstackco/terminal-ui-theme). The gallery is at [rampstack.co/themes](https://rampstack.co/themes).
+
+**Creative direction.** The themes are not eight moods. Each one states its coordinates in the [creative direction framework](https://rampstack.co/framework/creative-direction), which sets brand direction on four axes, and the [showcase](https://rampstack.co/showcase/creative-direction) renders archetypes at each position on it.
+
+**Engines.** [Krine](https://github.com/rampstackco/krine), [Tholo](https://github.com/rampstackco/tholo), and [Basano](https://github.com/rampstackco/basano) run on one runtime: Krine decides, Tholo builds, Basano proves. [The engines page](https://rampstack.co/engines) covers what the three share.
+
+**Research.** The [SERP event registry](https://github.com/rampstackco/serp-event-registry) is a dated, sourced, confidence-tagged record of AI model releases, search feature changes, and confirmed algorithm updates, [rendered on the site](https://rampstack.co/research/serp-event-registry) from the repository that holds it.
+
+What shipped, and when, is recorded at [rampstack.co/updates](https://rampstack.co/updates).
+
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
