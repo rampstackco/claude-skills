@@ -1,77 +1,77 @@
 {
   "autonomy-review": {
     "file": "autonomy-review.md",
-    "sha256": "37be1706427e67ece0c2298548e3b44774618c026e7bc559051fb89e09b8b34f",
+    "sha256": "015327accc407228b7fd0cf0dc9a12f86052c66f043ba7a55becf3c2bfe65c61",
     "status": "template"
   },
   "ci-prove-gate-wiring": {
     "file": "ci-prove-gate-wiring.md",
-    "sha256": "a2f9142a5c617deaad527d6ff253e223c1a994f6fd67e2ed9e7ce46157653f39",
+    "sha256": "be2b7a529de74940af780c345b49ae3a439832f59b18fc4ef579be8f296604b2",
     "status": "template"
   },
   "content-pipeline-prove-gates": {
     "file": "content-pipeline-prove-gates.md",
-    "sha256": "e24fb05ebfacef4c2b6c51e6e80d6627dd4c573481746aa35ee404a35a4cfc14",
+    "sha256": "2b8c6d13282f0fdc0c8e36bd5e5f2152ab4b33a98fda0e94a1c91877cd5805da",
     "status": "validated"
   },
   "conversion-by-source-diagnosis": {
     "file": "conversion-by-source-diagnosis.md",
-    "sha256": "2f32f96291fc60df5a1d021a83d0d875f6a951dabd822ae79a8c26814a3b8904",
+    "sha256": "3f29afdecf1066ef1e82494da01810cf0f38b458356b1742a067ebb57a1f8c70",
     "status": "template"
   },
   "corpus-integrity-and-correction": {
     "file": "corpus-integrity-and-correction.md",
-    "sha256": "2d5a3bb1f1ae31591a91dd9b9c48a6f83658e34cd83204484db2fbd1d558bcd1",
+    "sha256": "6eb19ad829dc1f786717e594dd51cf569955eda3ff3d827b0636b2aed066e0fd",
     "status": "template"
   },
   "data-surface-integrity": {
     "file": "data-surface-integrity.md",
-    "sha256": "a59f78552b118014ab91b0e76ebe5cd61604da4981fe5880f30b5195979dafa9",
+    "sha256": "9fdc0f3d652a99d3272f8ce8488450c58ddad3b9c30d1e7cd75df8a28dbd48dc",
     "status": "template"
   },
   "experiment-loop-with-pre-registered-gates": {
     "file": "experiment-loop-with-pre-registered-gates.md",
-    "sha256": "1cc120f33b0f23f0ce9d15c664b6291e73b6759b12f5dd39a25c6c0f11d64416",
+    "sha256": "a384e8f1ea7ce427c532fc5ded30f6f42853cbdea5b5255d6eccd6098236398c",
     "status": "template"
   },
   "incident-response-and-lane-demotion": {
     "file": "incident-response-and-lane-demotion.md",
-    "sha256": "aae0893096ba7617e6f02a17eae7801708c367267e13c75fe0c5b3a634f74d3e",
+    "sha256": "1273f53fa1e3f6f64ff16795f871958ef6a96e01551677febbbb82a9d13e35df",
     "status": "template"
   },
   "link-graph-and-metadata-parity-audit": {
     "file": "link-graph-and-metadata-parity-audit.md",
-    "sha256": "fbff88b7f123b345e0c2ad33e6fd67a02b816f831891e067efb255f002cc972c",
+    "sha256": "7c070e24a87f7216d02c2e1a497c459eaaeb7165cbe59fb04d6b0bd4f1adfbdc",
     "status": "template"
   },
   "migration-with-verification": {
     "file": "migration-with-verification.md",
-    "sha256": "35f25ed19b1b04659b2a71038a2225242a5353b14a9b222ac9837e58326382c8",
+    "sha256": "230b0492e040de69850b1c71609a6ee6155461d5e2e6bafc37ad05cda4ac96a1",
     "status": "template"
   },
   "post-deploy-live-verification": {
     "file": "post-deploy-live-verification.md",
-    "sha256": "08fd462eae54a1017bd01d535bebe0891b2a4aca580d84d6a630900a2ba2b168",
+    "sha256": "6552a022380d9dd8f76d9dfb81c48f712b96e4c605fabe9d988752595bca6013",
     "status": "template"
   },
   "regulated-content-compliance-gate": {
     "file": "regulated-content-compliance-gate.md",
-    "sha256": "4ef16945eb0fdec5b72e17592f0bf7185e4c4de2d42ba2457438b4b3af5b3b2a",
+    "sha256": "9547ff05cc30d66874d986a96da68c3a201b274c1c47be6a5d2143d74c30e111",
     "status": "template"
   },
   "revenue-tracking-integrity": {
     "file": "revenue-tracking-integrity.md",
-    "sha256": "e1028d72571c52fdb03f35d3b6b8df73fe206152a8c679d5eccff306da0d6fab",
+    "sha256": "97a9484f79a7c29ea20f10d56c9f0340a9e4682dbe7a48cb5f69e887fca2598b",
     "status": "template"
   },
   "traffic-drop-triage": {
     "file": "traffic-drop-triage.md",
-    "sha256": "81e76ac5a725654df07cac7c5c4fa925aa4291b97a8013e93183749ece70c5e5",
+    "sha256": "2faf9cced43dc45746d31d2cf94aff0efe35337ed8043bf0ac4f57a5442a92b9",
     "status": "template"
   },
   "warehouse-data-plane-standup": {
     "file": "warehouse-data-plane-standup.md",
-    "sha256": "9c791cb252e21cfce068bea806102b77a58d6fd64824a8c3350fd9dbda7464e8",
+    "sha256": "0c61cbbc088752ec8083df36a589983d8dcdc1bcd4895bb2e006a4bd22af4ada",
     "status": "template"
   }
 }

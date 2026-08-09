@@ -42,6 +42,14 @@ The variant and its config land held; a human allocates traffic and launches. Tr
 - The experiment platform (experiment.read) and the analytics that will measure the primary metric.
 - A person who allocates traffic and launches; the workflow never does.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Intake · lane: convergent (Tholo)
@@ -78,7 +86,7 @@ Run:
     a delay. Report the pre-registration, or the not-run verdict, with the math.
 
 Output artifact: the frozen pre-registration (stopping rule, MDE, sample size, primary metric, window), or the "insufficient n, do not run" verdict with its math
-Done when: the test is pre-registered with all five fields frozen, or it is declared underpowered and not run, with the sample-size math shown either way
+Done when: the test is pre-registered with all five fields frozen, or it is declared underpowered and not run, with the sample-size math shown either way, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: shipping first and pre-registering after. A stopping rule and a metric written once the variant is believed in are fitted to the hope, and the test becomes a search for a number that agrees with it.
 
 ### Phase 3: Variant SEO-safety gate · lane: gate (Basano)
@@ -96,7 +104,7 @@ Run:
     with the evidence. Report only.
 
 Output artifact: the SEO-safety report (cloaking, canonical consistency, layout-shift, each with a verdict)
-Done when: the variant carries a verdict on cloaking risk, canonical consistency, and layout-shift, all clear or the risk flagged
+Done when: the variant carries a verdict on cloaking risk, canonical consistency, and layout-shift, all clear or the risk flagged, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: an experiment that wins by getting deindexed. A variant that trims the content search ranked for can lift the on-page metric while the page quietly falls out of the results, and the test would call that a win.
 
 ### Phase 4: Launch as a held config change · lane: divergent (human)
@@ -109,7 +117,7 @@ Run: the variant and its experiment config land as a HELD change (repo.change).
     launches against the frozen pre-registration, allocating exactly the design
     the math called for, and records the launch.
 Output artifact: the launched experiment, recorded against its pre-registration, with the variant and config as held changes a human merged
-Done when: the experiment is launched by a human at the pre-registered allocation, with the config held and merged by a person
+Done when: the experiment is launched by a human at the pre-registered allocation, with the config held and merged by a person, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: an agent turning traffic on. Allocating traffic is a production act on real users, and it stays with a person the same way merging and deploying do.
 
 ### Phase 5: The verdict · lane: gate (Basano)
@@ -128,7 +136,7 @@ Run:
     numbers. Report only.
 
 Output artifact: the verdict against the pre-registered rule (win, loss, or inconclusive) with the numbers at the pre-registered point
-Done when: the verdict is computed at the pre-registered point against the pre-registered primary metric and stopping rule, with the numbers attached
+Done when: the verdict is computed at the pre-registered point against the pre-registered primary metric and stopping rule, with the numbers attached, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: peeking, then stopping on a good look. Checking the test daily and stopping the day it crosses significance turns noise into a false win, because the more often you look, the more often chance alone crosses the line.
 
 ### Phase 6: Closeout · lane: convergent (Tholo)
@@ -147,7 +155,7 @@ Run:
     experiment never publishes itself. Record the closeout.
 
 Output artifact: the routed verdict and hypothesis outcome to Conversion-by-Source Diagnosis, and the consolidation path (with its SEO-safety re-check) recorded where a variant won
-Done when (public gate): the verdict and hypothesis outcome are recorded and routed to Conversion-by-Source Diagnosis, and any winning variant is queued for the ordinary held-fix flow with an SEO-safety re-check, not published from here
+Done when (public gate): the verdict and hypothesis outcome are recorded and routed to Conversion-by-Source Diagnosis, and any winning variant is queued for the ordinary held-fix flow with an SEO-safety re-check, not published from here, or a report-blocked statement per the prerequisite-unmet rule
 Operated-layer note: in an operated deployment the pre-registration, the verdict, and their agreement land as an agreement-log row; the verdict-versus-pre-registration agreement is what calibrates this lane (AGREEMENT-LOG.md)
 Fails look like: shipping the winner without re-checking the consolidated version. A variant proven safe in isolation can regress SEO once it is merged into the real page with the rest of the layout, and the win does not carry a waiver for that.
 

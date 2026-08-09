@@ -45,6 +45,14 @@ Read-only until Phase 5; retirement changes land held, a human merges. Nothing i
 - The per-series cadence each source actually updates on.
 - A place to record the discontinued-series registry and the correction-note format (the same format Corpus Integrity and Correction uses).
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Series inventory · lane: convergent (Tholo)
@@ -62,7 +70,7 @@ Run:
     the per-series inventory; guard nothing yet.
 
 Output artifact: the per-series inventory (each series: source, real cadence, every consuming surface)
-Done when: every machine-rendered series is inventoried by series with its source, cadence, and consuming surfaces, including metadata and narration
+Done when: every machine-rendered series is inventoried by series with its source, cadence, and consuming surfaces, including metadata and narration, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: inventorying by dataset. A dataset marked fresh can carry one series that froze months ago, and a dataset-level view never sees the frozen series inside it.
 
 ### Phase 2: Guard audit · lane: gate (Basano)
@@ -82,7 +90,7 @@ Run:
     support. Report a verdict per series per guard with the rendered evidence.
 
 Output artifact: the guard report (per series: freshness threshold, discontinued registration, honest degradation, each with a verdict)
-Done when: every series has a verdict on its per-series freshness threshold, its discontinued status, and its degradation rendering
+Done when: every series has a verdict on its per-series freshness threshold, its discontinued status, and its degradation rendering, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: a trend arrow on a degraded series. An up arrow drawn from a value that stopped updating tells the reader the number is rising when it is only frozen, which is worse than showing nothing.
 
 ### Phase 3: Two-surface consistency · lane: gate (Basano)
@@ -101,7 +109,7 @@ Run:
     evidence.
 
 Output artifact: the consistency report (each shared value: single-source proof, the build test, the cache-lifetime check)
-Done when: every value on two or more surfaces is proven single-source with a build test, or the divergence is flagged with evidence
+Done when: every value on two or more surfaces is proven single-source with a build test, or the divergence is flagged with evidence, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: one source in code, two lifetimes in cache. Two surfaces importing the same module look consistent in review and serve different numbers in production because one cache outlived the other.
 
 ### Phase 4: Cadence-copy alignment · lane: gate (Basano)
@@ -120,7 +128,7 @@ Run:
     only.
 
 Output artifact: the cadence-alignment report (each stated frequency, the series' real cadence, a verdict)
-Done when: every surface claim about its own update frequency has a verdict against the series' real cadence
+Done when: every surface claim about its own update frequency has a verdict against the series' real cadence, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: trusting the copy. "Updated daily" is a claim like any other, and a series that refreshes monthly behind it is a dated claim that rots the moment the copy ships.
 
 ### Phase 5: Retirement protocol · lane: convergent (Tholo)
@@ -139,7 +147,7 @@ Run:
     held; a human merges.
 
 Output artifact: held retirement changes per discontinued series (removed from renders, correction note on any narration)
-Done when: every discontinued series is removed from current renders and its narration carries a visible correction note, all as held changes
+Done when: every discontinued series is removed from current renders and its narration carries a visible correction note, all as held changes, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: retiring the tile but not the narration. The number disappears from the dashboard while a paragraph elsewhere still explains what it means and where it is heading, describing a series that no longer exists.
 
 ## Failure modes

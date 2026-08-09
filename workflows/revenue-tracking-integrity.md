@@ -44,6 +44,14 @@ Fully read-only until Phase 5, and Phase 5 only ever produces held changes and a
 - Enough accrued revenue or click data for a reconciliation window to be meaningful.
 - The attribution parameter set: which parameters must survive the redirect chain.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Map the money path · lane: convergent (Tholo)
@@ -61,7 +69,7 @@ Run:
     the money-path map; test nothing yet.
 
 Output artifact: the money-path map (each class: link, redirect chain, required params, event, platform record)
-Done when: every monetized class is mapped from on-page link to platform record, with its required attribution parameters named
+Done when: every monetized class is mapped from on-page link to platform record, with its required attribution parameters named, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: mapping link instances instead of classes. Ten thousand affiliate links share a handful of classes, and a map keyed to instances misses the class-wide break while drowning in duplicates.
 
 ### Phase 2: Liveness and parameter survival · lane: gate (Basano)
@@ -81,7 +89,7 @@ Run:
     chain as evidence. Report only.
 
 Output artifact: a liveness-and-survival report per class (resolves live, params arrived, the chain)
-Done when: every link class has a liveness verdict and a parameter-survival verdict with its redirect chain recorded
+Done when: every link class has a liveness verdict and a parameter-survival verdict with its redirect chain recorded, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: testing one link and trusting the class. One affiliate link resolving does not prove the class resolves, and the broken subset earns nothing while the test stays green.
 
 ### Phase 3: Consent-state matrix · lane: gate (Basano)
@@ -100,7 +108,7 @@ Run:
     fired-and-attributed verdict per cell. Report only.
 
 Output artifact: the consent matrix (event by consent state, fired and attributed verdict per cell)
-Done when: every money event has a verdict under every consent state the property supports
+Done when: every money event has a verdict under every consent state the property supports, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: testing only the granted state. Consent-denied and undecided states are where attribution quietly zeroes, and a matrix that skips them certifies a path that loses money in the states most users are actually in.
 
 ### Phase 4: Reconciliation · lane: gate (Basano)
@@ -119,7 +127,7 @@ Run:
     filter. Report the reconciliation per source with the variance. Report only.
 
 Output artifact: the reconciliation report (platform versus warehouse per source, variance, tolerance verdict)
-Done when: every source is reconciled within tolerance for the window, or the per-source variance is flagged with evidence
+Done when: every source is reconciled within tolerance for the window, or the per-source variance is flagged with evidence, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: reconciling totals while per-source rows drift. A matching grand total made of two offsetting errors reads as healthy and is two broken sources wearing a coincidence.
 
 ### Phase 5: Findings triage, held fixes, and the standing cadence · lane: divergent (Krine) then convergent (Tholo)

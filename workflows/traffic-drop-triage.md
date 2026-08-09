@@ -44,6 +44,14 @@ This workflow is read-only until Phase 4, and Phase 4 only ever produces held ch
 - Enough history to compute a baseline: the same period last year if seasonality is plausible, or at minimum several stable weeks pre-drop.
 - The deploy log or release history for the drop window.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Pin the drop · lane: convergent (Tholo)
@@ -58,9 +66,12 @@ Run:
     pre-drop baseline, and its shape across segments: which page templates,
     which query classes, which devices, which countries, which traffic
     sources. Do not explain the drop yet. Produce the drop profile only.
+    If a source is missing a segment, or the baseline window has no data,
+    report that cut as blocked with what was obtained rather than
+    estimating the number.
 
 Output artifact: a drop profile (start date, magnitude, segment breakdown)
-Done when: the profile states when, how much, and where, each with a number
+Done when: the profile states when, how much, and where, each with a number, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: averaging over segments. A sitewide average of minus 30 percent can be one template at minus 90 and everything else flat, and those are different diagnoses; the segment breakdown is the whole point of this phase
 
 ### Phase 2: Run the branches · lane: gate (Basano)
@@ -118,7 +129,7 @@ Run:
     who took them and with what.
 
 Output artifact: a branch evidence table: five branches, evidence for, evidence against, per-branch confidence
-Done when: all five branches have evidence recorded, including the branches that came back clean
+Done when: all five branches have evidence recorded, including the branches that came back clean, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: stopping at the first guilty-looking branch. Real drops are frequently compound (an update lands the same week a consent banner breaks measurement), and a one-branch diagnosis on a compound drop fixes half the problem while the other half compounds
 
 ### Phase 3: Diagnosis · lane: divergent (Krine)
@@ -170,7 +181,7 @@ Run:
     on the first good week.
 
 Output artifact: recovery reports on cadence; a closure record when the pre-registered condition holds
-Done when: recovery is declared against the pre-registered condition, or the diagnosis is reopened because the trajectory contradicts it
+Done when: recovery is declared against the pre-registered condition, or the diagnosis is reopened because the trajectory contradicts it, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: victory on one good week. Traffic is noisy; a recovery declared on a single datapoint reopens as a mystery a month later, now with the trail cold
 
 ## Failure modes

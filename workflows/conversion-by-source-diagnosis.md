@@ -42,6 +42,14 @@ Fully read-only. This workflow diagnoses and ranks; it changes nothing. Its outp
 - A defined conversion event set and, where it exists, a value per event; if value is unknown, the ranking uses volume and says so.
 - Enough history for a stable baseline per segment (thin segments produce loud noise; the workflow flags them rather than ranking them).
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Frame the funnel and the baseline · lane: convergent (Tholo)
@@ -59,7 +67,7 @@ Run:
     needs. Produce the frame document. No analysis yet.
 
 Output artifact: the frame (events, segments, baseline window, known value per event or the stated absence)
-Done when: the frame names every dimension the sweep will cut by, and each named event is confirmed present in the data
+Done when: the frame names every dimension the sweep will cut by, and each named event is confirmed present in the data, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: framing after looking. A frame written once the divergences are visible quietly becomes a justification for them; the frame comes first so the sweep cannot be steered
 
 ### Phase 2: The divergence sweep · lane: convergent (Tholo)
@@ -80,7 +88,7 @@ Run:
     finding.
 
 Output artifact: the divergence table (finding, segment, magnitude, volume, baseline)
-Done when: every finding carries its numbers and thin cells are marked not-rankable
+Done when: every finding carries its numbers and thin cells are marked not-rankable, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: averaging across segments, the same failure that breaks traffic triage. A flat blended conversion rate can hide one template at half its peers; the cuts in the frame exist so the blend cannot
 
 ### Phase 3: Measurement gate · lane: gate (Basano)
@@ -101,7 +109,7 @@ Run:
     finding: BEHAVIOR, MEASUREMENT, or MIXED, with evidence. Report only.
 
 Output artifact: the divergence table, annotated with measurement verdicts
-Done when: every finding carries a verdict; MEASUREMENT findings route to a tracking fix, not an optimization
+Done when: every finding carries a verdict, or a report-blocked statement per the prerequisite-unmet rule; MEASUREMENT findings route to a tracking fix, not an optimization
 Fails look like: optimizing a consent artifact. A quarter spent lifting a segment whose conversions were merely unmeasured is the expensive version of this failure, and it is common
 
 ### Phase 4: Hypothesis ranking · lane: divergent (Krine)
@@ -137,7 +145,7 @@ Run:
     routing so experiment verdicts flow back against the original finding.
 
 Output artifact: routed work items, each tied to its finding and hypothesis
-Done when: every selected hypothesis is in the experiment queue or routed as a held fix, with the return path recorded
+Done when: every selected hypothesis is in the experiment queue or routed as a held fix, with the return path recorded, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: the diagnosis running its own tests. The moment this workflow ships a variant, pre-registration is retrofitted to a change already believed in, and the experiment gate is theater
 
 ## Failure modes

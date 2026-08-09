@@ -40,6 +40,14 @@ The agreement log has no connector class, deliberately. It is operated substrate
 - The tier's per-lane thresholds and, for graded lanes, the `guardrail_confidence` cutoff, recorded and version-controlled.
 - The published merge-authority doctrine (the three layers: access mode, gate auto-pass, merge authority), so a promotion proposal is measured against a written rule.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Assemble the window · lane: convergent (Tholo)
@@ -60,7 +68,7 @@ Run:
     evaluate no promotion yet.
 
 Output artifact: the per-lane window (four-way agreement rates, row counts, the waived line reported separately)
-Done when (public gate): every lane in the window has its four-way rates and row count, and waived rows are reported on their own line outside the rates
+Done when (public gate): every lane in the window has its four-way rates and row count, and waived rows are reported on their own line outside the rates, or a report-blocked statement per the prerequisite-unmet rule
 Operated-layer note: the window is read from the operated log instance; the schema and the four-way agreement values are public (AGREEMENT-LOG.md), and a reader runs this against their own log while RampStack's rows stay operated
 Fails look like: folding waived rows into the rates. A waive is a recorded human override, not a guardrail miss, and counting it as a false_pass or false_fail poisons the exact number promotion depends on.
 
@@ -81,7 +89,7 @@ Run:
     evaluation with the numbers; this gate reports and decides nothing.
 
 Output artifact: the per-lane eligibility evaluation (each condition, pass or fail, with the numbers)
-Done when: every evaluable lane has a verdict on the threshold, the minimum sample, and (for graded lanes) the confidence cutoff, and under-sample lanes are marked not-evaluable
+Done when: every evaluable lane has a verdict on the threshold, the minimum sample, and (for graded lanes) the confidence cutoff, and under-sample lanes are marked not-evaluable, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: a ceremony on insufficient sample. A lane declared eligible on five rows has measured noise, and the promotion it licenses regresses on the first real week.
 
 ### Phase 3: The ceiling · lane: gate (Basano)
@@ -102,7 +110,7 @@ Run:
     set after the ceiling.
 
 Output artifact: the eligible set with every Tier-3 lane struck, and each strike recorded as permanent
-Done when: no Tier-3 lane remains in the eligible set, and the graduation meta-decision is marked as itself Tier 3 and ineligible
+Done when: no Tier-3 lane remains in the eligible set, and the graduation meta-decision is marked as itself Tier 3 and ineligible, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: a lane graduating the ceremony's own class. The moment the review licenses the authority that licenses reviews, the ceiling is gone and the ladder is a pricing page with extra steps.
 
 ### Phase 4: Promotion, demotion, and tuning proposals · lane: divergent (human)
@@ -134,7 +142,7 @@ Run:
     so the next window can tell whether the tuning moved the agreement rate.
 
 Output artifact: held rubric-tuning changes, each tied to its lane and its motivating divergence
-Done when: every Phase 4 tuning decision is a held change with its evidence, and nothing has auto-applied
+Done when: every Phase 4 tuning decision is a held change with its evidence, and nothing has auto-applied, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: tuning a constant to make a lane pass. A threshold moved to promote a lane it was blocking is the promotion wearing a disguise, and the divergence evidence is what keeps the tuning honest.
 
 ## Failure modes

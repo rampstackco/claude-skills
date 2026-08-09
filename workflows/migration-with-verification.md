@@ -40,6 +40,14 @@ Read-only until the held redirect map and fixes. The cutover itself, the DNS and
 - Search-performance history for the old property, to pre-register baselines before cutover.
 - The cutover runbook's platform access (DNS, hosting), held by the human who performs it.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Inventory and pre-register the baselines · lane: convergent (Tholo)
@@ -59,7 +67,7 @@ Run:
     pre-registered baseline record.
 
 Output artifact: the complete old-URL inventory and the pre-registered baseline record (traffic, rankings, the recovery metric), dated before cutover
-Done when: every old URL is inventoried from the three sources unioned, and the baselines and recovery metric are recorded before any cutover step
+Done when: every old URL is inventoried from the three sources unioned, and the baselines and recovery metric are recorded before any cutover step, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: baselines chosen after cutover. A recovery metric written once traffic has moved is fitted to whatever happened and will always find recovery; the baseline means something only if it predates the flip.
 
 ### Phase 2: Redirect-map completeness gate · lane: gate (Basano)
@@ -78,7 +86,7 @@ Run:
     disposition's evidence. This gate reports and fixes nothing.
 
 Output artifact: the redirect map (every old URL, its disposition, the rationale for drops) with a zero-uncovered coverage report
-Done when: every old URL in the inventory carries a disposition, the uncovered count is zero, and each drop has a recorded rationale
+Done when: every old URL in the inventory carries a disposition, the uncovered count is zero, and each drop has a recorded rationale, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: a sampled map. A redirect map spot-checked instead of completed passes review and drops the long tail, and the long tail is where the accumulated ranking equity quietly lived.
 
 ### Phase 3: Parity audit, old versus new · lane: gate (Basano)
@@ -96,7 +104,7 @@ Run:
     old counterpart carried. Report parity per pair with the evidence. Report only.
 
 Output artifact: the parity report (each mapped pair, per-check verdict, the evidence)
-Done when: every mapped pair has a parity verdict across metadata, canonical, structured data, content presence, and internal links
+Done when: every mapped pair has a parity verdict across metadata, canonical, structured data, content presence, and internal links, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: parity by URL existence. A new URL that returns 200 can still have lost the title, the schema, and half the body the old one ranked for, and a check that stops at "the page exists" certifies a page that will not hold the ranking.
 
 ### Phase 4: Staged cutover · lane: divergent (human)
@@ -134,7 +142,7 @@ Run:
     redirect verdicts together.
 
 Output artifact: the Post-Deploy Live Verification closure for the new property plus the live redirect verdicts from the map
-Done when: Post-Deploy Live Verification closes VERIFIED on the new property and the mapped redirects fire live with the right status codes, or the discrepancies are filed with their evidence
+Done when: Post-Deploy Live Verification closes VERIFIED on the new property and the mapped redirects fire live with the right status codes, or the discrepancies are filed with their evidence, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: declaring the migration done at the DNS flip. DNS resolving is not the property migrated; the redirects, the parity, and the live render are, and only production fetches prove them.
 
 ### Phase 6: Monitoring window against the pre-registered baselines · lane: gate (Basano)
@@ -153,7 +161,7 @@ Run:
     routes out of this workflow.
 
 Output artifact: monitoring reports on cadence, and a closure record when the pre-registered recovery condition holds
-Done when: the pre-registered recovery condition holds across its window and the closure is recorded, or the window breaks baseline and the regression is routed to Traffic-Drop Triage
+Done when: the pre-registered recovery condition holds across its window and the closure is recorded, or the window breaks baseline and the regression is routed to Traffic-Drop Triage, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: closing on the first good week. Migration traffic is noisy in the weeks after cutover, and a recovery declared on one datapoint reopens a month later as a mystery with the trail already cold.
 
 ## Failure modes

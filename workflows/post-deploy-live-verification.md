@@ -40,6 +40,14 @@ Verification is read-only. Fixes it surfaces land held; deploy-platform actions 
 - A way to read which build produced a served page (a deployment id, build hash, or asset fingerprint in the rendered HTML; every modern host embeds one).
 - The approved state: the merged content, metadata, and values the pages are supposed to show.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Capture the expected state · lane: convergent (Tholo)
@@ -59,7 +67,7 @@ Run:
     Record the newest deployment or build identifier the platform reports.
 
 Output artifact: the expected-state sheet (route, expected values, discriminator value, expected build id)
-Done when: every touched and blast-radius route has expected values and a discriminator
+Done when: every touched and blast-radius route has expected values and a discriminator, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: verifying only the changed route. The route you edited is the one you will look at anyway; the regression ships on the sibling route nobody listed
 
 ### Phase 2: Production fetch and identity check · lane: gate (Basano)
@@ -81,7 +89,7 @@ Run:
     or WRONG (current build, unexpected values).
 
 Output artifact: the live report (verdict, evidence, build id per route, both fetches)
-Done when: every route on the sheet has a verdict from production fetches
+Done when: every route on the sheet has a verdict from production fetches, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: trusting the deploy dashboard. The platform saying the deployment succeeded is a claim about the build, not about what a given route serves; tool-reported success is not verified state, and only the rendered production URL is ground truth
 
 ### Phase 3: Discriminate the failure class · lane: convergent (Tholo)
@@ -104,7 +112,7 @@ Run:
     ambiguous.
 
 Output artifact: the failure-class finding with its evidence
-Done when: every non-verified route has a named failure class or a named ambiguity with the next check specified
+Done when: every non-verified route has a named failure class or a named ambiguity with the next check specified, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: purge-and-hope. Purging a cache without knowing whether the deploy promoted treats two different diseases with one drug; when it happens to work, nothing was learned, and when it does not, the next hour is spent purging harder
 
 ### Phase 4: Route the fix · lane: divergent (human)
@@ -136,7 +144,7 @@ Run:
     definition of done.
 
 Output artifact: the closure record (all routes VERIFIED, final build ids, timestamps)
-Done when: all routes VERIFIED on production, and the closure record exists
+Done when: all routes VERIFIED on production, and the closure record exists, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: closing at merge, or closing on the first good fetch after a purge. Done is a property of what production serves, held across both fetches, on every route on the sheet
 
 ## Failure modes
