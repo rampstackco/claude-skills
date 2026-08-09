@@ -34,6 +34,10 @@ Every shipped file below enters at template. Content Pipeline with Prove Gates i
 
 Checks report and fail, engines propose and stop, a human merges; autonomy is earned per lane under the published doctrine, never asserted.
 
+## The honest-stop convention
+
+Every workflow carries the same "If a prerequisite is unmet" section, between its prerequisites and its phases. When a phase's required input, tool, access, or data is unavailable or unverifiable, the sanctioned output is a report-blocked statement, and that statement satisfies the phase's done-when; fabricating the missing number never does. The convention exists because instructions should not require what circumstances may not permit, and a done-when that demands numbers with no sanctioned way to stop is an instruction to invent them.
+
 ## The set
 
 WORKFLOWS.lock is the canonical manifest and the source for any count. The table is the list. Shipped files link, and with this wave every file is shipped, so no row remains defined and publishing.

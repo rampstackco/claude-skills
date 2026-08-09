@@ -38,6 +38,14 @@ This gate is read-only: it reads the content pipeline's held drafts and the buil
 - The content pipeline's held drafts as input; this gate runs inside Content Pipeline Phase 3 for regulated properties.
 - A production-equivalent build, because placement is verified on the rendered page.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: The compliance register · lane: divergent (human)
@@ -53,7 +61,7 @@ Run: the register owner writes the compliance register once and approves it:
     not derived per draft. It is versioned, and it carries a review cadence
     against its own regulatory sources.
 Output artifact: the approved compliance register (disclosures and placements, the authority list, prohibited patterns, the review cadence)
-Done when: the register owner has approved the register and its review cadence, and it is versioned
+Done when: the register owner has approved the register and its review cadence, and it is versioned, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: a register derived per draft. A standard invented fresh for each piece is not a standard, and it drifts to whatever the current draft happens to satisfy.
 
 ### Phase 2: The compliance gate · lane: gate (Basano)
@@ -74,7 +82,7 @@ Run:
     draft.
 
 Output artifact: the compliance verdict per check (disclosures, authority-sourced claims, prohibited patterns), evidence attached
-Done when: the draft carries a verdict on disclosures present, every regulated claim authority-sourced, and prohibited patterns absent
+Done when: the draft carries a verdict on disclosures present, every regulated claim authority-sourced, and prohibited patterns absent, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: source-presence instead of authority-list checking. A claim with a citation attached passes a lazy check and fails the register when the citation is a blog rather than a listed authority; the presence of a source is not the same as sourcing to an authority.
 
 ### Phase 3: Placement verification on the built page · lane: gate (Basano)
@@ -92,7 +100,7 @@ Run:
     the rendered evidence. Report only.
 
 Output artifact: the placement report (each disclosure, its required placement, its rendered placement, a verdict)
-Done when: every required disclosure has a placement verdict against the register's rule, checked on the built render
+Done when: every required disclosure has a placement verdict against the register's rule, checked on the built render, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: verifying placement in the source. A disclosure in the markup that a collapsed accordion hides at render is present to a grep and absent to a reader, and the reader is who the rule protects.
 
 ### Phase 4: Waiver protocol · lane: divergent (human)
@@ -105,7 +113,7 @@ Run: only the register owner may waive a compliance failure, and a waiver is
     Repeated waivers of the same rule are a signal that the register is wrong or
     the process is, and they surface for review rather than accumulating silently.
 Output artifact: the recorded waiver (the rule, the draft, the register owner's rationale), or the confirmation that no waiver was granted
-Done when (public gate): every compliance failure is either fixed and re-gated, or waived in writing by the register owner with a recorded rationale
+Done when (public gate): every compliance failure is either fixed and re-gated, or waived in writing by the register owner with a recorded rationale, or a report-blocked statement per the prerequisite-unmet rule
 Operated-layer note: in an operated deployment a waiver lands as an agreement-log row with human_verdict = waive and a required human_reason, excluded from the false-pass and false-fail rate computations and reported on its own line (AGREEMENT-LOG.md)
 Fails look like: routine waivers. A waiver any reviewer can grant, or one that passes without the register owner and a rationale, turns the gate into a formality the pipeline learns to wave through.
 

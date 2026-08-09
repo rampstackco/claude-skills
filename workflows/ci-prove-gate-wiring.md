@@ -39,6 +39,14 @@ Everything this workflow changes lands held: the gate wiring and any fix a gate 
 - A build command that produces the artifact production serves; a dev-flag build is a different artifact.
 - Branch protection you can configure, or the access to request it.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Inventory the pipeline and the gate candidates · lane: convergent (Tholo)
@@ -56,7 +64,7 @@ Run:
     inventory; propose nothing yet.
 
 Output artifact: the gate-candidate inventory (each candidate, its inputs, source-versus-built, current advisory or blocking state)
-Done when: every candidate has its inputs and current state recorded, including the checks that already block
+Done when: every candidate has its inputs and current state recorded, including the checks that already block, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: inventorying the CI config and missing the by-hand checks. The gate a team runs manually and trusts is the one worth wiring, and it never appears in the YAML.
 
 ### Phase 2: Define the gate set and the report contract · lane: divergent (Krine)
@@ -91,7 +99,7 @@ Run:
     event against the branch build. Land the wiring as a held PR; merge nothing.
 
 Output artifact: the gate implementations and their CI wiring, as a held PR that emits the report contract
-Done when: each gate runs on the pull-request event against the built output and emits the report contract, in a held PR
+Done when: each gate runs on the pull-request event against the built output and emits the report contract, in a held PR, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: asserting against a dev-flag build. A gate that passes on the dev server while the real build serves something else has verified a machine no user visits.
 
 ### Phase 4: Deliberate-failure demonstration · lane: gate (Basano)
@@ -109,7 +117,7 @@ Run:
     is reverted, never merged.
 
 Output artifact: per-gate failure evidence (the seeded fault, the captured red with its report, the reverted green)
-Done when: every gate has a captured red on its seeded fault and a captured green after revert
+Done when: every gate has a captured red on its seeded fault and a captured green after revert, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: shipping a gate no one has seen fail. A gate that has only ever passed is indistinguishable from a gate that checks nothing, and the difference surfaces the day it should have caught something.
 
 ### Phase 5: Install as required checks and branch protection · lane: divergent (human)
@@ -122,7 +130,7 @@ Run: a person sets the gates as REQUIRED status checks and enables branch
     and they stay human. The person records which gates were made required and on
     which branches.
 Output artifact: the required-check and branch-protection configuration, recorded against the gate set
-Done when: the named gates are required on the protected branches and a failing gate blocks the merge, confirmed by the human
+Done when: the named gates are required on the protected branches and a failing gate blocks the merge, confirmed by the human, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: gates that run but are not required. An advisory gate is a suggestion, and a pipeline under deadline merges past suggestions.
 
 ### Phase 6: Drift watch · lane: convergent (Tholo)
@@ -139,7 +147,7 @@ Run:
     re-proofs and updates as held changes.
 
 Output artifact: a drift record per gate (the canon version proven against, the last re-proof) and held updates for any stale gate
-Done when: every gate names the canon version it was last proven against, and no gate is enforcing against moved canon unproven
+Done when: every gate names the canon version it was last proven against, and no gate is enforcing against moved canon unproven, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: a gate frozen against last quarter's rules. It still passes and still blocks, and it is now enforcing a standard the team no longer holds.
 
 ## Failure modes

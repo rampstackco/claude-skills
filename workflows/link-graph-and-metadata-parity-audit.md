@@ -34,6 +34,14 @@ Read-only until Phase 4; fixes land held, a human merges. Nothing in the audit a
 - The templates behind the routes, for fixes that belong at the template rather than the page.
 - The list of money or conversion surfaces the graph is expected to feed.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Build the link graph · lane: convergent (Tholo)
@@ -52,7 +60,7 @@ Run:
     Produce the graph; judge nothing yet.
 
 Output artifact: the link graph (routes, edges, per-route metadata) reconciled against the route registry
-Done when: every registry route is a node and every internal link is an edge, with crawl-versus-registry discrepancies marked
+Done when: every registry route is a node and every internal link is an edge, with crawl-versus-registry discrepancies marked, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: crawling the preview. A staging crawl maps a link graph no user traverses, and the orphan on production is the page staging linked fine.
 
 ### Phase 2: Orphan and dead-end detection · lane: gate (Basano)
@@ -71,7 +79,7 @@ Run:
     outbound degree, and the path that is missing.
 
 Output artifact: the orphan-and-dead-end report (each flagged route, its degrees, the missing path, its weight)
-Done when: every route with zero inbound, or zero outbound to an outcome surface, is flagged with evidence, including the clean high-value routes confirmed reachable
+Done when: every route with zero inbound, or zero outbound to an outcome surface, is flagged with evidence, including the clean high-value routes confirmed reachable, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: counting orphans without weighting them. A thousand orphaned tag pages and one orphaned money page are not the same finding, and an unweighted list buries the one that pays.
 
 ### Phase 3: Metadata parity per route · lane: gate (Basano)
@@ -89,7 +97,7 @@ Run:
     metadata as evidence. Report only.
 
 Output artifact: the metadata-parity report (verdict per route per check, rendered metadata attached)
-Done when: every route carries a verdict for uniqueness, per-route OG and Twitter, self-canonical, and suffix dedup
+Done when: every route carries a verdict for uniqueness, per-route OG and Twitter, self-canonical, and suffix dedup, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: checking presence, not uniqueness. Every page carrying the homepage's OG image passes a presence check and fails a reader who sees the same card for forty different links.
 
 ### Phase 4: Triage and held fixes · lane: divergent (Krine) then convergent (Tholo)

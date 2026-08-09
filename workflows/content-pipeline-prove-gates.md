@@ -44,6 +44,14 @@ One of cms.draft or repo.change is required, matching how the property publishes
 - A claims-and-style standard file (STANDARDS.md or equivalent): voice rules, phrase rules, sourcing requirements.
 - A route list or sitemap the link checks can resolve against.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Rank the backlog from demand · lane: divergent (Krine)
@@ -81,7 +89,7 @@ Run:
     publish, schedule, or merge.
 
 Output artifact: a held draft with sources inline, plus the brief it was written against
-Done when: the draft exists in held state and nothing has published
+Done when: the draft exists in held state and nothing has published, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: the draft publishing directly because the target's draft mechanism was skipped. Write-held is the seam; a pipeline that can publish in this phase is a different and more dangerous machine
 
 ### Phase 3: Pre-publish gate · lane: gate (Basano)
@@ -99,7 +107,7 @@ Run:
     verdict per check with evidence. Do not fix anything; report only.
 
 Output artifact: a prove report (verdict per check, evidence attached), attached to the held draft
-Done when (public gate): every check passes, or a failure is waived in writing with a recorded rationale attached to the held draft
+Done when (public gate): every check passes, or a failure is waived in writing with a recorded rationale attached to the held draft, or a report-blocked statement per the prerequisite-unmet rule
 Operated-layer note: in an operated deployment, the verdict and any waiver land as an agreement-log row; this is operated substrate, not part of the public package
 Fails look like: the gate passing on a claim citing a source that does not contain the number (source-shape checking, not source-presence checking)
 
@@ -130,7 +138,7 @@ Run:
     publish. Report verdict per check with the live evidence.
 
 Output artifact: a live-audit report tied to the production URL
-Done when: every check passes against the live render, or the discrepancy is filed as a defect with the live evidence attached
+Done when: every check passes against the live render, or the discrepancy is filed as a defect with the live evidence attached, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: verifying the preview. Merged is not live; a published piece can serve a stale render or the wrong metadata while the preview looks perfect, and only the production URL is ground truth
 
 ### Phase 6: Outcomes and the refresh trigger · lane: convergent (Tholo)
@@ -148,7 +156,7 @@ Run:
     topics on the same criteria.
 
 Output artifact: outcome records per piece; decay flags entering the Phase 1 queue
-Done when: outcomes are queryable for the next ranking cycle and decay candidates are in the queue
+Done when: outcomes are queryable for the next ranking cycle and decay candidates are in the queue, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: refresh running as its own separate pipeline. Decay is a demand source, not a second loop; the moment refreshes bypass the ranking, the pipeline has two front doors and the criteria govern only one of them
 
 ## Failure modes

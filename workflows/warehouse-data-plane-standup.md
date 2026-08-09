@@ -45,6 +45,14 @@ This workflow stands up read-only access and wires no write path. Enabling the e
 - An operational store separate from the warehouse, or the ability to provision one.
 - The access controls to grant a scoped, read-only service identity.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Enable the exports · lane: divergent (human)
@@ -58,7 +66,7 @@ Run: a person enables the search-console bulk export and the analytics
     history starts the day the export is enabled and the clock only runs
     forward. Turn them on before any other step.
 Output artifact: the exports enabled per property, with the enablement date recorded
-Done when: every in-scope property has both exports enabled with a recorded start date, confirmed in the source consoles
+Done when: every in-scope property has both exports enabled with a recorded start date, confirmed in the source consoles, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: doing this last. Every day the exports are off is a day of history that will never exist, and no later step can recover it.
 
 ### Phase 2: Separate the two stores · lane: convergent (Tholo)
@@ -78,7 +86,7 @@ Run:
     the operational store. Record the boundary as written policy.
 
 Output artifact: the two stores stood up, the region fixed, and the store-boundary policy recorded
-Done when: both stores exist, the region matches across exports, and the boundary policy names which data lives where
+Done when: both stores exist, the region matches across exports, and the boundary policy names which data lives where, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: one store doing both jobs. A single store for metrics and decisions couples query cost to operational writes and loses the separation the whole plane depends on.
 
 ### Phase 3: Wire read-only access with mandatory bounds · lane: convergent (Tholo)
@@ -98,7 +106,7 @@ Run:
     date range is rejected, not run. No write tool is present on this path.
 
 Output artifact: the read-only access layer, the scoped identity, and the bounds-and-offset rules encoded in the domain layer
-Done when: every warehouse call goes through the bounded read path, an unbounded call is rejected, and the identity carries no write scope
+Done when: every warehouse call goes through the bounded read path, an unbounded call is rejected, and the identity carries no write scope, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: bounds enforced by convention instead of code. A partition filter that is supposed to be there is absent on the one query written under deadline, and that is the query that scans the full history.
 
 ### Phase 4: Cost and quota governance · lane: gate (Basano)
@@ -116,7 +124,7 @@ Run:
     what holds and what does not.
 
 Output artifact: a governance report (bounds-rejection confirmed, partition scan confirmed, budget alert and quota set)
-Done when: an unbounded query is confirmed rejected, a bounded query is confirmed to scan only its partitions, and a budget alert exists
+Done when: an unbounded query is confirmed rejected, a bounded query is confirmed to scan only its partitions, and a budget alert exists, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: an unbounded scan reaching the warehouse. It is a cost incident waiting for a cron job, and it bills for the whole history every time it runs.
 
 ### Phase 5: Stand up the sensing layer · lane: convergent (Tholo)
@@ -135,7 +143,7 @@ Run:
     never acts.
 
 Output artifact: the sensing definitions per series (freshness, movement, cadence, anomaly) and the schedule
-Done when: every live series has thresholds derived from its own history and a scheduled check, and the layer only flags
+Done when: every live series has thresholds derived from its own history and a scheduled check, and the layer only flags, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: thresholds copied between series of different cadences. A daily series' movement band applied to a weekly one alarms on every normal week and trains the team to ignore it.
 
 ### Phase 6: Verification pass · lane: gate (Basano)
@@ -153,7 +161,7 @@ Run:
     or fail per source with the returned evidence. Report only.
 
 Output artifact: a verification report (one bounded round-trip per source, expected-versus-returned, offset confirmed)
-Done when: each source returns the expected shape through the bounded path, or the discrepancy is filed with its evidence
+Done when: each source returns the expected shape through the bounded path, or the discrepancy is filed with its evidence, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: verifying the warehouse holds data without verifying the read path returns it correctly. The tables can be perfect while the domain layer drops the offset, and every downstream number inherits the error.
 
 ## Failure modes

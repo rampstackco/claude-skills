@@ -43,6 +43,14 @@ Read-only until Phase 4; corrections land held, a human merges.
 - The property's canonical data sources for checkable claims (the statistics pages, standards bodies, or datasets its content cites).
 - A decision, made once and recorded, of what counts as a visible correction on this property (the correction-note format and where it renders).
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Claim inventory · lane: convergent (Tholo)
@@ -63,7 +71,7 @@ Run:
     if known.
 
 Output artifact: the claim register
-Done when: the register covers the corpus including metadata surfaces, and every claim carries a class
+Done when: the register covers the corpus including metadata surfaces, and every claim carries a class, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: inventorying body copy only. Claims rot fastest in the surfaces nobody rereads: meta descriptions, schema fields, comparison tables, and footer boilerplate
 
 ### Phase 2: Truth check · lane: gate (Basano)
@@ -87,7 +95,7 @@ Run:
     fix anything; report only.
 
 Output artifact: the discrepancy report
-Done when: every register entry has a verdict, including the clean ones
+Done when: every register entry has a verdict, including the clean ones, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: source-presence checking. A claim citing a live source that no longer contains the claimed value passes a lazy check and fails a reader; the check is against the source's current content, not its existence
 
 ### Phase 3: Triage and the correction plan · lane: divergent (Krine)
@@ -125,7 +133,7 @@ Run:
     lands held: CMS drafts or a draft change, never a direct publish.
 
 Output artifact: held corrections, each tied to its plan item; correction notes in place
-Done when: every approved item has a held change and nothing has published
+Done when: every approved item has a held change and nothing has published, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: silent edits to relied-upon claims. A correction a reader cannot see is indistinguishable from hoping nobody noticed, and on the day someone diffs the archive, it reads exactly that way
 
 ### Phase 5: Verify live and install the guard · lane: gate (Basano)
@@ -143,7 +151,7 @@ Run:
     which is what keeps the next pass small.
 
 Output artifact: live verification per correction; the standing cadence and authoring rule, recorded
-Done when: every merged correction is verified on its production URL and the cadence is scheduled
+Done when: every merged correction is verified on its production URL and the cadence is scheduled, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: counting the fix as done at merge. Merged is not live; a correction that renders on the preview and not on production has corrected nothing
 
 ## Failure modes

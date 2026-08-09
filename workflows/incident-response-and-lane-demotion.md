@@ -42,6 +42,14 @@ The rollback and the fix land held; a human merges them through the now human-ga
 - The lane's `post_merge_outcome` budget, the regression threshold that makes a demotion mandatory.
 - The rollback mechanism for the lane's changes.
 
+## If a prerequisite is unmet
+
+Any phase can find a required input, tool, access, or data source unavailable or unverifiable. When that happens, the sanctioned output is a report-blocked statement: what the phase required, what was actually verified or obtained, and where the run stops or continues degraded.
+
+- A report-blocked statement satisfies the phase's done-when. Partial completion counts as completion when it is stated as partial.
+- Fabricating, estimating, or interpolating a required number to satisfy a done-when is never sanctioned.
+- A phase handed a report-blocked upstream treats it as its own unmet prerequisite and reports blocked in turn, rather than running on an input that does not exist.
+
 ## Phases
 
 ### Phase 1: Detection intake · lane: convergent (Tholo)
@@ -60,7 +68,7 @@ Run:
     nothing to a promoted lane yet.
 
 Output artifact: the intake record (each signal, its candidate lane, the window's merges, the post_merge_outcome evidence)
-Done when: every regression signal in the window is recorded with its candidate lane and its post_merge_outcome evidence
+Done when: every regression signal in the window is recorded with its candidate lane and its post_merge_outcome evidence, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: treating every wobble as an incident. A metric breathing inside its normal band is not a regression, and an intake that flags noise trains the team to demote on nothing.
 
 ### Phase 2: Attribution · lane: gate (Basano)
@@ -96,7 +104,7 @@ Run: before any fix is written, a person returns the lane to human-gated. The
     that earned it, and it gets that evidence back the ordinary way, by re-earning
     it. Record the demotion and its reason.
 Output artifact: the lane returned to human-gated, with the demotion and its reason recorded
-Done when: the lane is human-gated and cannot auto-pass or auto-merge, confirmed before any fix is written
+Done when: the lane is human-gated and cannot auto-pass or auto-merge, confirmed before any fix is written, or a report-blocked statement per the prerequisite-unmet rule
 Operated-layer note: in an operated deployment the demotion is recorded as an agreement-log action against the lane, with the regression as its reason; the demotion of the operated lane is an operated act (AGREEMENT-LOG.md)
 Fails look like: fixing before demoting. While the fix is being written the lane is still promoted and still merging, so the machine that produced the regression keeps producing, and the incident grows a second head.
 
@@ -115,7 +123,7 @@ Run:
     through the human gate the way every change on this lane now does.
 
 Output artifact: the held rollback or fix, tied to the attributed merge, with the post_merge_outcome signal it must clear
-Done when: the rollback or fix is a held change and the regression signal has cleared against it, with the lane still human-gated
+Done when: the rollback or fix is a held change and the regression signal has cleared against it, with the lane still human-gated, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: closing the incident on the merge instead of on the signal. The change meant to fix the regression is verified by re-running the post_merge_outcome check that caught it, not by the fact that a PR merged.
 
 ### Phase 5: The false-pass audit · lane: gate (Basano)
@@ -134,7 +142,7 @@ Run:
     and the proposed gate improvement.
 
 Output artifact: the false-pass audit (the false_pass row, the structural gap named, the proposed gate improvement)
-Done when (public gate): the structural gap is named and a specific gate improvement is proposed as a held change
+Done when (public gate): the structural gap is named and a specific gate improvement is proposed as a held change, or a report-blocked statement per the prerequisite-unmet rule
 Operated-layer note: the audited row is the operated log's false_pass for the regressed merge; the schema and the four-way agreement values are public (AGREEMENT-LOG.md), the row is operated
 Fails look like: demotion without the audit. A lane demoted and fixed but never audited leaves the gate that missed the fault unchanged, and the same miss re-promotes the same class of regression next quarter.
 
@@ -153,7 +161,7 @@ Run:
     the conditions the lane must meet, and hand the lane to Autonomy Review.
 
 Output artifact: the recorded reset window (its start, the thresholds the lane must re-earn) handed to Autonomy Review
-Done when: the reset window is recorded with its start and re-earning conditions, and the lane is handed to Autonomy Review rather than re-promoted here
+Done when: the reset window is recorded with its start and re-earning conditions, and the lane is handed to Autonomy Review rather than re-promoted here, or a report-blocked statement per the prerequisite-unmet rule
 Fails look like: quietly re-promoting the lane once the fix lands. A lane restored to autonomy without re-earning it under a reset window has learned nothing, and the demotion was theater.
 
 ## Failure modes
