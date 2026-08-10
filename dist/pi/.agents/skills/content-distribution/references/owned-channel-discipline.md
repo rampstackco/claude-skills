@@ -83,7 +83,7 @@ Owned audio distribution.
 - **Audio quality.** Listeners tolerate uneven video far more than uneven audio. Audio investment returns more than video investment up to a point.
 - **Consistent episode cadence.** Weekly is most common; bi-weekly works for higher-investment shows. Drift undermines listener habit.
 - **Show notes as derivative format.** Show notes do the print work the audio cannot: links, citations, structured summary. Treat show notes as their own derivative format with quality discipline.
-- **Cross-platform distribution.** Apple Podcasts, Spotify, YouTube, Google Podcasts. Each is a discoverability surface.
+- **Cross-platform distribution.** Apple Podcasts, Spotify, YouTube, YouTube Music. Each is a discoverability surface.
 - **Format consistency within the show.** Listeners develop expectations; format changes can lose listeners.
 
 **Common podcast failures.**

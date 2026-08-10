@@ -54,7 +54,7 @@ Each format below has specific reader expectations. Pieces that meet expectation
 
 ## X/Twitter (single post and threads)
 
-**Length norms.** Single post: 280 characters (or up to 4,000 for premium accounts; conventions vary). Thread: 5-15 posts typical for substantive threads.
+**Length norms.** Single post: 280 characters (or up to 25,000 for premium accounts; conventions vary). Thread: 5-15 posts typical for substantive threads.
 
 **What X demands (single post).**
 

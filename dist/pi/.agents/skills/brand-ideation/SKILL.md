@@ -78,7 +78,7 @@ Names cluster by approach. Generate names across multiple approaches, not just o
 | Coined | Made-up word | "Kodak," "Häagen-Dazs," "Asana" |
 | Metaphor | Borrowed concept | "Apple," "Amazon," "Twitch" |
 | Compound | Two words combined | "Facebook," "PayPal," "Spotify" |
-| Suggestive | Hints at function without describing | "Tide," "Sprint," "Slack" |
+| Suggestive | Hints at function without describing | "Tide," "Slack," "Sprint" (historical; absorbed into T-Mobile in 2020) |
 
 Generate 8 to 15 candidates per direction. Apply naming filters before short-listing:
 

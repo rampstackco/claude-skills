@@ -94,7 +94,7 @@ High visual density where every element is intentional. Loud, but engineered. Th
 
 **What this signals:** Craft and conviction. The brand has thought about every pixel and chose density on purpose.
 
-**Reference examples:** BUCK's portfolio site. Ueno's work. Pentagram's case study pages. Many top-tier creative agency sites. Some Nike campaign work.
+**Reference examples:** BUCK's portfolio site. Ueno's work (historical; the agency was acqui-hired by Twitter and shut down in 2021). Pentagram's case study pages. Many top-tier creative agency sites. Some Nike campaign work.
 
 **When to pick this:** The audience expects boring and the brand wants to demonstrate creative ambition. Differentiation through visible craft is available. The team has the design capacity to execute it.
 

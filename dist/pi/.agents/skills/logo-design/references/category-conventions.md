@@ -337,7 +337,7 @@ The category is dominated by typography. The masthead IS the logo. Most editoria
 
 ## 8. Tech / AI
 
-The category is dominated by abstract gesture and geometric reduction. Most AI and tech brands lean into one of two modes: either neo-grotesque sans with abstract gesture symbol (Anthropic's flower, OpenAI's geometric mark) or aggressive geometric reduction (every blockchain logo, every web3 brand). Visual fatigue in the category is real.
+The category is dominated by abstract gesture and geometric reduction. Most AI and tech brands lean into one of two modes: either neo-grotesque sans with abstract gesture symbol (OpenAI's Blossom) or aggressive geometric reduction (every blockchain logo, every web3 brand). Visual fatigue in the category is real.
 
 ### Defaults that work
 

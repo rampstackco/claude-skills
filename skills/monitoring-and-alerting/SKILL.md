@@ -182,7 +182,7 @@ If tier 1 alerts fire frequently, alert fatigue sets in. People stop responding.
 
 Where do alerts go?
 
-- Tier 1: paging system (e.g., PagerDuty, Opsgenie). Direct to on-call.
+- Tier 1: paging system (e.g., PagerDuty). Do not onboard onto Opsgenie: Atlassian ended sales in June 2025 and support ends April 2027. Direct to on-call.
 - Tier 2: chat channel (Slack, Teams). Tagged with the area.
 - Tier 3: dashboard or log only.
 

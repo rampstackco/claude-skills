@@ -49,7 +49,7 @@ Beyond entity coverage, AI engines weight several other signals when deciding wh
 
 **Named experts or quotes.** "As Ronny Kohavi noted in his book Trustworthy Online Controlled Experiments, the most common SRM diagnosis is..." cites better than "experts agree that SRM diagnoses are common." Named attribution earns citation; anonymous attribution does not.
 
-**Direct definitions.** "CUPED stands for Controlled-experiment Using Pre-Existing Data" cites better than a passage that uses CUPED without defining it. AI engines extract definitions and use them as the canonical answer when users ask "what is CUPED."
+**Direct definitions.** "CUPED stands for Controlled-experiment Using Pre-Experiment Data" cites better than a passage that uses CUPED without defining it. AI engines extract definitions and use them as the canonical answer when users ask "what is CUPED."
 
 **Comparison tables.** Tables with explicit columns and rows cite better than prose comparisons. AI engines extract structured data preferentially.
 

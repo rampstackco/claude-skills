@@ -104,7 +104,7 @@ Twelve patterns that recur across product analytics setups. For each: name, symp
 
 **Symptom.** iOS conversion rate looks bad in the analytics tool but fine in the warehouse.
 
-**Root cause.** iOS Intelligent Tracking Prevention (ITP) blocks third-party cookies, breaking attribution for iOS users. The analytics tool models the missing data; the warehouse uses server-side conversion tracking that is unaffected.
+**Root cause.** Safari's Intelligent Tracking Prevention (ITP) blocks third-party cookies on every Apple platform including macOS, breaking attribution for Safari users. The analytics tool models the missing data; the warehouse uses server-side conversion tracking that is unaffected.
 
 **Fix.** Treat iOS analytics-tool data with extra skepticism. Use the warehouse for canonical iOS metrics. Set up server-side event tracking (Conversions API for Meta, server-side GA4) where possible.
 

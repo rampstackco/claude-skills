@@ -60,7 +60,7 @@ def mSPRT(treatment, control, prior_var=1.0, alpha=0.05):
 
 Note: the implementation above is a sketch for illustration. Production implementations should use a peer-reviewed library or expert review. Do not deploy this verbatim.
 
-The honest version. Use a maintained library (`sequential` in R, custom Python adapted from peer-reviewed papers like Johari et al 2017). Have a statistician on the team review the implementation.
+The honest version. Use custom Python adapted from peer-reviewed papers like Johari et al 2017, or your platform's own engine. (CRAN's `Sequential` package is MaxSPRT safety surveillance, not an mSPRT A/B library, despite the name.) Have a statistician on the team review the implementation.
 
 ---
 
@@ -73,7 +73,7 @@ The math is more involved than mSPRT. Useful when the team needs not just always
 References.
 
 - Howard, Ramdas, McAuliffe, Sekhon (2021), "Time-uniform, nonparametric, nonasymptotic confidence sequences."
-- Code: `sequential` package in R, or custom Python.
+- Code: custom Python, or the platform's own sequential engine. CRAN's `Sequential` package is MaxSPRT surveillance, not mSPRT.
 
 For most warehouse-native teams, mSPRT is enough. Confidence sequences are for teams with a statistician who has read the paper and validated the implementation.
 
