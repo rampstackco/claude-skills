@@ -249,11 +249,17 @@ When designing or auditing a lead magnet, walk these 12 considerations.
 7. **Delivery in the moment.** First email arrives immediately; the asset is in that email.
 8. **Follow-up sequence designed.** The 30 days after download have a purpose, an arc, and a soft offer that matches the audience.
 9. **Format-specific quality gates passed.** The format's specific tests verified before launch.
-10. **Lead quality measured, not just conversion rate.** What percentage of subscribers fit the audience the magnet was designed for?
+10. **Lead quality measured, not just conversion rate.** What percentage of subscribers fit the audience the magnet was designed for? Where that measurement is unavailable, state the gap per the data-availability rule.
 11. **Attribution to source.** The team can tell which source produced which leads at which quality.
 12. **Audit cadence.** The magnet portfolio gets reviewed periodically; underperformers retired.
 
 The output of the framework is a lead magnet that earns the email by delivering real value, qualifies the audience by filtering at the headline and topic level, and starts a relationship through a sequence the team has actually designed.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

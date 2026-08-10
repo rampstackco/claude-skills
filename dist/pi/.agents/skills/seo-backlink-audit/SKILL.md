@@ -149,7 +149,7 @@ Healthy signal: the gap is shrinking over time. A widening gap is a strategic ri
 A backlink audit document with:
 
 1. **Executive summary.** Profile health verdict and top risks.
-2. **Profile snapshot.** Key metrics: referring domains, DR distribution, anchor mix, velocity.
+2. **Profile snapshot.** Key metrics: referring domains, DR distribution, anchor mix, velocity, or state the gap per the data-availability rule.
 3. **5-dimension analysis.** One section per dimension with findings.
 4. **Toxic link list.** If needed. Disavow file ready format.
 5. **Reclamation list.** Lost links worth recovering, with contact paths.
@@ -158,6 +158,12 @@ A backlink audit document with:
 8. **Methodology.** Data sources, pull dates, criteria used.
 
 Length: 8-15 pages depending on profile complexity.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

@@ -101,7 +101,7 @@ The reconciliation pattern.
 - Trust the warehouse for total conversions and total revenue.
 - Trust platforms for relative ranking within platform (which campaign won, which audience won).
 - Never trust platform sums.
-- Compute blended CAC as (total ad spend across platforms) divided by (total new customers from warehouse). Not from platform reports.
+- Compute blended CAC as (total ad spend across platforms) divided by (total new customers from warehouse). Not from platform reports. Where the warehouse figure is unavailable, state the gap per the data-availability rule.
 
 The board-deck pattern. Report warehouse-attributed conversion counts, never platform-summed. Report blended CAC, not channel-by-channel CAC unless explicitly noted as platform-self-attributed. Detail and templates in [`references/dashboard-reconciliation-patterns.md`](references/dashboard-reconciliation-patterns.md).
 
@@ -249,6 +249,12 @@ When reading a paid media dashboard about to inform a decision, walk these 12 co
 12. **Single source of truth.** Warehouse over platform reporting for board metrics.
 
 The output of the framework is one of three answers. Scale (the campaign is incremental and unit economics work). Hold (data is ambiguous; gather more before deciding). Kill (the campaign is not incremental enough to justify the spend).
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

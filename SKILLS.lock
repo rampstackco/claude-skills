@@ -1,6 +1,6 @@
 {
   "accessibility-audit": {
-    "SKILL.md": "4261e12c948d0832ac8c14431df3b40d2feb4b126356e4215be223ef64688503",
+    "SKILL.md": "1c599e4a84886f67f9ab1c60ec7d95a9289b17d3a948e5d8c227bdfcb082a1e3",
     "references/aria-patterns.md": "de9cb4934e62903d7d1676b4d4166a43f47e742bdcfd247ca8364c697b779b63",
     "references/audit-report-template.md": "0ed3d29c53a7f25ad2a72f5918181fd7f7e871d3253e3c66816baac425e09b87",
     "references/wcag-quick-reference.md": "4d70c669894200c64c9940dbec2ddf959173d7ad8d9dcb594206ea0c18d3cd8e"
@@ -16,7 +16,7 @@
     "references/testing-cadence-playbook.md": "7266af1fe12d7f0b374589cb93682c83458634fc0229809c64873b46896a9bb5"
   },
   "ads-performance-analytics": {
-    "SKILL.md": "b9627b0602040c8ddd6e5ad3ffc362f277397cb9bcc9c3222227ade3bafbaaed",
+    "SKILL.md": "1d37faa69f772441e01d43396820962890d7a80608e3afb64e1d5111722a8158",
     "references/attribution-model-comparison.md": "677ff179987ce840a1bd8cefe1e6e77aa40daed145791728f0347976946cc35f",
     "references/cohort-analysis-templates.md": "c15602571f8ce6d28b92d6c50918b2c6c07314b16f83c0d910e694fa332d460f",
     "references/common-interpretation-failures.md": "754a4c0ed869899d876fca5d38c5b6e0d2563f43fff4675dd567fcc38dbe2149",
@@ -26,7 +26,7 @@
     "references/platform-reporting-quirks.md": "d5352c0a6c24a42a23da227eddd3509d9531c0d081b1caf971b4b129ecc472d8"
   },
   "after-action-report": {
-    "SKILL.md": "89bcf92ced995da4701b560163775bae0168a6b55e49937c224b223edf09ba6e",
+    "SKILL.md": "97c20ae6885fc9d70e65b249070914ed919df7c5a406e8c26548ee5d3cf5749e",
     "references/aar-template.md": "b44409782f5a5cd8840b174b69a1a09ae0bb6b183cea9fab0f35fc2075a3495d"
   },
   "ai-content-collaboration": {
@@ -56,7 +56,7 @@
     "references/restore-runbook-template.md": "96c6cb2b6921ade948d7a0667828148ba36e4845c30e8d7c9feed6f2a7f7c056"
   },
   "beta-program-management": {
-    "SKILL.md": "5142f007fa6d68c3f4cba3d689bae8748834634687b161ba5ba795b0fc3d321d",
+    "SKILL.md": "2d5442d571af2fd67c59f5357c5600f00f1614e97bb79c71db4fab76e4e176f7",
     "references/beta-onboarding-templates.md": "20a4d965287f9def6536853e00ae6310b18cc19ccfc84bf13592c46ca8bbf92e",
     "references/beta-to-ga-graduation-criteria.md": "e687ef9ed64b4e84c5f1caa339cb92088d9907ef80290e994999752a89d29a25",
     "references/beta-type-decisions.md": "2bca68ad9bde5a0977abe563111286b3d6852cd6e88b1ff6e47ef9e296860058",
@@ -103,12 +103,12 @@
     "references/core-archetypes/12-documentary-honest.md": "08812b3563f6bcaac6326f1875589dc37da3cc1d14a21fe402c889d6dd6dcc84"
   },
   "brand-discovery": {
-    "SKILL.md": "9a7a3a2fe3565401ed54921d13d2c2b0865dbe5753231cd121276953cef89bfd",
+    "SKILL.md": "1826d52344ec219bf964ac594ed22ac3573b046999ff56b39ec3f7c05cda773f",
     "references/discovery-report-template.md": "bd86756ba7e05d2a14017447976e699ec7943cc49f9162574617ade7aa65c19c",
     "references/interview-guide.md": "284421b5bd389ebcd0f0eac36beff90eb5661f691a12f8e62b04652d29b83c46"
   },
   "brand-ideation": {
-    "SKILL.md": "a4cc8dfc44086813b9afaccb71930cc1f63517158e2bb9a8072a318d4c97440a",
+    "SKILL.md": "af477efaf396388b0c957b3c17de27c57847e7ae8b07d2e142c22cfa4d4e77d7",
     "references/ideation-output-template.md": "57e4312d98f9db6f527bd2913480a6b6b6febc9a5756305db9c5db6eb771252e",
     "references/naming-evaluation-rubric.md": "80ed4223a90d4bd8fb1db9c961a8ec3771b352a3620feca0c0bd8e0fe8b3d0e3"
   },
@@ -128,7 +128,7 @@
     "references/voice-frameworks.md": "ddf10b3826f5d16806aad27a34d865ec990b0c910102ae7f289bb6ae19173153"
   },
   "calculator-design": {
-    "SKILL.md": "12a86b7868c48e39ef957958a1a7160f9b754ff6d048ffa6f151c3ff0772e035",
+    "SKILL.md": "8ed49b0354545176dfb7f92f03b487c1b0647dda7a594be21cf31bd0628df9e3",
     "references/calculation-logic-transparency.md": "1e35217d11420184083b2733201483a69ed0e08321390a469683a55336e9b36d",
     "references/calculator-anti-patterns.md": "c7889dddefe8cdf6d8ef6635113c14eb5731f71005a84d10c700380de0a1a256",
     "references/calculator-investment-criteria.md": "b9475cb4b8f14044dc4881e51d9f03a1d6fa541a2b7ee907c044d8c20bc9e83c",
@@ -158,7 +158,7 @@
     "references/wordpress-headless-patterns.md": "d3bb754f3208e2db38fbaade7053e90e6a0b4525745dfad83c63325b7af699e3"
   },
   "comparison-tool-design": {
-    "SKILL.md": "24ce1daec98fc356616d00cf1799f2eca7b80248e980da0ad5e7a863b50b7d0e",
+    "SKILL.md": "3a8559eadf130bcffbc7d655eed201b12c91030eb7fe375cfbb7fb7e2241648d",
     "references/axis-selection-patterns.md": "ee3ebf49e43c1fbf51282eb8d18046d1ac5089ad7623e963693c61f82cd29efc",
     "references/common-comparison-failures.md": "cdd74332f89f9fd03299870de8564a5ef671ef69aa75d85c4b13f7474985d9fa",
     "references/comparison-anti-patterns.md": "6029133c1a4a7797868ba38194c55be3dc8c1aba77566cc8c1db50b858627379",
@@ -180,7 +180,7 @@
     "references/content-edit-checklist.md": "050aef4e1a1476bc36f9f368d147810ad54d7ed22bca6ca0ecb281f77840f2f9"
   },
   "content-brief-authoring": {
-    "SKILL.md": "c2230a2512dfb785308532328548913baa0ec4ed7a95c2a7d380747fbd663b21",
+    "SKILL.md": "8d8cd445b4a3978f00f8aa6f8da515d1c1e9e06e069402c017fce8cb8e829bef",
     "references/brief-governance-patterns.md": "382342645f219bd2b7c563180cb1762fd02af75167618413ed8fb54e68c39bbd",
     "references/brief-templates.md": "b7a79d140611d98bf97ac0012b42af95b603dc62b14d19fe569362d664cce0e3",
     "references/common-brief-failures.md": "4ffac06f788da3b8c5a9455876d10fc4889d4299e5b8a72d30d36eb57c7e2116",
@@ -191,7 +191,7 @@
     "references/writer-handoff-protocols.md": "8cf53b9a3f5c026bc20b2a861d40f83ce9088e43255f469fdb8e60ade1a0563a"
   },
   "content-distribution": {
-    "SKILL.md": "cfd14574e8c0c8ca8154cd6f9b008a01aaf8860538cda4ebc735895057cb7ee3",
+    "SKILL.md": "b23b4adccb173ab16f0e92d84748428d3a290d345bbcd93c80edc157383de37f",
     "references/audience-channel-matching.md": "5428654883780c23dfe6e757abf44c547a7f80ccf9fb41da9e3b49c311c21bbb",
     "references/channel-taxonomy.md": "d58450cb9a0213abc2c3962cb7d7f4dbe6287a4948abe66be1b184441eae784b",
     "references/common-distribution-failures.md": "73f46f456d0876ee70ec222c2271d4b22242151e91c9392d6a4edad889d187d6",
@@ -203,11 +203,11 @@
     "references/paid-promotion-patterns.md": "5a9f2cb99cfc77128248a6f321f39d9a31ced28e57bb4ce14ba3390e46aeea30"
   },
   "content-migration": {
-    "SKILL.md": "943dabf12d00fe46909ea4df0913eb0c2816dc40e98d5233b58db463b3a19510",
+    "SKILL.md": "9f7b1c93f5a5714e08b40931f9c16f9d7115a1674471c2211712b44429f9285f",
     "references/migration-runbook.md": "12432adbabff9b516191922a2cf728d45dc44208f1164370d14970a72b1abaa9"
   },
   "content-refresh-system": {
-    "SKILL.md": "e663127d720b3658a611591277e4b86359b34ccdc4d8c2123fb25b3427c3a48f",
+    "SKILL.md": "1365bb8714e2e00f11c6e7769f3f260d2f7d0b10ba0bb4ade40e98f702b082fb",
     "references/audit-cadence-patterns.md": "01d640512a0975fc8a8a90adbc69c47e38614a3c0a2bb9b6560f0c42803f601e",
     "references/common-refresh-failures.md": "3e6b5004fa3256e5944ec71e652816b9c0673662a859cab5ab9aa3fba26c0e5d",
     "references/effectiveness-measurement.md": "0ce1c0e2554c273e55556a4d2c5f96132b11a5f101da9892ffb40a12ce45e05d",
@@ -219,7 +219,7 @@
     "references/refresh-vs-merge-vs-delete.md": "20da2a78819e33b202bb5d969e57f850330c9064f2b8093da7d7b8526241e28c"
   },
   "content-repurposing": {
-    "SKILL.md": "e3845e95d8beda2d5592a6e1ed6cc4a51242e80fd275875f47b6c41e87f96ad1",
+    "SKILL.md": "627533fe62fac6ef1f76536542b3058ecaf95c568f54d726062018007e0de703",
     "references/aeo-extraction-patterns.md": "43d369809a612ddff65a0612ea077d9add7cba28964b5d11d35ac517cc70c197",
     "references/common-repurposing-failures.md": "865db4e58177ebd390d4501004836f102e484152486c4e2510a2cb549abe8291",
     "references/cross-promotion-patterns.md": "29c7c8eceeb3217069c6ba60d6a11503260e296bb3781eeaf8653a861d819c40",
@@ -231,12 +231,12 @@
     "references/voice-consistency-across-formats.md": "18868f761b20ceefbbbc019c7adc1886d1dc1dae783d036b4af1a4c4a1ec0317"
   },
   "content-strategy": {
-    "SKILL.md": "ec5d8e51677956fb73ab58a8bf7c0279c1ddbcef70bedae70c4b75527bcdc3ad",
+    "SKILL.md": "a4babe955d187232db9526e14a1f12f2b8e6f1c1b7f5a06e67bba5fbb14dc9ab",
     "references/content-strategy-template.md": "6707df3af82ddf656f3aeb945359ec9df0852e63c49590516d569581fe5a946a",
     "references/editorial-calendar-template.md": "feb36bd8373c725f6a13418457e872cca7f63fe7256189233644338453d3130e"
   },
   "cost-optimization": {
-    "SKILL.md": "cf3c13cfc8f896e8941caa5a45d70091937d51882ef2ec66875a7aef9c043ebf",
+    "SKILL.md": "5589fd8d9c40abb40ca62a9bfba2b67a9e7f5d64d37ca7ca444bc8e1cfb00fb0",
     "references/cloud-audit-checklist.md": "88e90cd841d9e14b9c8d04c2e4f4bcf6d7248b319ed5856873f2a45b8a2fd1ed"
   },
   "creative-brief": {
@@ -246,7 +246,7 @@
     "references/voice-and-tone-guide.md": "0070a3c693d0c955938e1b804a8fba11fcb26602b103f653cc422fa4d1adef8e"
   },
   "creative-brief-selector": {
-    "SKILL.md": "a450d913ee5da71061119f487b69021cfe90cb1274a648f246f0e846feb965ad",
+    "SKILL.md": "df4964fe8752031995f230a4259374d9292a6e46b9332e7a3f2efdd71b0a2df7",
     "references/00-overview.md": "7e88dc86fa3ef9a32ec80df6655ad87b00cc821ff39dc9f4d11486463e457eab",
     "references/01-process.md": "d1b2156b567c09f7a0a75b4f1dc2ffe0a6191c1c1f94ac6fbacdd37aad8469f6",
     "references/02-brief-template.md": "4fcff3d36094fc94dda6b6ccf2af31533d26fef9bc008a6ffc9f0f5d02739c51",
@@ -273,11 +273,11 @@
     "references/example-aesthetic-brief.md": "9b99900f15182d05c705808691a2941aeb3ad48ab18b533fa28e0d3481282f91"
   },
   "cro-optimization": {
-    "SKILL.md": "01c7b12c4627a5f4898c4cb0dda7cbd94c5b7c32f8771478eb87cf3d9f0980c1",
+    "SKILL.md": "477496915d2c6a184bfff9cd337608eb8fde82ec5e7f20c398178240efa68cb0",
     "references/hypothesis-library.md": "a3a83b4596344c15eaf3f05b0ef165dd023c8e85f15e01cbb0abb60e64a68c98"
   },
   "data-warehouse-experimentation": {
-    "SKILL.md": "42bfce53001c854601cca9b72bab4dffe5b0486d886dfb0f21aa8679b63fd6b0",
+    "SKILL.md": "e3aa63517c3495fb8039a498927b3045ddcc23bc9dc0af5ee96d489e6f525ff0",
     "references/assignment-and-exposure-patterns.md": "23295809ed9f51480511647a9294ccf82e47da70f62ada5f1466b1e6080a75c2",
     "references/common-pitfalls.md": "3bd66b6477c1340b085f68fb42d550809fd931d0af2efc1cb10d686ea0cfc0b4",
     "references/metric-definitions-in-dbt.md": "68d9143d0eccbde123d06517c1b2b8b62304657c1999f7c08c9b7d4bf05c3272",
@@ -298,7 +298,7 @@
     "references/tailwind-patterns.md": "bb402ade1ebef7cea5a703d84bafa331a88ea2ff64f0cf8079639689522213c0"
   },
   "design-system": {
-    "SKILL.md": "048170f41fdf1491b5dbdeaead1927b01622ef4a90cf8c273acdfa6a5fe944ea",
+    "SKILL.md": "d5bff103c6fc3f3f44392edfda8288719b9e653ba02158bcaa8dd86710cf4da0",
     "references/governance-playbook.md": "c9a4d533566bd6c1712884f240acf473a501dca4e7fcd35a29cd4578f93188b5",
     "references/system-architecture.md": "5fd27fd24b1794f5536b049fa0e1617b34cb49217ef1006b7f114788c3c26ac7",
     "references/system-audit-template.md": "6f55e20262360e19a2b7519d342fde4ba278877b9231f64748465d336591b6e5"
@@ -346,12 +346,12 @@
     "references/subject-line-patterns.md": "ccb7daafdea47a5dfc632cab458b319a5ded21fc499a74da2aa305ed1a7c01d5"
   },
   "evidence-based-reviews": {
-    "SKILL.md": "44bd22df772d09e8f8fc98cbb3355ff398c5d38c1cb066b709f67391211857ae",
+    "SKILL.md": "d827133c07978d77d1d669a7ba887d4278d65b407787d98e0e8bd32cb0229f9a",
     "references/evidence-tiers.md": "fee3b0f7ec78ad8cf9f0f15325679972db4180eafdd3419b257e92b98bfe4fda",
     "references/methodology-block-template.md": "74ec061cf5befb94a4db24479df918f1ed8c1dfa35721daaf3476a64e4082ef4"
   },
   "experiment-design": {
-    "SKILL.md": "660b68136321fbed6660c9f5a5ec9eda6470c57d427e7fd28e663074be63bdb9",
+    "SKILL.md": "357daa03e27b4d4b9f32b7a3c8311885d4792f2d33da089a608773ddce786623",
     "references/common-failures.md": "0c059512ada9af9831dbd6351c752fd77aa91e5e86b814268aa3a18d3d954a5c",
     "references/hypothesis-templates.md": "e34cf0e22eb6b5ef7cf1b6237d128bb4008a8f6dc29c4fbc408bfe9d555cc6b4",
     "references/platform-comparison.md": "0c287a49e0ed260fb98dee0d50f6bd77c59db5582c2cadd8da56292f64381e45",
@@ -381,7 +381,7 @@
     "references/platform-decision-matrix.md": "1c764fcab98fc2773f4894dab0256970d4a71fe792389c2b7449bde70193e46a"
   },
   "feature-flagging": {
-    "SKILL.md": "a28f31b35b4726e7cd89447d4cefe715f5e65bdf6e27024ae435574b644052b2",
+    "SKILL.md": "597cb210221fb090a77eb207ac4212caa57b96d58051b9fe31049aed6bb24f11",
     "references/flag-lifecycle-checklist.md": "d35012b27070a4241edc359de60b9de221c77d1858b9f963c26793f56ea6b7fa",
     "references/flag-naming-conventions.md": "194ee8e2f9dfc056e48611fbb7e59c841a0e71f854a6fa547300780ad636d664",
     "references/flag-rollout-strategies.md": "5282a340234254f2425fb778d5ae632d59967d98ffe6564f06a157013c038f81",
@@ -391,7 +391,7 @@
     "references/targeting-rule-patterns.md": "0f48ff7c05d602bdbf5bcb2d26dc62c8556b1c555c4b8fcc4abf4fbf869eb017"
   },
   "feature-launch-playbook": {
-    "SKILL.md": "c3d0d12ac22d2c84b11c468197af1a0ae1e0b7994be27db175aa0485b71d7bb2",
+    "SKILL.md": "4d227bae05eddf3f1f93f4eb71848aadbef0f9c4062c7ebd811a5a0758eb0ece",
     "references/common-launch-failures.md": "f23e57a272c71c1f54de80c23d2aef6df1c7826b1fe596e99d70a0b0b8a4ba32",
     "references/customer-comms-playbook.md": "38532b0c79bf233347b7aea3de0f6308d4c23b8076b6766bab12be492dd0a9df",
     "references/internal-alignment-checklist.md": "c956526d9a0b029c00600f5f6dd0ac6d1449cd46aceaaec14b9def8c808a3ec6",
@@ -404,7 +404,7 @@
     "references/support-readiness-checklist.md": "eba17b8edfcf3112e045b651b0f96977fa3534893d11872cd3b4474ea439bd56"
   },
   "form-strategy": {
-    "SKILL.md": "09286f693466cddc5dc8d6bc1d1428fb36ccf757f4ba3d1d3c3aec7dd2b1e56a",
+    "SKILL.md": "b9848e4c2121bcc5ce8e62dcf37ef0196facf74d23604b4e34528e9aff444bec",
     "references/form-anatomy-checklist.md": "4fb48222b1de8ee32939d8cdb398f240e406895bdae1e2611710a5f5a32a21c2"
   },
   "frontend-component-build": {
@@ -414,7 +414,7 @@
     "references/component-spec-template.md": "eac4ca7e0f61e9bbece7138c51813f518b4d8e33a1d4283535b123bf589279cb"
   },
   "funnel-flow-architecture": {
-    "SKILL.md": "1388e715dea912dc974e18b45828ebeb6c748d57b8aa419f577b3a868c1495df",
+    "SKILL.md": "6cfc3d3e293b063571665cce4e279ce370914de06473c200556cbf1eeb709ddd",
     "references/architecture-anti-patterns.md": "249fb92d75bacb53e0f3b9218b3a6bdc4cfd8be9fedbaf3a8f7a30431f9cd8e1",
     "references/audience-and-stage-segmentation.md": "a056a112bc6d50e5d257295106a9b5e6f9f710afd87bce8b6af4174290945108",
     "references/common-funnel-architecture-failures.md": "a2e75eb73e0ac703e4eb4eb77b17ed1a2d57c0448ed4a85e5fbcf26b1fa2bcc0",
@@ -426,11 +426,11 @@
     "references/tool-to-funnel-mapping.md": "6654d5665940a9b3e7369d3c13962d5c96d592e9771a468c0be78082949e93c3"
   },
   "incident-response": {
-    "SKILL.md": "d50d603c1198d7ed7de6c61764245dea24ade7aa96e16468a9f5f89d7150ab9b",
+    "SKILL.md": "0a35b35d88f8c3c49a527528f82870b31ce4a593e6e5c2fcfe530441fb7b3e46",
     "references/incident-playbook.md": "52615b122a79dfdf3f57258048f726f1ebe4588b58b2aaad56b169b8ad339c1c"
   },
   "information-architecture": {
-    "SKILL.md": "5ecfbb75636ac00ba3941a2446332fe0bcec868e0c9006ad6ee9bc7230fd7059",
+    "SKILL.md": "b61e91c357c58eed1a12aad57beb1660d59d5cb598d2fd54beab7beb208bc969",
     "references/ia-document-template.md": "74c09120e7d6c2cdcd4f7bc1253a6234310f450e7e8acaaa5086faf672f88127",
     "references/url-pattern-library.md": "235a35a3703a3f94a691343cde949bee543550650952ea1a911eb0fa07c61353"
   },
@@ -461,11 +461,11 @@
     "references/locale-checklist.md": "c4d2d760448ed12f8a77631c31f9619006e2cac53a1cef024dc842d30146e4ae"
   },
   "journey-mapping": {
-    "SKILL.md": "67e601e554b8e4e1608a751a7c154c4b3d28ba5b01a5cd29d1db6d342006974e",
+    "SKILL.md": "5d25b07dd3c6a8a09b8f7e5fff46ca595db3e678cabffd77c8250ee3f93eae54",
     "references/journey-map-template.md": "6062a7d524126cd89b1d1075b12a1893dbd16b5811670911861290aaafca196d"
   },
   "jtbd-framing": {
-    "SKILL.md": "400bf8ca34f5e11979dbf336ef936e4b90ac72c9e006740a2a7cc06d8e3ba297",
+    "SKILL.md": "31dce3d89f9b078b44a4605ce625c74ca3270693724ee71fe27485a6a73452af",
     "references/applying-jtbd-to-discovery.md": "24a4f4bc22673cabe559109cec85f2b7555195b4ae2f8526bce6d6e85b55fc23",
     "references/applying-jtbd-to-positioning.md": "41f82c8fa88a8a7ef0087504f541c8bb41af990c2d28cd218dd3dcdd991eb699",
     "references/applying-jtbd-to-prioritization.md": "22855cd3a942d6470a734e62c5bff1514504be34f8b68ddd646d8e6654b4e71f",
@@ -476,7 +476,7 @@
     "references/job-statement-structure-patterns.md": "80cac04e5df9c3b27ce922d6e606e00914d899fa2df88053369c3f333fff0033"
   },
   "landing-page-copy": {
-    "SKILL.md": "8233592fe17c89c3561bf775c26ea36fbdfc3ce2217977140614d63cb7a00030",
+    "SKILL.md": "6c9d954e7194e2c6dfd63783adea1a6aa2d59f0eba8689acba7f7296aeb07fd2",
     "references/hero-formulas.md": "654fedde24827379c2ef62f9f9c5ef283cf23d0a1e58b991a51714b65d9a47cb",
     "references/objection-library.md": "bc0ee97281d1d5710dfb453f1018434d0d86c090fc1f5991506f93e4789ea585"
   },
@@ -485,7 +485,7 @@
     "references/runbook-template.md": "3413ba76c18bf4d1852e0145b6b53e31352a3522b65b4cc306b3ebbdb02f4ad8"
   },
   "lead-magnet-design": {
-    "SKILL.md": "aad4e66576f4f61061f802cf15e1fba9e5b7d5c35bf456ec064571aa95fbcd8d",
+    "SKILL.md": "ec476e38c220188c7de7f67d875b6fa47fa4289cb9589e9e7b483d9d3ab5883e",
     "references/audience-fit-qualification.md": "ec967a6a705c86a016ab97101cd79e0f84c32d1ca015ee6ed4640b5d6d4a1699",
     "references/common-lead-magnet-failures.md": "ca053b6e50f08a31bd2af37397431ec4b2bd53df2beef595b6d7d597ea9cf527",
     "references/delivery-and-follow-up-sequences.md": "19834c41389a46b3ef52f3d6999e3337884157a16b935f89b9324012c7a80002",
@@ -507,7 +507,7 @@
     "references/typographic-registers.md": "5b377e8e698fea94ab8cae1aa93106f72a3cf431587c48e4a78032a455a4a23e"
   },
   "long-form-content-frameworks": {
-    "SKILL.md": "78a9699621fe4249617d1d994308631856602826d83597dd9d737265aea3a67e",
+    "SKILL.md": "fdec03f0f4c4860d2643ccbf42f93339eb04485e30b6b72bf1aa56eadd7da056",
     "references/attention-sustaining-techniques.md": "6b059285cec33ab70755a0a2322ab1e33d87aa108ee2452d6f999cfe884ada39",
     "references/breakouts-and-visualization.md": "532a234b3d8b04b4084f0c9340c3ea4ceffa30653cc3e8c8103ea236b08cd702",
     "references/citation-and-source-authority.md": "ed8515980e30e768c3c62617e1421c51162b0fe583cbd0395a6851b61d7df86f",
@@ -519,15 +519,15 @@
     "references/structural-archetype-patterns.md": "02d8e18dff2e4ebfee8e55d04375f836e10b265522dfd67121c93d4de22a0b24"
   },
   "media-asset-management": {
-    "SKILL.md": "869278da1465f2b1ae622ef71c7d8396ec41de50775dfc65a3a80d7ff7d74fe4",
+    "SKILL.md": "85055e955d5bf89354d95ec84c0a1a66f24bd1a95d03a34380882a4bfb35ed63",
     "references/responsive-image-patterns.md": "eb7db1ac10ffd4ba5fd054af7f0e5254c642e65387c53783868dcdb2f8ef3db8"
   },
   "monitoring-and-alerting": {
-    "SKILL.md": "17c87cf6c7a5aa3fce47e365b3f1c16daa1f48cf66fedfb6e4bf3764f2a3d278",
+    "SKILL.md": "7f9226b4e701582962501644364d7516987882c9d06745bb0e2cb417da0d3bcc",
     "references/slo-design-guide.md": "b1dca1a7bec8b45b490899c918dc6a40f5c2206e29b3e9aecceb466379d2e5ad"
   },
   "multi-step-form-design": {
-    "SKILL.md": "b72db037ba83253b07fc9f80da42514b4267d0aaed8f99908285b51a6481e517",
+    "SKILL.md": "226b880ba7891799f62dfc84b24c5c4b00e30379d9ef2718d596b55539ae4972",
     "references/common-multi-step-form-failures.md": "c277a033d0ef841441f2f5e25d8ffc6f3f2e64e551a50561e14ca2483ac1a3e5",
     "references/conditional-logic-patterns.md": "93989ed33af310ad55b699e5220e9749a8503a9a93cd0729595b4f89b7335314",
     "references/drop-off-measurement-and-remediation.md": "65e524171cdf346401255d71a06ba39fa9181de25a98e111de15aaabb88c781f",
@@ -539,7 +539,7 @@
     "references/validation-strategy-patterns.md": "2cad091e2954d9dd7025be5b0d9a9412dfd37ba020c44c2c0354764544269eec"
   },
   "okr-design": {
-    "SKILL.md": "b58bfa9db5b15d67d5e0a663d62f2d2804acdb32c700130181d37996e7ef7298",
+    "SKILL.md": "cdd08906e015dc3c95f7df84114b46853760f1fe3bc8e4dcad4fd603349155fa",
     "references/cascading-okrs-decisions.md": "8b97e746534784ffe1b151bb87c2cf13ca1b92bb1e473c3fb06847cd22d9c510",
     "references/common-okr-failures.md": "c52cad5ce5ad3d2a615cd491e2b261e3f77bd1741104a0328c5a85552c844ca8",
     "references/key-result-design-patterns.md": "2effbc61c0d5890759faf550515e4bb5ca7b235e05e07d3f2be64346eb18fdcc",
@@ -563,7 +563,7 @@
     "references/wizard-decision-criteria.md": "4e976611c41b6b2c3281bd053f458bee5f5e69daaf706df04f808bc4daa8895a"
   },
   "paid-media-strategy": {
-    "SKILL.md": "0d53dd7241b0c04f92acd90806f1d00f66c7cb7dddf51cecac8847bdbed09602",
+    "SKILL.md": "2bb4597636c5043aabb08d079661efafd4f9efad8eb0544e80ecee9ce3ae275c",
     "references/ads-platform-comparison.md": "c34b60d89cf64ae8962158351bbb4958de24fd36eddfc79ab9395bd99b879002",
     "references/audience-segmentation-patterns.md": "ede2b4d02b6c2316a310cf5cbbb52f56aaab1d55b76bfb28cf7a9cea14b675a3",
     "references/bid-strategy-reference.md": "4bc71a446a858144151f2b6d58ae1a14aea310773d94aec926b250e627f0adda",
@@ -573,13 +573,13 @@
     "references/common-failures.md": "55c73def01e20f38568f193f0c0345b2a9f9e784875044eaa4b7e657fea2e871"
   },
   "performance-optimization": {
-    "SKILL.md": "197dff3e07f0a2ec39f8e043232c4a8a8957c16491a7126997ac43b1537c8ad0",
+    "SKILL.md": "896161a06b87cd83566bb4302c2154b3ed57ef4b3bba027f86cfed17c807f325",
     "references/audit-template.md": "d260fcce01ba0b8ba6bd858498cb774744a17ec4411cffb2f69b68e6ea2e9d0f",
     "references/optimization-checklist.md": "ed962ef8d94a9d86d8ae42020c573890fe9572504da5504915204afb0785a267",
     "references/optimization-playbook.md": "83ec500dea69fde32516886089ad1f90a267a1944c0e0f1985d51976bf6082ec"
   },
   "pillar-content-architecture": {
-    "SKILL.md": "f64af5943682f8da197fb2b8d920c1ef91133aef2685289c99e91ff0f10b4855",
+    "SKILL.md": "26db57a622792296061c67a93c4004bc3e7781687de5da3ec1d8b660d3bbeb18",
     "references/cluster-piece-anatomy.md": "aed7fa2644890fc1946eccf95fee0c2a0bdf71f775801b70982b99f291569219",
     "references/cluster-planning-patterns.md": "68750375b26afebe62e49f8e86a4001d8da899ace946b8afbc4f37d67cdaa1d0",
     "references/common-pillar-failures.md": "751c4ee9e88f6d84378c03921c3c9fabf5989de09aa6e4e9cb83c0180ca1c4f3",
@@ -592,13 +592,13 @@
     "references/url-structure-patterns.md": "2949bbd359b36fba00e71bb6ae63eafa5c4da036ca6b54275db7b0891218a68d"
   },
   "pm-spec-writing": {
-    "SKILL.md": "a0863ad6146f264d311d75e2678e400930b40bf377b34403dafdf3b18246f957",
+    "SKILL.md": "17c08255d5ba55c2b531b4cfa156e68a52dfc7b8af1a014beb84e4416a13ff68",
     "references/dev-brief-template.md": "4c253a2a71243d65407de0098323fbc542ba72f03c572ed41df8c5189d2e9f31",
     "references/feature-spec-template.md": "f9b19f192d9e65b6882e97aaf23f4b1862a46a39d2e9f8b86eb6562aec55fe13",
     "references/prioritization-frameworks.md": "b8b7696ecc60f95d56ce2c91cf67d32b4aed6e9432db90eba319935431cd7e8a"
   },
   "product-analytics-setup": {
-    "SKILL.md": "bd1672b1a1f345f8ef0c020ea80bacc465773250810fbc7e780d85c56f1a035e",
+    "SKILL.md": "8033d947e17b909eb37cf89366ad0a355fa7a05423060ceabd2847f73f471e66",
     "references/cohort-definition-patterns.md": "efac882d9b59a04e2f7be066d502a4e633797ce4b8a9e374597d794f9673498a",
     "references/common-failures.md": "99d3c4cb4abca31b7a922b8fce902808d310bfd3ae495dd7a424cf9b3d42ef09",
     "references/event-taxonomy-template.md": "41c337b25785fd484cdd5a26207229171b2a6341fe12612a5b516e23be754212",
@@ -622,7 +622,7 @@
     "references/validation-and-error-patterns.md": "5bc422c04ce9a2458c786787d5c190cae83111c471cae14aec83ae86b5726b94"
   },
   "programmatic-seo": {
-    "SKILL.md": "7e2ff674899054540a189c9c7e2abea60f6391900ce3a9c2de0f97b5e3735bce",
+    "SKILL.md": "ad2c72e0c92938c1ee7ce41e7cff95d4f2af10e8697e3a4020335c280265105a",
     "references/aeo-geo-for-programmatic-pages.md": "f04d05294b10277eb867c46f6eabd2266edce2712f2bac9602af10be829f87f6",
     "references/common-pseo-failures.md": "b0a2e494867adabfc5fb189ee75d232a366e4888a84cc407819570364e4bcfb2",
     "references/crawl-budget-management.md": "5f6b2aa8c412dd3676ce33ba222818aed199a77f81b191f4477b8cd3578329ef",
@@ -635,7 +635,7 @@
     "references/when-pseo-works-decision.md": "3033a8f6687e9533fb0ff996267b80ef48a1e964b23694c8706b1ec1213bedc4"
   },
   "qa-testing": {
-    "SKILL.md": "e162c4b987764edfd9d2a8c729eaa975214bfef7cea51f62f05613e4c9410915",
+    "SKILL.md": "5984941bca7a14fc4cbd4040c903b01f609e68b6a9d8ccf38713877e92caed96",
     "references/qa-report-template.md": "31d1c63aa41ae736dcb10d9da93f96abdcb261606d265ace37452cc1a3bf8091"
   },
   "quiz-and-assessment-design": {
@@ -667,47 +667,47 @@
     "references/scheduler-decision-criteria.md": "02a4237ac2d3101ab0d84c273f9b5f22d501d530fd76d250775e311d2f403196"
   },
   "security-baseline": {
-    "SKILL.md": "70fe166514864d409e8cd2fae46388ab61204bd4a1c9ed00b4cf026ead14ccf5",
+    "SKILL.md": "9fb2c8030710696d5c890c840ce2a5b7bda39fb375679b878f0c47c1f009cc04",
     "references/headers-checklist.md": "cd659520f4b307f8c74031b3cff887a3adc2d847819e60a2d303496859a53c4e"
   },
   "seo-aeo-geo": {
-    "SKILL.md": "573caeaa6d9e988fb7539bb79c397756ca7fb4645ab4f79a69d3a14017988529",
+    "SKILL.md": "813fb96dafaba986eaf1d564b6c0194e58f7161181f802406165d0f7d68c8d56",
     "references/extraction-friendly-patterns.md": "85b0653394d246a848e1bec3c6595d4d19f6156e209de66871aea07e0883490f",
     "references/llms-txt-guide.md": "008c48e172172ae440564956e7486014b91fdd93831bdcdc52e2dfbae3a00063"
   },
   "seo-audit-orchestration": {
-    "SKILL.md": "d79f6c3f6d92f526c2ef76661f65c0ad6e6fe10050713f39e422df231e199c51",
+    "SKILL.md": "4a0f37ae69266f1112ba6cf792539dc873579488527f3ea4cf99cc4575ef2c1d",
     "references/audit-rollup-template.md": "585ea8aa7a1124a9598c8715f54b8e3f5913ab81d9105fd2848ead4673fcd504"
   },
   "seo-backlink-audit": {
-    "SKILL.md": "37551a8024bdc7491038fc73c19953b363659f7b2e76a0b65a8c327e6f8a8808",
+    "SKILL.md": "0d4d3dbdd4e66999979d209c86dc18848250e9d91c09a186a85819ed282d509f",
     "references/toxic-link-criteria.md": "aa73226858f36bbf1ca830045045565ea28ed4fe5e5b27c13d6a29cf60ab97d0"
   },
   "seo-competitor": {
-    "SKILL.md": "4296f3a7d88431b3912c41486bec657f73d8e4a9a786f820e409ab148e3eec23",
+    "SKILL.md": "b43a744d3e0bf204e58dccb48552ee6b8c5988ccaeff22744b9dc12f9b3aeb0e",
     "references/competitive-audit-template.md": "0fe2971545f422c63edcb9aab9c6dbd87c80397617b65cb6da7eb63e9ffb133b",
     "references/content-gap-method.md": "c330977140a343b11f7fab31972c4cc1b77d35f8c9dc5dd0807f964da9773994"
   },
   "seo-content-audit": {
-    "SKILL.md": "f0588f9f0437140d6527a881e9ad7f8c24aaec519da4b9022b2bcf889e1f3ffe",
+    "SKILL.md": "002813f1cb87ee0477b59c8b4cdbae7f276643507e98c60760ced43f5c1b3129",
     "references/audit-template.md": "fd85c836d4bf3baf72565cce07018a510e0f905b68690a199bc2acfa52465028",
     "references/cannibalization-resolution.md": "1644a14351a85bf12fedb57b495ea95eb4b0f3f9a503777913023ce721740637"
   },
   "seo-content-gap-audit": {
-    "SKILL.md": "3baa95158c522c8ee66f1716baaa281dd3910b9cd0a4c1be63c52c6c1a4cd324",
+    "SKILL.md": "e86db4cb846c2896f479f66578e4028875df357c6d071098e1f00181af1975b1",
     "references/content-decision-matrix.md": "c5d333754ba3e269d8a274e05195537b465b27bc0d989bb89c185bcffc8c7b7d"
   },
   "seo-keyword": {
-    "SKILL.md": "376462a53fb1bbbbb08fe89f745c7d8c647863c9bb64e8b4d7751738e141169e",
+    "SKILL.md": "48b2ba227409a42749454c9ee5e579581435a3e51b6305ba1de0fea729700ad0",
     "references/intent-classification-guide.md": "8570e2862107ee41e856f47d8410a07182329751f21861b0c32bb0ea692e6c01",
     "references/keyword-research-template.md": "68d252b32e2c977a8ecf5bf2b5c9583316e6aaff3cdb257a7cd362ba3d1c57c5"
   },
   "seo-keyword-gap-audit": {
-    "SKILL.md": "094cc3f266928d838a71834e1884354179d77287cf894bc39b99880ef0013cd2",
+    "SKILL.md": "f8437377d2a13f3e5f9edad6fff92a770b1005c86491bf5f0777c2fda19eec74",
     "references/opportunity-scoring-rubric.md": "0fdc3312bad1f6b1b0dc25d594700c09dbb3ab5da65b46a50999b6b9bea330a3"
   },
   "seo-offpage": {
-    "SKILL.md": "6881ca0545414dc7ee2551ebc298e90552ce0da3cc44304b59b74e9aba2845ee",
+    "SKILL.md": "7e3b726605a27f5de18d60c57d70e4365f74b5c2968c1a1088079f5b3b35298b",
     "references/linkable-assets-guide.md": "03c09bb5272ba30455df405f6b97f0fbc0e92023753bd85e1009297c8f24f6ee",
     "references/outreach-templates.md": "ac5b76f5825a16f9476f09c6c946a6e7ffcda8496090b68d3fa9a7a2b9bfc5a0"
   },
@@ -718,20 +718,20 @@
     "references/title-and-meta-patterns.md": "174d10417509e11d5c3654d0e4e018343f79e5bec317fa55d8003f7988c67ae6"
   },
   "seo-rank-tracking": {
-    "SKILL.md": "1276d75881093f18e20474862d08036daaad182a4cbaec98d30483adc06abdf5",
+    "SKILL.md": "2f5d880897c3e2656d8fee6fd546f0b0af67af7bdedcfb8f35777ae48bec8b0d",
     "references/dashboard-template.md": "c3a67a6373add2721902216eb4652c3a1077f9e5fd45daee4b9dc76bbb740296"
   },
   "seo-site-health-audit": {
-    "SKILL.md": "74e00e5931262631b948ed29fce08bf528427a27b80ffbff1ba11eb02a15147e",
+    "SKILL.md": "c6dbbbc974665cb6d08c1bab79577acd79100033259476160ff47e53adbdecb0",
     "references/issue-impact-table.md": "3380c9ebfe0861c477c438088f9c160eb55b6c756eb948c64ac7f783323336e7"
   },
   "seo-technical": {
-    "SKILL.md": "8b874b2a102ac52c059f8860aae1119d36c14ecd8a63b5e7bcda7c04830d79f4",
+    "SKILL.md": "fee193ee3f4be95e36966e7968110b2f9ca1ab2d5f5313f12a38d8462c85480c",
     "references/audit-template.md": "1be66990a30a44f6cfac1f6cd89494d513954375571aba48782d110cabc587a6",
     "references/migration-checklist.md": "7f9a4dbdd9653d4a2d8a9c8795376562ac26545568db6f493a21c3f5bc485bb9"
   },
   "seo-traffic-diagnosis": {
-    "SKILL.md": "bcdab48b89461e90d9c4ae987097160bdad0a678e57b7833554e4ac89c06b88e",
+    "SKILL.md": "5fbdd8fb9bdd2d10b70119cdd22d17fcece4f5eb0306ec862248cd5bb360232a",
     "references/diagnosis-checklist.md": "f1d2a4bff1a9b764e6523b3f17fc78a4e6f9515ff939ff05346326106e933848"
   },
   "skill-creation-walkthrough": {
@@ -761,7 +761,7 @@
     "references/win-back-flow-patterns.md": "91489d5e1b49254334eb75e09e2fcf7d93fe4d20dcf80d5c203d1dd83862045e"
   },
   "usability-testing": {
-    "SKILL.md": "20a5eeeab1e6330f3c0934858b7e5624181255a6278b6d86e096b7f45c3e2efa",
+    "SKILL.md": "98350aa232686167b8ada86f5d40432fb149613f45dde5477536bcd00ded38bd",
     "references/task-script-patterns.md": "ef6f52b28935f89c671077692dc71c739e6bbff86f572fbd9e49746a3ed60ffc"
   },
   "user-feedback-aggregation": {
@@ -777,11 +777,11 @@
     "references/tooling-considerations.md": "ae97ffe4bbbcbb3036bb8c2c3ced470f97a311f996c209f089f5853591adea7f"
   },
   "ux-research": {
-    "SKILL.md": "0febd308046598e5f3004b7dac784a96b695e8e2a7c9be257a350424439f3ef1",
+    "SKILL.md": "cfe62ac93bcc7b94ce22bf0c522b0cf7000d73880d5ccfb3ae69bbe43b919df5",
     "references/interview-guide-template.md": "1e5200c96ad7b02b75b7d38f2f343f24fd62cf8fa71c56462f9373b81820a207"
   },
   "vendor-evaluation": {
-    "SKILL.md": "99a61bca3d0d2185ac225426e506e00b7cb882a9891c59d6ba6273e16b16ac4d",
+    "SKILL.md": "44b1e50b7f52b1549d63b87a56efda49484aa94b2e86c6798b9a65c69cb6d586",
     "references/evaluation-rubric.md": "955546c1813905f7362ac8579aa0e33ec844dd91c18c6279a6f3e0e09ee2e553"
   },
   "vertical-site-conventions": {

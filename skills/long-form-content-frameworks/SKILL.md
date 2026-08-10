@@ -288,6 +288,12 @@ The output of the framework is a long-form piece that earns its length: every se
 
 ---
 
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
+
+---
+
 ## Reference files
 
 - [`references/format-decision-framework.md`](references/format-decision-framework.md) - When each long-form format fits. Reader contracts, length norms, structural archetype tendencies, format-specific taxes.

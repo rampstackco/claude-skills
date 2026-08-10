@@ -131,6 +131,12 @@ Structure:
 
 ---
 
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
+
+---
+
 ## Reference files
 
 - [`references/competitive-audit-template.md`](references/competitive-audit-template.md) - Fillable competitive audit template.

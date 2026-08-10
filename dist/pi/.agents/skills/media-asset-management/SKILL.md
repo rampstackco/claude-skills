@@ -288,7 +288,7 @@ A pipeline document covers:
 
 A media pipeline document includes:
 
-- **Inventory:** current asset count, formats, storage
+- **Inventory:** current asset count, formats, storage, or state the gap per the data-availability rule
 - **Pipeline diagram:** source → process → deliver → manage with tools at each stage
 - **Format and size standards:** what gets generated, when
 - **Naming and metadata conventions:** with examples
@@ -297,6 +297,12 @@ A media pipeline document includes:
 - **Asset library:** tool, taxonomy, search, rights tracking
 - **Monitoring:** performance, costs, broken assets
 - **Roadmap:** improvements over the next 1-2 quarters
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

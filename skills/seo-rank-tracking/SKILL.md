@@ -235,13 +235,19 @@ A rank tracking setup document with:
 
 1. **Tracking charter.** Property, scope, stakeholders, cadence.
 2. **Tracked keyword set.** All keywords with bucket and tag assignments.
-3. **Baseline snapshot.** Position, SERP composition, CTR per keyword.
+3. **Baseline snapshot.** Position, SERP composition, CTR per keyword, or state the gap per the data-availability rule.
 4. **Alert configuration.** Thresholds by bucket, routing.
 5. **Dashboard layout.** What charts, what filters, what is visible.
 6. **Review cadence.** Weekly, monthly, quarterly responsibilities.
 7. **Methodology notes.** Country and device settings, refresh frequency, data caveats.
 
 Plus a recurring rank report at the chosen cadence (typically weekly or monthly).
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

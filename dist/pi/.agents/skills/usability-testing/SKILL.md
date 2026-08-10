@@ -168,7 +168,7 @@ Patterns across participants are signal. Single-participant complaints are weake
 [Moderated/unmoderated, sample size, audience, dates, tasks]
 
 ## Critical findings
-[Each with description, frequency, supporting evidence (quotes/clips), recommendation]
+[Each with description, frequency, supporting evidence (quotes/clips), recommendation. Where evidence was not obtained, state the gap per the data-availability rule]
 
 ## Major findings
 [Same structure]
@@ -230,6 +230,12 @@ Default outputs:
 2. **Task script** (per session) - `usability-tasks-[topic].md`
 3. **Findings report** (after synthesis) - `usability-findings-[topic].md`
 4. **Highlight clips** (separately produced)
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

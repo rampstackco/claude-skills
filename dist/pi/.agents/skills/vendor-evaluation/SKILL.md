@@ -264,7 +264,7 @@ A vendor evaluation document includes:
 - **Need brief:** problem, success criteria, constraints
 - **Build vs buy decision:** with rationale
 - **Shortlist:** 2-4 finalists with brief description
-- **Scorecard:** filled out per finalist
+- **Scorecard:** filled out per finalist, or state the gap per the data-availability rule
 - **Demo and trial notes:** what was learned
 - **Security and compliance summary:** findings per finalist
 - **Reference call notes:** what customers said
@@ -272,6 +272,12 @@ A vendor evaluation document includes:
 - **Negotiated terms:** what was agreed
 - **Rollout plan:** onboarding, training, migration
 - **Renewal calendar:** with notice deadline
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

@@ -160,7 +160,7 @@ When you spot one of these, prioritize even if individual issues look small. The
 
 A site health triage document with:
 
-1. **Summary.** Total issues, top 3 fix clusters, expected impact.
+1. **Summary.** Total issues, top 3 fix clusters, expected impact, or state the gap per the data-availability rule.
 2. **URL tiering.** How URLs were classified and counts per tier.
 3. **Issue categorization.** Counts by mechanism category, by tier, by priority band.
 4. **Prioritized backlog.** P0-P3 ordered. Each item has: issue, affected URLs, fix description, effort, expected impact, owner.
@@ -169,6 +169,12 @@ A site health triage document with:
 7. **Methodology.** Crawler used, date, scope, caveats.
 
 Length: 5-12 pages plus a backlog spreadsheet.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 
