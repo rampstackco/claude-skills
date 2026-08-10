@@ -168,7 +168,7 @@ Four methods.
 
 **Geo holdout.** Hold one region out from the campaign. Measure the difference in conversions between the holdout region and the matched test region. The cleanest causal test for paid media at scale.
 
-**Ghost bidding (Google).** Google's own incrementality tool. Bids on a holdout share of impressions but does not actually serve the ad. Reports incremental conversions. Honest signal; some teams find the math opaque.
+**Conversion Lift and Experiments (Google).** "Ghost bidding" is a term from the incrementality-testing literature, not a Google Ads feature you can switch on. Google's real surfaces are Conversion Lift studies, which a Google rep enables, and geo or holdback Experiments you configure yourself.
 
 **Conversion lift studies (Meta).** Splits audiences into test and control. Test sees the ad; control does not. Reports incremental lift. The cleanest within-Meta test.
 
@@ -257,7 +257,7 @@ The output of the framework is one of three answers. Scale (the campaign is incr
 - [`references/metric-definitions-glossary.md`](references/metric-definitions-glossary.md) - CTR, CPC, CPM, CPA, ROAS, LTV, AOV, frequency, reach, impressions, conversion window, view-through, modeled conversion, blended CAC, MER.
 - [`references/attribution-model-comparison.md`](references/attribution-model-comparison.md) - Last-click, first-click, linear, time-decay, U-shaped, DDA, MMM. Decision matrix by business stage.
 - [`references/platform-reporting-quirks.md`](references/platform-reporting-quirks.md) - Google PMax black box, Meta iOS impact and Conversions API, LinkedIn 30-day click defaults, TikTok video-completion attribution, programmatic viewability gates.
-- [`references/incrementality-testing-playbook.md`](references/incrementality-testing-playbook.md) - Geo holdout, ghost bidding, conversion lift, PSA tests, switchback designs. Setup, duration, analysis pattern, expected incremental rates.
+- [`references/incrementality-testing-playbook.md`](references/incrementality-testing-playbook.md) - Geo holdout, Conversion Lift and Experiments, PSA tests, switchback designs. Setup, duration, analysis pattern, expected incremental rates.
 - [`references/dashboard-reconciliation-patterns.md`](references/dashboard-reconciliation-patterns.md) - Warehouse as canonical, platform as in-flight signal, blended CAC formula, board-deck patterns, reconciliation cadence.
 - [`references/cohort-analysis-templates.md`](references/cohort-analysis-templates.md) - By acquisition month, channel, and campaign. Retention curves, when to act on cohort signals.
 - [`references/common-interpretation-failures.md`](references/common-interpretation-failures.md) - Twelve failure patterns with symptom, root cause, fix, prevention.

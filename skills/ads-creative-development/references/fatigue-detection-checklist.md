@@ -48,13 +48,13 @@ The principle. Creative fatigue is a real economic cost. The tired ad still spen
 
 **Action.** Pull the creative within 24 hours. Negative comments compound; the audience that complains often is the audience that complains to friends.
 
-### 5. Hide ratio (negative feedback) increasing
+### 5. Quality ranking dropping (negative feedback)
 
-**Threshold.** Meta exposes "negative feedback rate"; trigger refresh when it exceeds 1.5% of impressions or rises 50% week over week.
+**Threshold.** Meta does not expose a negative-feedback-rate column. Hide and report signals surface through Quality ranking (above average, average, below average). Trigger refresh when Quality ranking falls to below average.
 
 **Why it matters.** Hide is a stronger signal than scroll-past. The audience is actively rejecting the ad. Platform algorithms penalize creatives with high hide ratios by reducing reach.
 
-**Where to check.** Meta Ads Manager: customize columns to expose negative feedback. Other platforms: less direct equivalents (TikTok "not interested" rate is similar).
+**Where to check.** Meta Ads Manager: the Quality ranking column at the ad level. Other platforms: less direct equivalents (TikTok "not interested" rate is similar).
 
 **Action.** Pull the creative immediately. The cost is real: the platform will deliver less of all your ads to that audience as it learns to weight negative signals.
 

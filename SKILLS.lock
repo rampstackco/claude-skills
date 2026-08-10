@@ -6,24 +6,24 @@
     "references/wcag-quick-reference.md": "4d70c669894200c64c9940dbec2ddf959173d7ad8d9dcb594206ea0c18d3cd8e"
   },
   "ads-creative-development": {
-    "SKILL.md": "2663c08171e2abe3abc758947afe679eee7c2a5b8f8095fc5ce0dee1a153543b",
+    "SKILL.md": "8952371efed4baa08f55456beaaf287c50eb6abf9a0afc618c274e95f0ed9201",
     "references/brand-voice-performance-balance.md": "1bbfe4c196fd80ebc4635ccf7a79e3a901eee0ea6648ab4825fc00e34e9ca7eb",
     "references/creative-variation-templates.md": "6639d23b01a813d84656ec2f163fad8ce38ed6b68e3be91375c17674234212a7",
-    "references/fatigue-detection-checklist.md": "8cc07d83c0245c0380cadb08fca5ff59799de43cd23c45552e0d6e1ae2c1aeab",
+    "references/fatigue-detection-checklist.md": "025bc752682b7d311ccc5831bf7f9e2cbd894b4568a25da414b6376403718667",
     "references/format-decision-matrix.md": "6a323059143aba50c1561bde659547a31c81a3a7b11a93b44c437dcc891af37a",
     "references/hook-pattern-library.md": "900cd2a43ab2440f434bf039886f8fbd0ec1801f18d14a268ff7fb71c3874e3d",
-    "references/platform-creative-norms.md": "7fa8579b1ac1f029ae124c0204acfe143213c29b9dd4386962bf98fcd7bf3562",
+    "references/platform-creative-norms.md": "cce603586e070dda8810bc410834aad164d18a75b292165e708f034c95b855ad",
     "references/testing-cadence-playbook.md": "7266af1fe12d7f0b374589cb93682c83458634fc0229809c64873b46896a9bb5"
   },
   "ads-performance-analytics": {
-    "SKILL.md": "686dc2e7b2651170b8f77014a02e751d9060651852402f398650afcfe5ea8188",
-    "references/attribution-model-comparison.md": "fff3d7c5afc4c55ca9c75888a949b827de0338b2de9bb646a7733570cee96a63",
+    "SKILL.md": "b9627b0602040c8ddd6e5ad3ffc362f277397cb9bcc9c3222227ade3bafbaaed",
+    "references/attribution-model-comparison.md": "677ff179987ce840a1bd8cefe1e6e77aa40daed145791728f0347976946cc35f",
     "references/cohort-analysis-templates.md": "c15602571f8ce6d28b92d6c50918b2c6c07314b16f83c0d910e694fa332d460f",
     "references/common-interpretation-failures.md": "754a4c0ed869899d876fca5d38c5b6e0d2563f43fff4675dd567fcc38dbe2149",
     "references/dashboard-reconciliation-patterns.md": "8d9acce69c46b159866d823a2b38841eebc538bbadf4fdc4263b3afdbf011e80",
-    "references/incrementality-testing-playbook.md": "5bc88f03f7173636edcf249f67efd660466de4439961a340485ec7498a92e010",
-    "references/metric-definitions-glossary.md": "33baa687b9af6fbcf3edcacc411d714e7869df6bf7bb0ae03719c89895fbbdd2",
-    "references/platform-reporting-quirks.md": "5df612e2f8a93adda50ed7830e5becee254e5f9ec7e87154e179b3d949c9a9e9"
+    "references/incrementality-testing-playbook.md": "fefae9132f9e001d835978a99a322a3f633030119706c85b4fccb7b2c1131417",
+    "references/metric-definitions-glossary.md": "4daaf5524e5322bcded9b521ace499bd0e202f791723919c478b48a72af84c88",
+    "references/platform-reporting-quirks.md": "d5352c0a6c24a42a23da227eddd3509d9531c0d081b1caf971b4b129ecc472d8"
   },
   "after-action-report": {
     "SKILL.md": "89bcf92ced995da4701b560163775bae0168a6b55e49937c224b223edf09ba6e",
@@ -563,12 +563,12 @@
     "references/wizard-decision-criteria.md": "4e976611c41b6b2c3281bd053f458bee5f5e69daaf706df04f808bc4daa8895a"
   },
   "paid-media-strategy": {
-    "SKILL.md": "afb2aae08a0d45a30c09c44de958ea56cd13eafea7589bdce1306dc23ead2f20",
-    "references/ads-platform-comparison.md": "133636975a25f212a9e913975b3ba3696b34a8c42b894eb8b8ace1424e7a1af3",
+    "SKILL.md": "0d53dd7241b0c04f92acd90806f1d00f66c7cb7dddf51cecac8847bdbed09602",
+    "references/ads-platform-comparison.md": "c34b60d89cf64ae8962158351bbb4958de24fd36eddfc79ab9395bd99b879002",
     "references/audience-segmentation-patterns.md": "ede2b4d02b6c2316a310cf5cbbb52f56aaab1d55b76bfb28cf7a9cea14b675a3",
-    "references/bid-strategy-reference.md": "4797fb17d4b30a96a59a5ba039a115266faf55f5e4012bcb46ab29f392030d60",
+    "references/bid-strategy-reference.md": "4bc71a446a858144151f2b6d58ae1a14aea310773d94aec926b250e627f0adda",
     "references/budget-allocation-templates.md": "53aaaa53dab15cfc86874c0986ed3544e6de1fce7c051ce8371e2722832e0e0c",
-    "references/campaign-type-reference.md": "8a2f977a925fa6372b02f81ed652819d4a9b943755435a3977150598537a1cc1",
+    "references/campaign-type-reference.md": "4318166cb4649b6e4de6cd72a87242a07068134a3efe35f6468b24da0d628a76",
     "references/channel-decision-matrix.md": "e5e74225e2a09fe39ec5d79d0cb1ee26e8b3ae87cd7a744149845ad48b62edc6",
     "references/common-failures.md": "55c73def01e20f38568f193f0c0345b2a9f9e784875044eaa4b7e657fea2e871"
   },

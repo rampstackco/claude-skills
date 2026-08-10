@@ -62,7 +62,7 @@ The principle. No model is right. They are all approximations. The discipline is
 
 **Definition.** Machine-learning model that distributes credit based on observed conversion paths. Compares paths that did and did not convert; assigns credit to touchpoints that correlate with conversion.
 
-**When it fits.** Mature accounts with sufficient conversion volume (Google requires 600+ conversions per month for DDA). Cross-channel optimization.
+**When it fits.** Cross-channel optimization. Google removed DDA's conversion-volume floors in October 2021, when DDA became the default for new conversion actions, so there is no minimum to clear.
 
 **When it does not fit.** Sub-scale accounts. Accounts that need explainability for regulators or boards. The black-box nature is hard to audit.
 

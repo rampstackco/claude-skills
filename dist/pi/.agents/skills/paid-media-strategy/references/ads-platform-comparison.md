@@ -60,7 +60,7 @@ The platforms do not agree on what counts as a conversion or how long a click sh
 **Conversion windows.** Adjustable. TikTok also supports a "video view" event that is unique to the platform.
 
 **Quirks to know.**
-- Video-completion-based attribution: TikTok counts conversions even when the user did not click but watched the full video. This is real signal for awareness; it inflates direct-response numbers.
+- Engaged view-through attribution (EVTA): TikTok counts conversions when the user did not click but watched at least 6 seconds (or the full duration for videos shorter than 6 seconds), within a window of up to 7 days. This is real signal for awareness; it inflates direct-response numbers.
 - iOS impact similar to Meta but less mature in the modeling.
 - Spark Ads attribution is shared between paid and organic. The same view that drove a conversion shows up in both surfaces; be careful not to double-count when reconciling.
 

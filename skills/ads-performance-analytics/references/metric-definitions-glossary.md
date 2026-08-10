@@ -64,7 +64,7 @@ The point of an explicit glossary. Two teams using the same metric name often co
 
 **CTR (click-through rate).** Clicks divided by impressions. Formula: `clicks / impressions`. Useful for hook quality. Less useful for conversion quality; high CTR with low conversion rate means the hook is too aggressive for the offer.
 
-**Hide ratio (negative feedback).** Count of users who explicitly hid or marked the ad as not-interested, divided by impressions. Above 1.5% is the alarm; the platform algorithm will throttle delivery to that audience.
+**Hide ratio (negative feedback).** Count of users who explicitly hid or marked the ad as not-interested, divided by impressions. Meta does not expose this as a column; it folds the signal into Quality ranking (above average, average, below average). Read the platform's own quality signal rather than a fixed percentage threshold.
 
 **Engagement rate.** Likes plus comments plus shares plus saves divided by impressions. Useful for organic-style content; less directly tied to performance for paid.
 
