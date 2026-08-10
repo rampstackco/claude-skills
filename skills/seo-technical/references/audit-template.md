@@ -37,7 +37,7 @@ Can search engines crawl the site?
 ### Robots.txt
 
 - [ ] File exists at `/robots.txt`
-- [ ] File is syntactically valid (test in GSC)
+- [ ] File is syntactically valid (the GSC robots.txt report surfaces warnings and errors; Google's open-source robots.txt parser tests syntax locally)
 - [ ] Critical sections of the site are not accidentally disallowed
 - [ ] Specific user agents are not blocked (`Googlebot`, `Bingbot`)
 - [ ] Sitemap location is declared (`Sitemap: https://example.com/sitemap.xml`)
@@ -67,7 +67,7 @@ Can search engines crawl the site?
 - [ ] No crawl traps (calendar pages, infinite faceted nav, session ID parameters)
 - [ ] Faceted nav uses `noindex,follow` or controlled parameter handling
 - [ ] No duplicate URLs from URL parameter variations (UTMs, tracking, sort orders)
-- [ ] Pagination handled with `rel="next"` and `rel="prev"` or paginated URL structure (no infinite scroll for important content)
+- [ ] Pagination uses a crawlable paginated URL structure (no infinite scroll for important content)
 
 ---
 
@@ -122,7 +122,7 @@ Can search engines render JavaScript-dependent content?
 ### Rendering strategy
 
 - [ ] Critical content is in the initial HTML response (server-rendered or static)
-- [ ] If JS-rendered, "fetch as Google" via URL Inspection in GSC shows full content
+- [ ] If JS-rendered, "Test live URL" in the GSC URL Inspection tool shows full content
 - [ ] No reliance on user interaction to load primary content (no "click to load article")
 
 ### Specific rendering risks
@@ -148,7 +148,6 @@ Can search engines render JavaScript-dependent content?
 - [ ] No schema violations in GSC enhancement reports
 - [ ] BreadcrumbList schema implemented (often-overlooked CTR boost)
 - [ ] Organization schema on the homepage
-- [ ] WebSite schema with SearchAction (enables sitelinks search box)
 - [ ] No schema for content not visible on the page
 
 ---
@@ -177,7 +176,7 @@ For detailed performance audit, see `performance-optimization` skill.
 ### Mobile
 
 - [ ] Responsive (single URL, single HTML, CSS adapts)
-- [ ] Mobile usability passes in GSC
+- [ ] Mobile usability verified with Lighthouse and Core Web Vitals field data
 - [ ] No tap targets too close together
 - [ ] Viewport meta tag set
 
@@ -196,7 +195,7 @@ If the site is multilingual or multi-region:
 - [ ] `hreflang` includes self-reference
 - [ ] `x-default` set for language picker fallback
 - [ ] Language and region codes follow ISO standards
-- [ ] No hreflang errors in GSC International Targeting report
+- [ ] No hreflang errors (validate with URL Inspection and a third-party crawler)
 - [ ] URL structure follows a consistent pattern (subdir / subdomain / ccTLD)
 
 ---
