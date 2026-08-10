@@ -1,6 +1,6 @@
 ---
 name: art-direction
-description: "Direct visual and creative work for campaigns, photography, illustration, video, and branded experiences. Use this skill whenever the user wants to brief a photographer, direct illustrators, plan a creative campaign, develop visual concepts, write a creative direction document, or evaluate creative work for fit. Triggers on art direction, photo brief, photography brief, illustration brief, campaign concept, creative concept, visual direction, mood board, look and feel, visual treatment, video direction. Also triggers when the user has approved brand identity but needs to extend it into specific creative deliverables."
+description: "Direct visual and creative work for campaigns, photography, illustration, video, and branded experiences. Use this skill whenever the user wants to brief a photographer, direct illustrators, plan a creative campaign, develop visual concepts, or evaluate creative work for fit. Triggers on art direction, photo brief, photography brief, illustration brief, campaign concept, creative concept, visual direction, mood board, look and feel, visual treatment, video direction. Also triggers when the user has approved brand identity but needs to extend it into specific creative deliverables. Use `creative-direction` instead when the ask is the project-wide aesthetic brief that this skill consumes as input."
 category: design
 catalog_summary: "Photography, illustration, and visual direction for campaigns"
 display_order: 3
