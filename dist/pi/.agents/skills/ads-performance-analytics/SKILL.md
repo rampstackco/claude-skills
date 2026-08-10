@@ -113,9 +113,9 @@ ROAS is short-term. Revenue from purchases attributed to a campaign in a fixed w
 
 Decisions made on ROAS can be wrong if LTV varies by channel. A worked example.
 
-Meta drives 2.5x ROAS at $40 CAC with $80 LTV. The 7-day-click revenue covers 1.5x payback over the customer lifetime.
+Meta drives 2.5x ROAS at $40 CAC with $80 LTV. That is 2.0x payback over the customer lifetime.
 
-Google drives 1.8x ROAS at $60 CAC with $200 LTV. The 7-day-click revenue covers 3.3x payback over the customer lifetime.
+Google drives 1.8x ROAS at $60 CAC with $200 LTV. That is 3.3x payback over the customer lifetime.
 
 Google looks worse on ROAS, better on LTV-adjusted return. Allocating budget to Meta because the ROAS is higher is the wrong move.
 

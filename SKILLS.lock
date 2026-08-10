@@ -16,7 +16,7 @@
     "references/testing-cadence-playbook.md": "7266af1fe12d7f0b374589cb93682c83458634fc0229809c64873b46896a9bb5"
   },
   "ads-performance-analytics": {
-    "SKILL.md": "9f45008134458f37e12812c42ad4bf863a5595e65db5c8cfa771aab8d9db58e7",
+    "SKILL.md": "686dc2e7b2651170b8f77014a02e751d9060651852402f398650afcfe5ea8188",
     "references/attribution-model-comparison.md": "fff3d7c5afc4c55ca9c75888a949b827de0338b2de9bb646a7733570cee96a63",
     "references/cohort-analysis-templates.md": "c15602571f8ce6d28b92d6c50918b2c6c07314b16f83c0d910e694fa332d460f",
     "references/common-interpretation-failures.md": "754a4c0ed869899d876fca5d38c5b6e0d2563f43fff4675dd567fcc38dbe2149",
@@ -46,7 +46,7 @@
     "references/event-taxonomy-template.md": "74bea752cf246b3c5c73a9597554c9786ae8836b627541708ca2f0d676adb8e4"
   },
   "art-direction": {
-    "SKILL.md": "fd8502c74cd2ed63f1bf2f2f75260b79666d71a3757c09f553e43ab6232d4965",
+    "SKILL.md": "3444cf2c4b932665df33509e16e0dfdcd370b1507b43a2bb157fd54e391e3c8d",
     "references/creative-brief-template.md": "dead6a017ca53c2109f324481e9481a785a86670f07922c92144efb7134593a2",
     "references/illustration-brief.md": "5f5d4be6388c11bcdcd1aeda2e8c6a13709f25d778be7c2fc3fc32b245687c00",
     "references/photo-shoot-brief.md": "531a005e77f7d10d71d9b4320fd4f13a2f6734516b92422c36a7aefe34d28e83"
@@ -123,7 +123,7 @@
     "references/style-guide-template.md": "e7e67c874d4495f6a558437cc06a05ac6f5e060ebf5c089e5f718fc498a10006"
   },
   "brand-voice": {
-    "SKILL.md": "4219ad5c33eb0a32733c8ef3d98f3396d2abfd0f55f4be8ab1b98ba5cbcd585b",
+    "SKILL.md": "7b88607af04d6847639083f498a1b8040372e364da3bfdfeb5715b20109b1009",
     "references/voice-document-template.md": "3ecb680f2fab6ac6c056078eec6af588594b3f4947f56f6fa6342750c435d747",
     "references/voice-frameworks.md": "ddf10b3826f5d16806aad27a34d865ec990b0c910102ae7f289bb6ae19173153"
   },
@@ -324,14 +324,14 @@
     "references/dns-record-reference.md": "bf7f15dcd0e7e3f6e54d789319593c6b94c20415bf81c5b20f604d8c3499127a"
   },
   "editorial-qa": {
-    "SKILL.md": "ba80b09baea0aa564e8d0dacf77e3fef6ca648a4ea348ff8fbaecf94be4d4907",
-    "references/ai-content-audit-patterns.md": "5af73d5b614ab2456b9b4a6927f8228d9d5a399cb093282ca6d02a8623fcb5ff",
+    "SKILL.md": "487b4f8a87f12c9915f0e1c1932b6ef1cd99eba1826669e6c7b9a6ce35026975",
+    "references/ai-content-audit-patterns.md": "daf8cf38538f290925a30284701effef84cc652ae0ff7037e49d7704a4963707",
     "references/brief-adherence-checklist.md": "75ce474f7fd6ad22b240fe4441e60a47395922fb6b97833e083e261019bda10d",
     "references/common-qa-failures.md": "5023275955bd31c8f1934a1bab73bd5e07a33649dce45ba59ab31824f508b35b",
     "references/fact-accuracy-and-citation-discipline.md": "2a9bcf77720b5136c9d8d941bff1326a19086387ef8f1e120201c2e8e88132e5",
     "references/internal-linking-and-schema-validation.md": "06d81225921d5c59c01906d639a46e9bc5a089ce89496539f09ef370625860c5",
     "references/qa-at-scale-patterns.md": "670c89a5ee37207c86df70f0528b61150c6b94cfdf2b2d197694c5e9e618edfd",
-    "references/qa-workflow-templates.md": "6182aa3efc8c1f7a53cbe4ba827fd3fb8e8aa12f26b5c4fc5de20ef862df7ec7",
+    "references/qa-workflow-templates.md": "634ec0076bb0d0535cc43d568dba8476932e67722dc45ae2cdc7509ef8003bcc",
     "references/seo-aeo-compliance-checklist.md": "9f51c6706673e2df8e1ef8b3b86c5fae74290ce422f165980718261fb54cab6a",
     "references/structure-and-clarity-review.md": "002258d5b0d87ed35e42799cc4c28a1da02553bdc707a24900586972dcdf2a6c",
     "references/voice-consistency-patterns.md": "65752a7c97f84aad0832ddcd492496e0df0011b02cd0c4c375e000a5d4942377"
@@ -476,7 +476,7 @@
     "references/job-statement-structure-patterns.md": "80cac04e5df9c3b27ce922d6e606e00914d899fa2df88053369c3f333fff0033"
   },
   "landing-page-copy": {
-    "SKILL.md": "c1eb89620e911e26bd6bb5a75d63e36d13ff11a5623098539f88c5b9dbd89b05",
+    "SKILL.md": "8233592fe17c89c3561bf775c26ea36fbdfc3ce2217977140614d63cb7a00030",
     "references/hero-formulas.md": "654fedde24827379c2ef62f9f9c5ef283cf23d0a1e58b991a51714b65d9a47cb",
     "references/objection-library.md": "bc0ee97281d1d5710dfb453f1018434d0d86c090fc1f5991506f93e4789ea585"
   },
@@ -635,8 +635,8 @@
     "references/when-pseo-works-decision.md": "3033a8f6687e9533fb0ff996267b80ef48a1e964b23694c8706b1ec1213bedc4"
   },
   "qa-testing": {
-    "SKILL.md": "bffe3827e182bbfbb4b067966bcc98cddc33bc8317aea6614c4a0933176e65ef",
-    "references/qa-report-template.md": "241fbc871bfee946964decd1496e0ec4ad87861e8a77a8ca0565e3559c358358"
+    "SKILL.md": "e162c4b987764edfd9d2a8c729eaa975214bfef7cea51f62f05613e4c9410915",
+    "references/qa-report-template.md": "31d1c63aa41ae736dcb10d9da93f96abdcb261606d265ace37452cc1a3bf8091"
   },
   "quiz-and-assessment-design": {
     "SKILL.md": "9e2a56cb5c4439eca01b7f81bcc590303b1fa1d04948be89c6d5a504030d4b9a",
@@ -676,8 +676,8 @@
     "references/llms-txt-guide.md": "008c48e172172ae440564956e7486014b91fdd93831bdcdc52e2dfbae3a00063"
   },
   "seo-audit-orchestration": {
-    "SKILL.md": "5763168e22bf43e990a875222d757352eea86fbff92339280b28ad95b19cb68e",
-    "references/audit-rollup-template.md": "70563185132deda3957df63a228a0f0cd59c302d72351dc8b73427433f81f456"
+    "SKILL.md": "d79f6c3f6d92f526c2ef76661f65c0ad6e6fe10050713f39e422df231e199c51",
+    "references/audit-rollup-template.md": "585ea8aa7a1124a9598c8715f54b8e3f5913ab81d9105fd2848ead4673fcd504"
   },
   "seo-backlink-audit": {
     "SKILL.md": "37551a8024bdc7491038fc73c19953b363659f7b2e76a0b65a8c327e6f8a8808",
@@ -718,12 +718,12 @@
     "references/title-and-meta-patterns.md": "174d10417509e11d5c3654d0e4e018343f79e5bec317fa55d8003f7988c67ae6"
   },
   "seo-rank-tracking": {
-    "SKILL.md": "d3c729f8de84247999ec04d6a525e804c6b75e96fa016add9c4901fd23262454",
-    "references/dashboard-template.md": "efb302269ec3f0e9122a99034e1e95e0a65976b4833c9a6bd91353efde924feb"
+    "SKILL.md": "1276d75881093f18e20474862d08036daaad182a4cbaec98d30483adc06abdf5",
+    "references/dashboard-template.md": "c3a67a6373add2721902216eb4652c3a1077f9e5fd45daee4b9dc76bbb740296"
   },
   "seo-site-health-audit": {
-    "SKILL.md": "78684edafdac6e2f73ce48c23d261ae81386fbd04a26b56ea0003334a8d1bb1e",
-    "references/issue-impact-table.md": "e59a5c298f0130d60ba9ad1c6855217e95168161a743e67c0988f766bb9efd24"
+    "SKILL.md": "74e00e5931262631b948ed29fce08bf528427a27b80ffbff1ba11eb02a15147e",
+    "references/issue-impact-table.md": "3380c9ebfe0861c477c438088f9c160eb55b6c756eb948c64ac7f783323336e7"
   },
   "seo-technical": {
     "SKILL.md": "8b874b2a102ac52c059f8860aae1119d36c14ecd8a63b5e7bcda7c04830d79f4",
