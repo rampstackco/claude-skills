@@ -46,7 +46,7 @@
     "references/event-taxonomy-template.md": "74bea752cf246b3c5c73a9597554c9786ae8836b627541708ca2f0d676adb8e4"
   },
   "art-direction": {
-    "SKILL.md": "51b14631eae09deaf93bc3a9caefa93adb9a6f378163b4cc62b4129dfa74d346",
+    "SKILL.md": "fd8502c74cd2ed63f1bf2f2f75260b79666d71a3757c09f553e43ab6232d4965",
     "references/creative-brief-template.md": "dead6a017ca53c2109f324481e9481a785a86670f07922c92144efb7134593a2",
     "references/illustration-brief.md": "5f5d4be6388c11bcdcd1aeda2e8c6a13709f25d778be7c2fc3fc32b245687c00",
     "references/photo-shoot-brief.md": "531a005e77f7d10d71d9b4320fd4f13a2f6734516b92422c36a7aefe34d28e83"
@@ -123,7 +123,7 @@
     "references/style-guide-template.md": "e7e67c874d4495f6a558437cc06a05ac6f5e060ebf5c089e5f718fc498a10006"
   },
   "brand-voice": {
-    "SKILL.md": "b9fdadbcbe9b68200edf095c74c8abb7ca6ffa13a1c49fc3b98859ac301f1bc0",
+    "SKILL.md": "4219ad5c33eb0a32733c8ef3d98f3396d2abfd0f55f4be8ab1b98ba5cbcd585b",
     "references/voice-document-template.md": "3ecb680f2fab6ac6c056078eec6af588594b3f4947f56f6fa6342750c435d747",
     "references/voice-frameworks.md": "ddf10b3826f5d16806aad27a34d865ec990b0c910102ae7f289bb6ae19173153"
   },
@@ -324,7 +324,7 @@
     "references/dns-record-reference.md": "bf7f15dcd0e7e3f6e54d789319593c6b94c20415bf81c5b20f604d8c3499127a"
   },
   "editorial-qa": {
-    "SKILL.md": "a1f408fa2445e4576988c42ad05b01ed012e02a0aff47a3d7606e0bb3e54f195",
+    "SKILL.md": "ba80b09baea0aa564e8d0dacf77e3fef6ca648a4ea348ff8fbaecf94be4d4907",
     "references/ai-content-audit-patterns.md": "5af73d5b614ab2456b9b4a6927f8228d9d5a399cb093282ca6d02a8623fcb5ff",
     "references/brief-adherence-checklist.md": "75ce474f7fd6ad22b240fe4441e60a47395922fb6b97833e083e261019bda10d",
     "references/common-qa-failures.md": "5023275955bd31c8f1934a1bab73bd5e07a33649dce45ba59ab31824f508b35b",
@@ -351,7 +351,7 @@
     "references/methodology-block-template.md": "74ec061cf5befb94a4db24479df918f1ed8c1dfa35721daaf3476a64e4082ef4"
   },
   "experiment-design": {
-    "SKILL.md": "10e8c08d666170badc5eecc7880be137263a9533620f83ffa6f6f4d430c4ba15",
+    "SKILL.md": "660b68136321fbed6660c9f5a5ec9eda6470c57d427e7fd28e663074be63bdb9",
     "references/common-failures.md": "0c059512ada9af9831dbd6351c752fd77aa91e5e86b814268aa3a18d3d954a5c",
     "references/hypothesis-templates.md": "e34cf0e22eb6b5ef7cf1b6237d128bb4008a8f6dc29c4fbc408bfe9d555cc6b4",
     "references/platform-comparison.md": "0c287a49e0ed260fb98dee0d50f6bd77c59db5582c2cadd8da56292f64381e45",
@@ -361,7 +361,7 @@
     "references/sample-size-tables.md": "2997f71cc07ddde0619f49b483b8499c4b92a4c4ca62d9c3a68d405e1c8e6319"
   },
   "experimentation-analytics": {
-    "SKILL.md": "95c10f71f94e4d716f7521d6922ec42487361472a01fa67ab45170fdb6c055af",
+    "SKILL.md": "6b84055d9897094cff121b16a8acb2286f878a7e98963bd27bb582afb8cf015d",
     "references/analytics-platform-comparison.md": "37add0e40f70202abd4ce411cb06f5002027649e706bc379c4637e249fe69992",
     "references/common-interpretation-failures.md": "6fdbbda10777f3e88d47c7ac48a6f252f761e2519e08b3bbd0874a67013a9ef4",
     "references/confidence-interval-cheatsheet.md": "1230881d5b5a2058197974af63f55dbaf319e012cfbfafc815cc76cf16901351",
@@ -476,7 +476,7 @@
     "references/job-statement-structure-patterns.md": "80cac04e5df9c3b27ce922d6e606e00914d899fa2df88053369c3f333fff0033"
   },
   "landing-page-copy": {
-    "SKILL.md": "1e0f504ce254ab088d3af8419d0591646de7a792a618be29448cfb34329a7a4b",
+    "SKILL.md": "c1eb89620e911e26bd6bb5a75d63e36d13ff11a5623098539f88c5b9dbd89b05",
     "references/hero-formulas.md": "654fedde24827379c2ef62f9f9c5ef283cf23d0a1e58b991a51714b65d9a47cb",
     "references/objection-library.md": "bc0ee97281d1d5710dfb453f1018434d0d86c090fc1f5991506f93e4789ea585"
   },
@@ -635,7 +635,7 @@
     "references/when-pseo-works-decision.md": "3033a8f6687e9533fb0ff996267b80ef48a1e964b23694c8706b1ec1213bedc4"
   },
   "qa-testing": {
-    "SKILL.md": "605f8489de7d3860b01056be0d4380ca5753ec3cca4baab4e8b957a9c28ad85b",
+    "SKILL.md": "bffe3827e182bbfbb4b067966bcc98cddc33bc8317aea6614c4a0933176e65ef",
     "references/qa-report-template.md": "241fbc871bfee946964decd1496e0ec4ad87861e8a77a8ca0565e3559c358358"
   },
   "quiz-and-assessment-design": {
@@ -731,7 +731,7 @@
     "references/migration-checklist.md": "7f9a4dbdd9653d4a2d8a9c8795376562ac26545568db6f493a21c3f5bc485bb9"
   },
   "seo-traffic-diagnosis": {
-    "SKILL.md": "c692568650d16f9f17cd4a9474c3126b9d78852d742e219872f98e464262c6e1",
+    "SKILL.md": "bcdab48b89461e90d9c4ae987097160bdad0a678e57b7833554e4ac89c06b88e",
     "references/diagnosis-checklist.md": "f1d2a4bff1a9b764e6523b3f17fc78a4e6f9515ff939ff05346326106e933848"
   },
   "skill-creation-walkthrough": {

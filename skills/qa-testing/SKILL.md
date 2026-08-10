@@ -1,6 +1,6 @@
 ---
 name: qa-testing
-description: "Run QA testing on a page, feature, or full site at one of three depth tiers (smoke, standard, full). Use this skill whenever the user asks to test a page, audit a site, check for bugs, verify a deploy, run a QA sweep, or review accessibility, performance, or SEO basics. Triggers on test, QA, audit, verify, check, is it working, does it look right, broken, 404, image not loading, post-deploy check, regression test. Also triggers proactively after any significant code change or new page launch where verification matters."
+description: "Run QA testing on a page, feature, or full site at one of three depth tiers (smoke, standard, full). Use this skill whenever the user asks to QA a page or site, run a smoke test after a deploy, verify a page before launch, or run a regression sweep. Triggers on QA, QA sweep, smoke test, regression test, post-deploy check, pre-launch check, verify the deploy, test this page, does the page render, broken link, 404, image not loading. Also triggers proactively after a deploy or a new page launch where verification matters. Covers accessibility, performance, and SEO at the surface-signal level only: deep audits belong to `accessibility-audit`, `performance-optimization`, and `seo-technical`, and code-level debugging to `code-review-web`."
 category: qa
 catalog_summary: "Pre-launch QA, regression testing, cross-browser checks"
 display_order: 1
