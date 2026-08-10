@@ -134,7 +134,7 @@ Fatigue is real. The same audience seeing the same creative six times a week tun
 2. **CTR declining 30%+ week over week.** The creative is no longer fresh to the audience.
 3. **CPM increasing without audience saturation explanation.** The platform is having to bid harder to deliver impressions because engagement signals are weakening.
 4. **Negative comments increasing.** A direct user signal that the audience is irritated.
-5. **Hide ratio increasing.** Meta exposes this as "negative feedback rate." TikTok exposes "not interested" rate.
+5. **Quality ranking dropping.** Meta folds hide and report signals into Quality ranking (above average, average, below average) rather than exposing a negative-feedback-rate column. TikTok exposes "not interested" rate.
 
 Refresh cadence. Weekly for high-spend campaigns ($50K+/month). Biweekly for medium spend. Monthly for low spend. The economics: producing a fresh variant is cheaper than running tired creative for one extra week.
 
@@ -164,11 +164,11 @@ Each platform has native norms. Violating them tanks performance. The fix is pro
 
 **Meta (Facebook plus Instagram).** In-feed visual hierarchy. Captions on by default (most users watch sound-off). Native-feeling production beats studio production for direct response. Vertical 9:16 for Reels and Stories; 1:1 or 4:5 for in-feed. CTAs above the fold or in first 2 lines of caption.
 
-**TikTok.** Vertical 9:16 only. Native-creator aesthetic; phone-shot is the default. Fast cuts every 1 to 2 seconds. Captions for accessibility. Music-driven; trending sounds compound reach but expire fast. Spark Ads (boost an existing organic post) consistently outperform pure paid because they retain organic engagement signal.
+**TikTok.** Vertical 9:16 recommended, with 1:1 and 16:9 also accepted. Native-creator aesthetic; phone-shot is the default. Fast cuts every 1 to 2 seconds. Captions for accessibility. Music-driven; trending sounds compound reach but expire fast. Spark Ads (boost an existing organic post) consistently outperform pure paid because they retain organic engagement signal.
 
 **LinkedIn.** Professional tone. Slower pacing tolerated; B2B audiences are in research mode rather than scroll mode. B2B vocabulary is fine; consumer-style copy reads as off-platform. Thought leadership angle works; product pitches feel salesy.
 
-**Google Search.** Text-only headlines plus descriptions. Character limits are real constraints (30-character headlines, 90-character descriptions). RSA (Responsive Search Ads) optimization rewards 15+ headline variations and 4+ descriptions; the platform mixes them.
+**Google Search.** Text-only headlines plus descriptions. Character limits are real constraints (30-character headlines, 90-character descriptions). RSA (Responsive Search Ads) optimization rewards filling all 15 headline slots and all 4 descriptions, which are the platform caps; the platform mixes them.
 
 **Google Display and YouTube.** Depends on placement. YouTube allows longer narrative (15s to 6m); Display is fast banner-style. Skippable YouTube ads need to earn the next second of attention; non-skippable annoys.
 

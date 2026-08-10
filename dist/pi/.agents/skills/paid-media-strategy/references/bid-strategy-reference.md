@@ -66,15 +66,13 @@ The decision shape. Bid strategy depends on data state. New campaigns need a dif
 
 ---
 
-## Enhanced CPC
+## Enhanced CPC (retired)
 
 **Definition.** Manual CPC with platform adjustments based on conversion likelihood.
 
-**When to use.** Rarely. The hybrid muddies the signal. If you want manual control, run pure manual CPC. If you want automation, graduate to Maximize Conversions or tCPA.
+**Status.** Retired. Google stopped accepting new Enhanced CPC campaigns in October 2024 and migrated the remaining Search and Display campaigns to Manual CPC in March 2025. You cannot select it today.
 
-**When not to use.** Most situations. The hybrid is a transitional state from a previous platform default; modern campaigns should pick a clear strategy.
-
-**Common mistakes.** Treating Enhanced CPC as the safe default. It is neither full control nor full automation; the worst of both.
+**What to use instead.** Manual CPC if you want control. Maximize Conversions or Maximum Conversion Value if you want automation.
 
 ---
 

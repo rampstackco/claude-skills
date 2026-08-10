@@ -112,8 +112,6 @@ Bid strategy depends on data state. New campaigns need a different strategy than
 
 **Maximum Conversion Value.** Like maximize conversions but optimizes for total revenue, not count. Use when high-value conversions are the goal and you have the conversion-value data wired in.
 
-**Enhanced CPC.** Manual CPC with platform adjustments. Hybrid; rarely the right answer because it muddies the signal.
-
 The progression for new campaigns: start manual or maximize conversions to gather data, switch to tCPA or tROAS once you have 30+ conversions, revisit periodically.
 
 Common mistakes. Using tCPA before you have 30+ conversions (no data to optimize against). Setting tROAS too aggressively (platform throttles delivery). Switching strategies too often (each change resets the learning phase). Detail in [`references/bid-strategy-reference.md`](references/bid-strategy-reference.md).
@@ -124,11 +122,11 @@ Common mistakes. Using tCPA before you have 30+ conversions (no data to optimize
 
 For each major platform, the campaign types and when to use them.
 
-**Google Ads.** Search, Shopping, Performance Max, Display, Video (YouTube), Demand Gen, Discovery, App. Search for direct demand capture. PMax for catalog-driven e-commerce. Display for retargeting. Video for awareness or consideration.
+**Google Ads.** Search, Shopping, Performance Max, Display, Video (YouTube), Demand Gen, App. Search for direct demand capture. PMax for catalog-driven e-commerce. Display for retargeting. Video for awareness or consideration.
 
 **Meta.** Sales, Leads, Engagement, Awareness, Traffic, App Promotion. Sales for direct response. Awareness for brand at scale. Leads for B2B with native lead forms.
 
-**LinkedIn.** Sponsored Content, Message Ads, Conversation Ads, Lead Gen Forms. Format types: Single Image, Carousel, Video. Lead Gen Forms convert hardest because they pre-fill from LinkedIn profile data. Message Ads have stigma in many B2B segments; use carefully.
+**LinkedIn.** Sponsored Content, Conversation Ads, Lead Gen Forms. Format types: Single Image, Carousel, Video. Lead Gen Forms convert hardest because they pre-fill from LinkedIn profile data. Sponsored messaging cannot target EU members, so Conversation Ads are non-EU only.
 
 **TikTok.** In-Feed, TopView, Spark Ads, Branded Hashtag Challenge. Spark Ads (boost organic posts) outperform pure paid creative because they retain organic-feel signal. Use Spark when you have organic posts performing.
 

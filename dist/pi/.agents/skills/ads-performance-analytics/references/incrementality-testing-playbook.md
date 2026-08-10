@@ -34,11 +34,11 @@ The cleanest causal test for paid media at scale.
 
 ---
 
-## Method 2: Ghost bidding (Google)
+## Method 2: Conversion Lift and Experiments (Google)
 
-Google's own incrementality tool. The platform bids on a holdout share of impressions but does not actually serve the ad. The reported delta between served and ghost is incremental.
+"Ghost bids" and "ghost ads" are terms from the incrementality-testing literature for withholding an ad from users who would otherwise have seen it. They name a methodology, not a Google Ads product you can configure. Google's actual surfaces are Conversion Lift studies and geo or holdback Experiments.
 
-**Setup.** Configure within Google Ads. Choose the campaigns and the holdout share (typically 5 to 20%).
+**Setup.** Conversion Lift studies are enabled by a Google rep, not self-serve. Experiments you configure yourself in Google Ads, splitting traffic between a test arm and a control arm.
 
 **Duration.** Two to four weeks.
 
@@ -107,7 +107,7 @@ Alternate weeks of campaign on and off. Compare on-weeks to off-weeks.
 
 | Constraint | Recommended method |
 |---|---|
-| Single platform, want quick answer | Platform-native (ghost bidding for Google, conversion lift for Meta) |
+| Single platform, want quick answer | Platform-native (Conversion Lift or Experiments for Google, Conversion Lift for Meta) |
 | Cross-platform incremental test | Geo holdout |
 | Small account, limited budget | Geo holdout in two small matched markets |
 | Long campaign cycle, steady-state | Switchback |
