@@ -70,9 +70,11 @@ The growth section.
 
 ### Headline metric
 
-- Count of opportunity keywords that broke into top 10 over the chosen window
-- Count that fell out of opportunity range (past 30 or to top 10)
+- Graduations: count of opportunity keywords that broke into top 10 over the chosen window
+- Losses: count that slipped past position 30
 - Net opportunity bucket size (with quarterly refresh)
+
+Both counts are exits from the bucket, and a keyword belongs to exactly one of them. Graduations are wins and losses are not; never report a graduation in the loss count.
 
 ### Top breakthroughs
 

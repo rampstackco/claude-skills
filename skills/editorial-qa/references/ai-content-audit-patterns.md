@@ -8,7 +8,7 @@ The 11 AI tells, the 6 hallucination patterns, voice drift detection, a worked e
 
 Pattern recognition. Read with these top-of-mind; flag any match.
 
-**1. Excessive em-dashes.** Model-default punctuation. A piece with 8 em-dashes per 1,000 words is almost certainly AI-drafted. The fix: replace with periods, semicolons, or rephrase the sentence.
+**1. Excessive em-dashes.** Model-default punctuation. Flag at 8 em-dashes per 1,000 words; a piece at that rate is almost certainly AI-drafted. This rate is the one threshold for the tell, used everywhere in this file. The fix: replace with periods, semicolons, or rephrase the sentence.
 
 **2. Predictable opening phrasings.** Throat-clearing openers that announce what the piece is about to do (the fast-paced-world opener, the importance-noting opener, the whether-you-are-X-or-Y opener). These openings appear in AI output across topics; pattern-match against the team's curated do-not-use list and cut.
 
@@ -101,7 +101,7 @@ For each AI-co-authored draft, walk this checklist.
 1. Read the first 200 words. Does the opening match any of the 11 AI tells? Flag.
 2. Sample 2 paragraphs from the middle. Does either match AI tells? Does the voice match the brand voice doc? Flag.
 3. Read the last 200 words. Does the closing match any of the 11 AI tells? Flag.
-4. Search the piece for em-dashes; count. More than 5 in a 1,500-word piece is suspicious.
+4. Search the piece for em-dashes; count. Flag at the rate in pattern 1, 8 per 1,000 words, which is 12 in a 1,500-word piece.
 5. Search for forced bilateral framing patterns. Count.
 6. Verify every statistic, quote, case study, citation, and product claim per the fact-accuracy methodology.
 7. Sample 3 to 5 internal links; verify they go where the brief specified and the targets exist.

@@ -184,7 +184,7 @@ Buttons matter. Treat the button copy as a whole-page-worth of attention.
 6. **Draft sections.** Section by section. Don't polish until the structure is sound.
 7. **Edit for friction.** Remove every word that doesn't earn its place. Landing pages do not have words to spare.
 8. **Test the CTA.** Read the page aloud. By the end, is the visitor's next action obvious?
-9. **Pre-publish:** check links, spell-check, mobile preview, SEO basics if SEO is a goal.
+9. **Hand off with a post-import checklist.** The deliverable is a markdown document, not a built page, so step 9 is not something you perform: it is a list you attach for whoever builds the page. Spell-check the copy yourself, then hand over the rest. Every destination URL resolves. Mobile preview of the built page. SEO basics if SEO is a goal. If the page is already built and you are revising it in place, run the checklist yourself instead of handing it over.
 
 ---
 

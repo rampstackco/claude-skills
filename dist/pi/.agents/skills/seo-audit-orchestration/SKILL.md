@@ -94,7 +94,7 @@ The child skills do the analysis. This skill sequences them and integrates the o
 
 ### Phase 4: Synthesize
 
-Combine findings into themes. A list of 200 issues is not an audit. A list of 5-7 themes is.
+Combine findings into themes. A list of 200 issues is not an audit. A short list of themes is.
 
 Themes typically emerge in categories like:
 
@@ -125,7 +125,7 @@ Produce the rollup report. See [`references/audit-rollup-template.md`](reference
 Structure:
 
 - Executive summary (1 page)
-- Themes and recommendations (5-7 themes, 1 page each)
+- Themes and recommendations (1 page each; count per audit type, from the template's length-targets table)
 - Sub-audit findings (linked or appended)
 - Roadmap (next 90 days)
 
@@ -139,7 +139,7 @@ Walk stakeholders through it. Get commitment to the next 90 days of work.
 2. **Confirm Ahrefs MCP access.** Verify the workspace has the target property and recent data.
 3. **Pull all data.** Run the gather list in phase 2. Document freshness.
 4. **Run each sub-audit.** Use the child skills. Each produces its own findings doc.
-5. **Synthesize themes.** 5-7 themes max. Each ties to an impact and a fix.
+5. **Synthesize themes.** Hold to the theme count the template's length-targets table gives for this audit type. Each theme ties to an impact and a fix.
 6. **Prioritize.** Impact/effort matrix. Quick wins surface to the top.
 7. **Draft the rollup.** Use the template. Executive summary first.
 8. **Review with the team.** Pressure-test conclusions before stakeholder readout.
@@ -166,14 +166,14 @@ Walk stakeholders through it. Get commitment to the next 90 days of work.
 
 A rollup audit report with:
 
-1. **Executive summary** (1 page).
+1. **Executive summary.**
 2. **Audit charter** (scope, goal, methodology).
-3. **Themes and recommendations** (5-7 themes, each with what, why, size of prize, fix).
+3. **Themes and recommendations** (each theme with what, why, size of prize, fix).
 4. **Sub-audit appendix** (linked outputs from each child skill).
 5. **90-day roadmap** (sequenced work with owners and targets).
 6. **Methodology notes** (data sources, pull dates, caveats).
 
-Total length: 15-30 pages including appendices. Executive summary readable in 5 minutes.
+Total length, executive summary length, and theme count all vary by audit type: a quarterly health check is not a due-diligence audit. The length-targets table in [`references/audit-rollup-template.md`](references/audit-rollup-template.md) owns those numbers per type. Whatever the type, the executive summary stays readable in 5 minutes.
 
 ---
 

@@ -69,7 +69,7 @@ The visual treatment.
 - Color palette (true color, treated, monochrome)
 - Locations (specific or general direction)
 - Wardrobe and props
-- Mood references (3 to 5 reference images)
+- Mood references (the photo brief template sets how many)
 
 **For illustration:**
 - Style (flat, dimensional, hand-drawn, geometric, abstract)
@@ -77,7 +77,7 @@ The visual treatment.
 - Line treatment
 - Composition style
 - Detail level
-- Reference artists or works (with explicit "we want like X but NOT like Y")
+- Reference artists or works, with explicit "we want like X but NOT like Y" (the illustration brief template sets how many)
 
 **For video / motion:**
 - Pacing (slow, medium, fast cuts)
@@ -85,7 +85,7 @@ The visual treatment.
 - Color grading
 - Transitions and effects
 - Audio direction (music, voiceover, ambient)
-- Reference work (3 to 5 examples)
+- Reference work (3 to 5 examples; no template covers motion, so this count is the one to use)
 
 ### 3. The execution
 
@@ -143,10 +143,10 @@ The quality bar.
 1. **Confirm the inputs.** Brand identity locked. Audience and goal clear. Budget and timeline known.
 2. **Develop the concept.** Premise, emotional through-line, takeaway.
 3. **Build the look.** Mood references. Specific direction on style elements.
-4. **Write the spec.** Production-level direction. Variants. Constraints.
+4. **Write the spec.** Production-level direction. Variants. Constraints. Licensing and usage rights, agreed before the shoot or the first sketch, not after: both brief templates make licensing a pre-production section for the reason that renegotiating it against finished work costs more.
 5. **Brief the vendor.** In writing. Walk through it live. Allow questions.
 6. **Review milestones.** Treatment review, halfway review, final review. Don't skip the early reviews; corrections compound.
-7. **Approve and document.** What was produced, what's licensed for what use.
+7. **Approve and document.** What was produced, and confirmation that it shipped under the licensing agreed at step 4.
 
 ### For directing in-house creative
 
@@ -178,16 +178,17 @@ The quality bar.
 
 ## Output format
 
-Default output is a creative brief at `creative-brief-[project].md`.
+Default output is a creative brief at `creative-brief-[project].md`, written against one of the brief templates in `references/`. The template you pick is the structure: use [`references/photo-shoot-brief.md`](references/photo-shoot-brief.md) for photography, [`references/illustration-brief.md`](references/illustration-brief.md) for illustration, and [`references/creative-brief-template.md`](references/creative-brief-template.md) for anything else or for a mixed production. Each template owns its own section list, section order, and reference-image count. Do not write to the five-layer outline below and hope it maps; the templates carry sections the layers do not, licensing and usage rights among them, and those sections are load-bearing before production starts, not after it.
 
-Structure:
+The five layers are the thinking. Every template covers all five, in its own order:
+
 1. The story (premise, through-line, role of brand, takeaway)
 2. The look (visual treatment with references)
 3. The execution (specs, variants, constraints)
 4. The standards (quality bar, examples of acceptable and unacceptable)
-5. The logistics (timeline, milestones, budget, deliverables)
+5. The logistics (timeline, milestones, budget, deliverables, licensing and usage rights)
 
-Plus a separate moodboard or visual reference doc with images.
+Plus a separate moodboard or visual reference doc with images, at the count the chosen template gives.
 
 ---
 

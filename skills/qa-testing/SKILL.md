@@ -62,7 +62,7 @@ const smoke = {
   titleLen: document.title.length,
   canonical: document.querySelector('link[rel="canonical"]')?.href,
   h1Count: document.querySelectorAll('h1').length,
-  missingAlts: [...document.querySelectorAll('img')].filter(i => !i.alt).length,
+  missingAlts: [...document.querySelectorAll('img')].filter(i => !i.hasAttribute('alt')).length,
   schema: [...document.querySelectorAll('script[type="application/ld+json"]')]
     .map(s => { try { return JSON.parse(s.innerText)['@type'] } catch(e) { return 'invalid' } }),
   brokenImages: [...document.querySelectorAll('img')].filter(i => !i.complete || i.naturalWidth === 0).length,
@@ -74,9 +74,9 @@ console.log(JSON.stringify(smoke, null, 2));
 - Title exists and is 30 to 60 characters
 - Canonical points at the production domain (never staging or preview URLs)
 - Exactly one H1
-- Zero missing alts
+- Zero images missing the `alt` attribute. An empty `alt=""` on a decorative image is correct markup and passes; only an absent attribute fails.
 - Zero broken images
-- Schema includes the expected types for the page
+- Every schema block parses (no `invalid` entries in the snippet output). Whether the types are the right ones for the page is a Full-tier check, against the Rich Results Test.
 
 If any of these fail, do not proceed with deeper testing until the smoke issue is fixed.
 
@@ -101,7 +101,7 @@ const audit = {
   h2Count: document.querySelectorAll('h2').length,
   h2s: [...document.querySelectorAll('h2')].map(h => h.innerText.trim().slice(0, 60)),
   totalImages: document.querySelectorAll('img').length,
-  missingAlts: [...document.querySelectorAll('img')].filter(i => !i.alt).length,
+  missingAlts: [...document.querySelectorAll('img')].filter(i => !i.hasAttribute('alt')).length,
   brokenImages: [...document.querySelectorAll('img')].filter(i => !i.complete || i.naturalWidth === 0).length,
   externalLinksWithoutNoopener: [...document.querySelectorAll('a[target="_blank"]')]
     .filter(a => !a.rel?.includes('noopener')).length,
@@ -112,7 +112,8 @@ const audit = {
         return d['@graph'] ? d['@graph'].map(x => x['@type']) : d['@type'];
       } catch(e) { return 'invalid' }
     }),
-  hasSkipLink: !!document.querySelector('a[href^="#"]:first-of-type'),
+  hasSkipLink: [...document.querySelectorAll('a[href^="#"]')].slice(0, 3)
+    .some(a => /skip/i.test(a.textContent) && !!document.getElementById(a.getAttribute('href').slice(1))),
   pageLanguage: document.documentElement.lang || 'NOT SET',
   hasFavicon: !!document.querySelector('link[rel*="icon"]'),
 };
@@ -135,8 +136,8 @@ The 30-minute pre-launch check. Cover all dimensions.
 |---|---|
 | Smoke and standard | All pass |
 | Accessibility (basic) | Run browser audit tool (e.g., Lighthouse), score above 90 |
-| Performance (basic) | Lighthouse Performance score above 80, LCP under 2.5s, CLS under 0.1 |
-| Mobile responsiveness | Tested at 375px, 768px, 1024px, 1440px |
+| Performance (basic) | Every threshold in the report template's Performance checklist, INP included |
+| Mobile responsiveness | Every viewport in the report template's responsiveness checklist |
 | Cross-browser | Tested in Chrome, Safari, Firefox (and Edge if relevant audience) |
 | Forms | All forms submit successfully and validate correctly |
 | Internal links | No broken internal links (sample 20 random) |
@@ -172,7 +173,7 @@ Look for: `strict-transport-security`, `x-frame-options`, `x-content-type-option
 ```javascript
 const imgs = [...document.querySelectorAll('img')].map(i => ({
   src: i.src.split('/').pop().split('?')[0].slice(0, 60),
-  alt: i.alt || 'MISSING',
+  alt: i.hasAttribute('alt') ? (i.alt === '' ? 'DECORATIVE (empty alt)' : i.alt) : 'MISSING',
   width: i.naturalWidth,
   height: i.naturalHeight,
   loaded: i.complete && i.naturalWidth > 0,
@@ -182,6 +183,7 @@ console.log({
   total: imgs.length,
   broken: imgs.filter(i => !i.loaded).length,
   noAlt: imgs.filter(i => i.alt === 'MISSING').length,
+  decorative: imgs.filter(i => i.alt.startsWith('DECORATIVE')).length,
 });
 ```
 
@@ -264,7 +266,7 @@ if (issues.length) {
 1. **Pick the tier.** Smoke for routine deploys. Standard for new work. Full for releases.
 2. **Run the snippet.** Paste the appropriate console snippet, review output.
 3. **Note failures.** Each failure either gets fixed before ship or filed as a known issue.
-4. **For Standard tier**, add: visual review at 375px, 768px, 1440px. Test the primary user flow.
+4. **For Standard tier**, add: visual review at 375px, 768px, and 1440px. Standard deliberately skips 1024px; the Full tier picks it up with the rest of the template's responsiveness checklist. Test the primary user flow.
 5. **For Full tier**, add: cross-browser testing, Lighthouse audit, schema validation, security headers, 404 handling.
 6. **Document.** Use the template in [`references/qa-report-template.md`](references/qa-report-template.md) for full audits.
 

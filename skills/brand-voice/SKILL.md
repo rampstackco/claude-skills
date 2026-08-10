@@ -126,36 +126,23 @@ For each major content type, show:
 - Good example (on-voice)
 - Brief note on what changed
 
-Common content types to cover:
+Cover the content types listed in the paired examples library of [`references/voice-document-template.md`](references/voice-document-template.md). The template owns that list, so there is one list to maintain rather than two that drift apart.
 
-- Headline
-- Subheadline
-- Hero CTA
-- Feature description
-- Testimonial intro
-- Email subject line
-- Email opening
-- Push notification
-- Error message
-- Success message
-- About page paragraph
-- Social post
-- Sales page paragraph
-
-Aim for 15 to 25 paired examples. This is the most-used part of the voice doc in practice.
+The floor is 15 paired examples. One pair per type in the template clears it. Past 25 the library gets harder to scan than to use, so treat 25 as the practical ceiling, not a hard cap. This is the most-used part of the voice doc in practice.
 
 ---
 
 ## Workflow
 
-1. **Audit existing copy** if it exists. Identify what is on-brand, what is off, what patterns recur.
-2. **Layer 1: Voice attributes.** Generate 5 to 8 candidates with "we are X, not Y" framing. Pick 3 to 5.
-3. **Layer 2: Tone shifts.** List 8 to 15 contexts the brand writes in. Note the tone shift for each.
-4. **Layer 3: Vocabulary and grammar.** Define preferences. Skip default rules unless they actually distinguish the brand.
-5. **Layer 4: Examples.** Build the paired-example library. 15 to 25 minimum.
-6. **Stress-test.** Pick a fresh writing brief and apply the voice doc. Does it produce on-voice copy? If not, the doc is incomplete.
-7. **Document.** Use the template in [`references/voice-document-template.md`](references/voice-document-template.md).
-8. **Distribute.** Voice docs only work if they get used. Make the doc easy to reference inline (link to it from CMS templates, brief templates, AI assistant prompts).
+1. **Pick the entry point.** [`references/voice-frameworks.md`](references/voice-frameworks.md) has a "Choosing a framework" section that decides this. A brand starting from zero begins with archetypes there, then dimensions, then attributes, and rejoins this workflow at step 2. Everything below assumes copy exists to audit.
+2. **Audit existing copy** if it exists. Identify what is on-brand, what is off, what patterns recur.
+3. **Layer 1: Voice attributes.** Generate 5 to 8 candidates with "we are X, not Y" framing. Pick 3 to 5.
+4. **Layer 2: Tone shifts.** List 8 to 15 contexts the brand writes in. Note the tone shift for each.
+5. **Layer 3: Vocabulary and grammar.** Define preferences. Skip default rules unless they actually distinguish the brand.
+6. **Layer 4: Examples.** Build the paired-example library against the template's content-type list, to the floor stated in the Layer 4 section above.
+7. **Stress-test.** Pick a fresh writing brief and apply the voice doc. Score the result with the stress test in [`references/voice-frameworks.md`](references/voice-frameworks.md): 1 to 5 against each attribute, and anything scoring below 3 on any attribute is off-voice. Below 3 means the doc is incomplete, not that the copy needs another pass.
+8. **Document.** Use the template in [`references/voice-document-template.md`](references/voice-document-template.md).
+9. **Distribute.** Voice docs only work if they get used. Make the doc easy to reference inline (link to it from CMS templates, brief templates, AI assistant prompts).
 
 ---
 

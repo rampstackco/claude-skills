@@ -220,9 +220,9 @@ For pieces shipping at programmatic-SEO scale (100s to 100,000s of pages), full-
 
 **Sampling strategy.**
 
-- Random sample 50 to 200 pages per audit cycle
+- Random sample per audit cycle, sized by the sample-size schedule in [`references/qa-at-scale-patterns.md`](references/qa-at-scale-patterns.md), which owns the numbers
 - Balance the sample across data shape (sparse versus dense records, recent versus old generation, popular versus niche categories)
-- Fixed sample percentage as set grows; absolute count plateaus around 200 once the set is large
+- The schedule is a fixed count per set-size band, rising to a plateau at the largest band. The percentage sampled therefore falls as the set grows, which is deliberate: past a certain size, more pages stop buying more signal
 
 **Automated checks at scale.**
 
@@ -257,7 +257,7 @@ Ownership and sequencing.
 
 **Single QA owner per piece**, not a committee. The owner is accountable for what shipped. Committees diffuse accountability; nobody owns a problem that reaches readers.
 
-**Sequencing.** Brief-adherence, then fact-accuracy, then structure, then AI-content audit, then voice, then SEO/AEO, then internal linking, then schema. Brief-adherence first because it is the cheapest gate; SEO/AEO checks last because they are easiest to fix and rarely halt-conditions.
+**Sequencing.** Run the gates in the order set by the sequencing template in [`references/qa-workflow-templates.md`](references/qa-workflow-templates.md), which owns the gate list and its order. Brief-adherence runs first: it is the cheapest gate that can halt a piece, and it catches the largest class of failures. The SEO/AEO and linking-and-schema gates sit near the end because most of their failures are auto-fixable and rarely halt anything. A final read closes the sequence.
 
 **Halt vs flag vs auto-fix.**
 
