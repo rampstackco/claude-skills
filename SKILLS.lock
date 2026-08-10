@@ -43,7 +43,7 @@
   },
   "analytics-strategy": {
     "SKILL.md": "111bcd57af348b778dfc2e8801b79f79c83a5bfdea28da670113a3c9437e6cb4",
-    "references/event-taxonomy-template.md": "74bea752cf246b3c5c73a9597554c9786ae8836b627541708ca2f0d676adb8e4"
+    "references/event-taxonomy-template.md": "04ab0efbc566f2ee8e33f8e2f262ba5fd7d86edc3fb23af0eaa5c85c0737d49d"
   },
   "art-direction": {
     "SKILL.md": "3444cf2c4b932665df33509e16e0dfdcd370b1507b43a2bb157fd54e391e3c8d",
@@ -155,7 +155,7 @@
     "SKILL.md": "1833c32ede91b3cc8fbda7ddc69de495c8f4bf4a6af3044d0b94c4249472efbd",
     "references/nextjs-patterns.md": "afdaa25a148693f8209a36c7e5690a7389d0e5490f61781092b9eba6d322836f",
     "references/review-template.md": "0ca48f838085ee176dc8098618aa1f8681bbc7f1c5d787464cf087f8282c2f8e",
-    "references/wordpress-headless-patterns.md": "28ebedafeccf5b3b672d23b9e0551d9ac6a61780bc709f12963cd08b3fc54b8c"
+    "references/wordpress-headless-patterns.md": "d3bb754f3208e2db38fbaade7053e90e6a0b4525745dfad83c63325b7af699e3"
   },
   "comparison-tool-design": {
     "SKILL.md": "24ce1daec98fc356616d00cf1799f2eca7b80248e980da0ad5e7a863b50b7d0e",
@@ -667,8 +667,8 @@
     "references/scheduler-decision-criteria.md": "02a4237ac2d3101ab0d84c273f9b5f22d501d530fd76d250775e311d2f403196"
   },
   "security-baseline": {
-    "SKILL.md": "8af28729093ff8a97796cba7b37db6d621e50d5d31e684baf1ba8bc98383daaf",
-    "references/headers-checklist.md": "5e24408454905148cccf616dcf3f707204e971b3e28a5ea017a13e88a76cad95"
+    "SKILL.md": "5b4bc0cd3724939b6ef8a41cd0ecc9cba2e75805087071a671739514516a0612",
+    "references/headers-checklist.md": "5ee3c6c626cd7c6dd3b85b1df1e4271d66b888f1c0d222b7e4ed11d4f7daa56e"
   },
   "seo-aeo-geo": {
     "SKILL.md": "573caeaa6d9e988fb7539bb79c397756ca7fb4645ab4f79a69d3a14017988529",

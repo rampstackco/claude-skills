@@ -169,7 +169,7 @@ Strict CSP requires application changes (every inline script needs a nonce). The
 
 ### Step 1: Run a baseline scan
 
-Use a free scanner: securityheaders.com, observatory.mozilla.org. Get a current grade. This is the floor.
+Use a free scanner: securityheaders.com, or the MDN HTTP Observatory at developer.mozilla.org/en-US/observatory. Get a current grade. This is the floor.
 
 ### Step 2: Inventory the surface
 

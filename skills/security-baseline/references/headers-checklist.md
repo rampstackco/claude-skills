@@ -2,7 +2,7 @@
 
 Copy-paste reference for HTTP response headers that improve security. Organized by tier of importance.
 
-Test current headers with: securityheaders.com or observatory.mozilla.org.
+Test current headers with: securityheaders.com or the MDN HTTP Observatory at developer.mozilla.org/en-US/observatory.
 
 ---
 
@@ -140,8 +140,7 @@ Permissions-Policy:
   magnetometer=(),
   microphone=(),
   payment=(),
-  usb=(),
-  interest-cohort=()
+  usb=()
 ```
 
 This denies all listed features by default. Allow specific ones if needed:
@@ -149,8 +148,6 @@ This denies all listed features by default. Allow specific ones if needed:
 ```
 Permissions-Policy: camera=(self), geolocation=(self "https://maps.example.com")
 ```
-
-`interest-cohort=()` opts the site out of FLoC and similar third-party tracking.
 
 ---
 
