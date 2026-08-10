@@ -53,7 +53,7 @@ Sponsored placements in third-party newsletters.
 
 ---
 
-## Syndication networks (Outbrain, Taboola, native networks)
+## Syndication networks (Teads, Taboola, native networks)
 
 Paid placement on third-party sites via "you may also like" or "recommended for you" units.
 

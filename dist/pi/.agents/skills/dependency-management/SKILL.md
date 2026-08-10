@@ -167,7 +167,7 @@ Run the security audit:
 
 ```bash
 npm audit
-yarn audit
+yarn npm audit  # Yarn 2+; "yarn audit" on Yarn 1 Classic
 pip-audit
 bundle audit
 ```

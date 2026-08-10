@@ -76,7 +76,7 @@ Three categories with sub-types within each.
 
 - **Boosted social posts.** Paying to extend reach of an organic post on LinkedIn, X, Facebook, Instagram.
 - **Promoted newsletter sends.** Sponsored placements in third-party newsletters.
-- **Syndication networks.** Outbrain, Taboola, native-content networks that distribute content via paid placement on third-party sites.
+- **Syndication networks.** Teads (formerly Outbrain), Taboola, native-content networks that distribute content via paid placement on third-party sites.
 - **Search advertising for content.** Paying for clicks on content pieces (less common; usually content is the organic side and paid is the conversion side).
 - **Sponsored podcast or content placements.** Pre-rolls, mid-rolls, sponsored segments in industry podcasts or newsletters.
 

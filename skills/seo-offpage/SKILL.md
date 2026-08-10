@@ -89,7 +89,7 @@ Links earned through real business relationships.
 Local and category-specific listings that establish entity legitimacy.
 
 - Google Business Profile (for local businesses)
-- Bing Places, Apple Maps Connect
+- Bing Places, Apple Business (formerly Apple Business Connect)
 - Industry directories (review-quality only, skip spam directories)
 - Niche association directories
 - Wikipedia entry (where the brand qualifies for notability)

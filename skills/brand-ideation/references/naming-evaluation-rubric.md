@@ -16,7 +16,7 @@ A name people cannot say will not get said.
 - "Loom" - one syllable, common phoneme
 
 **Fail:**
-- "Xobni" (the X is silent? before the b? unclear)
+- "Xobni" (defunct since 2014; the X is silent? before the b? unclear)
 - Names with non-English diacritics for an English-speaking market that get stripped to ambiguity
 - "Yext" - is it "yext" with a hard Y or "ekst"? People disagree
 

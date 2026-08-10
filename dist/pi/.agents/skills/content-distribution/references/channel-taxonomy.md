@@ -156,7 +156,7 @@ Sponsored placements in third-party newsletters.
 
 ### Syndication networks
 
-Outbrain, Taboola, native-content networks that distribute content via paid placement on third-party sites.
+Teads (formerly Outbrain), Taboola, native-content networks that distribute content via paid placement on third-party sites.
 
 **Characteristics.** Programs pay per click; content appears on third-party sites in "you may also like" or "recommended for you" placements.
 
