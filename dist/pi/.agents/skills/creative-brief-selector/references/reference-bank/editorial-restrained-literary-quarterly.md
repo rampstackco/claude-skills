@@ -16,7 +16,7 @@
 - [thedriftmag.com](https://thedriftmag.com) - Politically situated, generationally branded, identity-forward. A considered quarterly must avoid the political-statement register on conversion architecture, palette, and voice.
 - [nplusonemag.com](https://nplusonemag.com) - Institutional NY cultural authority register. A considered quarterly should not borrow the geographic or generational positioning.
 - [laphamsquarterly.org](https://laphamsquarterly.org) - Historical-source-driven format (passages from historical writing assembled around a theme). A different format entirely; canonical to that publication and not transferable.
-- [believermag.com](https://believermag.com) - McSweeney's-adjacent geometric illustration identity. A type-led quarterly should not borrow the illustration-led visual treatment.
+- [thebeliever.net](https://www.thebeliever.net) - McSweeney's-adjacent geometric illustration identity. A type-led quarterly should not borrow the illustration-led visual treatment.
 - [atavist.com](https://atavist.com) - Single-essay-per-issue reportage register. A multi-essay themed quarterly is a different shape.
 - [themarginalian.org](https://themarginalian.org) - Single-author blog register. A multi-author themed quarterly is a different shape.
 

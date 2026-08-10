@@ -55,7 +55,7 @@ Narrow content column centered on the page, H1 and lede only, minimal. Often pai
 One element dominates the hero (usually an image at 70 to 80 percent of width), the other is caption-scale beside or below it. Distinct from `dual-column-image-and-text` by the imbalance: the dual-column is roughly balanced, the asymmetric leans heavily.
 
 - **When it fits**: magazine cover style, photography portfolios, single-product hero where the product carries everything and the type is a caption-scale credit line.
-- **References**: [magnum.com](https://magnum.com), [aesop.com](https://aesop.com) (varies; some pages use asymmetric layouts).
+- **References**: [magnumphotos.com](https://magnumphotos.com), [aesop.com](https://aesop.com) (varies; some pages use asymmetric layouts).
 - **Archetype affinities**: Luxe Considered, Documentary Honest, Editorial Restrained.
 
 ### `grid-of-elements`
@@ -71,7 +71,7 @@ The hero IS a grid: product tiles, listing cards, directory entries, no single a
 A data table or spec block is the hero element. The numbers and the comparison carry the page. Technical Precise register, B2B engineering context, comparison-led purchase decisions.
 
 - **When it fits**: B2B engineering procurement, hardware comparison sites, financial product comparison, anywhere the buyer is data-anchored before they care about photography.
-- **References**: [parametric-portfolios.com](https://parametric-portfolios.com), [substack.com/pricing](https://substack.com/pricing) (pricing-table-as-hero variants).
+- **References**: [parametricportfolio.com](https://www.parametricportfolio.com), [substack.com/pricing](https://substack.com/pricing) (pricing-table-as-hero variants).
 - **Archetype affinities**: Technical Precise, Editorial Restrained.
 
 ---
