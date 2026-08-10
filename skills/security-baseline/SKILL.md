@@ -252,7 +252,7 @@ When compliance applies, the baseline is necessary but not the full answer.
 
 **HSTS without `includeSubDomains`.** Attacker tricks browser into HTTP on a subdomain you haven't HTTPS'd yet.
 
-**HSTS preload without commitment.** Once preloaded, removing it takes weeks. Don't preload until HTTPS is solid across all subdomains forever.
+**HSTS preload without commitment.** Once preloaded, removing it takes months to reach users through a Chrome update, with no guarantee for other browsers. Don't preload until HTTPS is solid across all subdomains forever.
 
 **CSP with `unsafe-inline`.** Defeats most of CSP. Either go strict (nonce-based) or accept that CSP is providing limited protection.
 

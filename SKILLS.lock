@@ -667,8 +667,8 @@
     "references/scheduler-decision-criteria.md": "02a4237ac2d3101ab0d84c273f9b5f22d501d530fd76d250775e311d2f403196"
   },
   "security-baseline": {
-    "SKILL.md": "5b4bc0cd3724939b6ef8a41cd0ecc9cba2e75805087071a671739514516a0612",
-    "references/headers-checklist.md": "5ee3c6c626cd7c6dd3b85b1df1e4271d66b888f1c0d222b7e4ed11d4f7daa56e"
+    "SKILL.md": "70fe166514864d409e8cd2fae46388ab61204bd4a1c9ed00b4cf026ead14ccf5",
+    "references/headers-checklist.md": "cd659520f4b307f8c74031b3cff887a3adc2d847819e60a2d303496859a53c4e"
   },
   "seo-aeo-geo": {
     "SKILL.md": "573caeaa6d9e988fb7539bb79c397756ca7fb4645ab4f79a69d3a14017988529",
@@ -727,7 +727,7 @@
   },
   "seo-technical": {
     "SKILL.md": "8b874b2a102ac52c059f8860aae1119d36c14ecd8a63b5e7bcda7c04830d79f4",
-    "references/audit-template.md": "b7a7047ec9a46e6432bc1de45f9ec9c73d640ff5cedc1527f9715aac9b8f9829",
+    "references/audit-template.md": "1be66990a30a44f6cfac1f6cd89494d513954375571aba48782d110cabc587a6",
     "references/migration-checklist.md": "7f9a4dbdd9653d4a2d8a9c8795376562ac26545568db6f493a21c3f5bc485bb9"
   },
   "seo-traffic-diagnosis": {

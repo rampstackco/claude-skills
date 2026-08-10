@@ -20,7 +20,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 - `max-age`: lifetime in seconds (31536000 = 1 year, recommended for stable HTTPS deployments)
 - `includeSubDomains`: applies to all subdomains. Only enable when every subdomain serves HTTPS reliably.
-- `preload`: optional. Enables inclusion in browser preload lists. Once enabled, removal takes weeks. Only add when committed.
+- `preload`: optional. Enables inclusion in browser preload lists. Once enabled, removal takes months to reach users through a Chrome update, with no guarantee for other browsers. Only add when committed.
 
 **Common mistake:** Setting `includeSubDomains` before all subdomains are HTTPS-ready. Internal staging or admin subdomains break.
 
