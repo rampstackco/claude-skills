@@ -192,7 +192,7 @@ JWT plugins offer a more standard auth flow but add a plugin dependency.
 
 ### "API returns 403 from server-side fetch"
 
-**Cause 1:** A bot mitigation service (Cloudflare's "Attack Challenge Mode" or similar) is challenging the server-to-server request.
+**Cause 1:** A bot mitigation service (Cloudflare's "Under Attack mode" or similar) is challenging the server-to-server request.
 
 **Fix:** Disable bot mitigation challenges for the CMS API path, or whitelist the frontend's server IPs.
 

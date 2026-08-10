@@ -169,7 +169,7 @@ Strict CSP requires application changes (every inline script needs a nonce). The
 
 ### Step 1: Run a baseline scan
 
-Use a free scanner: securityheaders.com, observatory.mozilla.org. Get a current grade. This is the floor.
+Use a free scanner: securityheaders.com, or the MDN HTTP Observatory at developer.mozilla.org/en-US/observatory. Get a current grade. This is the floor.
 
 ### Step 2: Inventory the surface
 
@@ -252,7 +252,7 @@ When compliance applies, the baseline is necessary but not the full answer.
 
 **HSTS without `includeSubDomains`.** Attacker tricks browser into HTTP on a subdomain you haven't HTTPS'd yet.
 
-**HSTS preload without commitment.** Once preloaded, removing it takes weeks. Don't preload until HTTPS is solid across all subdomains forever.
+**HSTS preload without commitment.** Once preloaded, removing it takes months to reach users through a Chrome update, with no guarantee for other browsers. Don't preload until HTTPS is solid across all subdomains forever.
 
 **CSP with `unsafe-inline`.** Defeats most of CSP. Either go strict (nonce-based) or accept that CSP is providing limited protection.
 

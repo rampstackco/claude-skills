@@ -227,7 +227,7 @@ If the site is multilingual or multi-region:
 - [ ] Both `https://www` and `https://` (and `http://` versions) verified as separate properties
 - [ ] Domain property verified (the recommended approach)
 - [ ] Sitemap submitted and showing "Success"
-- [ ] No critical issues in Coverage report
+- [ ] No critical issues in the Page indexing report
 - [ ] No manual actions or security issues
 - [ ] Crawl stats reviewed (sudden drops or spikes investigated)
 
@@ -288,7 +288,7 @@ For larger sites, server logs reveal what crawlers actually do, vs what the site
 
 ## Monitoring after fixes ship
 
-- [ ] GSC Coverage report rechecked weekly until stable
+- [ ] GSC Page indexing report rechecked weekly until stable
 - [ ] Position tracking for top queries to confirm no regression
 - [ ] Log analysis re-run 2-4 weeks after fixes ship
 - [ ] CWV field data tracked for affected page templates
