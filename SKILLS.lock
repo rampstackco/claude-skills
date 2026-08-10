@@ -727,7 +727,7 @@
   },
   "seo-technical": {
     "SKILL.md": "8b874b2a102ac52c059f8860aae1119d36c14ecd8a63b5e7bcda7c04830d79f4",
-    "references/audit-template.md": "71d840bec52223e82eaebf518ad20636dcff163a316edc79923a5703f82ce92b",
+    "references/audit-template.md": "b7a7047ec9a46e6432bc1de45f9ec9c73d640ff5cedc1527f9715aac9b8f9829",
     "references/migration-checklist.md": "7f9a4dbdd9653d4a2d8a9c8795376562ac26545568db6f493a21c3f5bc485bb9"
   },
   "seo-traffic-diagnosis": {
