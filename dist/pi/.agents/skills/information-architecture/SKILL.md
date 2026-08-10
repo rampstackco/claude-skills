@@ -209,7 +209,7 @@ What you call things.
 4. **Define URL patterns.** One pattern per content type.
 5. **Design navigation.** Primary, secondary, utility, footer, breadcrumbs.
 6. **Build taxonomy.** Categories (controlled, small) and tags (open, large).
-7. **Validate labels.** Tree test or closed card sort with target users.
+7. **Validate labels.** Tree test or closed card sort with target users, or state the gap per the data-availability rule.
 8. **Document.** Use the template in [`references/ia-document-template.md`](references/ia-document-template.md).
 9. **Hand off to design and development.** IA decisions inform navigation components, URL routing, and taxonomy implementation.
 
@@ -245,6 +245,12 @@ Visual deliverables:
 - Sitemap diagram (Whimsical, Figma, OmniGraffle, etc.)
 - Navigation wireframes for primary surfaces
 - Optional: card sort and tree test results
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

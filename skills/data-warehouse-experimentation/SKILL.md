@@ -361,7 +361,13 @@ When designing or running a warehouse-native experiment, walk these 12 considera
 11. **Multiple comparisons.** Bonferroni or Benjamini-Hochberg correction across secondary metrics.
 12. **Decision documentation.** Write the result up. Archive in a queryable repository. The next experiment will benefit from the institutional memory.
 
-The output of the framework is an experiment record. Pre-registered sample size and stop criteria, the assignment salt, the exposure log specification, the dbt metric model, the analysis notebook, and a written-up decision. The record lives in version control or in a dedicated experiment-tracking system; the analysis is reproducible from the record.
+The output of the framework is an experiment record. Pre-registered sample size and stop criteria, the assignment salt, the exposure log specification, the dbt metric model, the analysis notebook, and a written-up decision. The record lives in version control or in a dedicated experiment-tracking system; the analysis is reproducible from the record. Where a required input for the record is unavailable, state the gap per the data-availability rule.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

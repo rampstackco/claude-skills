@@ -231,6 +231,12 @@ The output of the framework is one of three answers. Scale (the hypothesis is co
 
 ---
 
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
+
+---
+
 ## Reference files
 
 - [`references/channel-decision-matrix.md`](references/channel-decision-matrix.md) - Context-to-channel matrix with worked examples for the most common business contexts.

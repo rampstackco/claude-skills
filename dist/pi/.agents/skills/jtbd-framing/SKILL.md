@@ -225,7 +225,7 @@ When applying JTBD or auditing JTBD work, walk these 12 considerations.
 4. **Hire criteria identified.** What makes users adopt the product over alternatives.
 5. **Fire criteria identified.** What makes users switch away (or would).
 6. **Functional, emotional, social dimensions surfaced.** All three; not functional only.
-7. **Jobs derived from data, not workshop output.** Job statements emerge from interview data, not from whiteboard sessions.
+7. **Jobs derived from data, not workshop output.** Job statements emerge from interview data, not from whiteboard sessions. Without interview data, state the gap per the data-availability rule.
 8. **JTBD applied where it earns its keep.** Discovery, prioritization, positioning. Not as ritual.
 9. **Segment differences in jobs surfaced.** When the same product is hired for different jobs by different segments.
 10. **Decisions traceable to JTBD analysis.** Each major decision can be explained through the job framing.
@@ -233,6 +233,12 @@ When applying JTBD or auditing JTBD work, walk these 12 considerations.
 12. **Honest assessment of where JTBD does not help.** Some questions do not benefit from the framing; force-fitting produces ritual.
 
 The output of the framework is product decisions grounded in user motivation rather than user description, with the framing applied where it adds clarity and held back where it would become ritual.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

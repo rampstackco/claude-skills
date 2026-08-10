@@ -142,7 +142,7 @@ A content gap audit document with:
 
 1. **Executive summary.** Top 3 themes, content health verdict, recommended quarterly investment split.
 2. **Content inventory snapshot.** Counts by health classification.
-3. **Missing topics.** Prioritized list with cluster mapping and traffic forecast.
+3. **Missing topics.** Prioritized list with cluster mapping and traffic forecast, or state the gap per the data-availability rule.
 4. **Thin coverage.** Pages to deepen, with recommendation for each.
 5. **Outdated content.** Pages to refresh, with refresh scope.
 6. **Decaying content.** Pages to diagnose and act on, with hypothesis for each.
@@ -151,6 +151,12 @@ A content gap audit document with:
 9. **Methodology.** Data sources, classification criteria, caveats.
 
 Length: 8-15 pages plus an attached inventory spreadsheet.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

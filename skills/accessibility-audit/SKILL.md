@@ -119,7 +119,7 @@ Unplug the mouse. Navigate the priority user flows using only keyboard.
 
 ### Stage 3: Screen reader testing
 
-Test with at least one real screen reader. Each combination has quirks.
+Test with at least one real screen reader, or state the gap per the data-availability rule. Each combination has quirks.
 
 **Common combinations:**
 - VoiceOver + Safari (macOS / iOS)
@@ -229,6 +229,12 @@ Structure:
 9. Appendices (full automated scan results, keyboard navigation notes, screen reader notes)
 
 Plus a remediation tracking spreadsheet with one row per finding.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

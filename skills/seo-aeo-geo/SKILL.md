@@ -107,7 +107,7 @@ AI builds knowledge graphs and prefers entities with multiple consistent signals
 
 1. **Audit current state.** Run the 5-layer framework against the existing site. Score each.
 2. **Identify the priority queries.** What questions should AI cite this site for? List 10 to 20.
-3. **Test current AI visibility.** Query each of the major AI products (those relevant to the audience) with the priority questions. Note which sources they cite.
+3. **Test current AI visibility.** Query each of the major AI products (those relevant to the audience) with the priority questions. Note which sources they cite, or state the gap per the data-availability rule.
 4. **Identify gaps.** Is the site cited? On which queries? Why does it lose to the cited sources?
 5. **Layer-by-layer plan.**
    - Fix extractable structure on top 20 priority pages
@@ -141,6 +141,12 @@ Default output is a markdown plan at `aeo-geo-strategy.md`. Structure:
 4. Layer-by-layer remediation plan
 5. Implementation roadmap
 6. Re-test schedule (quarterly)
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 
