@@ -14,7 +14,7 @@
 ## Negative references
 
 - [starbucks.com](https://starbucks.com) - Mass-market grocery register; frappuccino lifestyle photography; promotional cadence dominates the homepage. The register a specialty roaster must not pull from.
-- [folgers.com](https://folgers.com) - Commodity grocery brand; blue-can heritage but no specialty register. The bottom of the grocery shelf, conceptually.
+- [folgerscoffee.com](https://folgerscoffee.com) - Commodity grocery brand; blue-can heritage but no specialty register. The bottom of the grocery shelf, conceptually.
 - Generic lifestyle-influencer subscription boxes (BarkBox, FabFitFun, Allure Beauty Box and similar) - Lifestyle-spectacle subscription register where the unboxing is the product; the box itself is supposed to be a surprise. Wrong register entirely for a specialty-coffee subscription where the named farm and the roast date are the value, not the unboxing reveal.
 
 ## Extension note

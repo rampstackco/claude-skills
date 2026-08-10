@@ -11,7 +11,7 @@ The references are cited NOMINATIVELY as register exemplars only. A build in thi
 - [marathonthegame.com](https://marathonthegame.com) - The saturated single-IP marketing register at its most committed: a published title's own brand, dark-mode-first, with the title's palette and art carrying the saturation rather than the publisher's chrome. Inherit the world-forward saturated register; do NOT pull the flat-graphic identity or layout.
 - [deathstranding.com](https://deathstranding.com) - Single-IP world-immersion marketing: the site immerses the visitor in one world (the setting, the lore) in the game's own voice rather than the studio's. Inherit the world-as-protagonist surface; do NOT pull the atmospheric scroll, type, or identity.
 - [cyberpunk.net](https://cyberpunk.net) - Saturated single-IP launch register: type at title-card scale, palette depth carrying the world's own tones. Inherit the type-at-scale and palette-depth treatment; do NOT pull the neon-magenta identity.
-- [eldenring.bandainamcoent.com](https://eldenring.bandainamcoent.com) - Single-IP lore-immersion marketing: a world page that treats the world as the protagonist with deep lore in the title's voice. Inherit the lore-immersion surface; do NOT pull the dark-fantasy identity.
+- [bandainamcoent.com/games/elden-ring](https://www.bandainamcoent.com/games/elden-ring) - Single-IP lore-immersion marketing: a world page that treats the world as the protagonist with deep lore in the title's voice. Inherit the lore-immersion surface; do NOT pull the dark-fantasy identity.
 
 ## Negative references
 
