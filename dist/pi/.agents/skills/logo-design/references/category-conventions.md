@@ -376,7 +376,7 @@ The category is dominated by abstract gesture and geometric reduction. Most AI a
 
 ### Reference brands
 
-- **Anthropic** (custom display typography, abstract gesture symbol, restrained palette)
+- **Anthropic** (lowercase wordmark plus the slanted-A glyph, no separate symbol, restrained palette)
 - **OpenAI** (custom geometric mark, simple wordmark, monochrome execution)
 - **Hugging Face** (custom emoji-as-symbol, distinctive in a category that doesn't usually allow it)
 

@@ -85,7 +85,7 @@
     "references/by-vertical/12-hospitality-travel.md": "a336fbc969e1c25b52059e6e0150af167eb31dcf4e3dce14a27657ea7a857ce0",
     "references/by-vertical/13-media-publishing.md": "b77ddc25aea3cd1e03e8313886369c5f44947f11b67926bde1b6a5805afeb345",
     "references/by-vertical/14-edtech.md": "0ea7800014ebb21f7d54750eb9ce7674ee2115b7f7fbfd4496806b75d0d88170",
-    "references/by-vertical/15-gaming-entertainment.md": "02a41387caa0d88d12e1aa5c9ea6d7249d6fd20c0cd91834282c98798ea0c423",
+    "references/by-vertical/15-gaming-entertainment.md": "4b999e75f5f22f451ee3b1767f0ef8ff843f88905c3ede1f7366af85ed4ef8ef",
     "references/by-vertical/16-marketplace.md": "9e04a05cbd002b311badde6db75fbaf971352cb709ab8c1a76536d9b69db9900",
     "references/by-vertical/17-crypto-web3.md": "14b87a942df5a92960c65227b570a0702125325a084b74f150c03957b9cbdbf3",
     "references/by-vertical/18-real-estate-proptech.md": "6693693d018c9341cb7d746980cd9317762706ea3075262cb232fa01f9379f39",
@@ -108,9 +108,9 @@
     "references/interview-guide.md": "284421b5bd389ebcd0f0eac36beff90eb5661f691a12f8e62b04652d29b83c46"
   },
   "brand-ideation": {
-    "SKILL.md": "cbfa399301eed7dea1559f0c431ee9deab22ce54393c75353e19c241b5e8c746",
+    "SKILL.md": "a4cc8dfc44086813b9afaccb71930cc1f63517158e2bb9a8072a318d4c97440a",
     "references/ideation-output-template.md": "57e4312d98f9db6f527bd2913480a6b6b6febc9a5756305db9c5db6eb771252e",
-    "references/naming-evaluation-rubric.md": "b7f5c2b68229a4e992385519be8499a41f89744930372aee182a5f77ad4b9c57"
+    "references/naming-evaluation-rubric.md": "80ed4223a90d4bd8fb1db9c961a8ec3771b352a3620feca0c0bd8e0fe8b3d0e3"
   },
   "brand-identity": {
     "SKILL.md": "91dc7f2acc3a0ad57867329adc327c0d531e1df3881c83f4115409079a67b63b",
@@ -184,23 +184,23 @@
     "references/brief-governance-patterns.md": "382342645f219bd2b7c563180cb1762fd02af75167618413ed8fb54e68c39bbd",
     "references/brief-templates.md": "b7a79d140611d98bf97ac0012b42af95b603dc62b14d19fe569362d664cce0e3",
     "references/common-brief-failures.md": "4ffac06f788da3b8c5a9455876d10fc4889d4299e5b8a72d30d36eb57c7e2116",
-    "references/entity-coverage-checklist.md": "6ff4220eda35ce703fc692a4412244c9cec54448032b0dff6237fe05aca64ad4",
-    "references/heading-structure-patterns.md": "f6de5d055ad9da0db009c2ef2d8d0a05ceb81b77c5f9e25580348cff7f723ac4",
+    "references/entity-coverage-checklist.md": "e024138145632671fc420c6d5e811539422438d379599357e3f121e4961b6e6e",
+    "references/heading-structure-patterns.md": "f159b6e147649a20d7f152360a62cb6bf2bd2a392c0e645a604dc98559da999f",
     "references/internal-linking-strategy.md": "583fc4c14248b6cfca9a36fb538307419406aa3b6ee114f9fe4c427417f67ceb",
     "references/search-intent-classification.md": "1abb35b731098eab72480adb933ec623525a0e6dc97c56e15d860b3fe44aea0b",
     "references/writer-handoff-protocols.md": "8cf53b9a3f5c026bc20b2a861d40f83ce9088e43255f469fdb8e60ade1a0563a"
   },
   "content-distribution": {
-    "SKILL.md": "c64b8f6a494351cd4fb7758a1a916381bce2a3b635a44bf23f96e76c9b1d283c",
+    "SKILL.md": "cfd14574e8c0c8ca8154cd6f9b008a01aaf8860538cda4ebc735895057cb7ee3",
     "references/audience-channel-matching.md": "5428654883780c23dfe6e757abf44c547a7f80ccf9fb41da9e3b49c311c21bbb",
-    "references/channel-taxonomy.md": "53756c7e7e6697d87610a46f01f12bf7b2f2435b10747242eab24311b34b2cc7",
+    "references/channel-taxonomy.md": "d58450cb9a0213abc2c3962cb7d7f4dbe6287a4948abe66be1b184441eae784b",
     "references/common-distribution-failures.md": "73f46f456d0876ee70ec222c2271d4b22242151e91c9392d6a4edad889d187d6",
     "references/content-channel-matching.md": "06f73d90652989d55d2c3a8cd0318fd9e11d43931fd001e6bf3130cfd953d1af",
     "references/distribution-cadence-patterns.md": "7bab05c454e42ae51b0e6d32b4a362f84b7de39cd93c742988abe1800d456b9f",
     "references/distribution-measurement.md": "b45c31337a64b3693b2816116206119325f439185d0ccd11b839a94fa9b47e07",
     "references/earned-channel-work.md": "d757f139c9332c094f1c95a4104542951d7abf1e5fc1c87154961bf0136f7815",
-    "references/owned-channel-discipline.md": "d9dd2c4200ffc3c33481eeef0f94275c1a687ecaea1d9b653651915e7e219565",
-    "references/paid-promotion-patterns.md": "421229698784ea9de8606340bd0eddb68d68714bef49cc0143738e285d678819"
+    "references/owned-channel-discipline.md": "f1ef8ee47fb48802024ccdf4a8bfd03b8f20f04fae49bcd8780b74e8577797a5",
+    "references/paid-promotion-patterns.md": "5a9f2cb99cfc77128248a6f321f39d9a31ced28e57bb4ce14ba3390e46aeea30"
   },
   "content-migration": {
     "SKILL.md": "943dabf12d00fe46909ea4df0913eb0c2816dc40e98d5233b58db463b3a19510",
@@ -224,7 +224,7 @@
     "references/common-repurposing-failures.md": "865db4e58177ebd390d4501004836f102e484152486c4e2510a2cb549abe8291",
     "references/cross-promotion-patterns.md": "29c7c8eceeb3217069c6ba60d6a11503260e296bb3781eeaf8653a861d819c40",
     "references/format-adaptation-patterns.md": "8652b63ef34e5b2994774ef7829bbc65bb29b62940d935a3c7149b6f3f1ccd2e",
-    "references/per-format-constraints.md": "08ddd2d86d1614215a10438181a1bcea3868c29d0ecedf22608038db323613f9",
+    "references/per-format-constraints.md": "047dcfa16c9f3dfb03f101d155b6b85c13fe06fd5c9ab65bfa7eb7cae0a7af84",
     "references/repurposing-pipeline-templates.md": "6ad5112321327b81a588d41d387d9a3211b504011615a411ecff9c2af70d5783",
     "references/sequencing-and-cadence-patterns.md": "a88b40085203372c4c8dedde765529ab93815fb216adce3c1000c82a09dd1f23",
     "references/source-piece-selection-criteria.md": "38e988bcceefb541d53265b39a310f9670f116c0534b0cc3662d8032507e28db",
@@ -256,19 +256,19 @@
     "references/reference-bank/README.md": "3cba4191eab66335ad03f15f4606769f79c5ca57126c0f1e720939281e9cb226",
     "references/reference-bank/bold-confident-editorial-restrained-aaa-game-studio.md": "ab67bc3849749ab8922496336a7471e59ef541725725921a5fa25e2c6816402b",
     "references/reference-bank/bold-confident-vibrant-saturated-single-ip-game-title.md": "9cced4a01606a3072759426a84fe9ca543cea83ef04aa66461d18ea1fa8a0ca1",
-    "references/reference-bank/editorial-restrained-documentary-honest-specialty-coffee-subscription.md": "0f1e53a62bf93f684817ece1031172bc6fad28d2657c909a47ef4df597356b54",
+    "references/reference-bank/editorial-restrained-documentary-honest-specialty-coffee-subscription.md": "74d97737c43769e066222af41c28430c8644039b1bb058081a59442704584ca7",
     "references/reference-bank/editorial-restrained-literary-quarterly.md": "22fb5569259aa45b5778cec6ae5612dd62740ccb58bdaa2ee52c23f199ecebae",
     "references/reference-bank/heritage-local-service-barbershop.md": "ea5759017c562ce5ea307242c1ba416be2a56c393e55c385ce3e48927795a9f3",
     "references/reference-bank/hospitality-experience-balloon-ride.md": "34ded5e0426199289aed64cd2f827018ebb61c62ed38ae3223acce5e217518c6",
     "references/reference-bank/luxe-considered-curated-stays-directory.md": "4e1864874db794d111903cfd0456103233ec4a8adfeada5be14653a03c6b2a9d",
     "references/reference-bank/luxe-considered-editorial-restrained-residential-architectural-brokerage.md": "fd879703fdb1fbd13c71284adf04a88e12e5a72a60495f46f21fd142cb59fa55",
-    "references/reference-bank/minimal-essentialist-documentary-honest-trades-directory.md": "15281a0104033f8e24f23e5869a85134986ccb56bb1e28cd98d03cd4aba4a641",
+    "references/reference-bank/minimal-essentialist-documentary-honest-trades-directory.md": "0561583faf363bdeb266401f0b50bc8aadb9994975adb481c4a554543d0fe9eb",
     "references/reference-bank/premium-dtc-maker-western-boots.md": "96fa2f957f14fe6e373732ad58bcb3adae673db3ace7f440a111293af3305252",
     "references/reference-bank/rugged-utilitarian-documentary-honest-regional-used-vehicle-marketplace.md": "3e54545c7bb9fa5f0aec2a0689098b9a08a78cdd5dfa87c93cc8c600e5ca2f27"
   },
   "creative-direction": {
     "SKILL.md": "fc11c13225666233b3e544854a7a46a19d3a04ced7faefaa0fc1cfd892fd0eb4",
-    "references/axes-explained.md": "26cf20c0146660f1c675fbcabba2f3742f69ebb1543e31c0840deeaff0d77567",
+    "references/axes-explained.md": "51240a8dd878665176ca289f52bb8d15c5ac7454dd461bf6ea89ebd0c1b5e1cc",
     "references/brief-template.md": "bbcf997ba2049d58858758018bb81412c783f1d9a7d1e07ae0dc2615de9f8ddc",
     "references/example-aesthetic-brief.md": "9b99900f15182d05c705808691a2941aeb3ad48ab18b533fa28e0d3481282f91"
   },
@@ -282,13 +282,13 @@
     "references/common-pitfalls.md": "3bd66b6477c1340b085f68fb42d550809fd931d0af2efc1cb10d686ea0cfc0b4",
     "references/metric-definitions-in-dbt.md": "68d9143d0eccbde123d06517c1b2b8b62304657c1999f7c08c9b7d4bf05c3272",
     "references/power-analysis-calculations.md": "f53c0eab73db7786826c590f108e17e21feef00cd40436337a8cb35723bdb78a",
-    "references/sequential-testing-patterns.md": "e876bab3f9a795cc9c872d46ec128c18116b3ea2439b85fe27ce61953b5a74ae",
+    "references/sequential-testing-patterns.md": "428c676539f8a8788840251273266237fc3ce3dc3227926471aad696cf818428",
     "references/statistical-analysis-templates.md": "3a20a29d06a96b79c2e0df7452af0eef40237dc9b874a90587883eaac0abe7a1",
     "references/variance-reduction-techniques.md": "726539000ebc237f813a763e1655389784c1f32519c9420a1d6bca049c7efe81",
     "references/warehouse-vs-platform-decision.md": "6586a38fb0ca88501f5e5ba912d0effcea381f85159dd86f7c8cc8aa8ffca06a"
   },
   "dependency-management": {
-    "SKILL.md": "ae2f2aad82407f0296e53eae858598d9695fd4fa92f72729fbbc9d63591eff6b",
+    "SKILL.md": "33f58ba38944559c34ac5d68037fa164a3b0d5fd8b89dc18b7cb1b116d5c491d",
     "references/upgrade-checklist.md": "5f109279239766ecea3303f7e3fd8c423788ec45bd197500d35a39e926f28bcb"
   },
   "design-standards": {
@@ -500,11 +500,11 @@
     "SKILL.md": "81f4dce86b45e901a89c93fa1f5f2e82d6ecb1754fe1ac7b6077d78de1db0711",
     "references/application-contexts.md": "5aad2091c8e66c6fc256e75b307544a23095e387d5c8e3f6c493ee0add9fb70e",
     "references/architectures-explained.md": "4e23b69addb6837c148c4fd0a23a3cd4586af83c64fdb65a3abcf20cff7a080b",
-    "references/category-conventions.md": "8e90ead85e315275de3afda451b0af21a9707c0252bb2fee1aeaa257ad4d9546",
+    "references/category-conventions.md": "fa1db8e1388e8678048d0e50eece780d432ea812d03e29ae7797c09d05768b15",
     "references/client-package.md": "47f4ebb7f34ef971a838f2199dc166cd1a7bab7f11646da9755d0233a3660bd6",
     "references/example-variant-spec.md": "7c10711a934233c2b0210d345acae580bbe15aec06dc7feea6cb3bb32361d05e",
-    "references/symbol-approaches.md": "8d96f44908898be707c76ee6a78ef71ab214a4bc3f6efd53d041d7e66cf974c7",
-    "references/typographic-registers.md": "df34f7cdb4d24eb5237c163c29aefc1156bce480eb024a5ddbc1c117061e451a"
+    "references/symbol-approaches.md": "cba62bc2c40ba78e9a42fa3958351093caa5aca5f496701adf533837ed2caf55",
+    "references/typographic-registers.md": "5b377e8e698fea94ab8cae1aa93106f72a3cf431587c48e4a78032a455a4a23e"
   },
   "long-form-content-frameworks": {
     "SKILL.md": "78a9699621fe4249617d1d994308631856602826d83597dd9d737265aea3a67e",
@@ -523,7 +523,7 @@
     "references/responsive-image-patterns.md": "eb7db1ac10ffd4ba5fd054af7f0e5254c642e65387c53783868dcdb2f8ef3db8"
   },
   "monitoring-and-alerting": {
-    "SKILL.md": "49c6556d04de2e03bb3ef0617b994fc933ff941e5ba917afd7fd34658d0c89fc",
+    "SKILL.md": "17c87cf6c7a5aa3fce47e365b3f1c16daa1f48cf66fedfb6e4bf3764f2a3d278",
     "references/slo-design-guide.md": "b1dca1a7bec8b45b490899c918dc6a40f5c2206e29b3e9aecceb466379d2e5ad"
   },
   "multi-step-form-design": {
@@ -588,7 +588,7 @@
     "references/pillar-cluster-decision.md": "03d57c506c7b88d8020a90989f4939463188a91393d6ae1cc89f45a6ad6a4c6b",
     "references/pillar-page-anatomy.md": "c0b38f0b943be933095d9d08cc035fd3ad3f4a87675fd30950e87ad6f9bdece8",
     "references/topic-selection-criteria.md": "41f4db72d83096095f97468aba5c060f1c1be4e2223177db4be9490bda674606",
-    "references/topical-authority-signals.md": "c4b1da3952b4f64c906bbf8663a1fbd716fda4432708546b99d7009456441b33",
+    "references/topical-authority-signals.md": "9b662cf3fb171a2b6c3a11cae8aaa9930dbe08b70bd3b38bb3b56ed54f0350ce",
     "references/url-structure-patterns.md": "2949bbd359b36fba00e71bb6ae63eafa5c4da036ca6b54275db7b0891218a68d"
   },
   "pm-spec-writing": {
@@ -598,12 +598,12 @@
     "references/prioritization-frameworks.md": "b8b7696ecc60f95d56ce2c91cf67d32b4aed6e9432db90eba319935431cd7e8a"
   },
   "product-analytics-setup": {
-    "SKILL.md": "dd468374cde1a89d29f344604c8657ba67b9304398343dd410e91d15c3fe917e",
+    "SKILL.md": "bd1672b1a1f345f8ef0c020ea80bacc465773250810fbc7e780d85c56f1a035e",
     "references/cohort-definition-patterns.md": "efac882d9b59a04e2f7be066d502a4e633797ce4b8a9e374597d794f9673498a",
-    "references/common-failures.md": "97a65cea3da7d9739c9698581f8f027886980c7403fc9bc3e3f5beea1931f1f9",
+    "references/common-failures.md": "99d3c4cb4abca31b7a922b8fce902808d310bfd3ae495dd7a424cf9b3d42ef09",
     "references/event-taxonomy-template.md": "41c337b25785fd484cdd5a26207229171b2a6341fe12612a5b516e23be754212",
     "references/funnel-design-templates.md": "9bc3b1e81b75f06ebd91ff5bb9f6ba9ab8a413ce8e1f5e762dabadf0d00cd377",
-    "references/instrumentation-audit-checklist.md": "2bfb6ee57316174d2e3de9ea240c4957401f98844f6cb50c410ce93d2f88b337",
+    "references/instrumentation-audit-checklist.md": "4259790331729bfc5abaf3a5d5b3121da11a195f283cd94935667004ebfd56a2",
     "references/naming-convention-reference.md": "ec10f6ea1567a79ead0e2d81d860c8bc01a2e821961071023a73b71dc617f674",
     "references/north-star-metric-selection.md": "45959db9ed267c0ed9f26873e1ca1c816b15d3f24cdb6d6cefac8ce88ee71dff",
     "references/property-design-patterns.md": "5b496ca6447f06f72dccc48a1fb36b1f0c533d3339f207baf97160c8bba90907",
@@ -707,7 +707,7 @@
     "references/opportunity-scoring-rubric.md": "0fdc3312bad1f6b1b0dc25d594700c09dbb3ab5da65b46a50999b6b9bea330a3"
   },
   "seo-offpage": {
-    "SKILL.md": "34f047ae8e48c8e7bc911345029bec572b8729a87665f9c517aa23a87c7a7748",
+    "SKILL.md": "6881ca0545414dc7ee2551ebc298e90552ce0da3cc44304b59b74e9aba2845ee",
     "references/linkable-assets-guide.md": "03c09bb5272ba30455df405f6b97f0fbc0e92023753bd85e1009297c8f24f6ee",
     "references/outreach-templates.md": "ac5b76f5825a16f9476f09c6c946a6e7ffcda8496090b68d3fa9a7a2b9bfc5a0"
   },
