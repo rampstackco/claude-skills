@@ -1,6 +1,6 @@
 # The RampStack Starter Kit: Standardize Your Operation
 
-Turn the scattered processes your team runs from memory into a workflow library: written, validated, and ready for AI assistance. This is the same method RampStack uses to run its own properties, packaged so you can apply it to your business in an afternoon.
+Turn the scattered processes your team runs from memory into a written workflow library, validated by cold runs before any AI touches it. This is the same method RampStack uses to run its own properties, packaged so you can apply it to your business in an afternoon.
 
 You do not need RampStack's engines to use this. The method is open. The engines are the operated layer for teams that want it run continuously; the boundary is stated plainly in section 8.
 
@@ -21,7 +21,7 @@ Inventory every distinct process your team runs. Score each on frequency, pain, 
 
 ## 3. The workflow file contract
 
-Every workflow uses the same fields. The format is the product; it is what makes a process auditable, teachable, and safe to automate.
+Every workflow uses the same fields. The format is the product; it is what makes a process teachable to a stranger and safe to automate later.
 
 ```
 # Workflow: [Name]
