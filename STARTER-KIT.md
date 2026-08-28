@@ -66,6 +66,8 @@ Dated entries. When this workflow ships a bad output, the incident
 lands here and the fix lands in the phase text above.
 ```
 
+This is the reader-facing version of the contract RampStack's own workflow tier uses; the tier adds connector classes, lane semantics, and a five-axis score for operated deployments (the files in workflows/ carry the full form). Start with this one.
+
 ## 4. The status ladder
 
 - **template**: written, never executed as written.
