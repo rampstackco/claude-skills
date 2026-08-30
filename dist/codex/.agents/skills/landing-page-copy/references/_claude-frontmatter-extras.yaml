@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: landing-page-copy
+
+category: content
+catalog_summary: "Landing pages, sales pages, hero-to-CTA flow"
+display_order: 4

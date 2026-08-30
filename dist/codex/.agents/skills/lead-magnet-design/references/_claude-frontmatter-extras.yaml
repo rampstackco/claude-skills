@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: lead-magnet-design
+
+category: growth-tooling
+catalog_summary: "Designing gated content that earns the email. Distinguishes thin-bait (overpromises, underdelivers) from kitchen-sink-resource (everything, helps with nothing) from earned-value-magnet (delivers standalone value while qualifying the lead)"
+display_order: 1

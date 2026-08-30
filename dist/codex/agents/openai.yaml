@@ -1,0 +1,98 @@
+# openai.yaml - MCP wiring template (Codex distribution)
+#
+# This is a COMMENTED TEMPLATE, not a working config. The skills
+# in this distribution reference the MCP servers listed below.
+# An operator must fill in the real server url / name / auth for
+# each server they want to enable, then uncomment the block.
+#
+# No real server endpoints or credentials are shipped here on
+# purpose: those are environment specific and must be supplied by
+# the operator.
+#
+# Detected MCP servers and the skills that reference them:
+#
+#   Ahrefs MCP  (7 skill(s))
+#     - seo-audit-orchestration
+#     - seo-backlink-audit
+#     - seo-content-gap-audit
+#     - seo-keyword-gap-audit
+#     - seo-rank-tracking
+#     - seo-site-health-audit
+#     - seo-traffic-diagnosis
+#
+#   Chrome MCP  (1 skill(s))
+#     - integration-orchestrator
+#
+#   GitHub MCP  (1 skill(s))
+#     - integration-orchestrator
+#
+#   Linear MCP  (1 skill(s))
+#     - integration-orchestrator
+#
+#   Playwright MCP  (1 skill(s))
+#     - integration-orchestrator
+#
+#   Similarweb MCP  (1 skill(s))
+#     - seo-competitor
+#
+#   Windows MCP  (1 skill(s))
+#     - integration-orchestrator
+#
+#   Generic / unnamed MCP references (operator review needed):
+#     - ads-creative-development
+#     - ads-performance-analytics
+#     - experiment-design
+#     - experimentation-analytics
+#     - experimentation-platform-orchestrator
+#     - feature-flagging
+#     - paid-media-strategy
+#
+# The Ahrefs MCP is the key dependency: it powers the entire SEO
+# audit suite. Without it those skills degrade to manual guidance.
+#
+# ---------------------------------------------------------------
+# Uncomment and complete one block per server you enable:
+#
+# mcp_servers:
+#   ahrefs:
+#     name: "Ahrefs MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#
+#   chrome:
+#     name: "Chrome MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#
+#   github:
+#     name: "GitHub MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#
+#   linear:
+#     name: "Linear MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#
+#   playwright:
+#     name: "Playwright MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#
+#   similarweb:
+#     name: "Similarweb MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#
+#   windows:
+#     name: "Windows MCP"          # operator: display name
+#     url: "<FILL IN server url>"        # operator: MCP server endpoint
+#     transport: "<sse|stdio|http>"      # operator: transport type
+#     # auth: configure credentials per your environment
+#

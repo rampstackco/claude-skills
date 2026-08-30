@@ -1,0 +1,24 @@
+# Bold-confident-vibrant-saturated, single-IP game-title marketing site
+
+- **Archetype**: `bold-confident` with `vibrant-saturated` as the composition secondary. The lead is the cinematic-confident register of AAA action titles; the secondary is the saturated leap (palette depth, type at title-card scale, key art as the load-bearing surface). This is the expressive content-brand end of the gaming and entertainment vertical, distinct from the studio-portfolio chrome that publishes the title. The pair to `bold-confident-editorial-restrained-aaa-game-studio`: the studio composes with Editorial Restrained chrome restraint, the single title composes with Vibrant Saturated to claim the saturation the studio reserved.
+- **Vertical**: Single-IP marketing (specifically a post-launch AAA action game title: the marketing site where one shipped game lives, distinct from the studio portfolio that publishes it). The shape generalizes to any single published work (a single film, album, book, or show); the references here are the game-title instance.
+- **Position summary**: A single published title's own brand, dark-mode-first, world-forward, where the world's own palette and the key art carry the saturation. Cinematic launch-poster hero, a trailer or curated key-art sequence, a world-immersion surface, a systems surface, a media gallery, and a follow-or-storefront conversion close.
+
+## Positive references
+
+The references are cited NOMINATIVELY as register exemplars only. A build in this position inherits the register (dark-mode-first, world-forward, saturated, cinematic) and pulls NO trade dress, layout, scroll behavior, font choice, or animation language from any specific real-game marketing site. Marketing-site mimicry is as off-limits as in-game resemblance.
+
+- [marathonthegame.com](https://marathonthegame.com) - The saturated single-IP marketing register at its most committed: a published title's own brand, dark-mode-first, with the title's palette and art carrying the saturation rather than the publisher's chrome. Inherit the world-forward saturated register; do NOT pull the flat-graphic identity or layout.
+- [deathstranding.com](https://deathstranding.com) - Single-IP world-immersion marketing: the site immerses the visitor in one world (the setting, the lore) in the game's own voice rather than the studio's. Inherit the world-as-protagonist surface; do NOT pull the atmospheric scroll, type, or identity.
+- [cyberpunk.net](https://cyberpunk.net) - Saturated single-IP launch register: type at title-card scale, palette depth carrying the world's own tones. Inherit the type-at-scale and palette-depth treatment; do NOT pull the neon-magenta identity.
+- [eldenring.bandainamcoent.com](https://eldenring.bandainamcoent.com) - Single-IP lore-immersion marketing: a world page that treats the world as the protagonist with deep lore in the title's voice. Inherit the lore-immersion surface; do NOT pull the dark-fantasy identity.
+
+## Negative references
+
+- Studio and publisher portfolio sites ([bungie.net](https://bungie.net), [naughtydog.com](https://naughtydog.com), and the paired `bold-confident-editorial-restrained-aaa-game-studio` register) - The studio chrome composes and recedes to let many titles share a body of work. The single-IP title's register is the saturated content brand, distinct from the publisher's chrome; a single title is not a portfolio.
+- Platform-chrome sites ([steampowered.com](https://steampowered.com), [store.epicgames.com](https://store.epicgames.com), [itch.io](https://itch.io)) - Platforms host third-party content and lean restrained to let the content carry. A single-IP marketing site is the content's own brand, not the platform that distributes it.
+- Casual and mobile single-game marketing sites (the bright multi-hue cartoon register of casual-mobile single-game brands) - Wrong register; an AAA cinematic title is dark-mode-first and world-forward, not bright-cartoon.
+
+## Extension note
+
+- Seeded from the Mariner's Gauntlet single-IP marketing brief (first portfolio entry in the single-IP marketing shape; the title side of the Ironhold pair; the first portfolio entry composing with Vibrant Saturated). The title claims the saturated single-IP register that the paired studio brief (`bold-confident-editorial-restrained-aaa-game-studio`) deliberately reserved as forward-divergence headroom. The brief documents the framework's first Rule 5 BLOCK against a same-pair shipped demo: `full-bleed-image-with-overlay` is blocked (five shipped matches plus a shared Bold Confident family with the publisher Ironhold), so the title selects `centered-single-column` as a cinematic launch-poster hero, the intended divergence-within-the-pair. Footer is `newsletter-band-with-credits` (the follow-the-title conversion). Last updated: 2026-05-28.

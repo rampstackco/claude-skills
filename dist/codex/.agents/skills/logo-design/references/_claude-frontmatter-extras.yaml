@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: logo-design
+
+category: brand
+catalog_summary: "Logo variants across architectures (wordmark, lockup, monogram, letterform-as-symbol), with rationale and application specs"
+display_order: 5

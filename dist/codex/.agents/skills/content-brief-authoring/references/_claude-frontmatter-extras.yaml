@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: content-brief-authoring
+
+category: content
+catalog_summary: "Per-piece editorial brief: target keyword, intent, audience, outline, entity coverage, internal linking, success criteria, and the discipline that distinguishes useful briefs from bloat"
+display_order: 2
