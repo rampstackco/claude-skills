@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: product
+catalog_summary: OKR design discipline. Outcome statements, key results, scoring, mid-quarter recalibration. Distinguishes sandbagged OKRs (always hit, useless) from aspirational fantasy (impossible, demoralizing) from stretch OKRs (genuine ambition with quarterly accountability)
+display_order: 12

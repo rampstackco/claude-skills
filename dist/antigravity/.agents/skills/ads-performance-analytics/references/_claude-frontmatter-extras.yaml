@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: marketing
+catalog_summary: "Read paid media dashboards without fooling yourself: attribution models, platform reporting quirks, ROAS vs LTV, multi-platform reconciliation, incrementality testing, and the interpretation failures that compound into wasted budget"
+display_order: 3

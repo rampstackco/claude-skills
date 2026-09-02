@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: content
+catalog_summary: "Pre-publish QA framework: brief adherence, voice consistency, fact accuracy, AI-content audit, AEO/SEO compliance, sampling at scale, and the workflow that distinguishes catch-problems QA from process theater"
+display_order: 7

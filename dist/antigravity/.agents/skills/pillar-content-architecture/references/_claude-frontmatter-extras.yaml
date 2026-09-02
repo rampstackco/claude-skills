@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: content
+catalog_summary: "Hub-level content architecture: pillar topic selection, cluster planning, internal linking, URL structure, pillar and cluster page anatomy, topical authority signals, refresh discipline"
+display_order: 1

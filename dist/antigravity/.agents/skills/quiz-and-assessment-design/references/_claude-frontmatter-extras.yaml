@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Designing quizzes and assessments that produce actionable segmentation. Distinguishes clickbait-quiz (engagement only) from vanity-result (entertaining, not useful) from actionable-segmentation (genuine categorization that drives next-step recommendations)
+display_order: 3

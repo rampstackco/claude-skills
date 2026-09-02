@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: ai-content-collaboration
+
+category: content
+catalog_summary: "How humans and AI compose in content workflows: participation boundaries, hybrid patterns, voice ownership, the AI slop problem, disclosure and transparency, team calibration, and the ethics of honest AI-assisted production"
+display_order: 8

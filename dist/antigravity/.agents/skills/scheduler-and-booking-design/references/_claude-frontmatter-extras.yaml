@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Designing schedulers and booking flows. Distinguishes any-time-friction (no qualification, just a booking link) from interrogation-gate (so much qualification it scares users off) from qualified-fast-path (just enough qualification to set up the call well)
+display_order: 10

@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: process-and-team
+catalog_summary: 30-60-90 onboarding plans for new hires and contractors
+display_order: 4

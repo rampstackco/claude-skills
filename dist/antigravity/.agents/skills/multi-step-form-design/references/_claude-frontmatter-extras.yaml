@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Designing multi-step forms that respect cognitive load while maintaining completion intent. Distinguishes kitchen-sink-single-page (overwhelms) from progress-theater (steps without genuine staging) from genuinely-staged (each step earns its own page)
+display_order: 4

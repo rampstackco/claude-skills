@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Architecting cross-tool conversion flows that match audience and stage. Distinguishes silo-funnels (every tool standalone) from kitchen-sink-funnels (every audience squeezed through one path) from matched-funnels (architecture matched to audience-and-stage)
+display_order: 6

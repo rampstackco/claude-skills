@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: team-onboarding-playbook
+
+category: process-and-team
+catalog_summary: "30-60-90 onboarding plans for new hires and contractors"
+display_order: 4

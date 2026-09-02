@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Designing interactive calculators that deliver decision-support value while qualifying leads. Distinguishes vanity-calculator (no real value) from lead-trap (hides answer behind email) from transparent-decision-tool (gives genuine value, captures leads honestly)
+display_order: 2

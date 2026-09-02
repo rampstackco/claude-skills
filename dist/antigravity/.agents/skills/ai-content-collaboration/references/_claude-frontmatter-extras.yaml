@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: content
+catalog_summary: "How humans and AI compose in content workflows: participation boundaries, hybrid patterns, voice ownership, the AI slop problem, disclosure and transparency, team calibration, and the ethics of honest AI-assisted production"
+display_order: 8

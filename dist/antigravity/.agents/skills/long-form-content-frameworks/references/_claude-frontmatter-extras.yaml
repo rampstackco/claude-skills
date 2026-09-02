@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: content
+catalog_summary: Structural patterns for individual long-form pieces (case studies, whitepapers, research reports, definitive guides, manifestos, ebooks, long-form tutorials) that distinguish publication-quality work from bloggy-long padding or academic bloat
+display_order: 9

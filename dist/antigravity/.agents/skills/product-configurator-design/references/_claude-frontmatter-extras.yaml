@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Designing interactive product configurators. Distinguishes infinite-options (decision paralysis from too many options) from canned-bundles-only (no real customization) from guided-configuration (smart defaults plus meaningful constraints plus escape hatches)
+display_order: 12

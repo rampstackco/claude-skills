@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: calculator-design
+
+category: growth-tooling
+catalog_summary: "Designing interactive calculators that deliver decision-support value while qualifying leads. Distinguishes vanity-calculator (no real value) from lead-trap (hides answer behind email) from transparent-decision-tool (gives genuine value, captures leads honestly)"
+display_order: 2

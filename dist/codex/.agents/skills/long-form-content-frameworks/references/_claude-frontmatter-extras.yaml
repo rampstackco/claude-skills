@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: long-form-content-frameworks
+
+category: content
+catalog_summary: "Structural patterns for individual long-form pieces (case studies, whitepapers, research reports, definitive guides, manifestos, ebooks, long-form tutorials) that distinguish publication-quality work from bloggy-long padding or academic bloat"
+display_order: 9

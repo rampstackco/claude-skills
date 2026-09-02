@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: content
+catalog_summary: "Systematic content refresh: quarterly audits, refresh prioritization, refresh-vs-merge-vs-delete decisions, the lifecycle discipline that distinguishes intentional programs from set-and-forget decay"
+display_order: 10

@@ -1,0 +1,6 @@
+# Frontmatter keys carried over from the source Claude/RampStack
+# SKILL.md that Antigravity does not use. Preserved here so the port
+# is lossless and reversible. Not read by Antigravity.
+category: growth-tooling
+catalog_summary: Designing conversational flows for chatbots and AI agents on websites. Distinguishes scripted-bot (rigid trees, fail edge cases) from hallucinating-bot (LLM without structure, makes things up) from structured-guided-conversation (LLM-powered with intent architecture and fallback discipline)
+display_order: 5
