@@ -180,9 +180,10 @@ urls, keys, or tokens.
 
 ### Step 4 - Real discovery check (Codex CLI)
 
-**This step was performed against the earlier 102-skill tree and has NOT been
-re-run successfully against the current 103-skill tree. Read the dates before
-citing it.**
+Scope: **`creative-brief` load observed on the 103-skill tree; the second-skill
+check is inconclusive; the contamination that made it inconclusive is a session
+defect, not a distribution defect.** The original 102-skill result is kept below
+as history. Read the dates before citing either.
 
 Original run (102-skill tree), against the installed `codex-cli 0.118.0` (logged
 in via ChatGPT). A scratch workspace containing the emitted `.agents/` tree was
@@ -199,27 +200,77 @@ loaded via `codex exec --cd <scratch> --skip-git-repo-check -s read-only`, with
   completed before it. This is why Step 4 is a discovery/parse check, not an
   end-to-end behavioral test.
 
-Re-run attempt on the 103-skill tree (same CLI version, same account): the model
-turn failed with the same `gpt-5.3-codex` account/model error, and this time the
-captured log contained **no per-skill load lines at all** -- neither errors nor
-successes, and none of the 103 skill names appeared in it. So the re-run is
-inconclusive: it is not evidence that the current tree loads, and it is not
-evidence that it fails. It produced zero `invalid description` errors, which is
-consistent with gating check E (nothing is near the cap), but absence of an error
-in a turn that died early proves nothing on its own.
+### Live smoke test on the 103-skill tree (2026-09-07)
 
-What this means practically: the automated gates in this repo cover the shape of
-the distribution (counts, references, frontmatter, description cap, lock parity,
-drift, determinism). Whether the current tree actually loads in a live Codex
-session is **unverified** and is exactly what the owner smoke test below is for.
-Anyone running it should pass an explicit model that the account supports, since
+Run against this PR's head `ea99f11`, with the required checks green on that
+head. Four calls, sequential, `-s read-only`, `RUST_LOG=info`, the emitted
+`.agents/` extracted into an OS-temp workspace with control and treatment roots
+kept separate. Model `gpt-5.4-mini` requested explicitly on every call.
+
+**Execution identity: `codex-cli 0.118.0`.** An earlier sandbox-only observation
+of `0.153.4` was not the run binary, so nothing here attests to 0.153.4.
+
+| Call | Prompt | Verdict |
+| --- | --- | --- |
+| 1 | write a creative brief for a new marketing site (no `.agents`) | Not loaded, control. Generic brief, no tool reads. |
+| 2 | same prompt, `.agents` present | **Loaded.** Reads `treatment/.agents/skills/creative-brief/SKILL.md` in full, then follows the skill's missing-input workflow. |
+| 3 | "Use the creative-brief skill to ..." | **Loaded.** Explicit skill announcement, reads `creative-brief/SKILL.md` in full, then the same intake workflow. |
+| 4 | on-page SEO audit prompt | **Inconclusive, contaminated.** Announces `seo-onpage` but never reads its `SKILL.md`. |
+
+What this establishes: `creative-brief` loads live from the 103-skill tree. The
+proof is the file read, not the prose. The control invented a generic brief and
+performed no reads; the treatment opened the actual skill file and then asked for
+the missing project details the skill requires.
+
+Note the discriminator that did **not** fire. The ten-section framework was never
+emitted, because the skill mandates an intake pass on an underspecified request
+and the model correctly did that instead. So the anticipated
+control-versus-treatment framework comparison was not observed. The full file
+read carries the finding on its own; do not cite a framework match that did not
+happen.
+
+Why call 4 proves nothing either way: a Node MCP server inherited from the Codex
+app session retained `F:/rampstack-codex-deploy` as its cwd, outside `--cd`. It
+read lane dispatch and registration files, and its own live transcript, none of
+which the workspace isolation could reach. The call's final answer correctly
+noted no page source was supplied, but that is not skill loading. **This is a
+session defect in the instrument, not a defect in the distribution:** ancestor
+isolation constrains the walk-up, and it did not and could not constrain an
+inherited MCP server. Repair belongs to the instrument, in a separately
+registered fresh run, not to `dist/codex`. No reserve call was spent and the run
+was not repaired in place.
+
+Validity limits, stated rather than buried. CLI response-event telemetry reports
+model and slug `gpt-5.4-mini`, but the backend-served identity is not
+independently attested by the retained surface, so strict identity validation is
+false. Every observation above is therefore **qualitative**: a load did or did
+not happen. No performance, quality, or lift claim is made or supportable from
+this run. Cache messages are not load evidence. No `invalid description` cap
+failure was observed, consistent with gating check E.
+
+Overall gate: the recon report records it as **unresolved**, on the model
+identity limitation and the contaminated call together, and it explicitly says
+not to declare the distribution fully passed on this run alone.
+
+Evidence: `recon/planb-step1-smoke-test-2026-09-07.md` in the Codex lane, with
+raw JSONL, `RUST_LOG` stderr, exit statuses, tree hashes and verbatim usage
+envelopes in the adjacent `planb-smoke-20260907-evidence/`. Evidence commit
+`04b65b3` (`04b65b3e0f8e450b5d28492b250bcd59364f896b`), preserved in
+`evidence.bundle`. The commit was made after the calls, not before, so it is a
+preservation signature and not a pre-call one; the registration itself did exist
+before call 1.
+
+Anyone re-running this should pass an explicit model the account supports, since
 the default `gpt-5.3-codex` errors out on a ChatGPT account before the turn does
-any work.
+any work, and should disable or align inherited MCP access first.
 
 ### Manual smoke test (owner, authoritative)
 
-The automated checks are necessary but not sufficient. The one remaining gate
-before merge is a live smoke test by the owner:
+The automated checks are necessary but not sufficient. The remaining gate before
+merge is a live smoke test by the owner. It was run once on 2026-09-07 against
+head `ea99f11` (results in Step 4): `creative-brief` loaded, the second-skill
+check was contaminated by an inherited MCP server, and the gate stands
+unresolved. The recipe below is what was run and what a repeat should follow:
 
 1. Copy the distribution into a scratch Codex workspace **outside this repo**, so
    the walk-up scan cannot reach the repo's own `.agents`:
@@ -251,6 +302,9 @@ The port is mechanically straightforward and low risk: a dependency-free,
 reversible transform produces a clean `.agents/skills/` tree for all 103 skills,
 matching `SKILLS.lock` name for name, with every description inside Codex's
 1024-char cap. The real Codex CLI was observed loading the earlier 102-skill tree
-with zero parse errors; the current tree's live load is unverified (see Step 4).
-The remaining integration work is operator-supplied MCP server config and the
-owner's live smoke test.
+with zero parse errors, and on 2026-09-07 `creative-brief` was observed loading
+live from the current 103-skill tree at head `ea99f11` (Step 4). The second-skill
+check in that run is inconclusive for instrument reasons, so the smoke gate is
+recorded as unresolved rather than passed. The remaining integration work is
+operator-supplied MCP server config, and a clean second-skill observation from a
+session without inherited MCP access.
