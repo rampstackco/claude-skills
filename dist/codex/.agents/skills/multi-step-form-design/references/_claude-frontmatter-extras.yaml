@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: multi-step-form-design
+
+category: growth-tooling
+catalog_summary: "Designing multi-step forms that respect cognitive load while maintaining completion intent. Distinguishes kitchen-sink-single-page (overwhelms) from progress-theater (steps without genuine staging) from genuinely-staged (each step earns its own page)"
+display_order: 4

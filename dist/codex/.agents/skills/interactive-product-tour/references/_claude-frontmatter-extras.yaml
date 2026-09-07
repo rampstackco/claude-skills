@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: interactive-product-tour
+
+category: growth-tooling
+catalog_summary: "Designing in-product tours and contextual help. Distinguishes tooltip-spam (every button has a tour stop) from one-and-done (tour shows once, never seen again) from contextual-when-needed (surfaces help at the moment friction occurs)"
+display_order: 8

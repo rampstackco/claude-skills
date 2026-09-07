@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: quiz-and-assessment-design
+
+category: growth-tooling
+catalog_summary: "Designing quizzes and assessments that produce actionable segmentation. Distinguishes clickbait-quiz (engagement only) from vanity-result (entertaining, not useful) from actionable-segmentation (genuine categorization that drives next-step recommendations)"
+display_order: 3

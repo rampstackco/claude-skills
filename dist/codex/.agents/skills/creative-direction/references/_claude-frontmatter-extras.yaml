@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: creative-direction
+
+category: strategy-and-discovery
+catalog_summary: "Four-axis aesthetic brief (tone, aesthetic, audience, sensory ambition) for cross-skill coherence"
+display_order: 3

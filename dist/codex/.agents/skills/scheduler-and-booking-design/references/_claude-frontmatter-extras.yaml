@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: scheduler-and-booking-design
+
+category: growth-tooling
+catalog_summary: "Designing schedulers and booking flows. Distinguishes any-time-friction (no qualification, just a booking link) from interrogation-gate (so much qualification it scares users off) from qualified-fast-path (just enough qualification to set up the call well)"
+display_order: 10
