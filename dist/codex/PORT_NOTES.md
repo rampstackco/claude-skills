@@ -248,9 +248,13 @@ not happen. No performance, quality, or lift claim is made or supportable from
 this run. Cache messages are not load evidence. No `invalid description` cap
 failure was observed, consistent with gating check E.
 
-Overall gate: the recon report records it as **unresolved**, on the model
-identity limitation and the contaminated call together, and it explicitly says
-not to declare the distribution fully passed on this run alone.
+Two different gates, easily conflated. The gate this PR has waited on since June
+is a **live load**: does a skill from this distribution actually load in a real
+Codex session. Calls 2 and 3 answer that, and the answer is yes. The gate the
+recon report records as **unresolved** is the **scored-run** gate for Plan B
+Step 2, which needs attested model identity and an uncontaminated session before
+any lift number can be claimed. This run clears the first and not the second, so
+nothing here should be read as a scored or comparative result.
 
 Evidence: `recon/planb-step1-smoke-test-2026-09-07.md` in the Codex lane, with
 raw JSONL, `RUST_LOG` stderr, exit statuses, tree hashes and verbatim usage
@@ -267,10 +271,10 @@ any work, and should disable or align inherited MCP access first.
 ### Manual smoke test (owner, authoritative)
 
 The automated checks are necessary but not sufficient. The remaining gate before
-merge is a live smoke test by the owner. It was run once on 2026-09-07 against
-head `ea99f11` (results in Step 4): `creative-brief` loaded, the second-skill
-check was contaminated by an inherited MCP server, and the gate stands
-unresolved. The recipe below is what was run and what a repeat should follow:
+merge is a live smoke test by the owner. It was run on 2026-09-07 against head
+`ea99f11` (results in Step 4): `creative-brief` loaded, satisfying the live-load
+gate; the second-skill check was contaminated by an inherited MCP server and is
+inconclusive. The recipe below is what was run and what a repeat should follow:
 
 1. Copy the distribution into a scratch Codex workspace **outside this repo**, so
    the walk-up scan cannot reach the repo's own `.agents`:
@@ -303,8 +307,9 @@ reversible transform produces a clean `.agents/skills/` tree for all 103 skills,
 matching `SKILLS.lock` name for name, with every description inside Codex's
 1024-char cap. The real Codex CLI was observed loading the earlier 102-skill tree
 with zero parse errors, and on 2026-09-07 `creative-brief` was observed loading
-live from the current 103-skill tree at head `ea99f11` (Step 4). The second-skill
-check in that run is inconclusive for instrument reasons, so the smoke gate is
-recorded as unresolved rather than passed. The remaining integration work is
+live from the current 103-skill tree at head `ea99f11` (Step 4), which satisfies
+the live-load gate this distribution was waiting on. The second-skill check in
+that run is inconclusive for instrument reasons, and scored claims remain gated
+on a clean, identity-attested run. The remaining integration work is
 operator-supplied MCP server config, and a clean second-skill observation from a
 session without inherited MCP access.
