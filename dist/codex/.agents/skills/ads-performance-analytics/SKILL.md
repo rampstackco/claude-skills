@@ -98,7 +98,7 @@ The reconciliation pattern.
 - Trust the warehouse for total conversions and total revenue.
 - Trust platforms for relative ranking within platform (which campaign won, which audience won).
 - Never trust platform sums.
-- Compute blended CAC as (total ad spend across platforms) divided by (total new customers from warehouse). Not from platform reports.
+- Compute blended CAC as (total ad spend across platforms) divided by (total new customers from warehouse). Not from platform reports. Where the warehouse figure is unavailable, state the gap per the data-availability rule.
 
 The board-deck pattern. Report warehouse-attributed conversion counts, never platform-summed. Report blended CAC, not channel-by-channel CAC unless explicitly noted as platform-self-attributed. Detail and templates in [`references/dashboard-reconciliation-patterns.md`](references/dashboard-reconciliation-patterns.md).
 
@@ -110,9 +110,9 @@ ROAS is short-term. Revenue from purchases attributed to a campaign in a fixed w
 
 Decisions made on ROAS can be wrong if LTV varies by channel. A worked example.
 
-Meta drives 2.5x ROAS at $40 CAC with $80 LTV. The 7-day-click revenue covers 1.5x payback over the customer lifetime.
+Meta drives 2.5x ROAS at $40 CAC with $80 LTV. That is 2.0x payback over the customer lifetime.
 
-Google drives 1.8x ROAS at $60 CAC with $200 LTV. The 7-day-click revenue covers 3.3x payback over the customer lifetime.
+Google drives 1.8x ROAS at $60 CAC with $200 LTV. That is 3.3x payback over the customer lifetime.
 
 Google looks worse on ROAS, better on LTV-adjusted return. Allocating budget to Meta because the ROAS is higher is the wrong move.
 
@@ -165,7 +165,7 @@ Four methods.
 
 **Geo holdout.** Hold one region out from the campaign. Measure the difference in conversions between the holdout region and the matched test region. The cleanest causal test for paid media at scale.
 
-**Ghost bidding (Google).** Google's own incrementality tool. Bids on a holdout share of impressions but does not actually serve the ad. Reports incremental conversions. Honest signal; some teams find the math opaque.
+**Conversion Lift and Experiments (Google).** "Ghost bidding" is a term from the incrementality-testing literature, not a Google Ads feature you can switch on. Google's real surfaces are Conversion Lift studies, which a Google rep enables, and geo or holdback Experiments you configure yourself.
 
 **Conversion lift studies (Meta).** Splits audiences into test and control. Test sees the ad; control does not. Reports incremental lift. The cleanest within-Meta test.
 
@@ -249,12 +249,18 @@ The output of the framework is one of three answers. Scale (the campaign is incr
 
 ---
 
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
+
+---
+
 ## Reference files
 
 - [`references/metric-definitions-glossary.md`](references/metric-definitions-glossary.md) - CTR, CPC, CPM, CPA, ROAS, LTV, AOV, frequency, reach, impressions, conversion window, view-through, modeled conversion, blended CAC, MER.
 - [`references/attribution-model-comparison.md`](references/attribution-model-comparison.md) - Last-click, first-click, linear, time-decay, U-shaped, DDA, MMM. Decision matrix by business stage.
 - [`references/platform-reporting-quirks.md`](references/platform-reporting-quirks.md) - Google PMax black box, Meta iOS impact and Conversions API, LinkedIn 30-day click defaults, TikTok video-completion attribution, programmatic viewability gates.
-- [`references/incrementality-testing-playbook.md`](references/incrementality-testing-playbook.md) - Geo holdout, ghost bidding, conversion lift, PSA tests, switchback designs. Setup, duration, analysis pattern, expected incremental rates.
+- [`references/incrementality-testing-playbook.md`](references/incrementality-testing-playbook.md) - Geo holdout, Conversion Lift and Experiments, PSA tests, switchback designs. Setup, duration, analysis pattern, expected incremental rates.
 - [`references/dashboard-reconciliation-patterns.md`](references/dashboard-reconciliation-patterns.md) - Warehouse as canonical, platform as in-flight signal, blended CAC formula, board-deck patterns, reconciliation cadence.
 - [`references/cohort-analysis-templates.md`](references/cohort-analysis-templates.md) - By acquisition month, channel, and campaign. Retention curves, when to act on cohort signals.
 - [`references/common-interpretation-failures.md`](references/common-interpretation-failures.md) - Twelve failure patterns with symptom, root cause, fix, prevention.

@@ -40,7 +40,7 @@ Mechanism tiers:
 | Issue | Mechanism | Typical effort | Notes |
 | --- | --- | --- | --- |
 | 5xx errors on URLs | HIGH | M-L | Investigate hosting and app errors |
-| 4xx errors on internally linked URLs | HIGH | M | Fix links or add redirects |
+| 4xx on a URL that ranked, earned external links, or sits in the sitemap | HIGH | M | Restore the page or redirect it to the closest live equivalent |
 | Redirect chain (3+ hops) | MEDIUM | M | Update final destination in links |
 | Redirect loop | HIGH | S | Fix immediately |
 | Slow time to first byte | MEDIUM | M-L | Hosting, caching, or app changes |
@@ -94,7 +94,7 @@ Pages eligible for rich results (FAQ, How-to, Recipe, Product, etc.) deserve hig
 
 | Issue | Mechanism | Typical effort | Notes |
 | --- | --- | --- | --- |
-| Internal link to 404 | MEDIUM | S | Update or remove link |
+| Internal link to 404, destination not worth restoring | MEDIUM | S | Update or remove the link. If the destination itself ranked or earned links, use the HIGH crawlability row instead |
 | Internal link to redirect | LOW | S | Update to final URL when batching |
 | Internal link with empty anchor | LOW | S | Add descriptive anchor |
 | Page receiving zero internal links (orphan) | MEDIUM | S-M | Add links or reassess if page should exist |

@@ -2,7 +2,7 @@
 
 Copy-paste reference for HTTP response headers that improve security. Organized by tier of importance.
 
-Test current headers with: securityheaders.com or observatory.mozilla.org.
+Test current headers with: securityheaders.com or the MDN HTTP Observatory at developer.mozilla.org/en-US/observatory.
 
 ---
 
@@ -20,7 +20,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 - `max-age`: lifetime in seconds (31536000 = 1 year, recommended for stable HTTPS deployments)
 - `includeSubDomains`: applies to all subdomains. Only enable when every subdomain serves HTTPS reliably.
-- `preload`: optional. Enables inclusion in browser preload lists. Once enabled, removal takes weeks. Only add when committed.
+- `preload`: optional. Enables inclusion in browser preload lists. Once enabled, removal takes months to reach users through a Chrome update, with no guarantee for other browsers. Only add when committed.
 
 **Common mistake:** Setting `includeSubDomains` before all subdomains are HTTPS-ready. Internal staging or admin subdomains break.
 
@@ -140,8 +140,7 @@ Permissions-Policy:
   magnetometer=(),
   microphone=(),
   payment=(),
-  usb=(),
-  interest-cohort=()
+  usb=()
 ```
 
 This denies all listed features by default. Allow specific ones if needed:
@@ -149,8 +148,6 @@ This denies all listed features by default. Allow specific ones if needed:
 ```
 Permissions-Policy: camera=(self), geolocation=(self "https://maps.example.com")
 ```
-
-`interest-cohort=()` opts the site out of FLoC and similar third-party tracking.
 
 ---
 

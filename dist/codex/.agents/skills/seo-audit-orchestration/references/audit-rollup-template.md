@@ -9,13 +9,13 @@ A template for the final SEO audit deliverable. Adapt sections to fit the audit 
 ```
 1. Executive summary           (1 page)
 2. Audit charter               (1 page)
-3. Themes and recommendations  (5-7 themes, 1 page each)
+3. Themes and recommendations  (1 page each, count by audit type)
 4. 90-day roadmap              (1-2 pages)
 5. Sub-audit appendix          (linked or attached)
 6. Methodology notes           (1 page)
 ```
 
-Total: 15-30 pages. Executive summary always readable in 5 minutes.
+Total length and theme count depend on the audit type: see "Common length targets by audit type" below. Executive summary always readable in 5 minutes.
 
 ---
 
@@ -90,7 +90,7 @@ Total: 15-30 pages. Executive summary always readable in 5 minutes.
 
 ## 3. Theme template
 
-Use one page per theme. 5-7 themes total.
+Use one page per theme. For the number of themes, see "Common length targets by audit type" below: 3-4 for a quarterly health check, 5-7 for a full annual audit, 6-10 for due diligence, 3-5 for post-migration verification.
 
 ```
 ## Theme [N]: [Name]

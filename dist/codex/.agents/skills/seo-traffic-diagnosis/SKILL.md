@@ -1,6 +1,6 @@
 ---
 name: seo-traffic-diagnosis
-description: "Diagnose organic traffic changes (drops, stalls, or unexpected wins) using Ahrefs MCP plus Search Console data. Use this skill when traffic suddenly dropped, has been flat despite investment, after an algorithm update, after a migration or deploy, or when a competitor seems to be taking share. Triggers on traffic dropped, traffic decline, traffic stalled, organic decline, lost rankings, why is traffic down, algorithm update, post-migration traffic loss, traffic diagnosis. Also triggers when stakeholders are panicking about analytics."
+description: "Diagnose organic traffic changes (drops, stalls, or unexpected wins) using Ahrefs MCP plus Search Console data. Use this skill when traffic suddenly dropped, has been flat despite investment, after an algorithm update, after a migration or deploy, or when a competitor seems to be taking share. Triggers on traffic dropped, traffic decline, traffic stalled, organic decline, lost rankings, why is traffic down, algorithm update, post-migration traffic loss, traffic diagnosis. Also triggers when stakeholders are panicking about an organic traffic number they cannot explain. A panic about tracking, event, or dashboard setup is a measurement problem, not a traffic problem: route those to `analytics-strategy`."
 ---
 
 # SEO Traffic Diagnosis
@@ -169,6 +169,12 @@ A diagnosis document with:
 7. **Monitoring plan.** What to watch for confirmation of recovery.
 
 Length: 4-10 pages. Stakeholders read this fast.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

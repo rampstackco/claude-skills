@@ -1,6 +1,6 @@
 ---
 name: experiment-design
-description: A discipline for designing experiments (A/B tests, multivariate, holdouts) so the results actually answer the question you asked. Hypothesis writing, sample size, duration, segment analysis, interpretation, decision-making, and the common failure modes that produce confidently wrong shipping decisions.
+description: "A discipline for designing experiments (A/B tests, multivariate, holdouts) so the results actually answer the question you asked. Hypothesis writing, sample size, duration, segment analysis, running discipline, matching a result to a pre-committed decision rule, and the common failure modes that produce confidently wrong shipping decisions. Use this skill whenever the user is planning a test that has not run yet: framing a hypothesis, sizing the sample, setting duration, choosing guardrails, or deciding whether something is worth testing at all. Triggers on design an experiment, experiment plan, A/B test, split test, multivariate test, holdout, experiment hypothesis, sample size, minimum detectable effect, MDE, test duration, guardrail metric, no peeking, pre-committed decision rule, is this worth testing. Use `experimentation-analytics` instead when the test has already run and the question is how to read the result panel."
 ---
 
 # Experiment Design
@@ -228,6 +228,12 @@ Rapid-fire reference. Each pattern is described in more detail in [`references/c
 - "We cannot replicate the result" means the original was probably noise or platform-bug. Investigate before re-running.
 - "Conversion went up but only because of the bot traffic from the new ad campaign" means the result was confounded by an external event. Pause campaigns during sensitive tests, or stratify by acquisition source.
 - "We ran the test, it was inconclusive, but the trend was directional so we shipped" means you ignored your own discipline. The inconclusive bucket exists for a reason; do not let directional patterns substitute for evidence.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

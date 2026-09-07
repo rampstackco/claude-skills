@@ -78,7 +78,7 @@ AI engines (Perplexity especially) heavily cite FAQPage-marked content. Pair eve
 
 ### Named experts and named methods
 
-"As Adam Kalai noted in the original CUPED paper" cites better than "experts have shown." Named attribution earns citation; anonymous attribution does not. The hub should mention 5+ named experts or methods across pillar and clusters.
+"As Deng, Xu, Kohavi and Walker showed in the original CUPED paper" cites better than "experts have shown." Named attribution earns citation; anonymous attribution does not. The hub should mention 5+ named experts or methods across pillar and clusters.
 
 ### Distinctive POV
 

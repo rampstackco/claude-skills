@@ -261,6 +261,6 @@ Match the symbol approach to the brand name and the category positioning.
 - **Descriptive names invite literal or letterform-derived symbols.** Atlas, Forge, Pulse, Anchor, Falcon, Mountain. The name suggests something to depict.
 - **Abstract names demand abstract or geometric-reduction symbols.** Stripe, Anthropic, Linear, Notion. The name does not point at anything specific, so the symbol cannot either.
 - **Heritage names default to monograms.** A founder's surname, a place name, a multi-word firm. The monogram turns the long name into a positioning statement.
-- **Tech-modern names often default to geometric reduction.** Anthropic's hex grid, OpenAI's flower, the universe of B2B SaaS marks built from primitives. The risk is interchangeability; the save is specific proportions and pairing.
+- **Tech-modern names often default to geometric reduction.** OpenAI's flower, the universe of B2B SaaS marks built from primitives. The risk is interchangeability; the save is specific proportions and pairing.
 
 The wrong approach disconnects symbol from name. A literal peak on Stripe would read as a brand mistake. A geometric reduction on Atlas Coffee would feel cold. The approach is downstream of the name, the category, and the positioning intention.

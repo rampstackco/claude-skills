@@ -6,7 +6,7 @@ safe to regenerate at any time (the build is idempotent and reversible).
 
 ## What this is
 
-- `.agents/skills/<name>/SKILL.md` for all 102 skills, with frontmatter
+- `.agents/skills/<name>/SKILL.md` for all 103 skills, with frontmatter
   normalized to the portable core (`name` + `description` only).
 - `.agents/skills/<name>/references/` carried over byte for byte, plus a
   `_claude-frontmatter-extras.yaml` sidecar holding the Claude-only metadata
@@ -45,5 +45,14 @@ node scripts/build-codex.mjs
 ```
 
 The script prints a transform log (skills copied, reference files copied,
-frontmatter keys sidecar'd, MCP refs detected) followed by a validation pass with
-PASS/FAIL per check.
+frontmatter keys sidecar'd, longest description and its headroom under the Codex
+cap, MCP refs detected) followed by a validation pass with PASS/FAIL per check.
+
+Two read-only modes back the CI drift guard, and are what
+`.github/workflows/dist-drift.yml` runs on every PR that can invalidate this
+tree:
+
+```
+node scripts/build-codex.mjs --check      # committed tree vs a fresh rebuild
+node scripts/build-codex.mjs --validate   # validate the committed tree in place
+```

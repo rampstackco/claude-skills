@@ -27,7 +27,7 @@
 | Title tag present and 30-60 chars | ☐ | |
 | Canonical = production URL | ☐ | |
 | Exactly one H1 | ☐ | |
-| Zero missing image alts | ☐ | |
+| Zero images missing the alt attribute (empty `alt=""` on a decorative image passes) | ☐ | |
 | Zero broken images | ☐ | |
 | Schema present and valid | ☐ | |
 
@@ -60,7 +60,8 @@
 |---|---|
 | Total images | |
 | Broken images | |
-| Missing alt text | |
+| Missing the alt attribute | |
+| Decorative (empty `alt=""`, correct) | |
 
 ### Links
 | Check | Count |

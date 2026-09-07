@@ -22,7 +22,7 @@ The principle. One person is accountable for what shipped. Committees diffuse ac
 
 ## The sequencing template
 
-Run QA gates in this order. Each gate is cheaper than the next; running them in order saves the editor's time on pieces that should restart.
+Run QA gates in this order. The order is not a cost ranking (fact-accuracy is the most expensive gate and runs second). It front-loads the two gates that can halt a piece, cheapest of those first, so a piece that should restart consumes as little review time as possible. The cycle-time table below gives the real per-gate costs.
 
 1. **Brief-adherence.** First. Cheapest to run. Catches the largest class of failures.
 2. **Fact-accuracy.** Second. Halt-condition; AI hallucinations do not progress past this gate.

@@ -179,7 +179,7 @@ If tier 1 alerts fire frequently, alert fatigue sets in. People stop responding.
 
 Where do alerts go?
 
-- Tier 1: paging system (e.g., PagerDuty, Opsgenie). Direct to on-call.
+- Tier 1: paging system (e.g., PagerDuty). Do not onboard onto Opsgenie: Atlassian ended sales in June 2025 and support ends April 2027. Direct to on-call.
 - Tier 2: chat channel (Slack, Teams). Tagged with the area.
 - Tier 3: dashboard or log only.
 
@@ -245,6 +245,12 @@ A monitoring plan includes:
 - **Dashboards:** what audiences see
 - **Runbooks:** linked from each paging alert
 - **Audit cadence:** when this gets reviewed
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

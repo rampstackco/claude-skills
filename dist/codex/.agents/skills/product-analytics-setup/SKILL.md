@@ -252,7 +252,7 @@ Twelve patterns recur across product analytics setups. The short version.
 - "Everyone has their own definition of MAU." No canonical metric document. Ship one; force everyone to use the same definition.
 - "We track every button click." UI noise. Audit and remove events that are not used by any dashboard or query.
 - "Our event names changed three times." No versioning. Migrate to a versioning pattern; freeze further renames.
-- "Analytics tool says iOS users converted 3% but warehouse says 5%." iOS Intelligent Tracking Prevention plus modeled conversions. Treat platform iOS data with extra skepticism.
+- "Analytics tool says iOS users converted 3% but warehouse says 5%." Safari's Intelligent Tracking Prevention (all Apple platforms, including macOS) plus modeled conversions. Treat platform Safari data with extra skepticism.
 - "We cannot answer simple questions." Under-instrumented or wrong abstraction layer. Audit the events list against the questions the team is asking; fill the gaps.
 - "Two analysts compute different MAU." Different identity stitching. Pick one canonical identity layer and make everyone query from it.
 - "Numbers are different than last quarter for no reason." Underlying schema changed without versioning. The dashboard quietly broke; nobody noticed until the gap got large.
@@ -279,6 +279,12 @@ When designing or auditing product analytics, walk these 12 considerations. Skip
 12. **Single source of truth.** Warehouse for board metrics. Tool for in-flight optimization. Reconcile when they disagree.
 
 The output of the framework is a tracking plan. A list of events with their properties, the canonical user identity, the named cohorts, the named funnels, the retention measurement choice, the named NSM, the dashboard owners. The plan lives in code and gets reviewed like any other product spec.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

@@ -6,8 +6,8 @@
 
 ## Positive references
 
-- [napavalleyaloft.com](https://napavalleyaloft.com) - Regional operator, atmosphere-forward, dawn-palette imagery.
-- [aerogelichotairballooning.com](https://aerogelichotairballooning.com) - Atmosphere-led, ride arc surfaced, photography drives the page.
+- [nvaloft.com](https://nvaloft.com) - Regional operator, atmosphere-forward, dawn-palette imagery.
+- [aerogelicballooning.com](https://aerogelicballooning.com) - Atmosphere-led, ride arc surfaced, photography drives the page.
 - [rainbowryders.com](https://rainbowryders.com) - Multi-region operator, photography-led, named packages with prices.
 - [sundanceballoons.com](https://sundanceballoons.com) - Multi-region operator, considered-warm register, ride-arc framing.
 

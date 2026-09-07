@@ -378,7 +378,7 @@ Common reserved names:
 Common compliance patterns:
 
 - **Consent before tracking.** Cookie banner, opt-in flow.
-- **Honor Do Not Track.** Browsers signal preferences.
+- **Honor Global Privacy Control (GPC).** Browsers signal the preference, and it is enforceable under CCPA and CPRA.
 - **Right to deletion.** User can request all their data deleted (GDPR, CCPA).
 - **Right to export.** User can request their data in machine-readable format.
 - **No cross-site tracking without consent.** Some jurisdictions require explicit opt-in.

@@ -7,7 +7,7 @@
 ## Positive references
 
 - [bungie.net](https://bungie.net) - The canonical AAA-action studio chrome register: cinematic full-bleed key-art hero, dark-mode-first ground, restrained type chrome that lets the game art carry. Inherit the cinematic hero treatment, the dark ground, and the chrome restraint.
-- [insomniac.com](https://insomniac.com) - Insomniac Games. The studio chrome at composed-cinematic; the titles portfolio surfaced with care. Inherit the titles-portfolio anatomy and the craft-proud-without-arrogance voice.
+- [insomniac.games](https://insomniac.games) - Insomniac Games. The studio chrome at composed-cinematic; the titles portfolio surfaced with care. Inherit the titles-portfolio anatomy and the craft-proud-without-arrogance voice.
 - [naughtydog.com](https://naughtydog.com) - Naughty Dog. The restrained-cinematic studio register; type-led studio band with the team presented at masthead density. Inherit the studio-band convention and the restrained-cinematic chrome.
 - [remedygames.com](https://remedygames.com) - Remedy Entertainment. The composed-cinematic register at the studio level, with a smaller portfolio presented with editorial discipline. Inherit the title-detail-page-as-small-monograph anatomy.
 

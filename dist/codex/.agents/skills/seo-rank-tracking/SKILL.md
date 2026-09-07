@@ -34,7 +34,7 @@ Set up and run an ongoing rank tracking program using Ahrefs MCP data. Stack-agn
 - Business priorities (which segments matter)
 - Existing ranked keywords (Ahrefs Site Explorer)
 - Stakeholder reporting cadence (weekly, monthly, quarterly)
-- Confirmation Ahrefs MCP and Rank Tracker access
+- Confirmation of Ahrefs MCP and Rank Tracker access, write access included: workflow step 5 creates Rank Tracker projects
 
 ---
 
@@ -200,7 +200,7 @@ Adjust thresholds based on volatility of the niche. High-competition spaces need
 
 1. **Define scope.** Target property, market, language, stakeholders.
 2. **Pull starting data.** Existing ranked keywords, Search Console queries, competitor overlap.
-3. **Build the tracked set.** 4 buckets, 200-500 total keywords for most properties.
+3. **Build the tracked set.** Size each of the 4 buckets to its own volume band. Those bands sum to roughly 140 at every minimum and 480 at every maximum, so a small property landing near 140 is correctly scoped, not under-scoped. Most properties land between 200 and 500.
 4. **Segment with tags.** Topic, funnel stage, page mapped, etc.
 5. **Configure tracking.** Set up Ahrefs Rank Tracker projects with tags and locations.
 6. **Capture baseline.** Day-one positions and SERP composition.
@@ -214,7 +214,7 @@ Adjust thresholds based on volatility of the niche. High-competition spaces need
 ## Failure patterns
 
 - **Tracking too many keywords.** A 5,000-keyword tracker is unreadable. Pick fewer, watch closer.
-- **Tracking too few.** A 30-keyword tracker misses the picture. Most properties need 200-500.
+- **Tracking too few.** A 30-keyword tracker misses the picture. The floor is one populated bucket band per bucket, which is 140 keywords; most properties need 200 to 500.
 - **No segmentation.** Untagged tracked keywords produce dashboards that cannot be filtered.
 - **No baseline.** Without day-one snapshots, "did the campaign work" becomes unanswerable.
 - **Alert fatigue.** Loose thresholds produce too many alerts. Stakeholders stop reading. Tighten.
@@ -232,13 +232,19 @@ A rank tracking setup document with:
 
 1. **Tracking charter.** Property, scope, stakeholders, cadence.
 2. **Tracked keyword set.** All keywords with bucket and tag assignments.
-3. **Baseline snapshot.** Position, SERP composition, CTR per keyword.
+3. **Baseline snapshot.** Position, SERP composition, CTR per keyword, or state the gap per the data-availability rule.
 4. **Alert configuration.** Thresholds by bucket, routing.
 5. **Dashboard layout.** What charts, what filters, what is visible.
 6. **Review cadence.** Weekly, monthly, quarterly responsibilities.
 7. **Methodology notes.** Country and device settings, refresh frequency, data caveats.
 
 Plus a recurring rank report at the chosen cadence (typically weekly or monthly).
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

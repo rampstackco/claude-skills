@@ -12,7 +12,7 @@ Goal. Ensure the event taxonomy and property schema match the canonical contract
 
 Steps.
 
-- **Pull the event list from the analytics tool.** Mixpanel: Lexicon. Amplitude: Govern. PostHog: Data Management. Or directly from the warehouse if warehouse-native.
+- **Pull the event list from the analytics tool.** Mixpanel: Lexicon. Amplitude: Data. PostHog: Data Management. Or directly from the warehouse if warehouse-native.
 - **Compare against the schema definition in code.** Every event in the tool should appear in the schema; every event in the schema should appear in the tool.
 - **Flag drift.** Events firing without a schema entry. Schema entries with no events firing in the last 90 days. Property type mismatches between schema and observed values.
 - **Audit naming.** Events that do not match the naming convention (snake_case, past tense, object-action). Property names with inconsistent casing or typo variants.

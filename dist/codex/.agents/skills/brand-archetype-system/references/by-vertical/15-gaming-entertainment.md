@@ -20,7 +20,7 @@ The dominant archetypes are **Bold Confident** (Epic Games, Riot, Discord) and *
 | Itch.io | Minimal Essentialist | Indie game platform; minimal chrome; lets games carry |
 | Spotify (entertainment) | Vibrant Saturated | Saturated green; mood-based personalization |
 | Netflix | Bold Confident | Black plus red; content-as-hero; minimal platform chrome |
-| HBO Max (Max) | Editorial Restrained leaning Luxe Considered | Premium streaming positioning; restrained type |
+| HBO Max | Editorial Restrained leaning Luxe Considered | Premium streaming positioning; restrained type |
 | Roblox | Playful Energetic | Multi-color brand; family-friendly positioning |
 
 ## Vertical-specific adaptation notes

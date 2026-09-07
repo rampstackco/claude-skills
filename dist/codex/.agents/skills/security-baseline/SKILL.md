@@ -166,7 +166,7 @@ Strict CSP requires application changes (every inline script needs a nonce). The
 
 ### Step 1: Run a baseline scan
 
-Use a free scanner: securityheaders.com, observatory.mozilla.org. Get a current grade. This is the floor.
+Use a free scanner: securityheaders.com, or the MDN HTTP Observatory at developer.mozilla.org/en-US/observatory. Get a current grade. This is the floor. If no scan result can be obtained, state the gap per the data-availability rule.
 
 ### Step 2: Inventory the surface
 
@@ -249,7 +249,7 @@ When compliance applies, the baseline is necessary but not the full answer.
 
 **HSTS without `includeSubDomains`.** Attacker tricks browser into HTTP on a subdomain you haven't HTTPS'd yet.
 
-**HSTS preload without commitment.** Once preloaded, removing it takes weeks. Don't preload until HTTPS is solid across all subdomains forever.
+**HSTS preload without commitment.** Once preloaded, removing it takes months to reach users through a Chrome update, with no guarantee for other browsers. Don't preload until HTTPS is solid across all subdomains forever.
 
 **CSP with `unsafe-inline`.** Defeats most of CSP. Either go strict (nonce-based) or accept that CSP is providing limited protection.
 
@@ -285,6 +285,12 @@ A security baseline document includes:
 - **Findings:** prioritized list of gaps
 - **Remediation plan:** owners, dates
 - **Re-audit cadence:** when this is reviewed next
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

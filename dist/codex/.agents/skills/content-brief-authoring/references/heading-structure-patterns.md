@@ -46,7 +46,7 @@ Place a 40 to 60 word answer paragraph immediately following the H2 question. Go
 
 > ## What is CUPED?
 >
-> CUPED (Controlled-experiment Using Pre-Existing Data) is a variance-reduction technique that adjusts experimental measurements using pre-treatment covariates. The covariate's regression coefficient against the outcome is computed before assignment, then used to subtract baseline variance from the experiment's measurement, increasing statistical power without changing the experiment's design.
+> CUPED (Controlled-experiment Using Pre-Experiment Data) is a variance-reduction technique that adjusts experimental measurements using pre-treatment covariates. The covariate's regression coefficient against the outcome is computed before assignment, then used to subtract baseline variance from the experiment's measurement, increasing statistical power without changing the experiment's design.
 
 The paragraph is self-contained: read alone, it answers the H2 question completely. The rest of the section expands on the answer with examples, formulas, edge cases.
 

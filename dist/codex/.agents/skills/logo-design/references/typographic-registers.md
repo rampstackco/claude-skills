@@ -41,7 +41,7 @@ Geometric sans pairs well with old-style serifs (the contrast between modern geo
 
 ## Humanist sans
 
-Has serif-like calligraphic gestures without serifs. The strokes vary in weight (subtle thick-thin contrast). The letterforms have movement, not just geometry. Gill Sans, Optima, Frutiger, Source Sans Pro, Inter at higher optical sizes, Hermann Zapf's Kabel, Jeremy Tankard's Bliss.
+Has serif-like calligraphic gestures without serifs. The strokes vary in weight (subtle thick-thin contrast). The letterforms have movement, not just geometry. Gill Sans, Optima, Frutiger, Source Sans Pro, Inter at higher optical sizes, Rudolf Koch's Kabel, Jeremy Tankard's Bliss.
 
 Humanist sans reads professional but warm. The calligraphic origin gives the type a hand, where geometric sans has none. Excellent neutral choice when the category demands restraint with personality. Old enough to feel timeless; not old enough to feel dated.
 
@@ -57,7 +57,7 @@ Gill Sans (Eric Gill, 1928) is the original British humanist sans, derived from 
 
 ### Example brands
 
-- BBC (Gill Sans)
+- BBC (Gill Sans, historical; the BBC commissioned custom BBC Reith in 2017)
 - BMW Group's corporate identity (custom humanist sans, derived from Helvetica with humanist warming)
 - One Medical (FF Tisa Sans, humanist with slab adjacency)
 - Various university identities (Penn, Stanford, MIT all use humanist or near-humanist marks)
@@ -198,7 +198,7 @@ Sentinel (Hoefler & Frere-Jones, 2009) is the modern editorial slab. Adelle (Typ
 
 ### Example brands
 
-- Mailchimp's wordmark (custom slab-derived script)
+- Mailchimp's wordmark (Cooper-derived serif)
 - The Wall Street Journal (in older treatments)
 - Various sports league identities (NFL teams, college athletics)
 - Filson's wordmark (custom slab serif)

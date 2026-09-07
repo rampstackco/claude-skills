@@ -54,11 +54,11 @@ Per-platform campaign type guide. For each campaign type: what it is, when it fi
 
 **Pitfalls.** Newer campaign type with less optimization history; results are more volatile than Search or Shopping. Treat as a tested channel.
 
-### Discovery
+### Discovery (retired)
 
-**What it is.** Visual ads across Google's discovery surfaces. Being merged with Demand Gen.
+**What it was.** Visual ads across Google's discovery surfaces.
 
-**When to use.** Largely deprecated in favor of Demand Gen. Migrate existing Discovery campaigns.
+**Status.** Retired. Google force-upgraded every Discovery campaign to Demand Gen between January and March 2024. Discovery no longer exists as a campaign type. Use Demand Gen.
 
 ### App
 
@@ -132,13 +132,11 @@ Per-platform campaign type guide. For each campaign type: what it is, when it fi
 
 **Pitfalls.** High floor (CPM 5 to 10x consumer platforms). Justify with B2B LTV; otherwise unprofitable.
 
-### Message Ads
+### Message Ads (retired)
 
-**What it is.** Direct messages delivered via LinkedIn InMail.
+**What it was.** Direct messages delivered via LinkedIn InMail.
 
-**When to use.** High-intent B2B nudges where the message reads as a personal note.
-
-**Pitfalls.** Stigma in many segments. Treated as spam if the message reads generic. Personalize aggressively or skip.
+**Status.** Retired. LinkedIn phased Message Ads out between May and July 2023 in favor of Conversation Ads. Sponsored messaging has also been blocked for EU targeting since December 2021 under the ePrivacy ruling, so Conversation Ads are non-EU only.
 
 ### Conversation Ads
 

@@ -73,7 +73,7 @@ Three categories with sub-types within each.
 
 - **Boosted social posts.** Paying to extend reach of an organic post on LinkedIn, X, Facebook, Instagram.
 - **Promoted newsletter sends.** Sponsored placements in third-party newsletters.
-- **Syndication networks.** Outbrain, Taboola, native-content networks that distribute content via paid placement on third-party sites.
+- **Syndication networks.** Teads (formerly Outbrain), Taboola, native-content networks that distribute content via paid placement on third-party sites.
 - **Search advertising for content.** Paying for clicks on content pieces (less common; usually content is the organic side and paid is the conversion side).
 - **Sponsored podcast or content placements.** Pre-rolls, mid-rolls, sponsored segments in industry podcasts or newsletters.
 
@@ -278,6 +278,12 @@ When designing or auditing a distribution program, walk these 12 considerations.
 12. **Distribution capacity allocation.** Real budget; not done in the cracks.
 
 The output of the framework is a distribution program where each channel choice is deliberate, each cadence decision matches audience attention, each measurement informs the next decision, and the program's reach grows because the work is concentrated where it produces value.
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

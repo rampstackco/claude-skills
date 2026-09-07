@@ -36,7 +36,7 @@ Per-platform reporting behaviors that affect how to read the numbers. The platfo
 
 **Frequency reporting at the ad set level.** Meta exposes frequency in the Ads Manager. Use it as the primary fatigue signal; CTR decay is downstream of frequency rising.
 
-**Negative feedback rate.** Meta exposes "negative feedback rate" as a customizable column. Above 1.5% is the alarm; the algorithm penalizes high-feedback creatives by reducing reach.
+**Quality ranking.** Meta does not expose a standalone "negative feedback rate" column. Hide and report signals are folded into Quality ranking (above average, average, below average) and into account quality. Read Quality ranking; there is no percentage threshold to read instead.
 
 ---
 
@@ -60,7 +60,7 @@ Per-platform reporting behaviors that affect how to read the numbers. The platfo
 
 **Default attribution.** 7-day click and 1-day view-through, similar to Meta.
 
-**Video-completion-based attribution.** TikTok counts conversions even when the user did not click but watched the full video. This is unique among the platforms covered here. The signal is real for awareness; it inflates direct-response numbers.
+**Engaged view-through attribution (EVTA).** TikTok counts conversions when the user did not click but watched at least 6 seconds, or the full duration for videos shorter than 6 seconds, within a window of up to 7 days. The signal is real for awareness; it inflates direct-response numbers.
 
 **iOS impact, less mature modeling.** TikTok faces similar ATT-driven tracking gaps as Meta. The modeling is less mature, which means iOS-heavy audiences see more under-reporting on TikTok than on Meta.
 

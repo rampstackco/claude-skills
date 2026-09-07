@@ -19,16 +19,19 @@
 //      commented template (no fabricated server config).
 //   7. Prints a transform log, then runs the verification suite:
 //        - validation (name/description, count, references, clean frontmatter,
-//          Codex description-length conformance)
+//          Codex description-length conformance, SKILLS.lock parity)
 //        - determinism (build twice, assert byte-identical generated output)
 //        - openai.yaml sanity (exists, all servers commented, no live secrets)
 //        - description-discrimination audit (heuristic) -> SKILL_DISCOVERY_AUDIT.md
 //
 // Flags:
-//   --check   Rebuild the generated tree into a temp dir and diff it against the
-//             committed dist/codex/. Exit nonzero listing any differing paths.
-//             This is the staleness guard: the committed dist can never silently
-//             drift from skills/.
+//   --check    Rebuild the generated tree into a temp dir and diff it against the
+//              committed dist/codex/. Exit nonzero listing any differing paths.
+//              This is the staleness guard: the committed dist can never silently
+//              drift from skills/.
+//   --validate Validate the COMMITTED dist/codex in place, without writing
+//              anything. Mirrors `build-pi.mjs --validate` so both distributions
+//              expose the same CI surface. Exits nonzero on any failed check.
 //
 // Dependency free. Node ESM, built-in fs + path only. Frontmatter is parsed by
 // hand (simple key: value YAML between --- delimiters).
@@ -41,6 +44,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SRC_SKILLS = path.join(REPO_ROOT, 'skills');
 const OUT_ROOT = path.join(REPO_ROOT, 'dist', 'codex');
+
+// The catalog manifest. It is the repo's authoritative statement of which skills
+// exist (regenerated and verified by tools/gen_skills_lock.py in its own CI job),
+// so the distribution is counted against it rather than only against a directory
+// listing. A skill added to skills/ without a lock refresh, or a dist built from
+// a stale tree, both show up here as a parity failure.
+const SKILLS_LOCK = path.join(REPO_ROOT, 'SKILLS.lock');
 
 // Generated subtrees within a distribution root. These (and only these) are
 // produced by transformInto() and guarded for determinism / drift. Authored
@@ -215,6 +225,7 @@ function transformInto(destRoot) {
     perSkillExtras: {},
     mcpRefs: {},
     descTruncated: [], // { name, fullLen, newLen }
+    maxDesc: null, // { name, len } of the longest emitted description
   };
 
   for (const name of skills) {
@@ -249,7 +260,13 @@ function transformInto(destRoot) {
           keptLines.push('description: ' + yamlDquote(truncated));
           truncatedFull = full;
           log.descTruncated.push({ name, fullLen: full.length, newLen: truncated.length });
+          if (!log.maxDesc || truncated.length > log.maxDesc.len) {
+            log.maxDesc = { name, len: truncated.length };
+          }
           continue;
+        }
+        if (!log.maxDesc || full.length > log.maxDesc.len) {
+          log.maxDesc = { name, len: full.length };
         }
       }
       keptLines.push(e.lines.join('\n'));
@@ -365,10 +382,34 @@ function printTransformLog(skills, log) {
   console.log('=== Codex build: transform log ===');
   console.log('Skills copied:        ' + log.skillsCopied);
   console.log('Reference files copied: ' + log.refFilesCopied);
-  console.log('Frontmatter keys sidecar\'d: ' + skills.length + ' skills, all [category, catalog_summary, display_order]');
-  console.log('Descriptions truncated for Codex (>1024 chars): ' + log.descTruncated.length);
+  // Report the key sets actually observed rather than asserting a fixed list:
+  // the uniform [category, catalog_summary, display_order] shape is a property
+  // of today's catalog, not a guarantee, and a skill that grows a new key should
+  // be visible here instead of hidden behind a hardcoded sentence.
+  const shapes = {};
+  for (const [name, keys] of Object.entries(log.perSkillExtras)) {
+    const sig = '[' + keys.join(', ') + ']';
+    (shapes[sig] ||= []).push(name);
+  }
+  const shapeList = Object.entries(shapes).sort((a, b) => b[1].length - a[1].length);
+  console.log('Frontmatter keys sidecar\'d: ' + skills.length + ' skills, ' + shapeList.length + ' distinct key set(s)');
+  for (const [sig, names] of shapeList) {
+    const sample = names.length <= 3 ? ' (' + names.join(', ') + ')' : '';
+    console.log('  ' + names.length + ' skill(s): ' + sig + sample);
+  }
+
+  console.log('Descriptions truncated for Codex (>' + CODEX_DESC_MAX + ' chars): ' + log.descTruncated.length);
   for (const t of log.descTruncated) {
     console.log('  ' + t.name + ': ' + t.fullLen + ' -> ' + t.newLen + ' chars (full text preserved in sidecar)');
+  }
+  // The longest emitted description, so the headroom under the cap is a printed
+  // number and not an assumption. A catalog drifting toward the cap is visible
+  // here before check E goes red.
+  if (log.maxDesc) {
+    console.log(
+      'Longest emitted description: ' + log.maxDesc.len + ' chars (' + log.maxDesc.name +
+      '), ' + (CODEX_DESC_MAX - log.maxDesc.len) + ' chars of headroom under the cap'
+    );
   }
   console.log('');
   console.log('MCP references detected (' + Object.keys(log.mcpRefs).length + ' skills):');
@@ -517,7 +558,49 @@ function validate(srcSkills, root) {
     detail: tooLong.length ? 'over cap: ' + tooLong.join(', ') : 'all <=' + CODEX_DESC_MAX + ' chars',
   });
 
+  // Parity against the catalog manifest. Counting emitted-vs-source (check B)
+  // only proves the build walked the tree it was pointed at; it cannot catch a
+  // dist built from a stale checkout, because source and dist move together in
+  // that traversal. SKILLS.lock is the independent number.
+  const lockNames = readLockSkillNames();
+  if (lockNames === null) {
+    results.push({
+      name: 'F. emitted skill set matches SKILLS.lock',
+      ok: false,
+      detail: 'SKILLS.lock not found or unparseable at ' + SKILLS_LOCK,
+    });
+  } else {
+    const emittedSet = new Set(emitted);
+    const lockSet = new Set(lockNames);
+    const notEmitted = lockNames.filter((n) => !emittedSet.has(n));
+    const notInLock = emitted.filter((n) => !lockSet.has(n));
+    const ok = notEmitted.length === 0 && notInLock.length === 0;
+    const parts = [];
+    if (notEmitted.length) parts.push('in lock but not emitted: ' + notEmitted.join(', '));
+    if (notInLock.length) parts.push('emitted but not in lock: ' + notInLock.join(', '));
+    results.push({
+      name: 'F. emitted skill set matches SKILLS.lock',
+      ok,
+      detail: ok
+        ? 'lock=' + lockNames.length + ' emitted=' + emitted.length + ', names identical'
+        : 'lock=' + lockNames.length + ' emitted=' + emitted.length + '; ' + parts.join('; '),
+    });
+  }
+
   return results;
+}
+
+// Read the skill names recorded in SKILLS.lock. Returns null if the file is
+// absent or does not parse, which the caller reports as a failed check rather
+// than treating a missing manifest as a silent pass.
+function readLockSkillNames() {
+  try {
+    const parsed = JSON.parse(fs.readFileSync(SKILLS_LOCK, 'utf8'));
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return null;
+    return Object.keys(parsed).sort();
+  } catch {
+    return null;
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -833,9 +916,32 @@ function runCheck() {
   if (!ok) process.exitCode = 1;
 }
 
+// Validate the committed dist/codex in place. Writes nothing, so it is safe to
+// run in CI against a plain checkout and cannot mask a drift failure by
+// regenerating the tree it is about to inspect.
+function runValidate() {
+  if (!fs.existsSync(skillsDirOf(OUT_ROOT))) {
+    console.error('No committed distribution at ' + skillsDirOf(OUT_ROOT));
+    console.error('Run `node scripts/build-codex.mjs` first.');
+    process.exitCode = 1;
+    return;
+  }
+  const ok = printResults('Validation (committed dist/codex)', validate(listSkillDirs(), OUT_ROOT));
+  console.log(ok ? 'VALIDATION PASS' : 'VALIDATION FAIL');
+  if (!ok) process.exitCode = 1;
+}
+
 function main() {
   const args = process.argv.slice(2);
+  const known = ['--check', '--validate'];
+  const unknown = args.filter((a) => !known.includes(a));
+  if (unknown.length) {
+    console.error('Unknown flag: ' + unknown.join(' '));
+    console.error('Usage: node scripts/build-codex.mjs [--check|--validate]');
+    process.exit(2);
+  }
   if (args.includes('--check')) runCheck();
+  else if (args.includes('--validate')) runValidate();
   else runBuild();
 }
 

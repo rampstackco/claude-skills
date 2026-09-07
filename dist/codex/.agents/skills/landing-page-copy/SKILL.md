@@ -1,6 +1,6 @@
 ---
 name: landing-page-copy
-description: "Write landing page copy with attention to the hero, value proposition, social proof, objection handling, and conversion-focused CTAs. Use this skill whenever the user wants to write a landing page, sales page, hero section, or any conversion-focused web copy. Triggers on landing page, sales page, hero copy, value proposition, headline, subheadline, hero section, CTA copy, conversion copy, opt-in page, squeeze page. Also triggers when the user has a marketing campaign or product launch needing dedicated conversion copy."
+description: "Write landing page copy with attention to the hero, value proposition, social proof, objection handling, and conversion-focused CTAs. Use this skill whenever the user wants to write a landing page, sales page, hero section, or any conversion-focused web copy. Triggers on landing page, sales page, hero copy, value proposition, headline, subheadline, hero section, CTA copy, conversion copy, opt-in page, squeeze page. Also triggers when the user has a marketing campaign or product launch needing dedicated conversion copy. Use `cro-optimization` instead when the page already exists and the ask is to lift its conversion rate through testing rather than to write the copy."
 ---
 
 # Landing Page Copy
@@ -181,7 +181,7 @@ Buttons matter. Treat the button copy as a whole-page-worth of attention.
 6. **Draft sections.** Section by section. Don't polish until the structure is sound.
 7. **Edit for friction.** Remove every word that doesn't earn its place. Landing pages do not have words to spare.
 8. **Test the CTA.** Read the page aloud. By the end, is the visitor's next action obvious?
-9. **Pre-publish:** check links, spell-check, mobile preview, SEO basics if SEO is a goal.
+9. **Hand off with a post-import checklist.** The deliverable is a markdown document, not a built page, so step 9 is not something you perform: it is a list you attach for whoever builds the page. Spell-check the copy yourself, then hand over the rest. Every destination URL resolves. Mobile preview of the built page. SEO basics if SEO is a goal. If the page is already built and you are revising it in place, run the checklist yourself instead of handing it over.
 
 ---
 
@@ -229,7 +229,7 @@ Structure:
 - Feature 3: [headline + description]
 
 ## SECTION: Proof
-- Case study 1: [customer, outcome, numbers]
+- Case study 1: [customer, outcome, numbers, or state the gap per the data-availability rule]
 - Testimonials: [list]
 - Data points: [list]
 
@@ -248,6 +248,12 @@ Structure:
 - [Alternate CTAs]
 - [Alternate proof framings]
 ```
+
+---
+
+## If required data is unavailable
+
+This skill's output depends on data, measurements, or tool results it cannot generate on its own. When a required input, tool, or data source is unavailable or unverifiable, the sanctioned output is the deliverable with the gap stated: what was needed, what was actually obtained or verified, and which parts of the output are affected. Fabricating, estimating, or interpolating a required number to complete the deliverable is never sanctioned. A stated gap is a complete answer.
 
 ---
 

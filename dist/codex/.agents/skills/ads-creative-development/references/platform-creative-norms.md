@@ -24,7 +24,7 @@ Per-platform creative requirements and unwritten conventions. Each platform has 
 
 ## TikTok
 
-**Aspect ratios.** 9:16 vertical only. Anything else is rejected by the algorithm.
+**Aspect ratios.** TikTok Ads Manager accepts 9:16, 1:1, and 16:9. 9:16 vertical is the recommended default.
 
 **Length.** 15 to 30 seconds for performance. The platform tolerates and rewards longer dwell than Meta.
 
@@ -42,7 +42,7 @@ Per-platform creative requirements and unwritten conventions. Each platform has 
 
 ## LinkedIn
 
-**Aspect ratios.** 1:1 or 16:9 for feed. 9:16 vertical works for Stories but Stories has limited reach on LinkedIn relative to other platforms.
+**Aspect ratios.** 1:1 or 16:9 for feed.
 
 **Length.** 15 to 60 seconds. Slower pacing tolerated; B2B audiences are in research mode rather than scroll mode. 30 seconds is a strong default.
 
@@ -64,7 +64,7 @@ Per-platform creative requirements and unwritten conventions. Each platform has 
 
 **Character limits.** Headlines 30 characters; 15 headline variants for RSA. Descriptions 90 characters; 4 description variants. Path 1 and Path 2 in the display URL: 15 characters each.
 
-**RSA optimization.** Provide 15+ headline variants and 4 description variants. The platform mixes them. More variants give the platform more material to optimize against.
+**RSA optimization.** Provide the full 15 headline variants and 4 description variants. Those are the platform caps, not floors. The platform mixes them; filling every slot gives it the most material to optimize against.
 
 **Voice.** Direct. Specific. Action-led. The search query is high-intent; the ad's job is to confirm the user is in the right place.
 
@@ -86,7 +86,7 @@ Per-platform creative requirements and unwritten conventions. Each platform has 
 
 ### YouTube
 
-**Format.** Skippable video ads (TrueView), non-skippable, bumper (6s), in-feed video.
+**Format.** Skippable in-stream, non-skippable in-stream, bumper (6s), in-feed video.
 
 **Length.** Skippable: 15s to 6m. Non-skippable: 15s. Bumper: 6s.
 
