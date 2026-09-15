@@ -279,7 +279,7 @@ Real client work cannot be open-sourced; portfolio claims trigger conflict-of-in
 
 ## Getting started
 
-Skills install in three different places depending on where you use Claude. Pick the platform that matches your workflow.
+Skills install in a different place for each platform. Pick the one that matches your workflow.
 
 ### Option 1: Claude.ai (web and desktop)
 
@@ -325,6 +325,13 @@ For exact current paths and config flags, see the [Claude Code documentation](ht
 Use Skills programmatically by referencing them in your API calls. Skills must first be uploaded to your workspace (via the Console or API), then referenced by ID when creating messages.
 
 For the current API surface, request format, and limits, see the [Agent Skills API documentation](https://docs.claude.com/en/api/agent-skills).
+
+### Option 4: pi and Codex
+
+Prebuilt distributions install the catalog into a project's `.agents/skills` folder for two agents outside Claude:
+
+- **pi**: [`dist/pi/README.md`](dist/pi/README.md)
+- **Codex**: [`dist/codex/README.md`](dist/codex/README.md)
 
 ### Want only a few skills?
 
