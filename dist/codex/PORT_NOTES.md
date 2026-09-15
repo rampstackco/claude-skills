@@ -394,9 +394,10 @@ looks like in a transcript and how to tell loading apart from the model merely
 writing something plausible, is kept with the deploy tooling rather than in this
 generated tree.
 
-Note: Codex also discovers skills from `~/.codex/skills/` (the `$CODEX_HOME/skills`
-directory), in addition to scanning `.agents/skills/` from cwd up to the repo
-root. To install globally instead of per-project, copy the skill folders there.
+Note: Codex also reads user-level skills from `$HOME/.agents/skills`, per the
+[Codex skills documentation](https://developers.openai.com/codex/skills), in
+addition to scanning `.agents/skills/` from cwd up to the repo root. To install
+for your user instead of per-project, copy the skill folders there.
 
 ## Skills description budget (measured)
 
@@ -423,9 +424,12 @@ the 2026-09-14 runs (`codex-cli 0.154.0-alpha.6.2`, log field `budget_limit`):
 - **Tested value: none yet.** No run has changed the setting, and support for
   the key in this alpha binary has not been validated by changing it.
 
-Install guidance. The reliable path is a subset: install only the skills a
-project needs (a subset repo), so fewer descriptions share the budget. The
-secondary lever is raising the budget in `config.toml`, untested as stated above:
+Install guidance. The reliable path is installing only the skills a project
+needs from this distribution, one folder per skill from
+`dist/codex/.agents/skills/<name>`, so fewer descriptions share the budget. The
+subset repos ship Claude's layout without a Codex build and are untested in
+Codex, so they are not recommended for Codex yet. The secondary lever is raising
+the budget in `config.toml`, untested as stated above:
 
 ```toml
 [skills]
@@ -439,6 +443,10 @@ max_context_tokens = 10000
   sentence-boundary truncation path, so the build chooses what survives instead
   of the runtime's cut. The full description stays in the sidecar, as it does
   for the cap today. Recorded here only; no issue is open.
+- **Codex builds for the subset repos.** claude-skills-starter,
+  claude-skills-seo, and claude-skills-pm ship Claude's layout only. A
+  `dist/codex` in each, built the same way as this one, is what would let the
+  install guide recommend them for Codex. Recorded here only; no issue is open.
 
 ## Feasibility
 

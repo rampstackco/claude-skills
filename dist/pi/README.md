@@ -21,7 +21,7 @@ dist/pi/
   PORT_NOTES.md             port decisions, live-check results, future options
 ```
 
-102 skills, 488 reference files. See `PORT_NOTES.md` for details.
+103 skills, 490 reference files. See `PORT_NOTES.md` for details.
 
 ## Pi discovery paths
 

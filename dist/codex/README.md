@@ -45,19 +45,23 @@ in [`PORT_NOTES.md`](PORT_NOTES.md).
 
 Two ways to give descriptions more room:
 
-- **Install a subset (recommended).** Fewer skills share the budget. The curated
-  subset repos each carry a smaller set:
-  [starter](https://github.com/rampstackco/claude-skills-starter),
+- **Install only the skills you need (recommended).** Fewer skills share the
+  budget. Copy each skill's folder from this distribution. For one skill, run
+  this in the project root:
+
+  ```
+  npx degit rampstackco/claude-skills/dist/codex/.agents/skills/creative-brief .agents/skills/creative-brief
+  ```
+
+  Repeat it for each skill you want, with the skill's name in both places. Each
+  run lands one folder holding that skill's `SKILL.md` and its `references/`.
+
+  The curated subset repos
+  ([starter](https://github.com/rampstackco/claude-skills-starter),
   [seo](https://github.com/rampstackco/claude-skills-seo), and
-  [pm](https://github.com/rampstackco/claude-skills-pm). For example:
-
-  ```
-  npx degit rampstackco/claude-skills-starter/skills .agents/skills
-  ```
-
-  That command is verified to land the starter subset's skills. Loading the
-  subset repos in Codex is not yet tested: they ship the Claude layout, whose
-  `SKILL.md` files keep three catalog keys beside `name` and `description`.
+  [pm](https://github.com/rampstackco/claude-skills-pm)) ship Claude's layout
+  without a Codex build and are untested in Codex, so they are not recommended
+  for Codex until they carry a `dist/codex`.
 
 - **Raise the budget (secondary).** In `config.toml`:
 
