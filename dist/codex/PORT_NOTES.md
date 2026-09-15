@@ -184,8 +184,8 @@ Scope: **`creative-brief` load observed on the 103-skill tree on 2026-09-07; tha
 run's second-skill check is inconclusive, and the contamination that made it
 inconclusive is a session defect, not a distribution defect. The owner smoke
 test of 2026-09-14/15 (below) records both `creative-brief` and `seo-onpage`
-LOADED in the desktop app, by derivation.** The original 102-skill result is kept
-below as history. Read the dates before citing any of them.
+LOADED in the desktop app, with local reads observed via the session's reported
+tool history.** The original 102-skill result is kept below as history. Read the dates before citing any of them.
 
 Original run (102-skill tree), against the installed `codex-cli 0.118.0` (logged
 in via ChatGPT). A scratch workspace containing the emitted `.agents/` tree was
@@ -273,9 +273,9 @@ any work, and should disable or align inherited MCP access first.
 ### Owner smoke test (2026-09-14/15, gate record)
 
 Scope: **qualitative. Discovery fired 3 of 3 in the terminal; `creative-brief`
-and `seo-onpage` both LOADED in the desktop app, by derivation from output
-structure.** Served model identity is not independently attested. No
-performance, quality, or lift claim.
+and `seo-onpage` both LOADED in the desktop app, with local reads observed via
+the session's reported tool history.** Served model identity is not
+independently attested. No performance, quality, or lift claim.
 
 Terminal phase (2026-09-14). `codex exec` with `codex-cli 0.154.0-alpha.6.2` run
 by full path, an isolated `CODEX_HOME`, and the 103-skill tree from head
@@ -298,27 +298,41 @@ reported `gpt-6-astra`.
 App phase (2026-09-15). The Codex desktop app, project rooted at the treatment
 workspace, account default model.
 
+**Verdict: LOADED; local reads observed via the session's reported tool history;
+reference-tier files also read; model self-reported as GPT-6, consistent with the
+terminal runs' `gpt-6-astra` on the same account, not independently attested.**
+
+- **Local reads, no web fetch.** The session reports `exec_command` `Get-Content`
+  reads of `creative-brief/SKILL.md` and `seo-onpage/SKILL.md` from the
+  workspace, and no skill content fetched from the web.
+- **Reference tier.** It also read `creative-brief-template.md`,
+  `voice-and-tone-guide.md`, and `audit-template.md`, and checked the project
+  root for `creative-brief.md` before writing it, per the skill's save step.
+- **Intake.** `seo-onpage` asked through `request_user_input_async`: "Which
+  search phrase should this page target?", offering "Claude skills", "Claude
+  skills catalog", and "AI agent skills". The artifact records "Target query:
+  Claude skills (confirmed by client)". `creative-brief` did not run an intake
+  pass: the brief declares its details invented for a demo, so the skill's
+  elicitation behavior is not evidenced.
+- **Evidence grade.** Session self-attestation of its own tool history,
+  requested by the operator: above the structural comparison below, below an
+  external transcript.
+
+The written artifacts corroborate the reads:
+
 | Skill | Artifact at the skill-specified path | Structural match |
 | --- | --- | --- |
 | `creative-brief` | `creative-brief.md`, project root | Ten sections by name and order, 10 of 10; 1408 words, under the skill's 1500 cap |
 | `seo-onpage` | `seo-audit-skills.md` (`seo-audit-[page-slug].md`), project root | Eight dimensions by name and order, 8 of 8; the six output sections in order; 1169 words |
 
-Before auditing, `seo-onpage` asked for the primary target query, as its
-workflow step 1 requires; the artifact records "Target query: Claude skills
-(confirmed by client)". `creative-brief` did not run an intake pass: the brief
-declares its details invented for a demo, so the skill's elicitation behavior is
-not evidenced.
-
-Both verdicts are derivation, not transcript: no `SKILL.md` read line backs them.
-Skill bodies here are byte-identical to the public source, so structure alone
-cannot separate a local load from a remote copy of the same text. This closes the
-live-load gate for the second skill that the 2026-09-07 run left inconclusive. It
-does not close the scored-run gate.
+This closes the live-load gate for the second skill that the 2026-09-07 run left
+inconclusive. It does not close the scored-run gate.
 
 Evidence, cited and not copied into this repo:
 `F:\rampstack-codex-deploy\smoke\owner-smoke-test-2026-09-14.md` (terminal runs,
-isolation, TLS, budget log lines, and the "App phase 2026-09-15" section with
-the structural comparison), and the two artifacts,
+isolation, TLS, budget log lines, the "App phase 2026-09-15" section with the
+structural comparison, and the dated 2026-09-15 note carrying the session's
+tool-history report verbatim), and the two artifacts,
 `F:\codex-smoke\ws\creative-brief.md` and `F:\codex-smoke\ws\seo-audit-skills.md`.
 
 ### Manual smoke test (owner, authoritative)
@@ -350,7 +364,10 @@ follows the recipe below.
 6. **Terminal runs test discovery; the app closes the load gate.** Under
    `codex exec`, expect the app runtime's exec policy to block shell reads of
    `SKILL.md` regardless of the sandbox flag or project trust. A selected skill
-   plus an attempted read is discovery, not a load.
+   plus an attempted read is discovery, not a load. The identical
+   `exec_command` `Get-Content` call that the runtime exec policy blocked under
+   `codex exec` was allowed inside the desktop app: same binary, same command,
+   different policy context. The app is where the load gate closes.
 
 **Steps.**
 
@@ -433,7 +450,7 @@ with zero parse errors, and on 2026-09-07 `creative-brief` was observed loading
 live from the current 103-skill tree at head `ea99f11` (Step 4). The owner smoke
 test of 2026-09-14/15 closed the second-skill check the 2026-09-07 run left
 open: discovery fired 3 of 3 in the terminal, and `creative-brief` and
-`seo-onpage` both loaded in the desktop app, by derivation from output
-structure. Scored claims remain gated on a clean, identity-attested run. The
+`seo-onpage` both loaded in the desktop app, with local reads observed via the
+session's reported tool history. Scored claims remain gated on a clean, identity-attested run. The
 remaining integration work is operator-supplied MCP server config and the
 runtime description budget: install a subset, or raise `max_context_tokens`.
