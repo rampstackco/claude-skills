@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: vendor-evaluation
+
+category: process-and-team
+catalog_summary: "Tool and vendor selection using a structured rubric"
+display_order: 3

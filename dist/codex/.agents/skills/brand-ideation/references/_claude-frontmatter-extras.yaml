@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: brand-ideation
+
+category: brand
+catalog_summary: "Naming, positioning territories, mood directions, narrative angles"
+display_order: 1

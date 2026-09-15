@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: documentation-strategy
+
+category: process-and-team
+catalog_summary: "Documentation systems, what to document, maintenance cadence"
+display_order: 2

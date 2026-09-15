@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: seo-onpage
+
+category: seo-foundation
+catalog_summary: "Single-page audits and optimization across 8 dimensions"
+display_order: 1
