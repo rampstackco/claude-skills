@@ -180,10 +180,12 @@ urls, keys, or tokens.
 
 ### Step 4 - Real discovery check (Codex CLI)
 
-Scope: **`creative-brief` load observed on the 103-skill tree; the second-skill
-check is inconclusive; the contamination that made it inconclusive is a session
-defect, not a distribution defect.** The original 102-skill result is kept below
-as history. Read the dates before citing either.
+Scope: **`creative-brief` load observed on the 103-skill tree on 2026-09-07; that
+run's second-skill check is inconclusive, and the contamination that made it
+inconclusive is a session defect, not a distribution defect. The owner smoke
+test of 2026-09-14/15 (below) records both `creative-brief` and `seo-onpage`
+LOADED in the desktop app, by derivation.** The original 102-skill result is kept
+below as history. Read the dates before citing any of them.
 
 Original run (102-skill tree), against the installed `codex-cli 0.118.0` (logged
 in via ChatGPT). A scratch workspace containing the emitted `.agents/` tree was
@@ -268,26 +270,105 @@ Anyone re-running this should pass an explicit model the account supports, since
 the default `gpt-5.3-codex` errors out on a ChatGPT account before the turn does
 any work, and should disable or align inherited MCP access first.
 
+### Owner smoke test (2026-09-14/15, gate record)
+
+Scope: **qualitative. Discovery fired 3 of 3 in the terminal; `creative-brief`
+and `seo-onpage` both LOADED in the desktop app, by derivation from output
+structure.** Served model identity is not independently attested. No
+performance, quality, or lift claim.
+
+Terminal phase (2026-09-14). `codex exec` with `codex-cli 0.154.0-alpha.6.2` run
+by full path, an isolated `CODEX_HOME`, and the 103-skill tree from head
+`016b435` as the only content of the treatment workspace. No `-m`; the CLI
+reported `gpt-6-astra`.
+
+- **Discovery fired 3 of 3.** The creative-brief prompt, an implicit on-page SEO
+  prompt, and a named one each selected the intended skill and attempted to read
+  its local `SKILL.md`.
+- **Local reads were blocked.** The app runtime's exec policy rejected every
+  shell read (`blocked by policy`). Requesting `-s workspace-write`, and later
+  marking the workspace trusted, still produced an effective read-only sandbox
+  and the same rejection. This is a test-environment limit, not a distribution
+  defect, and it means the load gate cannot close under `codex exec` here.
+- Connector and plugin calls: 0 in every run, counted from the log's tool-result
+  records.
+- After the blocked read, both SEO runs fetched the public `main` skill from
+  GitHub with the built-in web tool. Those reads do not attest a local load.
+
+App phase (2026-09-15). The Codex desktop app, project rooted at the treatment
+workspace, account default model.
+
+| Skill | Artifact at the skill-specified path | Structural match |
+| --- | --- | --- |
+| `creative-brief` | `creative-brief.md`, project root | Ten sections by name and order, 10 of 10; 1408 words, under the skill's 1500 cap |
+| `seo-onpage` | `seo-audit-skills.md` (`seo-audit-[page-slug].md`), project root | Eight dimensions by name and order, 8 of 8; the six output sections in order; 1169 words |
+
+Before auditing, `seo-onpage` asked for the primary target query, as its
+workflow step 1 requires; the artifact records "Target query: Claude skills
+(confirmed by client)". `creative-brief` did not run an intake pass: the brief
+declares its details invented for a demo, so the skill's elicitation behavior is
+not evidenced.
+
+Both verdicts are derivation, not transcript: no `SKILL.md` read line backs them.
+Skill bodies here are byte-identical to the public source, so structure alone
+cannot separate a local load from a remote copy of the same text. This closes the
+live-load gate for the second skill that the 2026-09-07 run left inconclusive. It
+does not close the scored-run gate.
+
+Evidence, cited and not copied into this repo:
+`F:\rampstack-codex-deploy\smoke\owner-smoke-test-2026-09-14.md` (terminal runs,
+isolation, TLS, budget log lines, and the "App phase 2026-09-15" section with
+the structural comparison), and the two artifacts,
+`F:\codex-smoke\ws\creative-brief.md` and `F:\codex-smoke\ws\seo-audit-skills.md`.
+
 ### Manual smoke test (owner, authoritative)
 
-The automated checks are necessary but not sufficient. The remaining gate before
-merge is a live smoke test by the owner. It was run on 2026-09-07 against head
-`ea99f11` (results in Step 4): `creative-brief` loaded, satisfying the live-load
-gate; the second-skill check was contaminated by an inherited MCP server and is
-inconclusive. The recipe below is what was run and what a repeat should follow:
+The automated checks are necessary but not sufficient. The live-load gate is a
+smoke test by the owner, last run 2026-09-14/15 (gate record above). A repeat
+follows the recipe below.
+
+**Pre-flight: six checks, each earned by a gate tripping.**
+
+1. **A separate `CODEX_HOME`.** Point `CODEX_HOME` at a fresh directory for the
+   test. Auth is per home, so sign in again and let that home hold its own
+   `auth.json`.
+2. **`codex mcp list` is empty, and the log proves zero calls.** The empty list
+   is necessary, not sufficient: connectors and plugins injected by the app
+   runtime are not listed. After each run, count connector and plugin tool calls
+   in the log and require zero. (The 2026-09-07 second-skill check was lost to
+   an inherited MCP server.)
+3. **No `AGENTS.md` or `.codex/config.toml` in any workspace ancestor.** Walk
+   from the workspace itself up to the drive root, and refuse to run if either
+   file exists anywhere on that path.
+4. **The binary by full path, from a non-elevated shell.** Two Codex binaries can
+   coexist, and an elevated shell resolves `codex` differently. Take
+   `--version` from the same full path you run.
+5. **TLS trust for the run binary on intercepting hosts.** Where antivirus or a
+   proxy intercepts TLS, set `SSL_CERT_FILE` to a PEM holding the intercepting
+   root, and confirm the log reports the custom CA bundle loaded. Never disable
+   verification.
+6. **Terminal runs test discovery; the app closes the load gate.** Under
+   `codex exec`, expect the app runtime's exec policy to block shell reads of
+   `SKILL.md` regardless of the sandbox flag or project trust. A selected skill
+   plus an attempted read is discovery, not a load.
+
+**Steps.**
 
 1. Copy the distribution into a scratch Codex workspace **outside this repo**, so
    the walk-up scan cannot reach the repo's own `.agents`:
    `cp -r dist/codex/.agents <scratch-project>/`
-2. From inside `<scratch-project>`, start Codex (interactive `codex`, or
-   `codex exec --cd <scratch-project> --skip-git-repo-check -s read-only`).
-   Pass an explicit `-m <model>` your account supports: the default
-   `gpt-5.3-codex` fails on a ChatGPT account before the turn does any work.
+2. For discovery, run `codex exec --cd <scratch-project> --skip-git-repo-check
+   -s read-only` by full path. For the load gate, open `<scratch-project>` as a
+   project in the Codex desktop app. If you pass `-m`, use a model your account
+   supports (on 0.118.0 the default `gpt-5.3-codex` failed on a ChatGPT account
+   before the turn did any work).
 3. Give it a prompt that should trigger a specific skill, for example:
    "write a creative brief for a new marketing site".
-4. Confirm Codex loads and applies the `creative-brief` skill (its guidance
-   should shape the output). Repeat with an on-page SEO prompt (expect
-   `seo-onpage`) and a brand-archetype prompt (expect `brand-archetype-system`).
+4. Confirm `creative-brief` loaded: a `SKILL.md` read line in the log, or output
+   that matches the skill's ten sections and is written to `creative-brief.md` in
+   the project root. Repeat with an on-page SEO prompt (expect `seo-onpage`, the
+   eight dimensions, `seo-audit-[page-slug].md`) and a brand-archetype prompt
+   (expect `brand-archetype-system`).
 5. If a skill needs an MCP (for example the SEO suite needs Ahrefs), wire the
    server from `dist/codex/agents/openai.yaml` first.
 
@@ -300,6 +381,48 @@ Note: Codex also discovers skills from `~/.codex/skills/` (the `$CODEX_HOME/skil
 directory), in addition to scanning `.agents/skills/` from cwd up to the repo
 root. To install globally instead of per-project, copy the skill folders there.
 
+## Skills description budget (measured)
+
+Codex renders the available-skills catalog into a budget,
+`[skills] max_context_tokens`, and shortens descriptions to fit it. Measured in
+the 2026-09-14 runs (`codex-cli 0.154.0-alpha.6.2`, log field `budget_limit`):
+
+- **Default: 5440.** Every run logged `budget_limit=5440`; the setting was not
+  changed.
+- **Every description is cut to roughly 535 characters at 108 to 110 installed
+  skills.** With 108 skills visible, descriptions were cut to 537 characters and
+  107 of 108 were shortened. With 110 visible, 534 characters and 109 of 110.
+  The runtime, not this tree, supplied the skills beyond this distribution's 103.
+- **The back half is invisible at the default.** At head `016b435`, 88 of this
+  distribution's 103 descriptions are longer than 537 characters (median 686,
+  longest 976). The front survives: what the skill does and its trigger list.
+  The yield clauses that send a request to a sibling skill sit after that. For
+  example, `art-direction`'s "Use `creative-direction` instead" starts at
+  character 613 of 704.
+- **Documented cap: 10,000.** OpenAI's Codex configuration reference caps
+  explicit values at 10,000 tokens (its default is 2% of the model context
+  window). At the cap the room roughly doubles, but the logged math is not linear
+  enough to promise full descriptions.
+- **Tested value: none yet.** No run has changed the setting, and support for
+  the key in this alpha binary has not been validated by changing it.
+
+Install guidance. The reliable path is a subset: install only the skills a
+project needs (a subset repo), so fewer descriptions share the budget. The
+secondary lever is raising the budget in `config.toml`, untested as stated above:
+
+```toml
+[skills]
+max_context_tokens = 10000
+```
+
+## Filed follow-ups
+
+- **A Codex description tier in `scripts/build-codex.mjs`.** Emit a Codex
+  description sized for the runtime budget, through the existing
+  sentence-boundary truncation path, so the build chooses what survives instead
+  of the runtime's cut. The full description stays in the sidecar, as it does
+  for the cap today. Recorded here only; no issue is open.
+
 ## Feasibility
 
 The port is mechanically straightforward and low risk: a dependency-free,
@@ -307,9 +430,10 @@ reversible transform produces a clean `.agents/skills/` tree for all 103 skills,
 matching `SKILLS.lock` name for name, with every description inside Codex's
 1024-char cap. The real Codex CLI was observed loading the earlier 102-skill tree
 with zero parse errors, and on 2026-09-07 `creative-brief` was observed loading
-live from the current 103-skill tree at head `ea99f11` (Step 4), which satisfies
-the live-load gate this distribution was waiting on. The second-skill check in
-that run is inconclusive for instrument reasons, and scored claims remain gated
-on a clean, identity-attested run. The remaining integration work is
-operator-supplied MCP server config, and a clean second-skill observation from a
-session without inherited MCP access.
+live from the current 103-skill tree at head `ea99f11` (Step 4). The owner smoke
+test of 2026-09-14/15 closed the second-skill check the 2026-09-07 run left
+open: discovery fired 3 of 3 in the terminal, and `creative-brief` and
+`seo-onpage` both loaded in the desktop app, by derivation from output
+structure. Scored claims remain gated on a clean, identity-attested run. The
+remaining integration work is operator-supplied MCP server config and the
+runtime description budget: install a subset, or raise `max_context_tokens`.
