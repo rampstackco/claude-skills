@@ -558,50 +558,50 @@ All 103 skills are shipped. Each has a complete SKILL.md plus at least one refer
 
 | Skill | What it does |
 |---|---|
-| [`brand-discovery`](skills/brand-discovery/SKILL.md) | Audience research, competitive scan, positioning territory exploration |
-| [`creative-brief`](skills/creative-brief/SKILL.md) | Project briefs that align stakeholders before work starts |
-| [`creative-direction`](skills/creative-direction/SKILL.md) | Four-axis aesthetic brief (tone, aesthetic, audience, sensory ambition) for cross-skill coherence |
-| [`information-architecture`](skills/information-architecture/SKILL.md) | Sitemap, navigation, URL structure, content types, taxonomy |
-| [`content-strategy`](skills/content-strategy/SKILL.md) | Editorial strategy, content calendar, topical authority planning |
+| [`brand-discovery`](skills/brand-discovery/SKILL.md) | Audience research, competitive scan, positioning territory exploration<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`creative-brief`](skills/creative-brief/SKILL.md) | Project briefs that align stakeholders before work starts<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`creative-direction`](skills/creative-direction/SKILL.md) | Four-axis aesthetic brief (tone, aesthetic, audience, sensory ambition) for cross-skill coherence<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`information-architecture`](skills/information-architecture/SKILL.md) | Sitemap, navigation, URL structure, content types, taxonomy<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-strategy`](skills/content-strategy/SKILL.md) | Editorial strategy, content calendar, topical authority planning<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Brand (7)
 
 | Skill | What it does |
 |---|---|
-| [`brand-ideation`](skills/brand-ideation/SKILL.md) | Naming, positioning territories, mood directions, narrative angles |
-| [`brand-identity`](skills/brand-identity/SKILL.md) | Logo system, color, typography, imagery, iconography, motion |
-| [`brand-style-guide`](skills/brand-style-guide/SKILL.md) | The canonical reference document for the full brand system |
-| [`brand-voice`](skills/brand-voice/SKILL.md) | Voice attributes, tone shifts, vocabulary, paired-example library |
-| [`brand-archetype-system`](skills/brand-archetype-system/SKILL.md) | 12 archetype defaults across 18 verticals: color, type, voice, imagery starters |
-| [`logo-design`](skills/logo-design/SKILL.md) | Logo variants across architectures (wordmark, lockup, monogram, letterform-as-symbol), with rationale and application specs |
-| [`creative-brief-selector`](skills/creative-brief-selector/SKILL.md) | Live-reference-grounded creative briefs with divergence check against prior builds |
+| [`brand-ideation`](skills/brand-ideation/SKILL.md) | Naming, positioning territories, mood directions, narrative angles<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`brand-identity`](skills/brand-identity/SKILL.md) | Logo system, color, typography, imagery, iconography, motion<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`brand-style-guide`](skills/brand-style-guide/SKILL.md) | The canonical reference document for the full brand system<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`brand-voice`](skills/brand-voice/SKILL.md) | Voice attributes, tone shifts, vocabulary, paired-example library<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-brand-voice) (newest run 2026-08-30). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Holds), GPT-5 mini (No measured effect). [Per model](skills/brand-voice/README.md). |
+| [`brand-archetype-system`](skills/brand-archetype-system/SKILL.md) | 12 archetype defaults across 18 verticals: color, type, voice, imagery starters<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`logo-design`](skills/logo-design/SKILL.md) | Logo variants across architectures (wordmark, lockup, monogram, letterform-as-symbol), with rationale and application specs<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`creative-brief-selector`](skills/creative-brief-selector/SKILL.md) | Live-reference-grounded creative briefs with divergence check against prior builds<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Design (4)
 
 | Skill | What it does |
 |---|---|
-| [`design-system`](skills/design-system/SKILL.md) | Component library, design tokens, design system documentation |
-| [`design-standards`](skills/design-standards/SKILL.md) | Production-grade page and component design standards |
-| [`art-direction`](skills/art-direction/SKILL.md) | Photography, illustration, and visual direction for campaigns |
-| [`vertical-site-conventions`](skills/vertical-site-conventions/SKILL.md) | Vertical page and site composition built to the experience bar |
+| [`design-system`](skills/design-system/SKILL.md) | Component library, design tokens, design system documentation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`design-standards`](skills/design-standards/SKILL.md) | Production-grade page and component design standards<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`art-direction`](skills/art-direction/SKILL.md) | Photography, illustration, and visual direction for campaigns<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`vertical-site-conventions`](skills/vertical-site-conventions/SKILL.md) | Vertical page and site composition built to the experience bar<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Content (13)
 
 | Skill | What it does |
 |---|---|
-| [`pillar-content-architecture`](skills/pillar-content-architecture/SKILL.md) | Hub-level content architecture: pillar topic selection, cluster planning, internal linking, URL structure, pillar and cluster page anatomy, topical authority signals, refresh discipline |
-| [`content-brief-authoring`](skills/content-brief-authoring/SKILL.md) | Per-piece editorial brief: target keyword, intent, audience, outline, entity coverage, internal linking, success criteria, and the discipline that distinguishes useful briefs from bloat |
-| [`content-and-copy`](skills/content-and-copy/SKILL.md) | Website copy, blog content, content production frameworks |
-| [`landing-page-copy`](skills/landing-page-copy/SKILL.md) | Landing pages, sales pages, hero-to-CTA flow |
-| [`email-sequences`](skills/email-sequences/SKILL.md) | Onboarding flows, lifecycle campaigns, transactional copy |
-| [`programmatic-seo`](skills/programmatic-seo/SKILL.md) | Designing pSEO programs that work: data sources, template design, quality control at scale, internal linking, crawl budget, AEO/GEO patterns, refresh discipline, and when pSEO is and is not the right answer |
-| [`editorial-qa`](skills/editorial-qa/SKILL.md) | Pre-publish QA framework: brief adherence, voice consistency, fact accuracy, AI-content audit, AEO/SEO compliance, sampling at scale, and the workflow that distinguishes catch-problems QA from process theater |
-| [`ai-content-collaboration`](skills/ai-content-collaboration/SKILL.md) | How humans and AI compose in content workflows: participation boundaries, hybrid patterns, voice ownership, the AI slop problem, disclosure and transparency, team calibration, and the ethics of honest AI-assisted production |
-| [`long-form-content-frameworks`](skills/long-form-content-frameworks/SKILL.md) | Structural patterns for individual long-form pieces (case studies, whitepapers, research reports, definitive guides, manifestos, ebooks, long-form tutorials) that distinguish publication-quality work from bloggy-long padding or academic bloat |
-| [`content-refresh-system`](skills/content-refresh-system/SKILL.md) | Systematic content refresh: quarterly audits, refresh prioritization, refresh-vs-merge-vs-delete decisions, the lifecycle discipline that distinguishes intentional programs from set-and-forget decay |
-| [`content-repurposing`](skills/content-repurposing/SKILL.md) | Cross-format content adaptation: one piece becomes many (blog series, email, social, webinar, podcast, video) with per-format adaptation rather than mass-blast that ignores medium constraints |
-| [`content-distribution`](skills/content-distribution/SKILL.md) | Content distribution discipline: owned, earned, and paid channels matched to audience and content type. Channel-fit decisions, distribution cadence, the strategic alternative to spam-everywhere or hope-and-pray |
-| [`evidence-based-reviews`](skills/evidence-based-reviews/SKILL.md) | Evidence tiers, methodology disclosure, honest review claims |
+| [`pillar-content-architecture`](skills/pillar-content-architecture/SKILL.md) | Hub-level content architecture: pillar topic selection, cluster planning, internal linking, URL structure, pillar and cluster page anatomy, topical authority signals, refresh discipline<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-brief-authoring`](skills/content-brief-authoring/SKILL.md) | Per-piece editorial brief: target keyword, intent, audience, outline, entity coverage, internal linking, success criteria, and the discipline that distinguishes useful briefs from bloat<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-and-copy`](skills/content-and-copy/SKILL.md) | Website copy, blog content, content production frameworks<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`landing-page-copy`](skills/landing-page-copy/SKILL.md) | Landing pages, sales pages, hero-to-CTA flow<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`email-sequences`](skills/email-sequences/SKILL.md) | Onboarding flows, lifecycle campaigns, transactional copy<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`programmatic-seo`](skills/programmatic-seo/SKILL.md) | Designing pSEO programs that work: data sources, template design, quality control at scale, internal linking, crawl budget, AEO/GEO patterns, refresh discipline, and when pSEO is and is not the right answer<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`editorial-qa`](skills/editorial-qa/SKILL.md) | Pre-publish QA framework: brief adherence, voice consistency, fact accuracy, AI-content audit, AEO/SEO compliance, sampling at scale, and the workflow that distinguishes catch-problems QA from process theater<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`ai-content-collaboration`](skills/ai-content-collaboration/SKILL.md) | How humans and AI compose in content workflows: participation boundaries, hybrid patterns, voice ownership, the AI slop problem, disclosure and transparency, team calibration, and the ethics of honest AI-assisted production<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`long-form-content-frameworks`](skills/long-form-content-frameworks/SKILL.md) | Structural patterns for individual long-form pieces (case studies, whitepapers, research reports, definitive guides, manifestos, ebooks, long-form tutorials) that distinguish publication-quality work from bloggy-long padding or academic bloat<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-refresh-system`](skills/content-refresh-system/SKILL.md) | Systematic content refresh: quarterly audits, refresh prioritization, refresh-vs-merge-vs-delete decisions, the lifecycle discipline that distinguishes intentional programs from set-and-forget decay<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-repurposing`](skills/content-repurposing/SKILL.md) | Cross-format content adaptation: one piece becomes many (blog series, email, social, webinar, podcast, video) with per-format adaptation rather than mass-blast that ignores medium constraints<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-distribution`](skills/content-distribution/SKILL.md) | Content distribution discipline: owned, earned, and paid channels matched to audience and content type. Channel-fit decisions, distribution cadence, the strategic alternative to spam-everywhere or hope-and-pray<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`evidence-based-reviews`](skills/evidence-based-reviews/SKILL.md) | Evidence tiers, methodology disclosure, honest review claims<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### SEO foundation (7)
 
@@ -609,13 +609,13 @@ Tool-agnostic SEO skills. These define the conceptual frameworks. The SEO audit 
 
 | Skill | What it does |
 |---|---|
-| [`seo-onpage`](skills/seo-onpage/SKILL.md) | Single-page audits and optimization across 8 dimensions |
-| [`seo-technical`](skills/seo-technical/SKILL.md) | Crawlability, indexability, rendering, schema, page experience |
-| [`seo-keyword`](skills/seo-keyword/SKILL.md) | Discovery, intent classification, clustering, prioritization |
-| [`seo-competitor`](skills/seo-competitor/SKILL.md) | SERP overlap, content gaps, backlink gaps, technical comparison |
-| [`seo-offpage`](skills/seo-offpage/SKILL.md) | Link building, digital PR, citations, linkable assets |
-| [`seo-content-audit`](skills/seo-content-audit/SKILL.md) | Keep/update/merge/redirect/delete decisions across a site |
-| [`seo-aeo-geo`](skills/seo-aeo-geo/SKILL.md) | AI search optimization, llms.txt, extraction-friendly content |
+| [`seo-onpage`](skills/seo-onpage/SKILL.md) | Single-page audits and optimization across 8 dimensions<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-seo-onpage) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/seo-onpage/README.md). |
+| [`seo-technical`](skills/seo-technical/SKILL.md) | Crawlability, indexability, rendering, schema, page experience<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-keyword`](skills/seo-keyword/SKILL.md) | Discovery, intent classification, clustering, prioritization<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-competitor`](skills/seo-competitor/SKILL.md) | SERP overlap, content gaps, backlink gaps, technical comparison<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-offpage`](skills/seo-offpage/SKILL.md) | Link building, digital PR, citations, linkable assets<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-content-audit`](skills/seo-content-audit/SKILL.md) | Keep/update/merge/redirect/delete decisions across a site<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-aeo-geo`](skills/seo-aeo-geo/SKILL.md) | AI search optimization, llms.txt, extraction-friendly content<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### SEO audit suite (Ahrefs MCP-powered) (7)
 
@@ -623,67 +623,67 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 
 | Skill | What it does |
 |---|---|
-| [`seo-audit-orchestration`](skills/seo-audit-orchestration/SKILL.md) | Master orchestrator: sequences the suite, produces a rollup report |
-| [`seo-backlink-audit`](skills/seo-backlink-audit/SKILL.md) | Profile health, anchor mix, toxic links, reclamation, gap analysis |
-| [`seo-keyword-gap-audit`](skills/seo-keyword-gap-audit/SKILL.md) | Competitor keyword gaps with opportunity scoring and clustering |
-| [`seo-content-gap-audit`](skills/seo-content-gap-audit/SKILL.md) | Missing topics, thin coverage, outdated content, decay diagnosis |
-| [`seo-traffic-diagnosis`](skills/seo-traffic-diagnosis/SKILL.md) | Diagnose drops, stalls, or wins via 5-layer root cause analysis |
-| [`seo-site-health-audit`](skills/seo-site-health-audit/SKILL.md) | Triage Ahrefs Site Audit findings by SEO impact, not severity |
-| [`seo-rank-tracking`](skills/seo-rank-tracking/SKILL.md) | Setup, baseline, segmentation, alerting, dashboarding |
+| [`seo-audit-orchestration`](skills/seo-audit-orchestration/SKILL.md) | Master orchestrator: sequences the suite, produces a rollup report<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-backlink-audit`](skills/seo-backlink-audit/SKILL.md) | Profile health, anchor mix, toxic links, reclamation, gap analysis<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-keyword-gap-audit`](skills/seo-keyword-gap-audit/SKILL.md) | Competitor keyword gaps with opportunity scoring and clustering<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-content-gap-audit`](skills/seo-content-gap-audit/SKILL.md) | Missing topics, thin coverage, outdated content, decay diagnosis<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-traffic-diagnosis`](skills/seo-traffic-diagnosis/SKILL.md) | Diagnose drops, stalls, or wins via 5-layer root cause analysis<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-site-health-audit`](skills/seo-site-health-audit/SKILL.md) | Triage Ahrefs Site Audit findings by SEO impact, not severity<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`seo-rank-tracking`](skills/seo-rank-tracking/SKILL.md) | Setup, baseline, segmentation, alerting, dashboarding<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Product (13)
 
 | Skill | What it does |
 |---|---|
-| [`pm-spec-writing`](skills/pm-spec-writing/SKILL.md) | PRDs, user stories, acceptance criteria, dev briefs |
-| [`roadmap-planning`](skills/roadmap-planning/SKILL.md) | Quarterly planning, prioritization, dependency mapping |
-| [`integration-orchestrator`](skills/integration-orchestrator/SKILL.md) | Sequence creative-direction work across phases, gates, handoffs, and QA verification |
-| [`experiment-design`](skills/experiment-design/SKILL.md) | Hypothesis to decision: sample size, duration, segment analysis, interpretation, and the failure modes that produce wrong shipping calls |
-| [`feature-flagging`](skills/feature-flagging/SKILL.md) | Flags as production infrastructure: types, naming, lifecycle, targeting, rollout, stale flag cleanup, governance |
-| [`experimentation-analytics`](skills/experimentation-analytics/SKILL.md) | Read result panels without fooling yourself: confidence intervals, p-values, multiple testing, sequential testing, CUPED, ratio metrics, network effects, dashboard reconciliation |
-| [`experimentation-platform-orchestrator`](skills/experimentation-platform-orchestrator/SKILL.md) | Pick the right experimentation platform, migrate when wrong, coordinate when multi-platform: a decision framework for Statsig, PostHog, GrowthBook, Optimizely, Amplitude, Eppo, Kameleoon |
-| [`product-analytics-setup`](skills/product-analytics-setup/SKILL.md) | Instrument product analytics correctly: event taxonomy, properties, naming conventions, schema versioning, funnels, retention cohorts, North Star selection, and the instrumentation debt that compounds without discipline |
-| [`data-warehouse-experimentation`](skills/data-warehouse-experimentation/SKILL.md) | Run experiments out of the warehouse: SQL assignment, exposure logs, dbt metric definitions, statistical analysis, variance reduction with CUPED, sequential testing, and the operational tradeoffs vs platforms |
-| [`feature-launch-playbook`](skills/feature-launch-playbook/SKILL.md) | The operational discipline of launching a feature well: positioning, internal alignment, customer comms, sales enablement, support readiness, rollout strategy, monitoring, and post-launch measurement |
-| [`jtbd-framing`](skills/jtbd-framing/SKILL.md) | Jobs-to-be-Done framework. Job statements, struggling moments, hire/fire criteria, the difference between feature-thinking and job-thinking. Honest about where JTBD earns its keep and where it becomes performative |
-| [`okr-design`](skills/okr-design/SKILL.md) | OKR design discipline. Outcome statements, key results, scoring, mid-quarter recalibration. Distinguishes sandbagged OKRs (always hit, useless) from aspirational fantasy (impossible, demoralizing) from stretch OKRs (genuine ambition with quarterly accountability) |
-| [`beta-program-management`](skills/beta-program-management/SKILL.md) | Running betas that produce real signal. Participant selection, structured feedback, beta-to-GA decisions. Distinguishes soft-launch (no structure) from kitchen-sink (everyone in) from structured-beta (calibrated cohort with intentional feedback loops) |
+| [`pm-spec-writing`](skills/pm-spec-writing/SKILL.md) | PRDs, user stories, acceptance criteria, dev briefs<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-pm-spec-writing) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Mixed), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Mixed). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (Could not measure). [Per model](skills/pm-spec-writing/README.md). |
+| [`roadmap-planning`](skills/roadmap-planning/SKILL.md) | Quarterly planning, prioritization, dependency mapping<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`integration-orchestrator`](skills/integration-orchestrator/SKILL.md) | Sequence creative-direction work across phases, gates, handoffs, and QA verification<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`experiment-design`](skills/experiment-design/SKILL.md) | Hypothesis to decision: sample size, duration, segment analysis, interpretation, and the failure modes that produce wrong shipping calls<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`feature-flagging`](skills/feature-flagging/SKILL.md) | Flags as production infrastructure: types, naming, lifecycle, targeting, rollout, stale flag cleanup, governance<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`experimentation-analytics`](skills/experimentation-analytics/SKILL.md) | Read result panels without fooling yourself: confidence intervals, p-values, multiple testing, sequential testing, CUPED, ratio metrics, network effects, dashboard reconciliation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`experimentation-platform-orchestrator`](skills/experimentation-platform-orchestrator/SKILL.md) | Pick the right experimentation platform, migrate when wrong, coordinate when multi-platform: a decision framework for Statsig, PostHog, GrowthBook, Optimizely, Amplitude, Eppo, Kameleoon<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`product-analytics-setup`](skills/product-analytics-setup/SKILL.md) | Instrument product analytics correctly: event taxonomy, properties, naming conventions, schema versioning, funnels, retention cohorts, North Star selection, and the instrumentation debt that compounds without discipline<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`data-warehouse-experimentation`](skills/data-warehouse-experimentation/SKILL.md) | Run experiments out of the warehouse: SQL assignment, exposure logs, dbt metric definitions, statistical analysis, variance reduction with CUPED, sequential testing, and the operational tradeoffs vs platforms<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`feature-launch-playbook`](skills/feature-launch-playbook/SKILL.md) | The operational discipline of launching a feature well: positioning, internal alignment, customer comms, sales enablement, support readiness, rollout strategy, monitoring, and post-launch measurement<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`jtbd-framing`](skills/jtbd-framing/SKILL.md) | Jobs-to-be-Done framework. Job statements, struggling moments, hire/fire criteria, the difference between feature-thinking and job-thinking. Honest about where JTBD earns its keep and where it becomes performative<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`okr-design`](skills/okr-design/SKILL.md) | OKR design discipline. Outcome statements, key results, scoring, mid-quarter recalibration. Distinguishes sandbagged OKRs (always hit, useless) from aspirational fantasy (impossible, demoralizing) from stretch OKRs (genuine ambition with quarterly accountability)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`beta-program-management`](skills/beta-program-management/SKILL.md) | Running betas that produce real signal. Participant selection, structured feedback, beta-to-GA decisions. Distinguishes soft-launch (no structure) from kitchen-sink (everyone in) from structured-beta (calibrated cohort with intentional feedback loops)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Development (4)
 
 | Skill | What it does |
 |---|---|
-| [`code-review-web`](skills/code-review-web/SKILL.md) | PR review, build error diagnosis, security and quality checks |
-| [`frontend-component-build`](skills/frontend-component-build/SKILL.md) | Component architecture, props design, accessibility from the start |
-| [`accessibility-audit`](skills/accessibility-audit/SKILL.md) | WCAG compliance audit with remediation plan |
-| [`performance-optimization`](skills/performance-optimization/SKILL.md) | Core Web Vitals, asset optimization, render performance |
+| [`code-review-web`](skills/code-review-web/SKILL.md) | PR review, build error diagnosis, security and quality checks<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-code-review-web) (Tier 1, newest run 2026-09-26). Via API: Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Fable 5.1 (No measured effect), Claude Haiku 4.5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/code-review-web/README.md). |
+| [`frontend-component-build`](skills/frontend-component-build/SKILL.md) | Component architecture, props design, accessibility from the start<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`accessibility-audit`](skills/accessibility-audit/SKILL.md) | WCAG compliance audit with remediation plan<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-accessibility-audit) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (Mixed), Claude Opus 5 (No measured effect), Claude Fable 5 (Mixed), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/accessibility-audit/README.md). |
+| [`performance-optimization`](skills/performance-optimization/SKILL.md) | Core Web Vitals, asset optimization, render performance<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Quality assurance (1)
 
 | Skill | What it does |
 |---|---|
-| [`qa-testing`](skills/qa-testing/SKILL.md) | Pre-launch QA, regression testing, cross-browser checks |
+| [`qa-testing`](skills/qa-testing/SKILL.md) | Pre-launch QA, regression testing, cross-browser checks<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Operations (9)
 
 | Skill | What it does |
 |---|---|
-| [`launch-runbook`](skills/launch-runbook/SKILL.md) | Go-live runbook, DNS cutover, deploy day procedures |
-| [`incident-response`](skills/incident-response/SKILL.md) | Incident triage, comms, mitigation, escalation |
-| [`after-action-report`](skills/after-action-report/SKILL.md) | Post-mortems, retros, learnings documentation |
-| [`domain-strategy`](skills/domain-strategy/SKILL.md) | DNS architecture, redirects, registrars, multi-domain portfolios |
-| [`monitoring-and-alerting`](skills/monitoring-and-alerting/SKILL.md) | SLO design, uptime checks, alert routing, on-call rotations |
-| [`backup-and-disaster-recovery`](skills/backup-and-disaster-recovery/SKILL.md) | RPO/RTO targets, backup strategy, restoration drills |
-| [`security-baseline`](skills/security-baseline/SKILL.md) | HTTPS, security headers, CSP, secrets management, vulnerability scans |
-| [`email-deliverability`](skills/email-deliverability/SKILL.md) | DMARC, SPF, DKIM, sender reputation, deliverability monitoring |
-| [`media-asset-management`](skills/media-asset-management/SKILL.md) | Image pipelines, video hosting, asset libraries, format selection |
+| [`launch-runbook`](skills/launch-runbook/SKILL.md) | Go-live runbook, DNS cutover, deploy day procedures<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`incident-response`](skills/incident-response/SKILL.md) | Incident triage, comms, mitigation, escalation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`after-action-report`](skills/after-action-report/SKILL.md) | Post-mortems, retros, learnings documentation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`domain-strategy`](skills/domain-strategy/SKILL.md) | DNS architecture, redirects, registrars, multi-domain portfolios<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`monitoring-and-alerting`](skills/monitoring-and-alerting/SKILL.md) | SLO design, uptime checks, alert routing, on-call rotations<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`backup-and-disaster-recovery`](skills/backup-and-disaster-recovery/SKILL.md) | RPO/RTO targets, backup strategy, restoration drills<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`security-baseline`](skills/security-baseline/SKILL.md) | HTTPS, security headers, CSP, secrets management, vulnerability scans<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`email-deliverability`](skills/email-deliverability/SKILL.md) | DMARC, SPF, DKIM, sender reputation, deliverability monitoring<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`media-asset-management`](skills/media-asset-management/SKILL.md) | Image pipelines, video hosting, asset libraries, format selection<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Growth (2)
 
 | Skill | What it does |
 |---|---|
-| [`analytics-strategy`](skills/analytics-strategy/SKILL.md) | Measurement frameworks, dashboard design, event taxonomy |
-| [`cro-optimization`](skills/cro-optimization/SKILL.md) | Hypothesis-driven testing, conversion optimization |
+| [`analytics-strategy`](skills/analytics-strategy/SKILL.md) | Measurement frameworks, dashboard design, event taxonomy<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`cro-optimization`](skills/cro-optimization/SKILL.md) | Hypothesis-driven testing, conversion optimization<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Growth tooling (12)
 
@@ -691,18 +691,18 @@ Interactive web tools that turn visitors into leads. Lead magnets, calculators, 
 
 | Skill | What it does |
 |---|---|
-| [`lead-magnet-design`](skills/lead-magnet-design/SKILL.md) | Designing gated content that earns the email. Distinguishes thin-bait (overpromises, underdelivers) from kitchen-sink-resource (everything, helps with nothing) from earned-value-magnet (delivers standalone value while qualifying the lead) |
-| [`calculator-design`](skills/calculator-design/SKILL.md) | Designing interactive calculators that deliver decision-support value while qualifying leads. Distinguishes vanity-calculator (no real value) from lead-trap (hides answer behind email) from transparent-decision-tool (gives genuine value, captures leads honestly) |
-| [`quiz-and-assessment-design`](skills/quiz-and-assessment-design/SKILL.md) | Designing quizzes and assessments that produce actionable segmentation. Distinguishes clickbait-quiz (engagement only) from vanity-result (entertaining, not useful) from actionable-segmentation (genuine categorization that drives next-step recommendations) |
-| [`multi-step-form-design`](skills/multi-step-form-design/SKILL.md) | Designing multi-step forms that respect cognitive load while maintaining completion intent. Distinguishes kitchen-sink-single-page (overwhelms) from progress-theater (steps without genuine staging) from genuinely-staged (each step earns its own page) |
-| [`chatbot-flow-design`](skills/chatbot-flow-design/SKILL.md) | Designing conversational flows for chatbots and AI agents on websites. Distinguishes scripted-bot (rigid trees, fail edge cases) from hallucinating-bot (LLM without structure, makes things up) from structured-guided-conversation (LLM-powered with intent architecture and fallback discipline) |
-| [`funnel-flow-architecture`](skills/funnel-flow-architecture/SKILL.md) | Architecting cross-tool conversion flows that match audience and stage. Distinguishes silo-funnels (every tool standalone) from kitchen-sink-funnels (every audience squeezed through one path) from matched-funnels (architecture matched to audience-and-stage) |
-| [`onboarding-wizard-design`](skills/onboarding-wizard-design/SKILL.md) | Designing first-run product onboarding wizards. Distinguishes tutorial-overload (dump everything upfront) from skip-friendly-empty (skipped onboarding leads to abandoned product) from earned-progressive-disclosure (right things at the right moments) |
-| [`interactive-product-tour`](skills/interactive-product-tour/SKILL.md) | Designing in-product tours and contextual help. Distinguishes tooltip-spam (every button has a tour stop) from one-and-done (tour shows once, never seen again) from contextual-when-needed (surfaces help at the moment friction occurs) |
-| [`upgrade-flow-design`](skills/upgrade-flow-design/SKILL.md) | Designing free-to-paid conversion flows. Distinguishes paywall-everywhere (gates everything aggressively) from free-forever-trap (no upgrade path surfaces) from value-triggered-upgrade (paywall surfaces at moments of demonstrated value) |
-| [`scheduler-and-booking-design`](skills/scheduler-and-booking-design/SKILL.md) | Designing schedulers and booking flows. Distinguishes any-time-friction (no qualification, just a booking link) from interrogation-gate (so much qualification it scares users off) from qualified-fast-path (just enough qualification to set up the call well) |
-| [`comparison-tool-design`](skills/comparison-tool-design/SKILL.md) | Designing comparison tools that help users decide. Distinguishes feature-list-dump (every feature in a row, no decision support) from hidden-recommendation (biased comparison pretending to be neutral) from honest-comparison-with-guidance (genuine comparison plus opinionated recommendation) |
-| [`product-configurator-design`](skills/product-configurator-design/SKILL.md) | Designing interactive product configurators. Distinguishes infinite-options (decision paralysis from too many options) from canned-bundles-only (no real customization) from guided-configuration (smart defaults plus meaningful constraints plus escape hatches) |
+| [`lead-magnet-design`](skills/lead-magnet-design/SKILL.md) | Designing gated content that earns the email. Distinguishes thin-bait (overpromises, underdelivers) from kitchen-sink-resource (everything, helps with nothing) from earned-value-magnet (delivers standalone value while qualifying the lead)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`calculator-design`](skills/calculator-design/SKILL.md) | Designing interactive calculators that deliver decision-support value while qualifying leads. Distinguishes vanity-calculator (no real value) from lead-trap (hides answer behind email) from transparent-decision-tool (gives genuine value, captures leads honestly)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`quiz-and-assessment-design`](skills/quiz-and-assessment-design/SKILL.md) | Designing quizzes and assessments that produce actionable segmentation. Distinguishes clickbait-quiz (engagement only) from vanity-result (entertaining, not useful) from actionable-segmentation (genuine categorization that drives next-step recommendations)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`multi-step-form-design`](skills/multi-step-form-design/SKILL.md) | Designing multi-step forms that respect cognitive load while maintaining completion intent. Distinguishes kitchen-sink-single-page (overwhelms) from progress-theater (steps without genuine staging) from genuinely-staged (each step earns its own page)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`chatbot-flow-design`](skills/chatbot-flow-design/SKILL.md) | Designing conversational flows for chatbots and AI agents on websites. Distinguishes scripted-bot (rigid trees, fail edge cases) from hallucinating-bot (LLM without structure, makes things up) from structured-guided-conversation (LLM-powered with intent architecture and fallback discipline)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`funnel-flow-architecture`](skills/funnel-flow-architecture/SKILL.md) | Architecting cross-tool conversion flows that match audience and stage. Distinguishes silo-funnels (every tool standalone) from kitchen-sink-funnels (every audience squeezed through one path) from matched-funnels (architecture matched to audience-and-stage)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`onboarding-wizard-design`](skills/onboarding-wizard-design/SKILL.md) | Designing first-run product onboarding wizards. Distinguishes tutorial-overload (dump everything upfront) from skip-friendly-empty (skipped onboarding leads to abandoned product) from earned-progressive-disclosure (right things at the right moments)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`interactive-product-tour`](skills/interactive-product-tour/SKILL.md) | Designing in-product tours and contextual help. Distinguishes tooltip-spam (every button has a tour stop) from one-and-done (tour shows once, never seen again) from contextual-when-needed (surfaces help at the moment friction occurs)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`upgrade-flow-design`](skills/upgrade-flow-design/SKILL.md) | Designing free-to-paid conversion flows. Distinguishes paywall-everywhere (gates everything aggressively) from free-forever-trap (no upgrade path surfaces) from value-triggered-upgrade (paywall surfaces at moments of demonstrated value)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`scheduler-and-booking-design`](skills/scheduler-and-booking-design/SKILL.md) | Designing schedulers and booking flows. Distinguishes any-time-friction (no qualification, just a booking link) from interrogation-gate (so much qualification it scares users off) from qualified-fast-path (just enough qualification to set up the call well)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`comparison-tool-design`](skills/comparison-tool-design/SKILL.md) | Designing comparison tools that help users decide. Distinguishes feature-list-dump (every feature in a row, no decision support) from hidden-recommendation (biased comparison pretending to be neutral) from honest-comparison-with-guidance (genuine comparison plus opinionated recommendation)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`product-configurator-design`](skills/product-configurator-design/SKILL.md) | Designing interactive product configurators. Distinguishes infinite-options (decision paralysis from too many options) from canned-bundles-only (no real customization) from guided-configuration (smart defaults plus meaningful constraints plus escape hatches)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Marketing (3)
 
@@ -710,40 +710,40 @@ Paid media discipline: strategy, creative, and performance analytics. Pairs with
 
 | Skill | What it does |
 |---|---|
-| [`paid-media-strategy`](skills/paid-media-strategy/SKILL.md) | Hypothesis to spend: channel selection, budget allocation, audience targeting, bid strategy, attribution reality, and the failure modes that burn agency-scale budgets |
-| [`ads-creative-development`](skills/ads-creative-development/SKILL.md) | Hook patterns, format selection, video pacing, variation systems, testing methodology, fatigue detection, and the platform-specific creative norms that separate ads from clutter |
-| [`ads-performance-analytics`](skills/ads-performance-analytics/SKILL.md) | Read paid media dashboards without fooling yourself: attribution models, platform reporting quirks, ROAS vs LTV, multi-platform reconciliation, incrementality testing, and the interpretation failures that compound into wasted budget |
+| [`paid-media-strategy`](skills/paid-media-strategy/SKILL.md) | Hypothesis to spend: channel selection, budget allocation, audience targeting, bid strategy, attribution reality, and the failure modes that burn agency-scale budgets<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`ads-creative-development`](skills/ads-creative-development/SKILL.md) | Hook patterns, format selection, video pacing, variation systems, testing methodology, fatigue detection, and the platform-specific creative norms that separate ads from clutter<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`ads-performance-analytics`](skills/ads-performance-analytics/SKILL.md) | Read paid media dashboards without fooling yourself: attribution models, platform reporting quirks, ROAS vs LTV, multi-platform reconciliation, incrementality testing, and the interpretation failures that compound into wasted budget<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Research (6)
 
 | Skill | What it does |
 |---|---|
-| [`ux-research`](skills/ux-research/SKILL.md) | Research planning, user interviews, qualitative synthesis |
-| [`usability-testing`](skills/usability-testing/SKILL.md) | Test design, moderation, findings reports |
-| [`journey-mapping`](skills/journey-mapping/SKILL.md) | Customer journey maps, service blueprints, friction analysis |
-| [`discovery-research-synthesis`](skills/discovery-research-synthesis/SKILL.md) | Synthesizing customer interviews, research notes, and support tickets into actionable PM decisions. Distinguishes data-dump (no synthesis) from insight-theater (overpolished narrative) from actionable synthesis (decision-grade clarity) |
-| [`user-feedback-aggregation`](skills/user-feedback-aggregation/SKILL.md) | Collecting and synthesizing user feedback across channels into continuous decision signal. Triage discipline that distinguishes loudest-voice (whoever complains most) from averaged-noise (every signal weighted equally) from triaged-synthesis (weighted by source quality and decision relevance) |
-| [`competitor-experience-audit`](skills/competitor-experience-audit/SKILL.md) | Cross-site experience patterns and gaps across a vertical |
+| [`ux-research`](skills/ux-research/SKILL.md) | Research planning, user interviews, qualitative synthesis<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`usability-testing`](skills/usability-testing/SKILL.md) | Test design, moderation, findings reports<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`journey-mapping`](skills/journey-mapping/SKILL.md) | Customer journey maps, service blueprints, friction analysis<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`discovery-research-synthesis`](skills/discovery-research-synthesis/SKILL.md) | Synthesizing customer interviews, research notes, and support tickets into actionable PM decisions. Distinguishes data-dump (no synthesis) from insight-theater (overpolished narrative) from actionable synthesis (decision-grade clarity)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`user-feedback-aggregation`](skills/user-feedback-aggregation/SKILL.md) | Collecting and synthesizing user feedback across channels into continuous decision signal. Triage discipline that distinguishes loudest-voice (whoever complains most) from averaged-noise (every signal weighted equally) from triaged-synthesis (weighted by source quality and decision relevance)<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`competitor-experience-audit`](skills/competitor-experience-audit/SKILL.md) | Cross-site experience patterns and gaps across a vertical<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Cross-cutting workflows (5)
 
 | Skill | What it does |
 |---|---|
-| [`form-strategy`](skills/form-strategy/SKILL.md) | Form design, validation patterns, spam prevention, conversion tuning |
-| [`content-migration`](skills/content-migration/SKILL.md) | Platform migrations with SEO equity preservation |
-| [`internationalization`](skills/internationalization/SKILL.md) | Locale strategy, hreflang, translation workflow, RTL design |
-| [`dependency-management`](skills/dependency-management/SKILL.md) | Package updates, security patches, lockfile hygiene |
-| [`cost-optimization`](skills/cost-optimization/SKILL.md) | Infrastructure spend audits, rightsizing, contract negotiation |
+| [`form-strategy`](skills/form-strategy/SKILL.md) | Form design, validation patterns, spam prevention, conversion tuning<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`content-migration`](skills/content-migration/SKILL.md) | Platform migrations with SEO equity preservation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`internationalization`](skills/internationalization/SKILL.md) | Locale strategy, hreflang, translation workflow, RTL design<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`dependency-management`](skills/dependency-management/SKILL.md) | Package updates, security patches, lockfile hygiene<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`cost-optimization`](skills/cost-optimization/SKILL.md) | Infrastructure spend audits, rightsizing, contract negotiation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Process and team (5)
 
 | Skill | What it does |
 |---|---|
-| [`stakeholder-communication`](skills/stakeholder-communication/SKILL.md) | Status updates, exec readouts, project communications |
-| [`documentation-strategy`](skills/documentation-strategy/SKILL.md) | Documentation systems, what to document, maintenance cadence |
-| [`vendor-evaluation`](skills/vendor-evaluation/SKILL.md) | Tool and vendor selection using a structured rubric |
-| [`team-onboarding-playbook`](skills/team-onboarding-playbook/SKILL.md) | 30-60-90 onboarding plans for new hires and contractors |
-| [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) | The meta-skill: how to write your own custom skills |
+| [`stakeholder-communication`](skills/stakeholder-communication/SKILL.md) | Status updates, exec readouts, project communications<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`documentation-strategy`](skills/documentation-strategy/SKILL.md) | Documentation systems, what to document, maintenance cadence<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`vendor-evaluation`](skills/vendor-evaluation/SKILL.md) | Tool and vendor selection using a structured rubric<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`team-onboarding-playbook`](skills/team-onboarding-playbook/SKILL.md) | 30-60-90 onboarding plans for new hires and contractors<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) | The meta-skill: how to write your own custom skills<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Holds). In Claude Code: Claude Haiku 4.5 (Holds), Claude Fable 5 (Mixed), Claude Opus 5 (Could not measure), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (Mixed), Claude Opus 5.5 (Could not measure). [Per model](skills/skill-creation-walkthrough/README.md). |
 <!-- CATALOG:END -->
 
 ---

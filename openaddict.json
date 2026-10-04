@@ -1,0 +1,894 @@
+{
+  "source": "https://openaddict.com",
+  "generatedBy": "scripts/build-tested-on.mjs",
+  "coverage": "https://openaddict.com/skills/coverage",
+  "skills": {
+    "accessibility-audit": {
+      "status": "measured",
+      "name": "accessibility-audit",
+      "url": "https://openaddict.com/skills/rampstackco-accessibility-audit",
+      "json": "https://openaddict.com/skills/rampstackco-accessibility-audit.json",
+      "classLabel": "Accessibility audit",
+      "job": {
+        "label": "Accessibility audit",
+        "url": "https://openaddict.com/jobs/accessibility-audit"
+      },
+      "tier": "Tier 1",
+      "harderTiers": [],
+      "pinnedCommit": "0479242522549dfdb389bb9b7807ad4d6016ffb7",
+      "pinnedOn": "2026-08-30",
+      "newestRun": "2026-09-26",
+      "operatorOwned": true,
+      "instruments": [
+        "Via API",
+        "In Claude Code"
+      ],
+      "models": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "Via API": "Holds",
+          "In Claude Code": "Mixed, 2 results: Holds 1, No measured effect 1"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "Via API": "No measured effect",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "Via API": "No measured effect",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "Via API": "not run",
+          "In Claude Code": "Mixed, 3 results: No measured effect 2, Verdict withheld 1"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-accessibility-audit) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (Mixed), Claude Opus 5 (No measured effect), Claude Fable 5 (Mixed), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/accessibility-audit/README.md)."
+    },
+    "ads-creative-development": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "ads-performance-analytics": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "after-action-report": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "ai-content-collaboration": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "analytics-strategy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "art-direction": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "backup-and-disaster-recovery": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "beta-program-management": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "brand-archetype-system": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "brand-discovery": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "brand-ideation": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "brand-identity": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "brand-style-guide": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "brand-voice": {
+      "status": "measured",
+      "name": "brand-voice",
+      "url": "https://openaddict.com/skills/rampstackco-brand-voice",
+      "json": "https://openaddict.com/skills/rampstackco-brand-voice.json",
+      "classLabel": "Voice",
+      "job": null,
+      "tier": null,
+      "harderTiers": [],
+      "pinnedCommit": "0479242522549dfdb389bb9b7807ad4d6016ffb7",
+      "pinnedOn": "2026-08-30",
+      "newestRun": "2026-08-30",
+      "operatorOwned": true,
+      "instruments": [
+        "Via API"
+      ],
+      "models": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "Via API": "No measured effect"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "Via API": "Holds"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "Via API": "No measured effect"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-brand-voice) (newest run 2026-08-30). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Holds), GPT-5 mini (No measured effect). [Per model](skills/brand-voice/README.md)."
+    },
+    "calculator-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "chatbot-flow-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "code-review-web": {
+      "status": "measured",
+      "name": "code-review-web",
+      "url": "https://openaddict.com/skills/rampstackco-code-review-web",
+      "json": "https://openaddict.com/skills/rampstackco-code-review-web.json",
+      "classLabel": "Code review",
+      "job": {
+        "label": "Code review",
+        "url": "https://openaddict.com/jobs/code-review"
+      },
+      "tier": "Tier 1",
+      "harderTiers": [
+        {
+          "model": "GPT-5 mini",
+          "instrument": "Via API",
+          "tier": "Tier 3",
+          "lift": "+26.7 percentage points (+3.2 to +50.1)"
+        }
+      ],
+      "pinnedCommit": "a67dd34c609f034c0cfd736a348659bbdf1605bf",
+      "pinnedOn": null,
+      "newestRun": "2026-09-26",
+      "operatorOwned": true,
+      "instruments": [
+        "Via API",
+        "In Claude Code"
+      ],
+      "models": [
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "Via API": "No measured effect",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "Via API": "No measured effect",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-code-review-web) (Tier 1, newest run 2026-09-26). Via API: Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Fable 5.1 (No measured effect), Claude Haiku 4.5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/code-review-web/README.md)."
+    },
+    "comparison-tool-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "competitor-experience-audit": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-and-copy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-brief-authoring": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-distribution": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-migration": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-refresh-system": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-repurposing": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "content-strategy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "cost-optimization": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "creative-brief": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "creative-brief-selector": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "creative-direction": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "cro-optimization": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "data-warehouse-experimentation": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "dependency-management": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "design-standards": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "design-system": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "discovery-research-synthesis": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "documentation-strategy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "domain-strategy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "editorial-qa": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "email-deliverability": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "email-sequences": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "evidence-based-reviews": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "experiment-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "experimentation-analytics": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "experimentation-platform-orchestrator": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "feature-flagging": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "feature-launch-playbook": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "form-strategy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "frontend-component-build": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "funnel-flow-architecture": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "incident-response": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "information-architecture": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "integration-orchestrator": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "interactive-product-tour": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "internationalization": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "journey-mapping": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "jtbd-framing": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "landing-page-copy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "launch-runbook": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "lead-magnet-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "logo-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "long-form-content-frameworks": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "media-asset-management": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "monitoring-and-alerting": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "multi-step-form-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "okr-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "onboarding-wizard-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "paid-media-strategy": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "performance-optimization": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "pillar-content-architecture": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "pm-spec-writing": {
+      "status": "measured",
+      "name": "pm-spec-writing",
+      "url": "https://openaddict.com/skills/rampstackco-pm-spec-writing",
+      "json": "https://openaddict.com/skills/rampstackco-pm-spec-writing.json",
+      "classLabel": "Spec writing",
+      "job": {
+        "label": "Spec writing",
+        "url": "https://openaddict.com/jobs/spec-writing"
+      },
+      "tier": "Tier 1",
+      "harderTiers": [],
+      "pinnedCommit": "0479242522549dfdb389bb9b7807ad4d6016ffb7",
+      "pinnedOn": "2026-08-30",
+      "newestRun": "2026-09-26",
+      "operatorOwned": true,
+      "instruments": [
+        "Via API",
+        "In Claude Code"
+      ],
+      "models": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "Via API": "Mixed, 2 results: No measured effect 1, Holds 1",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "Via API": "Mixed, 3 results: No measured effect 2, Holds 1",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "Via API": "Mixed, 3 results: No measured effect 2, Holds 1",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "Via API": "not run",
+          "In Claude Code": "Could not measure"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-pm-spec-writing) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Mixed), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Mixed). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (Could not measure). [Per model](skills/pm-spec-writing/README.md)."
+    },
+    "product-analytics-setup": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "product-configurator-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "programmatic-seo": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "qa-testing": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "quiz-and-assessment-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "roadmap-planning": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "scheduler-and-booking-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "security-baseline": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-aeo-geo": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-audit-orchestration": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-backlink-audit": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-competitor": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-content-audit": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-content-gap-audit": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-keyword": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-keyword-gap-audit": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-offpage": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-onpage": {
+      "status": "measured",
+      "name": "seo-onpage",
+      "url": "https://openaddict.com/skills/rampstackco-seo-onpage",
+      "json": "https://openaddict.com/skills/rampstackco-seo-onpage.json",
+      "classLabel": "On-page audit",
+      "job": {
+        "label": "On-page audit",
+        "url": "https://openaddict.com/jobs/on-page-audit"
+      },
+      "tier": "Tier 1",
+      "harderTiers": [],
+      "pinnedCommit": "0479242522549dfdb389bb9b7807ad4d6016ffb7",
+      "pinnedOn": "2026-08-30",
+      "newestRun": "2026-09-26",
+      "operatorOwned": true,
+      "instruments": [
+        "Via API",
+        "In Claude Code"
+      ],
+      "models": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "Via API": "No measured effect",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "Via API": "Mixed, 2 results: Holds 1, No measured effect 1",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "Via API": "No measured effect",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-seo-onpage) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/seo-onpage/README.md)."
+    },
+    "seo-rank-tracking": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-site-health-audit": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-technical": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "seo-traffic-diagnosis": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "skill-creation-walkthrough": {
+      "status": "measured",
+      "name": "skill-creation-walkthrough",
+      "url": "https://openaddict.com/skills/rampstackco-skill-creation-walkthrough",
+      "json": "https://openaddict.com/skills/rampstackco-skill-creation-walkthrough.json",
+      "classLabel": "Skill authoring",
+      "job": {
+        "label": "Skill authoring",
+        "url": "https://openaddict.com/jobs/skill-authoring"
+      },
+      "tier": "Tier 1",
+      "harderTiers": [],
+      "pinnedCommit": "0479242522549dfdb389bb9b7807ad4d6016ffb7",
+      "pinnedOn": "2026-08-30",
+      "newestRun": "2026-09-26",
+      "operatorOwned": true,
+      "instruments": [
+        "Via API",
+        "In Claude Code"
+      ],
+      "models": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "Via API": "Holds",
+          "In Claude Code": "Holds"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "Via API": "Mixed, 2 results: No measured effect 1, Holds 1",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "Via API": "Holds",
+          "In Claude Code": "not run"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "Via API": "not run",
+          "In Claude Code": "Mixed, 3 results: No measured effect 2, Scored worse 1"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "Via API": "not run",
+          "In Claude Code": "Could not measure"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "Via API": "not run",
+          "In Claude Code": "No measured effect"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "Via API": "not run",
+          "In Claude Code": "Mixed, 2 results: Could not measure 1, No measured effect 1"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "Via API": "not run",
+          "In Claude Code": "Could not measure"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Holds). In Claude Code: Claude Haiku 4.5 (Holds), Claude Fable 5 (Mixed), Claude Opus 5 (Could not measure), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (Mixed), Claude Opus 5.5 (Could not measure). [Per model](skills/skill-creation-walkthrough/README.md)."
+    },
+    "stakeholder-communication": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "team-onboarding-playbook": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "upgrade-flow-design": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "usability-testing": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "user-feedback-aggregation": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "ux-research": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "vendor-evaluation": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "vertical-site-conventions": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    }
+  }
+}

@@ -35,6 +35,7 @@ Markers in README.md:
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from dataclasses import dataclass
@@ -51,6 +52,10 @@ except ImportError:
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SKILLS_DIR = REPO_ROOT / "skills"
 README = REPO_ROOT / "README.md"
+# Written by scripts/build-tested-on.mjs from openaddict.com. Each skill's
+# catalogLine is printed under its row, so the catalog says what the site found
+# without this script reaching the network.
+OPENADDICT = REPO_ROOT / "openaddict.json"
 
 
 # Canonical category order. Drives the README catalog section order and the
@@ -292,8 +297,27 @@ def count_reference_files() -> int:
     return total
 
 
+def load_tested_lines() -> dict[str, str]:
+    """Return each skill's "Tested on OpenAddict" catalog line, by slug."""
+    if not OPENADDICT.exists():
+        raise SystemExit(
+            f"{OPENADDICT.name} not found. Run: node scripts/build-tested-on.mjs"
+        )
+    data = json.loads(OPENADDICT.read_text(encoding="utf-8"))
+    return {slug: entry["catalogLine"] for slug, entry in data["skills"].items()}
+
+
 def generate_catalog(grouped: dict[str, list[Skill]]) -> str:
     """Build the full catalog markdown block: section headers and tables."""
+    tested = load_tested_lines()
+    missing = sorted(
+        skill.slug for items in grouped.values() for skill in items if skill.slug not in tested
+    )
+    if missing:
+        raise SystemExit(
+            f"{OPENADDICT.name} has no entry for: {', '.join(missing)}. "
+            "Run: node scripts/build-tested-on.mjs"
+        )
     lines: list[str] = []
     for index, (cid, title, intro) in enumerate(CATEGORIES):
         items = grouped.get(cid, [])
@@ -307,7 +331,7 @@ def generate_catalog(grouped: dict[str, list[Skill]]) -> str:
         for skill in items:
             lines.append(
                 f"| [`{skill.slug}`](skills/{skill.slug}/SKILL.md) | "
-                f"{skill.catalog_summary} |"
+                f"{skill.catalog_summary}<br>{tested[skill.slug]} |"
             )
         if index < len(CATEGORIES) - 1:
             lines.append("")

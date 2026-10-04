@@ -22,6 +22,18 @@
 # Do NOT relax the path filters or add a skip to make this green. If a change
 # genuinely must not touch a dist, say so explicitly in the PR.
 #
+# TESTED ON OPENADDICT. The openaddict job below treats the "Tested on
+# OpenAddict" blocks the same way: skills/*/README.md, openaddict.json, the
+# README catalog lines and the block in workflows/README.md are rebuilt from
+# openaddict.com's JSON and byte-compared with what is committed. Unlike the
+# dists, their source is outside this repo, so a PR alone cannot keep them
+# current: the schedule runs the job daily, and a red run there means a verdict
+# moved on the site. The fix is the same shape:
+#
+#   node scripts/build-tested-on.mjs
+#   python scripts/generate_readme_catalog.py --write
+#   git add skills/*/README.md openaddict.json README.md workflows/README.md
+#
 # SCOPE: one matrix entry per distribution target that exists on main. dist/pi
 # (scripts/build-pi.mjs) and dist/codex (scripts/build-codex.mjs, added by #88).
 #
@@ -37,6 +49,10 @@
 name: Distribution drift
 
 on:
+  # Daily, for the openaddict job: its source is the live site.
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
   pull_request:
     paths:
       # Source: a skills change must be accompanied by a dist rebuild.
@@ -51,6 +67,12 @@ on:
       - "SKILLS.lock"
       # Line-ending policy: the guard byte-compares, so this is load-bearing.
       - ".gitattributes"
+      # The Tested on OpenAddict outputs and their generators.
+      - "openaddict.json"
+      - "README.md"
+      - "workflows/README.md"
+      - "scripts/build-tested-on.mjs"
+      - "scripts/generate_readme_catalog.py"
       # This workflow.
       - ".github/workflows/dist-drift.yml"
 
@@ -89,3 +111,31 @@ jobs:
       - name: Validate emitted output against the ${{ matrix.target }} skill rules
         if: always()
         run: node ${{ matrix.builder }} --validate
+
+  openaddict:
+    name: Tested on OpenAddict matches openaddict.com
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      # Reads the site's skill, workflow and job JSON and compares the blocks
+      # it would write with the committed ones.
+      - name: Drift check, committed blocks vs the live site
+        run: node scripts/build-tested-on.mjs --check
+
+      # The catalog lines are printed from openaddict.json, so the README is
+      # checked against the file the step above just verified.
+      - name: README catalog lines match openaddict.json
+        if: always()
+        run: python scripts/generate_readme_catalog.py --check
