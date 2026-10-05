@@ -81,7 +81,11 @@ function build(destSkills) {
   for (const name of skills) {
     const srcDir = join(SRC_SKILLS, name);
     const destDir = join(destSkills, name);
-    const files = listFilesSorted(srcDir);
+    // The top-level README.md is the generated "Tested on OpenAddict" page
+    // (scripts/build-tested-on.mjs). It describes the skill and is not part of
+    // it, so it stays out of the installed copy and a new verdict never
+    // reaches dist/.
+    const files = listFilesSorted(srcDir).filter((rel) => rel !== 'README.md');
     for (const rel of files) {
       copyFileBytes(join(srcDir, rel), join(destDir, rel));
       if (rel === 'SKILL.md') skillFiles++;

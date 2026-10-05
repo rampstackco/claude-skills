@@ -233,8 +233,14 @@ function transformInto(destRoot) {
     const destDir = path.join(outSkills, name);
 
     // Copy the whole skill dir byte for byte (preserves references subtree
-    // including nested folders).
-    fs.cpSync(srcDir, destDir, { recursive: true });
+    // including nested folders). The top-level README.md is the generated
+    // "Tested on OpenAddict" page (scripts/build-tested-on.mjs): it describes
+    // the skill and is not part of it, so it stays out of the installed copy.
+    const generatedReadme = path.join(srcDir, 'README.md');
+    fs.cpSync(srcDir, destDir, {
+      recursive: true,
+      filter: (src) => src !== generatedReadme,
+    });
     log.skillsCopied += 1;
 
     // Normalize frontmatter on the emitted SKILL.md.

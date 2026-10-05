@@ -28,6 +28,12 @@ def build_manifest() -> dict:
         for f in sorted(skill_dir.rglob("*")):
             if f.is_file():
                 rel = f.relative_to(skill_dir).as_posix()
+                # The top-level README.md is the generated "Tested on
+                # OpenAddict" page (scripts/build-tested-on.mjs). It describes
+                # the skill and is not part of it, so a new verdict must not
+                # read as a changed skill.
+                if rel == "README.md":
+                    continue
                 files[rel] = sha256(f)
         manifest[skill_dir.name] = files
     return manifest
