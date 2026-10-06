@@ -1,0 +1,50 @@
+# Subset parity.
+#
+# claude-skills-pm, -seo and -starter ship byte copies of skills from this
+# repo. Each runs its own parity check on push and pull_request, but drift
+# starts here, where their pushes never see it. This schedule is the half that
+# does: once a day it compares every SKILL.md and references/ file each subset
+# holds against main here, and fails with a per-repo, per-file list.
+#
+# A red run is not a bug in this repo. It means a skill changed here and a
+# subset has not caught up. The fix is a sync PR in each listed subset (byte
+# copy of the listed files, then tools/gen_skills_lock.py there). Do not edit
+# skills here to make this green.
+#
+# Deliberately NOT triggered by skills/** pull requests: a skill change here
+# is expected to run ahead of the subsets until they sync, so this must not
+# block it. Pull requests run it only when the check itself changes.
+#
+# Failure emails for the schedule go to whoever last changed the cron line
+# below on main (GitHub's rule for scheduled workflows).
+
+name: Subset parity
+
+on:
+  schedule:
+    - cron: "47 6 * * *"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/check_subset_parity.py"
+      - ".github/workflows/subset-parity.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  subsets:
+    name: Subset skills match claude-skills main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # The token only lifts the API rate limit; the subsets are public.
+      - name: Compare subset blob hashes with this checkout
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/check_subset_parity.py
