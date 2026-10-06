@@ -47,4 +47,4 @@ jobs:
       - name: Compare subset blob hashes with this checkout
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python tools/check_subset_parity.py --fixture tools/fixtures/subset-parity-plant.json
+        run: python tools/check_subset_parity.py
