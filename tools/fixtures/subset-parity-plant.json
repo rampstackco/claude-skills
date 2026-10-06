@@ -1,0 +1,847 @@
+{
+  "rampstackco/claude-skills-pm": {
+    "commit": "1e83d8feef809e31c8b95055262b14a84a7a6ced",
+    "tree": [
+      {
+        "path": "skills/after-action-report/SKILL.md",
+        "type": "blob",
+        "sha": "70f88b8f0c668cb931cb068368d4826bf4c80c6a"
+      },
+      {
+        "path": "skills/after-action-report/references/aar-template.md",
+        "type": "blob",
+        "sha": "0d37d2489fc77fc0714025f3060357d361d65270"
+      },
+      {
+        "path": "skills/beta-program-management/SKILL.md",
+        "type": "blob",
+        "sha": "530de287d5e15b0d63818f49b24016c2cfa90b77"
+      },
+      {
+        "path": "skills/beta-program-management/references/beta-onboarding-templates.md",
+        "type": "blob",
+        "sha": "a691d4036ff1dcfe34a04ca53be3fc6fa39ec741"
+      },
+      {
+        "path": "skills/beta-program-management/references/beta-to-ga-graduation-criteria.md",
+        "type": "blob",
+        "sha": "e835ce57853bb6bd205e3edbcf371855c74f703c"
+      },
+      {
+        "path": "skills/beta-program-management/references/beta-type-decisions.md",
+        "type": "blob",
+        "sha": "0995f489d7a42210e74487039a010f1503631d34"
+      },
+      {
+        "path": "skills/beta-program-management/references/beta-wind-down-communication.md",
+        "type": "blob",
+        "sha": "8f77cc2c33dd45f0261f8baf52730b3006b58ac0"
+      },
+      {
+        "path": "skills/beta-program-management/references/cohort-sizing-patterns.md",
+        "type": "blob",
+        "sha": "1457a9ea33f26a5f3687bc1f687fbeedd032ab2d"
+      },
+      {
+        "path": "skills/beta-program-management/references/common-beta-failures.md",
+        "type": "blob",
+        "sha": "204a1c24ef884c523dcf567d844cbde5616173cb"
+      },
+      {
+        "path": "skills/beta-program-management/references/feedback-collection-patterns.md",
+        "type": "blob",
+        "sha": "49e1bbf22419d91b673cd06c3159d3954fa25f0e"
+      },
+      {
+        "path": "skills/beta-program-management/references/mid-beta-triage-and-iteration.md",
+        "type": "blob",
+        "sha": "aa2614cd0245a490c452f80f10e53c7e19a66b86"
+      },
+      {
+        "path": "skills/beta-program-management/references/participant-selection-criteria.md",
+        "type": "blob",
+        "sha": "b95bbcf678f1ce25c9950695c9c677fbafa5e2ca"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/SKILL.md",
+        "type": "blob",
+        "sha": "be007e848298d0ad0e5aa8dc75df7dab8a405d11"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/common-discovery-synthesis-failures.md",
+        "type": "blob",
+        "sha": "a7b35c62d953abf9eab145a203ae30e1270400e5"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/from-pattern-to-product-implication.md",
+        "type": "blob",
+        "sha": "1ed2d6ba74b1dd2059f89dd8d695664ac31c8f4c"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/pattern-naming-patterns.md",
+        "type": "blob",
+        "sha": "26d6aac9c8d57c79ccb6df4f02cef11fddef780c"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/research-types-and-when-each-fits.md",
+        "type": "blob",
+        "sha": "341f05f680115d3dfb087d7f4bcd06876f861ec1"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/synthesis-review-and-validation.md",
+        "type": "blob",
+        "sha": "40432859c44f74923f075a1a71d61aaf14fe1f19"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/synthesis-sequence-walkthrough.md",
+        "type": "blob",
+        "sha": "5a9b6f3b248ce59aa37dbf348bd67a0b62617806"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/tagging-and-clustering-discipline.md",
+        "type": "blob",
+        "sha": "b09da203fc4f1e53831cec88b5e22e2fb8fd510e"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/when-to-gather-more-data.md",
+        "type": "blob",
+        "sha": "5ba1b81feb972a7c4d1a6edeecd63c5193d3dc23"
+      },
+      {
+        "path": "skills/discovery-research-synthesis/references/writing-for-decisions-not-decks.md",
+        "type": "blob",
+        "sha": "6291907851b23559a0e7dc4dd5662d07f53a56ac"
+      },
+      {
+        "path": "skills/feature-launch-playbook/SKILL.md",
+        "type": "blob",
+        "sha": "74521ab40a10876b5622f9618b19dead74b8d39f"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/common-launch-failures.md",
+        "type": "blob",
+        "sha": "987206fb720c39b03a793ea58a60a424f1b12574"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/customer-comms-playbook.md",
+        "type": "blob",
+        "sha": "739ade458171668a05491d2acb3877b9f1a90203"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/internal-alignment-checklist.md",
+        "type": "blob",
+        "sha": "13637c15cb63e4b0af175a49172717837ca53b54"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/launch-tier-decision.md",
+        "type": "blob",
+        "sha": "dab6ffc25f22245da6f3592d087c44f3a250a192"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/monitoring-readiness-checklist.md",
+        "type": "blob",
+        "sha": "6770c30a4508a5fe74d1f27f96f8d964e9c6d988"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/positioning-canvas.md",
+        "type": "blob",
+        "sha": "4ab4b54a4cfb678d84e3a8d7b39723a51a4fe548"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/post-launch-measurement-framework.md",
+        "type": "blob",
+        "sha": "3475f47799a1d6679770b91aaef9308fc402b7c7"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/rollout-strategy-patterns.md",
+        "type": "blob",
+        "sha": "a7e0c83e31df94e820f430c374922755518c347d"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/sales-enablement-template.md",
+        "type": "blob",
+        "sha": "07b7cca87bcf46c428411b2859dd3ae4c0b24bde"
+      },
+      {
+        "path": "skills/feature-launch-playbook/references/support-readiness-checklist.md",
+        "type": "blob",
+        "sha": "50f031ce6aebfb57ed20145500638d41ca996087"
+      },
+      {
+        "path": "skills/jtbd-framing/SKILL.md",
+        "type": "blob",
+        "sha": "05b025b17543b7890731eb668d99fcb765c9fa5f"
+      },
+      {
+        "path": "skills/jtbd-framing/references/applying-jtbd-to-discovery.md",
+        "type": "blob",
+        "sha": "cddb63498de4dc44abda9b3de7960b73545bc73b"
+      },
+      {
+        "path": "skills/jtbd-framing/references/applying-jtbd-to-positioning.md",
+        "type": "blob",
+        "sha": "8d40f192c4c005c3f14fcf9938993b7880d21fab"
+      },
+      {
+        "path": "skills/jtbd-framing/references/applying-jtbd-to-prioritization.md",
+        "type": "blob",
+        "sha": "57c1a53dc0384767eba8c008f3aa66220d52030e"
+      },
+      {
+        "path": "skills/jtbd-framing/references/common-jtbd-failures.md",
+        "type": "blob",
+        "sha": "a36a25e01676eeb6f40880a2e7292bee392c2f9f"
+      },
+      {
+        "path": "skills/jtbd-framing/references/functional-emotional-social-dimensions.md",
+        "type": "blob",
+        "sha": "4460b0b54dbe04d57e14da47371281cf1466a016"
+      },
+      {
+        "path": "skills/jtbd-framing/references/hire-and-fire-criteria.md",
+        "type": "blob",
+        "sha": "d3aee67efb28404bc8c5db099514b2f20ad3ab9c"
+      },
+      {
+        "path": "skills/jtbd-framing/references/identifying-struggling-moments.md",
+        "type": "blob",
+        "sha": "a7e85906e70402383f1c828c6971f29891b45a23"
+      },
+      {
+        "path": "skills/jtbd-framing/references/job-statement-structure-patterns.md",
+        "type": "blob",
+        "sha": "663b49a48040d0f3228a99d0d72ecf51d9b007cf"
+      },
+      {
+        "path": "skills/okr-design/SKILL.md",
+        "type": "blob",
+        "sha": "939348adc72b58b748fdf867042929925d19015e"
+      },
+      {
+        "path": "skills/okr-design/references/cascading-okrs-decisions.md",
+        "type": "blob",
+        "sha": "0000000000000000000000000000000000000000"
+      },
+      {
+        "path": "skills/okr-design/references/common-okr-failures.md",
+        "type": "blob",
+        "sha": "675ddb3fec8d65ff07395bfe4a124cea1acf7dcb"
+      },
+      {
+        "path": "skills/okr-design/references/key-result-design-patterns.md",
+        "type": "blob",
+        "sha": "8ad33d320512e8287328e8e700ad057425857b82"
+      },
+      {
+        "path": "skills/okr-design/references/mid-quarter-recalibration.md",
+        "type": "blob",
+        "sha": "91b96a02d6133afc299dac614c5056248517e1eb"
+      },
+      {
+        "path": "skills/okr-design/references/objective-design-patterns.md",
+        "type": "blob",
+        "sha": "e1fc8fa3c99525af8df07c263b8b96907263685e"
+      },
+      {
+        "path": "skills/okr-design/references/okr-anti-patterns.md",
+        "type": "blob",
+        "sha": "f70fe2fa4d83f93809d99780554abbb1e438db79"
+      },
+      {
+        "path": "skills/okr-design/references/okrs-vs-roadmap-vs-metrics.md",
+        "type": "blob",
+        "sha": "9f9514c556115a866c0fae268bc46f2eed5d1a09"
+      },
+      {
+        "path": "skills/okr-design/references/review-cadence-templates.md",
+        "type": "blob",
+        "sha": "8ca89349359550bd647779bd32d6492927e59ae2"
+      },
+      {
+        "path": "skills/okr-design/references/scoring-discipline.md",
+        "type": "blob",
+        "sha": "b51963dd5f58b530ebfeff754e8281113abf3efc"
+      },
+      {
+        "path": "skills/pm-spec-writing/SKILL.md",
+        "type": "blob",
+        "sha": "030e4a6b772ef9ee815effb44aba8ae7827b5f91"
+      },
+      {
+        "path": "skills/pm-spec-writing/references/dev-brief-template.md",
+        "type": "blob",
+        "sha": "289ffef49a5265f7b31a757149874b7c97e9a20d"
+      },
+      {
+        "path": "skills/pm-spec-writing/references/feature-spec-template.md",
+        "type": "blob",
+        "sha": "48c4447c9c34751f6dc4533279b664d13c54b58b"
+      },
+      {
+        "path": "skills/pm-spec-writing/references/prioritization-frameworks.md",
+        "type": "blob",
+        "sha": "0fb7f3de18df3ae735913ceb5efdd172a6c29226"
+      },
+      {
+        "path": "skills/roadmap-planning/SKILL.md",
+        "type": "blob",
+        "sha": "ba9cc5e89438b47e66ae915e4f79829d7c24a4a1"
+      },
+      {
+        "path": "skills/roadmap-planning/references/prioritization-frameworks.md",
+        "type": "blob",
+        "sha": "fead81c7b040a1c10ba671dfb871916aefdd98e2"
+      },
+      {
+        "path": "skills/stakeholder-communication/SKILL.md",
+        "type": "blob",
+        "sha": "f5a19504c3d7f771a75ef052675070e4ebf5b861"
+      },
+      {
+        "path": "skills/stakeholder-communication/references/update-templates.md",
+        "type": "blob",
+        "sha": "70d88d4d2e9c0970d32ac5686973ca4daafd9a4e"
+      },
+      {
+        "path": "skills/team-onboarding-playbook/SKILL.md",
+        "type": "blob",
+        "sha": "180e5c423e242e1c4616dedf15439f19408781f3"
+      },
+      {
+        "path": "skills/team-onboarding-playbook/references/onboarding-checklist.md",
+        "type": "blob",
+        "sha": "c82acb7e680ca76b12ef094f464b3540538383b3"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/SKILL.md",
+        "type": "blob",
+        "sha": "03360499d6a8f2138d5d24eb0bf2ca3a604e4d12"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/categorization-and-tagging-at-scale.md",
+        "type": "blob",
+        "sha": "5faac7a8ce6165609137087f288982b1e15e1076"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/channel-source-weighting.md",
+        "type": "blob",
+        "sha": "aac37635bdf620932d3727748873902c16a1cb87"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/channel-types-and-what-each-surfaces.md",
+        "type": "blob",
+        "sha": "c2c0ec33fdc6ce340baf4d0151a98cc9c8f1381b"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/closing-the-loop-with-users.md",
+        "type": "blob",
+        "sha": "5c70fb42e66f49a1aea7ea37590e026eb83d2542"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/common-feedback-aggregation-failures.md",
+        "type": "blob",
+        "sha": "c16ce67781c1d2d98760d1d02e73e893d62909e5"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/detecting-drift-in-feedback.md",
+        "type": "blob",
+        "sha": "cff4b6c9e0625f0ad224fa164d5610868737f628"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/frequency-vs-intensity.md",
+        "type": "blob",
+        "sha": "3f96062f506c09d3e7ce7d2646b7e25289ec5809"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/from-feedback-to-product-decision.md",
+        "type": "blob",
+        "sha": "3f911df51731b059fc2624e915f55eda413823f5"
+      },
+      {
+        "path": "skills/user-feedback-aggregation/references/tooling-considerations.md",
+        "type": "blob",
+        "sha": "5669fc414829aff7f434aebc2840ffadde0914ce"
+      },
+      {
+        "path": "skills/vendor-evaluation/SKILL.md",
+        "type": "blob",
+        "sha": "aeab54876add7bebdb61be5ff097b1012eabe926"
+      },
+      {
+        "path": "skills/vendor-evaluation/references/evaluation-rubric.md",
+        "type": "blob",
+        "sha": "6689c2f66730cd265c2253a0bf9e6faa5941898b"
+      }
+    ]
+  },
+  "rampstackco/claude-skills-seo": {
+    "commit": "182701d0f3d16e9133de17363808796b347faf87",
+    "tree": [
+      {
+        "path": "skills/content-and-copy/SKILL.md",
+        "type": "blob",
+        "sha": "e8a1f80adc1ffd0e7d69d90ceb6137dae1f87f34"
+      },
+      {
+        "path": "skills/content-and-copy/references/content-brief-template.md",
+        "type": "blob",
+        "sha": "d1bc428b5fe606dce1768a1dee2a85b7131f448d"
+      },
+      {
+        "path": "skills/content-and-copy/references/content-edit-checklist.md",
+        "type": "blob",
+        "sha": "4e1f9065e71ba6e8c12e00f42c32907b4aa0ff02"
+      },
+      {
+        "path": "skills/content-strategy/SKILL.md",
+        "type": "blob",
+        "sha": "9604394b1ea24a3d26906726e93bb372e11b5a28"
+      },
+      {
+        "path": "skills/content-strategy/references/content-strategy-template.md",
+        "type": "blob",
+        "sha": "2cee093e4c04b49301e556c6568c6414ea6da2ab"
+      },
+      {
+        "path": "skills/content-strategy/references/editorial-calendar-template.md",
+        "type": "blob",
+        "sha": "15509c39e7bbb676c68bfbe1cfc8d258984af772"
+      },
+      {
+        "path": "skills/programmatic-seo/SKILL.md",
+        "type": "blob",
+        "sha": "74fe38953e9fc572310c35ca636079ef41304b1e"
+      },
+      {
+        "path": "skills/programmatic-seo/references/aeo-geo-for-programmatic-pages.md",
+        "type": "blob",
+        "sha": "23002879fabb14078606f05c8f1dbb784c71166e"
+      },
+      {
+        "path": "skills/programmatic-seo/references/common-pseo-failures.md",
+        "type": "blob",
+        "sha": "175bb9bc11381942fd49969283ed16b1a9608a26"
+      },
+      {
+        "path": "skills/programmatic-seo/references/crawl-budget-management.md",
+        "type": "blob",
+        "sha": "8d28d56564c5451687101b2a735cd5402d926d0f"
+      },
+      {
+        "path": "skills/programmatic-seo/references/data-source-identification-patterns.md",
+        "type": "blob",
+        "sha": "e6fa1937148c53bf6be5e06bb24e86433285a77b"
+      },
+      {
+        "path": "skills/programmatic-seo/references/internal-linking-at-scale.md",
+        "type": "blob",
+        "sha": "6c4d441e4d3d6ab1d8b2d802c7b72899a469b006"
+      },
+      {
+        "path": "skills/programmatic-seo/references/quality-control-at-scale.md",
+        "type": "blob",
+        "sha": "c108409af28cbf1c1a4d0ba5caea18dcab75a99e"
+      },
+      {
+        "path": "skills/programmatic-seo/references/refresh-at-scale.md",
+        "type": "blob",
+        "sha": "a402ea8b3defdafb17ee22350996c99dfdb39573"
+      },
+      {
+        "path": "skills/programmatic-seo/references/schema-design-patterns.md",
+        "type": "blob",
+        "sha": "563400f54cc77c0bca1316438b33c681462fe938"
+      },
+      {
+        "path": "skills/programmatic-seo/references/template-design-patterns.md",
+        "type": "blob",
+        "sha": "e56000dbbf310b8e3dea44eef877f79b10057368"
+      },
+      {
+        "path": "skills/programmatic-seo/references/when-pseo-works-decision.md",
+        "type": "blob",
+        "sha": "269fb79bdf5bd58b789b09c3f09c9fe75e86c2b9"
+      },
+      {
+        "path": "skills/seo-aeo-geo/SKILL.md",
+        "type": "blob",
+        "sha": "5fd3aa9b8fd9b0352cab4e7be93913bb47c208f4"
+      },
+      {
+        "path": "skills/seo-aeo-geo/references/extraction-friendly-patterns.md",
+        "type": "blob",
+        "sha": "2906fb1e1681b1f72b7303d8b9de73106474acda"
+      },
+      {
+        "path": "skills/seo-aeo-geo/references/llms-txt-guide.md",
+        "type": "blob",
+        "sha": "5360369cb787b454f494590e70f1962a52738291"
+      },
+      {
+        "path": "skills/seo-competitor/SKILL.md",
+        "type": "blob",
+        "sha": "fce87c27ade4dea83c3f59d9e0d547434711f890"
+      },
+      {
+        "path": "skills/seo-competitor/references/competitive-audit-template.md",
+        "type": "blob",
+        "sha": "556d01343814b465f840c575d7a751be4199e25e"
+      },
+      {
+        "path": "skills/seo-competitor/references/content-gap-method.md",
+        "type": "blob",
+        "sha": "f7f0083059ecb909ae46de4f081ae1d825c26b33"
+      },
+      {
+        "path": "skills/seo-content-audit/SKILL.md",
+        "type": "blob",
+        "sha": "3569851a5203a093d741e68bb523d932263a2dc3"
+      },
+      {
+        "path": "skills/seo-content-audit/references/audit-template.md",
+        "type": "blob",
+        "sha": "246de40a3104648a7db97dd15a189e287b143450"
+      },
+      {
+        "path": "skills/seo-content-audit/references/cannibalization-resolution.md",
+        "type": "blob",
+        "sha": "e4ad23951366a12df7bff42c8fb80fe7d68ac0d7"
+      },
+      {
+        "path": "skills/seo-keyword/SKILL.md",
+        "type": "blob",
+        "sha": "0000000000000000000000000000000000000000"
+      },
+      {
+        "path": "skills/seo-keyword/references/intent-classification-guide.md",
+        "type": "blob",
+        "sha": "0b145f23a1b79280e59bf67191570f994bd6dfa5"
+      },
+      {
+        "path": "skills/seo-keyword/references/keyword-research-template.md",
+        "type": "blob",
+        "sha": "b70165026a6d616e8f718b2c7a3e89a29ff164b5"
+      },
+      {
+        "path": "skills/seo-onpage/SKILL.md",
+        "type": "blob",
+        "sha": "ae226feab3724b6e04e688f9732559c30b3ffb30"
+      },
+      {
+        "path": "skills/seo-onpage/references/audit-template.md",
+        "type": "blob",
+        "sha": "ab15d58aadddf4f370f21e5192d16490b47fe83b"
+      },
+      {
+        "path": "skills/seo-onpage/references/onpage-checklist.md",
+        "type": "blob",
+        "sha": "283cf3e1e9c7cf3966450f9f6c1da67129ed219b"
+      },
+      {
+        "path": "skills/seo-onpage/references/title-and-meta-patterns.md",
+        "type": "blob",
+        "sha": "71d1dd11de8db7d4f731ee0dc9bab80cb4d60a7b"
+      },
+      {
+        "path": "skills/seo-site-health-audit/SKILL.md",
+        "type": "blob",
+        "sha": "1bd5790980712dfa6d8fe1532c9c4793f24fb89b"
+      },
+      {
+        "path": "skills/seo-site-health-audit/references/issue-impact-table.md",
+        "type": "blob",
+        "sha": "702e53c198718381e404fe372f5662a39b8f8e41"
+      },
+      {
+        "path": "skills/seo-technical/SKILL.md",
+        "type": "blob",
+        "sha": "c779098c28281daaa23ed07bac49f3f27ff2a5c4"
+      },
+      {
+        "path": "skills/seo-technical/references/audit-template.md",
+        "type": "blob",
+        "sha": "5a5786ee0bc945f42e505863fd67c63da6c73ea1"
+      },
+      {
+        "path": "skills/seo-technical/references/migration-checklist.md",
+        "type": "blob",
+        "sha": "c8129071edd4f80f32bf06031b4fa9e43771489c"
+      },
+      {
+        "path": "skills/seo-traffic-diagnosis/SKILL.md",
+        "type": "blob",
+        "sha": "2dc550db59320e549b3ddf0e66c8b7025a33b9df"
+      },
+      {
+        "path": "skills/seo-traffic-diagnosis/references/diagnosis-checklist.md",
+        "type": "blob",
+        "sha": "2895ed39bcb6dd1abb8a62781f23971ee731bcb7"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/SKILL.md",
+        "type": "blob",
+        "sha": "76832557e00f761ad1d1d9e94e0d39f87e28cb83"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/references/description-cookbook.md",
+        "type": "blob",
+        "sha": "ff3ba600ba21f76817bc1788af2d479744ba0665"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/references/methodology-vs-implementation.md",
+        "type": "blob",
+        "sha": "55c6f4f9c2e8ac2fd79eeba2c48548abc5bf4c60"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/references/skill-template.md",
+        "type": "blob",
+        "sha": "eb5f92f59caaefca4f5acafc681f1eb74994d741"
+      }
+    ]
+  },
+  "rampstackco/claude-skills-starter": {
+    "commit": "ffc9636501d14ebe6e8d38a075561dec663bc854",
+    "tree": [
+      {
+        "path": "skills/accessibility-audit/SKILL.md",
+        "type": "blob",
+        "sha": "ba3210bdcd2e76e24fb1cdfc8aa69ed16cf37a38"
+      },
+      {
+        "path": "skills/accessibility-audit/references/aria-patterns.md",
+        "type": "blob",
+        "sha": "b74fc6715306eb55abb0f4747af802f4a56e4192"
+      },
+      {
+        "path": "skills/accessibility-audit/references/audit-report-template.md",
+        "type": "blob",
+        "sha": "42c87605492b3b3953f1592cf00c934d7f2f33c5"
+      },
+      {
+        "path": "skills/accessibility-audit/references/wcag-quick-reference.md",
+        "type": "blob",
+        "sha": "4e4afd113cadfc4587c372d3918c0261fae03318"
+      },
+      {
+        "path": "skills/code-review-web/SKILL.md",
+        "type": "blob",
+        "sha": "0edae4722871080094adc79775bf701cd816d0d4"
+      },
+      {
+        "path": "skills/code-review-web/references/nextjs-patterns.md",
+        "type": "blob",
+        "sha": "0989e7c90e4908ef5840e791c210a6e4d5bbbcd2"
+      },
+      {
+        "path": "skills/code-review-web/references/review-template.md",
+        "type": "blob",
+        "sha": "35bcea4c477a9d547e3945499c01645b2535f1d7"
+      },
+      {
+        "path": "skills/code-review-web/references/wordpress-headless-patterns.md",
+        "type": "blob",
+        "sha": "eb0397a4182e14b4a1661365a454d8c2330dc19e"
+      },
+      {
+        "path": "skills/content-and-copy/SKILL.md",
+        "type": "blob",
+        "sha": "e8a1f80adc1ffd0e7d69d90ceb6137dae1f87f34"
+      },
+      {
+        "path": "skills/content-and-copy/references/content-brief-template.md",
+        "type": "blob",
+        "sha": "d1bc428b5fe606dce1768a1dee2a85b7131f448d"
+      },
+      {
+        "path": "skills/content-and-copy/references/content-edit-checklist.md",
+        "type": "blob",
+        "sha": "4e1f9065e71ba6e8c12e00f42c32907b4aa0ff02"
+      },
+      {
+        "path": "skills/content-strategy/SKILL.md",
+        "type": "blob",
+        "sha": "9604394b1ea24a3d26906726e93bb372e11b5a28"
+      },
+      {
+        "path": "skills/content-strategy/references/content-strategy-template.md",
+        "type": "blob",
+        "sha": "2cee093e4c04b49301e556c6568c6414ea6da2ab"
+      },
+      {
+        "path": "skills/content-strategy/references/editorial-calendar-template.md",
+        "type": "blob",
+        "sha": "15509c39e7bbb676c68bfbe1cfc8d258984af772"
+      },
+      {
+        "path": "skills/cro-optimization/SKILL.md",
+        "type": "blob",
+        "sha": "c9e1fbf54d9ac7304598acf888e319027d2b8540"
+      },
+      {
+        "path": "skills/cro-optimization/references/hypothesis-library.md",
+        "type": "blob",
+        "sha": "89fbae6b332dca107bafc70bf8e9e7016494356d"
+      },
+      {
+        "path": "skills/design-standards/SKILL.md",
+        "type": "blob",
+        "sha": "ee3d5dd6071aa344f1cb35d02aca12dc18f87f96"
+      },
+      {
+        "path": "skills/design-standards/references/design-tokens-template.md",
+        "type": "blob",
+        "sha": "7e96765c6294b50b3fa930982c5de47c1e41d728"
+      },
+      {
+        "path": "skills/design-standards/references/preship-checklist.md",
+        "type": "blob",
+        "sha": "14cd7fdca2076b2c1bbefde504f9f2f79668526f"
+      },
+      {
+        "path": "skills/design-standards/references/tailwind-patterns.md",
+        "type": "blob",
+        "sha": "7b8b0043fd1926bb7e13f817607c06733b89c45b"
+      },
+      {
+        "path": "skills/frontend-component-build/SKILL.md",
+        "type": "blob",
+        "sha": "fb5f5f7478c88fcec1bc72798291be5e2c2fc07b"
+      },
+      {
+        "path": "skills/frontend-component-build/references/accessibility-patterns.md",
+        "type": "blob",
+        "sha": "d32ab5836eba21d587c57f5adc7c08a47f251348"
+      },
+      {
+        "path": "skills/frontend-component-build/references/component-api-patterns.md",
+        "type": "blob",
+        "sha": "96283bc26d2537ede12345084bf946cbd8240386"
+      },
+      {
+        "path": "skills/frontend-component-build/references/component-spec-template.md",
+        "type": "blob",
+        "sha": "bae7d3f07820aec56ef643164aca19870d3c8281"
+      },
+      {
+        "path": "skills/performance-optimization/SKILL.md",
+        "type": "blob",
+        "sha": "f0cb6bf0e54750e6678dd8f6deba07f2c0ce7269"
+      },
+      {
+        "path": "skills/performance-optimization/references/audit-template.md",
+        "type": "blob",
+        "sha": "a4b256af2994294c758e43b1968617d082652bd1"
+      },
+      {
+        "path": "skills/performance-optimization/references/optimization-checklist.md",
+        "type": "blob",
+        "sha": "3c53a5a7b82db99e15f92cc63aa7e7b8488780de"
+      },
+      {
+        "path": "skills/performance-optimization/references/optimization-playbook.md",
+        "type": "blob",
+        "sha": "b0419cf3fd115e69396fa08efeb7bce0a14c3946"
+      },
+      {
+        "path": "skills/pm-spec-writing/SKILL.md",
+        "type": "blob",
+        "sha": "030e4a6b772ef9ee815effb44aba8ae7827b5f91"
+      },
+      {
+        "path": "skills/pm-spec-writing/references/dev-brief-template.md",
+        "type": "blob",
+        "sha": "289ffef49a5265f7b31a757149874b7c97e9a20d"
+      },
+      {
+        "path": "skills/pm-spec-writing/references/feature-spec-template.md",
+        "type": "blob",
+        "sha": "48c4447c9c34751f6dc4533279b664d13c54b58b"
+      },
+      {
+        "path": "skills/pm-spec-writing/references/prioritization-frameworks.md",
+        "type": "blob",
+        "sha": "0fb7f3de18df3ae735913ceb5efdd172a6c29226"
+      },
+      {
+        "path": "skills/qa-testing/SKILL.md",
+        "type": "blob",
+        "sha": "90f2f89a2bea860c300fc14a444d7ed9c4367946"
+      },
+      {
+        "path": "skills/seo-aeo-geo/SKILL.md",
+        "type": "blob",
+        "sha": "5fd3aa9b8fd9b0352cab4e7be93913bb47c208f4"
+      },
+      {
+        "path": "skills/seo-aeo-geo/references/extraction-friendly-patterns.md",
+        "type": "blob",
+        "sha": "2906fb1e1681b1f72b7303d8b9de73106474acda"
+      },
+      {
+        "path": "skills/seo-aeo-geo/references/llms-txt-guide.md",
+        "type": "blob",
+        "sha": "5360369cb787b454f494590e70f1962a52738291"
+      },
+      {
+        "path": "skills/seo-keyword/SKILL.md",
+        "type": "blob",
+        "sha": "f1a30df3fb82cd9444e0ca7e0b8233630f6d14fd"
+      },
+      {
+        "path": "skills/seo-keyword/references/intent-classification-guide.md",
+        "type": "blob",
+        "sha": "0b145f23a1b79280e59bf67191570f994bd6dfa5"
+      },
+      {
+        "path": "skills/seo-keyword/references/keyword-research-template.md",
+        "type": "blob",
+        "sha": "b70165026a6d616e8f718b2c7a3e89a29ff164b5"
+      },
+      {
+        "path": "skills/seo-onpage/SKILL.md",
+        "type": "blob",
+        "sha": "ae226feab3724b6e04e688f9732559c30b3ffb30"
+      },
+      {
+        "path": "skills/seo-onpage/references/audit-template.md",
+        "type": "blob",
+        "sha": "ab15d58aadddf4f370f21e5192d16490b47fe83b"
+      },
+      {
+        "path": "skills/seo-onpage/references/onpage-checklist.md",
+        "type": "blob",
+        "sha": "283cf3e1e9c7cf3966450f9f6c1da67129ed219b"
+      },
+      {
+        "path": "skills/seo-onpage/references/title-and-meta-patterns.md",
+        "type": "blob",
+        "sha": "71d1dd11de8db7d4f731ee0dc9bab80cb4d60a7b"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/SKILL.md",
+        "type": "blob",
+        "sha": "76832557e00f761ad1d1d9e94e0d39f87e28cb83"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/references/description-cookbook.md",
+        "type": "blob",
+        "sha": "ff3ba600ba21f76817bc1788af2d479744ba0665"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/references/methodology-vs-implementation.md",
+        "type": "blob",
+        "sha": "55c6f4f9c2e8ac2fd79eeba2c48548abc5bf4c60"
+      },
+      {
+        "path": "skills/skill-creation-walkthrough/references/skill-template.md",
+        "type": "blob",
+        "sha": "eb5f92f59caaefca4f5acafc681f1eb74994d741"
+      },
+      {
+        "path": "skills/seo-onpage/references/planted-extra.md",
+        "type": "blob",
+        "sha": "0000000000000000000000000000000000000000"
+      }
+    ]
+  }
+}
