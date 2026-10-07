@@ -17,6 +17,7 @@ Designed to be:
 
 from __future__ import annotations
 
+import ast
 import os
 import re
 import sys
@@ -438,6 +439,88 @@ def check_readme_catalog_count(result: LintResult) -> None:
             )
 
 
+
+# Bare skill counts. A typed skill count goes stale the moment this catalog
+# or a sibling repo changes, and nothing notices: claude-skills-widgets kept
+# a parent count one behind for two months. A count may appear only inside a
+# generator's <!-- NAME:START --> ... <!-- NAME:END --> markers, where a
+# script owns it. The Skills badge is left out: check_readme_catalog_count
+# checks it against the real count.
+SKILL_COUNT = re.compile(
+    r"(?<![\w.])~?\d+(?:\s*\+\s*\d+)?(?:-|\s+)(?:[A-Za-z][\w'-]*\s+){0,4}skills?\b",
+    re.IGNORECASE,
+)
+SKILLS_BADGE = re.compile(r"\[!\[Skills\]\(https://img\.shields\.io/badge/Skills-\d+-blue\.svg\)\]\([^)]*\)")
+GENERATED_BLOCK = re.compile(r"<!-- ([A-Z0-9_]+):START -->.*?<!-- \1:END -->", re.DOTALL)
+COUNT_SCAN_SKIP_DIRS = {".git", "node_modules", "dist", "skills"}
+
+
+def blank_generated_blocks(text: str) -> str:
+    """Drop generator-owned blocks and the badge, keeping line numbers."""
+    text = SKILLS_BADGE.sub("", text)
+    return GENERATED_BLOCK.sub(lambda m: "\n" * m.group(0).count("\n"), text)
+
+
+def table_cells(line: str) -> list[str]:
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def skills_column_numbers(lines: list[str]) -> Iterable[tuple[int, str]]:
+    """Yield (line number, cell) for numeric cells in a table column headed Skills."""
+    for i, line in enumerate(lines[:-1]):
+        if not (line.lstrip().startswith("|") and re.match(r"^\s*\|[\s:|-]+\|\s*$", lines[i + 1])):
+            continue
+        headers = [cell.lower() for cell in table_cells(line)]
+        if "skills" not in headers:
+            continue
+        col = headers.index("skills")
+        for j in range(i + 2, len(lines)):
+            if not lines[j].lstrip().startswith("|"):
+                break
+            cells = table_cells(lines[j])
+            if col < len(cells) and re.search(r"\d", cells[col]):
+                yield j + 1, cells[col]
+
+
+def python_docstrings(path: Path) -> Iterable[tuple[int, str]]:
+    """Yield (first line number, raw text) for every docstring in a Python file."""
+    try:
+        tree = ast.parse(read_text(path))
+    except SyntaxError:
+        return
+    for node in ast.walk(tree):
+        if not isinstance(node, (ast.Module, ast.ClassDef, ast.FunctionDef, ast.AsyncFunctionDef)):
+            continue
+        doc = ast.get_docstring(node, clean=False)
+        if doc is not None:
+            yield node.body[0].lineno, doc
+
+
+def check_bare_skill_counts(result: LintResult) -> None:
+    """No typed skill count in README.md or a Python docstring outside generator markers."""
+    found: list[str] = []
+    if README.exists():
+        lines = blank_generated_blocks(read_text(README)).splitlines()
+        for number, line in enumerate(lines, 1):
+            for match in SKILL_COUNT.finditer(line):
+                found.append(f"README.md:{number}: {match.group(0)!r}")
+        for number, cell in skills_column_numbers(lines):
+            found.append(f"README.md:{number}: Skills column cell {cell!r}")
+    for path in sorted(REPO_ROOT.rglob("*.py")):
+        rel = path.relative_to(REPO_ROOT)
+        if COUNT_SCAN_SKIP_DIRS & set(rel.parts):
+            continue
+        for start, doc in python_docstrings(path):
+            for offset, line in enumerate(doc.splitlines()):
+                for match in SKILL_COUNT.finditer(line):
+                    found.append(f"{rel.as_posix()}:{start + offset} (docstring): {match.group(0)!r}")
+    for item in found:
+        result.fail(
+            f"Bare skill count at {item}. Drop the number, or move it inside "
+            "generator markers that a script fills in."
+        )
+
+
 # ---------------------------------------------------------------------------
 # Driver
 # ---------------------------------------------------------------------------
@@ -452,6 +535,7 @@ CHECKS: list[Callable[[LintResult], None]] = [
     check_cross_skill_references,
     check_line_lengths,
     check_readme_catalog_count,
+    check_bare_skill_counts,
     check_readme_catalog_generated,
 ]
 

@@ -33,7 +33,7 @@ Add the marketplace, then install the plugin you want:
 ```
 /plugin marketplace add rampstackco/claude-skills
 
-# full catalog (103 skills)
+# full catalog
 /plugin install rampstack-skills@rampstack
 
 # focused subsets
@@ -335,7 +335,7 @@ Prebuilt distributions install the catalog into a project's `.agents/skills` fol
 
 ### Want only a few skills?
 
-You do not have to install all 103. Pick the categories that match your work. The library is modular: each skill stands on its own.
+You do not have to install all of them. Pick the categories that match your work. The library is modular: each skill stands on its own.
 
 ---
 
@@ -467,7 +467,7 @@ You can also pull individual skills for one-off work. Need just a backlink audit
 
 ## How the catalog connects
 
-The skills compose with the tools your team already uses. 103 skills at the center; 35 integrations across 6 integration categories radiating out via MCPs.
+The skills compose with the tools your team already uses. The catalog sits at the center; 35 integrations across 6 integration categories radiating out via MCPs.
 
 <p align="center">
   <picture>
@@ -513,13 +513,13 @@ Because the catalog conforms to the open Agent Skills standard, skills work acro
 
 claude-skills is the parent catalog. Curated subsets and companion repos focus on specific specialties:
 
-| Repo | Focus | Skills |
-|---|---|---|
-| [claude-skills](https://github.com/rampstackco/claude-skills) | Full catalog (you are here) | 103 |
-| [claude-skills-starter](https://github.com/rampstackco/claude-skills-starter) | General-purpose lite | 14 |
-| [claude-skills-seo](https://github.com/rampstackco/claude-skills-seo) | SEO consulting | 12 |
-| [claude-skills-pm](https://github.com/rampstackco/claude-skills-pm) | Product management | 12 |
-| [claude-skills-widgets](https://github.com/rampstackco/claude-skills-widgets) | UI patterns + components | 65 + 32 |
+| Repo | Focus |
+|---|---|
+| [claude-skills](https://github.com/rampstackco/claude-skills) | Full catalog (you are here) |
+| [claude-skills-starter](https://github.com/rampstackco/claude-skills-starter) | General-purpose lite |
+| [claude-skills-seo](https://github.com/rampstackco/claude-skills-seo) | SEO consulting |
+| [claude-skills-pm](https://github.com/rampstackco/claude-skills-pm) | Product management |
+| [claude-skills-widgets](https://github.com/rampstackco/claude-skills-widgets) | UI patterns + components |
 | [awesome-claude-skills](https://github.com/rampstackco/awesome-claude-skills) | Curated discovery list | n/a |
 
 Each family repo is MIT-licensed, conforms to the Agent Skills Specification, and is stack-agnostic. Use the full catalog for breadth; use a specialty subset when working in one domain.
@@ -762,7 +762,7 @@ The SEO audit suite (skills 23-29) is built around Ahrefs as its primary backend
 
 **Backlink and keyword data**
 
-- **Ahrefs MCP** - primary backend for the audit suite; backlink profiles, keyword data, content explorer, site audit. Referenced explicitly by `seo-audit-orchestration` and the 6 audit suite skills (backlink, keyword gap, content gap, traffic, site health, rank tracking). Credits-per-call.
+- **Ahrefs MCP** - primary backend for the audit suite; backlink profiles, keyword data, content explorer, site audit. Referenced explicitly by `seo-audit-orchestration` and the other audit suite skills (backlink, keyword gap, content gap, traffic, site health, rank tracking). Credits-per-call.
 - **Semrush MCP** - alternative or complement to Ahrefs with stronger US keyword data and SEO-PR features (Topic Research, brand monitoring) Ahrefs does not cover. Pairs with `seo-keyword`, `seo-competitor`, `seo-content-gap-audit`. Verify the official MCP endpoint at authoring time; Semrush has shipped first-party MCP tooling. Credits-per-call.
 - **DataForSEO MCP** - programmatic SEO data (SERP, keywords, backlinks) at developer-friendly pricing; useful as a third source for cross-validation when methodology decisions hinge on data agreement. Credits-per-call (free tier available).
 
@@ -869,7 +869,7 @@ Contributions are welcome. Whether you want to fix a typo, add a reference file,
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full process.
 
-The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across all 103 skills, with worked examples and a blank template.
+The fastest path: use the [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) skill itself. It teaches the same authoring discipline used across the whole catalog, with worked examples and a blank template.
 
 ---
 
