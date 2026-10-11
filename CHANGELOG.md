@@ -18,6 +18,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- Evidence-based review disclosures describe the commission relationship without asserting unchanged buyer pricing unless the actual offer terms support it.
+
 - "The framework's range" cards now link to their live showcase demos (Pulse, Forge, Bloom, Observatory), and the section closes with a CTA to the full creative-direction showcase.
 - Hand-authored rampstack.co showcase demo links across the README now open in a new tab (`target="_blank" rel="noopener"`).
 
