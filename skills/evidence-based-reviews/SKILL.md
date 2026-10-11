@@ -108,7 +108,7 @@ A site that does tier 2 and 3 work honestly is doing original analysis by the gu
 
 ## FTC alignment
 
-Affiliate relationships are disclosed in plain language, placed where the recommendation is, not in a footer. The disclosure travels with the monetized content: near the picks, in body-size text, before or beside the first affiliate link a reader can act on. "Plain language" means a reader who has never heard the word affiliate understands that the site earns a commission and that the price they pay does not change. Euphemisms ("partner links," "support the site") fail the plain-language test.
+Affiliate relationships are disclosed in plain language, placed where the recommendation is, not in a footer. The disclosure travels with the monetized content: near the picks, in body-size text, before or beside the first affiliate link a reader can act on. "Plain language" means a reader who has never heard the word affiliate understands that the site earns a commission. State that the buyer's price does not change only when the actual offer terms support that claim; it is not part of the required relationship disclosure. Euphemisms ("partner links," "support the site") fail the plain-language test.
 
 ---
 

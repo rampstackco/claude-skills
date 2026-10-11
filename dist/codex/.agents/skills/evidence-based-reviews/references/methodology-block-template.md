@@ -23,7 +23,7 @@ The per-piece disclosure block. Short, placed with the criteria, written for rea
 - The block sits with the criteria, before or immediately after the picks summary, never below the fold of a long piece and never in a footer.
 - Body-size text. A disclosure styled to be skipped is a disclosure in name only.
 - The hands-on line is mandatory even when the answer is "none claimed." The absence stated plainly is the trust mechanism; the absence omitted is the lie of implication.
-- The affiliate disclosure is a sibling, not a substitute: it travels with the recommendation per FTC expectations and says in plain language that the site earns a commission and that the reader's price does not change. The methodology block discloses the evidence; the affiliate block discloses the money. A piece with affiliate links carries both.
+- The affiliate disclosure is a sibling, not a substitute: it travels with the recommendation per FTC expectations and says in plain language that the site earns a commission. Add a claim that the reader's price does not change only when verified against the actual offer terms. The methodology block discloses the evidence; the affiliate block discloses the money. A piece with affiliate links carries both.
 
 ## Anti-patterns
 
