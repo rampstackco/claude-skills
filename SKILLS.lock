@@ -562,6 +562,13 @@
     "references/wizard-anti-patterns.md": "7464f2124504187fde7c8655db0ba303878ddf9e91cefaba6200a5c967e4355f",
     "references/wizard-decision-criteria.md": "4e976611c41b6b2c3281bd053f458bee5f5e69daaf706df04f808bc4daa8895a"
   },
+  "oss-contribution-research": {
+    "SKILL.md": "d0166840d24ff0bab424e27729007d6f0943ca933fb3693dd08f79a119ea14f6",
+    "references/example-intake-item.md": "1969f420363197036de8097ebc36a4d14adb2f2365cc1e2eaf2b68c981ad3dc2",
+    "references/policy-classification.md": "7edbe5c8c6d26f7bee3a18f6015cbe8a12ef33d76da4b52905024bf45b2a2f44",
+    "references/pr-description-template.md": "26e4c38fb5b235c0580a83bd65d13348dc0bfc02dd62345348fc45a2dd7ddf66",
+    "references/queue-item-template.md": "856c6e250a712f4664f3a2fac0a49fa3e4f8a9186afacab6a2ce4aa792313107"
+  },
   "paid-media-strategy": {
     "SKILL.md": "2bb4597636c5043aabb08d079661efafd4f9efad8eb0544e80ecee9ce3ae275c",
     "references/ads-platform-comparison.md": "c34b60d89cf64ae8962158351bbb4958de24fd36eddfc79ab9395bd99b879002",

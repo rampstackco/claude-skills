@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+**Skills (1 net addition, 103 → 104)**
+
+- `oss-contribution-research` skill (Development category). Gated research and patch prep for outside open-source contributions: AI-PR policy classification with cited lines, intake before any patch, duplicate and claim checks, cadence caps, reproduction first, the repo's own checks, an independent critic rerun, and per-repo, per-action disclosure. The output is a hashed queue item for a human to approve; the agent running the skill never posts.
+
 **Distribution**
 
 - Claude Code plugin marketplace. `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` publish the full catalog as an installable plugin: `/plugin marketplace add rampstackco/claude-skills` then `/plugin install rampstack-skills@rampstack`.

@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: oss-contribution-research
+
+category: development
+catalog_summary: "Gated research and patch prep for outside open-source PRs, ending in a human-approved queue item"
+display_order: 5
