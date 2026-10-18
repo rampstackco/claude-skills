@@ -54,7 +54,7 @@ Each gate either passes with evidence or stops the run with a reason. A stop is 
 9. **Checks gate.** The repo's own test suite and linters pass locally.
 10. **Size gate.** The change is reviewable in under 5 minutes from a 3 to 5 sentence summary. If not, split it or drop it.
 11. **Critic gate.** A separate agent reruns the reproduction and the test suite itself, on a different model family where one is available. Re-reading the diff does not count. A critic fail blocks the item.
-12. **Disclosure.** Use the registry's format for this repo and this action type: pull request description, issue comment, or review reply. No generic footer. When the repo's policy class is `silent` and the registry has no format for the action type, use the default disclosure line (see `references/pr-description-template.md`). When the repo has an explicit policy that does not cover the action type, the registry says `unknown`: stop.
+12. **Disclosure.** Use the registry's format for this repo and this action type: pull request description, issue comment, or review reply. No generic footer. When the repo's policy class is `silent`, a pull request description carries one prose disclosure line with no tool or vendor name, and issue comments and review replies carry no disclosure line (see `references/pr-description-template.md`). When the repo has an explicit policy that does not cover the action type, the registry says `unknown`: stop. Where a repo forbids AI attribution, no tool name, trailer, or co-author line appears in the pull request body or in any commit.
 
 Operating constraints that sit across every run:
 
@@ -82,7 +82,7 @@ Operating constraints that sit across every run:
 
 - **Patch before intake.** Writing code for an issue the maintainers have not opened to outside work. Their auto-close bots do not read the diff.
 - **Policy by vibe.** Calling a repo `allows` because it has a friendly README. Cite the line or write "none found".
-- **One footer for every repo.** Some repos forbid attribution footers; others require a fixed disclosure line. The registry decides, per action type.
+- **One footer for every repo.** Some repos forbid AI attribution in bodies and commits; others require a fixed disclosure line. The registry decides, per action type.
 - **Summary that is a test log.** "All 214 tests pass" is a gate result, not a summary. The summary says what changed and why, in words the user can repeat to a maintainer.
 - **Critic that re-reads.** A second agent agreeing with the diff proves nothing. The critic reruns the reproduction and the suite.
 - **Volume.** Several pull requests to one repo in a week reads as automation, whatever the quality. The cadence cap exists for this.

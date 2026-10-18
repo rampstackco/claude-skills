@@ -8,13 +8,18 @@ Drafts for the "Exact text to post" block. This is the text that appears under t
 | Intake comment | `issue_comment` |
 | Review reply | `review_reply` |
 
-If the registry has no format for the action type and the repo's policy class is `silent`, use the default disclosure line, in plain prose:
+For a repo whose policy class is `silent`, the registry carries these defaults:
 
-```text
-AI-assisted: drafted with Claude Code; I read and approved this text before posting.
-```
+- **Pull request description:** one prose line in the body, with no tool or vendor name and no footer:
 
-In a pull request description, also state what was verified, for example which tests were run. Where the repo forbids attribution footers, the line stays prose in the body: no trailer, no co-author line.
+  ```text
+  Drafted with AI assistance and approved by me. Verification: [what was actually run].
+  ```
+
+  Write the verification in the passive voice and list only what was run, for example "the issue was reproduced, a regression test was added, and the full test suite passes locally." Do not say the user reproduced, tested, or reviewed the change personally.
+- **Issue comment and review reply:** no disclosure line. The user approves the text word for word and posts it under their own name. If a maintainer asks about AI use, the drafted reply answers directly and plainly.
+
+**No AI attribution.** Some repos forbid attributing commits or pull request bodies to an AI tool. There, disclosure stays the prose line above, and no tool or model name, trailer, co-author line, or generated-by line appears in the body or in any commit message.
 
 If the value is `unknown`, the repo has an explicit policy that does not cover this action type. Stop.
 
@@ -76,4 +81,5 @@ Rules:
 | Disclosure with extent | The final paragraph of the body, naming what the AI did (code, tests, description). |
 | Fixed description line | Verbatim on its own line, with the agent's own name and link. |
 | Environment disclosure | A short list: model, harness, harness version, plugins. |
-| No attribution footers | One plain sentence in the body. No trailer, no generated-by line, no badge. |
+| No AI attribution | The prose line, with no tool or model name. No trailer, no co-author line, no generated-by line, no badge, in the body or the commits. |
+| Silent policy | Pull request description: the prose line. Comments and replies: none. |
