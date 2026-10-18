@@ -20,7 +20,7 @@ Title: [intake|pr|reply|other] [owner/repo]#[issue or PR number] [short descript
 ## Gates
 - [x] intake: maintainer go-ahead or assignment ([link])
 - [x] duplicate/claim check (no open PR, assignee, or claim; [what was searched, date])
-- [x] cadence cap (last submission [date or none], cap [cap])
+- [x] cadence cap (last submission [date or none, from the queue's posted items], cap [cap])
 - [x] repro: failing test or documented reproduction ([test name or steps link])
 - [x] repo checks pass locally ([commands run, result])
 - [x] size: reviewable in under 5 minutes from this summary

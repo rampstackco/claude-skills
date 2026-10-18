@@ -30,9 +30,9 @@ Prepare one outside contribution to an open-source repo, gate by gate, and stop 
 ## Required inputs
 
 - **Target.** The repo (`owner/repo`) and an existing issue URL, or a bug the agent can reproduce.
-- **Registry.** The user's per-repo registry file (`registry.yaml` in the user's private approval queue repo). It holds the policy class, disclosure format per action type, review mode, cadence cap, last submission date, and status for each target repo.
-- **Queue state.** Whether the queue has an open issue labeled `pipeline:paused`.
-- **A read-only token.** Research and patch steps run on a read-only forge token. The write-capable login belongs to the poster step alone, which runs only on approved queue items.
+- **Registry.** The user's per-repo registry file (`registry.yaml` in the user's private approval queue repo). It holds the policy class, disclosure format per action type, review mode, cadence cap, a cached last submission date, and status for each target repo.
+- **Queue state.** Whether the queue has an open issue labeled `pipeline:paused`, and the queue's posted items (issues labeled `status:posted`). The posted items are the record of past submissions.
+- **A read-only token.** Research and patch steps run on a read-only forge token. Filing the finished item into the approval queue is a separate, internal step on the user's normal login, after research is complete. Posting to the outside repo happens only through the queue's poster, and only on approved items.
 - **A local clone** of the target repo on a branch the user's fork can push later.
 
 If the registry or queue state is missing, stop and ask for it. Do not infer a policy or a disclosure format.
@@ -45,7 +45,7 @@ Each gate either passes with evidence or stops the run with a reason. A stop is 
 
 1. **Pipeline gate.** An open `pipeline:paused` issue in the queue stops everything (kill switch).
 2. **Repo gate.** Classify the repo's AI-PR policy as `allows`, `silent`, or `bans`, with the cited line (see `references/policy-classification.md`). Stop on `bans`. Also stop when the policy requires the human owner to attest to reviewing the complete change, when the repo accepts issues but not pull requests, when it accepts pull requests only from members, or when the registry status is not `active`.
-3. **Throttle and cadence gate.** Stop if the user already has an open pull request on this repo. Stop if the registry's last submission date plus its cadence cap says the next submission is not due.
+3. **Throttle and cadence gate.** Stop if the user already has an open pull request on this repo. Stop if the cadence cap says the next submission is not due. Take the last submission date from the queue's posted items for this repo. The registry's date is a cached hint only; when the two disagree, the date from the queue wins.
 4. **Issue gate.** Work only on an existing issue or a bug confirmed by reproduction. No unsolicited refactors or features.
 5. **Duplicate and claim gate.** Search open and closed pull requests and the issue thread. Stop on an open pull request for the issue, an assignee, or a "working on this" comment.
 6. **Intake gate.** Where the repo asks for maintainer assignment, an `accepted` label, or a go-ahead, and none exists yet, the output is an intake queue item (a short comment asking to take the issue). No patch is written until the go-ahead arrives.
@@ -54,7 +54,7 @@ Each gate either passes with evidence or stops the run with a reason. A stop is 
 9. **Checks gate.** The repo's own test suite and linters pass locally.
 10. **Size gate.** The change is reviewable in under 5 minutes from a 3 to 5 sentence summary. If not, split it or drop it.
 11. **Critic gate.** A separate agent reruns the reproduction and the test suite itself, on a different model family where one is available. Re-reading the diff does not count. A critic fail blocks the item.
-12. **Disclosure.** Use the registry's format for this repo and this action type: pull request description, issue comment, or review reply. No generic footer. If the registry says `unknown` for that action type, stop.
+12. **Disclosure.** Use the registry's format for this repo and this action type: pull request description, issue comment, or review reply. No generic footer. When the repo's policy class is `silent` and the registry has no format for the action type, use the default disclosure line (see `references/pr-description-template.md`). When the repo has an explicit policy that does not cover the action type, the registry says `unknown`: stop.
 
 Operating constraints that sit across every run:
 
@@ -65,7 +65,7 @@ Operating constraints that sit across every run:
 
 ## Workflow
 
-1. **Load state.** Read the registry entry for the target repo and check the queue for `pipeline:paused`. Confirm the token in use is read-only.
+1. **Load state.** Read the registry entry for the target repo, check the queue for `pipeline:paused`, and list the queue's posted items for this repo. Confirm the token in use is read-only.
 2. **Run gates 1 to 5** from the registry, the repo's guidance files, and the issue thread. Record each result with a link.
 3. **Decide the action type.** No go-ahead where one is required: draft an intake item and skip to step 8. Go-ahead in hand, or none required: continue.
 4. **Reproduce.** Write the failing test or the reproduction steps. Run it and keep the output.
@@ -74,7 +74,7 @@ Operating constraints that sit across every run:
 7. **Hand to the critic.** Give the critic the repo, the branch, and the reproduction. It reruns both on its own and reports pass or fail with output.
 8. **Draft the exact text.** Pull request title and body, intake comment, or review reply, with disclosure in the registry's format for that action type. See `references/pr-description-template.md`.
 9. **Build the queue item.** Fill `references/queue-item-template.md` exactly. Include the full diff inline when the registry sets `review_mode: full-diff`. Compute the sha256 of the exact text block.
-10. **Stop.** Return the queue item to the user. Filing it in the queue is a separate step. Posting happens only through the queue's poster after the user approves.
+10. **Stop.** Return the queue item to the user. Filing it in the queue is a separate step on the user's normal login, not on the read-only token. Posting happens only through the queue's poster after the user approves.
 
 ---
 
@@ -86,6 +86,7 @@ Operating constraints that sit across every run:
 - **Summary that is a test log.** "All 214 tests pass" is a gate result, not a summary. The summary says what changed and why, in words the user can repeat to a maintainer.
 - **Critic that re-reads.** A second agent agreeing with the diff proves nothing. The critic reruns the reproduction and the suite.
 - **Volume.** Several pull requests to one repo in a week reads as automation, whatever the quality. The cadence cap exists for this.
+- **Trusting a cached date.** Reading the last submission from the registry when the queue's posted items say otherwise. The queue is the record; the registry date can lag.
 - **Silent scope creep.** Fixing a neighboring bug or reformatting a file in the same diff. Split it or leave it.
 - **Posting from the research session.** Any outbound write from this skill is a defect, including a "quick" comment asking to be assigned.
 

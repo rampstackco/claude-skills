@@ -8,7 +8,15 @@ Drafts for the "Exact text to post" block. This is the text that appears under t
 | Intake comment | `issue_comment` |
 | Review reply | `review_reply` |
 
-If the value is `unknown`, stop.
+If the registry has no format for the action type and the repo's policy class is `silent`, use the default disclosure line, in plain prose:
+
+```text
+AI-assisted: drafted with Claude Code; I read and approved this text before posting.
+```
+
+In a pull request description, also state what was verified, for example which tests were run. Where the repo forbids attribution footers, the line stays prose in the body: no trailer, no co-author line.
+
+If the value is `unknown`, the repo has an explicit policy that does not cover this action type. Stop.
 
 ## Pull request (action: pr)
 

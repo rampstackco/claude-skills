@@ -20,7 +20,7 @@ How to find a repo's AI-assisted contribution policy, classify it, cite it, and 
 | Class | Test | Result |
 |---|---|---|
 | `allows` | An explicit line welcomes AI-assisted contributions, usually with conditions | Eligible, subject to its conditions |
-| `silent` | Nothing found in any location above | Eligible; disclose anyway |
+| `silent` | Nothing found in any location above | Eligible; disclose anyway, with the default line where the registry has no format |
 | `bans` | An explicit line refuses AI-generated or AI-assisted contributions | Stop |
 
 Cite the exact line with the file and line number, for example `CONTRIBUTING.md:63 "AI-assisted contributions are welcome"`. Or write `none found` and list the locations checked. A paraphrase is not a citation.
@@ -45,7 +45,7 @@ Record the pattern per action type in the registry. The skill reads the format f
 - **Environment disclosure.** The model, harness, harness version, and every installed plugin, on every pull request and issue.
 - **No attribution footers.** An agent guide forbids attribution trailers and generated-by footers, so disclosure goes in plain prose in the body.
 
-When a repo's lines cover pull requests but say nothing about comments, the comment format is `unknown`. An `unknown` format stops that action type until the registry owner fills it in.
+When a repo's lines cover pull requests but say nothing about comments, the comment format is `unknown`. An `unknown` format stops that action type until the registry owner fills it in. This applies only to repos with an explicit policy. A `silent` repo has no lines to follow, so every action type without a recorded format uses the default disclosure line in `pr-description-template.md`.
 
 ## Recording the result
 
