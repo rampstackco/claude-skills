@@ -13,6 +13,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `ticket-authoring` skill (Product category). Bugs, tasks, stories, spikes, and epics with required fields, attachments, and a done test per type, plus a definition-of-ready checklist and a plain-language capitalization stage guide (ASC 350-40, IAS 38) tagged at the work-item level.
 - `sprint-operations` skill (Process and team category). The PMO layer: eight tracker-derived delivery metrics, points-for-forecasting capacity math, templates for the five ceremonies, the sprint report and quarterly rollup, and a deep dive on measuring AI coding agent lanes.
 - `dispatch-authoring` skill (Process and team category). The planner-to-agent handoff in seven parts (header, Gate 0, scope, specification, verification, delivery, stop conditions), with a held draft PR, an honest-stop rule, and a PR body template.
+- `backlog-triage` skill (Product category). Intake, dedupe and merge with a reporter count, classify into the `ticket-authoring` types, score with inputs on the record (a severity and frequency grid for bugs, value against effort for stories), promote, park, or decline with a written reason, and an aging policy with a backlog ceiling. Includes a weekly session runbook and a worked ten-item session.
+- `test-case-authoring` skill (Quality assurance category). Per-ticket test plans: every acceptance criterion traced to a case, a ten-field case anatomy with observable expected results, coverage classes required per ticket type, lowest-level-wins level selection, exploratory charters for spikes, and required evidence per case, plus a deep dive on tests run by coding agents.
 
 **Skills (1 net addition, 103 → 104)**
 
