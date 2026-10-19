@@ -563,11 +563,12 @@
     "references/wizard-decision-criteria.md": "4e976611c41b6b2c3281bd053f458bee5f5e69daaf706df04f808bc4daa8895a"
   },
   "oss-contribution-research": {
-    "SKILL.md": "6b49de94d302f42f8dacd56a7148b7cd580665b28cef24a9fea6283d3a941e40",
-    "references/example-intake-item.md": "67d495793c78d722bd36e9dde61074fafd741420d2fc4bd0bd90d6c61747b685",
+    "SKILL.md": "48316e3d7c87b70e55f560d472755af3928c6f02a9645fc12842210cb0e9a1e4",
+    "references/example-intake-item.md": "0d1563a81b19f8da16e609208545f8fbc5b00362895ece1ba9d65f8cab5256f1",
     "references/policy-classification.md": "0547be61c47971852f91db97936aa9081c4a72ceb0f9bb2440ec6ef75f857dd3",
     "references/pr-description-template.md": "bff665c60ad396a9cd1b94d895d81c1304ef01239bafedaf549b4c651e8408f3",
-    "references/queue-item-template.md": "3f78d6acff4c9ca4c3e676f264503e0db4afd5966b5c329bfca78d71c29f2f3e"
+    "references/queue-item-template.md": "bec5077c7f0a48aeaf36f51aab14eb8f7b2d8ebffbb9c80a42b47e7aa8804e3b",
+    "references/repro-record-template.md": "ae1bb844a15af2d409ba01fea71e8edf883ed679d1930789cdce151f8f368019"
   },
   "paid-media-strategy": {
     "SKILL.md": "2bb4597636c5043aabb08d079661efafd4f9efad8eb0544e80ecee9ce3ae275c",

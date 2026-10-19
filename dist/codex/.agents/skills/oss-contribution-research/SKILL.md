@@ -40,6 +40,7 @@ Prepare one outside contribution to an open-source repo, gate by gate, and stop 
   - **Posting.** Posting to the outside repo happens only through the queue's poster, and only on approved items.
   - **Freshness.** The poster revalidates everything at post time, so the snapshot is never the last check.
 - **A local clone** of the target repo on a branch the user's fork can push later.
+- **A local clone of the queue repo.** The queue-item format, the poster's docs and its hash helper are read from the user's local clone of their private queue repo, pulled before the run. The read-only token cannot read that repo, so the run never fetches those files over it.
 
 If the snapshot is missing, stop and ask for it. Do not infer a policy, a disclosure template, or a submission history.
 
@@ -65,12 +66,14 @@ Each gate either passes with evidence or stops the run with a reason. A stop is 
    - Stop if the user already has a different open pull request on this repo.
    - Stop if the cadence cap says the next submission is not due. Take the last submission date from the snapshot's posted ledger. The registry's date is a cached hint only; when the two disagree, the ledger wins.
 5. **Duplicate and claim gate.** Search open and closed pull requests and the issue thread. Stop on someone else's open pull request, assignment, or "working on this" comment.
+   - **Map open pull requests to issues from their bodies.** List the open pull requests once (`GET /repos/{owner}/{repo}/pulls?state=open&per_page=100`, paginated) and read each body for the issues it names: "Fixes #n", "Closes #n", a bare `#n`, or an issue URL. The issue timeline endpoint's cross-referenced events are not returned on a read-only token, so an empty timeline proves nothing.
 6. **Issue gate.** Work only on an existing issue or a bug confirmed by reproduction. No unsolicited refactors or features.
    - **Bug or small fix, from the body.** Judge it from the issue body and thread. Labels are a hint only: a repo can have a `bug` label that none of its open bugs carry.
    - **Still exists on the default branch.** Check the current default branch, not only the issue's timeline. Search recent merged pull requests and commits that touch the relevant code, including ones that never link the issue. A `-linked:pr` filter misses them. Stop if the bug is already fixed; the issue is stale-open.
    - **Claims are not facts.** A bystander's "already resolved" or "can be closed" comment is a claim to verify against the code, not a result. It can cite the wrong commit and still reach the right conclusion, or the reverse.
 7. **Intake gate.** Where the repo asks for maintainer assignment, an `accepted` label, or a go-ahead, and none exists yet, the output is an intake queue item (a short comment asking to take the issue). No patch is written until the go-ahead arrives.
-8. **Repro gate.** A failing test or a documented reproduction exists before any fix.
+8. **Repro gate.** A failing test or a documented reproduction exists before any fix. A `pr` item requires the real reproduction, captured as a repro record (see `references/repro-record-template.md`): target, surface, numbered steps, a measurable assertion with expected and observed values, a control that flips it, a second case, a regression check, environment, and evidence.
+   - **Browser reproductions need a connected browser tool.** Reading the code and the fixtures is not a reproduction. Without a connected browser, the run may file intake items only; the `pr` item waits for a run that has one.
 9. **Patch.** The smallest single-purpose change that fixes the issue, in the repo's own style.
 10. **Checks gate.** The repo's own test suite and linters pass locally, at the commit that will be submitted.
 11. **Size gate.** The change is reviewable in under 5 minutes from a 3 to 5 sentence summary. If not, split it or drop it.
@@ -97,11 +100,13 @@ Operating constraints that sit across every run:
    - **Agent shells.** Many agent shells start a fresh process per command, so a token set in one command is gone in the next. Start the agent from a terminal where the read-only token is already set.
 2. **Run gates 1 to 3** from the snapshot, the repo's guidance files, and the target thread. Record each result with a link. If gate 3 finds the user's own work, draft the follow-up item and skip to step 9.
 3. **Run gates 4 to 6** for new work. When the target is a candidate search, run them per candidate:
-   - **Listing.** For a repo with a small open-issue count, list with the issues endpoint (`GET /repos/{owner}/{repo}/issues?state=open`, core quota) and skip pull requests in the result. The search API has a secondary rate limit that can trip after a handful of calls.
+   - **Listing.** List with the issues endpoint (`GET /repos/{owner}/{repo}/issues?state=open&sort=updated`, core quota) and skip pull requests in the result. The search API has a secondary rate limit that can trip after a handful of calls.
+   - **Pool window.** For a repo with more than 200 open issues, the pool is the 300 most recently updated items (three pages of 100). State the window in the report, with the date of the oldest update it reached, so later runs are comparable.
    - **Order.** Sort by recent update. Drop feature and docs proposals first, with a one-line reason each.
+   - **Screening.** For each bug-shaped candidate, record the first failing gate and its evidence, then move on. Run the full gate set only on a candidate that has passed every earlier gate.
    - **Result.** The first candidate that passes every gate continues to step 4. If none passes, write the no-eligible-candidate report (see Output format) and stop.
 4. **Decide the action type.** No go-ahead where one is required: draft an intake item and skip to step 9. Go-ahead in hand, or none required: continue.
-5. **Reproduce.** Write the failing test or the reproduction steps. Run it and keep the output.
+5. **Reproduce.** Write the failing test or the reproduction steps. Run it and keep the output. For a `pr` item, fill the repro record (`references/repro-record-template.md`) from what actually ran, with the paths to the evidence.
 6. **Patch and check.** Make the smallest fix. Run the repo's tests and linters. Fix only what the change broke. Push the branch to the user's fork and record the full head SHA and the base SHA it was built on.
 7. **Size it.** Write the 3 to 5 sentence summary first. If the summary cannot carry the change, split or drop.
 8. **Hand to the critic.** Give the critic the repo, the branch, the head SHA, and the reproduction. It reruns both on its own and reports PASS or FAIL with output and the SHA it ran.
@@ -112,8 +117,9 @@ Operating constraints that sit across every run:
     - one structured result per gate;
     - the Disclosure field;
     - the full diff of `base_sha...head_sha` when the registry sets `review_mode: full-diff`;
-    - the sha256 of the exact text block.
-11. **Stop.** Return the queue item to the user. Filing it in the queue is a separate step on the user's normal login, not on the read-only token. Posting happens only through the queue's poster after the user approves.
+    - the sha256 of the exact text block;
+    - every outside issue or pull request named in Policy, Gates and Summary written as `owner/repo#n` inside a code span, never as a full URL (the template's cross-reference rule).
+11. **Validate offline, then stop.** Run the queue's poster in its fixture (dry-run) mode with the item as the fixture and the local registry file. It parses the item and checks the labels, the disclosure, the gates and the hash, then prints the planned calls, all without a GitHub call. Fix the item until it passes. Then return the queue item to the user. Filing it in the queue is a separate step on the user's normal login, not on the read-only token. Posting happens only through the queue's poster after the user approves.
     - **File only a passing item.** Filing happens only if a candidate passed every gate. A stop report or a no-eligible-candidate report is never filed as a queue item, whatever a run plan says.
 
 ---
@@ -135,6 +141,9 @@ Operating constraints that sit across every run:
 - **Trusting a cached date.** Reading the last submission from the registry when the posted ledger says otherwise. The ledger is the record; the registry date can lag.
 - **Silent scope creep.** Fixing a neighboring bug or reformatting a file in the same diff. Split it or leave it.
 - **Posting from the research session.** Any outbound write from this skill is a defect, including a "quick" comment asking to be assigned.
+- **Empty timeline as proof.** Reading no cross-reference events on the read-only token and concluding nobody has a pull request. The open pull request bodies are the record.
+- **Reproduction by reading.** Calling code and fixture inspection a reproduction for a `pr` item. The repro record needs an observed value and a control that flips it.
+- **Full URLs in the queue item.** A pasted issue URL in the item body creates a cross-reference event on the public thread. Write `owner/repo#n` in a code span instead.
 
 ---
 
@@ -142,11 +151,11 @@ Operating constraints that sit across every run:
 
 One queue item in markdown, ready to be filed as an issue in the user's approval queue. The structure, section headings, field names, and hash rule are fixed; see `references/queue-item-template.md`. A worked intake example is in `references/example-intake-item.md`.
 
-When a gate stops the run, the output is a short stop report instead: the gate, the reason, the evidence link, and what would clear it.
+When a gate stops the run, the output is a short stop report instead: the gate, the reason, the evidence link, and what would clear it. Dates in every report are UTC, matching the queue snapshot and the forge's timestamps.
 
 When a candidate search finds no candidate that passes every gate, the output is a no-eligible-candidate report:
 
-- the repo, the date, and how the pool was listed (endpoint, filters, count of open issues);
+- the repo, the date in UTC, and how the pool was listed (endpoint, filters, count of open issues, and the pool window with its oldest update date when the repo has more than 200 open issues);
 - every candidate checked, each with the gate it failed and the evidence: a link plus the line, comment, pull request, or commit that decided it;
 - proposals dropped as out of scope (features, docs), one line each;
 - what would change the result, such as new issues or a stated recheck date.
@@ -161,3 +170,4 @@ Neither report is a queue item, and neither is filed.
 - [`references/policy-classification.md`](references/policy-classification.md) - Where to look for an AI-PR policy, how to classify it, how to cite it, and the eligibility stops. Read during gate 2.
 - [`references/pr-description-template.md`](references/pr-description-template.md) - Drafting the exact text per action type with per-repo disclosure. Read at step 9.
 - [`references/example-intake-item.md`](references/example-intake-item.md) - A filled intake queue item for a fictional repo.
+- [`references/repro-record-template.md`](references/repro-record-template.md) - The repro record a `pr` item carries: fields, the browser rule, and a filled example for a fictional repo. Read at gate 8 and step 5.

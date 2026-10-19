@@ -10,7 +10,7 @@ Title: [intake|pr|reply|close] [owner/repo]#[issue or PR number] [short descript
 ## Target
 - item_id: [unique slug, a-z 0-9 and -, 8 to 80 characters, e.g. feedparse-412-intake]
 - repo: [owner/repo]
-- url: [https://github.com/owner/repo/issues/N, or /pull/N for a reply on a PR, a ping, or a close]
+- url: [https://github.com/owner/repo/issues/N, or /pull/N for a reply on a PR, a ping, or a close; the one full URL in the item]
 - action: [intake | pr | reply | close]
 - purpose: ping                         (reply only, for the 14-day ping)
 - head: [user's fork owner:branch]      (pr only)
@@ -22,10 +22,10 @@ Title: [intake|pr|reply|close] [owner/repo]#[issue or PR number] [short descript
 [allows | silent] with the cited line and its URL, or "none found". Then the disclosure rule for this repo and this action type, copied from the registry.
 
 ## Gates
-- intake: [PASS | N/A] | [maintainer go-ahead or assignment link, or why it does not apply]
+- intake: [PASS | N/A] | [maintainer go-ahead or assignment, as owner/repo#n in a code span plus the comment date, or why it does not apply]
 - duplicate: PASS | [no one else's open PR, assignee, or claim; what was searched, date]
 - cadence: PASS | [last submission date or none, from the posted ledger; cap]
-- repro: [PASS | N/A] | [test name or steps link, or why it does not apply]
+- repro: [PASS | N/A] | [test name or repro record path, or why it does not apply]
 - checks: [PASS | N/A] | [commands run and result, at the head SHA]
 - size: PASS | [reviewable in under 5 minutes from this summary]
 - critic: [PASS | N/A] | [independent rerun at head SHA, first 7+ characters; model family; result]
@@ -84,6 +84,7 @@ There is no other action type and no manual path. Anything outbound that does no
   - For `pr` items, the first line of the block is the pull request title, then one blank line, then the body.
   - If the text contains triple backticks, fence it with four.
 - **Full diff.** Include it for `pr` items when the registry entry says `review_mode: full-diff`, and leave the section out otherwise. Paste `git diff base_sha...head_sha` unedited: the poster generates the same diff and refuses on any difference.
+- **Cross-references.** The queue repo is private, but a pasted issue or pull request URL in the item body still creates a cross-reference event on the public thread, and so does a bare `#n` or `owner/repo#n` outside a code span. In Policy, Gates and Summary, name outside issues and pull requests as `owner/repo#n` inside a code span, with a date or author when one comment is meant. The Target `url` field is the one full URL in the item, because the poster parses it; until the poster accepts another form there, that line is still a reference. The exact text block is fenced, so nothing in it is autolinked from the queue.
 - **Hash.** The value is the sha256 of the lines between the opening and closing fence of the exact text block:
   - lines joined with `\n`
   - CRLF normalized to LF
@@ -101,4 +102,8 @@ shasum -a 256 exact-text.txt      # macOS
 certutil -hashfile exact-text.txt SHA256   # Windows
 ```
 
-If the queue repo ships a hash helper, prefer it, because it applies the same normalization the poster uses.
+If the queue repo ships a hash helper, prefer it, because it applies the same normalization the poster uses. Read it, and the queue's own format and poster docs, from the local clone of the queue repo: the read-only token cannot read a private repo.
+
+## Validating before filing
+
+The poster has a fixture (dry-run) mode that evaluates an item from a local file against a local registry file and never writes. Before filing, run it with the finished item as the fixture. It parses the sections, checks the labels, the disclosure, the gates and the hash, and prints the calls it would make. An item that blocks there is fixed before it is filed, not after.

@@ -25,7 +25,7 @@ allows: CONTRIBUTING.md:41 "AI-assisted contributions are welcome if disclosed" 
 
 ## Gates
 - intake: N/A | this item is the intake request (CONTRIBUTING.md:18 asks for a comment first)
-- duplicate: PASS | no open PR references #412, no assignee, no claim in 6 comments; searched 2026-10-17
+- duplicate: PASS | no open PR body names `example-org/feedparse#412`, no assignee, no claim in 6 comments; open PRs listed 2026-10-17
 - cadence: PASS | last submission none in the posted ledger; cap 1 open PR at a time
 - repro: N/A | no patch yet (issue reproduced locally on main at a1b2c3d with the feed in the issue)
 - checks: N/A | no patch yet
@@ -56,5 +56,6 @@ af8a741e1fee86268cc1e637f27ca75e03c531de6b9a9dbfc3ad70e7a8811aa5
 
 What happens next:
 
+- Before filing, the item is run through the poster's fixture dry-run with the local registry. It reports one planned comment on `example-org/feedparse#412` with the exact text, and the hash matches.
 - The user reads the Summary and the exact text on their phone and comments `approve`. The queue's poster then posts the comment.
 - When a maintainer replies with a go-ahead, the skill runs again from gate 6. It then produces a `pr` item with a patch, the critic result, and a pull request body.
