@@ -22,6 +22,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- `oss-contribution-research`: fixes from the first real run. A candidate search that finds nothing eligible ends in a no-eligible-candidate report (each candidate, the gate it failed, the evidence). The issue gate judges "bug or small fix" from the issue body, checks that the bug still exists on the default branch (including merged pull requests that never link the issue), and treats bystander "resolved" comments as claims to verify. Small repos are listed with the issues endpoint rather than the search API. Filing happens only when a candidate passes every gate. The write-refusal probe is stated in workflow step 1 and is run by the user, never the agent.
 - "The framework's range" cards now link to their live showcase demos (Pulse, Forge, Bloom, Observatory), and the section closes with a CTA to the full creative-direction showcase.
 - Hand-authored rampstack.co showcase demo links across the README now open in a new tab (`target="_blank" rel="noopener"`).
 

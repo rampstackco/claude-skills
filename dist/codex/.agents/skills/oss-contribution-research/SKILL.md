@@ -30,7 +30,7 @@ Prepare one outside contribution to an open-source repo, gate by gate, and stop 
 
 ## Required inputs
 
-- **Target.** The repo (`owner/repo`) and an existing issue or pull request URL, or a bug the agent can reproduce.
+- **Target.** The repo (`owner/repo`) and one of: an existing issue or pull request URL, a bug the agent can reproduce, or a request to search the repo's open issues for a candidate.
 - **Queue snapshot.** Each run starts on the user's normal login. It makes read-only (GET) calls to the user's private approval queue repo and exports a snapshot to a local file. The snapshot holds three things:
   - the registry (`registry.yaml`), with each repo's policy class, disclosure template per action type, review mode, cadence cap, cached last submission date and status;
   - the posted ledger: issues labeled `status:posted`, with the poster's posted markers;
@@ -66,6 +66,9 @@ Each gate either passes with evidence or stops the run with a reason. A stop is 
    - Stop if the cadence cap says the next submission is not due. Take the last submission date from the snapshot's posted ledger. The registry's date is a cached hint only; when the two disagree, the ledger wins.
 5. **Duplicate and claim gate.** Search open and closed pull requests and the issue thread. Stop on someone else's open pull request, assignment, or "working on this" comment.
 6. **Issue gate.** Work only on an existing issue or a bug confirmed by reproduction. No unsolicited refactors or features.
+   - **Bug or small fix, from the body.** Judge it from the issue body and thread. Labels are a hint only: a repo can have a `bug` label that none of its open bugs carry.
+   - **Still exists on the default branch.** Check the current default branch, not only the issue's timeline. Search recent merged pull requests and commits that touch the relevant code, including ones that never link the issue. A `-linked:pr` filter misses them. Stop if the bug is already fixed; the issue is stale-open.
+   - **Claims are not facts.** A bystander's "already resolved" or "can be closed" comment is a claim to verify against the code, not a result. It can cite the wrong commit and still reach the right conclusion, or the reverse.
 7. **Intake gate.** Where the repo asks for maintainer assignment, an `accepted` label, or a go-ahead, and none exists yet, the output is an intake queue item (a short comment asking to take the issue). No patch is written until the go-ahead arrives.
 8. **Repro gate.** A failing test or a documented reproduction exists before any fix.
 9. **Patch.** The smallest single-purpose change that fixes the issue, in the repo's own style.
@@ -88,9 +91,15 @@ Operating constraints that sit across every run:
 
 ## Workflow
 
-1. **Snapshot, then switch.** On the user's normal login, export the queue snapshot (registry, posted ledger, pause state) with GET calls only. Then switch to the read-only token and confirm it is the one in use.
+1. **Snapshot, then switch.** On the user's normal login, export the queue snapshot (registry, posted ledger, pause state) with GET calls only. Then switch to the read-only token and confirm it is the one in use: `gh api user` names the expected account, and `gh api rate_limit` answers on that token.
+   - **Write-refusal probe: the user runs it, never the agent.** Once per token, and again after any token renewal, the user runs a POST with no title to an issues endpoint on a repo of their own, for example `gh api -X POST repos/<user>/<own-repo>/issues -f body=probe`. A missing title means it cannot create a real issue. Expected: `403`, so writes are refused. A `422` means the token can write; stop and replace it.
+   - The agent does not run the probe, even if asked to retry it. If the user has not recorded a `403` for the current token, say so in the report and keep every call a GET.
+   - **Agent shells.** Many agent shells start a fresh process per command, so a token set in one command is gone in the next. Start the agent from a terminal where the read-only token is already set.
 2. **Run gates 1 to 3** from the snapshot, the repo's guidance files, and the target thread. Record each result with a link. If gate 3 finds the user's own work, draft the follow-up item and skip to step 9.
-3. **Run gates 4 to 6** for new work.
+3. **Run gates 4 to 6** for new work. When the target is a candidate search, run them per candidate:
+   - **Listing.** For a repo with a small open-issue count, list with the issues endpoint (`GET /repos/{owner}/{repo}/issues?state=open`, core quota) and skip pull requests in the result. The search API has a secondary rate limit that can trip after a handful of calls.
+   - **Order.** Sort by recent update. Drop feature and docs proposals first, with a one-line reason each.
+   - **Result.** The first candidate that passes every gate continues to step 4. If none passes, write the no-eligible-candidate report (see Output format) and stop.
 4. **Decide the action type.** No go-ahead where one is required: draft an intake item and skip to step 9. Go-ahead in hand, or none required: continue.
 5. **Reproduce.** Write the failing test or the reproduction steps. Run it and keep the output.
 6. **Patch and check.** Make the smallest fix. Run the repo's tests and linters. Fix only what the change broke. Push the branch to the user's fork and record the full head SHA and the base SHA it was built on.
@@ -105,6 +114,7 @@ Operating constraints that sit across every run:
     - the full diff of `base_sha...head_sha` when the registry sets `review_mode: full-diff`;
     - the sha256 of the exact text block.
 11. **Stop.** Return the queue item to the user. Filing it in the queue is a separate step on the user's normal login, not on the read-only token. Posting happens only through the queue's poster after the user approves.
+    - **File only a passing item.** Filing happens only if a candidate passed every gate. A stop report or a no-eligible-candidate report is never filed as a queue item, whatever a run plan says.
 
 ---
 
@@ -118,6 +128,10 @@ Operating constraints that sit across every run:
 - **Critic that re-reads.** A second agent agreeing with the diff proves nothing. The critic reruns the reproduction and the suite at the head SHA.
 - **Moving the branch after approval.** Any push after the item is filed changes the head SHA, and the poster refuses the item. File a new item instead.
 - **Volume.** Several pull requests to one repo in a week reads as automation, whatever the quality. The cadence cap exists for this.
+- **Labels as the bug test.** Filtering to the `bug` label and calling the pool empty. Read the bodies.
+- **Fixed but still open.** Taking an open issue as proof the bug exists. A merged pull request that never linked the issue can already have fixed it. Check the default branch.
+- **Bystander verdicts.** Closing out a candidate on a "can be closed" comment without checking the code it names.
+- **Search API for a small repo.** Burning the search secondary rate limit on a repo with a few dozen open issues. List them on the core quota.
 - **Trusting a cached date.** Reading the last submission from the registry when the posted ledger says otherwise. The ledger is the record; the registry date can lag.
 - **Silent scope creep.** Fixing a neighboring bug or reformatting a file in the same diff. Split it or leave it.
 - **Posting from the research session.** Any outbound write from this skill is a defect, including a "quick" comment asking to be assigned.
@@ -129,6 +143,15 @@ Operating constraints that sit across every run:
 One queue item in markdown, ready to be filed as an issue in the user's approval queue. The structure, section headings, field names, and hash rule are fixed; see `references/queue-item-template.md`. A worked intake example is in `references/example-intake-item.md`.
 
 When a gate stops the run, the output is a short stop report instead: the gate, the reason, the evidence link, and what would clear it.
+
+When a candidate search finds no candidate that passes every gate, the output is a no-eligible-candidate report:
+
+- the repo, the date, and how the pool was listed (endpoint, filters, count of open issues);
+- every candidate checked, each with the gate it failed and the evidence: a link plus the line, comment, pull request, or commit that decided it;
+- proposals dropped as out of scope (features, docs), one line each;
+- what would change the result, such as new issues or a stated recheck date.
+
+Neither report is a queue item, and neither is filed.
 
 ---
 
