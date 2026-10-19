@@ -51,6 +51,14 @@
     "references/illustration-brief.md": "5f5d4be6388c11bcdcd1aeda2e8c6a13709f25d778be7c2fc3fc32b245687c00",
     "references/photo-shoot-brief.md": "531a005e77f7d10d71d9b4320fd4f13a2f6734516b92422c36a7aefe34d28e83"
   },
+  "backlog-triage": {
+    "SKILL.md": "ff8b417f500c78e2d49a535c90b355c9dff8a5451627b672ed05b1bb8c4b73c6",
+    "references/aging-policy-guide.md": "e450cfcfc883f1e7a0a02e1bf4edb187601e0ce96263d1b03455392b8ae86725",
+    "references/example-triage-session.md": "6e1d4db0f70f6aae8aa8a070e73639520beb03533e34daa35048d1903fc4ce35",
+    "references/intake-template.md": "17e72c0d68d5c67858af8cee0d5b88d082ccc9b48796474ba8dd3cfd0287e656",
+    "references/scoring-template.md": "cc8ec0ad1f8e0e2dffdb1f6baf458eb89828d4b53756e57f1b4179de42286f74",
+    "references/triage-checklist.md": "c0b099b9f6cb3acd2b8ec1d6bc1956c517bb040d48270ad39d26441c3d2f60df"
+  },
   "backup-and-disaster-recovery": {
     "SKILL.md": "ac0e58600d3332a87b64d06f91f13385eb74a599242a2c3634517479dff5dbd9",
     "references/restore-runbook-template.md": "96c6cb2b6921ade948d7a0667828148ba36e4845c30e8d7c9feed6f2a7f7c056"
@@ -774,6 +782,15 @@
   "team-onboarding-playbook": {
     "SKILL.md": "185dade0ab8c88c197d664d8d7acca5bf1b106dfd1d314afb7f95792488960aa",
     "references/onboarding-checklist.md": "5309269c3f1336c51277de30f5cd8bde41aaa0b56c4c60c91cb4aae078748eb7"
+  },
+  "test-case-authoring": {
+    "SKILL.md": "a87b7ebb2d6db40c3c37793b1d807842b1153efbcc5a6486fc4329af24c44c4b",
+    "references/coverage-checklist.md": "8b3353fec870e4147d01060a9fab9cd271e07de7856a44073c4ffa9507386a06",
+    "references/example-test-plan-story.md": "b15bb181ddea3c15e14995f6f5a2349a7978d5110f62273769a56e930a3f9b97",
+    "references/exploratory-charter-template.md": "805661504be01dfcab73d146cd7af7842b08fbb5bfa5d5c713db78604abc355b",
+    "references/test-case-template.md": "2098515d000ee28c86411eff793fce6783a907b16eea457a73920ea44e7c67f6",
+    "references/test-plan-template.md": "030fb6cc73f8d40385bb81510b127f0981a3d8d31f10925f02f32ed12e589f38",
+    "references/traceability-matrix-template.md": "cb92dbe173545594ce8bbea47c20c395f542873580fe47104e32b7e494bb7564"
   },
   "ticket-authoring": {
     "SKILL.md": "ab681d0600e225dc6448256630807f29a2dd0b89144dd58600a929f44093ab0b",

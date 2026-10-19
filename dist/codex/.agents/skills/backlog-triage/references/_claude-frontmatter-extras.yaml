@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: backlog-triage
+
+category: product
+catalog_summary: "Intake, dedupe, classify, score, promote or decline, and age out raw requests into a ranked, ready backlog"
+display_order: 1
