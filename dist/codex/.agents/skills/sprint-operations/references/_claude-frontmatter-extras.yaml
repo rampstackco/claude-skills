@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: sprint-operations
+
+category: process-and-team
+catalog_summary: "PMO metrics, capacity, ceremonies, sprint reports, and agent-lane measurement"
+display_order: 6

@@ -8,6 +8,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+**PM operations skills**
+
+- `ticket-authoring` skill (Product category). Bugs, tasks, stories, spikes, and epics with required fields, attachments, and a done test per type, plus a definition-of-ready checklist and a plain-language capitalization stage guide (ASC 350-40, IAS 38) tagged at the work-item level.
+- `sprint-operations` skill (Process and team category). The PMO layer: eight tracker-derived delivery metrics, points-for-forecasting capacity math, templates for the five ceremonies, the sprint report and quarterly rollup, and a deep dive on measuring AI coding agent lanes.
+- `dispatch-authoring` skill (Process and team category). The planner-to-agent handoff in seven parts (header, Gate 0, scope, specification, verification, delivery, stop conditions), with a held draft PR, an honest-stop rule, and a PR body template.
+
 **Skills (1 net addition, 103 → 104)**
 
 - `oss-contribution-research` skill (Development category). Gated research and patch prep for outside open-source contributions: AI-PR policy classification with cited lines, intake before any patch, duplicate and claim checks, cadence caps, reproduction first, the repo's own checks, an independent critic rerun, and per-repo, per-action disclosure. The output is a hashed queue item for a human to approve; the agent running the skill never posts.

@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-104-blue.svg)](#the-104-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-107-blue.svg)](#the-107-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 104 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 107 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -67,7 +67,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
-- [The 104-skill catalog](#the-104-skill-catalog)
+- [The 107-skill catalog](#the-107-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -97,8 +97,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **104 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
-- **495 reference files** (templates, checklists, decision matrices, worked examples)
+- **107 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
+- **516 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -545,11 +545,11 @@ What shipped, and when, is recorded at [rampstack.co/updates](https://rampstack.
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 104-skill catalog
+## The 107-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 104 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 107 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -631,11 +631,12 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | [`seo-site-health-audit`](skills/seo-site-health-audit/SKILL.md) | Triage Ahrefs Site Audit findings by SEO impact, not severity<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`seo-rank-tracking`](skills/seo-rank-tracking/SKILL.md) | Setup, baseline, segmentation, alerting, dashboarding<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
-### Product (13)
+### Product (14)
 
 | Skill | What it does |
 |---|---|
 | [`pm-spec-writing`](skills/pm-spec-writing/SKILL.md) | PRDs, user stories, acceptance criteria, dev briefs<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-pm-spec-writing) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Mixed), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Mixed). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (Could not measure). [Per model](skills/pm-spec-writing/README.md). |
+| [`ticket-authoring`](skills/ticket-authoring/SKILL.md) | Bugs, tasks, stories, spikes, and epics with a definition of ready per type<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`roadmap-planning`](skills/roadmap-planning/SKILL.md) | Quarterly planning, prioritization, dependency mapping<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`integration-orchestrator`](skills/integration-orchestrator/SKILL.md) | Sequence creative-direction work across phases, gates, handoffs, and QA verification<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`experiment-design`](skills/experiment-design/SKILL.md) | Hypothesis to decision: sample size, duration, segment analysis, interpretation, and the failure modes that produce wrong shipping calls<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
@@ -736,7 +737,7 @@ Paid media discipline: strategy, creative, and performance analytics. Pairs with
 | [`dependency-management`](skills/dependency-management/SKILL.md) | Package updates, security patches, lockfile hygiene<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`cost-optimization`](skills/cost-optimization/SKILL.md) | Infrastructure spend audits, rightsizing, contract negotiation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
-### Process and team (5)
+### Process and team (7)
 
 | Skill | What it does |
 |---|---|
@@ -745,6 +746,8 @@ Paid media discipline: strategy, creative, and performance analytics. Pairs with
 | [`vendor-evaluation`](skills/vendor-evaluation/SKILL.md) | Tool and vendor selection using a structured rubric<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`team-onboarding-playbook`](skills/team-onboarding-playbook/SKILL.md) | 30-60-90 onboarding plans for new hires and contractors<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`skill-creation-walkthrough`](skills/skill-creation-walkthrough/SKILL.md) | The meta-skill: how to write your own custom skills<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Holds). In Claude Code: Claude Haiku 4.5 (Holds), Claude Fable 5 (Mixed), Claude Opus 5 (Could not measure), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (Mixed), Claude Opus 5.5 (Could not measure). [Per model](skills/skill-creation-walkthrough/README.md). |
+| [`sprint-operations`](skills/sprint-operations/SKILL.md) | PMO metrics, capacity, ceremonies, sprint reports, and agent-lane measurement<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`dispatch-authoring`](skills/dispatch-authoring/SKILL.md) | Planner-to-agent handoffs with Gate 0, verification, held draft PRs, and stop conditions<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 <!-- CATALOG:END -->
 
 ---

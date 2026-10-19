@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: dispatch-authoring
+
+category: process-and-team
+catalog_summary: "Planner-to-agent handoffs with Gate 0, verification, held draft PRs, and stop conditions"
+display_order: 7
