@@ -1,30 +1,38 @@
 # Queue-item template
 
-The final output of the skill. One item covers one outbound action. Section headings are exact, because the queue's poster parses them. Copy the block below and replace every bracketed field.
+The final output of the skill. One item covers one outbound action. Section headings and field names are exact, because the queue's poster parses them and refuses anything ambiguous. Copy the block below and replace every bracketed field.
 
 ## Template
 
 ````markdown
-Title: [intake|pr|reply|other] [owner/repo]#[issue or PR number] [short description]
+Title: [intake|pr|reply|close] [owner/repo]#[issue or PR number] [short description]
 
 ## Target
+- item_id: [unique slug, a-z 0-9 and -, 8 to 80 characters, e.g. feedparse-412-intake]
 - repo: [owner/repo]
-- url: [https://github.com/owner/repo/issues/N or /pull/N]
-- action: [intake | pr | reply | other]
-- head: [fork-owner:branch]        (pr only)
-- base: [target base branch]       (pr only)
+- url: [https://github.com/owner/repo/issues/N, or /pull/N for a reply on a PR, a ping, or a close]
+- action: [intake | pr | reply | close]
+- purpose: ping                         (reply only, for the 14-day ping)
+- head: [user's fork owner:branch]      (pr only)
+- base: [target base branch]            (pr only)
+- head_sha: [full 40-character SHA]     (pr only)
+- base_sha: [full 40-character SHA]     (pr only)
 
 ## Policy
-[allows | silent] with the cited line and its URL, or "none found". Then the required disclosure format for this repo and this action type, copied from the registry.
+[allows | silent] with the cited line and its URL, or "none found". Then the disclosure rule for this repo and this action type, copied from the registry.
 
 ## Gates
-- [x] intake: maintainer go-ahead or assignment ([link])
-- [x] duplicate/claim check (no open PR, assignee, or claim; [what was searched, date])
-- [x] cadence cap (last submission [date or none, from the queue's posted items], cap [cap])
-- [x] repro: failing test or documented reproduction ([test name or steps link])
-- [x] repo checks pass locally ([commands run, result])
-- [x] size: reviewable in under 5 minutes from this summary
-- [x] critic: independent rerun of reproduction and tests ([model family], [pass or fail])
+- intake: [PASS | N/A] | [maintainer go-ahead or assignment link, or why it does not apply]
+- duplicate: PASS | [no one else's open PR, assignee, or claim; what was searched, date]
+- cadence: PASS | [last submission date or none, from the posted ledger; cap]
+- repro: [PASS | N/A] | [test name or steps link, or why it does not apply]
+- checks: [PASS | N/A] | [commands run and result, at the head SHA]
+- size: PASS | [reviewable in under 5 minutes from this summary]
+- critic: [PASS | N/A] | [independent rerun at head SHA, first 7+ characters; model family; result]
+
+## Disclosure
+- format: [pr_description | issue_comment | review_reply]
+- text: [the disclosure line exactly as it appears in the exact text, or none]
 
 ## Summary
 [3 to 5 plain sentences: what the change does and why. A non-author could repeat this to a maintainer. No test results here; those go in Gates.]
@@ -33,27 +41,49 @@ Files touched: [list]. Lines: +[added] / -[removed]. Branch: [link to the branch
 
 ## Full diff (only when the registry sets review_mode: full-diff)
 ```diff
-[the complete diff]
+[git diff base_sha...head_sha, complete]
 ```
 
 ## Exact text to post
 ```text
-[verbatim text, disclosure included]
+[verbatim text, disclosure line included]
 ```
 
 ## Hash
 [sha256 of the exact text block]
 ````
 
+## Actions
+
+| Action | What the poster sends | Target URL |
+|---|---|---|
+| `intake` | A comment on the issue | The issue |
+| `pr` | Opens a pull request from `head` into `base` | The issue it fixes |
+| `reply` | A comment on the issue or pull request conversation. With `purpose: ping`, it is the 14-day ping. | The thread being answered |
+| `close` | A closing comment, then closes the user's own pull request (28-day rule) | The user's pull request |
+
+There is no other action type and no manual path. Anything outbound that does not fit these four is out of scope for the pipeline.
+
 ## Rules
 
 - **Title.** It agrees with the Target section on the type, the repo and the number.
-- **Gates.** All seven gates are present and checked. A gate that does not apply to the action is checked and marked `n/a` with the reason. For example, an intake item has no patch yet, so repro, checks and critic read `n/a, no patch yet`. A gate that failed means there is no queue item; write a stop report instead.
+- **Target.** Each field appears once.
+  - **`item_id`.** It is unique across the queue. Never reuse one, even for a retry.
+  - **`pr` fields.** A `pr` item names the head on the user's fork and the full head and base SHAs.
+  - **Branch freeze.** Do not push to the branch after filing: the poster refuses the item if the branch is no longer at `head_sha`.
+- **Gates.** One line per gate: `- <gate>: PASS | <evidence>` or `- <gate>: N/A | <reason>`, with the value in capitals.
+  - **N/A.** A gate that does not apply to the action reads `N/A` with the reason. For example, an intake item has no patch yet, so repro, checks and critic read `N/A | no patch yet`.
+  - **`pr` items.** These need `PASS` on all seven gates, and the critic evidence names the head SHA.
+  - **Failures.** A gate that failed means there is no queue item; write a stop report instead. An item carrying `FAIL` is refused.
+- **Disclosure.** `format` is `pr_description` for a pull request, `issue_comment` for an intake comment, and `review_reply` for a reply or a close.
+  - **Template.** `text` matches the registry template for that repo and format, with every `{slot}` filled with what actually happened.
+  - **Placement.** The same line appears on its own line in the exact text.
+  - **`none`.** When the template is `none`, the text is `none`.
+  - **Placeholders.** Text in `<...>` or `{...}`, `TODO`, `TBD`, `e.g.` or `...` in a slot is refused.
 - **Exact text to post.** The section holds exactly one fenced block and nothing else.
   - For `pr` items, the first line of the block is the pull request title, then one blank line, then the body.
   - If the text contains triple backticks, fence it with four.
-- **Full diff.** Include it when the registry entry says `review_mode: full-diff`, and leave the section out otherwise.
-- **Type `other`.** These items are never posted automatically. The user acts on them by hand.
+- **Full diff.** Include it for `pr` items when the registry entry says `review_mode: full-diff`, and leave the section out otherwise. Paste `git diff base_sha...head_sha` unedited: the poster generates the same diff and refuses on any difference.
 - **Hash.** The value is the sha256 of the lines between the opening and closing fence of the exact text block:
   - lines joined with `\n`
   - CRLF normalized to LF
