@@ -359,6 +359,11 @@
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     },
+    "dispatch-authoring": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
     "documentation-strategy": {
       "status": "not-yet-run",
       "coverage": "https://openaddict.com/skills/coverage",
@@ -855,12 +860,22 @@
       ],
       "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Holds). In Claude Code: Claude Haiku 4.5 (Holds), Claude Fable 5 (Mixed), Claude Opus 5 (Could not measure), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (Mixed), Claude Opus 5.5 (Could not measure). [Per model](skills/skill-creation-walkthrough/README.md)."
     },
+    "sprint-operations": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
     "stakeholder-communication": {
       "status": "not-yet-run",
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     },
     "team-onboarding-playbook": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "ticket-authoring": {
       "status": "not-yet-run",
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."

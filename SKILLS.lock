@@ -315,6 +315,13 @@
     "references/when-to-gather-more-data.md": "927f38ef709106541394198cbb32f0f081737b292a80ad34be12d3d4b7e3f0be",
     "references/writing-for-decisions-not-decks.md": "66512c8e9d7ca6cc8ed55f24754afd462a798a6fe28509138a494a88a80f1ecc"
   },
+  "dispatch-authoring": {
+    "SKILL.md": "4cffedf4533769991a764c9553e5f5ed611d2134fc2becaef48646a3c8fdbb62",
+    "references/dispatch-template.md": "61cbe8d5621c5c7de0df8137e6b93b9f2b95b313e01b3db1fed646f077e58e18",
+    "references/example-dispatch-new-skill.md": "c4337a769f78a1c7b04ab591dbd06301cdfb85d447587f306b5eefd286a4cf26",
+    "references/gate-zero-checklist.md": "6bd31921ca7cf2946967c427e971b0428ae828f6905e8309d739c8c4be99c15a",
+    "references/pr-body-template.md": "04ceaca1110809dc0874186815c921de58b210790593852ea461bc0e872cdf1c"
+  },
   "documentation-strategy": {
     "SKILL.md": "c9313863695c971cb8d5dd179d9dd91610a01806fc4a8e3cde3fa44a6b426d52",
     "references/doc-types-guide.md": "19f98b891fab1fb2918b7faf47517d839b3cb82b1c0198a976b9d17ed8c95b2d"
@@ -747,6 +754,18 @@
     "references/methodology-vs-implementation.md": "f4fc2991e1ee8cafc3ed976dc3bbab10ceaee3a362df7e9b9461f9f491f64557",
     "references/skill-template.md": "f0e0e61d8183b9ad71179a060d99bea7f997f70f2e58e0d191491200f3213a93"
   },
+  "sprint-operations": {
+    "SKILL.md": "0ec7c2bee8cb3e1d7ce91d6172e27018ac6283cb44ac6d881db215d958369514",
+    "references/capacity-checklist.md": "87aead0b890670a22bf817354bf04e5f6d34bd1520327d9330c00f3973dd2213",
+    "references/example-sprint-report.md": "a9dfc6a1ab006ebd620058e5882376a7833de52448281190207800dd7625beda",
+    "references/metrics-reference.md": "acb534091ce286cc26980d64752f993f35d51b3892f3dec72341361e0508c25a",
+    "references/planning-template.md": "3ed32d4615d04c9a748a047264e8d3b9cbcacc82f8d3adb3601e32578bc981af",
+    "references/refinement-template.md": "e49bc09acbc1174548d654cf1ba3e947339279ca5f441e04004b5e0faf45cb35",
+    "references/retro-template.md": "3c8d104e8242855ad9ab4d3ea465d1447c445058357ab7c49020d01ae856e38d",
+    "references/review-template.md": "e5f7500bf19f8785b2101553db0b4891ea1ad0f3963e5a5d5f95fa88d189f8b1",
+    "references/sprint-report-template.md": "d647c6c0fd0bd92ed9562ecb7079515e02c47c9eaf56792eadb093ebf2a75931",
+    "references/standup-template.md": "9960d60857ecf72221ea2a514b0e27d37b1fa6721e518c09dd90be0064848ad8"
+  },
   "stakeholder-communication": {
     "SKILL.md": "a3686760ebe73d64c55f37df38b9948a36fe3b291e3fc7e5c2b10212dbb78580",
     "references/update-templates.md": "fed66af683d5e0b6b88cc54734d5218584064749743df545f085d63a90823fb3"
@@ -754,6 +773,17 @@
   "team-onboarding-playbook": {
     "SKILL.md": "185dade0ab8c88c197d664d8d7acca5bf1b106dfd1d314afb7f95792488960aa",
     "references/onboarding-checklist.md": "5309269c3f1336c51277de30f5cd8bde41aaa0b56c4c60c91cb4aae078748eb7"
+  },
+  "ticket-authoring": {
+    "SKILL.md": "ab681d0600e225dc6448256630807f29a2dd0b89144dd58600a929f44093ab0b",
+    "references/bug-template.md": "e840a9f8bd24ff15011e7f2caad64df194edfac30ba752e2e02e95fc281f97e4",
+    "references/capitalization-guide.md": "3e64ac9de3dd907deb52b58478c896f7363b331bb47abcef59fa689e02531bd0",
+    "references/definition-of-ready-checklist.md": "665e7fc1f1c1e56961c78bcbdef307b53db209186644dbb6b3c66982191a1d8f",
+    "references/epic-template.md": "d19cd697bad79b5d58b6bd99dcf291316851da0cd6955cf85edd641a9c80b931",
+    "references/example-bug-and-story.md": "663d829da3cb0ab2f6337b50a65acab0e312e9321525d63f56ad4c745e066c2f",
+    "references/spike-template.md": "03a0ac4d820e6a7b4c8b0b7507127769b9548be11e24962fbbe1015aa6eb5589",
+    "references/story-template.md": "826d17ddf0577b5f7f3e6f2e201ca1033cacfdd35ee67b99dada4ed6bf74994a",
+    "references/task-template.md": "e3b3d5aec36d5980a3577318ed792ed096e704bd4ae54d5142120603463e51be"
   },
   "upgrade-flow-design": {
     "SKILL.md": "60041e7b729da406d0b674863487f187604e899ac6f26a71c496f16a1b5cb4c2",
