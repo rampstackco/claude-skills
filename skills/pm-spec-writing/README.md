@@ -12,15 +12,15 @@ Measured on [OpenAddict](https://openaddict.com/skills/rampstackco-pm-spec-writi
 
 | Model | Via API | In Claude Code |
 |---|---|---|
-| Claude Haiku 4.5 | Mixed, 2 results: No measured effect 1, Holds 1 | No measured effect |
-| Gemini 3.1 Flash Lite | Mixed, 3 results: No measured effect 2, Holds 1 | not run |
-| GPT-5 mini | Mixed, 3 results: No measured effect 2, Holds 1 | not run |
+| Claude Haiku 4.5 | Mixed, 2 results: No measured effect 1, Helped 1 | No measured effect |
+| Gemini 3.1 Flash Lite | Mixed, 3 results: No measured effect 2, Helped 1 | not run |
+| GPT-5 mini | Mixed, 3 results: No measured effect 2, Helped 1 | not run |
 | Claude Fable 5 | not run | No measured effect |
 | Claude Opus 5 | not run | No measured effect |
 | Claude Sonnet 5 | not run | No measured effect |
 | Claude Fable 5.1 | not run | No measured effect |
 | Claude Opus 5.5 | not run | Could not measure |
 
-Each word is the verdict the site prints. Holds: the skill helped, by more than the margin the site needs before it calls a result. No measured effect: no difference large and certain enough to call. Could not measure: the test could not show a difference either way. Mixed: the model was measured more than once and the results differ, so each is counted. Not run: this model was not run this way.
+Each word is the verdict the site prints. Helped: the skill helped, by more than the margin the site needs before it calls a result. No measured effect: no difference large and certain enough to call. Could not measure: the test could not show a difference either way. Mixed: the model was measured more than once and the results differ, so each is counted. Not run: this model was not run this way.
 
 OpenAddict is run by the people who publish this catalog, and these results are theirs. Nobody outside checked them.

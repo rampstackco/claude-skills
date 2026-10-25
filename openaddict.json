@@ -27,8 +27,8 @@
         {
           "model": "claude-haiku-4-5",
           "name": "Claude Haiku 4.5",
-          "Via API": "Holds",
-          "In Claude Code": "Mixed, 2 results: Holds 1, No measured effect 1"
+          "Via API": "Helped",
+          "In Claude Code": "Mixed, 2 results: Helped 1, No measured effect 1"
         },
         {
           "model": "gemini-3.1-flash-lite",
@@ -73,7 +73,135 @@
           "In Claude Code": "No measured effect"
         }
       ],
-      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-accessibility-audit) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (Mixed), Claude Opus 5 (No measured effect), Claude Fable 5 (Mixed), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/accessibility-audit/README.md)."
+      "results": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "Verdict withheld",
+          "baseline": "none"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-accessibility-audit) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Helped), Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (Mixed), Claude Opus 5 (No measured effect), Claude Fable 5 (Mixed), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/accessibility-audit/README.md)."
     },
     "ads-creative-development": {
       "status": "not-yet-run",
@@ -165,7 +293,7 @@
         {
           "model": "gemini-3.1-flash-lite",
           "name": "Gemini 3.1 Flash Lite",
-          "Via API": "Holds"
+          "Via API": "Helped"
         },
         {
           "model": "gpt-5-mini",
@@ -173,7 +301,30 @@
           "Via API": "No measured effect"
         }
       ],
-      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-brand-voice) (newest run 2026-08-30). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Holds), GPT-5 mini (No measured effect). [Per model](skills/brand-voice/README.md)."
+      "results": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-brand-voice) (newest run 2026-08-30). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Helped), GPT-5 mini (No measured effect). [Per model](skills/brand-voice/README.md)."
     },
     "calculator-design": {
       "status": "not-yet-run",
@@ -260,6 +411,64 @@
           "name": "Claude Opus 5.5",
           "Via API": "not run",
           "In Claude Code": "No measured effect"
+        }
+      ],
+      "results": [
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
         }
       ],
       "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-code-review-web) (Tier 1, newest run 2026-09-26). Via API: Gemini 3.1 Flash Lite (No measured effect), GPT-5 mini (No measured effect). In Claude Code: Claude Fable 5.1 (No measured effect), Claude Haiku 4.5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/code-review-web/README.md)."
@@ -563,19 +772,19 @@
         {
           "model": "claude-haiku-4-5",
           "name": "Claude Haiku 4.5",
-          "Via API": "Mixed, 2 results: No measured effect 1, Holds 1",
+          "Via API": "Mixed, 2 results: No measured effect 1, Helped 1",
           "In Claude Code": "No measured effect"
         },
         {
           "model": "gemini-3.1-flash-lite",
           "name": "Gemini 3.1 Flash Lite",
-          "Via API": "Mixed, 3 results: No measured effect 2, Holds 1",
+          "Via API": "Mixed, 3 results: No measured effect 2, Helped 1",
           "In Claude Code": "not run"
         },
         {
           "model": "gpt-5-mini",
           "name": "GPT-5 mini",
-          "Via API": "Mixed, 3 results: No measured effect 2, Holds 1",
+          "Via API": "Mixed, 3 results: No measured effect 2, Helped 1",
           "In Claude Code": "not run"
         },
         {
@@ -607,6 +816,155 @@
           "name": "Claude Opus 5.5",
           "Via API": "not run",
           "In Claude Code": "Could not measure"
+        }
+      ],
+      "results": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "instrument": "In Claude Code",
+          "verdict": "Could not measure",
+          "baseline": "none"
         }
       ],
       "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-pm-spec-writing) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Mixed), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Mixed). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (Could not measure). [Per model](skills/pm-spec-writing/README.md)."
@@ -726,7 +1084,7 @@
         {
           "model": "gemini-3.1-flash-lite",
           "name": "Gemini 3.1 Flash Lite",
-          "Via API": "Mixed, 2 results: Holds 1, No measured effect 1",
+          "Via API": "Mixed, 2 results: Helped 1, No measured effect 1",
           "In Claude Code": "not run"
         },
         {
@@ -764,6 +1122,134 @@
           "name": "Claude Opus 5.5",
           "Via API": "not run",
           "In Claude Code": "No measured effect"
+        }
+      ],
+      "results": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "instruction"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
         }
       ],
       "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-seo-onpage) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (No measured effect), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (No measured effect). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (No measured effect). [Per model](skills/seo-onpage/README.md)."
@@ -812,19 +1298,19 @@
         {
           "model": "claude-haiku-4-5",
           "name": "Claude Haiku 4.5",
-          "Via API": "Holds",
-          "In Claude Code": "Holds"
+          "Via API": "Helped",
+          "In Claude Code": "Helped"
         },
         {
           "model": "gemini-3.1-flash-lite",
           "name": "Gemini 3.1 Flash Lite",
-          "Via API": "Mixed, 2 results: No measured effect 1, Holds 1",
+          "Via API": "Mixed, 2 results: No measured effect 1, Helped 1",
           "In Claude Code": "not run"
         },
         {
           "model": "gpt-5-mini",
           "name": "GPT-5 mini",
-          "Via API": "Holds",
+          "Via API": "Helped",
           "In Claude Code": "not run"
         },
         {
@@ -858,7 +1344,135 @@
           "In Claude Code": "Could not measure"
         }
       ],
-      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Holds), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Holds). In Claude Code: Claude Haiku 4.5 (Holds), Claude Fable 5 (Mixed), Claude Opus 5 (Could not measure), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (Mixed), Claude Opus 5.5 (Could not measure). [Per model](skills/skill-creation-walkthrough/README.md)."
+      "results": [
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "gemini-3.1-flash-lite",
+          "name": "Gemini 3.1 Flash Lite",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "instruction"
+        },
+        {
+          "model": "gpt-5-mini",
+          "name": "GPT-5 mini",
+          "instrument": "Via API",
+          "verdict": "Helped",
+          "baseline": "instruction"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "Could not measure",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "Could not measure",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "Could not measure",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5-1",
+          "name": "Claude Fable 5.1",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-haiku-4-5",
+          "name": "Claude Haiku 4.5",
+          "instrument": "In Claude Code",
+          "verdict": "Helped",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "instrument": "In Claude Code",
+          "verdict": "Could not measure",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "instrument": "In Claude Code",
+          "verdict": "No measured effect",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "instrument": "In Claude Code",
+          "verdict": "Scored worse",
+          "baseline": "none"
+        },
+        {
+          "model": "claude-opus-5-5",
+          "name": "Claude Opus 5.5",
+          "instrument": "In Claude Code",
+          "verdict": "Could not measure",
+          "baseline": "none"
+        }
+      ],
+      "catalogLine": "Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Helped), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Helped). In Claude Code: Claude Haiku 4.5 (Helped), Claude Fable 5 (Mixed), Claude Opus 5 (Could not measure), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (Mixed), Claude Opus 5.5 (Could not measure). [Per model](skills/skill-creation-walkthrough/README.md)."
     },
     "sprint-operations": {
       "status": "not-yet-run",
@@ -910,5 +1524,8 @@
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     }
+  },
+  "finding": {
+    "paragraph": "OpenAddict has measured 6 of the 107 skills here, each on the same tasks with the skill loaded and without it. On Claude Opus 5, Claude Fable 5, Claude Sonnet 5, Claude Fable 5.1 and Claude Opus 5.5, no skill helped: the verdicts on their 49 results were No measured effect 41, Could not measure 6, Verdict withheld 1 and Scored worse 1. Every result where a skill helped was on Claude Haiku 4.5, Gemini 3.1 Flash Lite or GPT-5 mini: accessibility-audit on Claude Haiku 4.5 (via API; in Claude Code); brand-voice on Gemini 3.1 Flash Lite (via API); pm-spec-writing on Claude Haiku 4.5 (via API), Gemini 3.1 Flash Lite (via API) and GPT-5 mini (via API); seo-onpage on Gemini 3.1 Flash Lite (via API); skill-creation-walkthrough on Claude Haiku 4.5 (via API; in Claude Code), GPT-5 mini (via API) and Gemini 3.1 Flash Lite (via API); code-review-web on GPT-5 mini (via API, Tier 3). A one-line instruction in place of the skill was tried only via API on Gemini 3.1 Flash Lite and GPT-5 mini, and there the skill beat it on skill-creation-walkthrough and had no measured effect over it on accessibility-audit, code-review-web, pm-spec-writing and seo-onpage."
   }
 }
