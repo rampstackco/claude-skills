@@ -1524,8 +1524,5 @@
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     }
-  },
-  "finding": {
-    "paragraph": "OpenAddict has measured 6 of the 107 skills here, each on the same tasks with the skill loaded and without it. On Claude Opus 5, Claude Fable 5, Claude Sonnet 5, Claude Fable 5.1 and Claude Opus 5.5, no skill helped: the verdicts on their 49 results were No measured effect 41, Could not measure 6, Verdict withheld 1 and Scored worse 1. Every result where a skill helped was on Claude Haiku 4.5, Gemini 3.1 Flash Lite or GPT-5 mini: accessibility-audit on Claude Haiku 4.5 (via API; in Claude Code); brand-voice on Gemini 3.1 Flash Lite (via API); pm-spec-writing on Claude Haiku 4.5 (via API), Gemini 3.1 Flash Lite (via API) and GPT-5 mini (via API); seo-onpage on Gemini 3.1 Flash Lite (via API); skill-creation-walkthrough on Claude Haiku 4.5 (via API; in Claude Code), GPT-5 mini (via API) and Gemini 3.1 Flash Lite (via API); code-review-web on GPT-5 mini (via API, Tier 3). A one-line instruction in place of the skill was tried only via API on Gemini 3.1 Flash Lite and GPT-5 mini, and there the skill beat it on skill-creation-walkthrough and had no measured effect over it on accessibility-audit, code-review-web, pm-spec-writing and seo-onpage."
   }
 }
