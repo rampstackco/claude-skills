@@ -27,7 +27,7 @@
 <!-- OPENADDICT_FINDING:START -->
 ## Which of these skills actually help?
 
-OpenAddict has measured 6 of the 107 skills here, each on the same tasks with the skill loaded and without it. On Claude Opus 5, Claude Fable 5, Claude Sonnet 5, Claude Fable 5.1 and Claude Opus 5.5, no skill helped: the verdicts on their 49 results were No measured effect 41, Could not measure 6, Verdict withheld 1 and Scored worse 1. Every result where a skill helped was on Claude Haiku 4.5, Gemini 3.1 Flash Lite or GPT-5 mini: accessibility-audit on Claude Haiku 4.5 (via API; in Claude Code); brand-voice on Gemini 3.1 Flash Lite (via API); pm-spec-writing on Claude Haiku 4.5 (via API), Gemini 3.1 Flash Lite (via API) and GPT-5 mini (via API); seo-onpage on Gemini 3.1 Flash Lite (via API); skill-creation-walkthrough on Claude Haiku 4.5 (via API; in Claude Code), GPT-5 mini (via API) and Gemini 3.1 Flash Lite (via API); code-review-web on GPT-5 mini (via API, Tier 3). A one-line instruction in place of the skill was tried only via API on Gemini 3.1 Flash Lite and GPT-5 mini, and there the skill beat it on skill-creation-walkthrough and had no measured effect over it on accessibility-audit, code-review-web, pm-spec-writing and seo-onpage.
+On the five frontier Claude models, no skill helped against running without it. Every skill that helped did so on Haiku 4.5, Gemini 3.1 Flash Lite or GPT-5 mini.
 
 | | [accessibility-audit](https://openaddict.com/skills/rampstackco-accessibility-audit) | [brand-voice](https://openaddict.com/skills/rampstackco-brand-voice) | [code-review-web](https://openaddict.com/skills/rampstackco-code-review-web) | [pm-spec-writing](https://openaddict.com/skills/rampstackco-pm-spec-writing) | [seo-onpage](https://openaddict.com/skills/rampstackco-seo-onpage) | [skill-creation-walkthrough](https://openaddict.com/skills/rampstackco-skill-creation-walkthrough) |
 |---|---|---|---|---|---|---|
@@ -43,6 +43,8 @@ OpenAddict has measured 6 of the 107 skills here, each on the same tasks with th
 | Claude Opus 5.5 | No measured effect | not run | No measured effect | Could not measure | No measured effect | Could not measure |
 
 Each word is the verdict openaddict.com prints for that model. Two words mean its results differ; the skill's own README splits them by how the model was run. Helped: the skill helped, by more than the margin the site needs before it calls a result. No measured effect: no difference large and certain enough to call. Could not measure: the test could not show a difference either way. Scored worse: the model did worse with the skill loaded. Verdict withheld: the run was kept and not scored; the site says why. Not run: this model was not run this way.
+
+A one-line instruction in place of the skill was tried only via API on Gemini 3.1 Flash Lite and GPT-5 mini, and there the skill beat it on skill-creation-walkthrough and had no measured effect over it on accessibility-audit, code-review-web, pm-spec-writing and seo-onpage.
 
 - [Same prompts through both harnesses](https://openaddict.com/compare/claude-code-vs-codex): Claude Code and Codex on the same tasks.
 - [Workflows](https://openaddict.com/workflows): whether a run said so when an input it needed was missing, or went ahead without it.

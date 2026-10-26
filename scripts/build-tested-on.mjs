@@ -17,9 +17,10 @@
 //   workflows/README.md       the block between the OPENADDICT markers, for
 //                             the workflows the site has run.
 //   README.md                 the block between the OPENADDICT_FINDING
-//                             markers near the top: one paragraph and a table,
+//                             markers near the top: two sentences, a table,
+//                             the one-line-instruction sentence and two links,
 //                             read from the openaddict.json object alone. The
-//                             paragraph is also stored there as
+//                             full paragraph is stored there as
 //                             finding.paragraph for release notes.
 //
 // The verdict words are the site's, not ours. lib/tips/mark-state.ts in the
@@ -494,7 +495,9 @@ function inOrder(names, keep) {
   return [...new Set(names)].filter(keep);
 }
 
-function findingParagraph(data) {
+// The measured skills, their results, every result that helped, and the models
+// split into those a skill helped on and those it never did.
+function findingFacts(data) {
   const all = Object.keys(data.skills);
   const measured = Object.entries(data.skills).filter(([, s]) => s.status === 'measured');
   const results = measured.flatMap(([skill, s]) => s.results.map((r) => ({ ...r, skill })));
@@ -510,6 +513,37 @@ function findingParagraph(data) {
   const order = results.map((r) => r.name);
   const helped = inOrder([...order, ...helps.map((h) => h.name)], (n) => helpedNames.has(n));
   const quiet = inOrder(order, (n) => !helpedNames.has(n));
+  return { all, measured, results, helps, helpedNames, helped, quiet };
+}
+
+function instructionSentence(results) {
+  const instead = results.filter((r) => r.baseline === 'instruction');
+  if (!instead.length) return null;
+  const bySkill = new Map();
+  for (const r of instead) {
+    if (!bySkill.has(r.skill)) bySkill.set(r.skill, []);
+    bySkill.get(r.skill).push(r.verdict);
+  }
+  const allSay = (word) => [...bySkill].filter(([, ws]) => ws.every((w) => w === word)).map(([s]) => s);
+  const beat = allSay(ORBIT_WORD.Stable);
+  const level = allSay(ORBIT_WORD['In free drift']);
+  const other = [...bySkill]
+    .filter(([s]) => !beat.includes(s) && !level.includes(s))
+    .map(([s, ws]) => `${s} (${phrase(ws)})`);
+  const clauses = [];
+  if (beat.length) clauses.push(`the skill beat it on ${listOf(beat)}`);
+  if (level.length) clauses.push(`had no measured effect over it on ${listOf(level)}`);
+  if (other.length) clauses.push(`was mixed on ${listOf(other)}`);
+  const hows = inOrder(instead.map((r) => lowerFirst(r.instrument)), () => true);
+  const models = inOrder(instead.map((r) => r.name), () => true);
+  return (
+    `${BASELINE_WORDS.instruction.charAt(0).toUpperCase()}${BASELINE_WORDS.instruction.slice(1)} in place of the skill ` +
+    `was tried only ${listOf(hows)} on ${listOf(models)}, and there ${listOf(clauses)}.`
+  );
+}
+
+function findingParagraph(data) {
+  const { all, measured, results, helps, helpedNames, helped, quiet } = findingFacts(data);
 
   const sentences = [
     `OpenAddict has measured ${measured.length} of the ${all.length} skills here, each on the same tasks with the skill loaded and without it.`,
@@ -542,29 +576,40 @@ function findingParagraph(data) {
     sentences.push('No skill helped on any model measured.');
   }
 
-  const instead = results.filter((r) => r.baseline === 'instruction');
-  if (instead.length) {
-    const bySkill = new Map();
-    for (const r of instead) {
-      if (!bySkill.has(r.skill)) bySkill.set(r.skill, []);
-      bySkill.get(r.skill).push(r.verdict);
-    }
-    const allSay = (word) => [...bySkill].filter(([, ws]) => ws.every((w) => w === word)).map(([s]) => s);
-    const beat = allSay(ORBIT_WORD.Stable);
-    const level = allSay(ORBIT_WORD['In free drift']);
-    const other = [...bySkill]
-      .filter(([s]) => !beat.includes(s) && !level.includes(s))
-      .map(([s, ws]) => `${s} (${phrase(ws)})`);
-    const clauses = [];
-    if (beat.length) clauses.push(`the skill beat it on ${listOf(beat)}`);
-    if (level.length) clauses.push(`had no measured effect over it on ${listOf(level)}`);
-    if (other.length) clauses.push(`was mixed on ${listOf(other)}`);
-    const hows = inOrder(instead.map((r) => lowerFirst(r.instrument)), () => true);
-    const models = inOrder(instead.map((r) => r.name), () => true);
-    sentences.push(
-      `${BASELINE_WORDS.instruction.charAt(0).toUpperCase()}${BASELINE_WORDS.instruction.slice(1)} in place of the skill ` +
-        `was tried only ${listOf(hows)} on ${listOf(models)}, and there ${listOf(clauses)}.`,
-    );
+  const instead = instructionSentence(results);
+  if (instead) sentences.push(instead);
+  return sentences.join(' ');
+}
+
+// Anthropic's frontier lines. The opening calls the models no skill helped on
+// "the frontier Claude models" only while every one of them is on this list.
+const FRONTIER_CLAUDE = /^Claude (Opus|Sonnet|Fable) /;
+const COUNT_WORDS = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+
+function countWord(n) {
+  return COUNT_WORDS[n] ?? String(n);
+}
+
+// The two sentences above the README table: where no skill helped, and where
+// every skill that helped did. The table and finding.paragraph carry the rest.
+function findingOpening(data) {
+  const { results, helps, helpedNames, helped, quiet } = findingFacts(data);
+  const sentences = [];
+  if (quiet.length) {
+    const who = quiet.every((n) => FRONTIER_CLAUDE.test(n))
+      ? `the ${countWord(quiet.length)} frontier Claude model${quiet.length === 1 ? '' : 's'}`
+      : listOf(quiet);
+    const against = inOrder(
+      results.filter((r) => !helpedNames.has(r.name)).map((r) => r.baseline),
+      () => true,
+    ).map((b) => (b === 'none' ? 'running without it' : `${BASELINE_WORDS[b]} in its place`));
+    sentences.push(`On ${who}, no skill helped against ${listOf(against, 'or')}.`);
+  }
+  if (helps.length) {
+    const short = helped.map((n) => n.replace(/^Claude /, ''));
+    sentences.push(`Every skill that helped did so on ${listOf(short, 'or')}.`);
+  } else {
+    sentences.push('No skill helped on any model measured.');
   }
   return sentences.join(' ');
 }
@@ -572,7 +617,7 @@ function findingParagraph(data) {
 function findingSection(data) {
   const measured = Object.entries(data.skills).filter(([, s]) => s.status === 'measured');
   const lines = [FINDING_START, '## Which of these skills actually help?', ''];
-  lines.push(data.finding.paragraph);
+  lines.push(findingOpening(data));
   lines.push('');
 
   // Models down the side, skills across: a model's words from every way it
@@ -607,6 +652,11 @@ function findingSection(data) {
     'Each word is the verdict openaddict.com prints for that model. Two words mean its results differ; ' +
       `the skill's own README splits them by how the model was run. ${legend.join(' ')}`,
   );
+  const instead = instructionSentence(findingFacts(data).results);
+  if (instead) {
+    lines.push('');
+    lines.push(instead);
+  }
   lines.push('');
   lines.push(`- [Same prompts through both harnesses](${COMPARE_URL}): Claude Code and Codex on the same tasks.`);
   lines.push(
