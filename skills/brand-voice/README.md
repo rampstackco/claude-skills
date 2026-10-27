@@ -13,9 +13,9 @@ Measured on [OpenAddict](https://openaddict.com/skills/rampstackco-brand-voice):
 | Model | Via API |
 |---|---|
 | Claude Haiku 4.5 | No measured effect |
-| Gemini 3.1 Flash Lite | Holds |
+| Gemini 3.1 Flash Lite | Helped |
 | GPT-5 mini | No measured effect |
 
-Each word is the verdict the site prints. Holds: the skill helped, by more than the margin the site needs before it calls a result. No measured effect: no difference large and certain enough to call.
+Each word is the verdict the site prints. Helped: the skill helped, by more than the margin the site needs before it calls a result. No measured effect: no difference large and certain enough to call.
 
 OpenAddict is run by the people who publish this catalog, and these results are theirs. Nobody outside checked them.

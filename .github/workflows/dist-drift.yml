@@ -24,7 +24,8 @@
 #
 # TESTED ON OPENADDICT. The openaddict job below treats the "Tested on
 # OpenAddict" blocks the same way: skills/*/README.md, openaddict.json, the
-# README catalog lines and the block in workflows/README.md are rebuilt from
+# README catalog lines, the measured-count line under Install in README.md and
+# the block in workflows/README.md are rebuilt from
 # openaddict.com's JSON and byte-compared with what is committed. Unlike the
 # dists, their source is outside this repo, so a PR alone cannot keep them
 # current: the schedule runs the job daily, and a red run there means a verdict
@@ -72,6 +73,7 @@ on:
       - "README.md"
       - "workflows/README.md"
       - "scripts/build-tested-on.mjs"
+      - "scripts/build-tested-on.test.mjs"
       - "scripts/generate_readme_catalog.py"
       # This workflow.
       - ".github/workflows/dist-drift.yml"
@@ -128,6 +130,10 @@ jobs:
 
       - name: Install dependencies
         run: pip install pyyaml
+
+      # Offline: the measured-count line under Install follows openaddict.json.
+      - name: Generator tests
+        run: node --test scripts/build-tested-on.test.mjs
 
       # Reads the site's skill, workflow and job JSON and compares the blocks
       # it would write with the committed ones.
