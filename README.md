@@ -51,7 +51,9 @@ Prefer a lighter marketplace that lists only the curated subsets (no full catalo
 
 Skills load on demand: each contributes roughly its name and description until Claude needs it.
 
-Six skills here have been independently measured on OpenAddict: [coverage](https://openaddict.com/skills/coverage).
+<!-- OPENADDICT_MEASURED:START -->
+6 skills here have been independently measured on OpenAddict: [coverage](https://openaddict.com/skills/coverage).
+<!-- OPENADDICT_MEASURED:END -->
 
 ---
 

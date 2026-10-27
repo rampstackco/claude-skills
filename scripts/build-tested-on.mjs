@@ -16,6 +16,11 @@
 //                             the line under each row of the README catalog.
 //   workflows/README.md       the block between the OPENADDICT markers, for
 //                             the workflows the site has run.
+//   README.md                 the line between the OPENADDICT_MEASURED
+//                             markers under Install: how many skills have
+//                             results in openaddict.json, and the coverage
+//                             link. The markers also keep the typed-count lint
+//                             off the number.
 //
 // The verdict words are the site's, not ours. lib/tips/mark-state.ts in the
 // site maps each verdict to the plain word its tip pages, /skills and topic
@@ -42,7 +47,7 @@
 
 import { readdirSync, readFileSync, writeFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { dirname, join, resolve } from 'path';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = dirname(SCRIPT_DIR);
@@ -56,6 +61,10 @@ const COVERAGE_URL = `${SITE}/skills/coverage`;
 
 const WORKFLOWS_START = '<!-- OPENADDICT:START -->';
 const WORKFLOWS_END = '<!-- OPENADDICT:END -->';
+
+const ROOT_README = join(REPO_ROOT, 'README.md');
+const MEASURED_START = '<!-- OPENADDICT_MEASURED:START -->';
+const MEASURED_END = '<!-- OPENADDICT_MEASURED:END -->';
 
 // The site's plain word for each verdict, from lib/tips/mark-state.ts
 // (ORBIT_MARK). Keep in step with that file; an unknown verdict throws.
@@ -450,13 +459,24 @@ function workflowsBlock(workflows) {
   return lines.join('\n');
 }
 
-function withWorkflowsBlock(text, block) {
-  const start = text.indexOf(WORKFLOWS_START);
-  const end = text.indexOf(WORKFLOWS_END);
+function withBlock(text, block, startMarker, endMarker, file) {
+  const start = text.indexOf(startMarker);
+  const end = text.indexOf(endMarker);
   if (start === -1 || end === -1 || end < start) {
-    throw new Error(`workflows/README.md has no ${WORKFLOWS_START} ... ${WORKFLOWS_END} pair.`);
+    throw new Error(`${file} has no ${startMarker} ... ${endMarker} pair.`);
   }
-  return text.slice(0, start) + block + text.slice(end + WORKFLOWS_END.length);
+  return text.slice(0, start) + block + text.slice(end + endMarker.length);
+}
+
+// The line under Install in the root README. The count is every skill in the
+// openaddict.json object with at least one result, so it moves with the data.
+export function measuredCountLine(data) {
+  const n = Object.values(data.skills).filter((s) => (s.results ?? []).length > 0).length;
+  return [
+    MEASURED_START,
+    `${n} skill${n === 1 ? '' : 's'} here ${n === 1 ? 'has' : 'have'} been independently measured on OpenAddict: [coverage](${COVERAGE_URL}).`,
+    MEASURED_END,
+  ].join('\n');
 }
 
 // --- build -----------------------------------------------------------------------
@@ -497,7 +517,17 @@ async function build() {
   outputs.set(DATA_FILE, JSON.stringify(data, null, 2) + '\n');
   outputs.set(
     WORKFLOWS_README,
-    withWorkflowsBlock(readFileSync(WORKFLOWS_README, 'utf8'), workflowsBlock(site.workflows)),
+    withBlock(
+      readFileSync(WORKFLOWS_README, 'utf8'),
+      workflowsBlock(site.workflows),
+      WORKFLOWS_START,
+      WORKFLOWS_END,
+      'workflows/README.md',
+    ),
+  );
+  outputs.set(
+    ROOT_README,
+    withBlock(readFileSync(ROOT_README, 'utf8'), measuredCountLine(data), MEASURED_START, MEASURED_END, 'README.md'),
   );
   return { outputs, measured: measured.size, total: names.length, workflows: site.workflows.length };
 }
@@ -537,7 +567,10 @@ async function main() {
   );
 }
 
-main().catch((err) => {
-  console.error(err.message);
-  process.exit(1);
-});
+// Run only as a script, so the test can import measuredCountLine without a fetch.
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
+  main().catch((err) => {
+    console.error(err.message);
+    process.exit(1);
+  });
+}
