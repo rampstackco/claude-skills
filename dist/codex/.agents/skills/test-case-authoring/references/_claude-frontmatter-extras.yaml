@@ -1,0 +1,9 @@
+# Frontmatter keys removed from SKILL.md during the Codex port.
+# These are Claude catalog metadata that Codex does not consume.
+# To reverse the port, merge these keys back into the SKILL.md
+# frontmatter block (between the --- delimiters).
+# Source skill: test-case-authoring
+
+category: qa
+catalog_summary: "Per-ticket test plans and cases traced to acceptance criteria, with coverage classes, levels, and required evidence"
+display_order: 2

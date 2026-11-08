@@ -105,6 +105,11 @@
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     },
+    "backlog-triage": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
     "backup-and-disaster-recovery": {
       "status": "not-yet-run",
       "coverage": "https://openaddict.com/skills/coverage",
@@ -871,6 +876,11 @@
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     },
     "team-onboarding-playbook": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
+    "test-case-authoring": {
       "status": "not-yet-run",
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."

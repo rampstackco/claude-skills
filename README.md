@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-107-blue.svg)](#the-107-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-109-blue.svg)](#the-109-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 107 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 109 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -67,7 +67,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
-- [The 107-skill catalog](#the-107-skill-catalog)
+- [The 109-skill catalog](#the-109-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -97,8 +97,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **107 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
-- **516 reference files** (templates, checklists, decision matrices, worked examples)
+- **109 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
+- **527 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -545,11 +545,11 @@ What shipped, and when, is recorded at [rampstack.co/updates](https://rampstack.
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 107-skill catalog
+## The 109-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 107 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 109 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -631,10 +631,11 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | [`seo-site-health-audit`](skills/seo-site-health-audit/SKILL.md) | Triage Ahrefs Site Audit findings by SEO impact, not severity<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`seo-rank-tracking`](skills/seo-rank-tracking/SKILL.md) | Setup, baseline, segmentation, alerting, dashboarding<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
-### Product (14)
+### Product (15)
 
 | Skill | What it does |
 |---|---|
+| [`backlog-triage`](skills/backlog-triage/SKILL.md) | Intake, dedupe, classify, score, promote or decline, and age out raw requests into a ranked, ready backlog<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`pm-spec-writing`](skills/pm-spec-writing/SKILL.md) | PRDs, user stories, acceptance criteria, dev briefs<br>Tested on [OpenAddict](https://openaddict.com/skills/rampstackco-pm-spec-writing) (Tier 1, newest run 2026-09-26). Via API: Claude Haiku 4.5 (Mixed), Gemini 3.1 Flash Lite (Mixed), GPT-5 mini (Mixed). In Claude Code: Claude Haiku 4.5 (No measured effect), Claude Fable 5 (No measured effect), Claude Opus 5 (No measured effect), Claude Sonnet 5 (No measured effect), Claude Fable 5.1 (No measured effect), Claude Opus 5.5 (Could not measure). [Per model](skills/pm-spec-writing/README.md). |
 | [`ticket-authoring`](skills/ticket-authoring/SKILL.md) | Bugs, tasks, stories, spikes, and epics with a definition of ready per type<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`roadmap-planning`](skills/roadmap-planning/SKILL.md) | Quarterly planning, prioritization, dependency mapping<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
@@ -660,11 +661,12 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | [`performance-optimization`](skills/performance-optimization/SKILL.md) | Core Web Vitals, asset optimization, render performance<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`oss-contribution-research`](skills/oss-contribution-research/SKILL.md) | Gated research and patch prep for outside open-source PRs, ending in a human-approved queue item<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
-### Quality assurance (1)
+### Quality assurance (2)
 
 | Skill | What it does |
 |---|---|
 | [`qa-testing`](skills/qa-testing/SKILL.md) | Pre-launch QA, regression testing, cross-browser checks<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`test-case-authoring`](skills/test-case-authoring/SKILL.md) | Per-ticket test plans and cases traced to acceptance criteria, with coverage classes, levels, and required evidence<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
 ### Operations (9)
 
