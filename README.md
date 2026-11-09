@@ -61,6 +61,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [See it in action](#see-it-in-action)
 - [Logo design in action](#logo-design-in-action)
 - [Reference build in action](#reference-build-in-action)
+- [For designers](#for-designers)
 - [Getting started](#getting-started)
 - [Quick example](#quick-example)
 - [How they compose](#how-they-compose)
@@ -274,6 +275,12 @@ The four phases compose into a working microsite at [rampstack.co/demo/threshold
 ### Why a fictional product
 
 Real client work cannot be open-sourced; portfolio claims trigger conflict-of-interest concerns in interviews and consulting conversations. A fictional product with a documented brief plus real research, real brand foundations, real working code, and real audit findings produces a teaching artifact that demonstrates methodology without claiming relationships. Threshold is a measurement tool that does not exist; the methodology that built it is the catalog working end-to-end.
+
+---
+
+## For designers
+
+Looking for creative direction or a theme to build from? Start at [directed-ui](https://github.com/rampstackco/directed-ui). It walks you through the `creative-direction` skill and links every design-direction theme. The skills stay in this catalog.
 
 ---
 
