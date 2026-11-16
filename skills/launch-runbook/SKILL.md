@@ -27,6 +27,7 @@ This skill is for the launch event. For pre-launch QA, use `qa-testing`. For pos
 - Pre-launch testing (use `qa-testing`)
 - Post-launch incident response (use `incident-response`)
 - After-launch retrospective (use `after-action-report`)
+- The recurring release cycle: versioning, freeze, go or no-go, staged rollout, hotfixes, release notes (use `release-management`)
 
 ---
 

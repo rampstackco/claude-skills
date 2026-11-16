@@ -496,7 +496,7 @@
     "references/objection-library.md": "bc0ee97281d1d5710dfb453f1018434d0d86c090fc1f5991506f93e4789ea585"
   },
   "launch-runbook": {
-    "SKILL.md": "8d1f7b18667dfd507d3bdfb31858f5b5ff48205230060785cff40701e8a21adf",
+    "SKILL.md": "e1c63f360b76907fbd3311996660ef187b05c8323891e24b6c05eacf24026ae1",
     "references/runbook-template.md": "3413ba76c18bf4d1852e0145b6b53e31352a3522b65b4cc306b3ebbdb02f4ad8"
   },
   "lead-magnet-design": {
@@ -794,7 +794,7 @@
     "references/onboarding-checklist.md": "5309269c3f1336c51277de30f5cd8bde41aaa0b56c4c60c91cb4aae078748eb7"
   },
   "test-case-authoring": {
-    "SKILL.md": "a87b7ebb2d6db40c3c37793b1d807842b1153efbcc5a6486fc4329af24c44c4b",
+    "SKILL.md": "f620568214ff44350638e6c4d4b6d7068de5f5f1e75c0eccc23bf9e77ae6b006",
     "references/coverage-checklist.md": "8b3353fec870e4147d01060a9fab9cd271e07de7856a44073c4ffa9507386a06",
     "references/example-test-plan-story.md": "b15bb181ddea3c15e14995f6f5a2349a7978d5110f62273769a56e930a3f9b97",
     "references/exploratory-charter-template.md": "805661504be01dfcab73d146cd7af7842b08fbb5bfa5d5c713db78604abc355b",

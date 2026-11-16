@@ -24,7 +24,7 @@ Write the tests for one work item so the QA notes on the ticket have real conten
 - Writing the acceptance criteria themselves (use `ticket-authoring`, or `pm-spec-writing` for the spec behind them)
 - Auditing a whole site for accessibility (use `accessibility-audit`)
 - Reviewing the code change (use `code-review-web`)
-- Deciding go or no-go for a release (use `launch-runbook`)
+- Deciding go or no-go for a release (use `release-management`; for a first launch or cutover, use `launch-runbook`)
 - Deciding which items deserve testing effort first (use `backlog-triage`)
 
 ---
