@@ -8,7 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Skills](https://img.shields.io/badge/Skills-109-blue.svg)](#the-109-skill-catalog)
+[![Skills](https://img.shields.io/badge/Skills-110-blue.svg)](#the-110-skill-catalog)
 [![Made for Claude](https://img.shields.io/badge/Made%20for-Claude-orange.svg)](https://claude.ai)
 
 [![Website](https://img.shields.io/badge/rampstack.co-FF6B35?style=for-the-badge&logo=googlechrome&logoColor=white)](https://rampstack.co)
@@ -19,7 +19,7 @@
 </div>
 
 <!-- COUNT_INTRO:START -->
-> 109 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
+> 110 stack-agnostic skills covering brand, design, content, SEO, dev, ops, growth, and research. Includes an Ahrefs MCP-powered SEO audit suite. Use them on Next.js, WordPress, Shopify, Webflow, plain HTML, or anything else.
 <!-- COUNT_INTRO:END -->
 
 *Featured in [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) under Business & Marketing.*
@@ -67,7 +67,7 @@ Skills load on demand: each contributes roughly its name and description until C
 - [How the catalog connects](#how-the-catalog-connects)
 - [Surfaces](#surfaces)
 <!-- COUNT_TOC:START -->
-- [The 109-skill catalog](#the-109-skill-catalog)
+- [The 110-skill catalog](#the-110-skill-catalog)
 <!-- COUNT_TOC:END -->
 - [Recommended MCPs](#recommended-mcps)
 - [Authoring conventions](#authoring-conventions)
@@ -97,8 +97,8 @@ This is not a curated list of other people's skills. It is a single, opinionated
 What you get:
 
 <!-- COUNT_WHATYOUGET:START -->
-- **109 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
-- **527 reference files** (templates, checklists, decision matrices, worked examples)
+- **110 skills** across 16 categories, every one with a complete `SKILL.md` and at least one reference file
+- **534 reference files** (templates, checklists, decision matrices, worked examples)
 <!-- COUNT_WHATYOUGET:END -->
 - **Stack-agnostic.** Works on any web stack. The only named-tool exception is the SEO audit suite, which assumes the Ahrefs MCP.
 - **Future-proof.** Principles over tools. Stable concepts over trending techniques. References to durable specs (W3C, WHATWG, Schema.org, MDN, NN/g, WCAG) over content that ages with each algorithm update.
@@ -545,11 +545,11 @@ What shipped, and when, is recorded at [rampstack.co/updates](https://rampstack.
 ---
 
 <!-- COUNT_CATALOG_HEADER:START -->
-## The 109-skill catalog
+## The 110-skill catalog
 <!-- COUNT_CATALOG_HEADER:END -->
 
 <!-- COUNT_CATALOG_INTRO:START -->
-All 109 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
+All 110 skills are shipped. Each has a complete SKILL.md plus at least one reference file (template, checklist, or playbook).
 <!-- COUNT_CATALOG_INTRO:END -->
 
 <!-- AUTO-GENERATED CATALOG: do not edit by hand. Run scripts/generate_readme_catalog.py --write -->
@@ -668,11 +668,12 @@ End-to-end SEO audit workflows that pull data from the Ahrefs MCP and produce co
 | [`qa-testing`](skills/qa-testing/SKILL.md) | Pre-launch QA, regression testing, cross-browser checks<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`test-case-authoring`](skills/test-case-authoring/SKILL.md) | Per-ticket test plans and cases traced to acceptance criteria, with coverage classes, levels, and required evidence<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 
-### Operations (9)
+### Operations (10)
 
 | Skill | What it does |
 |---|---|
 | [`launch-runbook`](skills/launch-runbook/SKILL.md) | Go-live runbook, DNS cutover, deploy day procedures<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
+| [`release-management`](skills/release-management/SKILL.md) | The recurring release cycle: release model, versioning, freeze, go/no-go, staged rollout and rollback, hotfixes, changelog and notes<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`incident-response`](skills/incident-response/SKILL.md) | Incident triage, comms, mitigation, escalation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`after-action-report`](skills/after-action-report/SKILL.md) | Post-mortems, retros, learnings documentation<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
 | [`domain-strategy`](skills/domain-strategy/SKILL.md) | DNS architecture, redirects, registrars, multi-domain portfolios<br>Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage)). |
