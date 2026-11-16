@@ -27,7 +27,7 @@
     {
       "name": "rampstack-pm",
       "source": { "source": "github", "repo": "rampstackco/claude-skills-pm" },
-      "description": "Focused product management skills across the lifecycle: discovery, roadmaps and OKRs, PRDs, stakeholder communication, launch and beta programs, and measurement.",
+      "description": "Focused product management skills across the lifecycle: discovery, roadmaps and OKRs, PRDs, tickets, sprint operations, stakeholder communication, launch and beta programs, and measurement.",
       "category": "productivity",
       "keywords": ["agent-skills", "product-management", "roadmap", "okr"]
     }

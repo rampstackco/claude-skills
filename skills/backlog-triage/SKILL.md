@@ -3,7 +3,7 @@ name: backlog-triage
 description: "Turn an inbox of raw requests (bug reports, feature asks, support escalations, feedback, incident follow-ups) into a ranked, deduplicated backlog where every item at the top meets the definition of ready, with recorded scores, merge links, and a written reason for every park and decline. Use this skill whenever the user wants to triage incoming work, groom or prune a backlog, merge duplicate tickets, score or rank requests, decide what the team works on next, or run a weekly triage session. Triggers on triage, groom the backlog, backlog grooming, prioritize the backlog, dedupe tickets, duplicate tickets, what should we work on next, inbox of bugs, feature requests pile, rank these, is this ready, backlog is too big, stale tickets, severity vs frequency. Also triggers when the user pastes a list of raw requests or bug reports and asks what to do with them, even if they never say the word triage."
 category: product
 catalog_summary: "Intake, dedupe, classify, score, promote or decline, and age out raw requests into a ranked, ready backlog"
-display_order: 1
+display_order: 2
 ---
 
 # Backlog Triage
