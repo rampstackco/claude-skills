@@ -641,6 +641,11 @@
       "coverage": "https://openaddict.com/skills/coverage",
       "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
     },
+    "release-management": {
+      "status": "not-yet-run",
+      "coverage": "https://openaddict.com/skills/coverage",
+      "catalogLine": "Tested on OpenAddict: set up for testing, not yet run ([coverage](https://openaddict.com/skills/coverage))."
+    },
     "roadmap-planning": {
       "status": "not-yet-run",
       "coverage": "https://openaddict.com/skills/coverage",

@@ -673,6 +673,16 @@
     "references/result-to-recommendation-mapping.md": "b2ed7f77d79f163d5e7a6b4005c9679c5a0033bda9d8b58eb80fc5b27fba1917",
     "references/scoring-algorithm-patterns.md": "20a0e5f83b1612e4a77e5d5037b1cf3d6e27f89d9dd9dc3d6ac279c8eb031cd5"
   },
+  "release-management": {
+    "SKILL.md": "5c0422608000e0d7401deed4b264e76bceca1c68c2bea3df58b7046b6d6535a0",
+    "references/example-release.md": "bf992c5bdd79585cea3e819cf3565105dd55089d3dd38821febf22ef7bdd1d1f",
+    "references/go-no-go-template.md": "402f79b313c0e0c5426123a4346b80f7116feadab1c9c36d8661cc522ef4dae4",
+    "references/hotfix-checklist.md": "8cc52fc69ba7daa5d0acb3d6d2d1e80e52ba8d5b24b564eb9d41395c796e1186",
+    "references/release-checklist.md": "43c12e7174ec059e4e758a2afe901b3f89eb34d04aa40f407f4ccdbf49264e83",
+    "references/release-notes-template.md": "18e7b014f06fb55f7573688bb03284e46a9f58c233ee89d242db9359b3d7bd20",
+    "references/rollout-plan-template.md": "9e6aef6440074154bb1df34a4fd71938931e7600d01e5687fa7020da809ac668",
+    "references/versioning-guide.md": "f39a533f781de6fd5f792d6d275902f34cffaa4e78620e44d8d1fdce4d4582a1"
+  },
   "roadmap-planning": {
     "SKILL.md": "136b637fe06e0c1082989bccb2ff7a22fc00f98ce31ca676f4eb76a8e9285273",
     "references/prioritization-frameworks.md": "6c8870e8f09e2d7100ce49dead148cb32fb58183690a8123854a8e93ffca656c"
