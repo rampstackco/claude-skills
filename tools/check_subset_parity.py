@@ -29,7 +29,8 @@ Usage:
 
 Exit codes:
   0  Every subset matches this catalog.
-  1  One or more subset files differ, are missing, or are extra.
+  1  One or more subset files differ, are missing, or are extra, or a
+     subset holds no skill files at all.
   2  A subset could not be read (network, rate limit, truncated tree).
 """
 from __future__ import annotations
@@ -157,6 +158,16 @@ def main() -> int:
         subset = subset_files(tree)
         skills = len({key.split("/", 1)[0] for key in subset})
         problems = compare(subset)
+        if not subset:
+            # A configured subset is documented as shipping skills, so a
+            # tree with no skill files is not a match: without this, an
+            # accidental deletion of its skills/ directory turns the
+            # scheduled check green (compare() derives both sides from
+            # the empty mapping and finds nothing to disagree about).
+            problems.append(
+                "    no skill files found: expected skills/*/SKILL.md "
+                "or references/ files"
+            )
         status = "FAILED" if problems else "PASSED"
         print(f"{repo}@{commit} ({source}): {status}, "
               f"{len(subset)} files in {skills} skills")
