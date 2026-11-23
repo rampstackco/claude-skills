@@ -31,7 +31,6 @@ Exit codes:
   0  Every subset matches this catalog.
   1  One or more subset files differ, are missing, or are extra, or a
      subset holds no skill files at all.
-  
   2  A subset could not be read (network, rate limit, truncated tree).
 """
 from __future__ import annotations
