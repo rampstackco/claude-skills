@@ -179,8 +179,6 @@ Retention curve interpretation.
 - Gradual decay across weeks with no plateau. No one is sticking. Usually a value-prop or onboarding problem; the product is not delivering recurring value.
 - Flat line at low percentage. A power-user product with a small but engaged base. Not a problem; just a different shape.
 
-Detail in [`references/retention-measurement-patterns.md`](references/retention-measurement-patterns.md).
-
 ---
 
 ## North Star and supporting metrics
